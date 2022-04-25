@@ -23,6 +23,10 @@ public final class ReplicationPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return Replication policy name
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -34,6 +38,10 @@ public final class ReplicationPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
     private @Nullable Output<CreatePolicyInputPropertiesArgs> properties;
 
+    /**
+     * @return Policy creation properties.
+     * 
+     */
     public Optional<Output<CreatePolicyInputPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class ReplicationPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ReplicationPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -87,38 +103,86 @@ public final class ReplicationPolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new ReplicationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyName Replication policy name
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Replication policy name
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
 
+        /**
+         * @param properties Policy creation properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<CreatePolicyInputPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Policy creation properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CreatePolicyInputPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

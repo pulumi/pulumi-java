@@ -24,6 +24,10 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Name of a Compute Engine instance.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -35,6 +39,10 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="externalIp", required=true)
     private String externalIp;
 
+    /**
+     * @return External IP address of the network interface.
+     * 
+     */
     public String externalIp() {
         return this.externalIp;
     }
@@ -46,6 +54,10 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="interface", required=true)
     private String interface_;
 
+    /**
+     * @return Name of the network interface of a Compute Engine instance.
+     * 
+     */
     public String interface_() {
         return this.interface_;
     }
@@ -57,6 +69,10 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="internalIp", required=true)
     private String internalIp;
 
+    /**
+     * @return Internal IP address of the network interface.
+     * 
+     */
     public String internalIp() {
         return this.internalIp;
     }
@@ -68,6 +84,10 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="networkTags", required=true)
     private List<String> networkTags;
 
+    /**
+     * @return Network tags configured on the instance.
+     * 
+     */
     public List<String> networkTags() {
         return this.networkTags;
     }
@@ -79,6 +99,10 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="networkUri", required=true)
     private String networkUri;
 
+    /**
+     * @return URI of a Compute Engine network.
+     * 
+     */
     public String networkUri() {
         return this.networkUri;
     }
@@ -90,6 +114,10 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return Service account authorized for the instance.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -101,6 +129,10 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of a Compute Engine instance.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -136,45 +168,99 @@ public final class InstanceInfoResponse extends com.pulumi.resources.InvokeArgs 
             $ = new InstanceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name of a Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param externalIp External IP address of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIp(String externalIp) {
             $.externalIp = externalIp;
             return this;
         }
 
+        /**
+         * @param interface_ Name of the network interface of a Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(String interface_) {
             $.interface_ = interface_;
             return this;
         }
 
+        /**
+         * @param internalIp Internal IP address of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIp(String internalIp) {
             $.internalIp = internalIp;
             return this;
         }
 
+        /**
+         * @param networkTags Network tags configured on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(List<String> networkTags) {
             $.networkTags = networkTags;
             return this;
         }
 
+        /**
+         * @param networkTags Network tags configured on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(String... networkTags) {
             return networkTags(List.of(networkTags));
         }
 
+        /**
+         * @param networkUri URI of a Compute Engine network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param serviceAccount Service account authorized for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param uri URI of a Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

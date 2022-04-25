@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContactStage {
     /**
-     * The time to wait until beginning the next stage.
+     * @return The time to wait until beginning the next stage.
      * 
      */
     private final Integer durationInMinutes;
     /**
-     * The contacts or contact methods that the escalation plan or engagement plan is engaging.
+     * @return The contacts or contact methods that the escalation plan or engagement plan is engaging.
      * 
      */
     private final @Nullable List<ContactTargets> targets;
@@ -32,16 +32,16 @@ public final class ContactStage {
     }
 
     /**
-     * The time to wait until beginning the next stage.
+     * @return The time to wait until beginning the next stage.
      * 
-    */
+     */
     public Integer durationInMinutes() {
         return this.durationInMinutes;
     }
     /**
-     * The contacts or contact methods that the escalation plan or engagement plan is engaging.
+     * @return The contacts or contact methods that the escalation plan or engagement plan is engaging.
      * 
-    */
+     */
     public List<ContactTargets> targets() {
         return this.targets == null ? List.of() : this.targets;
     }

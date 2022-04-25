@@ -20,6 +20,10 @@ public final class WebAclAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceArn", required=true)
     private Output<String> resourceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the resource to associate with the web ACL. This must be an ARN of an Application Load Balancer or an Amazon API Gateway stage.
+     * 
+     */
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
@@ -31,6 +35,10 @@ public final class WebAclAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webAclArn", required=true)
     private Output<String> webAclArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Web ACL that you want to associate with the resource.
+     * 
+     */
     public Output<String> webAclArn() {
         return this.webAclArn;
     }
@@ -60,20 +68,44 @@ public final class WebAclAssociationArgs extends com.pulumi.resources.ResourceAr
             $ = new WebAclAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the resource to associate with the web ACL. This must be an ARN of an Application Load Balancer or an Amazon API Gateway stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(Output<String> resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the resource to associate with the web ACL. This must be an ARN of an Application Load Balancer or an Amazon API Gateway stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             return resourceArn(Output.of(resourceArn));
         }
 
+        /**
+         * @param webAclArn The Amazon Resource Name (ARN) of the Web ACL that you want to associate with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webAclArn(Output<String> webAclArn) {
             $.webAclArn = webAclArn;
             return this;
         }
 
+        /**
+         * @param webAclArn The Amazon Resource Name (ARN) of the Web ACL that you want to associate with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webAclArn(String webAclArn) {
             return webAclArn(Output.of(webAclArn));
         }

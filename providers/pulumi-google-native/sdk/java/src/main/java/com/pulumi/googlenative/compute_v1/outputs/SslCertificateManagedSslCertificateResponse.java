@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class SslCertificateManagedSslCertificateResponse {
     /**
-     * [Output only] Detailed statuses of the domains specified for managed certificate resource.
+     * @return [Output only] Detailed statuses of the domains specified for managed certificate resource.
      * 
      */
     private final Map<String,String> domainStatus;
     /**
-     * The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
+     * @return The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
      * 
      */
     private final List<String> domains;
     /**
-     * [Output only] Status of the managed certificate resource.
+     * @return [Output only] Status of the managed certificate resource.
      * 
      */
     private final String status;
@@ -38,23 +38,23 @@ public final class SslCertificateManagedSslCertificateResponse {
     }
 
     /**
-     * [Output only] Detailed statuses of the domains specified for managed certificate resource.
+     * @return [Output only] Detailed statuses of the domains specified for managed certificate resource.
      * 
-    */
+     */
     public Map<String,String> domainStatus() {
         return this.domainStatus;
     }
     /**
-     * The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
+     * @return The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
      * 
-    */
+     */
     public List<String> domains() {
         return this.domains;
     }
     /**
-     * [Output only] Status of the managed certificate resource.
+     * @return [Output only] Status of the managed certificate resource.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

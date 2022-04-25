@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class PerNodeStateResponse {
     /**
-     * Fully qualified resource ID for the Arc agent of this node.
+     * @return Fully qualified resource ID for the Arc agent of this node.
      * 
      */
     private final String arcInstance;
     /**
-     * Name of the Node in HCI Cluster
+     * @return Name of the Node in HCI Cluster
      * 
      */
     private final String name;
     /**
-     * State of Arc agent in this node.
+     * @return State of Arc agent in this node.
      * 
      */
     private final String state;
@@ -36,23 +36,23 @@ public final class PerNodeStateResponse {
     }
 
     /**
-     * Fully qualified resource ID for the Arc agent of this node.
+     * @return Fully qualified resource ID for the Arc agent of this node.
      * 
-    */
+     */
     public String arcInstance() {
         return this.arcInstance;
     }
     /**
-     * Name of the Node in HCI Cluster
+     * @return Name of the Node in HCI Cluster
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of Arc agent in this node.
+     * @return State of Arc agent in this node.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

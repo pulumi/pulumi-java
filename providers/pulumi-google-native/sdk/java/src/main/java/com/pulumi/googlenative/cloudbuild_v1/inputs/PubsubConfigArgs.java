@@ -27,6 +27,10 @@ public final class PubsubConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
     private @Nullable Output<String> serviceAccountEmail;
 
+    /**
+     * @return Service account that will make the push request.
+     * 
+     */
     public Optional<Output<String>> serviceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
@@ -38,6 +42,10 @@ public final class PubsubConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<PubsubConfigState> state;
 
+    /**
+     * @return Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+     * 
+     */
     public Optional<Output<PubsubConfigState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -49,6 +57,10 @@ public final class PubsubConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -79,29 +91,65 @@ public final class PubsubConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PubsubConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serviceAccountEmail Service account that will make the push request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail Service account that will make the push request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
 
+        /**
+         * @param state Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<PubsubConfigState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(PubsubConfigState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

@@ -19,49 +19,49 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDetectorResult {
     /**
-     * The ARN of the detector.
+     * @return The ARN of the detector.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The models to associate with this detector.
+     * @return The models to associate with this detector.
      * 
      */
     private final @Nullable List<DetectorModel> associatedModels;
     /**
-     * The time when the detector was created.
+     * @return The time when the detector was created.
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * The description of the detector.
+     * @return The description of the detector.
      * 
      */
     private final @Nullable String description;
     /**
-     * The active version ID of the detector
+     * @return The active version ID of the detector
      * 
      */
     private final @Nullable String detectorVersionId;
     /**
-     * The desired detector version status for the detector
+     * @return The desired detector version status for the detector
      * 
      */
     private final @Nullable DetectorVersionStatus detectorVersionStatus;
     /**
-     * The event type to associate this detector with.
+     * @return The event type to associate this detector with.
      * 
      */
     private final @Nullable DetectorEventType eventType;
     /**
-     * The time when the detector was last updated.
+     * @return The time when the detector was last updated.
      * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable DetectorRuleExecutionMode ruleExecutionMode;
     private final @Nullable List<DetectorRule> rules;
     /**
-     * Tags associated with this detector.
+     * @return Tags associated with this detector.
      * 
      */
     private final @Nullable List<DetectorTag> tags;
@@ -93,58 +93,58 @@ public final class GetDetectorResult {
     }
 
     /**
-     * The ARN of the detector.
+     * @return The ARN of the detector.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The models to associate with this detector.
+     * @return The models to associate with this detector.
      * 
-    */
+     */
     public List<DetectorModel> associatedModels() {
         return this.associatedModels == null ? List.of() : this.associatedModels;
     }
     /**
-     * The time when the detector was created.
+     * @return The time when the detector was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * The description of the detector.
+     * @return The description of the detector.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The active version ID of the detector
+     * @return The active version ID of the detector
      * 
-    */
+     */
     public Optional<String> detectorVersionId() {
         return Optional.ofNullable(this.detectorVersionId);
     }
     /**
-     * The desired detector version status for the detector
+     * @return The desired detector version status for the detector
      * 
-    */
+     */
     public Optional<DetectorVersionStatus> detectorVersionStatus() {
         return Optional.ofNullable(this.detectorVersionStatus);
     }
     /**
-     * The event type to associate this detector with.
+     * @return The event type to associate this detector with.
      * 
-    */
+     */
     public Optional<DetectorEventType> eventType() {
         return Optional.ofNullable(this.eventType);
     }
     /**
-     * The time when the detector was last updated.
+     * @return The time when the detector was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -155,9 +155,9 @@ public final class GetDetectorResult {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
-     * Tags associated with this detector.
+     * @return Tags associated with this detector.
      * 
-    */
+     */
     public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

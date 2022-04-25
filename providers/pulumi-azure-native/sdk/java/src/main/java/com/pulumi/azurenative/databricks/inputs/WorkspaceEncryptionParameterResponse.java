@@ -26,6 +26,10 @@ public final class WorkspaceEncryptionParameterResponse extends com.pulumi.resou
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of variable that this is
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -37,6 +41,10 @@ public final class WorkspaceEncryptionParameterResponse extends com.pulumi.resou
     @Import(name="value")
     private @Nullable EncryptionResponse value;
 
+    /**
+     * @return The value which should be used for this field.
+     * 
+     */
     public Optional<EncryptionResponse> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,11 +74,23 @@ public final class WorkspaceEncryptionParameterResponse extends com.pulumi.resou
             $ = new WorkspaceEncryptionParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of variable that this is
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable EncryptionResponse value) {
             $.value = value;
             return this;

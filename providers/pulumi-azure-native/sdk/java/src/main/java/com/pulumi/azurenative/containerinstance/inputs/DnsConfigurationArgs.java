@@ -27,6 +27,10 @@ public final class DnsConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nameServers", required=true)
     private Output<List<String>> nameServers;
 
+    /**
+     * @return The DNS servers for the container group.
+     * 
+     */
     public Output<List<String>> nameServers() {
         return this.nameServers;
     }
@@ -38,6 +42,10 @@ public final class DnsConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="options")
     private @Nullable Output<String> options;
 
+    /**
+     * @return The DNS options for the container group.
+     * 
+     */
     public Optional<Output<String>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -49,6 +57,10 @@ public final class DnsConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="searchDomains")
     private @Nullable Output<String> searchDomains;
 
+    /**
+     * @return The DNS search domains for hostname lookup in the container group.
+     * 
+     */
     public Optional<Output<String>> searchDomains() {
         return Optional.ofNullable(this.searchDomains);
     }
@@ -79,33 +91,75 @@ public final class DnsConfigurationArgs extends com.pulumi.resources.ResourceArg
             $ = new DnsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nameServers The DNS servers for the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(Output<List<String>> nameServers) {
             $.nameServers = nameServers;
             return this;
         }
 
+        /**
+         * @param nameServers The DNS servers for the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(List<String> nameServers) {
             return nameServers(Output.of(nameServers));
         }
 
+        /**
+         * @param nameServers The DNS servers for the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }
 
+        /**
+         * @param options The DNS options for the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<String> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The DNS options for the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(String options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param searchDomains The DNS search domains for hostname lookup in the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchDomains(@Nullable Output<String> searchDomains) {
             $.searchDomains = searchDomains;
             return this;
         }
 
+        /**
+         * @param searchDomains The DNS search domains for hostname lookup in the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchDomains(String searchDomains) {
             return searchDomains(Output.of(searchDomains));
         }

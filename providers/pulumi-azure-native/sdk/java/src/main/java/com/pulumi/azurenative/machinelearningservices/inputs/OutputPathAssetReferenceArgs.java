@@ -27,6 +27,10 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
     @Import(name="jobId")
     private @Nullable Output<String> jobId;
 
+    /**
+     * @return ARM resource ID of the job.
+     * 
+     */
     public Optional<Output<String>> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -38,6 +42,10 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path of the file/directory in the job output.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -50,6 +58,11 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
     @Import(name="referenceType", required=true)
     private Output<String> referenceType;
 
+    /**
+     * @return Enum to determine which reference method to use for an asset.
+     * Expected value is &#39;OutputPath&#39;.
+     * 
+     */
     public Output<String> referenceType() {
         return this.referenceType;
     }
@@ -80,29 +93,67 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
             $ = new OutputPathAssetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobId ARM resource ID of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(@Nullable Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param jobId ARM resource ID of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(String jobId) {
             return jobId(Output.of(jobId));
         }
 
+        /**
+         * @param path The path of the file/directory in the job output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path of the file/directory in the job output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;OutputPath&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(Output<String> referenceType) {
             $.referenceType = referenceType;
             return this;
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;OutputPath&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(String referenceType) {
             return referenceType(Output.of(referenceType));
         }

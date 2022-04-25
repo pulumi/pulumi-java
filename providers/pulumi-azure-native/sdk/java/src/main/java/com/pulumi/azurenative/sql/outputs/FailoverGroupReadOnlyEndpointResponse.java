@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FailoverGroupReadOnlyEndpointResponse {
     /**
-     * Failover policy of the read-only endpoint for the failover group.
+     * @return Failover policy of the read-only endpoint for the failover group.
      * 
      */
     private final @Nullable String failoverPolicy;
@@ -23,9 +23,9 @@ public final class FailoverGroupReadOnlyEndpointResponse {
     }
 
     /**
-     * Failover policy of the read-only endpoint for the failover group.
+     * @return Failover policy of the read-only endpoint for the failover group.
      * 
-    */
+     */
     public Optional<String> failoverPolicy() {
         return Optional.ofNullable(this.failoverPolicy);
     }

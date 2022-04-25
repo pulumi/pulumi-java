@@ -23,6 +23,10 @@ public final class CustomDomainAssociationArgs extends com.pulumi.resources.Reso
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The custom domain endpoint to association. Specify a base domain e.g., `example.com` or a subdomain e.g., `subdomain.example.com`.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -34,6 +38,10 @@ public final class CustomDomainAssociationArgs extends com.pulumi.resources.Reso
     @Import(name="enableWwwSubdomain")
     private @Nullable Output<Boolean> enableWwwSubdomain;
 
+    /**
+     * @return Whether to associate the subdomain with the App Runner service in addition to the base domain. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enableWwwSubdomain() {
         return Optional.ofNullable(this.enableWwwSubdomain);
     }
@@ -45,6 +53,10 @@ public final class CustomDomainAssociationArgs extends com.pulumi.resources.Reso
     @Import(name="serviceArn", required=true)
     private Output<String> serviceArn;
 
+    /**
+     * @return The ARN of the App Runner service.
+     * 
+     */
     public Output<String> serviceArn() {
         return this.serviceArn;
     }
@@ -75,29 +87,65 @@ public final class CustomDomainAssociationArgs extends com.pulumi.resources.Reso
             $ = new CustomDomainAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The custom domain endpoint to association. Specify a base domain e.g., `example.com` or a subdomain e.g., `subdomain.example.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The custom domain endpoint to association. Specify a base domain e.g., `example.com` or a subdomain e.g., `subdomain.example.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param enableWwwSubdomain Whether to associate the subdomain with the App Runner service in addition to the base domain. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableWwwSubdomain(@Nullable Output<Boolean> enableWwwSubdomain) {
             $.enableWwwSubdomain = enableWwwSubdomain;
             return this;
         }
 
+        /**
+         * @param enableWwwSubdomain Whether to associate the subdomain with the App Runner service in addition to the base domain. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableWwwSubdomain(Boolean enableWwwSubdomain) {
             return enableWwwSubdomain(Output.of(enableWwwSubdomain));
         }
 
+        /**
+         * @param serviceArn The ARN of the App Runner service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceArn(Output<String> serviceArn) {
             $.serviceArn = serviceArn;
             return this;
         }
 
+        /**
+         * @param serviceArn The ARN of the App Runner service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceArn(String serviceArn) {
             return serviceArn(Output.of(serviceArn));
         }

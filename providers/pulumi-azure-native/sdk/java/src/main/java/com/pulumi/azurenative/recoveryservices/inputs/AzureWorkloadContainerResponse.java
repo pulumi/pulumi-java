@@ -27,6 +27,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="backupManagementType")
     private @Nullable String backupManagementType;
 
+    /**
+     * @return Type of backup management for the container.
+     * 
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -42,6 +46,14 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="containerType", required=true)
     private String containerType;
 
+    /**
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is &#39;AzureWorkloadContainer&#39;.
+     * 
+     */
     public String containerType() {
         return this.containerType;
     }
@@ -53,6 +65,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="extendedInfo")
     private @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo;
 
+    /**
+     * @return Additional details of a workload container.
+     * 
+     */
     public Optional<AzureWorkloadContainerExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
@@ -64,6 +80,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the container.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -75,6 +95,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="healthStatus")
     private @Nullable String healthStatus;
 
+    /**
+     * @return Status of health of the container.
+     * 
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
@@ -86,6 +110,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="lastUpdatedTime")
     private @Nullable String lastUpdatedTime;
 
+    /**
+     * @return Time stamp when this container was updated.
+     * 
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -97,6 +125,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="operationType")
     private @Nullable String operationType;
 
+    /**
+     * @return Re-Do Operation
+     * 
+     */
     public Optional<String> operationType() {
         return Optional.ofNullable(this.operationType);
     }
@@ -108,6 +140,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="registrationStatus")
     private @Nullable String registrationStatus;
 
+    /**
+     * @return Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -119,6 +155,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="sourceResourceId")
     private @Nullable String sourceResourceId;
 
+    /**
+     * @return ARM ID of the virtual machine represented by this Azure Workload Container
+     * 
+     */
     public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -130,6 +170,10 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
     @Import(name="workloadType")
     private @Nullable String workloadType;
 
+    /**
+     * @return Workload type for which registration was sent.
+     * 
+     */
     public Optional<String> workloadType() {
         return Optional.ofNullable(this.workloadType);
     }
@@ -167,51 +211,115 @@ public final class AzureWorkloadContainerResponse extends com.pulumi.resources.I
             $ = new AzureWorkloadContainerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;AzureWorkloadContainer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param extendedInfo Additional details of a workload container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInfo(@Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo) {
             $.extendedInfo = extendedInfo;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(@Nullable String healthStatus) {
             $.healthStatus = healthStatus;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime Time stamp when this container was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param operationType Re-Do Operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationType(@Nullable String operationType) {
             $.operationType = operationType;
             return this;
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(@Nullable String registrationStatus) {
             $.registrationStatus = registrationStatus;
             return this;
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the virtual machine represented by this Azure Workload Container
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param workloadType Workload type for which registration was sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(@Nullable String workloadType) {
             $.workloadType = workloadType;
             return this;

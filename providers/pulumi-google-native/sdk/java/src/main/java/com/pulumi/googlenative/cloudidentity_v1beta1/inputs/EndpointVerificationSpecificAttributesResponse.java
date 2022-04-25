@@ -24,6 +24,10 @@ public final class EndpointVerificationSpecificAttributesResponse extends com.pu
     @Import(name="certificateAttributes", required=true)
     private List<CertificateAttributesResponse> certificateAttributes;
 
+    /**
+     * @return Details of certificates.
+     * 
+     */
     public List<CertificateAttributesResponse> certificateAttributes() {
         return this.certificateAttributes;
     }
@@ -52,11 +56,23 @@ public final class EndpointVerificationSpecificAttributesResponse extends com.pu
             $ = new EndpointVerificationSpecificAttributesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAttributes Details of certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAttributes(List<CertificateAttributesResponse> certificateAttributes) {
             $.certificateAttributes = certificateAttributes;
             return this;
         }
 
+        /**
+         * @param certificateAttributes Details of certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAttributes(CertificateAttributesResponse... certificateAttributes) {
             return certificateAttributes(List.of(certificateAttributes));
         }

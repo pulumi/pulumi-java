@@ -31,6 +31,14 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="collectorIlb")
     private @Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb;
 
+    /**
+     * @return The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+     * that will be used as collector for mirrored traffic. The
+     * specified forwarding rule must have is_mirroring_collector
+     * set to true.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PacketMirroringCollectorIlbGetArgs>> collectorIlb() {
         return Optional.ofNullable(this.collectorIlb);
     }
@@ -42,6 +50,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description of the rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,6 +66,11 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="filter")
     private @Nullable Output<PacketMirroringFilterGetArgs> filter;
 
+    /**
+     * @return A filter for mirrored traffic.  If unset, all traffic is mirrored.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PacketMirroringFilterGetArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -66,6 +83,11 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="mirroredResources")
     private @Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources;
 
+    /**
+     * @return A means of specifying which resources to mirror.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PacketMirroringMirroredResourcesGetArgs>> mirroredResources() {
         return Optional.ofNullable(this.mirroredResources);
     }
@@ -77,6 +99,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the packet mirroring rule
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +117,13 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="network")
     private @Nullable Output<PacketMirroringNetworkGetArgs> network;
 
+    /**
+     * @return Specifies the mirrored VPC network. Only packets in this network
+     * will be mirrored. All mirrored VMs should have a NIC in the given
+     * network. All mirrored subnetworks should belong to the given network.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PacketMirroringNetworkGetArgs>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -104,6 +137,12 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Since only one rule can be active at a time, priority is
+     * used to break ties in the case of two rules that apply to
+     * the same instances.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -116,6 +155,11 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -128,6 +172,11 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The Region in which the created address should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -164,83 +213,217 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
             $ = new PacketMirroringState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collectorIlb The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+         * that will be used as collector for mirrored traffic. The
+         * specified forwarding rule must have is_mirroring_collector
+         * set to true.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectorIlb(@Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb) {
             $.collectorIlb = collectorIlb;
             return this;
         }
 
+        /**
+         * @param collectorIlb The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
+         * that will be used as collector for mirrored traffic. The
+         * specified forwarding rule must have is_mirroring_collector
+         * set to true.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectorIlb(PacketMirroringCollectorIlbGetArgs collectorIlb) {
             return collectorIlb(Output.of(collectorIlb));
         }
 
+        /**
+         * @param description A human-readable description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param filter A filter for mirrored traffic.  If unset, all traffic is mirrored.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<PacketMirroringFilterGetArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter A filter for mirrored traffic.  If unset, all traffic is mirrored.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(PacketMirroringFilterGetArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param mirroredResources A means of specifying which resources to mirror.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mirroredResources(@Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources) {
             $.mirroredResources = mirroredResources;
             return this;
         }
 
+        /**
+         * @param mirroredResources A means of specifying which resources to mirror.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mirroredResources(PacketMirroringMirroredResourcesGetArgs mirroredResources) {
             return mirroredResources(Output.of(mirroredResources));
         }
 
+        /**
+         * @param name The name of the packet mirroring rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the packet mirroring rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network Specifies the mirrored VPC network. Only packets in this network
+         * will be mirrored. All mirrored VMs should have a NIC in the given
+         * network. All mirrored subnetworks should belong to the given network.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<PacketMirroringNetworkGetArgs> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network Specifies the mirrored VPC network. Only packets in this network
+         * will be mirrored. All mirrored VMs should have a NIC in the given
+         * network. All mirrored subnetworks should belong to the given network.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(PacketMirroringNetworkGetArgs network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param priority Since only one rule can be active at a time, priority is
+         * used to break ties in the case of two rules that apply to
+         * the same instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Since only one rule can be active at a time, priority is
+         * used to break ties in the case of two rules that apply to
+         * the same instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The Region in which the created address should reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The Region in which the created address should reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

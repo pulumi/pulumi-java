@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceTemplateServiceAccount {
     /**
-     * The service account e-mail address. If not given, the
+     * @return The service account e-mail address. If not given, the
      * default Google Compute Engine service account is used.
      * 
      */
     private final @Nullable String email;
     /**
-     * A list of service scopes. Both OAuth2 URLs and gcloud
+     * @return A list of service scopes. Both OAuth2 URLs and gcloud
      * short names are supported. To allow full access to all Cloud APIs, use the
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * 
@@ -35,19 +35,19 @@ public final class InstanceTemplateServiceAccount {
     }
 
     /**
-     * The service account e-mail address. If not given, the
+     * @return The service account e-mail address. If not given, the
      * default Google Compute Engine service account is used.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * A list of service scopes. Both OAuth2 URLs and gcloud
+     * @return A list of service scopes. Both OAuth2 URLs and gcloud
      * short names are supported. To allow full access to all Cloud APIs, use the
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes;
     }

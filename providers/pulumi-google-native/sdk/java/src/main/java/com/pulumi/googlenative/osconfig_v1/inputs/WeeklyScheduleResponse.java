@@ -23,6 +23,10 @@ public final class WeeklyScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dayOfWeek", required=true)
     private String dayOfWeek;
 
+    /**
+     * @return Day of the week.
+     * 
+     */
     public String dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -51,6 +55,12 @@ public final class WeeklyScheduleResponse extends com.pulumi.resources.InvokeArg
             $ = new WeeklyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek Day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(String dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;

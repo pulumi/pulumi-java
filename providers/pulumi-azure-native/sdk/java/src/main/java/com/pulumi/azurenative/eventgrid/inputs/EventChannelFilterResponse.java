@@ -47,6 +47,10 @@ public final class EventChannelFilterResponse extends com.pulumi.resources.Invok
     @Import(name="advancedFilters")
     private @Nullable List<Object> advancedFilters;
 
+    /**
+     * @return An array of advanced filters that are used for filtering event channels.
+     * 
+     */
     public Optional<List<Object>> advancedFilters() {
         return Optional.ofNullable(this.advancedFilters);
     }
@@ -58,6 +62,10 @@ public final class EventChannelFilterResponse extends com.pulumi.resources.Invok
     @Import(name="enableAdvancedFilteringOnArrays")
     private @Nullable Boolean enableAdvancedFilteringOnArrays;
 
+    /**
+     * @return Allows advanced filters to be evaluated against an array of values instead of expecting a singular value. The default value is either false or null.
+     * 
+     */
     public Optional<Boolean> enableAdvancedFilteringOnArrays() {
         return Optional.ofNullable(this.enableAdvancedFilteringOnArrays);
     }
@@ -87,15 +95,33 @@ public final class EventChannelFilterResponse extends com.pulumi.resources.Invok
             $ = new EventChannelFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedFilters An array of advanced filters that are used for filtering event channels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
             $.advancedFilters = advancedFilters;
             return this;
         }
 
+        /**
+         * @param advancedFilters An array of advanced filters that are used for filtering event channels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedFilters(Object... advancedFilters) {
             return advancedFilters(List.of(advancedFilters));
         }
 
+        /**
+         * @param enableAdvancedFilteringOnArrays Allows advanced filters to be evaluated against an array of values instead of expecting a singular value. The default value is either false or null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
             $.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;

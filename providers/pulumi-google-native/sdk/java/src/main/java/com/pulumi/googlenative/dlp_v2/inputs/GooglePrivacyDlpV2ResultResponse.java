@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
     @Import(name="hybridStats", required=true)
     private GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
 
+    /**
+     * @return Statistics related to the processing of hybrid inspect.
+     * 
+     */
     public GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats() {
         return this.hybridStats;
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
     @Import(name="infoTypeStats", required=true)
     private List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
 
+    /**
+     * @return Statistics of how many instances of each info type were found during inspect job.
+     * 
+     */
     public List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats() {
         return this.infoTypeStats;
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
     @Import(name="processedBytes", required=true)
     private String processedBytes;
 
+    /**
+     * @return Total size in bytes that were processed.
+     * 
+     */
     public String processedBytes() {
         return this.processedBytes;
     }
@@ -59,6 +71,10 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
     @Import(name="totalEstimatedBytes", required=true)
     private String totalEstimatedBytes;
 
+    /**
+     * @return Estimate of the number of bytes to process.
+     * 
+     */
     public String totalEstimatedBytes() {
         return this.totalEstimatedBytes;
     }
@@ -90,25 +106,55 @@ public final class GooglePrivacyDlpV2ResultResponse extends com.pulumi.resources
             $ = new GooglePrivacyDlpV2ResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hybridStats Statistics related to the processing of hybrid inspect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridStats(GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats) {
             $.hybridStats = hybridStats;
             return this;
         }
 
+        /**
+         * @param infoTypeStats Statistics of how many instances of each info type were found during inspect job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypeStats(List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats) {
             $.infoTypeStats = infoTypeStats;
             return this;
         }
 
+        /**
+         * @param infoTypeStats Statistics of how many instances of each info type were found during inspect job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypeStats(GooglePrivacyDlpV2InfoTypeStatsResponse... infoTypeStats) {
             return infoTypeStats(List.of(infoTypeStats));
         }
 
+        /**
+         * @param processedBytes Total size in bytes that were processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processedBytes(String processedBytes) {
             $.processedBytes = processedBytes;
             return this;
         }
 
+        /**
+         * @param totalEstimatedBytes Estimate of the number of bytes to process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalEstimatedBytes(String totalEstimatedBytes) {
             $.totalEstimatedBytes = totalEstimatedBytes;
             return this;

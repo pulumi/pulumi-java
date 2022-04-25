@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageConfigurationSettingsResponse {
     /**
-     * Disk configuration to apply to SQL Server.
+     * @return Disk configuration to apply to SQL Server.
      * 
      */
     private final @Nullable String diskConfigurationType;
     /**
-     * SQL Server Data Storage Settings.
+     * @return SQL Server Data Storage Settings.
      * 
      */
     private final @Nullable SQLStorageSettingsResponse sqlDataSettings;
     /**
-     * SQL Server Log Storage Settings.
+     * @return SQL Server Log Storage Settings.
      * 
      */
     private final @Nullable SQLStorageSettingsResponse sqlLogSettings;
     /**
-     * SQL Server TempDb Storage Settings.
+     * @return SQL Server TempDb Storage Settings.
      * 
      */
     private final @Nullable SQLStorageSettingsResponse sqlTempDbSettings;
     /**
-     * Storage workload type.
+     * @return Storage workload type.
      * 
      */
     private final @Nullable String storageWorkloadType;
@@ -53,37 +53,37 @@ public final class StorageConfigurationSettingsResponse {
     }
 
     /**
-     * Disk configuration to apply to SQL Server.
+     * @return Disk configuration to apply to SQL Server.
      * 
-    */
+     */
     public Optional<String> diskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
     /**
-     * SQL Server Data Storage Settings.
+     * @return SQL Server Data Storage Settings.
      * 
-    */
+     */
     public Optional<SQLStorageSettingsResponse> sqlDataSettings() {
         return Optional.ofNullable(this.sqlDataSettings);
     }
     /**
-     * SQL Server Log Storage Settings.
+     * @return SQL Server Log Storage Settings.
      * 
-    */
+     */
     public Optional<SQLStorageSettingsResponse> sqlLogSettings() {
         return Optional.ofNullable(this.sqlLogSettings);
     }
     /**
-     * SQL Server TempDb Storage Settings.
+     * @return SQL Server TempDb Storage Settings.
      * 
-    */
+     */
     public Optional<SQLStorageSettingsResponse> sqlTempDbSettings() {
         return Optional.ofNullable(this.sqlTempDbSettings);
     }
     /**
-     * Storage workload type.
+     * @return Storage workload type.
      * 
-    */
+     */
     public Optional<String> storageWorkloadType() {
         return Optional.ofNullable(this.storageWorkloadType);
     }

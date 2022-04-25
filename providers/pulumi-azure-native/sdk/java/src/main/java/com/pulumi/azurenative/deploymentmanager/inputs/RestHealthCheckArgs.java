@@ -28,6 +28,10 @@ public final class RestHealthCheckArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A unique name for this check.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -39,6 +43,10 @@ public final class RestHealthCheckArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="request", required=true)
     private Output<RestRequestArgs> request;
 
+    /**
+     * @return The request to the health provider.
+     * 
+     */
     public Output<RestRequestArgs> request() {
         return this.request;
     }
@@ -50,6 +58,10 @@ public final class RestHealthCheckArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="response")
     private @Nullable Output<RestResponseArgs> response;
 
+    /**
+     * @return The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
+     * 
+     */
     public Optional<Output<RestResponseArgs>> response() {
         return Optional.ofNullable(this.response);
     }
@@ -80,29 +92,65 @@ public final class RestHealthCheckArgs extends com.pulumi.resources.ResourceArgs
             $ = new RestHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A unique name for this check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name for this check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param request The request to the health provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(Output<RestRequestArgs> request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param request The request to the health provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(RestRequestArgs request) {
             return request(Output.of(request));
         }
 
+        /**
+         * @param response The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(@Nullable Output<RestResponseArgs> response) {
             $.response = response;
             return this;
         }
 
+        /**
+         * @param response The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(RestResponseArgs response) {
             return response(Output.of(response));
         }

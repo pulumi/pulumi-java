@@ -23,6 +23,10 @@ public final class HealthBotPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="botManagementPortalLink", required=true)
     private String botManagementPortalLink;
 
+    /**
+     * @return The link.
+     * 
+     */
     public String botManagementPortalLink() {
         return this.botManagementPortalLink;
     }
@@ -34,6 +38,10 @@ public final class HealthBotPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the Healthbot resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -63,11 +71,23 @@ public final class HealthBotPropertiesResponse extends com.pulumi.resources.Invo
             $ = new HealthBotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param botManagementPortalLink The link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder botManagementPortalLink(String botManagementPortalLink) {
             $.botManagementPortalLink = botManagementPortalLink;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the Healthbot resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

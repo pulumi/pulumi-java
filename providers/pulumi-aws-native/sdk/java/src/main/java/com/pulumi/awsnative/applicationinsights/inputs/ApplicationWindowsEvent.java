@@ -27,6 +27,10 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
     @Import(name="eventLevels", required=true)
     private List<ApplicationEventLevel> eventLevels;
 
+    /**
+     * @return The levels of event to log.
+     * 
+     */
     public List<ApplicationEventLevel> eventLevels() {
         return this.eventLevels;
     }
@@ -38,6 +42,10 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
     @Import(name="eventName", required=true)
     private String eventName;
 
+    /**
+     * @return The type of Windows Events to log.
+     * 
+     */
     public String eventName() {
         return this.eventName;
     }
@@ -49,6 +57,10 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
     @Import(name="logGroupName", required=true)
     private String logGroupName;
 
+    /**
+     * @return The CloudWatch log group name to be associated to the monitored log.
+     * 
+     */
     public String logGroupName() {
         return this.logGroupName;
     }
@@ -60,6 +72,10 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
     @Import(name="patternSet")
     private @Nullable String patternSet;
 
+    /**
+     * @return The name of the log pattern set.
+     * 
+     */
     public Optional<String> patternSet() {
         return Optional.ofNullable(this.patternSet);
     }
@@ -91,25 +107,55 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
             $ = new ApplicationWindowsEvent(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventLevels The levels of event to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLevels(List<ApplicationEventLevel> eventLevels) {
             $.eventLevels = eventLevels;
             return this;
         }
 
+        /**
+         * @param eventLevels The levels of event to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLevels(ApplicationEventLevel... eventLevels) {
             return eventLevels(List.of(eventLevels));
         }
 
+        /**
+         * @param eventName The type of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(String eventName) {
             $.eventName = eventName;
             return this;
         }
 
+        /**
+         * @param logGroupName The CloudWatch log group name to be associated to the monitored log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param patternSet The name of the log pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternSet(@Nullable String patternSet) {
             $.patternSet = patternSet;
             return this;

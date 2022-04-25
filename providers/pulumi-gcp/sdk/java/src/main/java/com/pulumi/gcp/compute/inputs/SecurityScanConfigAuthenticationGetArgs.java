@@ -24,6 +24,11 @@ public final class SecurityScanConfigAuthenticationGetArgs extends com.pulumi.re
     @Import(name="customAccount")
     private @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
 
+    /**
+     * @return Describes authentication configuration that uses a custom account.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SecurityScanConfigAuthenticationCustomAccountGetArgs>> customAccount() {
         return Optional.ofNullable(this.customAccount);
     }
@@ -36,6 +41,11 @@ public final class SecurityScanConfigAuthenticationGetArgs extends com.pulumi.re
     @Import(name="googleAccount")
     private @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
 
+    /**
+     * @return Describes authentication configuration that uses a Google account.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs>> googleAccount() {
         return Optional.ofNullable(this.googleAccount);
     }
@@ -65,20 +75,48 @@ public final class SecurityScanConfigAuthenticationGetArgs extends com.pulumi.re
             $ = new SecurityScanConfigAuthenticationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customAccount Describes authentication configuration that uses a custom account.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAccount(@Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount) {
             $.customAccount = customAccount;
             return this;
         }
 
+        /**
+         * @param customAccount Describes authentication configuration that uses a custom account.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAccount(SecurityScanConfigAuthenticationCustomAccountGetArgs customAccount) {
             return customAccount(Output.of(customAccount));
         }
 
+        /**
+         * @param googleAccount Describes authentication configuration that uses a Google account.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleAccount(@Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
             $.googleAccount = googleAccount;
             return this;
         }
 
+        /**
+         * @param googleAccount Describes authentication configuration that uses a Google account.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleAccount(SecurityScanConfigAuthenticationGoogleAccountGetArgs googleAccount) {
             return googleAccount(Output.of(googleAccount));
         }

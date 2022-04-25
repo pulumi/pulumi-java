@@ -25,6 +25,10 @@ public final class ManagedClusterServicePrincipalProfileResponse extends com.pul
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return The ID for the service principal.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -36,6 +40,10 @@ public final class ManagedClusterServicePrincipalProfileResponse extends com.pul
     @Import(name="secret")
     private @Nullable String secret;
 
+    /**
+     * @return The secret password associated with the service principal in plain text.
+     * 
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -65,11 +73,23 @@ public final class ManagedClusterServicePrincipalProfileResponse extends com.pul
             $ = new ManagedClusterServicePrincipalProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The ID for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param secret The secret password associated with the service principal in plain text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable String secret) {
             $.secret = secret;
             return this;

@@ -35,6 +35,10 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
     @Import(name="allocationPolicy")
     private @Nullable Output<Either<String,AllocationPolicy>> allocationPolicy;
 
+    /**
+     * @return Allocation policy to be used by this provisioning service.
+     * 
+     */
     public Optional<Output<Either<String,AllocationPolicy>>> allocationPolicy() {
         return Optional.ofNullable(this.allocationPolicy);
     }
@@ -46,6 +50,10 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
     @Import(name="authorizationPolicies")
     private @Nullable Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies;
 
+    /**
+     * @return List of authorization keys for a provisioning service.
+     * 
+     */
     public Optional<Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>>> authorizationPolicies() {
         return Optional.ofNullable(this.authorizationPolicies);
     }
@@ -57,6 +65,10 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
     @Import(name="iotHubs")
     private @Nullable Output<List<IotHubDefinitionDescriptionArgs>> iotHubs;
 
+    /**
+     * @return List of IoT hubs associated with this provisioning service.
+     * 
+     */
     public Optional<Output<List<IotHubDefinitionDescriptionArgs>>> iotHubs() {
         return Optional.ofNullable(this.iotHubs);
     }
@@ -68,6 +80,10 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
     @Import(name="ipFilterRules")
     private @Nullable Output<List<TargetIpFilterRuleArgs>> ipFilterRules;
 
+    /**
+     * @return The IP filter rules.
+     * 
+     */
     public Optional<Output<List<TargetIpFilterRuleArgs>>> ipFilterRules() {
         return Optional.ofNullable(this.ipFilterRules);
     }
@@ -79,6 +95,10 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
     @Import(name="privateEndpointConnections")
     private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
+    /**
+     * @return Private endpoint connections created on this IotHub
+     * 
+     */
     public Optional<Output<List<PrivateEndpointConnectionArgs>>> privateEndpointConnections() {
         return Optional.ofNullable(this.privateEndpointConnections);
     }
@@ -90,6 +110,10 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return The ARM provisioning state of the provisioning service.
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -101,6 +125,10 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return Whether requests from Public Network are allowed
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -112,6 +140,10 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
     @Import(name="state")
     private @Nullable Output<Either<String,State>> state;
 
+    /**
+     * @return Current state of the provisioning service.
+     * 
+     */
     public Optional<Output<Either<String,State>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -147,114 +179,270 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
             $ = new IotDpsPropertiesDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationPolicy Allocation policy to be used by this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationPolicy(@Nullable Output<Either<String,AllocationPolicy>> allocationPolicy) {
             $.allocationPolicy = allocationPolicy;
             return this;
         }
 
+        /**
+         * @param allocationPolicy Allocation policy to be used by this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationPolicy(Either<String,AllocationPolicy> allocationPolicy) {
             return allocationPolicy(Output.of(allocationPolicy));
         }
 
+        /**
+         * @param allocationPolicy Allocation policy to be used by this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationPolicy(String allocationPolicy) {
             return allocationPolicy(Either.ofLeft(allocationPolicy));
         }
 
+        /**
+         * @param allocationPolicy Allocation policy to be used by this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationPolicy(AllocationPolicy allocationPolicy) {
             return allocationPolicy(Either.ofRight(allocationPolicy));
         }
 
+        /**
+         * @param authorizationPolicies List of authorization keys for a provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicies(@Nullable Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies) {
             $.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
+        /**
+         * @param authorizationPolicies List of authorization keys for a provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicies(List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs> authorizationPolicies) {
             return authorizationPolicies(Output.of(authorizationPolicies));
         }
 
+        /**
+         * @param authorizationPolicies List of authorization keys for a provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs... authorizationPolicies) {
             return authorizationPolicies(List.of(authorizationPolicies));
         }
 
+        /**
+         * @param iotHubs List of IoT hubs associated with this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(@Nullable Output<List<IotHubDefinitionDescriptionArgs>> iotHubs) {
             $.iotHubs = iotHubs;
             return this;
         }
 
+        /**
+         * @param iotHubs List of IoT hubs associated with this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(List<IotHubDefinitionDescriptionArgs> iotHubs) {
             return iotHubs(Output.of(iotHubs));
         }
 
+        /**
+         * @param iotHubs List of IoT hubs associated with this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(IotHubDefinitionDescriptionArgs... iotHubs) {
             return iotHubs(List.of(iotHubs));
         }
 
+        /**
+         * @param ipFilterRules The IP filter rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRules(@Nullable Output<List<TargetIpFilterRuleArgs>> ipFilterRules) {
             $.ipFilterRules = ipFilterRules;
             return this;
         }
 
+        /**
+         * @param ipFilterRules The IP filter rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRules(List<TargetIpFilterRuleArgs> ipFilterRules) {
             return ipFilterRules(Output.of(ipFilterRules));
         }
 
+        /**
+         * @param ipFilterRules The IP filter rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRules(TargetIpFilterRuleArgs... ipFilterRules) {
             return ipFilterRules(List.of(ipFilterRules));
         }
 
+        /**
+         * @param privateEndpointConnections Private endpoint connections created on this IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections Private endpoint connections created on this IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             return privateEndpointConnections(Output.of(privateEndpointConnections));
         }
 
+        /**
+         * @param privateEndpointConnections Private endpoint connections created on this IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param provisioningState The ARM provisioning state of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState The ARM provisioning state of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param state Current state of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,State>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Current state of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,State> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state Current state of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state Current state of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(State state) {
             return state(Either.ofRight(state));
         }

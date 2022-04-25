@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OsProfileResponse {
     /**
-     * The Linux OS profile.
+     * @return The Linux OS profile.
      * 
      */
     private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
@@ -23,9 +23,9 @@ public final class OsProfileResponse {
     }
 
     /**
-     * The Linux OS profile.
+     * @return The Linux OS profile.
      * 
-    */
+     */
     public Optional<LinuxOperatingSystemProfileResponse> linuxOperatingSystemProfile() {
         return Optional.ofNullable(this.linuxOperatingSystemProfile);
     }

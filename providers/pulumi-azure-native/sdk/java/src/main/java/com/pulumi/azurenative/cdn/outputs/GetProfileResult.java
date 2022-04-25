@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProfileResult {
     /**
-     * The Id of the frontdoor.
+     * @return The Id of the frontdoor.
      * 
      */
     private final String frontdoorId;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Provisioning status of the profile.
+     * @return Provisioning status of the profile.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource status of the profile.
+     * @return Resource status of the profile.
      * 
      */
     private final String resourceState;
     /**
-     * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
+     * @return The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
      * 
      */
     private final SkuResponse sku;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -89,72 +89,72 @@ public final class GetProfileResult {
     }
 
     /**
-     * The Id of the frontdoor.
+     * @return The Id of the frontdoor.
      * 
-    */
+     */
     public String frontdoorId() {
         return this.frontdoorId;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning status of the profile.
+     * @return Provisioning status of the profile.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource status of the profile.
+     * @return Resource status of the profile.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
+     * @return The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

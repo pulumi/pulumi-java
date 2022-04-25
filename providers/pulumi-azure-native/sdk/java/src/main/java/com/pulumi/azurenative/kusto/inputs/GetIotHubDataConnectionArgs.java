@@ -19,6 +19,10 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
     @Import(name="dataConnectionName", required=true)
     private String dataConnectionName;
 
+    /**
+     * @return The name of the data connection.
+     * 
+     */
     public String dataConnectionName() {
         return this.dataConnectionName;
     }
@@ -41,6 +49,10 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The name of the database in the Kusto cluster.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -52,6 +64,10 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetIotHubDataConnectionArgs extends com.pulumi.resources.Invo
             $ = new GetIotHubDataConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param dataConnectionName The name of the data connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectionName(String dataConnectionName) {
             $.dataConnectionName = dataConnectionName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -28,6 +28,10 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="category")
     private @Nullable Output<String> category;
 
+    /**
+     * @return Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+     * 
+     */
     public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
@@ -39,6 +43,10 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return a value indicating whether this log is enabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -50,6 +58,10 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
     private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
+    /**
+     * @return the retention policy for this log.
+     * 
+     */
     public Optional<Output<RetentionPolicyArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -80,29 +92,65 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LogSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param enabled a value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled a value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param retentionPolicy the retention policy for this log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy the retention policy for this log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(RetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }

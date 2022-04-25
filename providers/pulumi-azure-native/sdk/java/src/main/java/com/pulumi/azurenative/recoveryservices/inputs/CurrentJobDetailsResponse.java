@@ -25,6 +25,10 @@ public final class CurrentJobDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="jobId")
     private @Nullable String jobId;
 
+    /**
+     * @return The ARM Id of the job being executed.
+     * 
+     */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -36,6 +40,10 @@ public final class CurrentJobDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="jobName")
     private @Nullable String jobName;
 
+    /**
+     * @return The job name.
+     * 
+     */
     public Optional<String> jobName() {
         return Optional.ofNullable(this.jobName);
     }
@@ -47,6 +55,10 @@ public final class CurrentJobDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return The start time of the job.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -77,16 +89,34 @@ public final class CurrentJobDetailsResponse extends com.pulumi.resources.Invoke
             $ = new CurrentJobDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobId The ARM Id of the job being executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(@Nullable String jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param jobName The job name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(@Nullable String jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;

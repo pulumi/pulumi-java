@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetClientConfigResult {
     /**
-     * The OAuth2 access token used by the client to authenticate against the Google Cloud API.
+     * @return The OAuth2 access token used by the client to authenticate against the Google Cloud API.
      * 
      */
     private final String accessToken;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The ID of the project to apply any resources to.
+     * @return The ID of the project to apply any resources to.
      * 
      */
     private final String project;
     /**
-     * The region to operate under.
+     * @return The region to operate under.
      * 
      */
     private final String region;
     /**
-     * The zone to operate under.
+     * @return The zone to operate under.
      * 
      */
     private final String zone;
@@ -50,37 +50,37 @@ public final class GetClientConfigResult {
     }
 
     /**
-     * The OAuth2 access token used by the client to authenticate against the Google Cloud API.
+     * @return The OAuth2 access token used by the client to authenticate against the Google Cloud API.
      * 
-    */
+     */
     public String accessToken() {
         return this.accessToken;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ID of the project to apply any resources to.
+     * @return The ID of the project to apply any resources to.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * The region to operate under.
+     * @return The region to operate under.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The zone to operate under.
+     * @return The zone to operate under.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

@@ -20,6 +20,10 @@ public final class InstanceTemplateNetworkPerformanceConfigArgs extends com.pulu
     @Import(name="totalEgressBandwidthTier", required=true)
     private Output<String> totalEgressBandwidthTier;
 
+    /**
+     * @return The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
+     * 
+     */
     public Output<String> totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
@@ -48,11 +52,23 @@ public final class InstanceTemplateNetworkPerformanceConfigArgs extends com.pulu
             $ = new InstanceTemplateNetworkPerformanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param totalEgressBandwidthTier The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalEgressBandwidthTier(Output<String> totalEgressBandwidthTier) {
             $.totalEgressBandwidthTier = totalEgressBandwidthTier;
             return this;
         }
 
+        /**
+         * @param totalEgressBandwidthTier The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             return totalEgressBandwidthTier(Output.of(totalEgressBandwidthTier));
         }

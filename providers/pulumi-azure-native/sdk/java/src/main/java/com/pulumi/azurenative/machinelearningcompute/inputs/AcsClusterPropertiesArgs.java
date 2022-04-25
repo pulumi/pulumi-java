@@ -34,6 +34,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="agentCount")
     private @Nullable Output<Integer> agentCount;
 
+    /**
+     * @return The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+     * 
+     */
     public Optional<Output<Integer>> agentCount() {
         return Optional.ofNullable(this.agentCount);
     }
@@ -45,6 +49,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="agentVmSize")
     private @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
 
+    /**
+     * @return The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+     * 
+     */
     public Optional<Output<Either<String,AgentVMSizeTypes>>> agentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
@@ -56,6 +64,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="masterCount")
     private @Nullable Output<Integer> masterCount;
 
+    /**
+     * @return The number of master nodes in the container service.
+     * 
+     */
     public Optional<Output<Integer>> masterCount() {
         return Optional.ofNullable(this.masterCount);
     }
@@ -67,6 +79,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="orchestratorProperties")
     private @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
 
+    /**
+     * @return Orchestrator specific properties
+     * 
+     */
     public Optional<Output<KubernetesClusterPropertiesArgs>> orchestratorProperties() {
         return Optional.ofNullable(this.orchestratorProperties);
     }
@@ -78,6 +94,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="orchestratorType", required=true)
     private Output<Either<String,OrchestratorType>> orchestratorType;
 
+    /**
+     * @return Type of orchestrator. It cannot be changed once the cluster is created.
+     * 
+     */
     public Output<Either<String,OrchestratorType>> orchestratorType() {
         return this.orchestratorType;
     }
@@ -89,6 +109,10 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="systemServices")
     private @Nullable Output<List<SystemServiceArgs>> systemServices;
 
+    /**
+     * @return The system services deployed to the cluster
+     * 
+     */
     public Optional<Output<List<SystemServiceArgs>>> systemServices() {
         return Optional.ofNullable(this.systemServices);
     }
@@ -122,76 +146,178 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new AcsClusterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentCount The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentCount(@Nullable Output<Integer> agentCount) {
             $.agentCount = agentCount;
             return this;
         }
 
+        /**
+         * @param agentCount The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentCount(Integer agentCount) {
             return agentCount(Output.of(agentCount));
         }
 
+        /**
+         * @param agentVmSize The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVmSize(@Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize) {
             $.agentVmSize = agentVmSize;
             return this;
         }
 
+        /**
+         * @param agentVmSize The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVmSize(Either<String,AgentVMSizeTypes> agentVmSize) {
             return agentVmSize(Output.of(agentVmSize));
         }
 
+        /**
+         * @param agentVmSize The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVmSize(String agentVmSize) {
             return agentVmSize(Either.ofLeft(agentVmSize));
         }
 
+        /**
+         * @param agentVmSize The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVmSize(AgentVMSizeTypes agentVmSize) {
             return agentVmSize(Either.ofRight(agentVmSize));
         }
 
+        /**
+         * @param masterCount The number of master nodes in the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterCount(@Nullable Output<Integer> masterCount) {
             $.masterCount = masterCount;
             return this;
         }
 
+        /**
+         * @param masterCount The number of master nodes in the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterCount(Integer masterCount) {
             return masterCount(Output.of(masterCount));
         }
 
+        /**
+         * @param orchestratorProperties Orchestrator specific properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorProperties(@Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties) {
             $.orchestratorProperties = orchestratorProperties;
             return this;
         }
 
+        /**
+         * @param orchestratorProperties Orchestrator specific properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorProperties(KubernetesClusterPropertiesArgs orchestratorProperties) {
             return orchestratorProperties(Output.of(orchestratorProperties));
         }
 
+        /**
+         * @param orchestratorType Type of orchestrator. It cannot be changed once the cluster is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorType(Output<Either<String,OrchestratorType>> orchestratorType) {
             $.orchestratorType = orchestratorType;
             return this;
         }
 
+        /**
+         * @param orchestratorType Type of orchestrator. It cannot be changed once the cluster is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorType(Either<String,OrchestratorType> orchestratorType) {
             return orchestratorType(Output.of(orchestratorType));
         }
 
+        /**
+         * @param orchestratorType Type of orchestrator. It cannot be changed once the cluster is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorType(String orchestratorType) {
             return orchestratorType(Either.ofLeft(orchestratorType));
         }
 
+        /**
+         * @param orchestratorType Type of orchestrator. It cannot be changed once the cluster is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorType(OrchestratorType orchestratorType) {
             return orchestratorType(Either.ofRight(orchestratorType));
         }
 
+        /**
+         * @param systemServices The system services deployed to the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServices(@Nullable Output<List<SystemServiceArgs>> systemServices) {
             $.systemServices = systemServices;
             return this;
         }
 
+        /**
+         * @param systemServices The system services deployed to the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServices(List<SystemServiceArgs> systemServices) {
             return systemServices(Output.of(systemServices));
         }
 
+        /**
+         * @param systemServices The system services deployed to the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServices(SystemServiceArgs... systemServices) {
             return systemServices(List.of(systemServices));
         }

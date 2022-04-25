@@ -26,6 +26,10 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
     @Import(name="creationScript")
     private @Nullable Output<ScriptReferenceArgs> creationScript;
 
+    /**
+     * @return Script that&#39;s run only once during provision of the compute.
+     * 
+     */
     public Optional<Output<ScriptReferenceArgs>> creationScript() {
         return Optional.ofNullable(this.creationScript);
     }
@@ -37,6 +41,10 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
     @Import(name="startupScript")
     private @Nullable Output<ScriptReferenceArgs> startupScript;
 
+    /**
+     * @return Script that&#39;s run every time the machine starts.
+     * 
+     */
     public Optional<Output<ScriptReferenceArgs>> startupScript() {
         return Optional.ofNullable(this.startupScript);
     }
@@ -66,20 +74,44 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
             $ = new ScriptsToExecuteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationScript Script that&#39;s run only once during provision of the compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationScript(@Nullable Output<ScriptReferenceArgs> creationScript) {
             $.creationScript = creationScript;
             return this;
         }
 
+        /**
+         * @param creationScript Script that&#39;s run only once during provision of the compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationScript(ScriptReferenceArgs creationScript) {
             return creationScript(Output.of(creationScript));
         }
 
+        /**
+         * @param startupScript Script that&#39;s run every time the machine starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startupScript(@Nullable Output<ScriptReferenceArgs> startupScript) {
             $.startupScript = startupScript;
             return this;
         }
 
+        /**
+         * @param startupScript Script that&#39;s run every time the machine starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startupScript(ScriptReferenceArgs startupScript) {
             return startupScript(Output.of(startupScript));
         }

@@ -19,6 +19,10 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
     @Import(name="dataCollectionRuleName", required=true)
     private String dataCollectionRuleName;
 
+    /**
+     * @return The name of the data collection rule. The name is case insensitive.
+     * 
+     */
     public String dataCollectionRuleName() {
         return this.dataCollectionRuleName;
     }
@@ -30,6 +34,10 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
             $ = new GetDataCollectionRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataCollectionRuleName The name of the data collection rule. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectionRuleName(String dataCollectionRuleName) {
             $.dataCollectionRuleName = dataCollectionRuleName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

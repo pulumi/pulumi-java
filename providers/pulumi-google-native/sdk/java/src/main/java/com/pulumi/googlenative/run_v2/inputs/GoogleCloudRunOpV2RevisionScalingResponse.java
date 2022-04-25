@@ -23,6 +23,10 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends com.pulumi.
     @Import(name="maxInstanceCount", required=true)
     private Integer maxInstanceCount;
 
+    /**
+     * @return Maximum number of serving instances that this resource should have.
+     * 
+     */
     public Integer maxInstanceCount() {
         return this.maxInstanceCount;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends com.pulumi.
     @Import(name="minInstanceCount", required=true)
     private Integer minInstanceCount;
 
+    /**
+     * @return Minimum number of serving instances that this resource should have.
+     * 
+     */
     public Integer minInstanceCount() {
         return this.minInstanceCount;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends com.pulumi.
             $ = new GoogleCloudRunOpV2RevisionScalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstanceCount Maximum number of serving instances that this resource should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceCount(Integer maxInstanceCount) {
             $.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
+        /**
+         * @param minInstanceCount Minimum number of serving instances that this resource should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(Integer minInstanceCount) {
             $.minInstanceCount = minInstanceCount;
             return this;

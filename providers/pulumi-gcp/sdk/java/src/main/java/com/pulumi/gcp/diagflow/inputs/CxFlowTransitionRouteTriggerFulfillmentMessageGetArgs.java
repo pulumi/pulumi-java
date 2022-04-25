@@ -22,6 +22,10 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs extends
     @Import(name="text")
     private @Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs> text;
 
+    /**
+     * @return A collection of text responses.
+     * 
+     */
     public Optional<Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -50,11 +54,23 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs extends
             $ = new CxFlowTransitionRouteTriggerFulfillmentMessageGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs text) {
             return text(Output.of(text));
         }

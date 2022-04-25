@@ -17,52 +17,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetStreamingPolicyResult {
     /**
-     * Configuration of CommonEncryptionCbcs
+     * @return Configuration of CommonEncryptionCbcs
      * 
      */
     private final @Nullable CommonEncryptionCbcsResponse commonEncryptionCbcs;
     /**
-     * Configuration of CommonEncryptionCenc
+     * @return Configuration of CommonEncryptionCenc
      * 
      */
     private final @Nullable CommonEncryptionCencResponse commonEncryptionCenc;
     /**
-     * Creation time of Streaming Policy
+     * @return Creation time of Streaming Policy
      * 
      */
     private final String created;
     /**
-     * Default ContentKey used by current Streaming Policy
+     * @return Default ContentKey used by current Streaming Policy
      * 
      */
     private final @Nullable String defaultContentKeyPolicyName;
     /**
-     * Configuration of EnvelopeEncryption
+     * @return Configuration of EnvelopeEncryption
      * 
      */
     private final @Nullable EnvelopeEncryptionResponse envelopeEncryption;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Configurations of NoEncryption
+     * @return Configurations of NoEncryption
      * 
      */
     private final @Nullable NoEncryptionResponse noEncryption;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -92,72 +92,72 @@ public final class GetStreamingPolicyResult {
     }
 
     /**
-     * Configuration of CommonEncryptionCbcs
+     * @return Configuration of CommonEncryptionCbcs
      * 
-    */
+     */
     public Optional<CommonEncryptionCbcsResponse> commonEncryptionCbcs() {
         return Optional.ofNullable(this.commonEncryptionCbcs);
     }
     /**
-     * Configuration of CommonEncryptionCenc
+     * @return Configuration of CommonEncryptionCenc
      * 
-    */
+     */
     public Optional<CommonEncryptionCencResponse> commonEncryptionCenc() {
         return Optional.ofNullable(this.commonEncryptionCenc);
     }
     /**
-     * Creation time of Streaming Policy
+     * @return Creation time of Streaming Policy
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Default ContentKey used by current Streaming Policy
+     * @return Default ContentKey used by current Streaming Policy
      * 
-    */
+     */
     public Optional<String> defaultContentKeyPolicyName() {
         return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
     /**
-     * Configuration of EnvelopeEncryption
+     * @return Configuration of EnvelopeEncryption
      * 
-    */
+     */
     public Optional<EnvelopeEncryptionResponse> envelopeEncryption() {
         return Optional.ofNullable(this.envelopeEncryption);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Configurations of NoEncryption
+     * @return Configurations of NoEncryption
      * 
-    */
+     */
     public Optional<NoEncryptionResponse> noEncryption() {
         return Optional.ofNullable(this.noEncryption);
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

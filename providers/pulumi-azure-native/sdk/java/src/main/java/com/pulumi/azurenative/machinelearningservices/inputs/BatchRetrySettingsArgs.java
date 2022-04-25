@@ -27,6 +27,10 @@ public final class BatchRetrySettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxRetries")
     private @Nullable Output<Integer> maxRetries;
 
+    /**
+     * @return Maximum retry count for a mini-batch
+     * 
+     */
     public Optional<Output<Integer>> maxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
@@ -38,6 +42,10 @@ public final class BatchRetrySettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Invocation timeout for a mini-batch, in ISO 8601 format.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -67,20 +75,44 @@ public final class BatchRetrySettingsArgs extends com.pulumi.resources.ResourceA
             $ = new BatchRetrySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxRetries Maximum retry count for a mini-batch
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             $.maxRetries = maxRetries;
             return this;
         }
 
+        /**
+         * @param maxRetries Maximum retry count for a mini-batch
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetries(Integer maxRetries) {
             return maxRetries(Output.of(maxRetries));
         }
 
+        /**
+         * @param timeout Invocation timeout for a mini-batch, in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Invocation timeout for a mini-batch, in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

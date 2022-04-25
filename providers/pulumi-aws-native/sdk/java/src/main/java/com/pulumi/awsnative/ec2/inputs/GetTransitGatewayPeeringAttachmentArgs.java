@@ -19,6 +19,10 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends com.pulumi.res
     @Import(name="transitGatewayAttachmentId", required=true)
     private String transitGatewayAttachmentId;
 
+    /**
+     * @return The ID of the transit gateway peering attachment.
+     * 
+     */
     public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
@@ -47,6 +51,12 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends com.pulumi.res
             $ = new GetTransitGatewayPeeringAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transitGatewayAttachmentId The ID of the transit gateway peering attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;

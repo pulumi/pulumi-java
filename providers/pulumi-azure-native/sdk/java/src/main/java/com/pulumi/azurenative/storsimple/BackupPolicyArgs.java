@@ -24,6 +24,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicyName")
     private @Nullable Output<String> backupPolicyName;
 
+    /**
+     * @return The name of the backup policy to be created/updated.
+     * 
+     */
     public Optional<Output<String>> backupPolicyName() {
         return Optional.ofNullable(this.backupPolicyName);
     }
@@ -35,6 +39,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -46,6 +54,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<Kind> kind;
 
+    /**
+     * @return The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     public Optional<Output<Kind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -57,6 +69,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managerName", required=true)
     private Output<String> managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public Output<String> managerName() {
         return this.managerName;
     }
@@ -68,6 +84,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeIds", required=true)
     private Output<List<String>> volumeIds;
 
+    /**
+     * @return The path IDs of the volumes which are part of the backup policy.
+     * 
+     */
     public Output<List<String>> volumeIds() {
         return this.volumeIds;
     }
@@ -112,60 +136,138 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupPolicyName The name of the backup policy to be created/updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyName(@Nullable Output<String> backupPolicyName) {
             $.backupPolicyName = backupPolicyName;
             return this;
         }
 
+        /**
+         * @param backupPolicyName The name of the backup policy to be created/updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicyName(String backupPolicyName) {
             return backupPolicyName(Output.of(backupPolicyName));
         }
 
+        /**
+         * @param deviceName The device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Kind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(Output<String> managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             return managerName(Output.of(managerName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param volumeIds The path IDs of the volumes which are part of the backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeIds(Output<List<String>> volumeIds) {
             $.volumeIds = volumeIds;
             return this;
         }
 
+        /**
+         * @param volumeIds The path IDs of the volumes which are part of the backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeIds(List<String> volumeIds) {
             return volumeIds(Output.of(volumeIds));
         }
 
+        /**
+         * @param volumeIds The path IDs of the volumes which are part of the backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeIds(String... volumeIds) {
             return volumeIds(List.of(volumeIds));
         }

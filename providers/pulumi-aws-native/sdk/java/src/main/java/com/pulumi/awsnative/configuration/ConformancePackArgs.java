@@ -24,6 +24,10 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="conformancePackInputParameters")
     private @Nullable Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
 
+    /**
+     * @return A list of ConformancePackInputParameter objects.
+     * 
+     */
     public Optional<Output<List<ConformancePackInputParameterArgs>>> conformancePackInputParameters() {
         return Optional.ofNullable(this.conformancePackInputParameters);
     }
@@ -35,6 +39,10 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="conformancePackName")
     private @Nullable Output<String> conformancePackName;
 
+    /**
+     * @return Name of the conformance pack which will be assigned as the unique identifier.
+     * 
+     */
     public Optional<Output<String>> conformancePackName() {
         return Optional.ofNullable(this.conformancePackName);
     }
@@ -46,6 +54,10 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deliveryS3Bucket")
     private @Nullable Output<String> deliveryS3Bucket;
 
+    /**
+     * @return AWS Config stores intermediate files while processing conformance pack template.
+     * 
+     */
     public Optional<Output<String>> deliveryS3Bucket() {
         return Optional.ofNullable(this.deliveryS3Bucket);
     }
@@ -57,6 +69,10 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deliveryS3KeyPrefix")
     private @Nullable Output<String> deliveryS3KeyPrefix;
 
+    /**
+     * @return The prefix for delivery S3 bucket.
+     * 
+     */
     public Optional<Output<String>> deliveryS3KeyPrefix() {
         return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }
@@ -68,6 +84,10 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="templateBody")
     private @Nullable Output<String> templateBody;
 
+    /**
+     * @return A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
+     * 
+     */
     public Optional<Output<String>> templateBody() {
         return Optional.ofNullable(this.templateBody);
     }
@@ -79,6 +99,10 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="templateS3Uri")
     private @Nullable Output<String> templateS3Uri;
 
+    /**
+     * @return Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
+     * 
+     */
     public Optional<Output<String>> templateS3Uri() {
         return Optional.ofNullable(this.templateS3Uri);
     }
@@ -112,60 +136,138 @@ public final class ConformancePackArgs extends com.pulumi.resources.ResourceArgs
             $ = new ConformancePackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackInputParameters(@Nullable Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters) {
             $.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
 
+        /**
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackInputParameters(List<ConformancePackInputParameterArgs> conformancePackInputParameters) {
             return conformancePackInputParameters(Output.of(conformancePackInputParameters));
         }
 
+        /**
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackInputParameters(ConformancePackInputParameterArgs... conformancePackInputParameters) {
             return conformancePackInputParameters(List.of(conformancePackInputParameters));
         }
 
+        /**
+         * @param conformancePackName Name of the conformance pack which will be assigned as the unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackName(@Nullable Output<String> conformancePackName) {
             $.conformancePackName = conformancePackName;
             return this;
         }
 
+        /**
+         * @param conformancePackName Name of the conformance pack which will be assigned as the unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conformancePackName(String conformancePackName) {
             return conformancePackName(Output.of(conformancePackName));
         }
 
+        /**
+         * @param deliveryS3Bucket AWS Config stores intermediate files while processing conformance pack template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryS3Bucket(@Nullable Output<String> deliveryS3Bucket) {
             $.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
 
+        /**
+         * @param deliveryS3Bucket AWS Config stores intermediate files while processing conformance pack template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryS3Bucket(String deliveryS3Bucket) {
             return deliveryS3Bucket(Output.of(deliveryS3Bucket));
         }
 
+        /**
+         * @param deliveryS3KeyPrefix The prefix for delivery S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryS3KeyPrefix(@Nullable Output<String> deliveryS3KeyPrefix) {
             $.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
 
+        /**
+         * @param deliveryS3KeyPrefix The prefix for delivery S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryS3KeyPrefix(String deliveryS3KeyPrefix) {
             return deliveryS3KeyPrefix(Output.of(deliveryS3KeyPrefix));
         }
 
+        /**
+         * @param templateBody A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(@Nullable Output<String> templateBody) {
             $.templateBody = templateBody;
             return this;
         }
 
+        /**
+         * @param templateBody A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateBody(String templateBody) {
             return templateBody(Output.of(templateBody));
         }
 
+        /**
+         * @param templateS3Uri Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateS3Uri(@Nullable Output<String> templateS3Uri) {
             $.templateS3Uri = templateS3Uri;
             return this;
         }
 
+        /**
+         * @param templateS3Uri Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateS3Uri(String templateS3Uri) {
             return templateS3Uri(Output.of(templateS3Uri));
         }

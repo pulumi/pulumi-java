@@ -25,6 +25,10 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
     @Import(name="pattern", required=true)
     private Output<String> pattern;
 
+    /**
+     * @return The log pattern.
+     * 
+     */
     public Output<String> pattern() {
         return this.pattern;
     }
@@ -36,6 +40,10 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
     @Import(name="patternName", required=true)
     private Output<String> patternName;
 
+    /**
+     * @return The name of the log pattern.
+     * 
+     */
     public Output<String> patternName() {
         return this.patternName;
     }
@@ -47,6 +55,10 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
     @Import(name="rank", required=true)
     private Output<Integer> rank;
 
+    /**
+     * @return Rank of the log pattern.
+     * 
+     */
     public Output<Integer> rank() {
         return this.rank;
     }
@@ -77,29 +89,65 @@ public final class ApplicationLogPatternArgs extends com.pulumi.resources.Resour
             $ = new ApplicationLogPatternArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pattern The log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(Output<String> pattern) {
             $.pattern = pattern;
             return this;
         }
 
+        /**
+         * @param pattern The log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(String pattern) {
             return pattern(Output.of(pattern));
         }
 
+        /**
+         * @param patternName The name of the log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternName(Output<String> patternName) {
             $.patternName = patternName;
             return this;
         }
 
+        /**
+         * @param patternName The name of the log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternName(String patternName) {
             return patternName(Output.of(patternName));
         }
 
+        /**
+         * @param rank Rank of the log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rank(Output<Integer> rank) {
             $.rank = rank;
             return this;
         }
 
+        /**
+         * @param rank Rank of the log pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rank(Integer rank) {
             return rank(Output.of(rank));
         }

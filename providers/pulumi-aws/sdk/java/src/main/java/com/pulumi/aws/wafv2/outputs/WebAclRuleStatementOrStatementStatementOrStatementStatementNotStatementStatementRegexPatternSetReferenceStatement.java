@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatement {
     /**
-     * The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
+     * @return The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
      * 
      */
     private final String arn;
     /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     private final @Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch;
     /**
-     * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+     * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
      * 
      */
     private final List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations;
@@ -41,23 +41,23 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
+     * @return The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
     /**
-     * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+     * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
      * 
-    */
+     */
     public List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations() {
         return this.textTransformations;
     }

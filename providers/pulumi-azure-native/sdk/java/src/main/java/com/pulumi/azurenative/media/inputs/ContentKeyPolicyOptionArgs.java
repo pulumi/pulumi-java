@@ -35,6 +35,10 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
     @Import(name="configuration", required=true)
     private Output<Object> configuration;
 
+    /**
+     * @return The key delivery configuration.
+     * 
+     */
     public Output<Object> configuration() {
         return this.configuration;
     }
@@ -46,6 +50,10 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The Policy Option description.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +65,10 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
     @Import(name="restriction", required=true)
     private Output<Object> restriction;
 
+    /**
+     * @return The requirements that must be met to deliver keys with this configuration
+     * 
+     */
     public Output<Object> restriction() {
         return this.restriction;
     }
@@ -87,29 +99,65 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
             $ = new ContentKeyPolicyOptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration The key delivery configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(Output<Object> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration The key delivery configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(Object configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param name The Policy Option description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The Policy Option description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param restriction The requirements that must be met to deliver keys with this configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder restriction(Output<Object> restriction) {
             $.restriction = restriction;
             return this;
         }
 
+        /**
+         * @param restriction The requirements that must be met to deliver keys with this configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder restriction(Object restriction) {
             return restriction(Output.of(restriction));
         }

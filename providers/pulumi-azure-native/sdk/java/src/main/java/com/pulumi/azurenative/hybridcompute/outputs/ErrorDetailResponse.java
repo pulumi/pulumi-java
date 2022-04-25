@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ErrorDetailResponse {
     /**
-     * The error&#39;s code.
+     * @return The error&#39;s code.
      * 
      */
     private final String code;
     /**
-     * Additional error details.
+     * @return Additional error details.
      * 
      */
     private final @Nullable List<ErrorDetailResponse> details;
     /**
-     * A human readable error message.
+     * @return A human readable error message.
      * 
      */
     private final String message;
     /**
-     * Indicates which property in the request is responsible for the error.
+     * @return Indicates which property in the request is responsible for the error.
      * 
      */
     private final @Nullable String target;
@@ -46,30 +46,30 @@ public final class ErrorDetailResponse {
     }
 
     /**
-     * The error&#39;s code.
+     * @return The error&#39;s code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Additional error details.
+     * @return Additional error details.
      * 
-    */
+     */
     public List<ErrorDetailResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
-     * A human readable error message.
+     * @return A human readable error message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Indicates which property in the request is responsible for the error.
+     * @return Indicates which property in the request is responsible for the error.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

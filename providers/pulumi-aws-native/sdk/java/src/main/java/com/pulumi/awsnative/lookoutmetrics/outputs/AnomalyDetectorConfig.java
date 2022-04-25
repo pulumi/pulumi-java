@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AnomalyDetectorConfig {
     /**
-     * Frequency of anomaly detection
+     * @return Frequency of anomaly detection
      * 
      */
     private final AnomalyDetectorFrequency anomalyDetectorFrequency;
@@ -21,9 +21,9 @@ public final class AnomalyDetectorConfig {
     }
 
     /**
-     * Frequency of anomaly detection
+     * @return Frequency of anomaly detection
      * 
-    */
+     */
     public AnomalyDetectorFrequency anomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;
     }

@@ -24,6 +24,10 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="initiatorIqn", required=true)
     private String initiatorIqn;
 
+    /**
+     * @return iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
+     * 
+     */
     public String initiatorIqn() {
         return this.initiatorIqn;
     }
@@ -35,6 +39,10 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mappedLuns", required=true)
     private List<String> mappedLuns;
 
+    /**
+     * @return List of LUN names mapped to the ACL.
+     * 
+     */
     public List<String> mappedLuns() {
         return this.mappedLuns;
     }
@@ -46,6 +54,10 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -57,6 +69,10 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -88,25 +104,55 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AclResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param initiatorIqn iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initiatorIqn(String initiatorIqn) {
             $.initiatorIqn = initiatorIqn;
             return this;
         }
 
+        /**
+         * @param mappedLuns List of LUN names mapped to the ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedLuns(List<String> mappedLuns) {
             $.mappedLuns = mappedLuns;
             return this;
         }
 
+        /**
+         * @param mappedLuns List of LUN names mapped to the ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedLuns(String... mappedLuns) {
             return mappedLuns(List.of(mappedLuns));
         }
 
+        /**
+         * @param password Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

@@ -28,6 +28,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationTags")
     private @Nullable Output<Map<String,String>> allocationTags;
 
+    /**
+     * @return IpAllocation tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> allocationTags() {
         return Optional.ofNullable(this.allocationTags);
     }
@@ -39,6 +43,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -50,6 +58,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAllocationName")
     private @Nullable Output<String> ipAllocationName;
 
+    /**
+     * @return The name of the IpAllocation.
+     * 
+     */
     public Optional<Output<String>> ipAllocationName() {
         return Optional.ofNullable(this.ipAllocationName);
     }
@@ -61,6 +73,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipamAllocationId")
     private @Nullable Output<String> ipamAllocationId;
 
+    /**
+     * @return The IPAM allocation ID.
+     * 
+     */
     public Optional<Output<String>> ipamAllocationId() {
         return Optional.ofNullable(this.ipamAllocationId);
     }
@@ -72,6 +88,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -83,6 +103,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The address prefix for the IpAllocation.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -94,6 +118,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefixLength")
     private @Nullable Output<Integer> prefixLength;
 
+    /**
+     * @return The address prefix length for the IpAllocation.
+     * 
+     */
     public Optional<Output<Integer>> prefixLength() {
         return Optional.ofNullable(this.prefixLength);
     }
@@ -105,6 +133,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefixType")
     private @Nullable Output<Either<String,IPVersion>> prefixType;
 
+    /**
+     * @return The address prefix Type for the IpAllocation.
+     * 
+     */
     public Optional<Output<Either<String,IPVersion>>> prefixType() {
         return Optional.ofNullable(this.prefixType);
     }
@@ -116,6 +148,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -127,6 +163,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -138,6 +178,10 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,IpAllocationType>> type;
 
+    /**
+     * @return The type for the IpAllocation.
+     * 
+     */
     public Optional<Output<Either<String,IpAllocationType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -176,117 +220,273 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IpAllocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationTags IpAllocation tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationTags(@Nullable Output<Map<String,String>> allocationTags) {
             $.allocationTags = allocationTags;
             return this;
         }
 
+        /**
+         * @param allocationTags IpAllocation tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationTags(Map<String,String> allocationTags) {
             return allocationTags(Output.of(allocationTags));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipAllocationName The name of the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationName(@Nullable Output<String> ipAllocationName) {
             $.ipAllocationName = ipAllocationName;
             return this;
         }
 
+        /**
+         * @param ipAllocationName The name of the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationName(String ipAllocationName) {
             return ipAllocationName(Output.of(ipAllocationName));
         }
 
+        /**
+         * @param ipamAllocationId The IPAM allocation ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamAllocationId(@Nullable Output<String> ipamAllocationId) {
             $.ipamAllocationId = ipamAllocationId;
             return this;
         }
 
+        /**
+         * @param ipamAllocationId The IPAM allocation ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamAllocationId(String ipamAllocationId) {
             return ipamAllocationId(Output.of(ipamAllocationId));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param prefix The address prefix for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The address prefix for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param prefixLength The address prefix length for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
             $.prefixLength = prefixLength;
             return this;
         }
 
+        /**
+         * @param prefixLength The address prefix length for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixLength(Integer prefixLength) {
             return prefixLength(Output.of(prefixLength));
         }
 
+        /**
+         * @param prefixType The address prefix Type for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixType(@Nullable Output<Either<String,IPVersion>> prefixType) {
             $.prefixType = prefixType;
             return this;
         }
 
+        /**
+         * @param prefixType The address prefix Type for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixType(Either<String,IPVersion> prefixType) {
             return prefixType(Output.of(prefixType));
         }
 
+        /**
+         * @param prefixType The address prefix Type for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixType(String prefixType) {
             return prefixType(Either.ofLeft(prefixType));
         }
 
+        /**
+         * @param prefixType The address prefix Type for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixType(IPVersion prefixType) {
             return prefixType(Either.ofRight(prefixType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type The type for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,IpAllocationType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,IpAllocationType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type for the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(IpAllocationType type) {
             return type(Either.ofRight(type));
         }

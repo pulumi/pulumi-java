@@ -26,6 +26,10 @@ public final class IotHubSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="eventHubConnectionString")
     private @Nullable Output<String> eventHubConnectionString;
 
+    /**
+     * @return EventHub connection string.
+     * 
+     */
     public Optional<Output<String>> eventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
@@ -37,6 +41,10 @@ public final class IotHubSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ioTHubConnectionString")
     private @Nullable Output<String> ioTHubConnectionString;
 
+    /**
+     * @return IoTHub connection string.
+     * 
+     */
     public Optional<Output<String>> ioTHubConnectionString() {
         return Optional.ofNullable(this.ioTHubConnectionString);
     }
@@ -48,6 +56,10 @@ public final class IotHubSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return IoTHub resource ID
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -78,29 +90,65 @@ public final class IotHubSettingsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IotHubSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHubConnectionString EventHub connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubConnectionString(@Nullable Output<String> eventHubConnectionString) {
             $.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
 
+        /**
+         * @param eventHubConnectionString EventHub connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubConnectionString(String eventHubConnectionString) {
             return eventHubConnectionString(Output.of(eventHubConnectionString));
         }
 
+        /**
+         * @param ioTHubConnectionString IoTHub connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHubConnectionString(@Nullable Output<String> ioTHubConnectionString) {
             $.ioTHubConnectionString = ioTHubConnectionString;
             return this;
         }
 
+        /**
+         * @param ioTHubConnectionString IoTHub connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHubConnectionString(String ioTHubConnectionString) {
             return ioTHubConnectionString(Output.of(ioTHubConnectionString));
         }
 
+        /**
+         * @param resourceId IoTHub resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId IoTHub resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

@@ -22,6 +22,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -33,6 +37,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the workspace.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -44,6 +52,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="prometheusEndpoint")
     private @Nullable Output<String> prometheusEndpoint;
 
+    /**
+     * @return Prometheus endpoint available for this workspace.
+     * 
+     */
     public Optional<Output<String>> prometheusEndpoint() {
         return Optional.ofNullable(this.prometheusEndpoint);
     }
@@ -74,29 +86,65 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param prometheusEndpoint Prometheus endpoint available for this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheusEndpoint(@Nullable Output<String> prometheusEndpoint) {
             $.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
 
+        /**
+         * @param prometheusEndpoint Prometheus endpoint available for this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheusEndpoint(String prometheusEndpoint) {
             return prometheusEndpoint(Output.of(prometheusEndpoint));
         }

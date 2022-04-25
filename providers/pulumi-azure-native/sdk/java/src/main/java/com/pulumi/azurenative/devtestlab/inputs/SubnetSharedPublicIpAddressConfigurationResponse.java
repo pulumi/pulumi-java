@@ -26,6 +26,10 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends com.
     @Import(name="allowedPorts")
     private @Nullable List<PortResponse> allowedPorts;
 
+    /**
+     * @return Backend ports that virtual machines on this subnet are allowed to expose
+     * 
+     */
     public Optional<List<PortResponse>> allowedPorts() {
         return Optional.ofNullable(this.allowedPorts);
     }
@@ -54,11 +58,23 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends com.
             $ = new SubnetSharedPublicIpAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedPorts Backend ports that virtual machines on this subnet are allowed to expose
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPorts(@Nullable List<PortResponse> allowedPorts) {
             $.allowedPorts = allowedPorts;
             return this;
         }
 
+        /**
+         * @param allowedPorts Backend ports that virtual machines on this subnet are allowed to expose
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPorts(PortResponse... allowedPorts) {
             return allowedPorts(List.of(allowedPorts));
         }

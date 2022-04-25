@@ -25,6 +25,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name for this template.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -37,6 +41,11 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields", required=true)
     private Output<List<TagTemplateFieldArgs>> fields;
 
+    /**
+     * @return Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<TagTemplateFieldArgs>> fields() {
         return this.fields;
     }
@@ -48,6 +57,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDelete")
     private @Nullable Output<Boolean> forceDelete;
 
+    /**
+     * @return This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
+     * 
+     */
     public Optional<Output<Boolean>> forceDelete() {
         return Optional.ofNullable(this.forceDelete);
     }
@@ -60,6 +73,11 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -71,6 +89,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Template location region.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -82,6 +104,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagTemplateId", required=true)
     private Output<String> tagTemplateId;
 
+    /**
+     * @return The id of the tag template to create.
+     * 
+     */
     public Output<String> tagTemplateId() {
         return this.tagTemplateId;
     }
@@ -115,60 +141,143 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name for this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name for this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param fields Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(Output<List<TagTemplateFieldArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<TagTemplateFieldArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(TagTemplateFieldArgs... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param forceDelete This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             $.forceDelete = forceDelete;
             return this;
         }
 
+        /**
+         * @param forceDelete This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDelete(Boolean forceDelete) {
             return forceDelete(Output.of(forceDelete));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Template location region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Template location region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param tagTemplateId The id of the tag template to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagTemplateId(Output<String> tagTemplateId) {
             $.tagTemplateId = tagTemplateId;
             return this;
         }
 
+        /**
+         * @param tagTemplateId The id of the tag template to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagTemplateId(String tagTemplateId) {
             return tagTemplateId(Output.of(tagTemplateId));
         }

@@ -29,6 +29,10 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="customEmails")
     private @Nullable Output<List<String>> customEmails;
 
+    /**
+     * @return the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
+     * 
+     */
     public Optional<Output<List<String>>> customEmails() {
         return Optional.ofNullable(this.customEmails);
     }
@@ -41,6 +45,11 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -52,6 +61,10 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sendToServiceOwners")
     private @Nullable Output<Boolean> sendToServiceOwners;
 
+    /**
+     * @return Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
+     * 
+     */
     public Optional<Output<Boolean>> sendToServiceOwners() {
         return Optional.ofNullable(this.sendToServiceOwners);
     }
@@ -82,33 +95,77 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
             $ = new RuleEmailActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customEmails the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(@Nullable Output<List<String>> customEmails) {
             $.customEmails = customEmails;
             return this;
         }
 
+        /**
+         * @param customEmails the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(List<String> customEmails) {
             return customEmails(Output.of(customEmails));
         }
 
+        /**
+         * @param customEmails the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEmails(String... customEmails) {
             return customEmails(List.of(customEmails));
         }
 
+        /**
+         * @param odataType specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param sendToServiceOwners Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendToServiceOwners(@Nullable Output<Boolean> sendToServiceOwners) {
             $.sendToServiceOwners = sendToServiceOwners;
             return this;
         }
 
+        /**
+         * @param sendToServiceOwners Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendToServiceOwners(Boolean sendToServiceOwners) {
             return sendToServiceOwners(Output.of(sendToServiceOwners));
         }

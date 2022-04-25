@@ -25,6 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
     @Import(name="phraseMatchRules", required=true)
     private List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
 
+    /**
+     * @return A list of phase match rules that are included in this group.
+     * 
+     */
     public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules() {
         return this.phraseMatchRules;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of this phrase match rule group.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,15 +73,33 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
             $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phraseMatchRules A list of phase match rules that are included in this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchRules(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules) {
             $.phraseMatchRules = phraseMatchRules;
             return this;
         }
 
+        /**
+         * @param phraseMatchRules A list of phase match rules that are included in this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchRules(GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse... phraseMatchRules) {
             return phraseMatchRules(List.of(phraseMatchRules));
         }
 
+        /**
+         * @param type The type of this phrase match rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

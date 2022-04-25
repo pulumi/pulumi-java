@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GetTestablePermissionsPermission {
     /**
-     * Whether the corresponding API has been enabled for the resource.
+     * @return Whether the corresponding API has been enabled for the resource.
      * 
      */
     private final Boolean apiDisabled;
     /**
-     * The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
+     * @return The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
      * 
      */
     private final String customSupportLevel;
     /**
-     * Name of the permission.
+     * @return Name of the permission.
      * 
      */
     private final String name;
     /**
-     * Release stage of the permission.
+     * @return Release stage of the permission.
      * 
      */
     private final String stage;
     /**
-     * Human readable title of the permission.
+     * @return Human readable title of the permission.
      * 
      */
     private final String title;
@@ -51,37 +51,37 @@ public final class GetTestablePermissionsPermission {
     }
 
     /**
-     * Whether the corresponding API has been enabled for the resource.
+     * @return Whether the corresponding API has been enabled for the resource.
      * 
-    */
+     */
     public Boolean apiDisabled() {
         return this.apiDisabled;
     }
     /**
-     * The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
+     * @return The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
      * 
-    */
+     */
     public String customSupportLevel() {
         return this.customSupportLevel;
     }
     /**
-     * Name of the permission.
+     * @return Name of the permission.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Release stage of the permission.
+     * @return Release stage of the permission.
      * 
-    */
+     */
     public String stage() {
         return this.stage;
     }
     /**
-     * Human readable title of the permission.
+     * @return Human readable title of the permission.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

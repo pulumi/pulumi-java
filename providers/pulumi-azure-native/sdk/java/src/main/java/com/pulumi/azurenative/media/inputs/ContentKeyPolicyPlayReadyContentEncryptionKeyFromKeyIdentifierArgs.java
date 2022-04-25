@@ -25,6 +25,10 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     @Import(name="keyId", required=true)
     private Output<String> keyId;
 
+    /**
+     * @return The content key ID.
+     * 
+     */
     public Output<String> keyId() {
         return this.keyId;
     }
@@ -37,6 +41,11 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -66,20 +75,46 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
             $ = new ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId The content key ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId The content key ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

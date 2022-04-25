@@ -22,6 +22,10 @@ public final class UsagePlanThrottleSettings extends com.pulumi.resources.Invoke
     @Import(name="burstLimit")
     private @Nullable Integer burstLimit;
 
+    /**
+     * @return The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity.
+     * 
+     */
     public Optional<Integer> burstLimit() {
         return Optional.ofNullable(this.burstLimit);
     }
@@ -33,6 +37,10 @@ public final class UsagePlanThrottleSettings extends com.pulumi.resources.Invoke
     @Import(name="rateLimit")
     private @Nullable Double rateLimit;
 
+    /**
+     * @return The API request steady-state rate limit (average requests per second over an extended period of time).
+     * 
+     */
     public Optional<Double> rateLimit() {
         return Optional.ofNullable(this.rateLimit);
     }
@@ -62,11 +70,23 @@ public final class UsagePlanThrottleSettings extends com.pulumi.resources.Invoke
             $ = new UsagePlanThrottleSettings(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param burstLimit The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder burstLimit(@Nullable Integer burstLimit) {
             $.burstLimit = burstLimit;
             return this;
         }
 
+        /**
+         * @param rateLimit The API request steady-state rate limit (average requests per second over an extended period of time).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimit(@Nullable Double rateLimit) {
             $.rateLimit = rateLimit;
             return this;

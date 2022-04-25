@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ConnectorScaleInPolicy {
     /**
-     * Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
+     * @return Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
      * 
      */
     private final Integer cpuUtilizationPercentage;
@@ -21,9 +21,9 @@ public final class ConnectorScaleInPolicy {
     }
 
     /**
-     * Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
+     * @return Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
      * 
-    */
+     */
     public Integer cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }

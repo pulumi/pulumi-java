@@ -27,6 +27,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -39,6 +43,11 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="identityType", required=true)
     private Output<String> identityType;
 
+    /**
+     * @return Enum to determine identity framework.
+     * Expected value is &#39;Managed&#39;.
+     * 
+     */
     public Output<String> identityType() {
         return this.identityType;
     }
@@ -50,6 +59,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="objectId")
     private @Nullable Output<String> objectId;
 
+    /**
+     * @return Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+     * 
+     */
     public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -61,6 +74,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -92,38 +109,88 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
             $ = new ManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param identityType Enum to determine identity framework.
+         * Expected value is &#39;Managed&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(Output<String> identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param identityType Enum to determine identity framework.
+         * Expected value is &#39;Managed&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(String identityType) {
             return identityType(Output.of(identityType));
         }
 
+        /**
+         * @param objectId Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param resourceId Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

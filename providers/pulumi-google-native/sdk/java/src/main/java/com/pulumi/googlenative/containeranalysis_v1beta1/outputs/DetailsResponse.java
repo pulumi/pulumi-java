@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DetailsResponse {
     /**
-     * Attestation for the resource.
+     * @return Attestation for the resource.
      * 
      */
     private final AttestationResponse attestation;
@@ -21,9 +21,9 @@ public final class DetailsResponse {
     }
 
     /**
-     * Attestation for the resource.
+     * @return Attestation for the resource.
      * 
-    */
+     */
     public AttestationResponse attestation() {
         return this.attestation;
     }

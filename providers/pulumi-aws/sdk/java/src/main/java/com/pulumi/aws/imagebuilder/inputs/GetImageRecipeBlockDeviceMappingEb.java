@@ -21,6 +21,10 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
     @Import(name="deleteOnTermination", required=true)
     private Boolean deleteOnTermination;
 
+    /**
+     * @return Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.
+     * 
+     */
     public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
     }
@@ -32,6 +36,10 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
     @Import(name="encrypted", required=true)
     private Boolean encrypted;
 
+    /**
+     * @return Whether to encrypt the volume. Defaults to unset, which is the value inherited from the parent image.
+     * 
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
@@ -43,6 +51,10 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
     @Import(name="iops", required=true)
     private Integer iops;
 
+    /**
+     * @return Number of Input/Output (I/O) operations per second to provision for an `io1` or `io2` volume.
+     * 
+     */
     public Integer iops() {
         return this.iops;
     }
@@ -54,6 +66,10 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
     @Import(name="kmsKeyId", required=true)
     private String kmsKeyId;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Key Management Service (KMS) Key for encryption.
+     * 
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
@@ -65,6 +81,10 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
     @Import(name="snapshotId", required=true)
     private String snapshotId;
 
+    /**
+     * @return Identifier of the EC2 Volume Snapshot.
+     * 
+     */
     public String snapshotId() {
         return this.snapshotId;
     }
@@ -76,6 +96,10 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
     @Import(name="volumeSize", required=true)
     private Integer volumeSize;
 
+    /**
+     * @return Size of the volume, in GiB.
+     * 
+     */
     public Integer volumeSize() {
         return this.volumeSize;
     }
@@ -87,6 +111,10 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
     @Import(name="volumeType", required=true)
     private String volumeType;
 
+    /**
+     * @return Type of the volume. For example, `gp2` or `io2`.
+     * 
+     */
     public String volumeType() {
         return this.volumeType;
     }
@@ -121,36 +149,78 @@ public final class GetImageRecipeBlockDeviceMappingEb extends com.pulumi.resourc
             $ = new GetImageRecipeBlockDeviceMappingEb(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOnTermination Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
             $.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
+        /**
+         * @param encrypted Whether to encrypt the volume. Defaults to unset, which is the value inherited from the parent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param iops Number of Input/Output (I/O) operations per second to provision for an `io1` or `io2` volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             $.iops = iops;
             return this;
         }
 
+        /**
+         * @param kmsKeyId Amazon Resource Name (ARN) of the Key Management Service (KMS) Key for encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param snapshotId Identifier of the EC2 Volume Snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(String snapshotId) {
             $.snapshotId = snapshotId;
             return this;
         }
 
+        /**
+         * @param volumeSize Size of the volume, in GiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(Integer volumeSize) {
             $.volumeSize = volumeSize;
             return this;
         }
 
+        /**
+         * @param volumeType Type of the volume. For example, `gp2` or `io2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             $.volumeType = volumeType;
             return this;

@@ -34,6 +34,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="clientId")
     private @Nullable Object clientId;
 
+    /**
+     * @return Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -56,6 +64,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -67,6 +79,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -78,6 +94,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -89,6 +109,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="language")
     private @Nullable Object language;
 
+    /**
+     * @return Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> language() {
         return Optional.ofNullable(this.language);
     }
@@ -100,6 +124,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="logonGroup")
     private @Nullable Object logonGroup;
 
+    /**
+     * @return The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> logonGroup() {
         return Optional.ofNullable(this.logonGroup);
     }
@@ -111,6 +139,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="messageServer")
     private @Nullable Object messageServer;
 
+    /**
+     * @return The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> messageServer() {
         return Optional.ofNullable(this.messageServer);
     }
@@ -122,6 +154,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="messageServerService")
     private @Nullable Object messageServerService;
 
+    /**
+     * @return The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> messageServerService() {
         return Optional.ofNullable(this.messageServerService);
     }
@@ -133,6 +169,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -144,6 +184,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password to access the SAP server where the table is located.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -155,6 +199,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="server")
     private @Nullable Object server;
 
+    /**
+     * @return Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> server() {
         return Optional.ofNullable(this.server);
     }
@@ -166,6 +214,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="sncLibraryPath")
     private @Nullable Object sncLibraryPath;
 
+    /**
+     * @return External security product&#39;s library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> sncLibraryPath() {
         return Optional.ofNullable(this.sncLibraryPath);
     }
@@ -177,6 +229,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="sncMode")
     private @Nullable Object sncMode;
 
+    /**
+     * @return SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> sncMode() {
         return Optional.ofNullable(this.sncMode);
     }
@@ -188,6 +244,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="sncMyName")
     private @Nullable Object sncMyName;
 
+    /**
+     * @return Initiator&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> sncMyName() {
         return Optional.ofNullable(this.sncMyName);
     }
@@ -199,6 +259,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="sncPartnerName")
     private @Nullable Object sncPartnerName;
 
+    /**
+     * @return Communication partner&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> sncPartnerName() {
         return Optional.ofNullable(this.sncPartnerName);
     }
@@ -210,6 +274,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="sncQop")
     private @Nullable Object sncQop;
 
+    /**
+     * @return SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> sncQop() {
         return Optional.ofNullable(this.sncQop);
     }
@@ -221,6 +289,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="systemId")
     private @Nullable Object systemId;
 
+    /**
+     * @return SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> systemId() {
         return Optional.ofNullable(this.systemId);
     }
@@ -232,6 +304,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="systemNumber")
     private @Nullable Object systemNumber;
 
+    /**
+     * @return System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> systemNumber() {
         return Optional.ofNullable(this.systemNumber);
     }
@@ -244,6 +320,11 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;SapTable&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -255,6 +336,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
     @Import(name="userName")
     private @Nullable Object userName;
 
+    /**
+     * @return Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -303,118 +388,263 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
             $ = new SapTableLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param clientId Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Object clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param language Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(@Nullable Object language) {
             $.language = language;
             return this;
         }
 
+        /**
+         * @param logonGroup The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logonGroup(@Nullable Object logonGroup) {
             $.logonGroup = logonGroup;
             return this;
         }
 
+        /**
+         * @param messageServer The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageServer(@Nullable Object messageServer) {
             $.messageServer = messageServer;
             return this;
         }
 
+        /**
+         * @param messageServerService The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageServerService(@Nullable Object messageServerService) {
             $.messageServerService = messageServerService;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password Password to access the SAP server where the table is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to access the SAP server where the table is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password to access the SAP server where the table is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param server Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(@Nullable Object server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param sncLibraryPath External security product&#39;s library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sncLibraryPath(@Nullable Object sncLibraryPath) {
             $.sncLibraryPath = sncLibraryPath;
             return this;
         }
 
+        /**
+         * @param sncMode SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sncMode(@Nullable Object sncMode) {
             $.sncMode = sncMode;
             return this;
         }
 
+        /**
+         * @param sncMyName Initiator&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sncMyName(@Nullable Object sncMyName) {
             $.sncMyName = sncMyName;
             return this;
         }
 
+        /**
+         * @param sncPartnerName Communication partner&#39;s SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sncPartnerName(@Nullable Object sncPartnerName) {
             $.sncPartnerName = sncPartnerName;
             return this;
         }
 
+        /**
+         * @param sncQop SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sncQop(@Nullable Object sncQop) {
             $.sncQop = sncQop;
             return this;
         }
 
+        /**
+         * @param systemId SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemId(@Nullable Object systemId) {
             $.systemId = systemId;
             return this;
         }
 
+        /**
+         * @param systemNumber System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemNumber(@Nullable Object systemNumber) {
             $.systemNumber = systemNumber;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;SapTable&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Object userName) {
             $.userName = userName;
             return this;

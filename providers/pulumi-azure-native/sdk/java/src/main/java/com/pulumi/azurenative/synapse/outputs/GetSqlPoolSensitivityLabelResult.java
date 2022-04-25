@@ -13,63 +13,63 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSqlPoolSensitivityLabelResult {
     /**
-     * The column name.
+     * @return The column name.
      * 
      */
     private final String columnName;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The information type.
+     * @return The information type.
      * 
      */
     private final @Nullable String informationType;
     /**
-     * The information type ID.
+     * @return The information type ID.
      * 
      */
     private final @Nullable String informationTypeId;
     /**
-     * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
+     * @return Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
      * 
      */
     private final Boolean isDisabled;
     /**
-     * The label ID.
+     * @return The label ID.
      * 
      */
     private final @Nullable String labelId;
     /**
-     * The label name.
+     * @return The label name.
      * 
      */
     private final @Nullable String labelName;
     /**
-     * managed by
+     * @return managed by
      * 
      */
     private final String managedBy;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     private final @Nullable String rank;
     /**
-     * The schema name.
+     * @return The schema name.
      * 
      */
     private final String schemaName;
     /**
-     * The table name.
+     * @return The table name.
      * 
      */
     private final String tableName;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -105,65 +105,65 @@ public final class GetSqlPoolSensitivityLabelResult {
     }
 
     /**
-     * The column name.
+     * @return The column name.
      * 
-    */
+     */
     public String columnName() {
         return this.columnName;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The information type.
+     * @return The information type.
      * 
-    */
+     */
     public Optional<String> informationType() {
         return Optional.ofNullable(this.informationType);
     }
     /**
-     * The information type ID.
+     * @return The information type ID.
      * 
-    */
+     */
     public Optional<String> informationTypeId() {
         return Optional.ofNullable(this.informationTypeId);
     }
     /**
-     * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
+     * @return Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
      * 
-    */
+     */
     public Boolean isDisabled() {
         return this.isDisabled;
     }
     /**
-     * The label ID.
+     * @return The label ID.
      * 
-    */
+     */
     public Optional<String> labelId() {
         return Optional.ofNullable(this.labelId);
     }
     /**
-     * The label name.
+     * @return The label name.
      * 
-    */
+     */
     public Optional<String> labelName() {
         return Optional.ofNullable(this.labelName);
     }
     /**
-     * managed by
+     * @return managed by
      * 
-    */
+     */
     public String managedBy() {
         return this.managedBy;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -171,23 +171,23 @@ public final class GetSqlPoolSensitivityLabelResult {
         return Optional.ofNullable(this.rank);
     }
     /**
-     * The schema name.
+     * @return The schema name.
      * 
-    */
+     */
     public String schemaName() {
         return this.schemaName;
     }
     /**
-     * The table name.
+     * @return The table name.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

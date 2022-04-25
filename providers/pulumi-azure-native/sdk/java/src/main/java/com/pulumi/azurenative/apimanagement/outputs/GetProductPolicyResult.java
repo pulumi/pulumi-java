@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProductPolicyResult {
     /**
-     * Format of the policyContent.
+     * @return Format of the policyContent.
      * 
      */
     private final @Nullable String format;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
     /**
-     * Contents of the Policy as defined by the format.
+     * @return Contents of the Policy as defined by the format.
      * 
      */
     private final String value;
@@ -52,37 +52,37 @@ public final class GetProductPolicyResult {
     }
 
     /**
-     * Format of the policyContent.
+     * @return Format of the policyContent.
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Contents of the Policy as defined by the format.
+     * @return Contents of the Policy as defined by the format.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -24,6 +24,10 @@ public final class InstanceAttemptResultResponse extends com.pulumi.resources.In
     @Import(name="exitCode", required=true)
     private Integer exitCode;
 
+    /**
+     * @return Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
+     * 
+     */
     public Integer exitCode() {
         return this.exitCode;
     }
@@ -35,6 +39,10 @@ public final class InstanceAttemptResultResponse extends com.pulumi.resources.In
     @Import(name="status", required=true)
     private GoogleRpcStatusResponse status;
 
+    /**
+     * @return Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
+     * 
+     */
     public GoogleRpcStatusResponse status() {
         return this.status;
     }
@@ -64,11 +72,23 @@ public final class InstanceAttemptResultResponse extends com.pulumi.resources.In
             $ = new InstanceAttemptResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exitCode Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exitCode(Integer exitCode) {
             $.exitCode = exitCode;
             return this;
         }
 
+        /**
+         * @param status Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(GoogleRpcStatusResponse status) {
             $.status = status;
             return this;

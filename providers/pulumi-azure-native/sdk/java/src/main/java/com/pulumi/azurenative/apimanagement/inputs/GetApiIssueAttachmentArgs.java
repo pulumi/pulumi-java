@@ -19,6 +19,10 @@ public final class GetApiIssueAttachmentArgs extends com.pulumi.resources.Invoke
     @Import(name="apiId", required=true)
     private String apiId;
 
+    /**
+     * @return API identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String apiId() {
         return this.apiId;
     }
@@ -30,6 +34,10 @@ public final class GetApiIssueAttachmentArgs extends com.pulumi.resources.Invoke
     @Import(name="attachmentId", required=true)
     private String attachmentId;
 
+    /**
+     * @return Attachment identifier within an Issue. Must be unique in the current Issue.
+     * 
+     */
     public String attachmentId() {
         return this.attachmentId;
     }
@@ -41,6 +49,10 @@ public final class GetApiIssueAttachmentArgs extends com.pulumi.resources.Invoke
     @Import(name="issueId", required=true)
     private String issueId;
 
+    /**
+     * @return Issue identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String issueId() {
         return this.issueId;
     }
@@ -52,6 +64,10 @@ public final class GetApiIssueAttachmentArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetApiIssueAttachmentArgs extends com.pulumi.resources.Invoke
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -95,26 +115,56 @@ public final class GetApiIssueAttachmentArgs extends com.pulumi.resources.Invoke
             $ = new GetApiIssueAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param attachmentId Attachment identifier within an Issue. Must be unique in the current Issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentId(String attachmentId) {
             $.attachmentId = attachmentId;
             return this;
         }
 
+        /**
+         * @param issueId Issue identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueId(String issueId) {
             $.issueId = issueId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

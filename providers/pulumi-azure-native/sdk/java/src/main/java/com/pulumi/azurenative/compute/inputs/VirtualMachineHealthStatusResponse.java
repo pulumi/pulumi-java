@@ -23,6 +23,10 @@ public final class VirtualMachineHealthStatusResponse extends com.pulumi.resourc
     @Import(name="status", required=true)
     private InstanceViewStatusResponse status;
 
+    /**
+     * @return The health status information for the VM.
+     * 
+     */
     public InstanceViewStatusResponse status() {
         return this.status;
     }
@@ -51,6 +55,12 @@ public final class VirtualMachineHealthStatusResponse extends com.pulumi.resourc
             $ = new VirtualMachineHealthStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The health status information for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(InstanceViewStatusResponse status) {
             $.status = status;
             return this;

@@ -38,6 +38,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterSecurityGroup")
     private @Nullable Output<SecurityGroup> clusterSecurityGroup;
 
+    /**
+     * @return The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.
+     * 
+     */
     public Optional<Output<SecurityGroup>> clusterSecurityGroup() {
         return Optional.ofNullable(this.clusterSecurityGroup);
     }
@@ -49,6 +53,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterSecurityGroupTags")
     private @Nullable Output<Map<String,String>> clusterSecurityGroupTags;
 
+    /**
+     * @return The tags to apply to the cluster security group.
+     * 
+     */
     public Optional<Output<Map<String,String>>> clusterSecurityGroupTags() {
         return Optional.ofNullable(this.clusterSecurityGroupTags);
     }
@@ -60,6 +68,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterTags")
     private @Nullable Output<Map<String,String>> clusterTags;
 
+    /**
+     * @return The tags to apply to the EKS cluster.
+     * 
+     */
     public Optional<Output<Map<String,String>>> clusterTags() {
         return Optional.ofNullable(this.clusterTags);
     }
@@ -79,6 +91,18 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createOidcProvider")
     private @Nullable Output<Boolean> createOidcProvider;
 
+    /**
+     * @return Indicates whether an IAM OIDC Provider is created for the EKS cluster.
+     * 
+     * The OIDC provider is used in the cluster in combination with k8s Service Account annotations to provide IAM roles at the k8s Pod level.
+     * 
+     * See for more details:
+     *  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html
+     *  - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+     *  - https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
+     *  - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts
+     * 
+     */
     public Optional<Output<Boolean>> createOidcProvider() {
         return Optional.ofNullable(this.createOidcProvider);
     }
@@ -90,6 +114,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationRoleProvider")
     private @Nullable Output<CreationRoleProviderArgs> creationRoleProvider;
 
+    /**
+     * @return The IAM Role Provider used to create &amp; authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
+     * 
+     */
     public Optional<Output<CreationRoleProviderArgs>> creationRoleProvider() {
         return Optional.ofNullable(this.creationRoleProvider);
     }
@@ -101,6 +129,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="desiredCapacity")
     private @Nullable Output<Integer> desiredCapacity;
 
+    /**
+     * @return The number of worker nodes that should be running in the cluster. Defaults to 2.
+     * 
+     */
     public Optional<Output<Integer>> desiredCapacity() {
         return Optional.ofNullable(this.desiredCapacity);
     }
@@ -112,6 +144,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledClusterLogTypes")
     private @Nullable Output<List<String>> enabledClusterLogTypes;
 
+    /**
+     * @return Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: [&#34;api&#34;, &#34;audit&#34;, &#34;authenticator&#34;, &#34;controllerManager&#34;, &#34;scheduler&#34;]. By default it is off.
+     * 
+     */
     public Optional<Output<List<String>>> enabledClusterLogTypes() {
         return Optional.ofNullable(this.enabledClusterLogTypes);
     }
@@ -123,6 +159,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptRootBlockDevice")
     private @Nullable Output<Boolean> encryptRootBlockDevice;
 
+    /**
+     * @return Encrypt the root block device of the nodes in the node group.
+     * 
+     */
     public Optional<Output<Boolean>> encryptRootBlockDevice() {
         return Optional.ofNullable(this.encryptRootBlockDevice);
     }
@@ -138,6 +178,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfigKeyArn")
     private @Nullable Output<String> encryptionConfigKeyArn;
 
+    /**
+     * @return KMS Key ARN to use with the encryption configuration for the cluster.
+     * 
+     * Only available on Kubernetes 1.13+ clusters created after March 6, 2020.
+     * See for more details:
+     * - https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/
+     * 
+     */
     public Optional<Output<String>> encryptionConfigKeyArn() {
         return Optional.ofNullable(this.encryptionConfigKeyArn);
     }
@@ -149,6 +197,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointPrivateAccess")
     private @Nullable Output<Boolean> endpointPrivateAccess;
 
+    /**
+     * @return Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> endpointPrivateAccess() {
         return Optional.ofNullable(this.endpointPrivateAccess);
     }
@@ -160,6 +212,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointPublicAccess")
     private @Nullable Output<Boolean> endpointPublicAccess;
 
+    /**
+     * @return Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
+     * 
+     */
     public Optional<Output<Boolean>> endpointPublicAccess() {
         return Optional.ofNullable(this.endpointPublicAccess);
     }
@@ -171,6 +227,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fargate")
     private @Nullable Output<Either<Boolean,FargateProfileArgs>> fargate;
 
+    /**
+     * @return Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.
+     * 
+     */
     public Optional<Output<Either<Boolean,FargateProfileArgs>>> fargate() {
         return Optional.ofNullable(this.fargate);
     }
@@ -190,6 +250,18 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gpu")
     private @Nullable Output<Boolean> gpu;
 
+    /**
+     * @return Use the latest recommended EKS Optimized Linux AMI with GPU support for the worker nodes from the AWS Systems Manager Parameter Store.
+     * 
+     * Defaults to false.
+     * 
+     * Note: `gpu` and `nodeAmiId` are mutually exclusive.
+     * 
+     * See for more details:
+     * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
+     * - https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html
+     * 
+     */
     public Optional<Output<Boolean>> gpu() {
         return Optional.ofNullable(this.gpu);
     }
@@ -201,6 +273,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceProfileName")
     private @Nullable Output<String> instanceProfileName;
 
+    /**
+     * @return The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.
+     * 
+     */
     public Optional<Output<String>> instanceProfileName() {
         return Optional.ofNullable(this.instanceProfileName);
     }
@@ -214,6 +290,12 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceRole")
     private @Nullable Output<Role> instanceRole;
 
+    /**
+     * @return This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
+     * 
+     * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
+     * 
+     */
     public Optional<Output<Role>> instanceRole() {
         return Optional.ofNullable(this.instanceRole);
     }
@@ -227,6 +309,12 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceRoles")
     private @Nullable Output<List<Role>> instanceRoles;
 
+    /**
+     * @return This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
+     * 
+     * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
+     * 
+     */
     public Optional<Output<List<Role>>> instanceRoles() {
         return Optional.ofNullable(this.instanceRoles);
     }
@@ -238,6 +326,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The instance type to use for the cluster&#39;s nodes. Defaults to &#34;t2.medium&#34;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -258,6 +350,19 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kubernetesServiceIpAddressRange")
     private @Nullable Output<String> kubernetesServiceIpAddressRange;
 
+    /**
+     * @return The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t
+     * specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or
+     * 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap
+     * with resources in other networks that are peered or connected to your VPC. You can only specify
+     * a custom CIDR block when you create a cluster, changing this value will force a new cluster to be created.
+     * 
+     * The block must meet the following requirements:
+     * - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+     * - Doesn&#39;t overlap with any CIDR block assigned to the VPC that you selected for VPC.
+     * - Between /24 and /12.
+     * 
+     */
     public Optional<Output<String>> kubernetesServiceIpAddressRange() {
         return Optional.ofNullable(this.kubernetesServiceIpAddressRange);
     }
@@ -269,6 +374,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSize")
     private @Nullable Output<Integer> maxSize;
 
+    /**
+     * @return The maximum number of worker nodes running in the cluster. Defaults to 2.
+     * 
+     */
     public Optional<Output<Integer>> maxSize() {
         return Optional.ofNullable(this.maxSize);
     }
@@ -280,6 +389,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minSize")
     private @Nullable Output<Integer> minSize;
 
+    /**
+     * @return The minimum number of worker nodes running in the cluster. Defaults to 1.
+     * 
+     */
     public Optional<Output<Integer>> minSize() {
         return Optional.ofNullable(this.minSize);
     }
@@ -295,6 +408,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The cluster&#39;s physical resource name.
+     * 
+     * If not specified, the default is to use auto-naming for the cluster&#39;s name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
+     * 
+     * See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -313,6 +434,17 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeAmiId")
     private @Nullable Output<String> nodeAmiId;
 
+    /**
+     * @return The AMI ID to use for the worker nodes.
+     * 
+     * Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems Manager Parameter Store.
+     * 
+     * Note: `nodeAmiId` and `gpu` are mutually exclusive.
+     * 
+     * See for more details:
+     * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
+     * 
+     */
     public Optional<Output<String>> nodeAmiId() {
         return Optional.ofNullable(this.nodeAmiId);
     }
@@ -324,6 +456,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeAssociatePublicIpAddress")
     private @Nullable Output<Boolean> nodeAssociatePublicIpAddress;
 
+    /**
+     * @return Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.
+     * 
+     */
     public Optional<Output<Boolean>> nodeAssociatePublicIpAddress() {
         return Optional.ofNullable(this.nodeAssociatePublicIpAddress);
     }
@@ -335,6 +471,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeGroupOptions")
     private @Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions;
 
+    /**
+     * @return The common configuration settings for NodeGroups.
+     * 
+     */
     public Optional<Output<ClusterNodeGroupOptionsArgs>> nodeGroupOptions() {
         return Optional.ofNullable(this.nodeGroupOptions);
     }
@@ -348,6 +488,12 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodePublicKey")
     private @Nullable Output<String> nodePublicKey;
 
+    /**
+     * @return Public key material for SSH access to worker nodes. See allowed formats at:
+     * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+     * If not provided, no SSH access is enabled on VMs.
+     * 
+     */
     public Optional<Output<String>> nodePublicKey() {
         return Optional.ofNullable(this.nodePublicKey);
     }
@@ -359,6 +505,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeRootVolumeDeleteOnTermination")
     private @Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination;
 
+    /**
+     * @return Whether to delete a cluster node&#39;s root volume on termination. Defaults to true.
+     * 
+     */
     public Optional<Output<Boolean>> nodeRootVolumeDeleteOnTermination() {
         return Optional.ofNullable(this.nodeRootVolumeDeleteOnTermination);
     }
@@ -370,6 +520,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeRootVolumeEncrypted")
     private @Nullable Output<Boolean> nodeRootVolumeEncrypted;
 
+    /**
+     * @return Whether to encrypt a cluster node&#39;s root volume. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> nodeRootVolumeEncrypted() {
         return Optional.ofNullable(this.nodeRootVolumeEncrypted);
     }
@@ -381,6 +535,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeRootVolumeIops")
     private @Nullable Output<Integer> nodeRootVolumeIops;
 
+    /**
+     * @return Provisioned IOPS for a cluster node&#39;s root volume. Only valid for io1 volumes.
+     * 
+     */
     public Optional<Output<Integer>> nodeRootVolumeIops() {
         return Optional.ofNullable(this.nodeRootVolumeIops);
     }
@@ -392,6 +550,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeRootVolumeSize")
     private @Nullable Output<Integer> nodeRootVolumeSize;
 
+    /**
+     * @return The size in GiB of a cluster node&#39;s root volume. Defaults to 20.
+     * 
+     */
     public Optional<Output<Integer>> nodeRootVolumeSize() {
         return Optional.ofNullable(this.nodeRootVolumeSize);
     }
@@ -403,6 +565,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeRootVolumeThroughput")
     private @Nullable Output<Integer> nodeRootVolumeThroughput;
 
+    /**
+     * @return Provisioned throughput performance in integer MiB/s for a cluster node&#39;s root volume. Only valid for gp3 volumes.
+     * 
+     */
     public Optional<Output<Integer>> nodeRootVolumeThroughput() {
         return Optional.ofNullable(this.nodeRootVolumeThroughput);
     }
@@ -414,6 +580,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeRootVolumeType")
     private @Nullable Output<String> nodeRootVolumeType;
 
+    /**
+     * @return Configured EBS type for a cluster node&#39;s root volume. Default is gp2.
+     * 
+     */
     public Optional<Output<String>> nodeRootVolumeType() {
         return Optional.ofNullable(this.nodeRootVolumeType);
     }
@@ -427,6 +597,12 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSecurityGroupTags")
     private @Nullable Output<Map<String,String>> nodeSecurityGroupTags;
 
+    /**
+     * @return The tags to apply to the default `nodeSecurityGroup` created by the cluster.
+     * 
+     * Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.
+     * 
+     */
     public Optional<Output<Map<String,String>>> nodeSecurityGroupTags() {
         return Optional.ofNullable(this.nodeSecurityGroupTags);
     }
@@ -438,6 +614,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSubnetIds")
     private @Nullable Output<List<String>> nodeSubnetIds;
 
+    /**
+     * @return The subnets to use for worker nodes. Defaults to the value of subnetIds.
+     * 
+     */
     public Optional<Output<List<String>>> nodeSubnetIds() {
         return Optional.ofNullable(this.nodeSubnetIds);
     }
@@ -449,6 +629,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeUserData")
     private @Nullable Output<String> nodeUserData;
 
+    /**
+     * @return Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).
+     * 
+     */
     public Optional<Output<String>> nodeUserData() {
         return Optional.ofNullable(this.nodeUserData);
     }
@@ -474,6 +658,24 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateSubnetIds")
     private @Nullable Output<List<String>> privateSubnetIds;
 
+    /**
+     * @return The set of private subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+     * 
+     * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+     * 
+     * Worker network architecture options:
+     *  - Private-only: Only set `privateSubnetIds`.
+     *    - Default workers to run in a private subnet. In this setting, Kubernetes cannot create public, internet-facing load balancers for your pods.
+     *  - Public-only: Only set `publicSubnetIds`.
+     *    - Default workers to run in a public subnet.
+     *  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
+     *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
+     * 
+     * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+     * 
+     * Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.
+     * 
+     */
     public Optional<Output<List<String>>> privateSubnetIds() {
         return Optional.ofNullable(this.privateSubnetIds);
     }
@@ -497,6 +699,22 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerCredentialOpts")
     private @Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts;
 
+    /**
+     * @return The AWS provider credential options to scope the cluster&#39;s kubeconfig authentication when using a non-default credential chain.
+     * 
+     * This is required for certain auth scenarios. For example:
+     * - Creating and using a new AWS provider instance, or
+     * - Setting the AWS_PROFILE environment variable, or
+     * - Using a named profile configured on the AWS provider via:
+     *   `pulumi config set aws:profile &lt;profileName&gt;`
+     * 
+     * See for more details:
+     * - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
+     * - https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/
+     * - https://www.pulumi.com/docs/intro/cloud-providers/aws/#configuration
+     * - https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+     * 
+     */
     public Optional<Output<KubeconfigOptionsArgs>> providerCredentialOpts() {
         return Optional.ofNullable(this.providerCredentialOpts);
     }
@@ -522,6 +740,24 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="proxy")
     private @Nullable Output<String> proxy;
 
+    /**
+     * @return The HTTP(S) proxy to use within a proxied environment.
+     * 
+     *  The proxy is used during cluster creation, and OIDC configuration.
+     * 
+     * This is an alternative option to setting the proxy environment variables: HTTP(S)_PROXY and/or http(s)_proxy.
+     * 
+     * This option is required iff the proxy environment variables are not set.
+     * 
+     * Format:      &lt;protocol&gt;://&lt;host&gt;:&lt;port&gt;
+     * Auth Format: &lt;protocol&gt;://&lt;username&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;
+     * 
+     * Ex:
+     *   - &#34;http://proxy.example.com:3128&#34;
+     *   - &#34;https://proxy.example.com&#34;
+     *   - &#34;http://username:password@proxy.example.com:3128&#34;
+     * 
+     */
     public Optional<Output<String>> proxy() {
         return Optional.ofNullable(this.proxy);
     }
@@ -533,6 +769,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicAccessCidrs")
     private @Nullable Output<List<String>> publicAccessCidrs;
 
+    /**
+     * @return Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+     * 
+     */
     public Optional<Output<List<String>>> publicAccessCidrs() {
         return Optional.ofNullable(this.publicAccessCidrs);
     }
@@ -556,6 +796,22 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicSubnetIds")
     private @Nullable Output<List<String>> publicSubnetIds;
 
+    /**
+     * @return The set of public subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+     * 
+     * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+     * 
+     * Worker network architecture options:
+     *  - Private-only: Only set `privateSubnetIds`.
+     *    - Default workers to run in a private subnet. In this setting, Kubernetes cannot create public, internet-facing load balancers for your pods.
+     *  - Public-only: Only set `publicSubnetIds`.
+     *    - Default workers to run in a public subnet.
+     *  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
+     *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
+     * 
+     * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+     * 
+     */
     public Optional<Output<List<String>>> publicSubnetIds() {
         return Optional.ofNullable(this.publicSubnetIds);
     }
@@ -567,6 +823,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleMappings")
     private @Nullable Output<List<RoleMappingArgs>> roleMappings;
 
+    /**
+     * @return Optional mappings from AWS IAM roles to Kubernetes users and groups.
+     * 
+     */
     public Optional<Output<List<RoleMappingArgs>>> roleMappings() {
         return Optional.ofNullable(this.roleMappings);
     }
@@ -578,6 +838,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole")
     private @Nullable Output<Role> serviceRole;
 
+    /**
+     * @return IAM Service Role for EKS to use to manage the cluster.
+     * 
+     */
     public Optional<Output<Role>> serviceRole() {
         return Optional.ofNullable(this.serviceRole);
     }
@@ -589,6 +853,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipDefaultNodeGroup")
     private @Nullable Output<Boolean> skipDefaultNodeGroup;
 
+    /**
+     * @return If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.
+     * 
+     */
     public Optional<Output<Boolean>> skipDefaultNodeGroup() {
         return Optional.ofNullable(this.skipDefaultNodeGroup);
     }
@@ -602,6 +870,12 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageClasses")
     private @Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses;
 
+    /**
+     * @return An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
+     * 
+     * Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+     * 
+     */
     public Optional<Output<Either<String,Map<String,StorageClassArgs>>>> storageClasses() {
         return Optional.ofNullable(this.storageClasses);
     }
@@ -621,6 +895,18 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return The set of all subnets, public and private, to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+     * 
+     * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+     * 
+     * If the list of subnets includes both public and private subnets, the worker nodes will only be attached to the private subnets, and the public subnets will be used for internet-facing load balancers.
+     * 
+     * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
+     * 
+     * Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -632,6 +918,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -643,6 +933,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useDefaultVpcCni")
     private @Nullable Output<Boolean> useDefaultVpcCni;
 
+    /**
+     * @return Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.
+     * 
+     */
     public Optional<Output<Boolean>> useDefaultVpcCni() {
         return Optional.ofNullable(this.useDefaultVpcCni);
     }
@@ -654,6 +948,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userMappings")
     private @Nullable Output<List<UserMappingArgs>> userMappings;
 
+    /**
+     * @return Optional mappings from AWS IAM users to Kubernetes users and groups.
+     * 
+     */
     public Optional<Output<List<UserMappingArgs>>> userMappings() {
         return Optional.ofNullable(this.userMappings);
     }
@@ -665,6 +963,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -676,6 +978,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcCniOptions")
     private @Nullable Output<VpcCniOptionsArgs> vpcCniOptions;
 
+    /**
+     * @return The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.
+     * 
+     */
     public Optional<Output<VpcCniOptionsArgs>> vpcCniOptions() {
         return Optional.ofNullable(this.vpcCniOptions);
     }
@@ -687,6 +993,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -764,504 +1074,1442 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterSecurityGroup The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroup(@Nullable Output<SecurityGroup> clusterSecurityGroup) {
             $.clusterSecurityGroup = clusterSecurityGroup;
             return this;
         }
 
+        /**
+         * @param clusterSecurityGroup The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroup(SecurityGroup clusterSecurityGroup) {
             return clusterSecurityGroup(Output.of(clusterSecurityGroup));
         }
 
+        /**
+         * @param clusterSecurityGroupTags The tags to apply to the cluster security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroupTags(@Nullable Output<Map<String,String>> clusterSecurityGroupTags) {
             $.clusterSecurityGroupTags = clusterSecurityGroupTags;
             return this;
         }
 
+        /**
+         * @param clusterSecurityGroupTags The tags to apply to the cluster security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroupTags(Map<String,String> clusterSecurityGroupTags) {
             return clusterSecurityGroupTags(Output.of(clusterSecurityGroupTags));
         }
 
+        /**
+         * @param clusterTags The tags to apply to the EKS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterTags(@Nullable Output<Map<String,String>> clusterTags) {
             $.clusterTags = clusterTags;
             return this;
         }
 
+        /**
+         * @param clusterTags The tags to apply to the EKS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterTags(Map<String,String> clusterTags) {
             return clusterTags(Output.of(clusterTags));
         }
 
+        /**
+         * @param createOidcProvider Indicates whether an IAM OIDC Provider is created for the EKS cluster.
+         * 
+         * The OIDC provider is used in the cluster in combination with k8s Service Account annotations to provide IAM roles at the k8s Pod level.
+         * 
+         * See for more details:
+         *  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html
+         *  - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+         *  - https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
+         *  - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOidcProvider(@Nullable Output<Boolean> createOidcProvider) {
             $.createOidcProvider = createOidcProvider;
             return this;
         }
 
+        /**
+         * @param createOidcProvider Indicates whether an IAM OIDC Provider is created for the EKS cluster.
+         * 
+         * The OIDC provider is used in the cluster in combination with k8s Service Account annotations to provide IAM roles at the k8s Pod level.
+         * 
+         * See for more details:
+         *  - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc_verify-thumbprint.html
+         *  - https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+         *  - https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
+         *  - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/eks/#enabling-iam-roles-for-service-accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOidcProvider(Boolean createOidcProvider) {
             return createOidcProvider(Output.of(createOidcProvider));
         }
 
+        /**
+         * @param creationRoleProvider The IAM Role Provider used to create &amp; authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationRoleProvider(@Nullable Output<CreationRoleProviderArgs> creationRoleProvider) {
             $.creationRoleProvider = creationRoleProvider;
             return this;
         }
 
+        /**
+         * @param creationRoleProvider The IAM Role Provider used to create &amp; authenticate against the EKS cluster. This role is given `[system:masters]` permission in K8S, See: https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationRoleProvider(CreationRoleProviderArgs creationRoleProvider) {
             return creationRoleProvider(Output.of(creationRoleProvider));
         }
 
+        /**
+         * @param desiredCapacity The number of worker nodes that should be running in the cluster. Defaults to 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
             $.desiredCapacity = desiredCapacity;
             return this;
         }
 
+        /**
+         * @param desiredCapacity The number of worker nodes that should be running in the cluster. Defaults to 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredCapacity(Integer desiredCapacity) {
             return desiredCapacity(Output.of(desiredCapacity));
         }
 
+        /**
+         * @param enabledClusterLogTypes Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: [&#34;api&#34;, &#34;audit&#34;, &#34;authenticator&#34;, &#34;controllerManager&#34;, &#34;scheduler&#34;]. By default it is off.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledClusterLogTypes(@Nullable Output<List<String>> enabledClusterLogTypes) {
             $.enabledClusterLogTypes = enabledClusterLogTypes;
             return this;
         }
 
+        /**
+         * @param enabledClusterLogTypes Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: [&#34;api&#34;, &#34;audit&#34;, &#34;authenticator&#34;, &#34;controllerManager&#34;, &#34;scheduler&#34;]. By default it is off.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledClusterLogTypes(List<String> enabledClusterLogTypes) {
             return enabledClusterLogTypes(Output.of(enabledClusterLogTypes));
         }
 
+        /**
+         * @param enabledClusterLogTypes Enable EKS control plane logging. This sends logs to cloudwatch. Possible list of values are: [&#34;api&#34;, &#34;audit&#34;, &#34;authenticator&#34;, &#34;controllerManager&#34;, &#34;scheduler&#34;]. By default it is off.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledClusterLogTypes(String... enabledClusterLogTypes) {
             return enabledClusterLogTypes(List.of(enabledClusterLogTypes));
         }
 
+        /**
+         * @param encryptRootBlockDevice Encrypt the root block device of the nodes in the node group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptRootBlockDevice(@Nullable Output<Boolean> encryptRootBlockDevice) {
             $.encryptRootBlockDevice = encryptRootBlockDevice;
             return this;
         }
 
+        /**
+         * @param encryptRootBlockDevice Encrypt the root block device of the nodes in the node group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptRootBlockDevice(Boolean encryptRootBlockDevice) {
             return encryptRootBlockDevice(Output.of(encryptRootBlockDevice));
         }
 
+        /**
+         * @param encryptionConfigKeyArn KMS Key ARN to use with the encryption configuration for the cluster.
+         * 
+         * Only available on Kubernetes 1.13+ clusters created after March 6, 2020.
+         * See for more details:
+         * - https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigKeyArn(@Nullable Output<String> encryptionConfigKeyArn) {
             $.encryptionConfigKeyArn = encryptionConfigKeyArn;
             return this;
         }
 
+        /**
+         * @param encryptionConfigKeyArn KMS Key ARN to use with the encryption configuration for the cluster.
+         * 
+         * Only available on Kubernetes 1.13+ clusters created after March 6, 2020.
+         * See for more details:
+         * - https://aws.amazon.com/about-aws/whats-new/2020/03/amazon-eks-adds-envelope-encryption-for-secrets-with-aws-kms/
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigKeyArn(String encryptionConfigKeyArn) {
             return encryptionConfigKeyArn(Output.of(encryptionConfigKeyArn));
         }
 
+        /**
+         * @param endpointPrivateAccess Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointPrivateAccess(@Nullable Output<Boolean> endpointPrivateAccess) {
             $.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
 
+        /**
+         * @param endpointPrivateAccess Indicates whether or not the Amazon EKS private API server endpoint is enabled. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointPrivateAccess(Boolean endpointPrivateAccess) {
             return endpointPrivateAccess(Output.of(endpointPrivateAccess));
         }
 
+        /**
+         * @param endpointPublicAccess Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointPublicAccess(@Nullable Output<Boolean> endpointPublicAccess) {
             $.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
 
+        /**
+         * @param endpointPublicAccess Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
             return endpointPublicAccess(Output.of(endpointPublicAccess));
         }
 
+        /**
+         * @param fargate Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fargate(@Nullable Output<Either<Boolean,FargateProfileArgs>> fargate) {
             $.fargate = fargate;
             return this;
         }
 
+        /**
+         * @param fargate Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fargate(Either<Boolean,FargateProfileArgs> fargate) {
             return fargate(Output.of(fargate));
         }
 
+        /**
+         * @param fargate Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fargate(Boolean fargate) {
             return fargate(Either.ofLeft(fargate));
         }
 
+        /**
+         * @param fargate Add support for launching pods in Fargate. Defaults to launching pods in the `default` namespace.  If specified, the default node group is skipped as though `skipDefaultNodeGroup: true` had been passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fargate(FargateProfileArgs fargate) {
             return fargate(Either.ofRight(fargate));
         }
 
+        /**
+         * @param gpu Use the latest recommended EKS Optimized Linux AMI with GPU support for the worker nodes from the AWS Systems Manager Parameter Store.
+         * 
+         * Defaults to false.
+         * 
+         * Note: `gpu` and `nodeAmiId` are mutually exclusive.
+         * 
+         * See for more details:
+         * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
+         * - https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(@Nullable Output<Boolean> gpu) {
             $.gpu = gpu;
             return this;
         }
 
+        /**
+         * @param gpu Use the latest recommended EKS Optimized Linux AMI with GPU support for the worker nodes from the AWS Systems Manager Parameter Store.
+         * 
+         * Defaults to false.
+         * 
+         * Note: `gpu` and `nodeAmiId` are mutually exclusive.
+         * 
+         * See for more details:
+         * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html
+         * - https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(Boolean gpu) {
             return gpu(Output.of(gpu));
         }
 
+        /**
+         * @param instanceProfileName The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProfileName(@Nullable Output<String> instanceProfileName) {
             $.instanceProfileName = instanceProfileName;
             return this;
         }
 
+        /**
+         * @param instanceProfileName The default IAM InstanceProfile to use on the Worker NodeGroups, if one is not already set in the NodeGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProfileName(String instanceProfileName) {
             return instanceProfileName(Output.of(instanceProfileName));
         }
 
+        /**
+         * @param instanceRole This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
+         * 
+         * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRole(@Nullable Output<Role> instanceRole) {
             $.instanceRole = instanceRole;
             return this;
         }
 
+        /**
+         * @param instanceRole This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
+         * 
+         * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRole(Role instanceRole) {
             return instanceRole(Output.of(instanceRole));
         }
 
+        /**
+         * @param instanceRoles This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
+         * 
+         * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRoles(@Nullable Output<List<Role>> instanceRoles) {
             $.instanceRoles = instanceRoles;
             return this;
         }
 
+        /**
+         * @param instanceRoles This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
+         * 
+         * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRoles(List<Role> instanceRoles) {
             return instanceRoles(Output.of(instanceRoles));
         }
 
+        /**
+         * @param instanceRoles This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
+         * 
+         * Note: options `instanceRole` and `instanceRoles` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRoles(Role... instanceRoles) {
             return instanceRoles(List.of(instanceRoles));
         }
 
+        /**
+         * @param instanceType The instance type to use for the cluster&#39;s nodes. Defaults to &#34;t2.medium&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The instance type to use for the cluster&#39;s nodes. Defaults to &#34;t2.medium&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param kubernetesServiceIpAddressRange The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t
+         * specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or
+         * 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap
+         * with resources in other networks that are peered or connected to your VPC. You can only specify
+         * a custom CIDR block when you create a cluster, changing this value will force a new cluster to be created.
+         * 
+         * The block must meet the following requirements:
+         * - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+         * - Doesn&#39;t overlap with any CIDR block assigned to the VPC that you selected for VPC.
+         * - Between /24 and /12.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesServiceIpAddressRange(@Nullable Output<String> kubernetesServiceIpAddressRange) {
             $.kubernetesServiceIpAddressRange = kubernetesServiceIpAddressRange;
             return this;
         }
 
+        /**
+         * @param kubernetesServiceIpAddressRange The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t
+         * specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or
+         * 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap
+         * with resources in other networks that are peered or connected to your VPC. You can only specify
+         * a custom CIDR block when you create a cluster, changing this value will force a new cluster to be created.
+         * 
+         * The block must meet the following requirements:
+         * - Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+         * - Doesn&#39;t overlap with any CIDR block assigned to the VPC that you selected for VPC.
+         * - Between /24 and /12.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesServiceIpAddressRange(String kubernetesServiceIpAddressRange) {
             return kubernetesServiceIpAddressRange(Output.of(kubernetesServiceIpAddressRange));
         }
 
+        /**
+         * @param maxSize The maximum number of worker nodes running in the cluster. Defaults to 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
             $.maxSize = maxSize;
             return this;
         }
 
+        /**
+         * @param maxSize The maximum number of worker nodes running in the cluster. Defaults to 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(Integer maxSize) {
             return maxSize(Output.of(maxSize));
         }
 
+        /**
+         * @param minSize The minimum number of worker nodes running in the cluster. Defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(@Nullable Output<Integer> minSize) {
             $.minSize = minSize;
             return this;
         }
 
+        /**
+         * @param minSize The minimum number of worker nodes running in the cluster. Defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(Integer minSize) {
             return minSize(Output.of(minSize));
         }
 
+        /**
+         * @param name The cluster&#39;s physical resource name.
+         * 
+         * If not specified, the default is to use auto-naming for the cluster&#39;s name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
+         * 
+         * See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The cluster&#39;s physical resource name.
+         * 
+         * If not specified, the default is to use auto-naming for the cluster&#39;s name, resulting in a physical name with the format `${name}-eksCluster-0123abcd`.
+         * 
+         * See for more details: https://www.pulumi.com/docs/intro/concepts/programming-model/#autonaming
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeAmiId The AMI ID to use for the worker nodes.
+         * 
+         * Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems Manager Parameter Store.
+         * 
+         * Note: `nodeAmiId` and `gpu` are mutually exclusive.
+         * 
+         * See for more details:
+         * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAmiId(@Nullable Output<String> nodeAmiId) {
             $.nodeAmiId = nodeAmiId;
             return this;
         }
 
+        /**
+         * @param nodeAmiId The AMI ID to use for the worker nodes.
+         * 
+         * Defaults to the latest recommended EKS Optimized Linux AMI from the AWS Systems Manager Parameter Store.
+         * 
+         * Note: `nodeAmiId` and `gpu` are mutually exclusive.
+         * 
+         * See for more details:
+         * - https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAmiId(String nodeAmiId) {
             return nodeAmiId(Output.of(nodeAmiId));
         }
 
+        /**
+         * @param nodeAssociatePublicIpAddress Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAssociatePublicIpAddress(@Nullable Output<Boolean> nodeAssociatePublicIpAddress) {
             $.nodeAssociatePublicIpAddress = nodeAssociatePublicIpAddress;
             return this;
         }
 
+        /**
+         * @param nodeAssociatePublicIpAddress Whether or not to auto-assign the EKS worker nodes public IP addresses. If this toggle is set to true, the EKS workers will be auto-assigned public IPs. If false, they will not be auto-assigned public IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeAssociatePublicIpAddress(Boolean nodeAssociatePublicIpAddress) {
             return nodeAssociatePublicIpAddress(Output.of(nodeAssociatePublicIpAddress));
         }
 
+        /**
+         * @param nodeGroupOptions The common configuration settings for NodeGroups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeGroupOptions(@Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions) {
             $.nodeGroupOptions = nodeGroupOptions;
             return this;
         }
 
+        /**
+         * @param nodeGroupOptions The common configuration settings for NodeGroups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeGroupOptions(ClusterNodeGroupOptionsArgs nodeGroupOptions) {
             return nodeGroupOptions(Output.of(nodeGroupOptions));
         }
 
+        /**
+         * @param nodePublicKey Public key material for SSH access to worker nodes. See allowed formats at:
+         * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+         * If not provided, no SSH access is enabled on VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePublicKey(@Nullable Output<String> nodePublicKey) {
             $.nodePublicKey = nodePublicKey;
             return this;
         }
 
+        /**
+         * @param nodePublicKey Public key material for SSH access to worker nodes. See allowed formats at:
+         * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+         * If not provided, no SSH access is enabled on VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePublicKey(String nodePublicKey) {
             return nodePublicKey(Output.of(nodePublicKey));
         }
 
+        /**
+         * @param nodeRootVolumeDeleteOnTermination Whether to delete a cluster node&#39;s root volume on termination. Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeDeleteOnTermination(@Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination) {
             $.nodeRootVolumeDeleteOnTermination = nodeRootVolumeDeleteOnTermination;
             return this;
         }
 
+        /**
+         * @param nodeRootVolumeDeleteOnTermination Whether to delete a cluster node&#39;s root volume on termination. Defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeDeleteOnTermination(Boolean nodeRootVolumeDeleteOnTermination) {
             return nodeRootVolumeDeleteOnTermination(Output.of(nodeRootVolumeDeleteOnTermination));
         }
 
+        /**
+         * @param nodeRootVolumeEncrypted Whether to encrypt a cluster node&#39;s root volume. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeEncrypted(@Nullable Output<Boolean> nodeRootVolumeEncrypted) {
             $.nodeRootVolumeEncrypted = nodeRootVolumeEncrypted;
             return this;
         }
 
+        /**
+         * @param nodeRootVolumeEncrypted Whether to encrypt a cluster node&#39;s root volume. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeEncrypted(Boolean nodeRootVolumeEncrypted) {
             return nodeRootVolumeEncrypted(Output.of(nodeRootVolumeEncrypted));
         }
 
+        /**
+         * @param nodeRootVolumeIops Provisioned IOPS for a cluster node&#39;s root volume. Only valid for io1 volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeIops(@Nullable Output<Integer> nodeRootVolumeIops) {
             $.nodeRootVolumeIops = nodeRootVolumeIops;
             return this;
         }
 
+        /**
+         * @param nodeRootVolumeIops Provisioned IOPS for a cluster node&#39;s root volume. Only valid for io1 volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeIops(Integer nodeRootVolumeIops) {
             return nodeRootVolumeIops(Output.of(nodeRootVolumeIops));
         }
 
+        /**
+         * @param nodeRootVolumeSize The size in GiB of a cluster node&#39;s root volume. Defaults to 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeSize(@Nullable Output<Integer> nodeRootVolumeSize) {
             $.nodeRootVolumeSize = nodeRootVolumeSize;
             return this;
         }
 
+        /**
+         * @param nodeRootVolumeSize The size in GiB of a cluster node&#39;s root volume. Defaults to 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeSize(Integer nodeRootVolumeSize) {
             return nodeRootVolumeSize(Output.of(nodeRootVolumeSize));
         }
 
+        /**
+         * @param nodeRootVolumeThroughput Provisioned throughput performance in integer MiB/s for a cluster node&#39;s root volume. Only valid for gp3 volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeThroughput(@Nullable Output<Integer> nodeRootVolumeThroughput) {
             $.nodeRootVolumeThroughput = nodeRootVolumeThroughput;
             return this;
         }
 
+        /**
+         * @param nodeRootVolumeThroughput Provisioned throughput performance in integer MiB/s for a cluster node&#39;s root volume. Only valid for gp3 volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeThroughput(Integer nodeRootVolumeThroughput) {
             return nodeRootVolumeThroughput(Output.of(nodeRootVolumeThroughput));
         }
 
+        /**
+         * @param nodeRootVolumeType Configured EBS type for a cluster node&#39;s root volume. Default is gp2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeType(@Nullable Output<String> nodeRootVolumeType) {
             $.nodeRootVolumeType = nodeRootVolumeType;
             return this;
         }
 
+        /**
+         * @param nodeRootVolumeType Configured EBS type for a cluster node&#39;s root volume. Default is gp2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeRootVolumeType(String nodeRootVolumeType) {
             return nodeRootVolumeType(Output.of(nodeRootVolumeType));
         }
 
+        /**
+         * @param nodeSecurityGroupTags The tags to apply to the default `nodeSecurityGroup` created by the cluster.
+         * 
+         * Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSecurityGroupTags(@Nullable Output<Map<String,String>> nodeSecurityGroupTags) {
             $.nodeSecurityGroupTags = nodeSecurityGroupTags;
             return this;
         }
 
+        /**
+         * @param nodeSecurityGroupTags The tags to apply to the default `nodeSecurityGroup` created by the cluster.
+         * 
+         * Note: The `nodeSecurityGroupTags` option and the node group option `nodeSecurityGroup` are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSecurityGroupTags(Map<String,String> nodeSecurityGroupTags) {
             return nodeSecurityGroupTags(Output.of(nodeSecurityGroupTags));
         }
 
+        /**
+         * @param nodeSubnetIds The subnets to use for worker nodes. Defaults to the value of subnetIds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSubnetIds(@Nullable Output<List<String>> nodeSubnetIds) {
             $.nodeSubnetIds = nodeSubnetIds;
             return this;
         }
 
+        /**
+         * @param nodeSubnetIds The subnets to use for worker nodes. Defaults to the value of subnetIds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSubnetIds(List<String> nodeSubnetIds) {
             return nodeSubnetIds(Output.of(nodeSubnetIds));
         }
 
+        /**
+         * @param nodeSubnetIds The subnets to use for worker nodes. Defaults to the value of subnetIds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeSubnetIds(String... nodeSubnetIds) {
             return nodeSubnetIds(List.of(nodeSubnetIds));
         }
 
+        /**
+         * @param nodeUserData Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeUserData(@Nullable Output<String> nodeUserData) {
             $.nodeUserData = nodeUserData;
             return this;
         }
 
+        /**
+         * @param nodeUserData Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node signals its readiness to the managing CloudFormation stack. This code must be a typical user data script: critically it must begin with an interpreter directive (i.e. a `#!`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeUserData(String nodeUserData) {
             return nodeUserData(Output.of(nodeUserData));
         }
 
+        /**
+         * @param privateSubnetIds The set of private subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * Worker network architecture options:
+         *  - Private-only: Only set `privateSubnetIds`.
+         *    - Default workers to run in a private subnet. In this setting, Kubernetes cannot create public, internet-facing load balancers for your pods.
+         *  - Public-only: Only set `publicSubnetIds`.
+         *    - Default workers to run in a public subnet.
+         *  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
+         *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateSubnetIds(@Nullable Output<List<String>> privateSubnetIds) {
             $.privateSubnetIds = privateSubnetIds;
             return this;
         }
 
+        /**
+         * @param privateSubnetIds The set of private subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * Worker network architecture options:
+         *  - Private-only: Only set `privateSubnetIds`.
+         *    - Default workers to run in a private subnet. In this setting, Kubernetes cannot create public, internet-facing load balancers for your pods.
+         *  - Public-only: Only set `publicSubnetIds`.
+         *    - Default workers to run in a public subnet.
+         *  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
+         *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateSubnetIds(List<String> privateSubnetIds) {
             return privateSubnetIds(Output.of(privateSubnetIds));
         }
 
+        /**
+         * @param privateSubnetIds The set of private subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * Worker network architecture options:
+         *  - Private-only: Only set `privateSubnetIds`.
+         *    - Default workers to run in a private subnet. In this setting, Kubernetes cannot create public, internet-facing load balancers for your pods.
+         *  - Public-only: Only set `publicSubnetIds`.
+         *    - Default workers to run in a public subnet.
+         *  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
+         *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * Also consider setting `nodeAssociatePublicIpAddress: true` for fully private workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateSubnetIds(String... privateSubnetIds) {
             return privateSubnetIds(List.of(privateSubnetIds));
         }
 
+        /**
+         * @param providerCredentialOpts The AWS provider credential options to scope the cluster&#39;s kubeconfig authentication when using a non-default credential chain.
+         * 
+         * This is required for certain auth scenarios. For example:
+         * - Creating and using a new AWS provider instance, or
+         * - Setting the AWS_PROFILE environment variable, or
+         * - Using a named profile configured on the AWS provider via:
+         *   `pulumi config set aws:profile &lt;profileName&gt;`
+         * 
+         * See for more details:
+         * - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
+         * - https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/
+         * - https://www.pulumi.com/docs/intro/cloud-providers/aws/#configuration
+         * - https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerCredentialOpts(@Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts) {
             $.providerCredentialOpts = providerCredentialOpts;
             return this;
         }
 
+        /**
+         * @param providerCredentialOpts The AWS provider credential options to scope the cluster&#39;s kubeconfig authentication when using a non-default credential chain.
+         * 
+         * This is required for certain auth scenarios. For example:
+         * - Creating and using a new AWS provider instance, or
+         * - Setting the AWS_PROFILE environment variable, or
+         * - Using a named profile configured on the AWS provider via:
+         *   `pulumi config set aws:profile &lt;profileName&gt;`
+         * 
+         * See for more details:
+         * - https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/aws/#Provider
+         * - https://www.pulumi.com/docs/intro/cloud-providers/aws/setup/
+         * - https://www.pulumi.com/docs/intro/cloud-providers/aws/#configuration
+         * - https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerCredentialOpts(KubeconfigOptionsArgs providerCredentialOpts) {
             return providerCredentialOpts(Output.of(providerCredentialOpts));
         }
 
+        /**
+         * @param proxy The HTTP(S) proxy to use within a proxied environment.
+         * 
+         *  The proxy is used during cluster creation, and OIDC configuration.
+         * 
+         * This is an alternative option to setting the proxy environment variables: HTTP(S)_PROXY and/or http(s)_proxy.
+         * 
+         * This option is required iff the proxy environment variables are not set.
+         * 
+         * Format:      &lt;protocol&gt;://&lt;host&gt;:&lt;port&gt;
+         * Auth Format: &lt;protocol&gt;://&lt;username&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;
+         * 
+         * Ex:
+         *   - &#34;http://proxy.example.com:3128&#34;
+         *   - &#34;https://proxy.example.com&#34;
+         *   - &#34;http://username:password@proxy.example.com:3128&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxy(@Nullable Output<String> proxy) {
             $.proxy = proxy;
             return this;
         }
 
+        /**
+         * @param proxy The HTTP(S) proxy to use within a proxied environment.
+         * 
+         *  The proxy is used during cluster creation, and OIDC configuration.
+         * 
+         * This is an alternative option to setting the proxy environment variables: HTTP(S)_PROXY and/or http(s)_proxy.
+         * 
+         * This option is required iff the proxy environment variables are not set.
+         * 
+         * Format:      &lt;protocol&gt;://&lt;host&gt;:&lt;port&gt;
+         * Auth Format: &lt;protocol&gt;://&lt;username&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;
+         * 
+         * Ex:
+         *   - &#34;http://proxy.example.com:3128&#34;
+         *   - &#34;https://proxy.example.com&#34;
+         *   - &#34;http://username:password@proxy.example.com:3128&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxy(String proxy) {
             return proxy(Output.of(proxy));
         }
 
+        /**
+         * @param publicAccessCidrs Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessCidrs(@Nullable Output<List<String>> publicAccessCidrs) {
             $.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
 
+        /**
+         * @param publicAccessCidrs Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessCidrs(List<String> publicAccessCidrs) {
             return publicAccessCidrs(Output.of(publicAccessCidrs));
         }
 
+        /**
+         * @param publicAccessCidrs Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessCidrs(String... publicAccessCidrs) {
             return publicAccessCidrs(List.of(publicAccessCidrs));
         }
 
+        /**
+         * @param publicSubnetIds The set of public subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * Worker network architecture options:
+         *  - Private-only: Only set `privateSubnetIds`.
+         *    - Default workers to run in a private subnet. In this setting, Kubernetes cannot create public, internet-facing load balancers for your pods.
+         *  - Public-only: Only set `publicSubnetIds`.
+         *    - Default workers to run in a public subnet.
+         *  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
+         *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicSubnetIds(@Nullable Output<List<String>> publicSubnetIds) {
             $.publicSubnetIds = publicSubnetIds;
             return this;
         }
 
+        /**
+         * @param publicSubnetIds The set of public subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * Worker network architecture options:
+         *  - Private-only: Only set `privateSubnetIds`.
+         *    - Default workers to run in a private subnet. In this setting, Kubernetes cannot create public, internet-facing load balancers for your pods.
+         *  - Public-only: Only set `publicSubnetIds`.
+         *    - Default workers to run in a public subnet.
+         *  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
+         *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicSubnetIds(List<String> publicSubnetIds) {
             return publicSubnetIds(Output.of(publicSubnetIds));
         }
 
+        /**
+         * @param publicSubnetIds The set of public subnets to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * Worker network architecture options:
+         *  - Private-only: Only set `privateSubnetIds`.
+         *    - Default workers to run in a private subnet. In this setting, Kubernetes cannot create public, internet-facing load balancers for your pods.
+         *  - Public-only: Only set `publicSubnetIds`.
+         *    - Default workers to run in a public subnet.
+         *  - Mixed (recommended): Set both `privateSubnetIds` and `publicSubnetIds`.
+         *    - Default all worker nodes to run in private subnets, and use the public subnets for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicSubnetIds(String... publicSubnetIds) {
             return publicSubnetIds(List.of(publicSubnetIds));
         }
 
+        /**
+         * @param roleMappings Optional mappings from AWS IAM roles to Kubernetes users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleMappings(@Nullable Output<List<RoleMappingArgs>> roleMappings) {
             $.roleMappings = roleMappings;
             return this;
         }
 
+        /**
+         * @param roleMappings Optional mappings from AWS IAM roles to Kubernetes users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleMappings(List<RoleMappingArgs> roleMappings) {
             return roleMappings(Output.of(roleMappings));
         }
 
+        /**
+         * @param roleMappings Optional mappings from AWS IAM roles to Kubernetes users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleMappings(RoleMappingArgs... roleMappings) {
             return roleMappings(List.of(roleMappings));
         }
 
+        /**
+         * @param serviceRole IAM Service Role for EKS to use to manage the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(@Nullable Output<Role> serviceRole) {
             $.serviceRole = serviceRole;
             return this;
         }
 
+        /**
+         * @param serviceRole IAM Service Role for EKS to use to manage the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(Role serviceRole) {
             return serviceRole(Output.of(serviceRole));
         }
 
+        /**
+         * @param skipDefaultNodeGroup If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipDefaultNodeGroup(@Nullable Output<Boolean> skipDefaultNodeGroup) {
             $.skipDefaultNodeGroup = skipDefaultNodeGroup;
             return this;
         }
 
+        /**
+         * @param skipDefaultNodeGroup If this toggle is set to true, the EKS cluster will be created without node group attached. Defaults to false, unless `fargate` input is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipDefaultNodeGroup(Boolean skipDefaultNodeGroup) {
             return skipDefaultNodeGroup(Output.of(skipDefaultNodeGroup));
         }
 
+        /**
+         * @param storageClasses An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
+         * 
+         * Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClasses(@Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses) {
             $.storageClasses = storageClasses;
             return this;
         }
 
+        /**
+         * @param storageClasses An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
+         * 
+         * Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClasses(Either<String,Map<String,StorageClassArgs>> storageClasses) {
             return storageClasses(Output.of(storageClasses));
         }
 
+        /**
+         * @param storageClasses An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
+         * 
+         * Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClasses(String storageClasses) {
             return storageClasses(Either.ofLeft(storageClasses));
         }
 
+        /**
+         * @param storageClasses An optional set of StorageClasses to enable for the cluster. If this is a single volume type rather than a map, a single StorageClass will be created for that volume type.
+         * 
+         * Note: As of Kubernetes v1.11+ on EKS, a default `gp2` storage class will always be created automatically for the cluster by the EKS service. See https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClasses(Map<String,StorageClassArgs> storageClasses) {
             return storageClasses(Either.ofRight(storageClasses));
         }
 
+        /**
+         * @param subnetIds The set of all subnets, public and private, to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * If the list of subnets includes both public and private subnets, the worker nodes will only be attached to the private subnets, and the public subnets will be used for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
+         * 
+         * Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The set of all subnets, public and private, to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * If the list of subnets includes both public and private subnets, the worker nodes will only be attached to the private subnets, and the public subnets will be used for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
+         * 
+         * Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds The set of all subnets, public and private, to use for the worker node groups on the EKS cluster. These subnets are automatically tagged by EKS for Kubernetes purposes.
+         * 
+         * If `vpcId` is not set, the cluster will use the AWS account&#39;s default VPC subnets.
+         * 
+         * If the list of subnets includes both public and private subnets, the worker nodes will only be attached to the private subnets, and the public subnets will be used for internet-facing load balancers.
+         * 
+         * See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html.
+         * 
+         * Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnetIds` is mutually exclusive. The use of `publicSubnetIds` and `privateSubnetIds` is encouraged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of tags that are automatically applied to all AWS resources directly under management with this cluster, which support tagging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param useDefaultVpcCni Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useDefaultVpcCni(@Nullable Output<Boolean> useDefaultVpcCni) {
             $.useDefaultVpcCni = useDefaultVpcCni;
             return this;
         }
 
+        /**
+         * @param useDefaultVpcCni Use the default VPC CNI instead of creating a custom one. Should not be used in conjunction with `vpcCniOptions`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useDefaultVpcCni(Boolean useDefaultVpcCni) {
             return useDefaultVpcCni(Output.of(useDefaultVpcCni));
         }
 
+        /**
+         * @param userMappings Optional mappings from AWS IAM users to Kubernetes users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMappings(@Nullable Output<List<UserMappingArgs>> userMappings) {
             $.userMappings = userMappings;
             return this;
         }
 
+        /**
+         * @param userMappings Optional mappings from AWS IAM users to Kubernetes users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMappings(List<UserMappingArgs> userMappings) {
             return userMappings(Output.of(userMappings));
         }
 
+        /**
+         * @param userMappings Optional mappings from AWS IAM users to Kubernetes users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMappings(UserMappingArgs... userMappings) {
             return userMappings(List.of(userMappings));
         }
 
+        /**
+         * @param version Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Desired Kubernetes master / control plane version. If you do not specify a value, the latest available version is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param vpcCniOptions The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcCniOptions(@Nullable Output<VpcCniOptionsArgs> vpcCniOptions) {
             $.vpcCniOptions = vpcCniOptions;
             return this;
         }
 
+        /**
+         * @param vpcCniOptions The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation for the VpcCniOptions type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcCniOptions(VpcCniOptionsArgs vpcCniOptions) {
             return vpcCniOptions(Output.of(vpcCniOptions));
         }
 
+        /**
+         * @param vpcId The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The VPC in which to create the cluster and its worker nodes. If unset, the cluster will be created in the default VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

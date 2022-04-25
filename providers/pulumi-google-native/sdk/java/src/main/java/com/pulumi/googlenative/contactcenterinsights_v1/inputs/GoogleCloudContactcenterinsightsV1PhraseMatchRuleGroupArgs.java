@@ -28,6 +28,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     @Import(name="phraseMatchRules")
     private @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
 
+    /**
+     * @return A list of phase match rules that are included in this group.
+     * 
+     */
     public Optional<Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>>> phraseMatchRules() {
         return Optional.ofNullable(this.phraseMatchRules);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     @Import(name="type", required=true)
     private Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
 
+    /**
+     * @return The type of this phrase match rule group.
+     * 
+     */
     public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type() {
         return this.type;
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
             $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phraseMatchRules A list of phase match rules that are included in this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchRules(@Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules) {
             $.phraseMatchRules = phraseMatchRules;
             return this;
         }
 
+        /**
+         * @param phraseMatchRules A list of phase match rules that are included in this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchRules(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs> phraseMatchRules) {
             return phraseMatchRules(Output.of(phraseMatchRules));
         }
 
+        /**
+         * @param phraseMatchRules A list of phase match rules that are included in this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchRules(GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs... phraseMatchRules) {
             return phraseMatchRules(List.of(phraseMatchRules));
         }
 
+        /**
+         * @param type The type of this phrase match rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of this phrase match rule group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType type) {
             return type(Output.of(type));
         }

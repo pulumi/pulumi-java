@@ -28,6 +28,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoConfigurationEnabled")
     private @Nullable Output<Boolean> autoConfigurationEnabled;
 
+    /**
+     * @return If set to true, application will be configured with recommended monitoring configuration.
+     * 
+     */
     public Optional<Output<Boolean>> autoConfigurationEnabled() {
         return Optional.ofNullable(this.autoConfigurationEnabled);
     }
@@ -39,6 +43,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cWEMonitorEnabled")
     private @Nullable Output<Boolean> cWEMonitorEnabled;
 
+    /**
+     * @return Indicates whether Application Insights can listen to CloudWatch events for the application resources.
+     * 
+     */
     public Optional<Output<Boolean>> cWEMonitorEnabled() {
         return Optional.ofNullable(this.cWEMonitorEnabled);
     }
@@ -50,6 +58,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="componentMonitoringSettings")
     private @Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
 
+    /**
+     * @return The monitoring settings of the components.
+     * 
+     */
     public Optional<Output<List<ApplicationComponentMonitoringSettingArgs>>> componentMonitoringSettings() {
         return Optional.ofNullable(this.componentMonitoringSettings);
     }
@@ -61,6 +73,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customComponents")
     private @Nullable Output<List<ApplicationCustomComponentArgs>> customComponents;
 
+    /**
+     * @return The custom grouped components.
+     * 
+     */
     public Optional<Output<List<ApplicationCustomComponentArgs>>> customComponents() {
         return Optional.ofNullable(this.customComponents);
     }
@@ -72,6 +88,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logPatternSets")
     private @Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets;
 
+    /**
+     * @return The log pattern sets.
+     * 
+     */
     public Optional<Output<List<ApplicationLogPatternSetArgs>>> logPatternSets() {
         return Optional.ofNullable(this.logPatternSets);
     }
@@ -83,6 +103,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="opsCenterEnabled")
     private @Nullable Output<Boolean> opsCenterEnabled;
 
+    /**
+     * @return When set to true, creates opsItems for any problems detected on an application.
+     * 
+     */
     public Optional<Output<Boolean>> opsCenterEnabled() {
         return Optional.ofNullable(this.opsCenterEnabled);
     }
@@ -94,6 +118,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="opsItemSNSTopicArn")
     private @Nullable Output<String> opsItemSNSTopicArn;
 
+    /**
+     * @return The SNS topic provided to Application Insights that is associated to the created opsItem.
+     * 
+     */
     public Optional<Output<String>> opsItemSNSTopicArn() {
         return Optional.ofNullable(this.opsItemSNSTopicArn);
     }
@@ -105,6 +133,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -116,6 +148,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ApplicationTagArgs>> tags;
 
+    /**
+     * @return The tags of Application Insights application.
+     * 
+     */
     public Optional<Output<List<ApplicationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,99 +188,231 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoConfigurationEnabled If set to true, application will be configured with recommended monitoring configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoConfigurationEnabled(@Nullable Output<Boolean> autoConfigurationEnabled) {
             $.autoConfigurationEnabled = autoConfigurationEnabled;
             return this;
         }
 
+        /**
+         * @param autoConfigurationEnabled If set to true, application will be configured with recommended monitoring configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoConfigurationEnabled(Boolean autoConfigurationEnabled) {
             return autoConfigurationEnabled(Output.of(autoConfigurationEnabled));
         }
 
+        /**
+         * @param cWEMonitorEnabled Indicates whether Application Insights can listen to CloudWatch events for the application resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cWEMonitorEnabled(@Nullable Output<Boolean> cWEMonitorEnabled) {
             $.cWEMonitorEnabled = cWEMonitorEnabled;
             return this;
         }
 
+        /**
+         * @param cWEMonitorEnabled Indicates whether Application Insights can listen to CloudWatch events for the application resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cWEMonitorEnabled(Boolean cWEMonitorEnabled) {
             return cWEMonitorEnabled(Output.of(cWEMonitorEnabled));
         }
 
+        /**
+         * @param componentMonitoringSettings The monitoring settings of the components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentMonitoringSettings(@Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings) {
             $.componentMonitoringSettings = componentMonitoringSettings;
             return this;
         }
 
+        /**
+         * @param componentMonitoringSettings The monitoring settings of the components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentMonitoringSettings(List<ApplicationComponentMonitoringSettingArgs> componentMonitoringSettings) {
             return componentMonitoringSettings(Output.of(componentMonitoringSettings));
         }
 
+        /**
+         * @param componentMonitoringSettings The monitoring settings of the components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentMonitoringSettings(ApplicationComponentMonitoringSettingArgs... componentMonitoringSettings) {
             return componentMonitoringSettings(List.of(componentMonitoringSettings));
         }
 
+        /**
+         * @param customComponents The custom grouped components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customComponents(@Nullable Output<List<ApplicationCustomComponentArgs>> customComponents) {
             $.customComponents = customComponents;
             return this;
         }
 
+        /**
+         * @param customComponents The custom grouped components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customComponents(List<ApplicationCustomComponentArgs> customComponents) {
             return customComponents(Output.of(customComponents));
         }
 
+        /**
+         * @param customComponents The custom grouped components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customComponents(ApplicationCustomComponentArgs... customComponents) {
             return customComponents(List.of(customComponents));
         }
 
+        /**
+         * @param logPatternSets The log pattern sets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPatternSets(@Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets) {
             $.logPatternSets = logPatternSets;
             return this;
         }
 
+        /**
+         * @param logPatternSets The log pattern sets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPatternSets(List<ApplicationLogPatternSetArgs> logPatternSets) {
             return logPatternSets(Output.of(logPatternSets));
         }
 
+        /**
+         * @param logPatternSets The log pattern sets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPatternSets(ApplicationLogPatternSetArgs... logPatternSets) {
             return logPatternSets(List.of(logPatternSets));
         }
 
+        /**
+         * @param opsCenterEnabled When set to true, creates opsItems for any problems detected on an application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder opsCenterEnabled(@Nullable Output<Boolean> opsCenterEnabled) {
             $.opsCenterEnabled = opsCenterEnabled;
             return this;
         }
 
+        /**
+         * @param opsCenterEnabled When set to true, creates opsItems for any problems detected on an application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder opsCenterEnabled(Boolean opsCenterEnabled) {
             return opsCenterEnabled(Output.of(opsCenterEnabled));
         }
 
+        /**
+         * @param opsItemSNSTopicArn The SNS topic provided to Application Insights that is associated to the created opsItem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder opsItemSNSTopicArn(@Nullable Output<String> opsItemSNSTopicArn) {
             $.opsItemSNSTopicArn = opsItemSNSTopicArn;
             return this;
         }
 
+        /**
+         * @param opsItemSNSTopicArn The SNS topic provided to Application Insights that is associated to the created opsItem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder opsItemSNSTopicArn(String opsItemSNSTopicArn) {
             return opsItemSNSTopicArn(Output.of(opsItemSNSTopicArn));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of Application Insights application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of Application Insights application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ApplicationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags of Application Insights application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ApplicationTagArgs... tags) {
             return tags(List.of(tags));
         }

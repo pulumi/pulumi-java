@@ -25,6 +25,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="cert")
     private @Nullable String cert;
 
+    /**
+     * @return Cert data
+     * 
+     */
     public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
@@ -36,6 +40,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="cname")
     private @Nullable String cname;
 
+    /**
+     * @return CNAME of the cert
+     * 
+     */
     public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
@@ -47,6 +55,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return Key data
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -58,6 +70,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Enable or disable ssl for scoring
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -89,21 +105,45 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
             $ = new SslConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert Cert data
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(@Nullable String cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param cname CNAME of the cert
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(@Nullable String cname) {
             $.cname = cname;
             return this;
         }
 
+        /**
+         * @param key Key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param status Enable or disable ssl for scoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

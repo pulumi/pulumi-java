@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class DataStoreIndexProperty {
     /**
-     * The direction the index should optimize for sorting.
+     * @return The direction the index should optimize for sorting.
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
      */
     private final String direction;
     /**
-     * The property name to index.
+     * @return The property name to index.
      * 
      */
     private final String name;
@@ -30,17 +30,17 @@ public final class DataStoreIndexProperty {
     }
 
     /**
-     * The direction the index should optimize for sorting.
+     * @return The direction the index should optimize for sorting.
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * The property name to index.
+     * @return The property name to index.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

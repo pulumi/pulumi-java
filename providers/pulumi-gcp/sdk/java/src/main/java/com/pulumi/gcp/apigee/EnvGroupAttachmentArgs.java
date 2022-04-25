@@ -21,6 +21,11 @@ public final class EnvGroupAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="envgroupId", required=true)
     private Output<String> envgroupId;
 
+    /**
+     * @return The Apigee environment group associated with the Apigee environment,
+     * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
+     * 
+     */
     public Output<String> envgroupId() {
         return this.envgroupId;
     }
@@ -32,6 +37,10 @@ public final class EnvGroupAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="environment", required=true)
     private Output<String> environment;
 
+    /**
+     * @return The resource ID of the environment.
+     * 
+     */
     public Output<String> environment() {
         return this.environment;
     }
@@ -61,20 +70,46 @@ public final class EnvGroupAttachmentArgs extends com.pulumi.resources.ResourceA
             $ = new EnvGroupAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param envgroupId The Apigee environment group associated with the Apigee environment,
+         * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envgroupId(Output<String> envgroupId) {
             $.envgroupId = envgroupId;
             return this;
         }
 
+        /**
+         * @param envgroupId The Apigee environment group associated with the Apigee environment,
+         * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envgroupId(String envgroupId) {
             return envgroupId(Output.of(envgroupId));
         }
 
+        /**
+         * @param environment The resource ID of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The resource ID of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }

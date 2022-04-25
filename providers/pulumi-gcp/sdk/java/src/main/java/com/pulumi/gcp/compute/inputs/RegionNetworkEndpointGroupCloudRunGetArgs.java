@@ -24,6 +24,12 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends com.pulumi.
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Optional serving service.
+     * The service name must be 1-63 characters long, and comply with RFC1035.
+     * Example value: &#34;default&#34;, &#34;my-service&#34;.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -38,6 +44,13 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends com.pulumi.
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return Cloud Run tag represents the &#34;named-revision&#34; to provide
+     * additional fine-grained traffic routing information.
+     * The tag must be 1-63 characters long, and comply with RFC1035.
+     * Example value: &#34;revision-0010&#34;.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -54,6 +67,15 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends com.pulumi.
     @Import(name="urlMask")
     private @Nullable Output<String> urlMask;
 
+    /**
+     * @return A template to parse function field from a request URL. URL mask allows
+     * for routing to multiple Cloud Functions without having to create
+     * multiple Network Endpoint Groups and backend services.
+     * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+     * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+     * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+     * 
+     */
     public Optional<Output<String>> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
@@ -84,29 +106,85 @@ public final class RegionNetworkEndpointGroupCloudRunGetArgs extends com.pulumi.
             $ = new RegionNetworkEndpointGroupCloudRunGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param service Optional serving service.
+         * The service name must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;default&#34;, &#34;my-service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Optional serving service.
+         * The service name must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;default&#34;, &#34;my-service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param tag Cloud Run tag represents the &#34;named-revision&#34; to provide
+         * additional fine-grained traffic routing information.
+         * The tag must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;revision-0010&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag Cloud Run tag represents the &#34;named-revision&#34; to provide
+         * additional fine-grained traffic routing information.
+         * The tag must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;revision-0010&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }
 
+        /**
+         * @param urlMask A template to parse function field from a request URL. URL mask allows
+         * for routing to multiple Cloud Functions without having to create
+         * multiple Network Endpoint Groups and backend services.
+         * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+         * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+         * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(@Nullable Output<String> urlMask) {
             $.urlMask = urlMask;
             return this;
         }
 
+        /**
+         * @param urlMask A template to parse function field from a request URL. URL mask allows
+         * for routing to multiple Cloud Functions without having to create
+         * multiple Network Endpoint Groups and backend services.
+         * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+         * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+         * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(String urlMask) {
             return urlMask(Output.of(urlMask));
         }

@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPeerAsnResult {
     /**
-     * The error message for the validation state
+     * @return The error message for the validation state
      * 
      */
     private final String errorMessage;
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
      */
     private final String id;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The Autonomous System Number (ASN) of the peer.
+     * @return The Autonomous System Number (ASN) of the peer.
      * 
      */
     private final @Nullable Integer peerAsn;
     /**
-     * The contact details of the peer.
+     * @return The contact details of the peer.
      * 
      */
     private final @Nullable List<ContactDetailResponse> peerContactDetail;
     /**
-     * The name of the peer.
+     * @return The name of the peer.
      * 
      */
     private final @Nullable String peerName;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * The validation state of the ASN associated with the peer.
+     * @return The validation state of the ASN associated with the peer.
      * 
      */
     private final @Nullable String validationState;
@@ -76,58 +76,58 @@ public final class GetPeerAsnResult {
     }
 
     /**
-     * The error message for the validation state
+     * @return The error message for the validation state
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Autonomous System Number (ASN) of the peer.
+     * @return The Autonomous System Number (ASN) of the peer.
      * 
-    */
+     */
     public Optional<Integer> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
     /**
-     * The contact details of the peer.
+     * @return The contact details of the peer.
      * 
-    */
+     */
     public List<ContactDetailResponse> peerContactDetail() {
         return this.peerContactDetail == null ? List.of() : this.peerContactDetail;
     }
     /**
-     * The name of the peer.
+     * @return The name of the peer.
      * 
-    */
+     */
     public Optional<String> peerName() {
         return Optional.ofNullable(this.peerName);
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The validation state of the ASN associated with the peer.
+     * @return The validation state of the ASN associated with the peer.
      * 
-    */
+     */
     public Optional<String> validationState() {
         return Optional.ofNullable(this.validationState);
     }

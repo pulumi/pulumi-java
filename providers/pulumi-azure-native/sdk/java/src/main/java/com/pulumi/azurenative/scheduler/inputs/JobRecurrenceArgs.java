@@ -25,6 +25,10 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Gets or sets the maximum number of times that the job should run.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -36,6 +40,10 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return Gets or sets the time at which the job will complete.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -47,6 +55,10 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frequency")
     private @Nullable Output<RecurrenceFrequency> frequency;
 
+    /**
+     * @return Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+     * 
+     */
     public Optional<Output<RecurrenceFrequency>> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -58,6 +70,10 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
+    /**
+     * @return Gets or sets the interval between retries.
+     * 
+     */
     public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -97,38 +113,86 @@ public final class JobRecurrenceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobRecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Gets or sets the maximum number of times that the job should run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Gets or sets the maximum number of times that the job should run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param endTime Gets or sets the time at which the job will complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime Gets or sets the time at which the job will complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(@Nullable Output<RecurrenceFrequency> frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(RecurrenceFrequency frequency) {
             return frequency(Output.of(frequency));
         }
 
+        /**
+         * @param interval Gets or sets the interval between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval Gets or sets the interval between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }

@@ -31,6 +31,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="chartOptions")
     private @Nullable Output<ChartOptionsArgs> chartOptions;
 
+    /**
+     * @return Display options for the chart.
+     * 
+     */
     public Optional<Output<ChartOptionsArgs>> chartOptions() {
         return Optional.ofNullable(this.chartOptions);
     }
@@ -42,6 +46,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSets", required=true)
     private Output<List<DataSetArgs>> dataSets;
 
+    /**
+     * @return The data displayed in this chart.
+     * 
+     */
     public Output<List<DataSetArgs>> dataSets() {
         return this.dataSets;
     }
@@ -53,6 +61,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thresholds")
     private @Nullable Output<List<ThresholdArgs>> thresholds;
 
+    /**
+     * @return Threshold lines drawn horizontally across the chart.
+     * 
+     */
     public Optional<Output<List<ThresholdArgs>>> thresholds() {
         return Optional.ofNullable(this.thresholds);
     }
@@ -64,6 +76,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeshiftDuration")
     private @Nullable Output<String> timeshiftDuration;
 
+    /**
+     * @return The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+     * 
+     */
     public Optional<Output<String>> timeshiftDuration() {
         return Optional.ofNullable(this.timeshiftDuration);
     }
@@ -75,6 +91,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="xAxis")
     private @Nullable Output<AxisArgs> xAxis;
 
+    /**
+     * @return The properties applied to the X axis.
+     * 
+     */
     public Optional<Output<AxisArgs>> xAxis() {
         return Optional.ofNullable(this.xAxis);
     }
@@ -86,6 +106,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="y2Axis")
     private @Nullable Output<AxisArgs> y2Axis;
 
+    /**
+     * @return The properties applied to the Y2 axis.
+     * 
+     */
     public Optional<Output<AxisArgs>> y2Axis() {
         return Optional.ofNullable(this.y2Axis);
     }
@@ -97,6 +121,10 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="yAxis")
     private @Nullable Output<AxisArgs> yAxis;
 
+    /**
+     * @return The properties applied to the Y axis.
+     * 
+     */
     public Optional<Output<AxisArgs>> yAxis() {
         return Optional.ofNullable(this.yAxis);
     }
@@ -131,73 +159,169 @@ public final class XyChartArgs extends com.pulumi.resources.ResourceArgs {
             $ = new XyChartArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chartOptions Display options for the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartOptions(@Nullable Output<ChartOptionsArgs> chartOptions) {
             $.chartOptions = chartOptions;
             return this;
         }
 
+        /**
+         * @param chartOptions Display options for the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartOptions(ChartOptionsArgs chartOptions) {
             return chartOptions(Output.of(chartOptions));
         }
 
+        /**
+         * @param dataSets The data displayed in this chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(Output<List<DataSetArgs>> dataSets) {
             $.dataSets = dataSets;
             return this;
         }
 
+        /**
+         * @param dataSets The data displayed in this chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(List<DataSetArgs> dataSets) {
             return dataSets(Output.of(dataSets));
         }
 
+        /**
+         * @param dataSets The data displayed in this chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(DataSetArgs... dataSets) {
             return dataSets(List.of(dataSets));
         }
 
+        /**
+         * @param thresholds Threshold lines drawn horizontally across the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholds(@Nullable Output<List<ThresholdArgs>> thresholds) {
             $.thresholds = thresholds;
             return this;
         }
 
+        /**
+         * @param thresholds Threshold lines drawn horizontally across the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholds(List<ThresholdArgs> thresholds) {
             return thresholds(Output.of(thresholds));
         }
 
+        /**
+         * @param thresholds Threshold lines drawn horizontally across the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholds(ThresholdArgs... thresholds) {
             return thresholds(List.of(thresholds));
         }
 
+        /**
+         * @param timeshiftDuration The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeshiftDuration(@Nullable Output<String> timeshiftDuration) {
             $.timeshiftDuration = timeshiftDuration;
             return this;
         }
 
+        /**
+         * @param timeshiftDuration The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeshiftDuration(String timeshiftDuration) {
             return timeshiftDuration(Output.of(timeshiftDuration));
         }
 
+        /**
+         * @param xAxis The properties applied to the X axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xAxis(@Nullable Output<AxisArgs> xAxis) {
             $.xAxis = xAxis;
             return this;
         }
 
+        /**
+         * @param xAxis The properties applied to the X axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xAxis(AxisArgs xAxis) {
             return xAxis(Output.of(xAxis));
         }
 
+        /**
+         * @param y2Axis The properties applied to the Y2 axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y2Axis(@Nullable Output<AxisArgs> y2Axis) {
             $.y2Axis = y2Axis;
             return this;
         }
 
+        /**
+         * @param y2Axis The properties applied to the Y2 axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y2Axis(AxisArgs y2Axis) {
             return y2Axis(Output.of(y2Axis));
         }
 
+        /**
+         * @param yAxis The properties applied to the Y axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yAxis(@Nullable Output<AxisArgs> yAxis) {
             $.yAxis = yAxis;
             return this;
         }
 
+        /**
+         * @param yAxis The properties applied to the Y axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yAxis(AxisArgs yAxis) {
             return yAxis(Output.of(yAxis));
         }

@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class DmlStatisticsResponse {
     /**
-     * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
+     * @return Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
      * 
      */
     private final String deletedRowCount;
     /**
-     * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
+     * @return Number of inserted Rows. Populated by DML INSERT and MERGE statements.
      * 
      */
     private final String insertedRowCount;
     /**
-     * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
+     * @return Number of updated Rows. Populated by DML UPDATE and MERGE statements.
      * 
      */
     private final String updatedRowCount;
@@ -36,23 +36,23 @@ public final class DmlStatisticsResponse {
     }
 
     /**
-     * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
+     * @return Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
      * 
-    */
+     */
     public String deletedRowCount() {
         return this.deletedRowCount;
     }
     /**
-     * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
+     * @return Number of inserted Rows. Populated by DML INSERT and MERGE statements.
      * 
-    */
+     */
     public String insertedRowCount() {
         return this.insertedRowCount;
     }
     /**
-     * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
+     * @return Number of updated Rows. Populated by DML UPDATE and MERGE statements.
      * 
-    */
+     */
     public String updatedRowCount() {
         return this.updatedRowCount;
     }

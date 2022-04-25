@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceCapacityReservationSpecificationCapacityReservationTarget {
     /**
-     * The ID of the Capacity Reservation in which to run the instance.
+     * @return The ID of the Capacity Reservation in which to run the instance.
      * 
      */
     private final @Nullable String capacityReservationId;
@@ -23,9 +23,9 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
     }
 
     /**
-     * The ID of the Capacity Reservation in which to run the instance.
+     * @return The ID of the Capacity Reservation in which to run the instance.
      * 
-    */
+     */
     public Optional<String> capacityReservationId() {
         return Optional.ofNullable(this.capacityReservationId);
     }

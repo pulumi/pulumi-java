@@ -24,6 +24,11 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
     @Import(name="databaseVersion")
     private @Nullable Output<String> databaseVersion;
 
+    /**
+     * @return The MySQL version running on your source database server.
+     * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+     * 
+     */
     public Optional<Output<String>> databaseVersion() {
         return Optional.ofNullable(this.databaseVersion);
     }
@@ -35,6 +40,10 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return The externally accessible IPv4 address for the source database server.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -46,6 +55,10 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the source representation instance. Use any valid Cloud SQL instance name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +71,11 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The externally accessible port for the source database server.
+     * Defaults to 3306.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -70,6 +88,11 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -82,6 +105,11 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The Region in which the created instance should reside.
+     * If it is not provided, the provider region is used.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -115,56 +143,136 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
             $ = new SourceRepresentationInstanceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseVersion The MySQL version running on your source database server.
+         * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseVersion(@Nullable Output<String> databaseVersion) {
             $.databaseVersion = databaseVersion;
             return this;
         }
 
+        /**
+         * @param databaseVersion The MySQL version running on your source database server.
+         * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseVersion(String databaseVersion) {
             return databaseVersion(Output.of(databaseVersion));
         }
 
+        /**
+         * @param host The externally accessible IPv4 address for the source database server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host The externally accessible IPv4 address for the source database server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param name The name of the source representation instance. Use any valid Cloud SQL instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the source representation instance. Use any valid Cloud SQL instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port The externally accessible port for the source database server.
+         * Defaults to 3306.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The externally accessible port for the source database server.
+         * Defaults to 3306.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The Region in which the created instance should reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The Region in which the created instance should reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

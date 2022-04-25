@@ -27,6 +27,10 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="averageUtilization")
     private @Nullable Output<Integer> averageUtilization;
 
+    /**
+     * @return averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
+     * 
+     */
     public Optional<Output<Integer>> averageUtilization() {
         return Optional.ofNullable(this.averageUtilization);
     }
@@ -38,6 +42,10 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="averageValue")
     private @Nullable Output<String> averageValue;
 
+    /**
+     * @return averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+     * 
+     */
     public Optional<Output<String>> averageValue() {
         return Optional.ofNullable(this.averageValue);
     }
@@ -49,6 +57,10 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return type represents whether the metric type is Utilization, Value, or AverageValue
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -60,6 +72,10 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return value is the target value of the metric (as a quantity).
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -91,38 +107,86 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetricTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param averageUtilization averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageUtilization(@Nullable Output<Integer> averageUtilization) {
             $.averageUtilization = averageUtilization;
             return this;
         }
 
+        /**
+         * @param averageUtilization averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageUtilization(Integer averageUtilization) {
             return averageUtilization(Output.of(averageUtilization));
         }
 
+        /**
+         * @param averageValue averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageValue(@Nullable Output<String> averageValue) {
             $.averageValue = averageValue;
             return this;
         }
 
+        /**
+         * @param averageValue averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageValue(String averageValue) {
             return averageValue(Output.of(averageValue));
         }
 
+        /**
+         * @param type type represents whether the metric type is Utilization, Value, or AverageValue
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type type represents whether the metric type is Utilization, Value, or AverageValue
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value value is the target value of the metric (as a quantity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value value is the target value of the metric (as a quantity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

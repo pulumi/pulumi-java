@@ -22,6 +22,10 @@ public final class ProjectMetadataItemState extends com.pulumi.resources.Resourc
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The metadata key to set.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -34,6 +38,11 @@ public final class ProjectMetadataItemState extends com.pulumi.resources.Resourc
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -45,6 +54,10 @@ public final class ProjectMetadataItemState extends com.pulumi.resources.Resourc
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value to set for the given metadata key.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -75,29 +88,67 @@ public final class ProjectMetadataItemState extends com.pulumi.resources.Resourc
             $ = new ProjectMetadataItemState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The metadata key to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The metadata key to set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param value The value to set for the given metadata key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value to set for the given metadata key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

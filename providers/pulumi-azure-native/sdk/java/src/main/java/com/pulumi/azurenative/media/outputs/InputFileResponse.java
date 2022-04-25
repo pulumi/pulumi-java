@@ -20,17 +20,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InputFileResponse {
     /**
-     * Name of the file that this input definition applies to.
+     * @return Name of the file that this input definition applies to.
      * 
      */
     private final @Nullable String filename;
     /**
-     * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+     * @return The list of TrackDescriptors which define the metadata and selection of tracks in the input.
      * 
      */
     private final @Nullable List<Object> includedTracks;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.InputFile&#39;.
      * 
      */
@@ -47,24 +47,24 @@ public final class InputFileResponse {
     }
 
     /**
-     * Name of the file that this input definition applies to.
+     * @return Name of the file that this input definition applies to.
      * 
-    */
+     */
     public Optional<String> filename() {
         return Optional.ofNullable(this.filename);
     }
     /**
-     * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+     * @return The list of TrackDescriptors which define the metadata and selection of tracks in the input.
      * 
-    */
+     */
     public List<Object> includedTracks() {
         return this.includedTracks == null ? List.of() : this.includedTracks;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.InputFile&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

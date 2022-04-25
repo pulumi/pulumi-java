@@ -25,6 +25,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="boolValue", required=true)
     private Boolean boolValue;
 
+    /**
+     * @return Contains value if the data is of a boolean type.
+     * 
+     */
     public Boolean boolValue() {
         return this.boolValue;
     }
@@ -36,6 +40,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="durationValue", required=true)
     private String durationValue;
 
+    /**
+     * @return Contains value if the data is of duration type.
+     * 
+     */
     public String durationValue() {
         return this.durationValue;
     }
@@ -47,6 +55,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="floatValue", required=true)
     private Double floatValue;
 
+    /**
+     * @return Contains value if the data is of float type.
+     * 
+     */
     public Double floatValue() {
         return this.floatValue;
     }
@@ -58,6 +70,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="int64Value", required=true)
     private String int64Value;
 
+    /**
+     * @return Contains value if the data is of int64 type.
+     * 
+     */
     public String int64Value() {
         return this.int64Value;
     }
@@ -69,6 +85,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="javaClassValue", required=true)
     private String javaClassValue;
 
+    /**
+     * @return Contains value if the data is of java class type.
+     * 
+     */
     public String javaClassValue() {
         return this.javaClassValue;
     }
@@ -80,6 +100,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -91,6 +115,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return An optional label to display in a dax UI for the element.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -102,6 +130,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -113,6 +145,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shortStrValue", required=true)
     private String shortStrValue;
 
+    /**
+     * @return A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.
+     * 
+     */
     public String shortStrValue() {
         return this.shortStrValue;
     }
@@ -124,6 +160,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="strValue", required=true)
     private String strValue;
 
+    /**
+     * @return Contains value if the data is of string type.
+     * 
+     */
     public String strValue() {
         return this.strValue;
     }
@@ -135,6 +175,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timestampValue", required=true)
     private String timestampValue;
 
+    /**
+     * @return Contains value if the data is of timestamp type.
+     * 
+     */
     public String timestampValue() {
         return this.timestampValue;
     }
@@ -146,6 +190,10 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return An optional full URL.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -185,61 +233,133 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DisplayDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boolValue Contains value if the data is of a boolean type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boolValue(Boolean boolValue) {
             $.boolValue = boolValue;
             return this;
         }
 
+        /**
+         * @param durationValue Contains value if the data is of duration type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationValue(String durationValue) {
             $.durationValue = durationValue;
             return this;
         }
 
+        /**
+         * @param floatValue Contains value if the data is of float type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder floatValue(Double floatValue) {
             $.floatValue = floatValue;
             return this;
         }
 
+        /**
+         * @param int64Value Contains value if the data is of int64 type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder int64Value(String int64Value) {
             $.int64Value = int64Value;
             return this;
         }
 
+        /**
+         * @param javaClassValue Contains value if the data is of java class type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder javaClassValue(String javaClassValue) {
             $.javaClassValue = javaClassValue;
             return this;
         }
 
+        /**
+         * @param key The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param label An optional label to display in a dax UI for the element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param namespace The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param shortStrValue A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortStrValue(String shortStrValue) {
             $.shortStrValue = shortStrValue;
             return this;
         }
 
+        /**
+         * @param strValue Contains value if the data is of string type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strValue(String strValue) {
             $.strValue = strValue;
             return this;
         }
 
+        /**
+         * @param timestampValue Contains value if the data is of timestamp type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampValue(String timestampValue) {
             $.timestampValue = timestampValue;
             return this;
         }
 
+        /**
+         * @param url An optional full URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

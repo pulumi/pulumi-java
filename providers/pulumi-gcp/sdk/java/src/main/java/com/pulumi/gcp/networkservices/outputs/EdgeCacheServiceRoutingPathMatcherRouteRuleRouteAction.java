@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
     /**
-     * The policy to use for defining caching and signed request behaviour for requests that match this route.
+     * @return The policy to use for defining caching and signed request behaviour for requests that match this route.
      * Structure is documented below.
      * 
      */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy cdnPolicy;
     /**
-     * CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
+     * @return CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
      * Structure is documented below.
      * 
      */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy;
     /**
-     * The URL rewrite configuration for requests that match this route.
+     * @return The URL rewrite configuration for requests that match this route.
      * Structure is documented below.
      * 
      */
@@ -43,26 +43,26 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
     }
 
     /**
-     * The policy to use for defining caching and signed request behaviour for requests that match this route.
+     * @return The policy to use for defining caching and signed request behaviour for requests that match this route.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
     /**
-     * CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
+     * @return CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
     /**
-     * The URL rewrite configuration for requests that match this route.
+     * @return The URL rewrite configuration for requests that match this route.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }

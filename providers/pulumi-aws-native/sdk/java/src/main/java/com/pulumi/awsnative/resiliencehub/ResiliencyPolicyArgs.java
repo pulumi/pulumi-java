@@ -26,6 +26,10 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataLocationConstraint")
     private @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
+    /**
+     * @return Data Location Constraint of the Policy.
+     * 
+     */
     public Optional<Output<ResiliencyPolicyDataLocationConstraint>> dataLocationConstraint() {
         return Optional.ofNullable(this.dataLocationConstraint);
     }
@@ -44,6 +48,10 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="policyDescription")
     private @Nullable Output<String> policyDescription;
 
+    /**
+     * @return Description of Resiliency Policy.
+     * 
+     */
     public Optional<Output<String>> policyDescription() {
         return Optional.ofNullable(this.policyDescription);
     }
@@ -55,6 +63,10 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="policyName", required=true)
     private Output<String> policyName;
 
+    /**
+     * @return Name of Resiliency Policy.
+     * 
+     */
     public Output<String> policyName() {
         return this.policyName;
     }
@@ -73,6 +85,10 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tier", required=true)
     private Output<ResiliencyPolicyTier> tier;
 
+    /**
+     * @return Resiliency Policy Tier.
+     * 
+     */
     public Output<ResiliencyPolicyTier> tier() {
         return this.tier;
     }
@@ -106,11 +122,23 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
             $ = new ResiliencyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataLocationConstraint Data Location Constraint of the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocationConstraint(@Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint) {
             $.dataLocationConstraint = dataLocationConstraint;
             return this;
         }
 
+        /**
+         * @param dataLocationConstraint Data Location Constraint of the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocationConstraint(ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
             return dataLocationConstraint(Output.of(dataLocationConstraint));
         }
@@ -124,20 +152,44 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param policyDescription Description of Resiliency Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDescription(@Nullable Output<String> policyDescription) {
             $.policyDescription = policyDescription;
             return this;
         }
 
+        /**
+         * @param policyDescription Description of Resiliency Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDescription(String policyDescription) {
             return policyDescription(Output.of(policyDescription));
         }
 
+        /**
+         * @param policyName Name of Resiliency Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Name of Resiliency Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
@@ -151,11 +203,23 @@ public final class ResiliencyPolicyArgs extends com.pulumi.resources.ResourceArg
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tier Resiliency Policy Tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Output<ResiliencyPolicyTier> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Resiliency Policy Tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(ResiliencyPolicyTier tier) {
             return tier(Output.of(tier));
         }

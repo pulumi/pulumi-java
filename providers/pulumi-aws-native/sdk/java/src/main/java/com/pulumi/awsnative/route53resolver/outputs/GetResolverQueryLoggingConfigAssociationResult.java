@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetResolverQueryLoggingConfigAssociationResult {
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
      */
     private final @Nullable String creationTime;
     /**
-     * ResolverQueryLogConfigAssociationError
+     * @return ResolverQueryLogConfigAssociationError
      * 
      */
     private final @Nullable ResolverQueryLoggingConfigAssociationError error;
     /**
-     * ResolverQueryLogConfigAssociationErrorMessage
+     * @return ResolverQueryLogConfigAssociationErrorMessage
      * 
      */
     private final @Nullable String errorMessage;
     /**
-     * Id
+     * @return Id
      * 
      */
     private final @Nullable String id;
     /**
-     * ResolverQueryLogConfigAssociationStatus
+     * @return ResolverQueryLogConfigAssociationStatus
      * 
      */
     private final @Nullable ResolverQueryLoggingConfigAssociationStatus status;
@@ -54,37 +54,37 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
     }
 
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * ResolverQueryLogConfigAssociationError
+     * @return ResolverQueryLogConfigAssociationError
      * 
-    */
+     */
     public Optional<ResolverQueryLoggingConfigAssociationError> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * ResolverQueryLogConfigAssociationErrorMessage
+     * @return ResolverQueryLogConfigAssociationErrorMessage
      * 
-    */
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
-     * Id
+     * @return Id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * ResolverQueryLogConfigAssociationStatus
+     * @return ResolverQueryLogConfigAssociationStatus
      * 
-    */
+     */
     public Optional<ResolverQueryLoggingConfigAssociationStatus> status() {
         return Optional.ofNullable(this.status);
     }

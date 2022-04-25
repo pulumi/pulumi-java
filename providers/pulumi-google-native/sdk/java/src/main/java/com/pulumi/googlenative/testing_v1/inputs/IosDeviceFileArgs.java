@@ -27,6 +27,10 @@ public final class IosDeviceFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
     private @Nullable Output<String> bundleId;
 
+    /**
+     * @return The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
+     * 
+     */
     public Optional<Output<String>> bundleId() {
         return Optional.ofNullable(this.bundleId);
     }
@@ -38,6 +42,10 @@ public final class IosDeviceFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<FileReferenceArgs> content;
 
+    /**
+     * @return The source file
+     * 
+     */
     public Optional<Output<FileReferenceArgs>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -49,6 +57,10 @@ public final class IosDeviceFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="devicePath")
     private @Nullable Output<String> devicePath;
 
+    /**
+     * @return Location of the file on the device, inside the app&#39;s sandboxed filesystem
+     * 
+     */
     public Optional<Output<String>> devicePath() {
         return Optional.ofNullable(this.devicePath);
     }
@@ -79,29 +91,65 @@ public final class IosDeviceFileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosDeviceFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleId The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(@Nullable Output<String> bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param bundleId The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             return bundleId(Output.of(bundleId));
         }
 
+        /**
+         * @param content The source file
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<FileReferenceArgs> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The source file
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(FileReferenceArgs content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param devicePath Location of the file on the device, inside the app&#39;s sandboxed filesystem
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePath(@Nullable Output<String> devicePath) {
             $.devicePath = devicePath;
             return this;
         }
 
+        /**
+         * @param devicePath Location of the file on the device, inside the app&#39;s sandboxed filesystem
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePath(String devicePath) {
             return devicePath(Output.of(devicePath));
         }

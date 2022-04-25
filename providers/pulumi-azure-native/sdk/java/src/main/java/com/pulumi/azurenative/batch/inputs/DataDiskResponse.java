@@ -32,6 +32,16 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="caching")
     private @Nullable String caching;
 
+    /**
+     * @return Values are:
+     * 
+     *  none - The caching mode for the disk is not enabled.
+     *  readOnly - The caching mode for the disk is read only.
+     *  readWrite - The caching mode for the disk is read and write.
+     * 
+     *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+     * 
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -50,6 +60,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lun", required=true)
     private Integer lun;
 
+    /**
+     * @return The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
+     * 
+     */
     public Integer lun() {
         return this.lun;
     }
@@ -64,6 +78,13 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountType")
     private @Nullable String storageAccountType;
 
+    /**
+     * @return If omitted, the default is &#34;Standard_LRS&#34;. Values are:
+     * 
+     *  Standard_LRS - The data disk should use standard locally redundant storage.
+     *  Premium_LRS - The data disk should use premium locally redundant storage.
+     * 
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -95,6 +116,18 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DataDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caching Values are:
+         * 
+         *  none - The caching mode for the disk is not enabled.
+         *  readOnly - The caching mode for the disk is read only.
+         *  readWrite - The caching mode for the disk is read and write.
+         * 
+         *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(@Nullable String caching) {
             $.caching = caching;
             return this;
@@ -105,11 +138,26 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param lun The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param storageAccountType If omitted, the default is &#34;Standard_LRS&#34;. Values are:
+         * 
+         *  Standard_LRS - The data disk should use standard locally redundant storage.
+         *  Premium_LRS - The data disk should use premium locally redundant storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable String storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;

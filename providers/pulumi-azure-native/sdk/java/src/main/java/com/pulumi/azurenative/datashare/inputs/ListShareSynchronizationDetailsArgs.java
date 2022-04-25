@@ -22,6 +22,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="consumerEmail")
     private @Nullable String consumerEmail;
 
+    /**
+     * @return Email of the user who created the synchronization
+     * 
+     */
     public Optional<String> consumerEmail() {
         return Optional.ofNullable(this.consumerEmail);
     }
@@ -44,6 +52,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="consumerName")
     private @Nullable String consumerName;
 
+    /**
+     * @return Name of the user who created the synchronization
+     * 
+     */
     public Optional<String> consumerName() {
         return Optional.ofNullable(this.consumerName);
     }
@@ -55,6 +67,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="consumerTenantName")
     private @Nullable String consumerTenantName;
 
+    /**
+     * @return Tenant name of the consumer who created the synchronization
+     * 
+     */
     public Optional<String> consumerTenantName() {
         return Optional.ofNullable(this.consumerTenantName);
     }
@@ -66,6 +82,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="durationMs")
     private @Nullable Integer durationMs;
 
+    /**
+     * @return synchronization duration
+     * 
+     */
     public Optional<Integer> durationMs() {
         return Optional.ofNullable(this.durationMs);
     }
@@ -77,6 +97,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return End time of synchronization
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -88,6 +112,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="filter")
     private @Nullable String filter;
 
+    /**
+     * @return Filters the results using OData syntax.
+     * 
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -99,6 +127,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return message of synchronization
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -110,6 +142,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="orderby")
     private @Nullable String orderby;
 
+    /**
+     * @return Sorts the results using OData syntax.
+     * 
+     */
     public Optional<String> orderby() {
         return Optional.ofNullable(this.orderby);
     }
@@ -121,6 +157,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -132,6 +172,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="shareName", required=true)
     private String shareName;
 
+    /**
+     * @return The name of the share.
+     * 
+     */
     public String shareName() {
         return this.shareName;
     }
@@ -143,6 +187,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return Continuation token
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -154,6 +202,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return start time of synchronization
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -165,6 +217,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Raw Status
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -176,6 +232,10 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
     @Import(name="synchronizationId")
     private @Nullable String synchronizationId;
 
+    /**
+     * @return Synchronization id
+     * 
+     */
     public Optional<String> synchronizationId() {
         return Optional.ofNullable(this.synchronizationId);
     }
@@ -218,76 +278,166 @@ public final class ListShareSynchronizationDetailsArgs extends com.pulumi.resour
             $ = new ListShareSynchronizationDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param consumerEmail Email of the user who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerEmail(@Nullable String consumerEmail) {
             $.consumerEmail = consumerEmail;
             return this;
         }
 
+        /**
+         * @param consumerName Name of the user who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerName(@Nullable String consumerName) {
             $.consumerName = consumerName;
             return this;
         }
 
+        /**
+         * @param consumerTenantName Tenant name of the consumer who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerTenantName(@Nullable String consumerTenantName) {
             $.consumerTenantName = consumerTenantName;
             return this;
         }
 
+        /**
+         * @param durationMs synchronization duration
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationMs(@Nullable Integer durationMs) {
             $.durationMs = durationMs;
             return this;
         }
 
+        /**
+         * @param endTime End time of synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param filter Filters the results using OData syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param message message of synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param orderby Sorts the results using OData syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderby(@Nullable String orderby) {
             $.orderby = orderby;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param skipToken Continuation token
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;
         }
 
+        /**
+         * @param startTime start time of synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status Raw Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param synchronizationId Synchronization id
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationId(@Nullable String synchronizationId) {
             $.synchronizationId = synchronizationId;
             return this;

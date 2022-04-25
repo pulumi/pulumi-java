@@ -27,6 +27,10 @@ public final class WeekDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return The time of the day the schedule will occur.
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -38,6 +42,10 @@ public final class WeekDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="weekdays")
     private @Nullable Output<List<String>> weekdays;
 
+    /**
+     * @return The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+     * 
+     */
     public Optional<Output<List<String>>> weekdays() {
         return Optional.ofNullable(this.weekdays);
     }
@@ -67,24 +75,54 @@ public final class WeekDetailsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WeekDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param time The time of the day the schedule will occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time The time of the day the schedule will occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }
 
+        /**
+         * @param weekdays The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekdays(@Nullable Output<List<String>> weekdays) {
             $.weekdays = weekdays;
             return this;
         }
 
+        /**
+         * @param weekdays The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekdays(List<String> weekdays) {
             return weekdays(Output.of(weekdays));
         }
 
+        /**
+         * @param weekdays The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekdays(String... weekdays) {
             return weekdays(List.of(weekdays));
         }

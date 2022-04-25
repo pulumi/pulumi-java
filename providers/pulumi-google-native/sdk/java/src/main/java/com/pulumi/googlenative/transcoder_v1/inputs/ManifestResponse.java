@@ -24,6 +24,10 @@ public final class ManifestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileName", required=true)
     private String fileName;
 
+    /**
+     * @return The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
+     * 
+     */
     public String fileName() {
         return this.fileName;
     }
@@ -35,6 +39,10 @@ public final class ManifestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="muxStreams", required=true)
     private List<String> muxStreams;
 
+    /**
+     * @return List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
+     * 
+     */
     public List<String> muxStreams() {
         return this.muxStreams;
     }
@@ -46,6 +54,10 @@ public final class ManifestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the manifest, can be `HLS` or `DASH`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -76,20 +88,44 @@ public final class ManifestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ManifestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(String fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param muxStreams List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(List<String> muxStreams) {
             $.muxStreams = muxStreams;
             return this;
         }
 
+        /**
+         * @param muxStreams List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muxStreams(String... muxStreams) {
             return muxStreams(List.of(muxStreams));
         }
 
+        /**
+         * @param type Type of the manifest, can be `HLS` or `DASH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -19,6 +19,10 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of Cognitive Services account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="commitmentPlanName", required=true)
     private String commitmentPlanName;
 
+    /**
+     * @return The name of the commitmentPlan associated with the Cognitive Services Account
+     * 
+     */
     public String commitmentPlanName() {
         return this.commitmentPlanName;
     }
@@ -41,6 +49,10 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetCommitmentPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param commitmentPlanName The name of the commitmentPlan associated with the Cognitive Services Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitmentPlanName(String commitmentPlanName) {
             $.commitmentPlanName = commitmentPlanName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

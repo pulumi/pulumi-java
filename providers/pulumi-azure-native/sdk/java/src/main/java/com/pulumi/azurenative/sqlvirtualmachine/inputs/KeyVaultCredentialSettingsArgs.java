@@ -27,6 +27,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
     @Import(name="azureKeyVaultUrl")
     private @Nullable Output<String> azureKeyVaultUrl;
 
+    /**
+     * @return Azure Key Vault url.
+     * 
+     */
     public Optional<Output<String>> azureKeyVaultUrl() {
         return Optional.ofNullable(this.azureKeyVaultUrl);
     }
@@ -38,6 +42,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
     @Import(name="credentialName")
     private @Nullable Output<String> credentialName;
 
+    /**
+     * @return Credential name.
+     * 
+     */
     public Optional<Output<String>> credentialName() {
         return Optional.ofNullable(this.credentialName);
     }
@@ -49,6 +57,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Enable or disable key vault credential setting.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -60,6 +72,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
     @Import(name="servicePrincipalName")
     private @Nullable Output<String> servicePrincipalName;
 
+    /**
+     * @return Service principal name to access key vault.
+     * 
+     */
     public Optional<Output<String>> servicePrincipalName() {
         return Optional.ofNullable(this.servicePrincipalName);
     }
@@ -71,6 +87,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
     @Import(name="servicePrincipalSecret")
     private @Nullable Output<String> servicePrincipalSecret;
 
+    /**
+     * @return Service principal name secret to access key vault.
+     * 
+     */
     public Optional<Output<String>> servicePrincipalSecret() {
         return Optional.ofNullable(this.servicePrincipalSecret);
     }
@@ -103,47 +123,107 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
             $ = new KeyVaultCredentialSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureKeyVaultUrl Azure Key Vault url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureKeyVaultUrl(@Nullable Output<String> azureKeyVaultUrl) {
             $.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
 
+        /**
+         * @param azureKeyVaultUrl Azure Key Vault url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureKeyVaultUrl(String azureKeyVaultUrl) {
             return azureKeyVaultUrl(Output.of(azureKeyVaultUrl));
         }
 
+        /**
+         * @param credentialName Credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialName(@Nullable Output<String> credentialName) {
             $.credentialName = credentialName;
             return this;
         }
 
+        /**
+         * @param credentialName Credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialName(String credentialName) {
             return credentialName(Output.of(credentialName));
         }
 
+        /**
+         * @param enable Enable or disable key vault credential setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Enable or disable key vault credential setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param servicePrincipalName Service principal name to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalName(@Nullable Output<String> servicePrincipalName) {
             $.servicePrincipalName = servicePrincipalName;
             return this;
         }
 
+        /**
+         * @param servicePrincipalName Service principal name to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalName(String servicePrincipalName) {
             return servicePrincipalName(Output.of(servicePrincipalName));
         }
 
+        /**
+         * @param servicePrincipalSecret Service principal name secret to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalSecret(@Nullable Output<String> servicePrincipalSecret) {
             $.servicePrincipalSecret = servicePrincipalSecret;
             return this;
         }
 
+        /**
+         * @param servicePrincipalSecret Service principal name secret to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalSecret(String servicePrincipalSecret) {
             return servicePrincipalSecret(Output.of(servicePrincipalSecret));
         }

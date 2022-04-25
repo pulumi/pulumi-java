@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class DetectorModelDynamoDBv2 {
     private final @Nullable DetectorModelPayload payload;
     /**
-     * The name of the DynamoDB table.
+     * @return The name of the DynamoDB table.
      * 
      */
     private final String tableName;
@@ -31,9 +31,9 @@ public final class DetectorModelDynamoDBv2 {
         return Optional.ofNullable(this.payload);
     }
     /**
-     * The name of the DynamoDB table.
+     * @return The name of the DynamoDB table.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }

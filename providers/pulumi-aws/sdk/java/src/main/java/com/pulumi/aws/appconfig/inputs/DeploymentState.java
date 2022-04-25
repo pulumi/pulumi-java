@@ -24,6 +24,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return The application ID. Must be between 4 and 7 characters in length.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -35,6 +39,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AppConfig Deployment.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -46,6 +54,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationProfileId")
     private @Nullable Output<String> configurationProfileId;
 
+    /**
+     * @return The configuration profile ID. Must be between 4 and 7 characters in length.
+     * 
+     */
     public Optional<Output<String>> configurationProfileId() {
         return Optional.ofNullable(this.configurationProfileId);
     }
@@ -57,6 +69,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationVersion")
     private @Nullable Output<String> configurationVersion;
 
+    /**
+     * @return The configuration version to deploy. Can be at most 1024 characters.
+     * 
+     */
     public Optional<Output<String>> configurationVersion() {
         return Optional.ofNullable(this.configurationVersion);
     }
@@ -68,6 +84,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentNumber")
     private @Nullable Output<Integer> deploymentNumber;
 
+    /**
+     * @return The deployment number.
+     * 
+     */
     public Optional<Output<Integer>> deploymentNumber() {
         return Optional.ofNullable(this.deploymentNumber);
     }
@@ -79,6 +99,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentStrategyId")
     private @Nullable Output<String> deploymentStrategyId;
 
+    /**
+     * @return The deployment strategy ID or name of a predefined deployment strategy. See [Predefined Deployment Strategies](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html#appconfig-creating-deployment-strategy-predefined) for more details.
+     * 
+     */
     public Optional<Output<String>> deploymentStrategyId() {
         return Optional.ofNullable(this.deploymentStrategyId);
     }
@@ -90,6 +114,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the deployment. Can be at most 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -101,6 +129,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentId")
     private @Nullable Output<String> environmentId;
 
+    /**
+     * @return The environment ID. Must be between 4 and 7 characters in length.
+     * 
+     */
     public Optional<Output<String>> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -112,6 +144,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The state of the deployment.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -123,6 +159,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -134,6 +174,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -172,101 +216,233 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
             $ = new DeploymentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The application ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the AppConfig Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the AppConfig Deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param configurationProfileId The configuration profile ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
             $.configurationProfileId = configurationProfileId;
             return this;
         }
 
+        /**
+         * @param configurationProfileId The configuration profile ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfileId(String configurationProfileId) {
             return configurationProfileId(Output.of(configurationProfileId));
         }
 
+        /**
+         * @param configurationVersion The configuration version to deploy. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationVersion(@Nullable Output<String> configurationVersion) {
             $.configurationVersion = configurationVersion;
             return this;
         }
 
+        /**
+         * @param configurationVersion The configuration version to deploy. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationVersion(String configurationVersion) {
             return configurationVersion(Output.of(configurationVersion));
         }
 
+        /**
+         * @param deploymentNumber The deployment number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentNumber(@Nullable Output<Integer> deploymentNumber) {
             $.deploymentNumber = deploymentNumber;
             return this;
         }
 
+        /**
+         * @param deploymentNumber The deployment number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentNumber(Integer deploymentNumber) {
             return deploymentNumber(Output.of(deploymentNumber));
         }
 
+        /**
+         * @param deploymentStrategyId The deployment strategy ID or name of a predefined deployment strategy. See [Predefined Deployment Strategies](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html#appconfig-creating-deployment-strategy-predefined) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentStrategyId(@Nullable Output<String> deploymentStrategyId) {
             $.deploymentStrategyId = deploymentStrategyId;
             return this;
         }
 
+        /**
+         * @param deploymentStrategyId The deployment strategy ID or name of a predefined deployment strategy. See [Predefined Deployment Strategies](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html#appconfig-creating-deployment-strategy-predefined) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentStrategyId(String deploymentStrategyId) {
             return deploymentStrategyId(Output.of(deploymentStrategyId));
         }
 
+        /**
+         * @param description The description of the deployment. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the deployment. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param environmentId The environment ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentId The environment ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param state The state of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

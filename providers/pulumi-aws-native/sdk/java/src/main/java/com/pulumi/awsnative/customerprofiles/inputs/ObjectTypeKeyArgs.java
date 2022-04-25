@@ -28,6 +28,10 @@ public final class ObjectTypeKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fieldNames")
     private @Nullable Output<List<String>> fieldNames;
 
+    /**
+     * @return The reference for the key name of the fields map.
+     * 
+     */
     public Optional<Output<List<String>>> fieldNames() {
         return Optional.ofNullable(this.fieldNames);
     }
@@ -39,6 +43,10 @@ public final class ObjectTypeKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="standardIdentifiers")
     private @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
 
+    /**
+     * @return The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+     * 
+     */
     public Optional<Output<List<ObjectTypeKeyStandardIdentifiersItem>>> standardIdentifiers() {
         return Optional.ofNullable(this.standardIdentifiers);
     }
@@ -68,28 +76,64 @@ public final class ObjectTypeKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ObjectTypeKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldNames The reference for the key name of the fields map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldNames(@Nullable Output<List<String>> fieldNames) {
             $.fieldNames = fieldNames;
             return this;
         }
 
+        /**
+         * @param fieldNames The reference for the key name of the fields map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldNames(List<String> fieldNames) {
             return fieldNames(Output.of(fieldNames));
         }
 
+        /**
+         * @param fieldNames The reference for the key name of the fields map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldNames(String... fieldNames) {
             return fieldNames(List.of(fieldNames));
         }
 
+        /**
+         * @param standardIdentifiers The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardIdentifiers(@Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
             $.standardIdentifiers = standardIdentifiers;
             return this;
         }
 
+        /**
+         * @param standardIdentifiers The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardIdentifiers(List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
             return standardIdentifiers(Output.of(standardIdentifiers));
         }
 
+        /**
+         * @param standardIdentifiers The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardIdentifiers(ObjectTypeKeyStandardIdentifiersItem... standardIdentifiers) {
             return standardIdentifiers(List.of(standardIdentifiers));
         }

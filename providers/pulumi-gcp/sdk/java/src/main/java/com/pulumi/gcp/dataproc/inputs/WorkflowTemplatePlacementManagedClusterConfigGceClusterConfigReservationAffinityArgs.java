@@ -23,6 +23,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="consumeReservationType")
     private @Nullable Output<String> consumeReservationType;
 
+    /**
+     * @return Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+     * 
+     */
     public Optional<Output<String>> consumeReservationType() {
         return Optional.ofNullable(this.consumeReservationType);
     }
@@ -34,6 +38,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Optional. Corresponds to the label key of reservation resource.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -45,6 +53,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return Optional. Corresponds to the label values of reservation resource.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -75,33 +87,75 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             $ = new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumeReservationType Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumeReservationType(@Nullable Output<String> consumeReservationType) {
             $.consumeReservationType = consumeReservationType;
             return this;
         }
 
+        /**
+         * @param consumeReservationType Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumeReservationType(String consumeReservationType) {
             return consumeReservationType(Output.of(consumeReservationType));
         }
 
+        /**
+         * @param key Optional. Corresponds to the label key of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Optional. Corresponds to the label key of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Optional. Corresponds to the label values of reservation resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

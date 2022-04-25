@@ -21,6 +21,10 @@ public final class GatewayRouteSpecGrpcRouteArgs extends com.pulumi.resources.Re
     @Import(name="action", required=true)
     private Output<GatewayRouteSpecGrpcRouteActionArgs> action;
 
+    /**
+     * @return The action to take if a match is determined.
+     * 
+     */
     public Output<GatewayRouteSpecGrpcRouteActionArgs> action() {
         return this.action;
     }
@@ -32,6 +36,10 @@ public final class GatewayRouteSpecGrpcRouteArgs extends com.pulumi.resources.Re
     @Import(name="match", required=true)
     private Output<GatewayRouteSpecGrpcRouteMatchArgs> match;
 
+    /**
+     * @return The criteria for determining a request match.
+     * 
+     */
     public Output<GatewayRouteSpecGrpcRouteMatchArgs> match() {
         return this.match;
     }
@@ -61,20 +69,44 @@ public final class GatewayRouteSpecGrpcRouteArgs extends com.pulumi.resources.Re
             $ = new GatewayRouteSpecGrpcRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<GatewayRouteSpecGrpcRouteActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(GatewayRouteSpecGrpcRouteActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param match The criteria for determining a request match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(Output<GatewayRouteSpecGrpcRouteMatchArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match The criteria for determining a request match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(GatewayRouteSpecGrpcRouteMatchArgs match) {
             return match(Output.of(match));
         }

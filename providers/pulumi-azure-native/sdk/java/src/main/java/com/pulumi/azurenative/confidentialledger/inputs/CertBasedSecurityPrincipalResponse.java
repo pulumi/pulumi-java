@@ -25,6 +25,10 @@ public final class CertBasedSecurityPrincipalResponse extends com.pulumi.resourc
     @Import(name="cert")
     private @Nullable String cert;
 
+    /**
+     * @return Base64 encoded public key of the user cert (.pem or .cer)
+     * 
+     */
     public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
@@ -36,6 +40,10 @@ public final class CertBasedSecurityPrincipalResponse extends com.pulumi.resourc
     @Import(name="ledgerRoleName")
     private @Nullable String ledgerRoleName;
 
+    /**
+     * @return LedgerRole associated with the Security Principal of Ledger
+     * 
+     */
     public Optional<String> ledgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
@@ -65,11 +73,23 @@ public final class CertBasedSecurityPrincipalResponse extends com.pulumi.resourc
             $ = new CertBasedSecurityPrincipalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert Base64 encoded public key of the user cert (.pem or .cer)
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(@Nullable String cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(@Nullable String ledgerRoleName) {
             $.ledgerRoleName = ledgerRoleName;
             return this;

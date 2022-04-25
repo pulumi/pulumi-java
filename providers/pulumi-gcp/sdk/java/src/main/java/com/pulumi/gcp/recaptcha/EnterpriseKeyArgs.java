@@ -27,6 +27,10 @@ public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="androidSettings")
     private @Nullable Output<EnterpriseKeyAndroidSettingsArgs> androidSettings;
 
+    /**
+     * @return Settings for keys that can be used by Android apps.
+     * 
+     */
     public Optional<Output<EnterpriseKeyAndroidSettingsArgs>> androidSettings() {
         return Optional.ofNullable(this.androidSettings);
     }
@@ -38,6 +42,10 @@ public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Human-readable display name of this key. Modifiable by user.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -49,6 +57,10 @@ public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosSettings")
     private @Nullable Output<EnterpriseKeyIosSettingsArgs> iosSettings;
 
+    /**
+     * @return Settings for keys that can be used by iOS apps.
+     * 
+     */
     public Optional<Output<EnterpriseKeyIosSettingsArgs>> iosSettings() {
         return Optional.ofNullable(this.iosSettings);
     }
@@ -60,6 +72,10 @@ public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -71,6 +87,10 @@ public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -82,6 +102,10 @@ public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testingOptions")
     private @Nullable Output<EnterpriseKeyTestingOptionsArgs> testingOptions;
 
+    /**
+     * @return Options for user acceptance testing.
+     * 
+     */
     public Optional<Output<EnterpriseKeyTestingOptionsArgs>> testingOptions() {
         return Optional.ofNullable(this.testingOptions);
     }
@@ -93,6 +117,10 @@ public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webSettings")
     private @Nullable Output<EnterpriseKeyWebSettingsArgs> webSettings;
 
+    /**
+     * @return Settings for keys that can be used by websites.
+     * 
+     */
     public Optional<Output<EnterpriseKeyWebSettingsArgs>> webSettings() {
         return Optional.ofNullable(this.webSettings);
     }
@@ -127,65 +155,149 @@ public final class EnterpriseKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnterpriseKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidSettings Settings for keys that can be used by Android apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidSettings(@Nullable Output<EnterpriseKeyAndroidSettingsArgs> androidSettings) {
             $.androidSettings = androidSettings;
             return this;
         }
 
+        /**
+         * @param androidSettings Settings for keys that can be used by Android apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidSettings(EnterpriseKeyAndroidSettingsArgs androidSettings) {
             return androidSettings(Output.of(androidSettings));
         }
 
+        /**
+         * @param displayName Human-readable display name of this key. Modifiable by user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Human-readable display name of this key. Modifiable by user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param iosSettings Settings for keys that can be used by iOS apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosSettings(@Nullable Output<EnterpriseKeyIosSettingsArgs> iosSettings) {
             $.iosSettings = iosSettings;
             return this;
         }
 
+        /**
+         * @param iosSettings Settings for keys that can be used by iOS apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosSettings(EnterpriseKeyIosSettingsArgs iosSettings) {
             return iosSettings(Output.of(iosSettings));
         }
 
+        /**
+         * @param labels See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param testingOptions Options for user acceptance testing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingOptions(@Nullable Output<EnterpriseKeyTestingOptionsArgs> testingOptions) {
             $.testingOptions = testingOptions;
             return this;
         }
 
+        /**
+         * @param testingOptions Options for user acceptance testing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingOptions(EnterpriseKeyTestingOptionsArgs testingOptions) {
             return testingOptions(Output.of(testingOptions));
         }
 
+        /**
+         * @param webSettings Settings for keys that can be used by websites.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webSettings(@Nullable Output<EnterpriseKeyWebSettingsArgs> webSettings) {
             $.webSettings = webSettings;
             return this;
         }
 
+        /**
+         * @param webSettings Settings for keys that can be used by websites.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webSettings(EnterpriseKeyWebSettingsArgs webSettings) {
             return webSettings(Output.of(webSettings));
         }

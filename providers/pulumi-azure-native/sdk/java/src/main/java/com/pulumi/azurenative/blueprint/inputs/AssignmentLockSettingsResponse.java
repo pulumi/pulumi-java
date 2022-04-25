@@ -26,6 +26,10 @@ public final class AssignmentLockSettingsResponse extends com.pulumi.resources.I
     @Import(name="excludedActions")
     private @Nullable List<String> excludedActions;
 
+    /**
+     * @return List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to &#39;AllResourcesReadOnly&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;*{@literal /}read&#39;, &#39;Microsoft.Network/virtualNetworks/subnets/join/action&#39; and &#39;Microsoft.Authorization/locks/delete&#39;. If the lock mode is set to &#39;AllResourcesDoNotDelete&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;Microsoft.Authorization/locks/delete&#39;. Duplicate actions will get removed.
+     * 
+     */
     public Optional<List<String>> excludedActions() {
         return Optional.ofNullable(this.excludedActions);
     }
@@ -37,6 +41,10 @@ public final class AssignmentLockSettingsResponse extends com.pulumi.resources.I
     @Import(name="excludedPrincipals")
     private @Nullable List<String> excludedPrincipals;
 
+    /**
+     * @return List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
+     * 
+     */
     public Optional<List<String>> excludedPrincipals() {
         return Optional.ofNullable(this.excludedPrincipals);
     }
@@ -48,6 +56,10 @@ public final class AssignmentLockSettingsResponse extends com.pulumi.resources.I
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Lock mode.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -78,24 +90,54 @@ public final class AssignmentLockSettingsResponse extends com.pulumi.resources.I
             $ = new AssignmentLockSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedActions List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to &#39;AllResourcesReadOnly&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;*{@literal /}read&#39;, &#39;Microsoft.Network/virtualNetworks/subnets/join/action&#39; and &#39;Microsoft.Authorization/locks/delete&#39;. If the lock mode is set to &#39;AllResourcesDoNotDelete&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;Microsoft.Authorization/locks/delete&#39;. Duplicate actions will get removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedActions(@Nullable List<String> excludedActions) {
             $.excludedActions = excludedActions;
             return this;
         }
 
+        /**
+         * @param excludedActions List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to &#39;AllResourcesReadOnly&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;*{@literal /}read&#39;, &#39;Microsoft.Network/virtualNetworks/subnets/join/action&#39; and &#39;Microsoft.Authorization/locks/delete&#39;. If the lock mode is set to &#39;AllResourcesDoNotDelete&#39;, then the following actions are automatically appended to &#39;excludedActions&#39;: &#39;Microsoft.Authorization/locks/delete&#39;. Duplicate actions will get removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedActions(String... excludedActions) {
             return excludedActions(List.of(excludedActions));
         }
 
+        /**
+         * @param excludedPrincipals List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPrincipals(@Nullable List<String> excludedPrincipals) {
             $.excludedPrincipals = excludedPrincipals;
             return this;
         }
 
+        /**
+         * @param excludedPrincipals List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPrincipals(String... excludedPrincipals) {
             return excludedPrincipals(List.of(excludedPrincipals));
         }
 
+        /**
+         * @param mode Lock mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;

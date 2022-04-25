@@ -22,6 +22,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="approvalRuleTemplateId")
     private @Nullable Output<String> approvalRuleTemplateId;
 
+    /**
+     * @return The ID of the approval rule template
+     * 
+     */
     public Optional<Output<String>> approvalRuleTemplateId() {
         return Optional.ofNullable(this.approvalRuleTemplateId);
     }
@@ -33,6 +37,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The content of the approval rule template. Maximum of 3000 characters.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -44,6 +52,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="creationDate")
     private @Nullable Output<String> creationDate;
 
+    /**
+     * @return The date the approval rule template was created, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+     * 
+     */
     public Optional<Output<String>> creationDate() {
         return Optional.ofNullable(this.creationDate);
     }
@@ -55,6 +67,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the approval rule template. Maximum of 1000 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -66,6 +82,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="lastModifiedDate")
     private @Nullable Output<String> lastModifiedDate;
 
+    /**
+     * @return The date the approval rule template was most recently changed, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+     * 
+     */
     public Optional<Output<String>> lastModifiedDate() {
         return Optional.ofNullable(this.lastModifiedDate);
     }
@@ -77,6 +97,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="lastModifiedUser")
     private @Nullable Output<String> lastModifiedUser;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the user who made the most recent changes to the approval rule template.
+     * 
+     */
     public Optional<Output<String>> lastModifiedUser() {
         return Optional.ofNullable(this.lastModifiedUser);
     }
@@ -88,6 +112,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the approval rule template. Maximum of 100 characters.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -99,6 +127,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="ruleContentSha256")
     private @Nullable Output<String> ruleContentSha256;
 
+    /**
+     * @return The SHA-256 hash signature for the content of the approval rule template.
+     * 
+     */
     public Optional<Output<String>> ruleContentSha256() {
         return Optional.ofNullable(this.ruleContentSha256);
     }
@@ -134,74 +166,170 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
             $ = new ApprovalRuleTemplateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approvalRuleTemplateId The ID of the approval rule template
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalRuleTemplateId(@Nullable Output<String> approvalRuleTemplateId) {
             $.approvalRuleTemplateId = approvalRuleTemplateId;
             return this;
         }
 
+        /**
+         * @param approvalRuleTemplateId The ID of the approval rule template
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalRuleTemplateId(String approvalRuleTemplateId) {
             return approvalRuleTemplateId(Output.of(approvalRuleTemplateId));
         }
 
+        /**
+         * @param content The content of the approval rule template. Maximum of 3000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The content of the approval rule template. Maximum of 3000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param creationDate The date the approval rule template was created, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationDate(@Nullable Output<String> creationDate) {
             $.creationDate = creationDate;
             return this;
         }
 
+        /**
+         * @param creationDate The date the approval rule template was created, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationDate(String creationDate) {
             return creationDate(Output.of(creationDate));
         }
 
+        /**
+         * @param description The description of the approval rule template. Maximum of 1000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the approval rule template. Maximum of 1000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param lastModifiedDate The date the approval rule template was most recently changed, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             $.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
+        /**
+         * @param lastModifiedDate The date the approval rule template was most recently changed, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedDate(String lastModifiedDate) {
             return lastModifiedDate(Output.of(lastModifiedDate));
         }
 
+        /**
+         * @param lastModifiedUser The Amazon Resource Name (ARN) of the user who made the most recent changes to the approval rule template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedUser(@Nullable Output<String> lastModifiedUser) {
             $.lastModifiedUser = lastModifiedUser;
             return this;
         }
 
+        /**
+         * @param lastModifiedUser The Amazon Resource Name (ARN) of the user who made the most recent changes to the approval rule template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedUser(String lastModifiedUser) {
             return lastModifiedUser(Output.of(lastModifiedUser));
         }
 
+        /**
+         * @param name The name for the approval rule template. Maximum of 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the approval rule template. Maximum of 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ruleContentSha256 The SHA-256 hash signature for the content of the approval rule template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleContentSha256(@Nullable Output<String> ruleContentSha256) {
             $.ruleContentSha256 = ruleContentSha256;
             return this;
         }
 
+        /**
+         * @param ruleContentSha256 The SHA-256 hash signature for the content of the approval rule template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleContentSha256(String ruleContentSha256) {
             return ruleContentSha256(Output.of(ruleContentSha256));
         }

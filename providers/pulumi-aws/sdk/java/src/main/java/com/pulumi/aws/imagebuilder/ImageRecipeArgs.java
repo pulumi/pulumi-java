@@ -26,6 +26,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blockDeviceMappings")
     private @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
 
+    /**
+     * @return Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+     * 
+     */
     public Optional<Output<List<ImageRecipeBlockDeviceMappingArgs>>> blockDeviceMappings() {
         return Optional.ofNullable(this.blockDeviceMappings);
     }
@@ -37,6 +41,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="components", required=true)
     private Output<List<ImageRecipeComponentArgs>> components;
 
+    /**
+     * @return Ordered configuration block(s) with components for the image recipe. Detailed below.
+     * 
+     */
     public Output<List<ImageRecipeComponentArgs>> components() {
         return this.components;
     }
@@ -48,6 +56,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the image recipe.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the image recipe.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentImage", required=true)
     private Output<String> parentImage;
 
+    /**
+     * @return Platform of the image recipe.
+     * 
+     */
     public Output<String> parentImage() {
         return this.parentImage;
     }
@@ -81,6 +101,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags for the image recipe. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userDataBase64")
     private @Nullable Output<String> userDataBase64;
 
+    /**
+     * @return Base64 encoded user data. Use this to provide commands or a command script to run when you launch your build instance.
+     * 
+     */
     public Optional<Output<String>> userDataBase64() {
         return Optional.ofNullable(this.userDataBase64);
     }
@@ -103,6 +131,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return Version of the image recipe.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -114,6 +146,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workingDirectory")
     private @Nullable Output<String> workingDirectory;
 
+    /**
+     * @return The working directory to be used during build and test workflows.
+     * 
+     */
     public Optional<Output<String>> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }
@@ -150,91 +186,211 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageRecipeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blockDeviceMappings Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings) {
             $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
+        /**
+         * @param blockDeviceMappings Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(List<ImageRecipeBlockDeviceMappingArgs> blockDeviceMappings) {
             return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
 
+        /**
+         * @param blockDeviceMappings Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(ImageRecipeBlockDeviceMappingArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
 
+        /**
+         * @param components Ordered configuration block(s) with components for the image recipe. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(Output<List<ImageRecipeComponentArgs>> components) {
             $.components = components;
             return this;
         }
 
+        /**
+         * @param components Ordered configuration block(s) with components for the image recipe. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(List<ImageRecipeComponentArgs> components) {
             return components(Output.of(components));
         }
 
+        /**
+         * @param components Ordered configuration block(s) with components for the image recipe. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(ImageRecipeComponentArgs... components) {
             return components(List.of(components));
         }
 
+        /**
+         * @param description Description of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parentImage Platform of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentImage(Output<String> parentImage) {
             $.parentImage = parentImage;
             return this;
         }
 
+        /**
+         * @param parentImage Platform of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentImage(String parentImage) {
             return parentImage(Output.of(parentImage));
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the image recipe. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the image recipe. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param userDataBase64 Base64 encoded user data. Use this to provide commands or a command script to run when you launch your build instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
             $.userDataBase64 = userDataBase64;
             return this;
         }
 
+        /**
+         * @param userDataBase64 Base64 encoded user data. Use this to provide commands or a command script to run when you launch your build instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataBase64(String userDataBase64) {
             return userDataBase64(Output.of(userDataBase64));
         }
 
+        /**
+         * @param version Version of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the image recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param workingDirectory The working directory to be used during build and test workflows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             $.workingDirectory = workingDirectory;
             return this;
         }
 
+        /**
+         * @param workingDirectory The working directory to be used during build and test workflows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDirectory(String workingDirectory) {
             return workingDirectory(Output.of(workingDirectory));
         }

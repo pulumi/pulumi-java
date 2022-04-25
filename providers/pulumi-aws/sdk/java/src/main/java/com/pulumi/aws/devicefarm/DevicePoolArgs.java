@@ -26,6 +26,10 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The device pool&#39;s description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDevices")
     private @Nullable Output<Integer> maxDevices;
 
+    /**
+     * @return The number of devices that Device Farm can add to your device pool.
+     * 
+     */
     public Optional<Output<Integer>> maxDevices() {
         return Optional.ofNullable(this.maxDevices);
     }
@@ -48,6 +56,10 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Device Pool
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectArn", required=true)
     private Output<String> projectArn;
 
+    /**
+     * @return The ARN of the project for the device pool.
+     * 
+     */
     public Output<String> projectArn() {
         return this.projectArn;
     }
@@ -70,6 +86,10 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules", required=true)
     private Output<List<DevicePoolRuleArgs>> rules;
 
+    /**
+     * @return The device pool&#39;s rules. See Rule.
+     * 
+     */
     public Output<List<DevicePoolRuleArgs>> rules() {
         return this.rules;
     }
@@ -81,6 +101,10 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -126,69 +154,159 @@ public final class DevicePoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DevicePoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The device pool&#39;s description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The device pool&#39;s description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param maxDevices The number of devices that Device Farm can add to your device pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDevices(@Nullable Output<Integer> maxDevices) {
             $.maxDevices = maxDevices;
             return this;
         }
 
+        /**
+         * @param maxDevices The number of devices that Device Farm can add to your device pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDevices(Integer maxDevices) {
             return maxDevices(Output.of(maxDevices));
         }
 
+        /**
+         * @param name The name of the Device Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Device Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param projectArn The ARN of the project for the device pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectArn(Output<String> projectArn) {
             $.projectArn = projectArn;
             return this;
         }
 
+        /**
+         * @param projectArn The ARN of the project for the device pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectArn(String projectArn) {
             return projectArn(Output.of(projectArn));
         }
 
+        /**
+         * @param rules The device pool&#39;s rules. See Rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<DevicePoolRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The device pool&#39;s rules. See Rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<DevicePoolRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules The device pool&#39;s rules. See Rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(DevicePoolRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

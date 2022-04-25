@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SlackChannelPropertiesResponse {
     /**
-     * The Slack client id
+     * @return The Slack client id
      * 
      */
     private final @Nullable String clientId;
     /**
-     * The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final @Nullable String clientSecret;
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
      */
     private final Boolean isEnabled;
     /**
-     * Whether this channel is validated for the bot
+     * @return Whether this channel is validated for the bot
      * 
      */
     private final Boolean isValidated;
     /**
-     * The Slack landing page Url
+     * @return The Slack landing page Url
      * 
      */
     private final @Nullable String landingPageUrl;
     /**
-     * The Sms auth token
+     * @return The Sms auth token
      * 
      */
     private final String lastSubmissionId;
     /**
-     * The Slack redirect action
+     * @return The Slack redirect action
      * 
      */
     private final String redirectAction;
     /**
-     * Whether to register the settings before OAuth validation is performed. Recommended to True.
+     * @return Whether to register the settings before OAuth validation is performed. Recommended to True.
      * 
      */
     private final Boolean registerBeforeOAuthFlow;
     /**
-     * The Slack signing secret.
+     * @return The Slack signing secret.
      * 
      */
     private final @Nullable String signingSecret;
     /**
-     * The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final @Nullable String verificationToken;
@@ -88,72 +88,72 @@ public final class SlackChannelPropertiesResponse {
     }
 
     /**
-     * The Slack client id
+     * @return The Slack client id
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Whether this channel is validated for the bot
+     * @return Whether this channel is validated for the bot
      * 
-    */
+     */
     public Boolean isValidated() {
         return this.isValidated;
     }
     /**
-     * The Slack landing page Url
+     * @return The Slack landing page Url
      * 
-    */
+     */
     public Optional<String> landingPageUrl() {
         return Optional.ofNullable(this.landingPageUrl);
     }
     /**
-     * The Sms auth token
+     * @return The Sms auth token
      * 
-    */
+     */
     public String lastSubmissionId() {
         return this.lastSubmissionId;
     }
     /**
-     * The Slack redirect action
+     * @return The Slack redirect action
      * 
-    */
+     */
     public String redirectAction() {
         return this.redirectAction;
     }
     /**
-     * Whether to register the settings before OAuth validation is performed. Recommended to True.
+     * @return Whether to register the settings before OAuth validation is performed. Recommended to True.
      * 
-    */
+     */
     public Boolean registerBeforeOAuthFlow() {
         return this.registerBeforeOAuthFlow;
     }
     /**
-     * The Slack signing secret.
+     * @return The Slack signing secret.
      * 
-    */
+     */
     public Optional<String> signingSecret() {
         return Optional.ofNullable(this.signingSecret);
     }
     /**
-     * The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public Optional<String> verificationToken() {
         return Optional.ofNullable(this.verificationToken);
     }

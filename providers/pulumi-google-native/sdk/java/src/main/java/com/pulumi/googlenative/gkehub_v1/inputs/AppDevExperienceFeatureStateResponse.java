@@ -23,6 +23,10 @@ public final class AppDevExperienceFeatureStateResponse extends com.pulumi.resou
     @Import(name="networkingInstallSucceeded", required=true)
     private StatusResponse networkingInstallSucceeded;
 
+    /**
+     * @return Status of subcomponent that detects configured Service Mesh resources.
+     * 
+     */
     public StatusResponse networkingInstallSucceeded() {
         return this.networkingInstallSucceeded;
     }
@@ -51,6 +55,12 @@ public final class AppDevExperienceFeatureStateResponse extends com.pulumi.resou
             $ = new AppDevExperienceFeatureStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkingInstallSucceeded Status of subcomponent that detects configured Service Mesh resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkingInstallSucceeded(StatusResponse networkingInstallSucceeded) {
             $.networkingInstallSucceeded = networkingInstallSucceeded;
             return this;

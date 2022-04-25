@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class JobErrorDetailResponse {
     /**
-     * Code describing the error detail.
+     * @return Code describing the error detail.
      * 
      */
     private final String code;
     /**
-     * A human-readable representation of the error.
+     * @return A human-readable representation of the error.
      * 
      */
     private final String message;
@@ -29,16 +29,16 @@ public final class JobErrorDetailResponse {
     }
 
     /**
-     * Code describing the error detail.
+     * @return Code describing the error detail.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * A human-readable representation of the error.
+     * @return A human-readable representation of the error.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

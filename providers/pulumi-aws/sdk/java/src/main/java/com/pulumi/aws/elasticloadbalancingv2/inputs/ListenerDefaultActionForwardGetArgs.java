@@ -24,6 +24,10 @@ public final class ListenerDefaultActionForwardGetArgs extends com.pulumi.resour
     @Import(name="stickiness")
     private @Nullable Output<ListenerDefaultActionForwardStickinessGetArgs> stickiness;
 
+    /**
+     * @return Configuration block for target group stickiness for the rule. Detailed below.
+     * 
+     */
     public Optional<Output<ListenerDefaultActionForwardStickinessGetArgs>> stickiness() {
         return Optional.ofNullable(this.stickiness);
     }
@@ -35,6 +39,10 @@ public final class ListenerDefaultActionForwardGetArgs extends com.pulumi.resour
     @Import(name="targetGroups", required=true)
     private Output<List<ListenerDefaultActionForwardTargetGroupGetArgs>> targetGroups;
 
+    /**
+     * @return Set of 1-5 target group blocks. Detailed below.
+     * 
+     */
     public Output<List<ListenerDefaultActionForwardTargetGroupGetArgs>> targetGroups() {
         return this.targetGroups;
     }
@@ -64,24 +72,54 @@ public final class ListenerDefaultActionForwardGetArgs extends com.pulumi.resour
             $ = new ListenerDefaultActionForwardGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param stickiness Configuration block for target group stickiness for the rule. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stickiness(@Nullable Output<ListenerDefaultActionForwardStickinessGetArgs> stickiness) {
             $.stickiness = stickiness;
             return this;
         }
 
+        /**
+         * @param stickiness Configuration block for target group stickiness for the rule. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stickiness(ListenerDefaultActionForwardStickinessGetArgs stickiness) {
             return stickiness(Output.of(stickiness));
         }
 
+        /**
+         * @param targetGroups Set of 1-5 target group blocks. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(Output<List<ListenerDefaultActionForwardTargetGroupGetArgs>> targetGroups) {
             $.targetGroups = targetGroups;
             return this;
         }
 
+        /**
+         * @param targetGroups Set of 1-5 target group blocks. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(List<ListenerDefaultActionForwardTargetGroupGetArgs> targetGroups) {
             return targetGroups(Output.of(targetGroups));
         }
 
+        /**
+         * @param targetGroups Set of 1-5 target group blocks. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(ListenerDefaultActionForwardTargetGroupGetArgs... targetGroups) {
             return targetGroups(List.of(targetGroups));
         }

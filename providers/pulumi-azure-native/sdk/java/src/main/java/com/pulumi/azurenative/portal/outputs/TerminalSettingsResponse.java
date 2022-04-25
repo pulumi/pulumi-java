@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TerminalSettingsResponse {
     /**
-     * Size of terminal font.
+     * @return Size of terminal font.
      * 
      */
     private final @Nullable String fontSize;
     /**
-     * Style of terminal font.
+     * @return Style of terminal font.
      * 
      */
     private final @Nullable String fontStyle;
@@ -31,16 +31,16 @@ public final class TerminalSettingsResponse {
     }
 
     /**
-     * Size of terminal font.
+     * @return Size of terminal font.
      * 
-    */
+     */
     public Optional<String> fontSize() {
         return Optional.ofNullable(this.fontSize);
     }
     /**
-     * Style of terminal font.
+     * @return Style of terminal font.
      * 
-    */
+     */
     public Optional<String> fontStyle() {
         return Optional.ofNullable(this.fontStyle);
     }

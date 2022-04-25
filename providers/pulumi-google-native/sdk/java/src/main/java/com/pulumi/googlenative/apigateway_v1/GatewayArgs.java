@@ -23,6 +23,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiConfig", required=true)
     private Output<String> apiConfig;
 
+    /**
+     * @return Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+     * 
+     */
     public Output<String> apiConfig() {
         return this.apiConfig;
     }
@@ -34,6 +38,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Optional. Display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -52,6 +60,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -99,20 +111,44 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiConfig Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfig(Output<String> apiConfig) {
             $.apiConfig = apiConfig;
             return this;
         }
 
+        /**
+         * @param apiConfig Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfig(String apiConfig) {
             return apiConfig(Output.of(apiConfig));
         }
 
+        /**
+         * @param displayName Optional. Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Optional. Display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -126,11 +162,23 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
             return gatewayId(Output.of(gatewayId));
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

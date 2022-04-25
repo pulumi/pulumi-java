@@ -22,6 +22,10 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
     @Import(name="replicationGroupId")
     private @Nullable String replicationGroupId;
 
+    /**
+     * @return Regionally unique identifier for the member i.e. ReplicationGroupId.
+     * 
+     */
     public Optional<String> replicationGroupId() {
         return Optional.ofNullable(this.replicationGroupId);
     }
@@ -33,6 +37,10 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
     @Import(name="replicationGroupRegion")
     private @Nullable String replicationGroupRegion;
 
+    /**
+     * @return The AWS region of the Global Datastore member.
+     * 
+     */
     public Optional<String> replicationGroupRegion() {
         return Optional.ofNullable(this.replicationGroupRegion);
     }
@@ -44,6 +52,10 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
     @Import(name="role")
     private @Nullable GlobalReplicationGroupMemberRole role;
 
+    /**
+     * @return Indicates the role of the member, primary or secondary.
+     * 
+     */
     public Optional<GlobalReplicationGroupMemberRole> role() {
         return Optional.ofNullable(this.role);
     }
@@ -74,16 +86,34 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
             $ = new GlobalReplicationGroupMember(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replicationGroupId Regionally unique identifier for the member i.e. ReplicationGroupId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
             $.replicationGroupId = replicationGroupId;
             return this;
         }
 
+        /**
+         * @param replicationGroupRegion The AWS region of the Global Datastore member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
             $.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
 
+        /**
+         * @param role Indicates the role of the member, primary or secondary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable GlobalReplicationGroupMemberRole role) {
             $.role = role;
             return this;

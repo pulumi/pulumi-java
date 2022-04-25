@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="featureConfigs", required=true)
     private List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs;
 
+    /**
+     * @return Configuration of different suggestion features. One feature can have only one config.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs() {
         return this.featureConfigs;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="groupSuggestionResponses", required=true)
     private Boolean groupSuggestionResponses;
 
+    /**
+     * @return If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.
+     * 
+     */
     public Boolean groupSuggestionResponses() {
         return this.groupSuggestionResponses;
     }
@@ -65,15 +73,33 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param featureConfigs Configuration of different suggestion features. One feature can have only one config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureConfigs(List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs) {
             $.featureConfigs = featureConfigs;
             return this;
         }
 
+        /**
+         * @param featureConfigs Configuration of different suggestion features. One feature can have only one config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureConfigs(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse... featureConfigs) {
             return featureConfigs(List.of(featureConfigs));
         }
 
+        /**
+         * @param groupSuggestionResponses If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupSuggestionResponses(Boolean groupSuggestionResponses) {
             $.groupSuggestionResponses = groupSuggestionResponses;
             return this;

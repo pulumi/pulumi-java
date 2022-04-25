@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceNetworkConfiguration {
     /**
-     * Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
+     * @return Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
      * 
      */
     private final @Nullable Boolean assignPublicIp;
     /**
-     * Security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+     * @return Security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
      * 
      */
     private final @Nullable List<String> securityGroups;
     /**
-     * Subnets associated with the task or service.
+     * @return Subnets associated with the task or service.
      * 
      */
     private final List<String> subnets;
@@ -40,23 +40,23 @@ public final class ServiceNetworkConfiguration {
     }
 
     /**
-     * Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
+     * @return Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
      * 
-    */
+     */
     public Optional<Boolean> assignPublicIp() {
         return Optional.ofNullable(this.assignPublicIp);
     }
     /**
-     * Security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+     * @return Security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
      * 
-    */
+     */
     public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
-     * Subnets associated with the task or service.
+     * @return Subnets associated with the task or service.
      * 
-    */
+     */
     public List<String> subnets() {
         return this.subnets;
     }

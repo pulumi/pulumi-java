@@ -23,6 +23,10 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends com.pulu
     @Import(name="clientBroker")
     private @Nullable Output<String> clientBroker;
 
+    /**
+     * @return Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
+     * 
+     */
     public Optional<Output<String>> clientBroker() {
         return Optional.ofNullable(this.clientBroker);
     }
@@ -34,6 +38,10 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends com.pulu
     @Import(name="inCluster")
     private @Nullable Output<Boolean> inCluster;
 
+    /**
+     * @return Whether data communication among broker nodes is encrypted. Default value: `true`.
+     * 
+     */
     public Optional<Output<Boolean>> inCluster() {
         return Optional.ofNullable(this.inCluster);
     }
@@ -63,20 +71,44 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends com.pulu
             $ = new ClusterEncryptionInfoEncryptionInTransitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientBroker Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientBroker(@Nullable Output<String> clientBroker) {
             $.clientBroker = clientBroker;
             return this;
         }
 
+        /**
+         * @param clientBroker Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientBroker(String clientBroker) {
             return clientBroker(Output.of(clientBroker));
         }
 
+        /**
+         * @param inCluster Whether data communication among broker nodes is encrypted. Default value: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inCluster(@Nullable Output<Boolean> inCluster) {
             $.inCluster = inCluster;
             return this;
         }
 
+        /**
+         * @param inCluster Whether data communication among broker nodes is encrypted. Default value: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inCluster(Boolean inCluster) {
             return inCluster(Output.of(inCluster));
         }

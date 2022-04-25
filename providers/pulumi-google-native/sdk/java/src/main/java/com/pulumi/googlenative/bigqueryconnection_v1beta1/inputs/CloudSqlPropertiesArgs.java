@@ -28,6 +28,10 @@ public final class CloudSqlPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="credential")
     private @Nullable Output<CloudSqlCredentialArgs> credential;
 
+    /**
+     * @return Input only. Cloud SQL credential.
+     * 
+     */
     public Optional<Output<CloudSqlCredentialArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -39,6 +43,10 @@ public final class CloudSqlPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="database")
     private @Nullable Output<String> database;
 
+    /**
+     * @return Database name.
+     * 
+     */
     public Optional<Output<String>> database() {
         return Optional.ofNullable(this.database);
     }
@@ -50,6 +58,10 @@ public final class CloudSqlPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return Cloud SQL instance ID in the form `project:location:instance`.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -61,6 +73,10 @@ public final class CloudSqlPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<CloudSqlPropertiesType> type;
 
+    /**
+     * @return Type of the Cloud SQL database.
+     * 
+     */
     public Optional<Output<CloudSqlPropertiesType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -92,38 +108,86 @@ public final class CloudSqlPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new CloudSqlPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credential Input only. Cloud SQL credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<CloudSqlCredentialArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential Input only. Cloud SQL credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(CloudSqlCredentialArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(@Nullable Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param instanceId Cloud SQL instance ID in the form `project:location:instance`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Cloud SQL instance ID in the form `project:location:instance`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param type Type of the Cloud SQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<CloudSqlPropertiesType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the Cloud SQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(CloudSqlPropertiesType type) {
             return type(Output.of(type));
         }

@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return A filter to reduce the conversations used for training the model to a specific subset.
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
     @Import(name="medium", required=true)
     private String medium;
 
+    /**
+     * @return Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
+     * 
+     */
     public String medium() {
         return this.medium;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
     @Import(name="trainingConversationsCount", required=true)
     private String trainingConversationsCount;
 
+    /**
+     * @return Number of conversations used in training. Output only.
+     * 
+     */
     public String trainingConversationsCount() {
         return this.trainingConversationsCount;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
             $ = new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter A filter to reduce the conversations used for training the model to a specific subset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param medium Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder medium(String medium) {
             $.medium = medium;
             return this;
         }
 
+        /**
+         * @param trainingConversationsCount Number of conversations used in training. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingConversationsCount(String trainingConversationsCount) {
             $.trainingConversationsCount = trainingConversationsCount;
             return this;

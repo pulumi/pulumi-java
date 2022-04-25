@@ -22,6 +22,10 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoArgs extends c
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return Resource URL to the virtual machine instance which is being mirrored.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -50,11 +54,23 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoArgs extends c
             $ = new PacketMirroringMirroredResourceInfoInstanceInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url Resource URL to the virtual machine instance which is being mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Resource URL to the virtual machine instance which is being mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

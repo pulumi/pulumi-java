@@ -27,6 +27,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentArns", required=true)
     private Output<List<String>> agentArns;
 
+    /**
+     * @return A list of DataSync Agent ARNs with which this location will be associated.
+     * 
+     */
     public Output<List<String>> agentArns() {
         return this.agentArns;
     }
@@ -38,6 +42,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
     private @Nullable Output<String> authenticationType;
 
+    /**
+     * @return The type of authentication used to determine the identity of the user. Valid values are `SIMPLE` and `KERBEROS`.
+     * 
+     */
     public Optional<Output<String>> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -49,6 +57,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blockSize")
     private @Nullable Output<Integer> blockSize;
 
+    /**
+     * @return The size of data blocks to write into the HDFS cluster. The block size must be a multiple of 512 bytes. The default block size is 128 mebibytes (MiB).
+     * 
+     */
     public Optional<Output<Integer>> blockSize() {
         return Optional.ofNullable(this.blockSize);
     }
@@ -60,6 +72,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosKeytab")
     private @Nullable Output<String> kerberosKeytab;
 
+    /**
+     * @return The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted keys. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+     * 
+     */
     public Optional<Output<String>> kerberosKeytab() {
         return Optional.ofNullable(this.kerberosKeytab);
     }
@@ -71,6 +87,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosKrb5Conf")
     private @Nullable Output<String> kerberosKrb5Conf;
 
+    /**
+     * @return The krb5.conf file that contains the Kerberos configuration information. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+     * 
+     */
     public Optional<Output<String>> kerberosKrb5Conf() {
         return Optional.ofNullable(this.kerberosKrb5Conf);
     }
@@ -82,6 +102,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kerberosPrincipal")
     private @Nullable Output<String> kerberosPrincipal;
 
+    /**
+     * @return The Kerberos principal with access to the files and folders on the HDFS cluster. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+     * 
+     */
     public Optional<Output<String>> kerberosPrincipal() {
         return Optional.ofNullable(this.kerberosPrincipal);
     }
@@ -93,6 +117,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyProviderUri")
     private @Nullable Output<String> kmsKeyProviderUri;
 
+    /**
+     * @return The URI of the HDFS cluster&#39;s Key Management Server (KMS).
+     * 
+     */
     public Optional<Output<String>> kmsKeyProviderUri() {
         return Optional.ofNullable(this.kmsKeyProviderUri);
     }
@@ -104,6 +132,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameNodes", required=true)
     private Output<List<LocationHdfsNameNodeArgs>> nameNodes;
 
+    /**
+     * @return The NameNode that manages the HDFS namespace. The NameNode performs operations such as opening, closing, and renaming files and directories. The NameNode contains the information to map blocks of data to the DataNodes. You can use only one NameNode. See configuration below.
+     * 
+     */
     public Output<List<LocationHdfsNameNodeArgs>> nameNodes() {
         return this.nameNodes;
     }
@@ -115,6 +147,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="qopConfiguration")
     private @Nullable Output<LocationHdfsQopConfigurationArgs> qopConfiguration;
 
+    /**
+     * @return The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn&#39;t specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
+     * 
+     */
     public Optional<Output<LocationHdfsQopConfigurationArgs>> qopConfiguration() {
         return Optional.ofNullable(this.qopConfiguration);
     }
@@ -126,6 +162,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationFactor")
     private @Nullable Output<Integer> replicationFactor;
 
+    /**
+     * @return The number of DataNodes to replicate the data to when writing to the HDFS cluster. By default, data is replicated to three DataNodes.
+     * 
+     */
     public Optional<Output<Integer>> replicationFactor() {
         return Optional.ofNullable(this.replicationFactor);
     }
@@ -137,6 +177,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="simpleUser")
     private @Nullable Output<String> simpleUser;
 
+    /**
+     * @return The user name used to identify the client on the host operating system. If `SIMPLE` is specified for `authentication_type`, this parameter is required.
+     * 
+     */
     public Optional<Output<String>> simpleUser() {
         return Optional.ofNullable(this.simpleUser);
     }
@@ -148,6 +192,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn&#39;t specified, it will default to /.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -159,6 +207,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -170,6 +222,10 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -211,136 +267,316 @@ public final class LocationHdfsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LocationHdfsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentArns A list of DataSync Agent ARNs with which this location will be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(Output<List<String>> agentArns) {
             $.agentArns = agentArns;
             return this;
         }
 
+        /**
+         * @param agentArns A list of DataSync Agent ARNs with which this location will be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(List<String> agentArns) {
             return agentArns(Output.of(agentArns));
         }
 
+        /**
+         * @param agentArns A list of DataSync Agent ARNs with which this location will be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
         }
 
+        /**
+         * @param authenticationType The type of authentication used to determine the identity of the user. Valid values are `SIMPLE` and `KERBEROS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType The type of authentication used to determine the identity of the user. Valid values are `SIMPLE` and `KERBEROS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param blockSize The size of data blocks to write into the HDFS cluster. The block size must be a multiple of 512 bytes. The default block size is 128 mebibytes (MiB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockSize(@Nullable Output<Integer> blockSize) {
             $.blockSize = blockSize;
             return this;
         }
 
+        /**
+         * @param blockSize The size of data blocks to write into the HDFS cluster. The block size must be a multiple of 512 bytes. The default block size is 128 mebibytes (MiB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockSize(Integer blockSize) {
             return blockSize(Output.of(blockSize));
         }
 
+        /**
+         * @param kerberosKeytab The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted keys. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosKeytab(@Nullable Output<String> kerberosKeytab) {
             $.kerberosKeytab = kerberosKeytab;
             return this;
         }
 
+        /**
+         * @param kerberosKeytab The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted keys. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosKeytab(String kerberosKeytab) {
             return kerberosKeytab(Output.of(kerberosKeytab));
         }
 
+        /**
+         * @param kerberosKrb5Conf The krb5.conf file that contains the Kerberos configuration information. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosKrb5Conf(@Nullable Output<String> kerberosKrb5Conf) {
             $.kerberosKrb5Conf = kerberosKrb5Conf;
             return this;
         }
 
+        /**
+         * @param kerberosKrb5Conf The krb5.conf file that contains the Kerberos configuration information. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosKrb5Conf(String kerberosKrb5Conf) {
             return kerberosKrb5Conf(Output.of(kerberosKrb5Conf));
         }
 
+        /**
+         * @param kerberosPrincipal The Kerberos principal with access to the files and folders on the HDFS cluster. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosPrincipal(@Nullable Output<String> kerberosPrincipal) {
             $.kerberosPrincipal = kerberosPrincipal;
             return this;
         }
 
+        /**
+         * @param kerberosPrincipal The Kerberos principal with access to the files and folders on the HDFS cluster. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosPrincipal(String kerberosPrincipal) {
             return kerberosPrincipal(Output.of(kerberosPrincipal));
         }
 
+        /**
+         * @param kmsKeyProviderUri The URI of the HDFS cluster&#39;s Key Management Server (KMS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyProviderUri(@Nullable Output<String> kmsKeyProviderUri) {
             $.kmsKeyProviderUri = kmsKeyProviderUri;
             return this;
         }
 
+        /**
+         * @param kmsKeyProviderUri The URI of the HDFS cluster&#39;s Key Management Server (KMS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyProviderUri(String kmsKeyProviderUri) {
             return kmsKeyProviderUri(Output.of(kmsKeyProviderUri));
         }
 
+        /**
+         * @param nameNodes The NameNode that manages the HDFS namespace. The NameNode performs operations such as opening, closing, and renaming files and directories. The NameNode contains the information to map blocks of data to the DataNodes. You can use only one NameNode. See configuration below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameNodes(Output<List<LocationHdfsNameNodeArgs>> nameNodes) {
             $.nameNodes = nameNodes;
             return this;
         }
 
+        /**
+         * @param nameNodes The NameNode that manages the HDFS namespace. The NameNode performs operations such as opening, closing, and renaming files and directories. The NameNode contains the information to map blocks of data to the DataNodes. You can use only one NameNode. See configuration below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameNodes(List<LocationHdfsNameNodeArgs> nameNodes) {
             return nameNodes(Output.of(nameNodes));
         }
 
+        /**
+         * @param nameNodes The NameNode that manages the HDFS namespace. The NameNode performs operations such as opening, closing, and renaming files and directories. The NameNode contains the information to map blocks of data to the DataNodes. You can use only one NameNode. See configuration below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameNodes(LocationHdfsNameNodeArgs... nameNodes) {
             return nameNodes(List.of(nameNodes));
         }
 
+        /**
+         * @param qopConfiguration The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn&#39;t specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qopConfiguration(@Nullable Output<LocationHdfsQopConfigurationArgs> qopConfiguration) {
             $.qopConfiguration = qopConfiguration;
             return this;
         }
 
+        /**
+         * @param qopConfiguration The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn&#39;t specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder qopConfiguration(LocationHdfsQopConfigurationArgs qopConfiguration) {
             return qopConfiguration(Output.of(qopConfiguration));
         }
 
+        /**
+         * @param replicationFactor The number of DataNodes to replicate the data to when writing to the HDFS cluster. By default, data is replicated to three DataNodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
             $.replicationFactor = replicationFactor;
             return this;
         }
 
+        /**
+         * @param replicationFactor The number of DataNodes to replicate the data to when writing to the HDFS cluster. By default, data is replicated to three DataNodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationFactor(Integer replicationFactor) {
             return replicationFactor(Output.of(replicationFactor));
         }
 
+        /**
+         * @param simpleUser The user name used to identify the client on the host operating system. If `SIMPLE` is specified for `authentication_type`, this parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleUser(@Nullable Output<String> simpleUser) {
             $.simpleUser = simpleUser;
             return this;
         }
 
+        /**
+         * @param simpleUser The user name used to identify the client on the host operating system. If `SIMPLE` is specified for `authentication_type`, this parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleUser(String simpleUser) {
             return simpleUser(Output.of(simpleUser));
         }
 
+        /**
+         * @param subdirectory A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn&#39;t specified, it will default to /.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn&#39;t specified, it will default to /.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

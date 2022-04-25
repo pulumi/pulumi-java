@@ -24,6 +24,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardDefinition", required=true)
     private Output<String> dashboardDefinition;
 
+    /**
+     * @return The dashboard definition specified in a JSON literal.
+     * 
+     */
     public Output<String> dashboardDefinition() {
         return this.dashboardDefinition;
     }
@@ -35,6 +39,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardDescription", required=true)
     private Output<String> dashboardDescription;
 
+    /**
+     * @return A description for the dashboard.
+     * 
+     */
     public Output<String> dashboardDescription() {
         return this.dashboardDescription;
     }
@@ -46,6 +54,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardName")
     private @Nullable Output<String> dashboardName;
 
+    /**
+     * @return A friendly name for the dashboard.
+     * 
+     */
     public Optional<Output<String>> dashboardName() {
         return Optional.ofNullable(this.dashboardName);
     }
@@ -57,6 +69,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return The ID of the project in which to create the dashboard.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -68,6 +84,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DashboardTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the dashboard.
+     * 
+     */
     public Optional<Output<List<DashboardTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,51 +120,117 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dashboardDefinition The dashboard definition specified in a JSON literal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardDefinition(Output<String> dashboardDefinition) {
             $.dashboardDefinition = dashboardDefinition;
             return this;
         }
 
+        /**
+         * @param dashboardDefinition The dashboard definition specified in a JSON literal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardDefinition(String dashboardDefinition) {
             return dashboardDefinition(Output.of(dashboardDefinition));
         }
 
+        /**
+         * @param dashboardDescription A description for the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardDescription(Output<String> dashboardDescription) {
             $.dashboardDescription = dashboardDescription;
             return this;
         }
 
+        /**
+         * @param dashboardDescription A description for the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardDescription(String dashboardDescription) {
             return dashboardDescription(Output.of(dashboardDescription));
         }
 
+        /**
+         * @param dashboardName A friendly name for the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardName(@Nullable Output<String> dashboardName) {
             $.dashboardName = dashboardName;
             return this;
         }
 
+        /**
+         * @param dashboardName A friendly name for the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardName(String dashboardName) {
             return dashboardName(Output.of(dashboardName));
         }
 
+        /**
+         * @param projectId The ID of the project in which to create the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The ID of the project in which to create the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DashboardTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DashboardTagArgs... tags) {
             return tags(List.of(tags));
         }

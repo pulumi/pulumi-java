@@ -27,6 +27,10 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Determines whether the object is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="expires")
     private @Nullable Output<Integer> expires;
 
+    /**
+     * @return Expiry date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Optional<Output<Integer>> expires() {
         return Optional.ofNullable(this.expires);
     }
@@ -49,6 +57,10 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="notBefore")
     private @Nullable Output<Integer> notBefore;
 
+    /**
+     * @return Not before date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Optional<Output<Integer>> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
@@ -79,29 +91,65 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
             $ = new SecretAttributesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Determines whether the object is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Determines whether the object is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param expires Expiry date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expires(@Nullable Output<Integer> expires) {
             $.expires = expires;
             return this;
         }
 
+        /**
+         * @param expires Expiry date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expires(Integer expires) {
             return expires(Output.of(expires));
         }
 
+        /**
+         * @param notBefore Not before date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(@Nullable Output<Integer> notBefore) {
             $.notBefore = notBefore;
             return this;
         }
 
+        /**
+         * @param notBefore Not before date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(Integer notBefore) {
             return notBefore(Output.of(notBefore));
         }

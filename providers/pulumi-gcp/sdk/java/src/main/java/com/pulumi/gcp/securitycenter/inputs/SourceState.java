@@ -22,6 +22,10 @@ public final class SourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the source (max of 1024 characters).
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,14 @@ public final class SourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The source’s display name. A source’s display name must be unique
+     * amongst its siblings, for example, two sources with the same parent
+     * can&#39;t share the same display name. The display name must start and end
+     * with a letter or digit, may contain letters, digits, spaces, hyphens,
+     * and underscores, and can be no longer than 32 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +60,10 @@ public final class SourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of this source, in the format &#39;organizations/{{organization}}/sources/{{source}}&#39;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +76,11 @@ public final class SourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="organization")
     private @Nullable Output<String> organization;
 
+    /**
+     * @return The organization whose Cloud Security Command Center the Source
+     * lives in.
+     * 
+     */
     public Optional<Output<String>> organization() {
         return Optional.ofNullable(this.organization);
     }
@@ -91,38 +112,96 @@ public final class SourceState extends com.pulumi.resources.ResourceArgs {
             $ = new SourceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the source (max of 1024 characters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the source (max of 1024 characters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The source’s display name. A source’s display name must be unique
+         * amongst its siblings, for example, two sources with the same parent
+         * can&#39;t share the same display name. The display name must start and end
+         * with a letter or digit, may contain letters, digits, spaces, hyphens,
+         * and underscores, and can be no longer than 32 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The source’s display name. A source’s display name must be unique
+         * amongst its siblings, for example, two sources with the same parent
+         * can&#39;t share the same display name. The display name must start and end
+         * with a letter or digit, may contain letters, digits, spaces, hyphens,
+         * and underscores, and can be no longer than 32 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name The resource name of this source, in the format &#39;organizations/{{organization}}/sources/{{source}}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of this source, in the format &#39;organizations/{{organization}}/sources/{{source}}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param organization The organization whose Cloud Security Command Center the Source
+         * lives in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(@Nullable Output<String> organization) {
             $.organization = organization;
             return this;
         }
 
+        /**
+         * @param organization The organization whose Cloud Security Command Center the Source
+         * lives in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(String organization) {
             return organization(Output.of(organization));
         }

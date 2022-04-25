@@ -26,6 +26,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return The SKU capacity.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family")
     private @Nullable String family;
 
+    /**
+     * @return The SKU family.
+     * 
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
@@ -48,6 +56,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="model")
     private @Nullable String model;
 
+    /**
+     * @return The SKU model.
+     * 
+     */
     public Optional<String> model() {
         return Optional.ofNullable(this.model);
     }
@@ -59,6 +71,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The SKU name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -70,6 +86,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return The SKU size.
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -81,6 +101,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The SKU tier.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -114,31 +138,67 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The SKU capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param family The SKU family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param model The SKU model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable String model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param name The SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param size The SKU size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param tier The SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

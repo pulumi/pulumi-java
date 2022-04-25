@@ -49,6 +49,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataset", required=true)
     private Output<DatasetReferenceArgs> dataset;
 
+    /**
+     * @return Delete activity dataset reference.
+     * 
+     */
     public Output<DatasetReferenceArgs> dataset() {
         return this.dataset;
     }
@@ -60,6 +64,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -71,6 +79,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -82,6 +94,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableLogging")
     private @Nullable Output<Object> enableLogging;
 
+    /**
+     * @return Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> enableLogging() {
         return Optional.ofNullable(this.enableLogging);
     }
@@ -93,6 +109,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="linkedServiceName")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -104,6 +124,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logStorageSettings")
     private @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
 
+    /**
+     * @return Log storage settings customer need to provide when enableLogging is true.
+     * 
+     */
     public Optional<Output<LogStorageSettingsArgs>> logStorageSettings() {
         return Optional.ofNullable(this.logStorageSettings);
     }
@@ -115,6 +139,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Integer> maxConcurrentConnections;
 
+    /**
+     * @return The max concurrent connections to connect data source at the same time.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -126,6 +154,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -137,6 +169,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policy")
     private @Nullable Output<ActivityPolicyArgs> policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<Output<ActivityPolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -148,6 +184,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="recursive")
     private @Nullable Output<Object> recursive;
 
+    /**
+     * @return If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> recursive() {
         return Optional.ofNullable(this.recursive);
     }
@@ -159,6 +199,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storeSettings")
     private @Nullable Output<Object> storeSettings;
 
+    /**
+     * @return Delete activity store settings.
+     * 
+     */
     public Optional<Output<Object>> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
@@ -171,6 +215,11 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Delete&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -182,6 +231,10 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -222,127 +275,297 @@ public final class DeleteActivityArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DeleteActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Delete activity dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(Output<DatasetReferenceArgs> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset Delete activity dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceArgs dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableLogging Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogging(@Nullable Output<Object> enableLogging) {
             $.enableLogging = enableLogging;
             return this;
         }
 
+        /**
+         * @param enableLogging Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLogging(Object enableLogging) {
             return enableLogging(Output.of(enableLogging));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param logStorageSettings Log storage settings customer need to provide when enableLogging is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageSettings(@Nullable Output<LogStorageSettingsArgs> logStorageSettings) {
             $.logStorageSettings = logStorageSettings;
             return this;
         }
 
+        /**
+         * @param logStorageSettings Log storage settings customer need to provide when enableLogging is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageSettings(LogStorageSettingsArgs logStorageSettings) {
             return logStorageSettings(Output.of(logStorageSettings));
         }
 
+        /**
+         * @param maxConcurrentConnections The max concurrent connections to connect data source at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Integer> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The max concurrent connections to connect data source at the same time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Integer maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ActivityPolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param recursive If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursive(@Nullable Output<Object> recursive) {
             $.recursive = recursive;
             return this;
         }
 
+        /**
+         * @param recursive If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursive(Object recursive) {
             return recursive(Output.of(recursive));
         }
 
+        /**
+         * @param storeSettings Delete activity store settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeSettings(@Nullable Output<Object> storeSettings) {
             $.storeSettings = storeSettings;
             return this;
         }
 
+        /**
+         * @param storeSettings Delete activity store settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeSettings(Object storeSettings) {
             return storeSettings(Output.of(storeSettings));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Delete&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Delete&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

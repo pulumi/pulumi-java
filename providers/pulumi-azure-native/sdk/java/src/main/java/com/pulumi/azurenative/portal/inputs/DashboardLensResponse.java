@@ -30,6 +30,10 @@ public final class DashboardLensResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metadata")
     private @Nullable Map<String,Object> metadata;
 
+    /**
+     * @return The dashboard len&#39;s metadata.
+     * 
+     */
     public Optional<Map<String,Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -41,6 +45,10 @@ public final class DashboardLensResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="order", required=true)
     private Integer order;
 
+    /**
+     * @return The lens order.
+     * 
+     */
     public Integer order() {
         return this.order;
     }
@@ -52,6 +60,10 @@ public final class DashboardLensResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="parts", required=true)
     private List<DashboardPartsResponse> parts;
 
+    /**
+     * @return The dashboard parts.
+     * 
+     */
     public List<DashboardPartsResponse> parts() {
         return this.parts;
     }
@@ -82,21 +94,45 @@ public final class DashboardLensResponse extends com.pulumi.resources.InvokeArgs
             $ = new DashboardLensResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata The dashboard len&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Map<String,Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param order The lens order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param parts The dashboard parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(List<DashboardPartsResponse> parts) {
             $.parts = parts;
             return this;
         }
 
+        /**
+         * @param parts The dashboard parts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parts(DashboardPartsResponse... parts) {
             return parts(List.of(parts));
         }

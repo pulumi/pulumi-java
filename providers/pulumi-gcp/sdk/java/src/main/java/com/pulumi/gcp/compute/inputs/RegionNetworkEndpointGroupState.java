@@ -27,6 +27,12 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="appEngine")
     private @Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
 
+    /**
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionNetworkEndpointGroupAppEngineGetArgs>> appEngine() {
         return Optional.ofNullable(this.appEngine);
     }
@@ -40,6 +46,12 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="cloudFunction")
     private @Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
 
+    /**
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionNetworkEndpointGroupCloudFunctionGetArgs>> cloudFunction() {
         return Optional.ofNullable(this.cloudFunction);
     }
@@ -53,6 +65,12 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="cloudRun")
     private @Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
 
+    /**
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionNetworkEndpointGroupCloudRunGetArgs>> cloudRun() {
         return Optional.ofNullable(this.cloudRun);
     }
@@ -65,6 +83,11 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -82,6 +105,16 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +128,12 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="networkEndpointType")
     private @Nullable Output<String> networkEndpointType;
 
+    /**
+     * @return Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
+     * Default value is `SERVERLESS`.
+     * Possible values are `SERVERLESS`.
+     * 
+     */
     public Optional<Output<String>> networkEndpointType() {
         return Optional.ofNullable(this.networkEndpointType);
     }
@@ -107,6 +146,11 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -118,6 +162,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return A reference to the region where the Serverless NEGs Reside.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -129,6 +177,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -165,83 +217,223 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
             $ = new RegionNetworkEndpointGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appEngine Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngine(@Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine) {
             $.appEngine = appEngine;
             return this;
         }
 
+        /**
+         * @param appEngine Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngine(RegionNetworkEndpointGroupAppEngineGetArgs appEngine) {
             return appEngine(Output.of(appEngine));
         }
 
+        /**
+         * @param cloudFunction Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudFunction(@Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction) {
             $.cloudFunction = cloudFunction;
             return this;
         }
 
+        /**
+         * @param cloudFunction Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudFunction(RegionNetworkEndpointGroupCloudFunctionGetArgs cloudFunction) {
             return cloudFunction(Output.of(cloudFunction));
         }
 
+        /**
+         * @param cloudRun Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRun(@Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun) {
             $.cloudRun = cloudRun;
             return this;
         }
 
+        /**
+         * @param cloudRun Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRun(RegionNetworkEndpointGroupCloudRunGetArgs cloudRun) {
             return cloudRun(Output.of(cloudRun));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkEndpointType Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
+         * Default value is `SERVERLESS`.
+         * Possible values are `SERVERLESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
             $.networkEndpointType = networkEndpointType;
             return this;
         }
 
+        /**
+         * @param networkEndpointType Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
+         * Default value is `SERVERLESS`.
+         * Possible values are `SERVERLESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkEndpointType(String networkEndpointType) {
             return networkEndpointType(Output.of(networkEndpointType));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region A reference to the region where the Serverless NEGs Reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region A reference to the region where the Serverless NEGs Reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }

@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolybaseSettingsResponse {
     /**
-     * Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
     private final @Nullable Object rejectSampleValue;
     /**
-     * Reject type.
+     * @return Reject type.
      * 
      */
     private final @Nullable String rejectType;
     /**
-     * Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
+     * @return Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
      * 
      */
     private final @Nullable Object rejectValue;
     /**
-     * Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object useTypeDefault;
@@ -46,30 +46,30 @@ public final class PolybaseSettingsResponse {
     }
 
     /**
-     * Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> rejectSampleValue() {
         return Optional.ofNullable(this.rejectSampleValue);
     }
     /**
-     * Reject type.
+     * @return Reject type.
      * 
-    */
+     */
     public Optional<String> rejectType() {
         return Optional.ofNullable(this.rejectType);
     }
     /**
-     * Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
+     * @return Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> rejectValue() {
         return Optional.ofNullable(this.rejectValue);
     }
     /**
-     * Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> useTypeDefault() {
         return Optional.ofNullable(this.useTypeDefault);
     }

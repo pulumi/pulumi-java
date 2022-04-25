@@ -27,6 +27,10 @@ public final class ResourceMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name is the name of the resource in question.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class ResourceMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="targetAverageUtilization")
     private @Nullable Output<Integer> targetAverageUtilization;
 
+    /**
+     * @return targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+     * 
+     */
     public Optional<Output<Integer>> targetAverageUtilization() {
         return Optional.ofNullable(this.targetAverageUtilization);
     }
@@ -49,6 +57,10 @@ public final class ResourceMetricSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="targetAverageValue")
     private @Nullable Output<String> targetAverageValue;
 
+    /**
+     * @return targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type.
+     * 
+     */
     public Optional<Output<String>> targetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }
@@ -79,29 +91,65 @@ public final class ResourceMetricSourceArgs extends com.pulumi.resources.Resourc
             $ = new ResourceMetricSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name name is the name of the resource in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name is the name of the resource in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param targetAverageUtilization targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAverageUtilization(@Nullable Output<Integer> targetAverageUtilization) {
             $.targetAverageUtilization = targetAverageUtilization;
             return this;
         }
 
+        /**
+         * @param targetAverageUtilization targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAverageUtilization(Integer targetAverageUtilization) {
             return targetAverageUtilization(Output.of(targetAverageUtilization));
         }
 
+        /**
+         * @param targetAverageValue targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
             $.targetAverageValue = targetAverageValue;
             return this;
         }
 
+        /**
+         * @param targetAverageValue targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAverageValue(String targetAverageValue) {
             return targetAverageValue(Output.of(targetAverageValue));
         }

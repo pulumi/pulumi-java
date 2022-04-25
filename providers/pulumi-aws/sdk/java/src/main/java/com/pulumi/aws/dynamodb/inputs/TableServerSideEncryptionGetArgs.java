@@ -23,6 +23,10 @@ public final class TableServerSideEncryptionGetArgs extends com.pulumi.resources
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether ttl is enabled (true) or disabled (false).
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -35,6 +39,11 @@ public final class TableServerSideEncryptionGetArgs extends com.pulumi.resources
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return The ARN of the CMK that should be used for the AWS KMS encryption.
+     * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -64,20 +73,46 @@ public final class TableServerSideEncryptionGetArgs extends com.pulumi.resources
             $ = new TableServerSideEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Indicates whether ttl is enabled (true) or disabled (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether ttl is enabled (true) or disabled (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param kmsKeyArn The ARN of the CMK that should be used for the AWS KMS encryption.
+         * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn The ARN of the CMK that should be used for the AWS KMS encryption.
+         * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }

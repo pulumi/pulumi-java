@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MongoDbCursorMethodsPropertiesResponse {
     /**
-     * Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
+     * @return Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object limit;
     /**
-     * Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
+     * @return Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object project;
     /**
-     * Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
+     * @return Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object skip;
     /**
-     * Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+     * @return Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object sort;
@@ -45,30 +45,30 @@ public final class MongoDbCursorMethodsPropertiesResponse {
     }
 
     /**
-     * Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
+     * @return Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> limit() {
         return Optional.ofNullable(this.limit);
     }
     /**
-     * Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
+     * @return Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> project() {
         return Optional.ofNullable(this.project);
     }
     /**
-     * Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
+     * @return Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> skip() {
         return Optional.ofNullable(this.skip);
     }
     /**
-     * Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+     * @return Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> sort() {
         return Optional.ofNullable(this.sort);
     }

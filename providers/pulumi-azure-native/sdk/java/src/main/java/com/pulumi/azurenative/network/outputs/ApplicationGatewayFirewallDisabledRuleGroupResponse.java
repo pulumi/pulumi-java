@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
     /**
-     * The name of the rule group that will be disabled.
+     * @return The name of the rule group that will be disabled.
      * 
      */
     private final String ruleGroupName;
     /**
-     * The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+     * @return The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
      * 
      */
     private final @Nullable List<Integer> rules;
@@ -32,16 +32,16 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
     }
 
     /**
-     * The name of the rule group that will be disabled.
+     * @return The name of the rule group that will be disabled.
      * 
-    */
+     */
     public String ruleGroupName() {
         return this.ruleGroupName;
     }
     /**
-     * The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+     * @return The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
      * 
-    */
+     */
     public List<Integer> rules() {
         return this.rules == null ? List.of() : this.rules;
     }

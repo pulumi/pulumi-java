@@ -19,6 +19,10 @@ public final class GetVaultArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVaultArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -59,11 +67,23 @@ public final class GetVaultArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVaultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

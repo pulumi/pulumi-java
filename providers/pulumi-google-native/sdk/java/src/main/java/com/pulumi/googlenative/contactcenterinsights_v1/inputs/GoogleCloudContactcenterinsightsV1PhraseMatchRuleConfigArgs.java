@@ -26,6 +26,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
     @Import(name="exactMatchConfig")
     private @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
+    /**
+     * @return The configuration for the exact match rule.
+     * 
+     */
     public Optional<Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs>> exactMatchConfig() {
         return Optional.ofNullable(this.exactMatchConfig);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
             $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exactMatchConfig The configuration for the exact match rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactMatchConfig(@Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
             $.exactMatchConfig = exactMatchConfig;
             return this;
         }
 
+        /**
+         * @param exactMatchConfig The configuration for the exact match rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactMatchConfig(GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs exactMatchConfig) {
             return exactMatchConfig(Output.of(exactMatchConfig));
         }

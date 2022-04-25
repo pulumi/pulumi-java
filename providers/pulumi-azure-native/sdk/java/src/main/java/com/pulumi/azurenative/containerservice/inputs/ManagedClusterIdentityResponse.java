@@ -27,6 +27,10 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of the system assigned identity which is used by master components.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -38,6 +42,10 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant id of the system assigned identity which is used by master components.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -49,6 +57,10 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of identity used for the managed cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type &#39;None&#39; will not use MSI for the managed cluster, service principal will be used instead.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -60,6 +72,10 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
+    /**
+     * @return The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Map<String,ManagedClusterIdentityResponseUserAssignedIdentities>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -91,21 +107,45 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
             $ = new ManagedClusterIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of the system assigned identity which is used by master components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id of the system assigned identity which is used by master components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the managed cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type &#39;None&#39; will not use MSI for the managed cluster, service principal will be used instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

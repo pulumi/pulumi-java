@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudChannelV1TrialSettingsResponse {
     /**
-     * Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
+     * @return Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
      * 
      */
     private final String endTime;
     /**
-     * Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
+     * @return Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
      * 
      */
     private final Boolean trial;
@@ -30,16 +30,16 @@ public final class GoogleCloudChannelV1TrialSettingsResponse {
     }
 
     /**
-     * Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
+     * @return Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
+     * @return Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
      * 
-    */
+     */
     public Boolean trial() {
         return this.trial;
     }

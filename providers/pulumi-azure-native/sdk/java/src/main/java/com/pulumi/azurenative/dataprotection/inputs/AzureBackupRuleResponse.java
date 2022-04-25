@@ -31,6 +31,10 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="backupParameters")
     private @Nullable AzureBackupParamsResponse backupParameters;
 
+    /**
+     * @return BackupParameters base
+     * 
+     */
     public Optional<AzureBackupParamsResponse> backupParameters() {
         return Optional.ofNullable(this.backupParameters);
     }
@@ -42,6 +46,10 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dataStore", required=true)
     private DataStoreInfoBaseResponse dataStore;
 
+    /**
+     * @return DataStoreInfo base
+     * 
+     */
     public DataStoreInfoBaseResponse dataStore() {
         return this.dataStore;
     }
@@ -60,6 +68,11 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return
+     * Expected value is &#39;AzureBackupRule&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -71,6 +84,10 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="trigger", required=true)
     private Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
 
+    /**
+     * @return Trigger context
+     * 
+     */
     public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger() {
         return this.trigger;
     }
@@ -103,11 +120,23 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
             $ = new AzureBackupRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupParameters BackupParameters base
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupParameters(@Nullable AzureBackupParamsResponse backupParameters) {
             $.backupParameters = backupParameters;
             return this;
         }
 
+        /**
+         * @param dataStore DataStoreInfo base
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStore(DataStoreInfoBaseResponse dataStore) {
             $.dataStore = dataStore;
             return this;
@@ -118,20 +147,45 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
             return this;
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;AzureBackupRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param trigger Trigger context
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
             $.trigger = trigger;
             return this;
         }
 
+        /**
+         * @param trigger Trigger context
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(AdhocBasedTriggerContextResponse trigger) {
             return trigger(Either.ofLeft(trigger));
         }
 
+        /**
+         * @param trigger Trigger context
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(ScheduleBasedTriggerContextResponse trigger) {
             return trigger(Either.ofRight(trigger));
         }

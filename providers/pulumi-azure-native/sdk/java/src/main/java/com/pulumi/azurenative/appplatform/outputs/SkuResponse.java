@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuResponse {
     /**
-     * Current capacity of the target resource
+     * @return Current capacity of the target resource
      * 
      */
     private final @Nullable Integer capacity;
     /**
-     * Name of the Sku
+     * @return Name of the Sku
      * 
      */
     private final @Nullable String name;
     /**
-     * Tier of the Sku
+     * @return Tier of the Sku
      * 
      */
     private final @Nullable String tier;
@@ -39,23 +39,23 @@ public final class SkuResponse {
     }
 
     /**
-     * Current capacity of the target resource
+     * @return Current capacity of the target resource
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Name of the Sku
+     * @return Name of the Sku
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tier of the Sku
+     * @return Tier of the Sku
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse extends com.pulu
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse extends com.pulu
             $ = new GooglePrivacyDlpV2TransientCryptoKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

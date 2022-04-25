@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends com.pulumi.resource
     @Import(name="conditions")
     private @Nullable Output<GooglePrivacyDlpV2ConditionsArgs> conditions;
 
+    /**
+     * @return Conditions to apply to the expression.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ConditionsArgs>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends com.pulumi.resource
     @Import(name="logicalOperator")
     private @Nullable Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator;
 
+    /**
+     * @return The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ExpressionsLogicalOperator>> logicalOperator() {
         return Optional.ofNullable(this.logicalOperator);
     }
@@ -67,20 +75,44 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends com.pulumi.resource
             $ = new GooglePrivacyDlpV2ExpressionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Conditions to apply to the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<GooglePrivacyDlpV2ConditionsArgs> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Conditions to apply to the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(GooglePrivacyDlpV2ConditionsArgs conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param logicalOperator The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalOperator(@Nullable Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator) {
             $.logicalOperator = logicalOperator;
             return this;
         }
 
+        /**
+         * @param logicalOperator The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalOperator(GooglePrivacyDlpV2ExpressionsLogicalOperator logicalOperator) {
             return logicalOperator(Output.of(logicalOperator));
         }

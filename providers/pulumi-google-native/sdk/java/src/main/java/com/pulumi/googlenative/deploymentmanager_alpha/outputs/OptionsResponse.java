@@ -14,22 +14,22 @@ import java.util.Objects;
 @CustomType
 public final class OptionsResponse {
     /**
-     * Options regarding how to thread async requests.
+     * @return Options regarding how to thread async requests.
      * 
      */
     private final List<AsyncOptionsResponse> asyncOptions;
     /**
-     * The mappings that apply for requests.
+     * @return The mappings that apply for requests.
      * 
      */
     private final List<InputMappingResponse> inputMappings;
     /**
-     * The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
+     * @return The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
      * 
      */
     private final String nameProperty;
     /**
-     * Options for how to validate and process properties on a resource.
+     * @return Options for how to validate and process properties on a resource.
      * 
      */
     private final ValidationOptionsResponse validationOptions;
@@ -47,30 +47,30 @@ public final class OptionsResponse {
     }
 
     /**
-     * Options regarding how to thread async requests.
+     * @return Options regarding how to thread async requests.
      * 
-    */
+     */
     public List<AsyncOptionsResponse> asyncOptions() {
         return this.asyncOptions;
     }
     /**
-     * The mappings that apply for requests.
+     * @return The mappings that apply for requests.
      * 
-    */
+     */
     public List<InputMappingResponse> inputMappings() {
         return this.inputMappings;
     }
     /**
-     * The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
+     * @return The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
      * 
-    */
+     */
     public String nameProperty() {
         return this.nameProperty;
     }
     /**
-     * Options for how to validate and process properties on a resource.
+     * @return Options for how to validate and process properties on a resource.
      * 
-    */
+     */
     public ValidationOptionsResponse validationOptions() {
         return this.validationOptions;
     }

@@ -26,6 +26,10 @@ public final class PodConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastProbeTime")
     private @Nullable Output<String> lastProbeTime;
 
+    /**
+     * @return Last time we probed the condition.
+     * 
+     */
     public Optional<Output<String>> lastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
@@ -37,6 +41,10 @@ public final class PodConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastTransitionTime")
     private @Nullable Output<String> lastTransitionTime;
 
+    /**
+     * @return Last time the condition transitioned from one status to another.
+     * 
+     */
     public Optional<Output<String>> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
@@ -48,6 +56,10 @@ public final class PodConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Human-readable message indicating details about last transition.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -59,6 +71,10 @@ public final class PodConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -70,6 +86,10 @@ public final class PodConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
     private Output<String> status;
 
+    /**
+     * @return Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
@@ -87,6 +107,16 @@ public final class PodConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+     * 
+     * Possible enum values:
+     *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
+     *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
+     *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
+     *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -120,56 +150,140 @@ public final class PodConditionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PodConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastProbeTime Last time we probed the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastProbeTime(@Nullable Output<String> lastProbeTime) {
             $.lastProbeTime = lastProbeTime;
             return this;
         }
 
+        /**
+         * @param lastProbeTime Last time we probed the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastProbeTime(String lastProbeTime) {
             return lastProbeTime(Output.of(lastProbeTime));
         }
 
+        /**
+         * @param lastTransitionTime Last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
             $.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
+        /**
+         * @param lastTransitionTime Last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(String lastTransitionTime) {
             return lastTransitionTime(Output.of(lastTransitionTime));
         }
 
+        /**
+         * @param message Human-readable message indicating details about last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Human-readable message indicating details about last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param reason Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
 
+        /**
+         * @param status Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param type Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+         * 
+         * Possible enum values:
+         *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
+         *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
+         *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
+         *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
+         * 
+         * Possible enum values:
+         *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
+         *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
+         *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
+         *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

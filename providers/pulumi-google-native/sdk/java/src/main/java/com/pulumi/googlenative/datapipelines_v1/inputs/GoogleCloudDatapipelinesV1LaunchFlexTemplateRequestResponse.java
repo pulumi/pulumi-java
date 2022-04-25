@@ -25,6 +25,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
     @Import(name="launchParameter", required=true)
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter;
 
+    /**
+     * @return Parameter to launch a job from a Flex Template.
+     * 
+     */
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter() {
         return this.launchParameter;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The ID of the Cloud Platform project that the job belongs to.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
     @Import(name="validateOnly", required=true)
     private Boolean validateOnly;
 
+    /**
+     * @return If true, the request is validated but not actually executed. Defaults to false.
+     * 
+     */
     public Boolean validateOnly() {
         return this.validateOnly;
     }
@@ -89,21 +105,45 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
             $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launchParameter Parameter to launch a job from a Flex Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter) {
             $.launchParameter = launchParameter;
             return this;
         }
 
+        /**
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param project The ID of the Cloud Platform project that the job belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param validateOnly If true, the request is validated but not actually executed. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(Boolean validateOnly) {
             $.validateOnly = validateOnly;
             return this;

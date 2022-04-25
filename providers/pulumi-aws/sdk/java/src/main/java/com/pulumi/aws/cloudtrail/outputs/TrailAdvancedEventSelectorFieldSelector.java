@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrailAdvancedEventSelectorFieldSelector {
     /**
-     * A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+     * @return A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
      * 
      */
     private final @Nullable List<String> endsWiths;
     /**
-     * A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+     * @return A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
      * 
      */
     private final @Nullable List<String> equals;
     /**
-     * Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+     * @return Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
      * 
      */
     private final String field;
     /**
-     * A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+     * @return A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
      * 
      */
     private final @Nullable List<String> notEndsWiths;
     /**
-     * A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+     * @return A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
      * 
      */
     private final @Nullable List<String> notEquals;
     /**
-     * A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+     * @return A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
      * 
      */
     private final @Nullable List<String> notStartsWiths;
     /**
-     * A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+     * @return A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
      * 
      */
     private final @Nullable List<String> startsWiths;
@@ -66,51 +66,51 @@ public final class TrailAdvancedEventSelectorFieldSelector {
     }
 
     /**
-     * A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+     * @return A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
      * 
-    */
+     */
     public List<String> endsWiths() {
         return this.endsWiths == null ? List.of() : this.endsWiths;
     }
     /**
-     * A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+     * @return A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
      * 
-    */
+     */
     public List<String> equals_() {
         return this.equals == null ? List.of() : this.equals;
     }
     /**
-     * Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+     * @return Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
      * 
-    */
+     */
     public String field() {
         return this.field;
     }
     /**
-     * A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+     * @return A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
      * 
-    */
+     */
     public List<String> notEndsWiths() {
         return this.notEndsWiths == null ? List.of() : this.notEndsWiths;
     }
     /**
-     * A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+     * @return A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
      * 
-    */
+     */
     public List<String> notEquals() {
         return this.notEquals == null ? List.of() : this.notEquals;
     }
     /**
-     * A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+     * @return A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
      * 
-    */
+     */
     public List<String> notStartsWiths() {
         return this.notStartsWiths == null ? List.of() : this.notStartsWiths;
     }
     /**
-     * A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+     * @return A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
      * 
-    */
+     */
     public List<String> startsWiths() {
         return this.startsWiths == null ? List.of() : this.startsWiths;
     }

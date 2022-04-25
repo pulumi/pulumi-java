@@ -29,6 +29,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
     private @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
 
+    /**
+     * @return The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
+     * 
+     */
     public Optional<Output<Integer>> applicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
@@ -41,6 +45,11 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;HyperVReplicaAzure&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -52,6 +61,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
     @Import(name="onlineReplicationStartTime")
     private @Nullable Output<String> onlineReplicationStartTime;
 
+    /**
+     * @return The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
+     * 
+     */
     public Optional<Output<String>> onlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
@@ -63,6 +76,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
     @Import(name="recoveryPointHistoryDuration")
     private @Nullable Output<Integer> recoveryPointHistoryDuration;
 
+    /**
+     * @return The duration (in hours) to which point the recovery history needs to be maintained.
+     * 
+     */
     public Optional<Output<Integer>> recoveryPointHistoryDuration() {
         return Optional.ofNullable(this.recoveryPointHistoryDuration);
     }
@@ -74,6 +91,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
     @Import(name="replicationInterval")
     private @Nullable Output<Integer> replicationInterval;
 
+    /**
+     * @return The replication interval.
+     * 
+     */
     public Optional<Output<Integer>> replicationInterval() {
         return Optional.ofNullable(this.replicationInterval);
     }
@@ -85,6 +106,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
     @Import(name="storageAccounts")
     private @Nullable Output<List<String>> storageAccounts;
 
+    /**
+     * @return The list of storage accounts to which the VMs in the primary cloud can replicate to.
+     * 
+     */
     public Optional<Output<List<String>>> storageAccounts() {
         return Optional.ofNullable(this.storageAccounts);
     }
@@ -118,60 +143,140 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
             $ = new HyperVReplicaAzurePolicyInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationConsistentSnapshotFrequencyInHours The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours) {
             $.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
+        /**
+         * @param applicationConsistentSnapshotFrequencyInHours The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationConsistentSnapshotFrequencyInHours(Integer applicationConsistentSnapshotFrequencyInHours) {
             return applicationConsistentSnapshotFrequencyInHours(Output.of(applicationConsistentSnapshotFrequencyInHours));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;HyperVReplicaAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;HyperVReplicaAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param onlineReplicationStartTime The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlineReplicationStartTime(@Nullable Output<String> onlineReplicationStartTime) {
             $.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
+        /**
+         * @param onlineReplicationStartTime The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlineReplicationStartTime(String onlineReplicationStartTime) {
             return onlineReplicationStartTime(Output.of(onlineReplicationStartTime));
         }
 
+        /**
+         * @param recoveryPointHistoryDuration The duration (in hours) to which point the recovery history needs to be maintained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointHistoryDuration(@Nullable Output<Integer> recoveryPointHistoryDuration) {
             $.recoveryPointHistoryDuration = recoveryPointHistoryDuration;
             return this;
         }
 
+        /**
+         * @param recoveryPointHistoryDuration The duration (in hours) to which point the recovery history needs to be maintained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointHistoryDuration(Integer recoveryPointHistoryDuration) {
             return recoveryPointHistoryDuration(Output.of(recoveryPointHistoryDuration));
         }
 
+        /**
+         * @param replicationInterval The replication interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationInterval(@Nullable Output<Integer> replicationInterval) {
             $.replicationInterval = replicationInterval;
             return this;
         }
 
+        /**
+         * @param replicationInterval The replication interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationInterval(Integer replicationInterval) {
             return replicationInterval(Output.of(replicationInterval));
         }
 
+        /**
+         * @param storageAccounts The list of storage accounts to which the VMs in the primary cloud can replicate to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(@Nullable Output<List<String>> storageAccounts) {
             $.storageAccounts = storageAccounts;
             return this;
         }
 
+        /**
+         * @param storageAccounts The list of storage accounts to which the VMs in the primary cloud can replicate to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(List<String> storageAccounts) {
             return storageAccounts(Output.of(storageAccounts));
         }
 
+        /**
+         * @param storageAccounts The list of storage accounts to which the VMs in the primary cloud can replicate to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccounts(String... storageAccounts) {
             return storageAccounts(List.of(storageAccounts));
         }

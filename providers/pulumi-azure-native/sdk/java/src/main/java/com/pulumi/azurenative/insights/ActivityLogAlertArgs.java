@@ -28,6 +28,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="actions", required=true)
     private Output<ActionListArgs> actions;
 
+    /**
+     * @return The actions that will activate when the condition is met.
+     * 
+     */
     public Output<ActionListArgs> actions() {
         return this.actions;
     }
@@ -39,6 +43,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="activityLogAlertName")
     private @Nullable Output<String> activityLogAlertName;
 
+    /**
+     * @return The name of the Activity Log Alert rule.
+     * 
+     */
     public Optional<Output<String>> activityLogAlertName() {
         return Optional.ofNullable(this.activityLogAlertName);
     }
@@ -50,6 +58,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="condition", required=true)
     private Output<AlertRuleAllOfConditionArgs> condition;
 
+    /**
+     * @return The condition that will cause this alert to activate.
+     * 
+     */
     public Output<AlertRuleAllOfConditionArgs> condition() {
         return this.condition;
     }
@@ -61,6 +73,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of this Activity Log Alert rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -72,6 +88,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -83,6 +103,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -94,6 +118,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -105,6 +133,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scopes", required=true)
     private Output<List<String>> scopes;
 
+    /**
+     * @return A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+     * 
+     */
     public Output<List<String>> scopes() {
         return this.scopes;
     }
@@ -116,6 +148,10 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,87 +188,201 @@ public final class ActivityLogAlertArgs extends com.pulumi.resources.ResourceArg
             $ = new ActivityLogAlertArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The actions that will activate when the condition is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<ActionListArgs> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The actions that will activate when the condition is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(ActionListArgs actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param activityLogAlertName The name of the Activity Log Alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityLogAlertName(@Nullable Output<String> activityLogAlertName) {
             $.activityLogAlertName = activityLogAlertName;
             return this;
         }
 
+        /**
+         * @param activityLogAlertName The name of the Activity Log Alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityLogAlertName(String activityLogAlertName) {
             return activityLogAlertName(Output.of(activityLogAlertName));
         }
 
+        /**
+         * @param condition The condition that will cause this alert to activate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(Output<AlertRuleAllOfConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The condition that will cause this alert to activate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(AlertRuleAllOfConditionArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param description A description of this Activity Log Alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of this Activity Log Alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enabled Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param location The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scopes A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(Output<List<String>> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param scopes A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

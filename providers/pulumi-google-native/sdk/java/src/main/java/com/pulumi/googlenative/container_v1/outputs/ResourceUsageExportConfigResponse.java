@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class ResourceUsageExportConfigResponse {
     /**
-     * Configuration to use BigQuery as usage export destination.
+     * @return Configuration to use BigQuery as usage export destination.
      * 
      */
     private final BigQueryDestinationResponse bigqueryDestination;
     /**
-     * Configuration to enable resource consumption metering.
+     * @return Configuration to enable resource consumption metering.
      * 
      */
     private final ConsumptionMeteringConfigResponse consumptionMeteringConfig;
     /**
-     * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+     * @return Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
      * 
      */
     private final Boolean enableNetworkEgressMetering;
@@ -38,23 +38,23 @@ public final class ResourceUsageExportConfigResponse {
     }
 
     /**
-     * Configuration to use BigQuery as usage export destination.
+     * @return Configuration to use BigQuery as usage export destination.
      * 
-    */
+     */
     public BigQueryDestinationResponse bigqueryDestination() {
         return this.bigqueryDestination;
     }
     /**
-     * Configuration to enable resource consumption metering.
+     * @return Configuration to enable resource consumption metering.
      * 
-    */
+     */
     public ConsumptionMeteringConfigResponse consumptionMeteringConfig() {
         return this.consumptionMeteringConfig;
     }
     /**
-     * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+     * @return Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
      * 
-    */
+     */
     public Boolean enableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }

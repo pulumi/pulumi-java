@@ -24,6 +24,10 @@ public final class UserDefinedResourcesPropertiesResponse extends com.pulumi.res
     @Import(name="query", required=true)
     private String query;
 
+    /**
+     * @return Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
+     * 
+     */
     public String query() {
         return this.query;
     }
@@ -35,6 +39,10 @@ public final class UserDefinedResourcesPropertiesResponse extends com.pulumi.res
     @Import(name="querySubscriptions", required=true)
     private List<String> querySubscriptions;
 
+    /**
+     * @return List of Azure subscription ids on which the user defined resources query should be executed.
+     * 
+     */
     public List<String> querySubscriptions() {
         return this.querySubscriptions;
     }
@@ -64,16 +72,34 @@ public final class UserDefinedResourcesPropertiesResponse extends com.pulumi.res
             $ = new UserDefinedResourcesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param query Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param querySubscriptions List of Azure subscription ids on which the user defined resources query should be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder querySubscriptions(List<String> querySubscriptions) {
             $.querySubscriptions = querySubscriptions;
             return this;
         }
 
+        /**
+         * @param querySubscriptions List of Azure subscription ids on which the user defined resources query should be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder querySubscriptions(String... querySubscriptions) {
             return querySubscriptions(List.of(querySubscriptions));
         }

@@ -26,6 +26,10 @@ public final class BuildpackBindingPropertiesResponse extends com.pulumi.resourc
     @Import(name="bindingType")
     private @Nullable String bindingType;
 
+    /**
+     * @return Buildpack Binding Type
+     * 
+     */
     public Optional<String> bindingType() {
         return Optional.ofNullable(this.bindingType);
     }
@@ -37,6 +41,10 @@ public final class BuildpackBindingPropertiesResponse extends com.pulumi.resourc
     @Import(name="launchProperties")
     private @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
 
+    /**
+     * @return The object describes the buildpack binding launch properties
+     * 
+     */
     public Optional<BuildpackBindingLaunchPropertiesResponse> launchProperties() {
         return Optional.ofNullable(this.launchProperties);
     }
@@ -48,6 +56,10 @@ public final class BuildpackBindingPropertiesResponse extends com.pulumi.resourc
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the Buildpack Binding.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -78,16 +90,34 @@ public final class BuildpackBindingPropertiesResponse extends com.pulumi.resourc
             $ = new BuildpackBindingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindingType Buildpack Binding Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingType(@Nullable String bindingType) {
             $.bindingType = bindingType;
             return this;
         }
 
+        /**
+         * @param launchProperties The object describes the buildpack binding launch properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesResponse launchProperties) {
             $.launchProperties = launchProperties;
             return this;
         }
 
+        /**
+         * @param provisioningState State of the Buildpack Binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

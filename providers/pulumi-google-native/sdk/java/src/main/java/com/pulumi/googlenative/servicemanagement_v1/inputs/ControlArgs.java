@@ -26,6 +26,10 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environment")
     private @Nullable Output<String> environment;
 
+    /**
+     * @return The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
+     * 
+     */
     public Optional<Output<String>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -54,11 +58,23 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environment The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }

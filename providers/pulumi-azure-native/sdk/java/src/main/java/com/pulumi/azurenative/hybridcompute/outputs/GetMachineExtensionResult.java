@@ -16,67 +16,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMachineExtensionResult {
     /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
     private final @Nullable Boolean autoUpgradeMinorVersion;
     /**
-     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
     private final @Nullable String forceUpdateTag;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The machine extension instance view.
+     * @return The machine extension instance view.
      * 
      */
     private final @Nullable MachineExtensionPropertiesResponseInstanceView instanceView;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
     private final @Nullable Object protectedSettings;
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * The name of the extension handler publisher.
+     * @return The name of the extension handler publisher.
      * 
      */
     private final @Nullable String publisher;
     /**
-     * Json formatted public settings for the extension.
+     * @return Json formatted public settings for the extension.
      * 
      */
     private final @Nullable Object settings;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * Specifies the version of the script handler.
+     * @return Specifies the version of the script handler.
      * 
      */
     private final @Nullable String typeHandlerVersion;
@@ -112,93 +112,93 @@ public final class GetMachineExtensionResult {
     }
 
     /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
-    */
+     */
     public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
     /**
-     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
-    */
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The machine extension instance view.
+     * @return The machine extension instance view.
      * 
-    */
+     */
     public Optional<MachineExtensionPropertiesResponseInstanceView> instanceView() {
         return Optional.ofNullable(this.instanceView);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
-    */
+     */
     public Optional<Object> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The name of the extension handler publisher.
+     * @return The name of the extension handler publisher.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * Json formatted public settings for the extension.
+     * @return Json formatted public settings for the extension.
      * 
-    */
+     */
     public Optional<Object> settings() {
         return Optional.ofNullable(this.settings);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies the version of the script handler.
+     * @return Specifies the version of the script handler.
      * 
-    */
+     */
     public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }

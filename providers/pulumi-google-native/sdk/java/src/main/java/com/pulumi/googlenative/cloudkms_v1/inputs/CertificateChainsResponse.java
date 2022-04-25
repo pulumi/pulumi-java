@@ -24,6 +24,10 @@ public final class CertificateChainsResponse extends com.pulumi.resources.Invoke
     @Import(name="caviumCerts", required=true)
     private List<String> caviumCerts;
 
+    /**
+     * @return Cavium certificate chain corresponding to the attestation.
+     * 
+     */
     public List<String> caviumCerts() {
         return this.caviumCerts;
     }
@@ -35,6 +39,10 @@ public final class CertificateChainsResponse extends com.pulumi.resources.Invoke
     @Import(name="googleCardCerts", required=true)
     private List<String> googleCardCerts;
 
+    /**
+     * @return Google card certificate chain corresponding to the attestation.
+     * 
+     */
     public List<String> googleCardCerts() {
         return this.googleCardCerts;
     }
@@ -46,6 +54,10 @@ public final class CertificateChainsResponse extends com.pulumi.resources.Invoke
     @Import(name="googlePartitionCerts", required=true)
     private List<String> googlePartitionCerts;
 
+    /**
+     * @return Google partition certificate chain corresponding to the attestation.
+     * 
+     */
     public List<String> googlePartitionCerts() {
         return this.googlePartitionCerts;
     }
@@ -76,29 +88,65 @@ public final class CertificateChainsResponse extends com.pulumi.resources.Invoke
             $ = new CertificateChainsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caviumCerts Cavium certificate chain corresponding to the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caviumCerts(List<String> caviumCerts) {
             $.caviumCerts = caviumCerts;
             return this;
         }
 
+        /**
+         * @param caviumCerts Cavium certificate chain corresponding to the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caviumCerts(String... caviumCerts) {
             return caviumCerts(List.of(caviumCerts));
         }
 
+        /**
+         * @param googleCardCerts Google card certificate chain corresponding to the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleCardCerts(List<String> googleCardCerts) {
             $.googleCardCerts = googleCardCerts;
             return this;
         }
 
+        /**
+         * @param googleCardCerts Google card certificate chain corresponding to the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleCardCerts(String... googleCardCerts) {
             return googleCardCerts(List.of(googleCardCerts));
         }
 
+        /**
+         * @param googlePartitionCerts Google partition certificate chain corresponding to the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googlePartitionCerts(List<String> googlePartitionCerts) {
             $.googlePartitionCerts = googlePartitionCerts;
             return this;
         }
 
+        /**
+         * @param googlePartitionCerts Google partition certificate chain corresponding to the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googlePartitionCerts(String... googlePartitionCerts) {
             return googlePartitionCerts(List.of(googlePartitionCerts));
         }

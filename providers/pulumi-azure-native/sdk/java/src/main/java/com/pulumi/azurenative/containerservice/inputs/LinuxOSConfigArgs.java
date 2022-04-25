@@ -28,6 +28,10 @@ public final class LinuxOSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="swapFileSizeMB")
     private @Nullable Output<Integer> swapFileSizeMB;
 
+    /**
+     * @return SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
+     * 
+     */
     public Optional<Output<Integer>> swapFileSizeMB() {
         return Optional.ofNullable(this.swapFileSizeMB);
     }
@@ -39,6 +43,10 @@ public final class LinuxOSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sysctls")
     private @Nullable Output<SysctlConfigArgs> sysctls;
 
+    /**
+     * @return Sysctl settings for Linux agent nodes.
+     * 
+     */
     public Optional<Output<SysctlConfigArgs>> sysctls() {
         return Optional.ofNullable(this.sysctls);
     }
@@ -50,6 +58,10 @@ public final class LinuxOSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transparentHugePageDefrag")
     private @Nullable Output<String> transparentHugePageDefrag;
 
+    /**
+     * @return Transparent Huge Page defrag configuration.
+     * 
+     */
     public Optional<Output<String>> transparentHugePageDefrag() {
         return Optional.ofNullable(this.transparentHugePageDefrag);
     }
@@ -61,6 +73,10 @@ public final class LinuxOSConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transparentHugePageEnabled")
     private @Nullable Output<String> transparentHugePageEnabled;
 
+    /**
+     * @return Transparent Huge Page enabled configuration.
+     * 
+     */
     public Optional<Output<String>> transparentHugePageEnabled() {
         return Optional.ofNullable(this.transparentHugePageEnabled);
     }
@@ -92,38 +108,86 @@ public final class LinuxOSConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinuxOSConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param swapFileSizeMB SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swapFileSizeMB(@Nullable Output<Integer> swapFileSizeMB) {
             $.swapFileSizeMB = swapFileSizeMB;
             return this;
         }
 
+        /**
+         * @param swapFileSizeMB SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swapFileSizeMB(Integer swapFileSizeMB) {
             return swapFileSizeMB(Output.of(swapFileSizeMB));
         }
 
+        /**
+         * @param sysctls Sysctl settings for Linux agent nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sysctls(@Nullable Output<SysctlConfigArgs> sysctls) {
             $.sysctls = sysctls;
             return this;
         }
 
+        /**
+         * @param sysctls Sysctl settings for Linux agent nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sysctls(SysctlConfigArgs sysctls) {
             return sysctls(Output.of(sysctls));
         }
 
+        /**
+         * @param transparentHugePageDefrag Transparent Huge Page defrag configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transparentHugePageDefrag(@Nullable Output<String> transparentHugePageDefrag) {
             $.transparentHugePageDefrag = transparentHugePageDefrag;
             return this;
         }
 
+        /**
+         * @param transparentHugePageDefrag Transparent Huge Page defrag configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transparentHugePageDefrag(String transparentHugePageDefrag) {
             return transparentHugePageDefrag(Output.of(transparentHugePageDefrag));
         }
 
+        /**
+         * @param transparentHugePageEnabled Transparent Huge Page enabled configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transparentHugePageEnabled(@Nullable Output<String> transparentHugePageEnabled) {
             $.transparentHugePageEnabled = transparentHugePageEnabled;
             return this;
         }
 
+        /**
+         * @param transparentHugePageEnabled Transparent Huge Page enabled configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transparentHugePageEnabled(String transparentHugePageEnabled) {
             return transparentHugePageEnabled(Output.of(transparentHugePageEnabled));
         }

@@ -29,6 +29,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
     @Import(name="customInfoTypes", required=true)
     private List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes;
 
+    /**
+     * @return CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+     * 
+     */
     public List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes() {
         return this.customInfoTypes;
     }
@@ -40,6 +44,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
     @Import(name="excludeInfoTypes", required=true)
     private Boolean excludeInfoTypes;
 
+    /**
+     * @return When true, excludes type information of the findings. This is not used for data profiling.
+     * 
+     */
     public Boolean excludeInfoTypes() {
         return this.excludeInfoTypes;
     }
@@ -51,6 +59,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
     @Import(name="includeQuote", required=true)
     private Boolean includeQuote;
 
+    /**
+     * @return When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote. This is not used for data profiling.
+     * 
+     */
     public Boolean includeQuote() {
         return this.includeQuote;
     }
@@ -62,6 +74,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
     @Import(name="infoTypes", required=true)
     private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
+    /**
+     * @return Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.
+     * 
+     */
     public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
@@ -73,6 +89,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
     @Import(name="limits", required=true)
     private GooglePrivacyDlpV2FindingLimitsResponse limits;
 
+    /**
+     * @return Configuration to control the number of findings returned. This is not used for data profiling.
+     * 
+     */
     public GooglePrivacyDlpV2FindingLimitsResponse limits() {
         return this.limits;
     }
@@ -84,6 +104,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
     @Import(name="minLikelihood", required=true)
     private String minLikelihood;
 
+    /**
+     * @return Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.
+     * 
+     */
     public String minLikelihood() {
         return this.minLikelihood;
     }
@@ -95,6 +119,10 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
     @Import(name="ruleSet", required=true)
     private List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet;
 
+    /**
+     * @return Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.
+     * 
+     */
     public List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet() {
         return this.ruleSet;
     }
@@ -129,49 +157,109 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2InspectConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customInfoTypes CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customInfoTypes(List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes) {
             $.customInfoTypes = customInfoTypes;
             return this;
         }
 
+        /**
+         * @param customInfoTypes CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customInfoTypes(GooglePrivacyDlpV2CustomInfoTypeResponse... customInfoTypes) {
             return customInfoTypes(List.of(customInfoTypes));
         }
 
+        /**
+         * @param excludeInfoTypes When true, excludes type information of the findings. This is not used for data profiling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeInfoTypes(Boolean excludeInfoTypes) {
             $.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
+        /**
+         * @param includeQuote When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote. This is not used for data profiling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeQuote(Boolean includeQuote) {
             $.includeQuote = includeQuote;
             return this;
         }
 
+        /**
+         * @param infoTypes Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
 
+        /**
+         * @param limits Configuration to control the number of findings returned. This is not used for data profiling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(GooglePrivacyDlpV2FindingLimitsResponse limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param minLikelihood Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minLikelihood(String minLikelihood) {
             $.minLikelihood = minLikelihood;
             return this;
         }
 
+        /**
+         * @param ruleSet Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSet(List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
             $.ruleSet = ruleSet;
             return this;
         }
 
+        /**
+         * @param ruleSet Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSet(GooglePrivacyDlpV2InspectionRuleSetResponse... ruleSet) {
             return ruleSet(List.of(ruleSet));
         }

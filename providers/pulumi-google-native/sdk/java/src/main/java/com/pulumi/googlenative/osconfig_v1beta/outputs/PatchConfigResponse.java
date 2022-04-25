@@ -17,47 +17,47 @@ import java.util.Objects;
 @CustomType
 public final class PatchConfigResponse {
     /**
-     * Apt update settings. Use this setting to override the default `apt` patch rules.
+     * @return Apt update settings. Use this setting to override the default `apt` patch rules.
      * 
      */
     private final AptSettingsResponse apt;
     /**
-     * Goo update settings. Use this setting to override the default `goo` patch rules.
+     * @return Goo update settings. Use this setting to override the default `goo` patch rules.
      * 
      */
     private final GooSettingsResponse goo;
     /**
-     * Allows the patch job to run on Managed instance groups (MIGs).
+     * @return Allows the patch job to run on Managed instance groups (MIGs).
      * 
      */
     private final Boolean migInstancesAllowed;
     /**
-     * The `ExecStep` to run after the patch update.
+     * @return The `ExecStep` to run after the patch update.
      * 
      */
     private final ExecStepResponse postStep;
     /**
-     * The `ExecStep` to run before the patch update.
+     * @return The `ExecStep` to run before the patch update.
      * 
      */
     private final ExecStepResponse preStep;
     /**
-     * Post-patch reboot settings.
+     * @return Post-patch reboot settings.
      * 
      */
     private final String rebootConfig;
     /**
-     * Windows update settings. Use this override the default windows patch rules.
+     * @return Windows update settings. Use this override the default windows patch rules.
      * 
      */
     private final WindowsUpdateSettingsResponse windowsUpdate;
     /**
-     * Yum update settings. Use this setting to override the default `yum` patch rules.
+     * @return Yum update settings. Use this setting to override the default `yum` patch rules.
      * 
      */
     private final YumSettingsResponse yum;
     /**
-     * Zypper update settings. Use this setting to override the default `zypper` patch rules.
+     * @return Zypper update settings. Use this setting to override the default `zypper` patch rules.
      * 
      */
     private final ZypperSettingsResponse zypper;
@@ -85,65 +85,65 @@ public final class PatchConfigResponse {
     }
 
     /**
-     * Apt update settings. Use this setting to override the default `apt` patch rules.
+     * @return Apt update settings. Use this setting to override the default `apt` patch rules.
      * 
-    */
+     */
     public AptSettingsResponse apt() {
         return this.apt;
     }
     /**
-     * Goo update settings. Use this setting to override the default `goo` patch rules.
+     * @return Goo update settings. Use this setting to override the default `goo` patch rules.
      * 
-    */
+     */
     public GooSettingsResponse goo() {
         return this.goo;
     }
     /**
-     * Allows the patch job to run on Managed instance groups (MIGs).
+     * @return Allows the patch job to run on Managed instance groups (MIGs).
      * 
-    */
+     */
     public Boolean migInstancesAllowed() {
         return this.migInstancesAllowed;
     }
     /**
-     * The `ExecStep` to run after the patch update.
+     * @return The `ExecStep` to run after the patch update.
      * 
-    */
+     */
     public ExecStepResponse postStep() {
         return this.postStep;
     }
     /**
-     * The `ExecStep` to run before the patch update.
+     * @return The `ExecStep` to run before the patch update.
      * 
-    */
+     */
     public ExecStepResponse preStep() {
         return this.preStep;
     }
     /**
-     * Post-patch reboot settings.
+     * @return Post-patch reboot settings.
      * 
-    */
+     */
     public String rebootConfig() {
         return this.rebootConfig;
     }
     /**
-     * Windows update settings. Use this override the default windows patch rules.
+     * @return Windows update settings. Use this override the default windows patch rules.
      * 
-    */
+     */
     public WindowsUpdateSettingsResponse windowsUpdate() {
         return this.windowsUpdate;
     }
     /**
-     * Yum update settings. Use this setting to override the default `yum` patch rules.
+     * @return Yum update settings. Use this setting to override the default `yum` patch rules.
      * 
-    */
+     */
     public YumSettingsResponse yum() {
         return this.yum;
     }
     /**
-     * Zypper update settings. Use this setting to override the default `zypper` patch rules.
+     * @return Zypper update settings. Use this setting to override the default `zypper` patch rules.
      * 
-    */
+     */
     public ZypperSettingsResponse zypper() {
         return this.zypper;
     }

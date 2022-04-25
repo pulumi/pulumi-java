@@ -22,6 +22,10 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
     @Import(name="instanceArn", required=true)
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance.
+     * 
+     */
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
@@ -33,6 +37,10 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the user hierarchy group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
     @Import(name="parentGroupArn")
     private @Nullable Output<String> parentGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the parent user hierarchy group.
+     * 
+     */
     public Optional<Output<String>> parentGroupArn() {
         return Optional.ofNullable(this.parentGroupArn);
     }
@@ -74,29 +86,65 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
             $ = new UserHierarchyGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             return instanceArn(Output.of(instanceArn));
         }
 
+        /**
+         * @param name The name of the user hierarchy group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the user hierarchy group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parentGroupArn The Amazon Resource Name (ARN) for the parent user hierarchy group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentGroupArn(@Nullable Output<String> parentGroupArn) {
             $.parentGroupArn = parentGroupArn;
             return this;
         }
 
+        /**
+         * @param parentGroupArn The Amazon Resource Name (ARN) for the parent user hierarchy group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentGroupArn(String parentGroupArn) {
             return parentGroupArn(Output.of(parentGroupArn));
         }

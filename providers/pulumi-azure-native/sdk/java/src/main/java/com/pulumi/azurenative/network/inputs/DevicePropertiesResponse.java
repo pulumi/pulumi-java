@@ -26,6 +26,10 @@ public final class DevicePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="deviceModel")
     private @Nullable String deviceModel;
 
+    /**
+     * @return Model of the device.
+     * 
+     */
     public Optional<String> deviceModel() {
         return Optional.ofNullable(this.deviceModel);
     }
@@ -37,6 +41,10 @@ public final class DevicePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="deviceVendor")
     private @Nullable String deviceVendor;
 
+    /**
+     * @return Name of the device Vendor.
+     * 
+     */
     public Optional<String> deviceVendor() {
         return Optional.ofNullable(this.deviceVendor);
     }
@@ -48,6 +56,10 @@ public final class DevicePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="linkSpeedInMbps")
     private @Nullable Integer linkSpeedInMbps;
 
+    /**
+     * @return Link speed.
+     * 
+     */
     public Optional<Integer> linkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }
@@ -78,16 +90,34 @@ public final class DevicePropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new DevicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceModel Model of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceModel(@Nullable String deviceModel) {
             $.deviceModel = deviceModel;
             return this;
         }
 
+        /**
+         * @param deviceVendor Name of the device Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceVendor(@Nullable String deviceVendor) {
             $.deviceVendor = deviceVendor;
             return this;
         }
 
+        /**
+         * @param linkSpeedInMbps Link speed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             $.linkSpeedInMbps = linkSpeedInMbps;
             return this;

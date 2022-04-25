@@ -22,6 +22,10 @@ public final class JobQueryDefaultDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="datasetId", required=true)
     private Output<String> datasetId;
 
+    /**
+     * @return The ID of the dataset containing this model.
+     * 
+     */
     public Output<String> datasetId() {
         return this.datasetId;
     }
@@ -33,6 +37,10 @@ public final class JobQueryDefaultDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return The ID of the project containing this model.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -62,20 +70,44 @@ public final class JobQueryDefaultDatasetArgs extends com.pulumi.resources.Resou
             $ = new JobQueryDefaultDatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param projectId The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

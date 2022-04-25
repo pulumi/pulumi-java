@@ -26,6 +26,10 @@ public final class EventNotificationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="pubsubTopicName")
     private @Nullable Output<String> pubsubTopicName;
 
+    /**
+     * @return A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+     * 
+     */
     public Optional<Output<String>> pubsubTopicName() {
         return Optional.ofNullable(this.pubsubTopicName);
     }
@@ -37,6 +41,10 @@ public final class EventNotificationConfigArgs extends com.pulumi.resources.Reso
     @Import(name="subfolderMatches")
     private @Nullable Output<String> subfolderMatches;
 
+    /**
+     * @return If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+     * 
+     */
     public Optional<Output<String>> subfolderMatches() {
         return Optional.ofNullable(this.subfolderMatches);
     }
@@ -66,20 +74,44 @@ public final class EventNotificationConfigArgs extends com.pulumi.resources.Reso
             $ = new EventNotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubTopicName A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopicName(@Nullable Output<String> pubsubTopicName) {
             $.pubsubTopicName = pubsubTopicName;
             return this;
         }
 
+        /**
+         * @param pubsubTopicName A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopicName(String pubsubTopicName) {
             return pubsubTopicName(Output.of(pubsubTopicName));
         }
 
+        /**
+         * @param subfolderMatches If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
             $.subfolderMatches = subfolderMatches;
             return this;
         }
 
+        /**
+         * @param subfolderMatches If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading &#39;/&#39; character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subfolderMatches(String subfolderMatches) {
             return subfolderMatches(Output.of(subfolderMatches));
         }

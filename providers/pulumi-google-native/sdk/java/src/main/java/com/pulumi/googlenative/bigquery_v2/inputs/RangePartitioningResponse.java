@@ -20,6 +20,10 @@ public final class RangePartitioningResponse extends com.pulumi.resources.Invoke
     @Import(name="field", required=true)
     private String field;
 
+    /**
+     * @return [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+     * 
+     */
     public String field() {
         return this.field;
     }
@@ -31,6 +35,10 @@ public final class RangePartitioningResponse extends com.pulumi.resources.Invoke
     @Import(name="range", required=true)
     private RangePartitioningRangeResponse range;
 
+    /**
+     * @return [TrustedTester] [Required] Defines the ranges for range partitioning.
+     * 
+     */
     public RangePartitioningRangeResponse range() {
         return this.range;
     }
@@ -60,11 +68,23 @@ public final class RangePartitioningResponse extends com.pulumi.resources.Invoke
             $ = new RangePartitioningResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param range [TrustedTester] [Required] Defines the ranges for range partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(RangePartitioningRangeResponse range) {
             $.range = range;
             return this;

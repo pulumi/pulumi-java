@@ -28,6 +28,10 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends com.pulumi
     @Import(name="extensions")
     private @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions;
 
+    /**
+     * @return The virtual machine scale set child extension resources.
+     * 
+     */
     public Optional<Output<List<VirtualMachineScaleSetExtensionArgs>>> extensions() {
         return Optional.ofNullable(this.extensions);
     }
@@ -39,6 +43,10 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends com.pulumi
     @Import(name="extensionsTimeBudget")
     private @Nullable Output<String> extensionsTimeBudget;
 
+    /**
+     * @return Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
+     * 
+     */
     public Optional<Output<String>> extensionsTimeBudget() {
         return Optional.ofNullable(this.extensionsTimeBudget);
     }
@@ -68,24 +76,54 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends com.pulumi
             $ = new VirtualMachineScaleSetExtensionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensions The virtual machine scale set child extension resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(@Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions) {
             $.extensions = extensions;
             return this;
         }
 
+        /**
+         * @param extensions The virtual machine scale set child extension resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(List<VirtualMachineScaleSetExtensionArgs> extensions) {
             return extensions(Output.of(extensions));
         }
 
+        /**
+         * @param extensions The virtual machine scale set child extension resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(VirtualMachineScaleSetExtensionArgs... extensions) {
             return extensions(List.of(extensions));
         }
 
+        /**
+         * @param extensionsTimeBudget Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionsTimeBudget(@Nullable Output<String> extensionsTimeBudget) {
             $.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
 
+        /**
+         * @param extensionsTimeBudget Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionsTimeBudget(String extensionsTimeBudget) {
             return extensionsTimeBudget(Output.of(extensionsTimeBudget));
         }

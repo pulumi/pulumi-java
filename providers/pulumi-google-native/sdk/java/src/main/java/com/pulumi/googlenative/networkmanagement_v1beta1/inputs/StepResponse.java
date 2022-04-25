@@ -39,6 +39,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="abort", required=true)
     private AbortInfoResponse abort;
 
+    /**
+     * @return Display information of the final state &#34;abort&#34; and reason.
+     * 
+     */
     public AbortInfoResponse abort() {
         return this.abort;
     }
@@ -50,6 +54,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="causesDrop", required=true)
     private Boolean causesDrop;
 
+    /**
+     * @return This is a step that leads to the final state Drop.
+     * 
+     */
     public Boolean causesDrop() {
         return this.causesDrop;
     }
@@ -61,6 +69,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudSqlInstance", required=true)
     private CloudSQLInstanceInfoResponse cloudSqlInstance;
 
+    /**
+     * @return Display information of a Cloud SQL instance.
+     * 
+     */
     public CloudSQLInstanceInfoResponse cloudSqlInstance() {
         return this.cloudSqlInstance;
     }
@@ -72,6 +84,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deliver", required=true)
     private DeliverInfoResponse deliver;
 
+    /**
+     * @return Display information of the final state &#34;deliver&#34; and reason.
+     * 
+     */
     public DeliverInfoResponse deliver() {
         return this.deliver;
     }
@@ -83,6 +99,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A description of the step. Usually this is a summary of the state.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -94,6 +114,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="drop", required=true)
     private DropInfoResponse drop;
 
+    /**
+     * @return Display information of the final state &#34;drop&#34; and reason.
+     * 
+     */
     public DropInfoResponse drop() {
         return this.drop;
     }
@@ -105,6 +129,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpoint", required=true)
     private EndpointInfoResponse endpoint;
 
+    /**
+     * @return Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
+     * 
+     */
     public EndpointInfoResponse endpoint() {
         return this.endpoint;
     }
@@ -116,6 +144,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="firewall", required=true)
     private FirewallInfoResponse firewall;
 
+    /**
+     * @return Display information of a Compute Engine firewall rule.
+     * 
+     */
     public FirewallInfoResponse firewall() {
         return this.firewall;
     }
@@ -127,6 +159,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="forward", required=true)
     private ForwardInfoResponse forward;
 
+    /**
+     * @return Display information of the final state &#34;forward&#34; and reason.
+     * 
+     */
     public ForwardInfoResponse forward() {
         return this.forward;
     }
@@ -138,6 +174,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="forwardingRule", required=true)
     private ForwardingRuleInfoResponse forwardingRule;
 
+    /**
+     * @return Display information of a Compute Engine forwarding rule.
+     * 
+     */
     public ForwardingRuleInfoResponse forwardingRule() {
         return this.forwardingRule;
     }
@@ -149,6 +189,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="gkeMaster", required=true)
     private GKEMasterInfoResponse gkeMaster;
 
+    /**
+     * @return Display information of a Google Kubernetes Engine cluster master.
+     * 
+     */
     public GKEMasterInfoResponse gkeMaster() {
         return this.gkeMaster;
     }
@@ -160,6 +204,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instance", required=true)
     private InstanceInfoResponse instance;
 
+    /**
+     * @return Display information of a Compute Engine instance.
+     * 
+     */
     public InstanceInfoResponse instance() {
         return this.instance;
     }
@@ -171,6 +219,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancer", required=true)
     private LoadBalancerInfoResponse loadBalancer;
 
+    /**
+     * @return Display information of the load balancers.
+     * 
+     */
     public LoadBalancerInfoResponse loadBalancer() {
         return this.loadBalancer;
     }
@@ -182,6 +234,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
     private NetworkInfoResponse network;
 
+    /**
+     * @return Display information of a Google Cloud network.
+     * 
+     */
     public NetworkInfoResponse network() {
         return this.network;
     }
@@ -193,6 +249,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return Project ID that contains the configuration this step is validating.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -204,6 +264,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="route", required=true)
     private RouteInfoResponse route;
 
+    /**
+     * @return Display information of a Compute Engine route.
+     * 
+     */
     public RouteInfoResponse route() {
         return this.route;
     }
@@ -215,6 +279,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Each step is in one of the pre-defined states.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -226,6 +294,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpnGateway", required=true)
     private VpnGatewayInfoResponse vpnGateway;
 
+    /**
+     * @return Display information of a Compute Engine VPN gateway.
+     * 
+     */
     public VpnGatewayInfoResponse vpnGateway() {
         return this.vpnGateway;
     }
@@ -237,6 +309,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpnTunnel", required=true)
     private VpnTunnelInfoResponse vpnTunnel;
 
+    /**
+     * @return Display information of a Compute Engine VPN tunnel.
+     * 
+     */
     public VpnTunnelInfoResponse vpnTunnel() {
         return this.vpnTunnel;
     }
@@ -283,96 +359,210 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abort Display information of the final state &#34;abort&#34; and reason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abort(AbortInfoResponse abort) {
             $.abort = abort;
             return this;
         }
 
+        /**
+         * @param causesDrop This is a step that leads to the final state Drop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder causesDrop(Boolean causesDrop) {
             $.causesDrop = causesDrop;
             return this;
         }
 
+        /**
+         * @param cloudSqlInstance Display information of a Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlInstance(CloudSQLInstanceInfoResponse cloudSqlInstance) {
             $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
 
+        /**
+         * @param deliver Display information of the final state &#34;deliver&#34; and reason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliver(DeliverInfoResponse deliver) {
             $.deliver = deliver;
             return this;
         }
 
+        /**
+         * @param description A description of the step. Usually this is a summary of the state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param drop Display information of the final state &#34;drop&#34; and reason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drop(DropInfoResponse drop) {
             $.drop = drop;
             return this;
         }
 
+        /**
+         * @param endpoint Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(EndpointInfoResponse endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param firewall Display information of a Compute Engine firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewall(FirewallInfoResponse firewall) {
             $.firewall = firewall;
             return this;
         }
 
+        /**
+         * @param forward Display information of the final state &#34;forward&#34; and reason.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forward(ForwardInfoResponse forward) {
             $.forward = forward;
             return this;
         }
 
+        /**
+         * @param forwardingRule Display information of a Compute Engine forwarding rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingRule(ForwardingRuleInfoResponse forwardingRule) {
             $.forwardingRule = forwardingRule;
             return this;
         }
 
+        /**
+         * @param gkeMaster Display information of a Google Kubernetes Engine cluster master.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeMaster(GKEMasterInfoResponse gkeMaster) {
             $.gkeMaster = gkeMaster;
             return this;
         }
 
+        /**
+         * @param instance Display information of a Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(InstanceInfoResponse instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param loadBalancer Display information of the load balancers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancer(LoadBalancerInfoResponse loadBalancer) {
             $.loadBalancer = loadBalancer;
             return this;
         }
 
+        /**
+         * @param network Display information of a Google Cloud network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(NetworkInfoResponse network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param project Project ID that contains the configuration this step is validating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param route Display information of a Compute Engine route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder route(RouteInfoResponse route) {
             $.route = route;
             return this;
         }
 
+        /**
+         * @param state Each step is in one of the pre-defined states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param vpnGateway Display information of a Compute Engine VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGateway(VpnGatewayInfoResponse vpnGateway) {
             $.vpnGateway = vpnGateway;
             return this;
         }
 
+        /**
+         * @param vpnTunnel Display information of a Compute Engine VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnTunnel(VpnTunnelInfoResponse vpnTunnel) {
             $.vpnTunnel = vpnTunnel;
             return this;

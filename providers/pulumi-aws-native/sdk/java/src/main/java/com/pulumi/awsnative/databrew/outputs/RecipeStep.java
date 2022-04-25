@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class RecipeStep {
     private final RecipeAction action;
     /**
-     * Condition expressions applied to the step action
+     * @return Condition expressions applied to the step action
      * 
      */
     private final @Nullable List<RecipeConditionExpression> conditionExpressions;
@@ -31,9 +31,9 @@ public final class RecipeStep {
         return this.action;
     }
     /**
-     * Condition expressions applied to the step action
+     * @return Condition expressions applied to the step action
      * 
-    */
+     */
     public List<RecipeConditionExpression> conditionExpressions() {
         return this.conditionExpressions == null ? List.of() : this.conditionExpressions;
     }

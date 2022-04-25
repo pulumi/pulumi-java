@@ -26,6 +26,10 @@ public final class DataprocParametersArgs extends com.pulumi.resources.ResourceA
     @Import(name="cluster")
     private @Nullable Output<String> cluster;
 
+    /**
+     * @return URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
+     * 
+     */
     public Optional<Output<String>> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -54,11 +58,23 @@ public final class DataprocParametersArgs extends com.pulumi.resources.ResourceA
             $ = new DataprocParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }

@@ -23,6 +23,10 @@ public final class ExpirationPolicyResponse extends com.pulumi.resources.InvokeA
     @Import(name="ttl", required=true)
     private String ttl;
 
+    /**
+     * @return Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
+     * 
+     */
     public String ttl() {
         return this.ttl;
     }
@@ -51,6 +55,12 @@ public final class ExpirationPolicyResponse extends com.pulumi.resources.InvokeA
             $ = new ExpirationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ttl Specifies the &#34;time-to-live&#34; duration for an associated resource. The resource expires if it is not active for a period of `ttl`. The definition of &#34;activity&#34; depends on the type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the associated resource, as well. If `ttl` is not set, the associated resource never expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(String ttl) {
             $.ttl = ttl;
             return this;

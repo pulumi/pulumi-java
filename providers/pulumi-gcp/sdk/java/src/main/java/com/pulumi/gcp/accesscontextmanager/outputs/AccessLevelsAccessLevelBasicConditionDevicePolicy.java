@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccessLevelsAccessLevelBasicConditionDevicePolicy {
     /**
-     * A list of allowed device management levels.
+     * @return A list of allowed device management levels.
      * An empty list allows all management levels.
      * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
      * 
      */
     private final @Nullable List<String> allowedDeviceManagementLevels;
     /**
-     * A list of allowed encryptions statuses.
+     * @return A list of allowed encryptions statuses.
      * An empty list allows all statuses.
      * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
      * 
      */
     private final @Nullable List<String> allowedEncryptionStatuses;
     /**
-     * A list of allowed OS versions.
+     * @return A list of allowed OS versions.
      * An empty list allows all types and all versions.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint> osConstraints;
     /**
-     * Whether the device needs to be approved by the customer admin.
+     * @return Whether the device needs to be approved by the customer admin.
      * 
      */
     private final @Nullable Boolean requireAdminApproval;
     /**
-     * Whether the device needs to be corp owned.
+     * @return Whether the device needs to be corp owned.
      * 
      */
     private final @Nullable Boolean requireCorpOwned;
     /**
-     * Whether or not screenlock is required for the DevicePolicy
+     * @return Whether or not screenlock is required for the DevicePolicy
      * to be true. Defaults to false.
      * 
      */
@@ -69,51 +69,51 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicy {
     }
 
     /**
-     * A list of allowed device management levels.
+     * @return A list of allowed device management levels.
      * An empty list allows all management levels.
      * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
      * 
-    */
+     */
     public List<String> allowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels == null ? List.of() : this.allowedDeviceManagementLevels;
     }
     /**
-     * A list of allowed encryptions statuses.
+     * @return A list of allowed encryptions statuses.
      * An empty list allows all statuses.
      * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
      * 
-    */
+     */
     public List<String> allowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses == null ? List.of() : this.allowedEncryptionStatuses;
     }
     /**
-     * A list of allowed OS versions.
+     * @return A list of allowed OS versions.
      * An empty list allows all types and all versions.
      * Structure is documented below.
      * 
-    */
+     */
     public List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint> osConstraints() {
         return this.osConstraints == null ? List.of() : this.osConstraints;
     }
     /**
-     * Whether the device needs to be approved by the customer admin.
+     * @return Whether the device needs to be approved by the customer admin.
      * 
-    */
+     */
     public Optional<Boolean> requireAdminApproval() {
         return Optional.ofNullable(this.requireAdminApproval);
     }
     /**
-     * Whether the device needs to be corp owned.
+     * @return Whether the device needs to be corp owned.
      * 
-    */
+     */
     public Optional<Boolean> requireCorpOwned() {
         return Optional.ofNullable(this.requireCorpOwned);
     }
     /**
-     * Whether or not screenlock is required for the DevicePolicy
+     * @return Whether or not screenlock is required for the DevicePolicy
      * to be true. Defaults to false.
      * 
-    */
+     */
     public Optional<Boolean> requireScreenLock() {
         return Optional.ofNullable(this.requireScreenLock);
     }

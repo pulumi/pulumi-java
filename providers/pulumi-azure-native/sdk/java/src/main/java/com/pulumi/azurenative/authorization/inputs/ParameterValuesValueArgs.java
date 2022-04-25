@@ -26,6 +26,10 @@ public final class ParameterValuesValueArgs extends com.pulumi.resources.Resourc
     @Import(name="value")
     private @Nullable Output<Object> value;
 
+    /**
+     * @return The value of the parameter.
+     * 
+     */
     public Optional<Output<Object>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -54,11 +58,23 @@ public final class ParameterValuesValueArgs extends com.pulumi.resources.Resourc
             $ = new ParameterValuesValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

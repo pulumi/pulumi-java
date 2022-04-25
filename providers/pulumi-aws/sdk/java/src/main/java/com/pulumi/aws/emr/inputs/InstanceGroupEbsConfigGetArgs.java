@@ -23,6 +23,10 @@ public final class InstanceGroupEbsConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="iops")
     private @Nullable Output<Integer> iops;
 
+    /**
+     * @return The number of I/O operations per second (IOPS) that the volume supports.
+     * 
+     */
     public Optional<Output<Integer>> iops() {
         return Optional.ofNullable(this.iops);
     }
@@ -34,6 +38,10 @@ public final class InstanceGroupEbsConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="size", required=true)
     private Output<Integer> size;
 
+    /**
+     * @return The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
+     * 
+     */
     public Output<Integer> size() {
         return this.size;
     }
@@ -45,6 +53,10 @@ public final class InstanceGroupEbsConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -56,6 +68,10 @@ public final class InstanceGroupEbsConfigGetArgs extends com.pulumi.resources.Re
     @Import(name="volumesPerInstance")
     private @Nullable Output<Integer> volumesPerInstance;
 
+    /**
+     * @return The number of EBS Volumes to attach per instance.
+     * 
+     */
     public Optional<Output<Integer>> volumesPerInstance() {
         return Optional.ofNullable(this.volumesPerInstance);
     }
@@ -87,38 +103,86 @@ public final class InstanceGroupEbsConfigGetArgs extends com.pulumi.resources.Re
             $ = new InstanceGroupEbsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(@Nullable Output<Integer> iops) {
             $.iops = iops;
             return this;
         }
 
+        /**
+         * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             return iops(Output.of(iops));
         }
 
+        /**
+         * @param size The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Output<Integer> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Integer size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param type The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param volumesPerInstance The number of EBS Volumes to attach per instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumesPerInstance(@Nullable Output<Integer> volumesPerInstance) {
             $.volumesPerInstance = volumesPerInstance;
             return this;
         }
 
+        /**
+         * @param volumesPerInstance The number of EBS Volumes to attach per instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumesPerInstance(Integer volumesPerInstance) {
             return volumesPerInstance(Output.of(volumesPerInstance));
         }

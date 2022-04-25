@@ -34,6 +34,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="agentExpiryDate")
     private @Nullable String agentExpiryDate;
 
+    /**
+     * @return Agent expiry date.
+     * 
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
@@ -45,6 +49,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return The agent version.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -56,6 +64,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="azureVMDiskDetails")
     private @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails;
 
+    /**
+     * @return Azure VM Disk details.
+     * 
+     */
     public Optional<List<AzureVmDiskDetailsResponse>> azureVMDiskDetails() {
         return Optional.ofNullable(this.azureVMDiskDetails);
     }
@@ -67,6 +79,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="compressedDataRateInMB")
     private @Nullable Double compressedDataRateInMB;
 
+    /**
+     * @return The compressed data change rate in MB.
+     * 
+     */
     public Optional<Double> compressedDataRateInMB() {
         return Optional.ofNullable(this.compressedDataRateInMB);
     }
@@ -78,6 +94,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="datastores")
     private @Nullable List<String> datastores;
 
+    /**
+     * @return The data stores of the on-premise machine. Value can be list of strings that contain data store names.
+     * 
+     */
     public Optional<List<String>> datastores() {
         return Optional.ofNullable(this.datastores);
     }
@@ -89,6 +109,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="discoveryType")
     private @Nullable String discoveryType;
 
+    /**
+     * @return A value indicating the discovery type of the machine. Value can be vCenter or physical.
+     * 
+     */
     public Optional<String> discoveryType() {
         return Optional.ofNullable(this.discoveryType);
     }
@@ -100,6 +124,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="diskResized")
     private @Nullable String diskResized;
 
+    /**
+     * @return A value indicating whether any disk is resized for this VM.
+     * 
+     */
     public Optional<String> diskResized() {
         return Optional.ofNullable(this.diskResized);
     }
@@ -111,6 +139,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="enableRdpOnTargetOption")
     private @Nullable String enableRdpOnTargetOption;
 
+    /**
+     * @return The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+     * 
+     */
     public Optional<String> enableRdpOnTargetOption() {
         return Optional.ofNullable(this.enableRdpOnTargetOption);
     }
@@ -122,6 +154,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="infrastructureVmId")
     private @Nullable String infrastructureVmId;
 
+    /**
+     * @return The infrastructure VM Id.
+     * 
+     */
     public Optional<String> infrastructureVmId() {
         return Optional.ofNullable(this.infrastructureVmId);
     }
@@ -134,6 +170,11 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;InMageAzureV2&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -145,6 +186,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return The source IP address.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -156,6 +201,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="isAgentUpdateRequired")
     private @Nullable String isAgentUpdateRequired;
 
+    /**
+     * @return A value indicating whether installed agent needs to be updated.
+     * 
+     */
     public Optional<String> isAgentUpdateRequired() {
         return Optional.ofNullable(this.isAgentUpdateRequired);
     }
@@ -167,6 +216,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="isRebootAfterUpdateRequired")
     private @Nullable String isRebootAfterUpdateRequired;
 
+    /**
+     * @return A value indicating whether the source server requires a restart after update.
+     * 
+     */
     public Optional<String> isRebootAfterUpdateRequired() {
         return Optional.ofNullable(this.isRebootAfterUpdateRequired);
     }
@@ -178,6 +231,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="lastHeartbeat")
     private @Nullable String lastHeartbeat;
 
+    /**
+     * @return The last heartbeat received from the source server.
+     * 
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
@@ -189,6 +246,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="lastRpoCalculatedTime")
     private @Nullable String lastRpoCalculatedTime;
 
+    /**
+     * @return The last RPO calculated time.
+     * 
+     */
     public Optional<String> lastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
@@ -200,6 +261,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="lastUpdateReceivedTime")
     private @Nullable String lastUpdateReceivedTime;
 
+    /**
+     * @return The last update time received from on-prem components.
+     * 
+     */
     public Optional<String> lastUpdateReceivedTime() {
         return Optional.ofNullable(this.lastUpdateReceivedTime);
     }
@@ -211,6 +276,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="licenseType")
     private @Nullable String licenseType;
 
+    /**
+     * @return License Type of the VM to be used.
+     * 
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -222,6 +291,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="masterTargetId")
     private @Nullable String masterTargetId;
 
+    /**
+     * @return The master target Id.
+     * 
+     */
     public Optional<String> masterTargetId() {
         return Optional.ofNullable(this.masterTargetId);
     }
@@ -233,6 +306,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="multiVmGroupId")
     private @Nullable String multiVmGroupId;
 
+    /**
+     * @return The multi vm group Id.
+     * 
+     */
     public Optional<String> multiVmGroupId() {
         return Optional.ofNullable(this.multiVmGroupId);
     }
@@ -244,6 +321,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="multiVmGroupName")
     private @Nullable String multiVmGroupName;
 
+    /**
+     * @return The multi vm group name.
+     * 
+     */
     public Optional<String> multiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
@@ -255,6 +336,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="multiVmSyncStatus")
     private @Nullable String multiVmSyncStatus;
 
+    /**
+     * @return A value indicating whether multi vm sync is enabled or disabled.
+     * 
+     */
     public Optional<String> multiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
@@ -266,6 +351,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="osDiskId")
     private @Nullable String osDiskId;
 
+    /**
+     * @return The id of the disk containing the OS.
+     * 
+     */
     public Optional<String> osDiskId() {
         return Optional.ofNullable(this.osDiskId);
     }
@@ -277,6 +366,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return The type of the OS on the VM.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -288,6 +381,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="osVersion")
     private @Nullable String osVersion;
 
+    /**
+     * @return The OS Version of the protected item.
+     * 
+     */
     public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
@@ -299,6 +396,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="processServerId")
     private @Nullable String processServerId;
 
+    /**
+     * @return The process server Id.
+     * 
+     */
     public Optional<String> processServerId() {
         return Optional.ofNullable(this.processServerId);
     }
@@ -310,6 +411,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="processServerName", required=true)
     private String processServerName;
 
+    /**
+     * @return The process server name.
+     * 
+     */
     public String processServerName() {
         return this.processServerName;
     }
@@ -321,6 +426,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="protectedDisks")
     private @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks;
 
+    /**
+     * @return The list of protected disks.
+     * 
+     */
     public Optional<List<InMageAzureV2ProtectedDiskDetailsResponse>> protectedDisks() {
         return Optional.ofNullable(this.protectedDisks);
     }
@@ -332,6 +441,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="protectedManagedDisks")
     private @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks;
 
+    /**
+     * @return The list of protected managed disks.
+     * 
+     */
     public Optional<List<InMageAzureV2ManagedDiskDetailsResponse>> protectedManagedDisks() {
         return Optional.ofNullable(this.protectedManagedDisks);
     }
@@ -343,6 +456,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="protectionStage")
     private @Nullable String protectionStage;
 
+    /**
+     * @return The protection stage.
+     * 
+     */
     public Optional<String> protectionStage() {
         return Optional.ofNullable(this.protectionStage);
     }
@@ -354,6 +471,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="recoveryAvailabilitySetId")
     private @Nullable String recoveryAvailabilitySetId;
 
+    /**
+     * @return The recovery availability set Id.
+     * 
+     */
     public Optional<String> recoveryAvailabilitySetId() {
         return Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
@@ -365,6 +486,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="recoveryAzureLogStorageAccountId")
     private @Nullable String recoveryAzureLogStorageAccountId;
 
+    /**
+     * @return The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+     * 
+     */
     public Optional<String> recoveryAzureLogStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
@@ -376,6 +501,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="recoveryAzureResourceGroupId")
     private @Nullable String recoveryAzureResourceGroupId;
 
+    /**
+     * @return The target resource group Id.
+     * 
+     */
     public Optional<String> recoveryAzureResourceGroupId() {
         return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
@@ -387,6 +516,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="recoveryAzureStorageAccount")
     private @Nullable String recoveryAzureStorageAccount;
 
+    /**
+     * @return The recovery Azure storage account.
+     * 
+     */
     public Optional<String> recoveryAzureStorageAccount() {
         return Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
@@ -398,6 +531,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="recoveryAzureVMName")
     private @Nullable String recoveryAzureVMName;
 
+    /**
+     * @return Recovery Azure given name.
+     * 
+     */
     public Optional<String> recoveryAzureVMName() {
         return Optional.ofNullable(this.recoveryAzureVMName);
     }
@@ -409,6 +546,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="recoveryAzureVMSize")
     private @Nullable String recoveryAzureVMSize;
 
+    /**
+     * @return The Recovery Azure VM size.
+     * 
+     */
     public Optional<String> recoveryAzureVMSize() {
         return Optional.ofNullable(this.recoveryAzureVMSize);
     }
@@ -420,6 +561,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="replicaId")
     private @Nullable String replicaId;
 
+    /**
+     * @return The replica id of the protected item.
+     * 
+     */
     public Optional<String> replicaId() {
         return Optional.ofNullable(this.replicaId);
     }
@@ -431,6 +576,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="resyncProgressPercentage")
     private @Nullable Integer resyncProgressPercentage;
 
+    /**
+     * @return The resync progress percentage.
+     * 
+     */
     public Optional<Integer> resyncProgressPercentage() {
         return Optional.ofNullable(this.resyncProgressPercentage);
     }
@@ -442,6 +591,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="rpoInSeconds")
     private @Nullable Double rpoInSeconds;
 
+    /**
+     * @return The RPO in seconds.
+     * 
+     */
     public Optional<Double> rpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
@@ -453,6 +606,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="selectedRecoveryAzureNetworkId")
     private @Nullable String selectedRecoveryAzureNetworkId;
 
+    /**
+     * @return The selected recovery azure network Id.
+     * 
+     */
     public Optional<String> selectedRecoveryAzureNetworkId() {
         return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
@@ -464,6 +621,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="selectedSourceNicId")
     private @Nullable String selectedSourceNicId;
 
+    /**
+     * @return The selected source nic Id which will be used as the primary nic during failover.
+     * 
+     */
     public Optional<String> selectedSourceNicId() {
         return Optional.ofNullable(this.selectedSourceNicId);
     }
@@ -475,6 +636,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="selectedTfoAzureNetworkId")
     private @Nullable String selectedTfoAzureNetworkId;
 
+    /**
+     * @return The test failover virtual network.
+     * 
+     */
     public Optional<String> selectedTfoAzureNetworkId() {
         return Optional.ofNullable(this.selectedTfoAzureNetworkId);
     }
@@ -486,6 +651,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="sourceVmCpuCount")
     private @Nullable Integer sourceVmCpuCount;
 
+    /**
+     * @return The CPU count of the VM on the primary side.
+     * 
+     */
     public Optional<Integer> sourceVmCpuCount() {
         return Optional.ofNullable(this.sourceVmCpuCount);
     }
@@ -497,6 +666,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="sourceVmRamSizeInMB")
     private @Nullable Integer sourceVmRamSizeInMB;
 
+    /**
+     * @return The RAM size of the VM on the primary side.
+     * 
+     */
     public Optional<Integer> sourceVmRamSizeInMB() {
         return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
@@ -508,6 +681,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="targetAvailabilityZone")
     private @Nullable String targetAvailabilityZone;
 
+    /**
+     * @return The target availability zone.
+     * 
+     */
     public Optional<String> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
@@ -519,6 +696,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="targetProximityPlacementGroupId")
     private @Nullable String targetProximityPlacementGroupId;
 
+    /**
+     * @return The target proximity placement group Id.
+     * 
+     */
     public Optional<String> targetProximityPlacementGroupId() {
         return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
@@ -530,6 +711,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="targetVmId")
     private @Nullable String targetVmId;
 
+    /**
+     * @return The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
+     * 
+     */
     public Optional<String> targetVmId() {
         return Optional.ofNullable(this.targetVmId);
     }
@@ -541,6 +726,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="uncompressedDataRateInMB")
     private @Nullable Double uncompressedDataRateInMB;
 
+    /**
+     * @return The uncompressed data change rate in MB.
+     * 
+     */
     public Optional<Double> uncompressedDataRateInMB() {
         return Optional.ofNullable(this.uncompressedDataRateInMB);
     }
@@ -552,6 +741,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="useManagedDisks")
     private @Nullable String useManagedDisks;
 
+    /**
+     * @return A value indicating whether managed disks should be used during failover.
+     * 
+     */
     public Optional<String> useManagedDisks() {
         return Optional.ofNullable(this.useManagedDisks);
     }
@@ -563,6 +756,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="vCenterInfrastructureId")
     private @Nullable String vCenterInfrastructureId;
 
+    /**
+     * @return The vCenter infrastructure Id.
+     * 
+     */
     public Optional<String> vCenterInfrastructureId() {
         return Optional.ofNullable(this.vCenterInfrastructureId);
     }
@@ -574,6 +771,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="validationErrors")
     private @Nullable List<HealthErrorResponse> validationErrors;
 
+    /**
+     * @return The validation errors of the on-premise machine Value can be list of validation errors.
+     * 
+     */
     public Optional<List<HealthErrorResponse>> validationErrors() {
         return Optional.ofNullable(this.validationErrors);
     }
@@ -585,6 +786,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="vhdName")
     private @Nullable String vhdName;
 
+    /**
+     * @return The OS disk VHD name.
+     * 
+     */
     public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
@@ -596,6 +801,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="vmId")
     private @Nullable String vmId;
 
+    /**
+     * @return The virtual machine Id.
+     * 
+     */
     public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
@@ -607,6 +816,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="vmNics")
     private @Nullable List<VMNicDetailsResponse> vmNics;
 
+    /**
+     * @return The PE Network details.
+     * 
+     */
     public Optional<List<VMNicDetailsResponse>> vmNics() {
         return Optional.ofNullable(this.vmNics);
     }
@@ -618,6 +831,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="vmProtectionState")
     private @Nullable String vmProtectionState;
 
+    /**
+     * @return The protection state for the vm.
+     * 
+     */
     public Optional<String> vmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
@@ -629,6 +846,10 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
     @Import(name="vmProtectionStateDescription")
     private @Nullable String vmProtectionStateDescription;
 
+    /**
+     * @return The protection state description for the vm.
+     * 
+     */
     public Optional<String> vmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
@@ -711,300 +932,667 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
             $ = new InMageAzureV2ReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentExpiryDate Agent expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             $.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
+        /**
+         * @param agentVersion The agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param azureVMDiskDetails Azure VM Disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVMDiskDetails(@Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails) {
             $.azureVMDiskDetails = azureVMDiskDetails;
             return this;
         }
 
+        /**
+         * @param azureVMDiskDetails Azure VM Disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVMDiskDetails(AzureVmDiskDetailsResponse... azureVMDiskDetails) {
             return azureVMDiskDetails(List.of(azureVMDiskDetails));
         }
 
+        /**
+         * @param compressedDataRateInMB The compressed data change rate in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressedDataRateInMB(@Nullable Double compressedDataRateInMB) {
             $.compressedDataRateInMB = compressedDataRateInMB;
             return this;
         }
 
+        /**
+         * @param datastores The data stores of the on-premise machine. Value can be list of strings that contain data store names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastores(@Nullable List<String> datastores) {
             $.datastores = datastores;
             return this;
         }
 
+        /**
+         * @param datastores The data stores of the on-premise machine. Value can be list of strings that contain data store names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastores(String... datastores) {
             return datastores(List.of(datastores));
         }
 
+        /**
+         * @param discoveryType A value indicating the discovery type of the machine. Value can be vCenter or physical.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryType(@Nullable String discoveryType) {
             $.discoveryType = discoveryType;
             return this;
         }
 
+        /**
+         * @param diskResized A value indicating whether any disk is resized for this VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskResized(@Nullable String diskResized) {
             $.diskResized = diskResized;
             return this;
         }
 
+        /**
+         * @param enableRdpOnTargetOption The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             $.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
 
+        /**
+         * @param infrastructureVmId The infrastructure VM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureVmId(@Nullable String infrastructureVmId) {
             $.infrastructureVmId = infrastructureVmId;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;InMageAzureV2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param ipAddress The source IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param isAgentUpdateRequired A value indicating whether installed agent needs to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAgentUpdateRequired(@Nullable String isAgentUpdateRequired) {
             $.isAgentUpdateRequired = isAgentUpdateRequired;
             return this;
         }
 
+        /**
+         * @param isRebootAfterUpdateRequired A value indicating whether the source server requires a restart after update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRebootAfterUpdateRequired(@Nullable String isRebootAfterUpdateRequired) {
             $.isRebootAfterUpdateRequired = isRebootAfterUpdateRequired;
             return this;
         }
 
+        /**
+         * @param lastHeartbeat The last heartbeat received from the source server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             $.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
+        /**
+         * @param lastRpoCalculatedTime The last RPO calculated time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
 
+        /**
+         * @param lastUpdateReceivedTime The last update time received from on-prem components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateReceivedTime(@Nullable String lastUpdateReceivedTime) {
             $.lastUpdateReceivedTime = lastUpdateReceivedTime;
             return this;
         }
 
+        /**
+         * @param licenseType License Type of the VM to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param masterTargetId The master target Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterTargetId(@Nullable String masterTargetId) {
             $.masterTargetId = masterTargetId;
             return this;
         }
 
+        /**
+         * @param multiVmGroupId The multi vm group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
             $.multiVmGroupId = multiVmGroupId;
             return this;
         }
 
+        /**
+         * @param multiVmGroupName The multi vm group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             $.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
+        /**
+         * @param multiVmSyncStatus A value indicating whether multi vm sync is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             $.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
 
+        /**
+         * @param osDiskId The id of the disk containing the OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskId(@Nullable String osDiskId) {
             $.osDiskId = osDiskId;
             return this;
         }
 
+        /**
+         * @param osType The type of the OS on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osVersion The OS Version of the protected item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(@Nullable String osVersion) {
             $.osVersion = osVersion;
             return this;
         }
 
+        /**
+         * @param processServerId The process server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(@Nullable String processServerId) {
             $.processServerId = processServerId;
             return this;
         }
 
+        /**
+         * @param processServerName The process server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerName(String processServerName) {
             $.processServerName = processServerName;
             return this;
         }
 
+        /**
+         * @param protectedDisks The list of protected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedDisks(@Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks) {
             $.protectedDisks = protectedDisks;
             return this;
         }
 
+        /**
+         * @param protectedDisks The list of protected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedDisks(InMageAzureV2ProtectedDiskDetailsResponse... protectedDisks) {
             return protectedDisks(List.of(protectedDisks));
         }
 
+        /**
+         * @param protectedManagedDisks The list of protected managed disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedManagedDisks(@Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks) {
             $.protectedManagedDisks = protectedManagedDisks;
             return this;
         }
 
+        /**
+         * @param protectedManagedDisks The list of protected managed disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedManagedDisks(InMageAzureV2ManagedDiskDetailsResponse... protectedManagedDisks) {
             return protectedManagedDisks(List.of(protectedManagedDisks));
         }
 
+        /**
+         * @param protectionStage The protection stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionStage(@Nullable String protectionStage) {
             $.protectionStage = protectionStage;
             return this;
         }
 
+        /**
+         * @param recoveryAvailabilitySetId The recovery availability set Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
             $.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureLogStorageAccountId The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
             $.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureResourceGroupId The target resource group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
             $.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureStorageAccount The recovery Azure storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
             $.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
             return this;
         }
 
+        /**
+         * @param recoveryAzureVMName Recovery Azure given name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureVMName(@Nullable String recoveryAzureVMName) {
             $.recoveryAzureVMName = recoveryAzureVMName;
             return this;
         }
 
+        /**
+         * @param recoveryAzureVMSize The Recovery Azure VM size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
             $.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
 
+        /**
+         * @param replicaId The replica id of the protected item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaId(@Nullable String replicaId) {
             $.replicaId = replicaId;
             return this;
         }
 
+        /**
+         * @param resyncProgressPercentage The resync progress percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
             $.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
 
+        /**
+         * @param rpoInSeconds The RPO in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             $.rpoInSeconds = rpoInSeconds;
             return this;
         }
 
+        /**
+         * @param selectedRecoveryAzureNetworkId The selected recovery azure network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
             $.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
 
+        /**
+         * @param selectedSourceNicId The selected source nic Id which will be used as the primary nic during failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedSourceNicId(@Nullable String selectedSourceNicId) {
             $.selectedSourceNicId = selectedSourceNicId;
             return this;
         }
 
+        /**
+         * @param selectedTfoAzureNetworkId The test failover virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedTfoAzureNetworkId(@Nullable String selectedTfoAzureNetworkId) {
             $.selectedTfoAzureNetworkId = selectedTfoAzureNetworkId;
             return this;
         }
 
+        /**
+         * @param sourceVmCpuCount The CPU count of the VM on the primary side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
             $.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
 
+        /**
+         * @param sourceVmRamSizeInMB The RAM size of the VM on the primary side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
             $.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
 
+        /**
+         * @param targetAvailabilityZone The target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param targetProximityPlacementGroupId The target proximity placement group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
+        /**
+         * @param targetVmId The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmId(@Nullable String targetVmId) {
             $.targetVmId = targetVmId;
             return this;
         }
 
+        /**
+         * @param uncompressedDataRateInMB The uncompressed data change rate in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uncompressedDataRateInMB(@Nullable Double uncompressedDataRateInMB) {
             $.uncompressedDataRateInMB = uncompressedDataRateInMB;
             return this;
         }
 
+        /**
+         * @param useManagedDisks A value indicating whether managed disks should be used during failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useManagedDisks(@Nullable String useManagedDisks) {
             $.useManagedDisks = useManagedDisks;
             return this;
         }
 
+        /**
+         * @param vCenterInfrastructureId The vCenter infrastructure Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCenterInfrastructureId(@Nullable String vCenterInfrastructureId) {
             $.vCenterInfrastructureId = vCenterInfrastructureId;
             return this;
         }
 
+        /**
+         * @param validationErrors The validation errors of the on-premise machine Value can be list of validation errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors The validation errors of the on-premise machine Value can be list of validation errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(HealthErrorResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }
 
+        /**
+         * @param vhdName The OS disk VHD name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdName(@Nullable String vhdName) {
             $.vhdName = vhdName;
             return this;
         }
 
+        /**
+         * @param vmId The virtual machine Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(@Nullable String vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param vmNics The PE Network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             $.vmNics = vmNics;
             return this;
         }
 
+        /**
+         * @param vmNics The PE Network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(VMNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
 
+        /**
+         * @param vmProtectionState The protection state for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             $.vmProtectionState = vmProtectionState;
             return this;
         }
 
+        /**
+         * @param vmProtectionStateDescription The protection state description for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             $.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;

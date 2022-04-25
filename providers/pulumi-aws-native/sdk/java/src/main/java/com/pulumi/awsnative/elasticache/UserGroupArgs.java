@@ -24,6 +24,10 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine", required=true)
     private Output<UserGroupEngine> engine;
 
+    /**
+     * @return Must be redis.
+     * 
+     */
     public Output<UserGroupEngine> engine() {
         return this.engine;
     }
@@ -35,6 +39,10 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userGroupId", required=true)
     private Output<String> userGroupId;
 
+    /**
+     * @return The ID of the user group.
+     * 
+     */
     public Output<String> userGroupId() {
         return this.userGroupId;
     }
@@ -46,6 +54,10 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userIds")
     private @Nullable Output<List<String>> userIds;
 
+    /**
+     * @return List of users associated to this user group.
+     * 
+     */
     public Optional<Output<List<String>>> userIds() {
         return Optional.ofNullable(this.userIds);
     }
@@ -76,33 +88,75 @@ public final class UserGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param engine Must be redis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(Output<UserGroupEngine> engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param engine Must be redis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(UserGroupEngine engine) {
             return engine(Output.of(engine));
         }
 
+        /**
+         * @param userGroupId The ID of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroupId(Output<String> userGroupId) {
             $.userGroupId = userGroupId;
             return this;
         }
 
+        /**
+         * @param userGroupId The ID of the user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroupId(String userGroupId) {
             return userGroupId(Output.of(userGroupId));
         }
 
+        /**
+         * @param userIds List of users associated to this user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(@Nullable Output<List<String>> userIds) {
             $.userIds = userIds;
             return this;
         }
 
+        /**
+         * @param userIds List of users associated to this user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(List<String> userIds) {
             return userIds(Output.of(userIds));
         }
 
+        /**
+         * @param userIds List of users associated to this user group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
         }

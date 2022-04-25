@@ -28,6 +28,10 @@ public final class StorageLensSelectionCriteriaArgs extends com.pulumi.resources
     @Import(name="delimiter")
     private @Nullable Output<String> delimiter;
 
+    /**
+     * @return Delimiter to divide S3 key into hierarchy of prefixes.
+     * 
+     */
     public Optional<Output<String>> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
@@ -39,6 +43,10 @@ public final class StorageLensSelectionCriteriaArgs extends com.pulumi.resources
     @Import(name="maxDepth")
     private @Nullable Output<Integer> maxDepth;
 
+    /**
+     * @return Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
+     * 
+     */
     public Optional<Output<Integer>> maxDepth() {
         return Optional.ofNullable(this.maxDepth);
     }
@@ -50,6 +58,10 @@ public final class StorageLensSelectionCriteriaArgs extends com.pulumi.resources
     @Import(name="minStorageBytesPercentage")
     private @Nullable Output<Double> minStorageBytesPercentage;
 
+    /**
+     * @return The minimum storage bytes threshold for the prefixes to be included in the analysis.
+     * 
+     */
     public Optional<Output<Double>> minStorageBytesPercentage() {
         return Optional.ofNullable(this.minStorageBytesPercentage);
     }
@@ -80,29 +92,65 @@ public final class StorageLensSelectionCriteriaArgs extends com.pulumi.resources
             $ = new StorageLensSelectionCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delimiter Delimiter to divide S3 key into hierarchy of prefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delimiter(@Nullable Output<String> delimiter) {
             $.delimiter = delimiter;
             return this;
         }
 
+        /**
+         * @param delimiter Delimiter to divide S3 key into hierarchy of prefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delimiter(String delimiter) {
             return delimiter(Output.of(delimiter));
         }
 
+        /**
+         * @param maxDepth Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
             $.maxDepth = maxDepth;
             return this;
         }
 
+        /**
+         * @param maxDepth Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDepth(Integer maxDepth) {
             return maxDepth(Output.of(maxDepth));
         }
 
+        /**
+         * @param minStorageBytesPercentage The minimum storage bytes threshold for the prefixes to be included in the analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minStorageBytesPercentage(@Nullable Output<Double> minStorageBytesPercentage) {
             $.minStorageBytesPercentage = minStorageBytesPercentage;
             return this;
         }
 
+        /**
+         * @param minStorageBytesPercentage The minimum storage bytes threshold for the prefixes to be included in the analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minStorageBytesPercentage(Double minStorageBytesPercentage) {
             return minStorageBytesPercentage(Output.of(minStorageBytesPercentage));
         }

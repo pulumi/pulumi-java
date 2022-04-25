@@ -23,6 +23,10 @@ public final class WebAclRuleOverrideActionArgs extends com.pulumi.resources.Res
     @Import(name="count")
     private @Nullable Output<WebAclRuleOverrideActionCountArgs> count;
 
+    /**
+     * @return Override the rule action setting to count (i.e., only count matches). Configured as an empty block `{}`.
+     * 
+     */
     public Optional<Output<WebAclRuleOverrideActionCountArgs>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -34,6 +38,10 @@ public final class WebAclRuleOverrideActionArgs extends com.pulumi.resources.Res
     @Import(name="none")
     private @Nullable Output<WebAclRuleOverrideActionNoneArgs> none;
 
+    /**
+     * @return Don&#39;t override the rule action setting. Configured as an empty block `{}`.
+     * 
+     */
     public Optional<Output<WebAclRuleOverrideActionNoneArgs>> none() {
         return Optional.ofNullable(this.none);
     }
@@ -63,20 +71,44 @@ public final class WebAclRuleOverrideActionArgs extends com.pulumi.resources.Res
             $ = new WebAclRuleOverrideActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Override the rule action setting to count (i.e., only count matches). Configured as an empty block `{}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<WebAclRuleOverrideActionCountArgs> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Override the rule action setting to count (i.e., only count matches). Configured as an empty block `{}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(WebAclRuleOverrideActionCountArgs count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param none Don&#39;t override the rule action setting. Configured as an empty block `{}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder none(@Nullable Output<WebAclRuleOverrideActionNoneArgs> none) {
             $.none = none;
             return this;
         }
 
+        /**
+         * @param none Don&#39;t override the rule action setting. Configured as an empty block `{}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder none(WebAclRuleOverrideActionNoneArgs none) {
             return none(Output.of(none));
         }

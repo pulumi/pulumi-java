@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudHealthcareV1ConsentPolicyResponse {
     /**
-     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
+     * @return The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
      * 
      */
     private final ExprResponse authorizationRule;
     /**
-     * The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+     * @return The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
      * 
      */
     private final List<AttributeResponse> resourceAttributes;
@@ -31,16 +31,16 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse {
     }
 
     /**
-     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
+     * @return The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
      * 
-    */
+     */
     public ExprResponse authorizationRule() {
         return this.authorizationRule;
     }
     /**
-     * The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+     * @return The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
      * 
-    */
+     */
     public List<AttributeResponse> resourceAttributes() {
         return this.resourceAttributes;
     }

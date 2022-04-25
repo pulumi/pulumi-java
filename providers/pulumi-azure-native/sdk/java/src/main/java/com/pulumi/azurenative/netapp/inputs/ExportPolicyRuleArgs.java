@@ -29,6 +29,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="allowedClients")
     private @Nullable Output<String> allowedClients;
 
+    /**
+     * @return Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
+     * 
+     */
     public Optional<Output<String>> allowedClients() {
         return Optional.ofNullable(this.allowedClients);
     }
@@ -40,6 +44,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cifs")
     private @Nullable Output<Boolean> cifs;
 
+    /**
+     * @return Allows CIFS protocol
+     * 
+     */
     public Optional<Output<Boolean>> cifs() {
         return Optional.ofNullable(this.cifs);
     }
@@ -51,6 +59,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hasRootAccess")
     private @Nullable Output<Boolean> hasRootAccess;
 
+    /**
+     * @return Has root access to volume
+     * 
+     */
     public Optional<Output<Boolean>> hasRootAccess() {
         return Optional.ofNullable(this.hasRootAccess);
     }
@@ -62,6 +74,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kerberos5ReadOnly")
     private @Nullable Output<Boolean> kerberos5ReadOnly;
 
+    /**
+     * @return Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
+     * 
+     */
     public Optional<Output<Boolean>> kerberos5ReadOnly() {
         return Optional.ofNullable(this.kerberos5ReadOnly);
     }
@@ -73,6 +89,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kerberos5ReadWrite")
     private @Nullable Output<Boolean> kerberos5ReadWrite;
 
+    /**
+     * @return Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
+     * 
+     */
     public Optional<Output<Boolean>> kerberos5ReadWrite() {
         return Optional.ofNullable(this.kerberos5ReadWrite);
     }
@@ -84,6 +104,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kerberos5iReadOnly")
     private @Nullable Output<Boolean> kerberos5iReadOnly;
 
+    /**
+     * @return Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
+     * 
+     */
     public Optional<Output<Boolean>> kerberos5iReadOnly() {
         return Optional.ofNullable(this.kerberos5iReadOnly);
     }
@@ -95,6 +119,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kerberos5iReadWrite")
     private @Nullable Output<Boolean> kerberos5iReadWrite;
 
+    /**
+     * @return Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
+     * 
+     */
     public Optional<Output<Boolean>> kerberos5iReadWrite() {
         return Optional.ofNullable(this.kerberos5iReadWrite);
     }
@@ -106,6 +134,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kerberos5pReadOnly")
     private @Nullable Output<Boolean> kerberos5pReadOnly;
 
+    /**
+     * @return Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
+     * 
+     */
     public Optional<Output<Boolean>> kerberos5pReadOnly() {
         return Optional.ofNullable(this.kerberos5pReadOnly);
     }
@@ -117,6 +149,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kerberos5pReadWrite")
     private @Nullable Output<Boolean> kerberos5pReadWrite;
 
+    /**
+     * @return Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
+     * 
+     */
     public Optional<Output<Boolean>> kerberos5pReadWrite() {
         return Optional.ofNullable(this.kerberos5pReadWrite);
     }
@@ -128,6 +164,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nfsv3")
     private @Nullable Output<Boolean> nfsv3;
 
+    /**
+     * @return Allows NFSv3 protocol. Enable only for NFSv3 type volumes
+     * 
+     */
     public Optional<Output<Boolean>> nfsv3() {
         return Optional.ofNullable(this.nfsv3);
     }
@@ -139,6 +179,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nfsv41")
     private @Nullable Output<Boolean> nfsv41;
 
+    /**
+     * @return Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
+     * 
+     */
     public Optional<Output<Boolean>> nfsv41() {
         return Optional.ofNullable(this.nfsv41);
     }
@@ -150,6 +194,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ruleIndex")
     private @Nullable Output<Integer> ruleIndex;
 
+    /**
+     * @return Order index
+     * 
+     */
     public Optional<Output<Integer>> ruleIndex() {
         return Optional.ofNullable(this.ruleIndex);
     }
@@ -161,6 +209,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="unixReadOnly")
     private @Nullable Output<Boolean> unixReadOnly;
 
+    /**
+     * @return Read only access
+     * 
+     */
     public Optional<Output<Boolean>> unixReadOnly() {
         return Optional.ofNullable(this.unixReadOnly);
     }
@@ -172,6 +224,10 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="unixReadWrite")
     private @Nullable Output<Boolean> unixReadWrite;
 
+    /**
+     * @return Read and write access
+     * 
+     */
     public Optional<Output<Boolean>> unixReadWrite() {
         return Optional.ofNullable(this.unixReadWrite);
     }
@@ -213,128 +269,296 @@ public final class ExportPolicyRuleArgs extends com.pulumi.resources.ResourceArg
             $ = new ExportPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedClients Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedClients(@Nullable Output<String> allowedClients) {
             $.allowedClients = allowedClients;
             return this;
         }
 
+        /**
+         * @param allowedClients Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedClients(String allowedClients) {
             return allowedClients(Output.of(allowedClients));
         }
 
+        /**
+         * @param cifs Allows CIFS protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder cifs(@Nullable Output<Boolean> cifs) {
             $.cifs = cifs;
             return this;
         }
 
+        /**
+         * @param cifs Allows CIFS protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder cifs(Boolean cifs) {
             return cifs(Output.of(cifs));
         }
 
+        /**
+         * @param hasRootAccess Has root access to volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasRootAccess(@Nullable Output<Boolean> hasRootAccess) {
             $.hasRootAccess = hasRootAccess;
             return this;
         }
 
+        /**
+         * @param hasRootAccess Has root access to volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasRootAccess(Boolean hasRootAccess) {
             return hasRootAccess(Output.of(hasRootAccess));
         }
 
+        /**
+         * @param kerberos5ReadOnly Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5ReadOnly(@Nullable Output<Boolean> kerberos5ReadOnly) {
             $.kerberos5ReadOnly = kerberos5ReadOnly;
             return this;
         }
 
+        /**
+         * @param kerberos5ReadOnly Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5ReadOnly(Boolean kerberos5ReadOnly) {
             return kerberos5ReadOnly(Output.of(kerberos5ReadOnly));
         }
 
+        /**
+         * @param kerberos5ReadWrite Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5ReadWrite(@Nullable Output<Boolean> kerberos5ReadWrite) {
             $.kerberos5ReadWrite = kerberos5ReadWrite;
             return this;
         }
 
+        /**
+         * @param kerberos5ReadWrite Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5ReadWrite(Boolean kerberos5ReadWrite) {
             return kerberos5ReadWrite(Output.of(kerberos5ReadWrite));
         }
 
+        /**
+         * @param kerberos5iReadOnly Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5iReadOnly(@Nullable Output<Boolean> kerberos5iReadOnly) {
             $.kerberos5iReadOnly = kerberos5iReadOnly;
             return this;
         }
 
+        /**
+         * @param kerberos5iReadOnly Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5iReadOnly(Boolean kerberos5iReadOnly) {
             return kerberos5iReadOnly(Output.of(kerberos5iReadOnly));
         }
 
+        /**
+         * @param kerberos5iReadWrite Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5iReadWrite(@Nullable Output<Boolean> kerberos5iReadWrite) {
             $.kerberos5iReadWrite = kerberos5iReadWrite;
             return this;
         }
 
+        /**
+         * @param kerberos5iReadWrite Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5iReadWrite(Boolean kerberos5iReadWrite) {
             return kerberos5iReadWrite(Output.of(kerberos5iReadWrite));
         }
 
+        /**
+         * @param kerberos5pReadOnly Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5pReadOnly(@Nullable Output<Boolean> kerberos5pReadOnly) {
             $.kerberos5pReadOnly = kerberos5pReadOnly;
             return this;
         }
 
+        /**
+         * @param kerberos5pReadOnly Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5pReadOnly(Boolean kerberos5pReadOnly) {
             return kerberos5pReadOnly(Output.of(kerberos5pReadOnly));
         }
 
+        /**
+         * @param kerberos5pReadWrite Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5pReadWrite(@Nullable Output<Boolean> kerberos5pReadWrite) {
             $.kerberos5pReadWrite = kerberos5pReadWrite;
             return this;
         }
 
+        /**
+         * @param kerberos5pReadWrite Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberos5pReadWrite(Boolean kerberos5pReadWrite) {
             return kerberos5pReadWrite(Output.of(kerberos5pReadWrite));
         }
 
+        /**
+         * @param nfsv3 Allows NFSv3 protocol. Enable only for NFSv3 type volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsv3(@Nullable Output<Boolean> nfsv3) {
             $.nfsv3 = nfsv3;
             return this;
         }
 
+        /**
+         * @param nfsv3 Allows NFSv3 protocol. Enable only for NFSv3 type volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsv3(Boolean nfsv3) {
             return nfsv3(Output.of(nfsv3));
         }
 
+        /**
+         * @param nfsv41 Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsv41(@Nullable Output<Boolean> nfsv41) {
             $.nfsv41 = nfsv41;
             return this;
         }
 
+        /**
+         * @param nfsv41 Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsv41(Boolean nfsv41) {
             return nfsv41(Output.of(nfsv41));
         }
 
+        /**
+         * @param ruleIndex Order index
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleIndex(@Nullable Output<Integer> ruleIndex) {
             $.ruleIndex = ruleIndex;
             return this;
         }
 
+        /**
+         * @param ruleIndex Order index
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleIndex(Integer ruleIndex) {
             return ruleIndex(Output.of(ruleIndex));
         }
 
+        /**
+         * @param unixReadOnly Read only access
+         * 
+         * @return builder
+         * 
+         */
         public Builder unixReadOnly(@Nullable Output<Boolean> unixReadOnly) {
             $.unixReadOnly = unixReadOnly;
             return this;
         }
 
+        /**
+         * @param unixReadOnly Read only access
+         * 
+         * @return builder
+         * 
+         */
         public Builder unixReadOnly(Boolean unixReadOnly) {
             return unixReadOnly(Output.of(unixReadOnly));
         }
 
+        /**
+         * @param unixReadWrite Read and write access
+         * 
+         * @return builder
+         * 
+         */
         public Builder unixReadWrite(@Nullable Output<Boolean> unixReadWrite) {
             $.unixReadWrite = unixReadWrite;
             return this;
         }
 
+        /**
+         * @param unixReadWrite Read and write access
+         * 
+         * @return builder
+         * 
+         */
         public Builder unixReadWrite(Boolean unixReadWrite) {
             return unixReadWrite(Output.of(unixReadWrite));
         }

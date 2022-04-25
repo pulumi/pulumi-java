@@ -18,72 +18,72 @@ import java.util.Objects;
 @CustomType
 public final class AutomaticScalingResponse {
     /**
-     * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
+     * @return The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
      * 
      */
     private final String coolDownPeriod;
     /**
-     * Target scaling by CPU usage.
+     * @return Target scaling by CPU usage.
      * 
      */
     private final CpuUtilizationResponse cpuUtilization;
     /**
-     * Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
+     * @return Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
      * 
      */
     private final List<CustomMetricResponse> customMetrics;
     /**
-     * Target scaling by disk usage.
+     * @return Target scaling by disk usage.
      * 
      */
     private final DiskUtilizationResponse diskUtilization;
     /**
-     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
+     * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
      * 
      */
     private final Integer maxConcurrentRequests;
     /**
-     * Maximum number of idle instances that should be maintained for this version.
+     * @return Maximum number of idle instances that should be maintained for this version.
      * 
      */
     private final Integer maxIdleInstances;
     /**
-     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * 
      */
     private final String maxPendingLatency;
     /**
-     * Maximum number of instances that should be started to handle requests for this version.
+     * @return Maximum number of instances that should be started to handle requests for this version.
      * 
      */
     private final Integer maxTotalInstances;
     /**
-     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
      */
     private final Integer minIdleInstances;
     /**
-     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * 
      */
     private final String minPendingLatency;
     /**
-     * Minimum number of running instances that should be maintained for this version.
+     * @return Minimum number of running instances that should be maintained for this version.
      * 
      */
     private final Integer minTotalInstances;
     /**
-     * Target scaling by network usage.
+     * @return Target scaling by network usage.
      * 
      */
     private final NetworkUtilizationResponse networkUtilization;
     /**
-     * Target scaling by request utilization.
+     * @return Target scaling by request utilization.
      * 
      */
     private final RequestUtilizationResponse requestUtilization;
     /**
-     * Scheduler settings for standard environment.
+     * @return Scheduler settings for standard environment.
      * 
      */
     private final StandardSchedulerSettingsResponse standardSchedulerSettings;
@@ -121,100 +121,100 @@ public final class AutomaticScalingResponse {
     }
 
     /**
-     * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
+     * @return The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
      * 
-    */
+     */
     public String coolDownPeriod() {
         return this.coolDownPeriod;
     }
     /**
-     * Target scaling by CPU usage.
+     * @return Target scaling by CPU usage.
      * 
-    */
+     */
     public CpuUtilizationResponse cpuUtilization() {
         return this.cpuUtilization;
     }
     /**
-     * Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
+     * @return Target scaling by user-provided metrics. Only applicable in the App Engine flexible environment.
      * 
-    */
+     */
     public List<CustomMetricResponse> customMetrics() {
         return this.customMetrics;
     }
     /**
-     * Target scaling by disk usage.
+     * @return Target scaling by disk usage.
      * 
-    */
+     */
     public DiskUtilizationResponse diskUtilization() {
         return this.diskUtilization;
     }
     /**
-     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
+     * @return Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
      * 
-    */
+     */
     public Integer maxConcurrentRequests() {
         return this.maxConcurrentRequests;
     }
     /**
-     * Maximum number of idle instances that should be maintained for this version.
+     * @return Maximum number of idle instances that should be maintained for this version.
      * 
-    */
+     */
     public Integer maxIdleInstances() {
         return this.maxIdleInstances;
     }
     /**
-     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
+     * @return Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * 
-    */
+     */
     public String maxPendingLatency() {
         return this.maxPendingLatency;
     }
     /**
-     * Maximum number of instances that should be started to handle requests for this version.
+     * @return Maximum number of instances that should be started to handle requests for this version.
      * 
-    */
+     */
     public Integer maxTotalInstances() {
         return this.maxTotalInstances;
     }
     /**
-     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
+     * @return Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
-    */
+     */
     public Integer minIdleInstances() {
         return this.minIdleInstances;
     }
     /**
-     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
+     * @return Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * 
-    */
+     */
     public String minPendingLatency() {
         return this.minPendingLatency;
     }
     /**
-     * Minimum number of running instances that should be maintained for this version.
+     * @return Minimum number of running instances that should be maintained for this version.
      * 
-    */
+     */
     public Integer minTotalInstances() {
         return this.minTotalInstances;
     }
     /**
-     * Target scaling by network usage.
+     * @return Target scaling by network usage.
      * 
-    */
+     */
     public NetworkUtilizationResponse networkUtilization() {
         return this.networkUtilization;
     }
     /**
-     * Target scaling by request utilization.
+     * @return Target scaling by request utilization.
      * 
-    */
+     */
     public RequestUtilizationResponse requestUtilization() {
         return this.requestUtilization;
     }
     /**
-     * Scheduler settings for standard environment.
+     * @return Scheduler settings for standard environment.
      * 
-    */
+     */
     public StandardSchedulerSettingsResponse standardSchedulerSettings() {
         return this.standardSchedulerSettings;
     }

@@ -36,6 +36,10 @@ public final class PackagingConfigurationCmafPackage extends com.pulumi.resource
     @Import(name="hlsManifests", required=true)
     private List<PackagingConfigurationHlsManifest> hlsManifests;
 
+    /**
+     * @return A list of HLS manifest configurations.
+     * 
+     */
     public List<PackagingConfigurationHlsManifest> hlsManifests() {
         return this.hlsManifests;
     }
@@ -47,6 +51,10 @@ public final class PackagingConfigurationCmafPackage extends com.pulumi.resource
     @Import(name="includeEncoderConfigurationInSegments")
     private @Nullable Boolean includeEncoderConfigurationInSegments;
 
+    /**
+     * @return When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder&#39;s Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
+     * 
+     */
     public Optional<Boolean> includeEncoderConfigurationInSegments() {
         return Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
@@ -90,15 +98,33 @@ public final class PackagingConfigurationCmafPackage extends com.pulumi.resource
             return this;
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
             $.hlsManifests = hlsManifests;
             return this;
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(PackagingConfigurationHlsManifest... hlsManifests) {
             return hlsManifests(List.of(hlsManifests));
         }
 
+        /**
+         * @param includeEncoderConfigurationInSegments When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder&#39;s Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
             $.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;

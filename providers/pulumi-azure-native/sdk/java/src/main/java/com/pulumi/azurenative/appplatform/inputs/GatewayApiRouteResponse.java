@@ -28,6 +28,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A description, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="filters")
     private @Nullable List<String> filters;
 
+    /**
+     * @return To modify the request before sending it to the target endpoint, or the received response.
+     * 
+     */
     public Optional<List<String>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -50,6 +58,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="order")
     private @Nullable Integer order;
 
+    /**
+     * @return Route processing order.
+     * 
+     */
     public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
@@ -61,6 +73,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="predicates")
     private @Nullable List<String> predicates;
 
+    /**
+     * @return A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
+     * 
+     */
     public Optional<List<String>> predicates() {
         return Optional.ofNullable(this.predicates);
     }
@@ -72,6 +88,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ssoEnabled")
     private @Nullable Boolean ssoEnabled;
 
+    /**
+     * @return Enable sso validation.
+     * 
+     */
     public Optional<Boolean> ssoEnabled() {
         return Optional.ofNullable(this.ssoEnabled);
     }
@@ -83,6 +103,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tags")
     private @Nullable List<String> tags;
 
+    /**
+     * @return Classification tags, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     public Optional<List<String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -94,6 +118,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return A title, will be applied to methods in the generated OpenAPI documentation.
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -105,6 +133,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tokenRelay")
     private @Nullable Boolean tokenRelay;
 
+    /**
+     * @return Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
+     * 
+     */
     public Optional<Boolean> tokenRelay() {
         return Optional.ofNullable(this.tokenRelay);
     }
@@ -116,6 +148,10 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return Full uri, will override `appName`.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -152,58 +188,130 @@ public final class GatewayApiRouteResponse extends com.pulumi.resources.InvokeAr
             $ = new GatewayApiRouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description, will be applied to methods in the generated OpenAPI documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param filters To modify the request before sending it to the target endpoint, or the received response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<String> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters To modify the request before sending it to the target endpoint, or the received response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(String... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param order Route processing order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable Integer order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param predicates A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predicates(@Nullable List<String> predicates) {
             $.predicates = predicates;
             return this;
         }
 
+        /**
+         * @param predicates A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predicates(String... predicates) {
             return predicates(List.of(predicates));
         }
 
+        /**
+         * @param ssoEnabled Enable sso validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
             $.ssoEnabled = ssoEnabled;
             return this;
         }
 
+        /**
+         * @param tags Classification tags, will be applied to methods in the generated OpenAPI documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable List<String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Classification tags, will be applied to methods in the generated OpenAPI documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param title A title, will be applied to methods in the generated OpenAPI documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param tokenRelay Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenRelay(@Nullable Boolean tokenRelay) {
             $.tokenRelay = tokenRelay;
             return this;
         }
 
+        /**
+         * @param uri Full uri, will override `appName`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

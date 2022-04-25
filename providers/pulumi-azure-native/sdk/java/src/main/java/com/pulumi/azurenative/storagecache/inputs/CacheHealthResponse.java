@@ -27,6 +27,10 @@ public final class CacheHealthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
     private List<ConditionResponse> conditions;
 
+    /**
+     * @return Outstanding conditions that need to be investigated and resolved.
+     * 
+     */
     public List<ConditionResponse> conditions() {
         return this.conditions;
     }
@@ -38,6 +42,10 @@ public final class CacheHealthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return List of Cache health states.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -49,6 +57,10 @@ public final class CacheHealthResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="statusDescription")
     private @Nullable String statusDescription;
 
+    /**
+     * @return Describes explanation of state.
+     * 
+     */
     public Optional<String> statusDescription() {
         return Optional.ofNullable(this.statusDescription);
     }
@@ -79,20 +91,44 @@ public final class CacheHealthResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CacheHealthResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Outstanding conditions that need to be investigated and resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Outstanding conditions that need to be investigated and resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param state List of Cache health states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param statusDescription Describes explanation of state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusDescription(@Nullable String statusDescription) {
             $.statusDescription = statusDescription;
             return this;

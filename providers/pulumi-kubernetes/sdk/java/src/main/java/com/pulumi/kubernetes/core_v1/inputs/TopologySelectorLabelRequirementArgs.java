@@ -25,6 +25,10 @@ public final class TopologySelectorLabelRequirementArgs extends com.pulumi.resou
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The label key that the selector applies to.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -36,6 +40,10 @@ public final class TopologySelectorLabelRequirementArgs extends com.pulumi.resou
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -65,24 +73,54 @@ public final class TopologySelectorLabelRequirementArgs extends com.pulumi.resou
             $ = new TopologySelectorLabelRequirementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The label key that the selector applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The label key that the selector applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param values An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

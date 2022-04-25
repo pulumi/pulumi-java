@@ -28,6 +28,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the event type.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -39,6 +43,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="createdTime")
     private @Nullable Output<String> createdTime;
 
+    /**
+     * @return The time when the event type was created.
+     * 
+     */
     public Optional<Output<String>> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -50,6 +58,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the event type.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -89,6 +101,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="lastUpdatedTime")
     private @Nullable Output<String> lastUpdatedTime;
 
+    /**
+     * @return The time when the event type was last updated.
+     * 
+     */
     public Optional<Output<String>> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -100,6 +116,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the event type
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -111,6 +131,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<List<DetectorTagArgs>> tags;
 
+    /**
+     * @return Tags associated with this event type.
+     * 
+     */
     public Optional<Output<List<DetectorTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -148,29 +172,65 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
             $ = new DetectorEventTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param createdTime The time when the event type was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable Output<String> createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param createdTime The time when the event type was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             return createdTime(Output.of(createdTime));
         }
 
+        /**
+         * @param description The description of the event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -223,33 +283,75 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
             return labels(List.of(labels));
         }
 
+        /**
+         * @param lastUpdatedTime The time when the event type was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime The time when the event type was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
 
+        /**
+         * @param name The name for the event type
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the event type
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DetectorTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DetectorTagArgs... tags) {
             return tags(List.of(tags));
         }

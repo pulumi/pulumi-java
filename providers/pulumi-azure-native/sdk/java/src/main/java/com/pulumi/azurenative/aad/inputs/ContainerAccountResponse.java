@@ -25,6 +25,10 @@ public final class ContainerAccountResponse extends com.pulumi.resources.InvokeA
     @Import(name="accountName")
     private @Nullable String accountName;
 
+    /**
+     * @return The account name
+     * 
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -36,6 +40,10 @@ public final class ContainerAccountResponse extends com.pulumi.resources.InvokeA
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The account password
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -47,6 +55,10 @@ public final class ContainerAccountResponse extends com.pulumi.resources.InvokeA
     @Import(name="spn")
     private @Nullable String spn;
 
+    /**
+     * @return The account spn
+     * 
+     */
     public Optional<String> spn() {
         return Optional.ofNullable(this.spn);
     }
@@ -77,16 +89,34 @@ public final class ContainerAccountResponse extends com.pulumi.resources.InvokeA
             $ = new ContainerAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The account name
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param password The account password
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param spn The account spn
+         * 
+         * @return builder
+         * 
+         */
         public Builder spn(@Nullable String spn) {
             $.spn = spn;
             return this;

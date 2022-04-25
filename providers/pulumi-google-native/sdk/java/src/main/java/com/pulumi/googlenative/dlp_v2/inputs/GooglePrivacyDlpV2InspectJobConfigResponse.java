@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
     @Import(name="actions", required=true)
     private List<GooglePrivacyDlpV2ActionResponse> actions;
 
+    /**
+     * @return Actions to execute at the completion of the job.
+     * 
+     */
     public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
     @Import(name="inspectConfig", required=true)
     private GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
+    /**
+     * @return How and what to scan for.
+     * 
+     */
     public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
     }
@@ -49,6 +57,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
     @Import(name="inspectTemplateName", required=true)
     private String inspectTemplateName;
 
+    /**
+     * @return If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
+     * 
+     */
     public String inspectTemplateName() {
         return this.inspectTemplateName;
     }
@@ -60,6 +72,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
     @Import(name="storageConfig", required=true)
     private GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 
+    /**
+     * @return The data to scan.
+     * 
+     */
     public GooglePrivacyDlpV2StorageConfigResponse storageConfig() {
         return this.storageConfig;
     }
@@ -91,25 +107,55 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2InspectJobConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions Actions to execute at the completion of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<GooglePrivacyDlpV2ActionResponse> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions Actions to execute at the completion of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(GooglePrivacyDlpV2ActionResponse... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param inspectConfig How and what to scan for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
             $.inspectConfig = inspectConfig;
             return this;
         }
 
+        /**
+         * @param inspectTemplateName If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectTemplateName(String inspectTemplateName) {
             $.inspectTemplateName = inspectTemplateName;
             return this;
         }
 
+        /**
+         * @param storageConfig The data to scan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfig(GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
             $.storageConfig = storageConfig;
             return this;

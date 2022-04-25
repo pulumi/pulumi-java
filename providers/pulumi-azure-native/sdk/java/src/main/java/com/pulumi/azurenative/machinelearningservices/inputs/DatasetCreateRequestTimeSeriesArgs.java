@@ -22,6 +22,10 @@ public final class DatasetCreateRequestTimeSeriesArgs extends com.pulumi.resourc
     @Import(name="coarseGrainTimestamp")
     private @Nullable Output<String> coarseGrainTimestamp;
 
+    /**
+     * @return Column name to be used as CoarseGrainTimestamp. Can only be used if &#39;fineGrainTimestamp&#39; is specified and cannot be same as &#39;fineGrainTimestamp&#39;.
+     * 
+     */
     public Optional<Output<String>> coarseGrainTimestamp() {
         return Optional.ofNullable(this.coarseGrainTimestamp);
     }
@@ -33,6 +37,10 @@ public final class DatasetCreateRequestTimeSeriesArgs extends com.pulumi.resourc
     @Import(name="fineGrainTimestamp")
     private @Nullable Output<String> fineGrainTimestamp;
 
+    /**
+     * @return  Column name to be used as FineGrainTimestamp
+     * 
+     */
     public Optional<Output<String>> fineGrainTimestamp() {
         return Optional.ofNullable(this.fineGrainTimestamp);
     }
@@ -62,20 +70,44 @@ public final class DatasetCreateRequestTimeSeriesArgs extends com.pulumi.resourc
             $ = new DatasetCreateRequestTimeSeriesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coarseGrainTimestamp Column name to be used as CoarseGrainTimestamp. Can only be used if &#39;fineGrainTimestamp&#39; is specified and cannot be same as &#39;fineGrainTimestamp&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coarseGrainTimestamp(@Nullable Output<String> coarseGrainTimestamp) {
             $.coarseGrainTimestamp = coarseGrainTimestamp;
             return this;
         }
 
+        /**
+         * @param coarseGrainTimestamp Column name to be used as CoarseGrainTimestamp. Can only be used if &#39;fineGrainTimestamp&#39; is specified and cannot be same as &#39;fineGrainTimestamp&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coarseGrainTimestamp(String coarseGrainTimestamp) {
             return coarseGrainTimestamp(Output.of(coarseGrainTimestamp));
         }
 
+        /**
+         * @param fineGrainTimestamp  Column name to be used as FineGrainTimestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder fineGrainTimestamp(@Nullable Output<String> fineGrainTimestamp) {
             $.fineGrainTimestamp = fineGrainTimestamp;
             return this;
         }
 
+        /**
+         * @param fineGrainTimestamp  Column name to be used as FineGrainTimestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder fineGrainTimestamp(String fineGrainTimestamp) {
             return fineGrainTimestamp(Output.of(fineGrainTimestamp));
         }

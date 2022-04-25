@@ -52,6 +52,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonsConfig")
     private @Nullable Output<ClusterAddonsConfigGetArgs> addonsConfig;
 
+    /**
+     * @return The configuration for addons supported by GKE.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigGetArgs>> addonsConfig() {
         return Optional.ofNullable(this.addonsConfig);
     }
@@ -65,6 +70,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticatorGroupsConfig")
     private @Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig;
 
+    /**
+     * @return Configuration for the
+     * [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterAuthenticatorGroupsConfigGetArgs>> authenticatorGroupsConfig() {
         return Optional.ofNullable(this.authenticatorGroupsConfig);
     }
@@ -80,6 +91,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterAutoscaling")
     private @Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling;
 
+    /**
+     * @return Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+     * automatically adjust the size of the cluster and create/delete node pools based
+     * on the current needs of the cluster&#39;s workload. See the
+     * [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+     * for more details. Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterClusterAutoscalingGetArgs>> clusterAutoscaling() {
         return Optional.ofNullable(this.clusterAutoscaling);
     }
@@ -94,6 +113,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterIpv4Cidr")
     private @Nullable Output<String> clusterIpv4Cidr;
 
+    /**
+     * @return The IP address range of the Kubernetes pods
+     * in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
+     * automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
+     * only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+     * 
+     */
     public Optional<Output<String>> clusterIpv4Cidr() {
         return Optional.ofNullable(this.clusterIpv4Cidr);
     }
@@ -107,6 +133,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterTelemetry")
     private @Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry;
 
+    /**
+     * @return Configuration for
+     * [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterClusterTelemetryGetArgs>> clusterTelemetry() {
         return Optional.ofNullable(this.clusterTelemetry);
     }
@@ -118,6 +150,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="confidentialNodes")
     private @Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes;
 
+    /**
+     * @return Configuration for [Confidential Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/confidential-gke-nodes) feature. Structure is documented below documented below.
+     * 
+     */
     public Optional<Output<ClusterConfidentialNodesGetArgs>> confidentialNodes() {
         return Optional.ofNullable(this.confidentialNodes);
     }
@@ -129,6 +165,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseEncryption")
     private @Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption;
 
+    /**
+     * @return Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterDatabaseEncryptionGetArgs>> databaseEncryption() {
         return Optional.ofNullable(this.databaseEncryption);
     }
@@ -140,6 +180,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="datapathProvider")
     private @Nullable Output<String> datapathProvider;
 
+    /**
+     * @return The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+     * 
+     */
     public Optional<Output<String>> datapathProvider() {
         return Optional.ofNullable(this.datapathProvider);
     }
@@ -154,6 +198,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultMaxPodsPerNode")
     private @Nullable Output<Integer> defaultMaxPodsPerNode;
 
+    /**
+     * @return The default maximum number of pods
+     * per node in this cluster. This doesn&#39;t work on &#34;routes-based&#34; clusters, clusters
+     * that don&#39;t have IP Aliasing enabled. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+     * for more information.
+     * 
+     */
     public Optional<Output<Integer>> defaultMaxPodsPerNode() {
         return Optional.ofNullable(this.defaultMaxPodsPerNode);
     }
@@ -165,6 +216,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultSnatStatus")
     private @Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus;
 
+    /**
+     * @return [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
+     * 
+     */
     public Optional<Output<ClusterDefaultSnatStatusGetArgs>> defaultSnatStatus() {
         return Optional.ofNullable(this.defaultSnatStatus);
     }
@@ -176,6 +231,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the cluster.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -187,6 +246,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsConfig")
     private @Nullable Output<ClusterDnsConfigGetArgs> dnsConfig;
 
+    /**
+     * @return Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterDnsConfigGetArgs>> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
@@ -201,6 +264,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableAutopilot")
     private @Nullable Output<Boolean> enableAutopilot;
 
+    /**
+     * @return Enable Autopilot for this cluster. Defaults to `false`.
+     * Note that when this option is enabled, certain features of Standard GKE are not available.
+     * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+     * for available features.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutopilot() {
         return Optional.ofNullable(this.enableAutopilot);
     }
@@ -213,6 +283,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBinaryAuthorization")
     private @Nullable Output<Boolean> enableBinaryAuthorization;
 
+    /**
+     * @return Enable Binary Authorization for this cluster.
+     * If enabled, all container images will be validated by Google Binary Authorization.
+     * 
+     */
     public Optional<Output<Boolean>> enableBinaryAuthorization() {
         return Optional.ofNullable(this.enableBinaryAuthorization);
     }
@@ -224,6 +299,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableIntranodeVisibility")
     private @Nullable Output<Boolean> enableIntranodeVisibility;
 
+    /**
+     * @return Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+     * 
+     */
     public Optional<Output<Boolean>> enableIntranodeVisibility() {
         return Optional.ofNullable(this.enableIntranodeVisibility);
     }
@@ -237,6 +316,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableKubernetesAlpha")
     private @Nullable Output<Boolean> enableKubernetesAlpha;
 
+    /**
+     * @return Whether to enable Kubernetes Alpha features for
+     * this cluster. Note that when this option is enabled, the cluster cannot be upgraded
+     * and will be automatically deleted after 30 days.
+     * 
+     */
     public Optional<Output<Boolean>> enableKubernetesAlpha() {
         return Optional.ofNullable(this.enableKubernetesAlpha);
     }
@@ -248,6 +333,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableL4IlbSubsetting")
     private @Nullable Output<Boolean> enableL4IlbSubsetting;
 
+    /**
+     * @return Whether L4ILB Subsetting is enabled for this cluster.
+     * 
+     */
     public Optional<Output<Boolean>> enableL4IlbSubsetting() {
         return Optional.ofNullable(this.enableL4IlbSubsetting);
     }
@@ -262,6 +351,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableLegacyAbac")
     private @Nullable Output<Boolean> enableLegacyAbac;
 
+    /**
+     * @return Whether the ABAC authorizer is enabled for this cluster.
+     * When enabled, identities in the system, including service accounts, nodes, and controllers,
+     * will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
+     * Defaults to `false`
+     * 
+     */
     public Optional<Output<Boolean>> enableLegacyAbac() {
         return Optional.ofNullable(this.enableLegacyAbac);
     }
@@ -273,6 +369,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableShieldedNodes")
     private @Nullable Output<Boolean> enableShieldedNodes;
 
+    /**
+     * @return Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enableShieldedNodes() {
         return Optional.ofNullable(this.enableShieldedNodes);
     }
@@ -285,6 +385,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableTpu")
     private @Nullable Output<Boolean> enableTpu;
 
+    /**
+     * @return Whether to enable Cloud TPU resources in this cluster.
+     * See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
+     * 
+     */
     public Optional<Output<Boolean>> enableTpu() {
         return Optional.ofNullable(this.enableTpu);
     }
@@ -296,6 +401,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
     private @Nullable Output<String> endpoint;
 
+    /**
+     * @return The IP address of this cluster&#39;s Kubernetes master.
+     * 
+     */
     public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -307,6 +416,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityServiceConfig")
     private @Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig;
 
+    /**
+     * @return . Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterIdentityServiceConfigGetArgs>> identityServiceConfig() {
         return Optional.ofNullable(this.identityServiceConfig);
     }
@@ -323,6 +436,15 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="initialNodeCount")
     private @Nullable Output<Integer> initialNodeCount;
 
+    /**
+     * @return The number of nodes to create in this
+     * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+     * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+     * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
+     * set this to a value of at least `1`, alongside setting
+     * `remove_default_node_pool` to `true`.
+     * 
+     */
     public Optional<Output<Integer>> initialNodeCount() {
         return Optional.ofNullable(this.initialNodeCount);
     }
@@ -337,6 +459,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAllocationPolicy")
     private @Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy;
 
+    /**
+     * @return Configuration of cluster IP allocation for
+     * VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+     * making the cluster VPC-native instead of routes-based. Structure is documented
+     * below.
+     * 
+     */
     public Optional<Output<ClusterIpAllocationPolicyGetArgs>> ipAllocationPolicy() {
         return Optional.ofNullable(this.ipAllocationPolicy);
     }
@@ -348,6 +477,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
     private @Nullable Output<String> labelFingerprint;
 
+    /**
+     * @return The fingerprint of the set of labels for this cluster.
+     * 
+     */
     public Optional<Output<String>> labelFingerprint() {
         return Optional.ofNullable(this.labelFingerprint);
     }
@@ -364,6 +497,15 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location (region or zone) in which the cluster
+     * master will be created, as well as the default node location. If you specify a
+     * zone (such as `us-central1-a`), the cluster will be a zonal cluster with a
+     * single cluster master. If you specify a region (such as `us-west1`), the
+     * cluster will be a regional cluster with multiple masters spread across zones in
+     * the region, and with default node locations in those zones as well
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -376,6 +518,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfig")
     private @Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig;
 
+    /**
+     * @return Logging configuration for the cluster.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterLoggingConfigGetArgs>> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
@@ -389,6 +536,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingService")
     private @Nullable Output<String> loggingService;
 
+    /**
+     * @return The logging service that the cluster should
+     * write logs to. Available options include `logging.googleapis.com`(Legacy Stackdriver),
+     * `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
+     * 
+     */
     public Optional<Output<String>> loggingService() {
         return Optional.ofNullable(this.loggingService);
     }
@@ -401,6 +554,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
     private @Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy;
 
+    /**
+     * @return The maintenance policy to use for the cluster. Structure is
+     * documented below.
+     * 
+     */
     public Optional<Output<ClusterMaintenancePolicyGetArgs>> maintenancePolicy() {
         return Optional.ofNullable(this.maintenancePolicy);
     }
@@ -417,6 +575,15 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterAuth")
     private @Nullable Output<ClusterMasterAuthGetArgs> masterAuth;
 
+    /**
+     * @return The authentication information for accessing the
+     * Kubernetes master. Some values in this block are only returned by the API if
+     * your service account has permission to get credentials for your GKE cluster. If
+     * you see an unexpected diff unsetting your client cert, ensure you have the
+     * `container.clusters.getCredentials` permission.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterMasterAuthGetArgs>> masterAuth() {
         return Optional.ofNullable(this.masterAuth);
     }
@@ -432,6 +599,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterAuthorizedNetworksConfig")
     private @Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
 
+    /**
+     * @return The desired
+     * configuration options for master authorized networks. Omit the
+     * nested `cidr_blocks` attribute to disallow external access (except
+     * the cluster node IPs, which GKE automatically whitelists).
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterMasterAuthorizedNetworksConfigGetArgs>> masterAuthorizedNetworksConfig() {
         return Optional.ofNullable(this.masterAuthorizedNetworksConfig);
     }
@@ -445,6 +620,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterVersion")
     private @Nullable Output<String> masterVersion;
 
+    /**
+     * @return The current version of the master in the cluster. This may
+     * be different than the `min_master_version` set in the config if the master
+     * has been updated by GKE.
+     * 
+     */
     public Optional<Output<String>> masterVersion() {
         return Optional.ofNullable(this.masterVersion);
     }
@@ -464,6 +645,18 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minMasterVersion")
     private @Nullable Output<String> minMasterVersion;
 
+    /**
+     * @return The minimum version of the master. GKE
+     * will auto-update the master to new versions, so this does not guarantee the
+     * current master version--use the read-only `master_version` field to obtain that.
+     * If unset, the cluster&#39;s version will be set by GKE to the version of the most recent
+     * official release (which is not necessarily the latest version).  Most users will find
+     * the `gcp.container.getEngineVersions` data source useful - it indicates which versions
+     * are available. If you intend to specify versions manually,
+     * [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
+     * describe the various acceptable formats for this field.
+     * 
+     */
     public Optional<Output<String>> minMasterVersion() {
         return Optional.ofNullable(this.minMasterVersion);
     }
@@ -476,6 +669,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitoringConfig")
     private @Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig;
 
+    /**
+     * @return Monitoring configuration for the cluster.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterMonitoringConfigGetArgs>> monitoringConfig() {
         return Optional.ofNullable(this.monitoringConfig);
     }
@@ -493,6 +691,16 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitoringService")
     private @Nullable Output<String> monitoringService;
 
+    /**
+     * @return The monitoring service that the cluster
+     * should write metrics to.
+     * Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
+     * VM metrics will be collected by Google Compute Engine regardless of this setting
+     * Available options include
+     * `monitoring.googleapis.com`(Legacy Stackdriver), `monitoring.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Monitoring), and `none`.
+     * Defaults to `monitoring.googleapis.com/kubernetes`
+     * 
+     */
     public Optional<Output<String>> monitoringService() {
         return Optional.ofNullable(this.monitoringService);
     }
@@ -505,6 +713,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the cluster, unique within the project and
+     * location.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -518,6 +731,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The name or self_link of the Google Compute Engine
+     * network to which the cluster is connected. For Shared VPC, set this to the self link of the
+     * shared network.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -531,6 +750,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkPolicy")
     private @Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy;
 
+    /**
+     * @return Configuration options for the
+     * [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
+     * feature. Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterNetworkPolicyGetArgs>> networkPolicy() {
         return Optional.ofNullable(this.networkPolicy);
     }
@@ -544,6 +769,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkingMode")
     private @Nullable Output<String> networkingMode;
 
+    /**
+     * @return Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+     * Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+     * and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+     * 
+     */
     public Optional<Output<String>> networkingMode() {
         return Optional.ofNullable(this.networkingMode);
     }
@@ -559,6 +790,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeConfig")
     private @Nullable Output<ClusterNodeConfigGetArgs> nodeConfig;
 
+    /**
+     * @return Parameters used in creating the default node pool.
+     * Generally, this field should not be used at the same time as a
+     * `gcp.container.NodePool` or a `node_pool` block; this configuration
+     * manages the default node pool, which isn&#39;t recommended to be used.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterNodeConfigGetArgs>> nodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
@@ -573,6 +812,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeLocations")
     private @Nullable Output<List<String>> nodeLocations;
 
+    /**
+     * @return The list of zones in which the cluster&#39;s nodes
+     * are located. Nodes must be in the region of their regional cluster or in the
+     * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+     * a zonal cluster, omit the cluster&#39;s zone.
+     * 
+     */
     public Optional<Output<List<String>>> nodeLocations() {
         return Optional.ofNullable(this.nodeLocations);
     }
@@ -589,6 +835,15 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodePools")
     private @Nullable Output<List<ClusterNodePoolGetArgs>> nodePools;
 
+    /**
+     * @return List of node pools associated with this cluster.
+     * See gcp.container.NodePool for schema.
+     * **Warning:** node pools defined inside a cluster can&#39;t be changed (or added/removed) after
+     * cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability
+     * to say &#34;these are the _only_ node pools associated with this cluster&#34;, use the
+     * gcp.container.NodePool resource instead of this property.
+     * 
+     */
     public Optional<Output<List<ClusterNodePoolGetArgs>>> nodePools() {
         return Optional.ofNullable(this.nodePools);
     }
@@ -607,6 +862,17 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeVersion")
     private @Nullable Output<String> nodeVersion;
 
+    /**
+     * @return The Kubernetes version on the nodes. Must either be unset
+     * or set to the same value as `min_master_version` on create. Defaults to the default
+     * version set by GKE which is not necessarily the latest version. This only affects
+     * nodes in the default node pool. While a fuzzy version can be specified, it&#39;s
+     * recommended that you specify explicit versions as the provider will see spurious diffs
+     * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source&#39;s
+     * `version_prefix` field to approximate fuzzy versions.
+     * To update nodes in other node pools, use the `version` attribute on the node pool.
+     * 
+     */
     public Optional<Output<String>> nodeVersion() {
         return Optional.ofNullable(this.nodeVersion);
     }
@@ -618,6 +884,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
     private @Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig;
 
+    /**
+     * @return Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterNotificationConfigGetArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
@@ -638,6 +908,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="podSecurityPolicyConfig")
     private @Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig;
 
+    /**
+     * @return ) Configuration for the
+     * [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterPodSecurityPolicyConfigGetArgs>> podSecurityPolicyConfig() {
         return Optional.ofNullable(this.podSecurityPolicyConfig);
     }
@@ -650,6 +926,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateClusterConfig")
     private @Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig;
 
+    /**
+     * @return Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
+     * clusters with private nodes. Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterPrivateClusterConfigGetArgs>> privateClusterConfig() {
         return Optional.ofNullable(this.privateClusterConfig);
     }
@@ -661,6 +942,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIpv6GoogleAccess")
     private @Nullable Output<String> privateIpv6GoogleAccess;
 
+    /**
+     * @return The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+     * 
+     */
     public Optional<Output<String>> privateIpv6GoogleAccess() {
         return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
@@ -673,6 +958,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -692,6 +982,18 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="releaseChannel")
     private @Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel;
 
+    /**
+     * @return Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
+     * feature, which provide more control over automatic upgrades of your GKE clusters.
+     * When updating this field, GKE imposes specific version requirements. See
+     * [Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
+     * for more details; the `gcp.container.getEngineVersions` datasource can provide
+     * the default version for a channel. Note that removing the `release_channel`
+     * field from your config will cause the provider to stop managing your cluster&#39;s
+     * release channel, but will not unenroll it. Instead, use the `&#34;UNSPECIFIED&#34;`
+     * channel. Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterReleaseChannelGetArgs>> releaseChannel() {
         return Optional.ofNullable(this.releaseChannel);
     }
@@ -706,6 +1008,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="removeDefaultNodePool")
     private @Nullable Output<Boolean> removeDefaultNodePool;
 
+    /**
+     * @return If `true`, deletes the default node
+     * pool upon cluster creation. If you&#39;re using `gcp.container.NodePool`
+     * resources with no default node pool, this should be set to `true`, alongside
+     * setting `initial_node_count` to at least `1`.
+     * 
+     */
     public Optional<Output<Boolean>> removeDefaultNodePool() {
         return Optional.ofNullable(this.removeDefaultNodePool);
     }
@@ -717,6 +1026,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceLabels")
     private @Nullable Output<Map<String,String>> resourceLabels;
 
+    /**
+     * @return The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
+     * 
+     */
     public Optional<Output<Map<String,String>>> resourceLabels() {
         return Optional.ofNullable(this.resourceLabels);
     }
@@ -730,6 +1043,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUsageExportConfig")
     private @Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig;
 
+    /**
+     * @return Configuration for the
+     * [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterResourceUsageExportConfigGetArgs>> resourceUsageExportConfig() {
         return Optional.ofNullable(this.resourceUsageExportConfig);
     }
@@ -741,6 +1060,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The server-defined URL for the resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -755,6 +1078,13 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="servicesIpv4Cidr")
     private @Nullable Output<String> servicesIpv4Cidr;
 
+    /**
+     * @return The IP address range of the Kubernetes services in this
+     * cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
+     * `/16` from the container CIDR.
+     * 
+     */
     public Optional<Output<String>> servicesIpv4Cidr() {
         return Optional.ofNullable(this.servicesIpv4Cidr);
     }
@@ -767,6 +1097,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return The name or self_link of the Google Compute Engine
+     * subnetwork in which the cluster&#39;s instances are launched.
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -780,6 +1115,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tpuIpv4CidrBlock")
     private @Nullable Output<String> tpuIpv4CidrBlock;
 
+    /**
+     * @return The IP address range of the Cloud TPUs in this cluster, in
+     * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * notation (e.g. `1.2.3.4/29`).
+     * 
+     */
     public Optional<Output<String>> tpuIpv4CidrBlock() {
         return Optional.ofNullable(this.tpuIpv4CidrBlock);
     }
@@ -792,6 +1133,11 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="verticalPodAutoscaling")
     private @Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling;
 
+    /**
+     * @return Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterVerticalPodAutoscalingGetArgs>> verticalPodAutoscaling() {
         return Optional.ofNullable(this.verticalPodAutoscaling);
     }
@@ -805,6 +1151,12 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workloadIdentityConfig")
     private @Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig;
 
+    /**
+     * @return Workload Identity allows Kubernetes service accounts to act as a user-managed
+     * [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfig() {
         return Optional.ofNullable(this.workloadIdentityConfig);
     }
@@ -891,406 +1243,1142 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonsConfig The configuration for addons supported by GKE.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonsConfig(@Nullable Output<ClusterAddonsConfigGetArgs> addonsConfig) {
             $.addonsConfig = addonsConfig;
             return this;
         }
 
+        /**
+         * @param addonsConfig The configuration for addons supported by GKE.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonsConfig(ClusterAddonsConfigGetArgs addonsConfig) {
             return addonsConfig(Output.of(addonsConfig));
         }
 
+        /**
+         * @param authenticatorGroupsConfig Configuration for the
+         * [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticatorGroupsConfig(@Nullable Output<ClusterAuthenticatorGroupsConfigGetArgs> authenticatorGroupsConfig) {
             $.authenticatorGroupsConfig = authenticatorGroupsConfig;
             return this;
         }
 
+        /**
+         * @param authenticatorGroupsConfig Configuration for the
+         * [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticatorGroupsConfig(ClusterAuthenticatorGroupsConfigGetArgs authenticatorGroupsConfig) {
             return authenticatorGroupsConfig(Output.of(authenticatorGroupsConfig));
         }
 
+        /**
+         * @param clusterAutoscaling Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+         * automatically adjust the size of the cluster and create/delete node pools based
+         * on the current needs of the cluster&#39;s workload. See the
+         * [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+         * for more details. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAutoscaling(@Nullable Output<ClusterClusterAutoscalingGetArgs> clusterAutoscaling) {
             $.clusterAutoscaling = clusterAutoscaling;
             return this;
         }
 
+        /**
+         * @param clusterAutoscaling Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
+         * automatically adjust the size of the cluster and create/delete node pools based
+         * on the current needs of the cluster&#39;s workload. See the
+         * [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+         * for more details. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAutoscaling(ClusterClusterAutoscalingGetArgs clusterAutoscaling) {
             return clusterAutoscaling(Output.of(clusterAutoscaling));
         }
 
+        /**
+         * @param clusterIpv4Cidr The IP address range of the Kubernetes pods
+         * in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
+         * automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
+         * only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIpv4Cidr(@Nullable Output<String> clusterIpv4Cidr) {
             $.clusterIpv4Cidr = clusterIpv4Cidr;
             return this;
         }
 
+        /**
+         * @param clusterIpv4Cidr The IP address range of the Kubernetes pods
+         * in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
+         * automatically chosen or specify a `/14` block in `10.0.0.0/8`. This field will
+         * only work for routes-based clusters, where `ip_allocation_policy` is not defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIpv4Cidr(String clusterIpv4Cidr) {
             return clusterIpv4Cidr(Output.of(clusterIpv4Cidr));
         }
 
+        /**
+         * @param clusterTelemetry Configuration for
+         * [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterTelemetry(@Nullable Output<ClusterClusterTelemetryGetArgs> clusterTelemetry) {
             $.clusterTelemetry = clusterTelemetry;
             return this;
         }
 
+        /**
+         * @param clusterTelemetry Configuration for
+         * [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterTelemetry(ClusterClusterTelemetryGetArgs clusterTelemetry) {
             return clusterTelemetry(Output.of(clusterTelemetry));
         }
 
+        /**
+         * @param confidentialNodes Configuration for [Confidential Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/confidential-gke-nodes) feature. Structure is documented below documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialNodes(@Nullable Output<ClusterConfidentialNodesGetArgs> confidentialNodes) {
             $.confidentialNodes = confidentialNodes;
             return this;
         }
 
+        /**
+         * @param confidentialNodes Configuration for [Confidential Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/confidential-gke-nodes) feature. Structure is documented below documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialNodes(ClusterConfidentialNodesGetArgs confidentialNodes) {
             return confidentialNodes(Output.of(confidentialNodes));
         }
 
+        /**
+         * @param databaseEncryption Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseEncryption(@Nullable Output<ClusterDatabaseEncryptionGetArgs> databaseEncryption) {
             $.databaseEncryption = databaseEncryption;
             return this;
         }
 
+        /**
+         * @param databaseEncryption Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseEncryption(ClusterDatabaseEncryptionGetArgs databaseEncryption) {
             return databaseEncryption(Output.of(databaseEncryption));
         }
 
+        /**
+         * @param datapathProvider The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datapathProvider(@Nullable Output<String> datapathProvider) {
             $.datapathProvider = datapathProvider;
             return this;
         }
 
+        /**
+         * @param datapathProvider The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datapathProvider(String datapathProvider) {
             return datapathProvider(Output.of(datapathProvider));
         }
 
+        /**
+         * @param defaultMaxPodsPerNode The default maximum number of pods
+         * per node in this cluster. This doesn&#39;t work on &#34;routes-based&#34; clusters, clusters
+         * that don&#39;t have IP Aliasing enabled. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+         * for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMaxPodsPerNode(@Nullable Output<Integer> defaultMaxPodsPerNode) {
             $.defaultMaxPodsPerNode = defaultMaxPodsPerNode;
             return this;
         }
 
+        /**
+         * @param defaultMaxPodsPerNode The default maximum number of pods
+         * per node in this cluster. This doesn&#39;t work on &#34;routes-based&#34; clusters, clusters
+         * that don&#39;t have IP Aliasing enabled. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
+         * for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMaxPodsPerNode(Integer defaultMaxPodsPerNode) {
             return defaultMaxPodsPerNode(Output.of(defaultMaxPodsPerNode));
         }
 
+        /**
+         * @param defaultSnatStatus [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSnatStatus(@Nullable Output<ClusterDefaultSnatStatusGetArgs> defaultSnatStatus) {
             $.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
 
+        /**
+         * @param defaultSnatStatus [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSnatStatus(ClusterDefaultSnatStatusGetArgs defaultSnatStatus) {
             return defaultSnatStatus(Output.of(defaultSnatStatus));
         }
 
+        /**
+         * @param description Description of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dnsConfig Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(@Nullable Output<ClusterDnsConfigGetArgs> dnsConfig) {
             $.dnsConfig = dnsConfig;
             return this;
         }
 
+        /**
+         * @param dnsConfig Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(ClusterDnsConfigGetArgs dnsConfig) {
             return dnsConfig(Output.of(dnsConfig));
         }
 
+        /**
+         * @param enableAutopilot Enable Autopilot for this cluster. Defaults to `false`.
+         * Note that when this option is enabled, certain features of Standard GKE are not available.
+         * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+         * for available features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutopilot(@Nullable Output<Boolean> enableAutopilot) {
             $.enableAutopilot = enableAutopilot;
             return this;
         }
 
+        /**
+         * @param enableAutopilot Enable Autopilot for this cluster. Defaults to `false`.
+         * Note that when this option is enabled, certain features of Standard GKE are not available.
+         * See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview#comparison)
+         * for available features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutopilot(Boolean enableAutopilot) {
             return enableAutopilot(Output.of(enableAutopilot));
         }
 
+        /**
+         * @param enableBinaryAuthorization Enable Binary Authorization for this cluster.
+         * If enabled, all container images will be validated by Google Binary Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBinaryAuthorization(@Nullable Output<Boolean> enableBinaryAuthorization) {
             $.enableBinaryAuthorization = enableBinaryAuthorization;
             return this;
         }
 
+        /**
+         * @param enableBinaryAuthorization Enable Binary Authorization for this cluster.
+         * If enabled, all container images will be validated by Google Binary Authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBinaryAuthorization(Boolean enableBinaryAuthorization) {
             return enableBinaryAuthorization(Output.of(enableBinaryAuthorization));
         }
 
+        /**
+         * @param enableIntranodeVisibility Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntranodeVisibility(@Nullable Output<Boolean> enableIntranodeVisibility) {
             $.enableIntranodeVisibility = enableIntranodeVisibility;
             return this;
         }
 
+        /**
+         * @param enableIntranodeVisibility Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntranodeVisibility(Boolean enableIntranodeVisibility) {
             return enableIntranodeVisibility(Output.of(enableIntranodeVisibility));
         }
 
+        /**
+         * @param enableKubernetesAlpha Whether to enable Kubernetes Alpha features for
+         * this cluster. Note that when this option is enabled, the cluster cannot be upgraded
+         * and will be automatically deleted after 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableKubernetesAlpha(@Nullable Output<Boolean> enableKubernetesAlpha) {
             $.enableKubernetesAlpha = enableKubernetesAlpha;
             return this;
         }
 
+        /**
+         * @param enableKubernetesAlpha Whether to enable Kubernetes Alpha features for
+         * this cluster. Note that when this option is enabled, the cluster cannot be upgraded
+         * and will be automatically deleted after 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableKubernetesAlpha(Boolean enableKubernetesAlpha) {
             return enableKubernetesAlpha(Output.of(enableKubernetesAlpha));
         }
 
+        /**
+         * @param enableL4IlbSubsetting Whether L4ILB Subsetting is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableL4IlbSubsetting(@Nullable Output<Boolean> enableL4IlbSubsetting) {
             $.enableL4IlbSubsetting = enableL4IlbSubsetting;
             return this;
         }
 
+        /**
+         * @param enableL4IlbSubsetting Whether L4ILB Subsetting is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableL4IlbSubsetting(Boolean enableL4IlbSubsetting) {
             return enableL4IlbSubsetting(Output.of(enableL4IlbSubsetting));
         }
 
+        /**
+         * @param enableLegacyAbac Whether the ABAC authorizer is enabled for this cluster.
+         * When enabled, identities in the system, including service accounts, nodes, and controllers,
+         * will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
+         * Defaults to `false`
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLegacyAbac(@Nullable Output<Boolean> enableLegacyAbac) {
             $.enableLegacyAbac = enableLegacyAbac;
             return this;
         }
 
+        /**
+         * @param enableLegacyAbac Whether the ABAC authorizer is enabled for this cluster.
+         * When enabled, identities in the system, including service accounts, nodes, and controllers,
+         * will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
+         * Defaults to `false`
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLegacyAbac(Boolean enableLegacyAbac) {
             return enableLegacyAbac(Output.of(enableLegacyAbac));
         }
 
+        /**
+         * @param enableShieldedNodes Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableShieldedNodes(@Nullable Output<Boolean> enableShieldedNodes) {
             $.enableShieldedNodes = enableShieldedNodes;
             return this;
         }
 
+        /**
+         * @param enableShieldedNodes Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableShieldedNodes(Boolean enableShieldedNodes) {
             return enableShieldedNodes(Output.of(enableShieldedNodes));
         }
 
+        /**
+         * @param enableTpu Whether to enable Cloud TPU resources in this cluster.
+         * See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableTpu(@Nullable Output<Boolean> enableTpu) {
             $.enableTpu = enableTpu;
             return this;
         }
 
+        /**
+         * @param enableTpu Whether to enable Cloud TPU resources in this cluster.
+         * See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableTpu(Boolean enableTpu) {
             return enableTpu(Output.of(enableTpu));
         }
 
+        /**
+         * @param endpoint The IP address of this cluster&#39;s Kubernetes master.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint The IP address of this cluster&#39;s Kubernetes master.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param identityServiceConfig . Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityServiceConfig(@Nullable Output<ClusterIdentityServiceConfigGetArgs> identityServiceConfig) {
             $.identityServiceConfig = identityServiceConfig;
             return this;
         }
 
+        /**
+         * @param identityServiceConfig . Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityServiceConfig(ClusterIdentityServiceConfigGetArgs identityServiceConfig) {
             return identityServiceConfig(Output.of(identityServiceConfig));
         }
 
+        /**
+         * @param initialNodeCount The number of nodes to create in this
+         * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+         * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+         * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
+         * set this to a value of at least `1`, alongside setting
+         * `remove_default_node_pool` to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             $.initialNodeCount = initialNodeCount;
             return this;
         }
 
+        /**
+         * @param initialNodeCount The number of nodes to create in this
+         * cluster&#39;s default node pool. In regional or multi-zonal clusters, this is the
+         * number of nodes per zone. Must be set if `node_pool` is not set. If you&#39;re using
+         * `gcp.container.NodePool` objects with no default node pool, you&#39;ll need to
+         * set this to a value of at least `1`, alongside setting
+         * `remove_default_node_pool` to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialNodeCount(Integer initialNodeCount) {
             return initialNodeCount(Output.of(initialNodeCount));
         }
 
+        /**
+         * @param ipAllocationPolicy Configuration of cluster IP allocation for
+         * VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+         * making the cluster VPC-native instead of routes-based. Structure is documented
+         * below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationPolicy(@Nullable Output<ClusterIpAllocationPolicyGetArgs> ipAllocationPolicy) {
             $.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
 
+        /**
+         * @param ipAllocationPolicy Configuration of cluster IP allocation for
+         * VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+         * making the cluster VPC-native instead of routes-based. Structure is documented
+         * below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationPolicy(ClusterIpAllocationPolicyGetArgs ipAllocationPolicy) {
             return ipAllocationPolicy(Output.of(ipAllocationPolicy));
         }
 
+        /**
+         * @param labelFingerprint The fingerprint of the set of labels for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             $.labelFingerprint = labelFingerprint;
             return this;
         }
 
+        /**
+         * @param labelFingerprint The fingerprint of the set of labels for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelFingerprint(String labelFingerprint) {
             return labelFingerprint(Output.of(labelFingerprint));
         }
 
+        /**
+         * @param location The location (region or zone) in which the cluster
+         * master will be created, as well as the default node location. If you specify a
+         * zone (such as `us-central1-a`), the cluster will be a zonal cluster with a
+         * single cluster master. If you specify a region (such as `us-west1`), the
+         * cluster will be a regional cluster with multiple masters spread across zones in
+         * the region, and with default node locations in those zones as well
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location (region or zone) in which the cluster
+         * master will be created, as well as the default node location. If you specify a
+         * zone (such as `us-central1-a`), the cluster will be a zonal cluster with a
+         * single cluster master. If you specify a region (such as `us-west1`), the
+         * cluster will be a regional cluster with multiple masters spread across zones in
+         * the region, and with default node locations in those zones as well
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param loggingConfig Logging configuration for the cluster.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(@Nullable Output<ClusterLoggingConfigGetArgs> loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
 
+        /**
+         * @param loggingConfig Logging configuration for the cluster.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(ClusterLoggingConfigGetArgs loggingConfig) {
             return loggingConfig(Output.of(loggingConfig));
         }
 
+        /**
+         * @param loggingService The logging service that the cluster should
+         * write logs to. Available options include `logging.googleapis.com`(Legacy Stackdriver),
+         * `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingService(@Nullable Output<String> loggingService) {
             $.loggingService = loggingService;
             return this;
         }
 
+        /**
+         * @param loggingService The logging service that the cluster should
+         * write logs to. Available options include `logging.googleapis.com`(Legacy Stackdriver),
+         * `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingService(String loggingService) {
             return loggingService(Output.of(loggingService));
         }
 
+        /**
+         * @param maintenancePolicy The maintenance policy to use for the cluster. Structure is
+         * documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenancePolicy(@Nullable Output<ClusterMaintenancePolicyGetArgs> maintenancePolicy) {
             $.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
+        /**
+         * @param maintenancePolicy The maintenance policy to use for the cluster. Structure is
+         * documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenancePolicy(ClusterMaintenancePolicyGetArgs maintenancePolicy) {
             return maintenancePolicy(Output.of(maintenancePolicy));
         }
 
+        /**
+         * @param masterAuth The authentication information for accessing the
+         * Kubernetes master. Some values in this block are only returned by the API if
+         * your service account has permission to get credentials for your GKE cluster. If
+         * you see an unexpected diff unsetting your client cert, ensure you have the
+         * `container.clusters.getCredentials` permission.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterAuth(@Nullable Output<ClusterMasterAuthGetArgs> masterAuth) {
             $.masterAuth = masterAuth;
             return this;
         }
 
+        /**
+         * @param masterAuth The authentication information for accessing the
+         * Kubernetes master. Some values in this block are only returned by the API if
+         * your service account has permission to get credentials for your GKE cluster. If
+         * you see an unexpected diff unsetting your client cert, ensure you have the
+         * `container.clusters.getCredentials` permission.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterAuth(ClusterMasterAuthGetArgs masterAuth) {
             return masterAuth(Output.of(masterAuth));
         }
 
+        /**
+         * @param masterAuthorizedNetworksConfig The desired
+         * configuration options for master authorized networks. Omit the
+         * nested `cidr_blocks` attribute to disallow external access (except
+         * the cluster node IPs, which GKE automatically whitelists).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterAuthorizedNetworksConfig(@Nullable Output<ClusterMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig) {
             $.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
             return this;
         }
 
+        /**
+         * @param masterAuthorizedNetworksConfig The desired
+         * configuration options for master authorized networks. Omit the
+         * nested `cidr_blocks` attribute to disallow external access (except
+         * the cluster node IPs, which GKE automatically whitelists).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterAuthorizedNetworksConfig(ClusterMasterAuthorizedNetworksConfigGetArgs masterAuthorizedNetworksConfig) {
             return masterAuthorizedNetworksConfig(Output.of(masterAuthorizedNetworksConfig));
         }
 
+        /**
+         * @param masterVersion The current version of the master in the cluster. This may
+         * be different than the `min_master_version` set in the config if the master
+         * has been updated by GKE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterVersion(@Nullable Output<String> masterVersion) {
             $.masterVersion = masterVersion;
             return this;
         }
 
+        /**
+         * @param masterVersion The current version of the master in the cluster. This may
+         * be different than the `min_master_version` set in the config if the master
+         * has been updated by GKE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterVersion(String masterVersion) {
             return masterVersion(Output.of(masterVersion));
         }
 
+        /**
+         * @param minMasterVersion The minimum version of the master. GKE
+         * will auto-update the master to new versions, so this does not guarantee the
+         * current master version--use the read-only `master_version` field to obtain that.
+         * If unset, the cluster&#39;s version will be set by GKE to the version of the most recent
+         * official release (which is not necessarily the latest version).  Most users will find
+         * the `gcp.container.getEngineVersions` data source useful - it indicates which versions
+         * are available. If you intend to specify versions manually,
+         * [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
+         * describe the various acceptable formats for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMasterVersion(@Nullable Output<String> minMasterVersion) {
             $.minMasterVersion = minMasterVersion;
             return this;
         }
 
+        /**
+         * @param minMasterVersion The minimum version of the master. GKE
+         * will auto-update the master to new versions, so this does not guarantee the
+         * current master version--use the read-only `master_version` field to obtain that.
+         * If unset, the cluster&#39;s version will be set by GKE to the version of the most recent
+         * official release (which is not necessarily the latest version).  Most users will find
+         * the `gcp.container.getEngineVersions` data source useful - it indicates which versions
+         * are available. If you intend to specify versions manually,
+         * [the docs](https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version)
+         * describe the various acceptable formats for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMasterVersion(String minMasterVersion) {
             return minMasterVersion(Output.of(minMasterVersion));
         }
 
+        /**
+         * @param monitoringConfig Monitoring configuration for the cluster.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringConfig(@Nullable Output<ClusterMonitoringConfigGetArgs> monitoringConfig) {
             $.monitoringConfig = monitoringConfig;
             return this;
         }
 
+        /**
+         * @param monitoringConfig Monitoring configuration for the cluster.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringConfig(ClusterMonitoringConfigGetArgs monitoringConfig) {
             return monitoringConfig(Output.of(monitoringConfig));
         }
 
+        /**
+         * @param monitoringService The monitoring service that the cluster
+         * should write metrics to.
+         * Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
+         * VM metrics will be collected by Google Compute Engine regardless of this setting
+         * Available options include
+         * `monitoring.googleapis.com`(Legacy Stackdriver), `monitoring.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Monitoring), and `none`.
+         * Defaults to `monitoring.googleapis.com/kubernetes`
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringService(@Nullable Output<String> monitoringService) {
             $.monitoringService = monitoringService;
             return this;
         }
 
+        /**
+         * @param monitoringService The monitoring service that the cluster
+         * should write metrics to.
+         * Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
+         * VM metrics will be collected by Google Compute Engine regardless of this setting
+         * Available options include
+         * `monitoring.googleapis.com`(Legacy Stackdriver), `monitoring.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Monitoring), and `none`.
+         * Defaults to `monitoring.googleapis.com/kubernetes`
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringService(String monitoringService) {
             return monitoringService(Output.of(monitoringService));
         }
 
+        /**
+         * @param name The name of the cluster, unique within the project and
+         * location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the cluster, unique within the project and
+         * location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The name or self_link of the Google Compute Engine
+         * network to which the cluster is connected. For Shared VPC, set this to the self link of the
+         * shared network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The name or self_link of the Google Compute Engine
+         * network to which the cluster is connected. For Shared VPC, set this to the self link of the
+         * shared network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param networkPolicy Configuration options for the
+         * [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
+         * feature. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(@Nullable Output<ClusterNetworkPolicyGetArgs> networkPolicy) {
             $.networkPolicy = networkPolicy;
             return this;
         }
 
+        /**
+         * @param networkPolicy Configuration options for the
+         * [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
+         * feature. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(ClusterNetworkPolicyGetArgs networkPolicy) {
             return networkPolicy(Output.of(networkPolicy));
         }
 
+        /**
+         * @param networkingMode Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+         * Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+         * and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkingMode(@Nullable Output<String> networkingMode) {
             $.networkingMode = networkingMode;
             return this;
         }
 
+        /**
+         * @param networkingMode Determines whether alias IPs or routes will be used for pod IPs in the cluster.
+         * Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
+         * and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkingMode(String networkingMode) {
             return networkingMode(Output.of(networkingMode));
         }
 
+        /**
+         * @param nodeConfig Parameters used in creating the default node pool.
+         * Generally, this field should not be used at the same time as a
+         * `gcp.container.NodePool` or a `node_pool` block; this configuration
+         * manages the default node pool, which isn&#39;t recommended to be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfig(@Nullable Output<ClusterNodeConfigGetArgs> nodeConfig) {
             $.nodeConfig = nodeConfig;
             return this;
         }
 
+        /**
+         * @param nodeConfig Parameters used in creating the default node pool.
+         * Generally, this field should not be used at the same time as a
+         * `gcp.container.NodePool` or a `node_pool` block; this configuration
+         * manages the default node pool, which isn&#39;t recommended to be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfig(ClusterNodeConfigGetArgs nodeConfig) {
             return nodeConfig(Output.of(nodeConfig));
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the cluster&#39;s nodes
+         * are located. Nodes must be in the region of their regional cluster or in the
+         * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+         * a zonal cluster, omit the cluster&#39;s zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
             $.nodeLocations = nodeLocations;
             return this;
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the cluster&#39;s nodes
+         * are located. Nodes must be in the region of their regional cluster or in the
+         * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+         * a zonal cluster, omit the cluster&#39;s zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(List<String> nodeLocations) {
             return nodeLocations(Output.of(nodeLocations));
         }
 
+        /**
+         * @param nodeLocations The list of zones in which the cluster&#39;s nodes
+         * are located. Nodes must be in the region of their regional cluster or in the
+         * same region as their cluster&#39;s zone for zonal clusters. If this is specified for
+         * a zonal cluster, omit the cluster&#39;s zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
         }
 
+        /**
+         * @param nodePools List of node pools associated with this cluster.
+         * See gcp.container.NodePool for schema.
+         * **Warning:** node pools defined inside a cluster can&#39;t be changed (or added/removed) after
+         * cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability
+         * to say &#34;these are the _only_ node pools associated with this cluster&#34;, use the
+         * gcp.container.NodePool resource instead of this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePools(@Nullable Output<List<ClusterNodePoolGetArgs>> nodePools) {
             $.nodePools = nodePools;
             return this;
         }
 
+        /**
+         * @param nodePools List of node pools associated with this cluster.
+         * See gcp.container.NodePool for schema.
+         * **Warning:** node pools defined inside a cluster can&#39;t be changed (or added/removed) after
+         * cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability
+         * to say &#34;these are the _only_ node pools associated with this cluster&#34;, use the
+         * gcp.container.NodePool resource instead of this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePools(List<ClusterNodePoolGetArgs> nodePools) {
             return nodePools(Output.of(nodePools));
         }
 
+        /**
+         * @param nodePools List of node pools associated with this cluster.
+         * See gcp.container.NodePool for schema.
+         * **Warning:** node pools defined inside a cluster can&#39;t be changed (or added/removed) after
+         * cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability
+         * to say &#34;these are the _only_ node pools associated with this cluster&#34;, use the
+         * gcp.container.NodePool resource instead of this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePools(ClusterNodePoolGetArgs... nodePools) {
             return nodePools(List.of(nodePools));
         }
 
+        /**
+         * @param nodeVersion The Kubernetes version on the nodes. Must either be unset
+         * or set to the same value as `min_master_version` on create. Defaults to the default
+         * version set by GKE which is not necessarily the latest version. This only affects
+         * nodes in the default node pool. While a fuzzy version can be specified, it&#39;s
+         * recommended that you specify explicit versions as the provider will see spurious diffs
+         * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source&#39;s
+         * `version_prefix` field to approximate fuzzy versions.
+         * To update nodes in other node pools, use the `version` attribute on the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeVersion(@Nullable Output<String> nodeVersion) {
             $.nodeVersion = nodeVersion;
             return this;
         }
 
+        /**
+         * @param nodeVersion The Kubernetes version on the nodes. Must either be unset
+         * or set to the same value as `min_master_version` on create. Defaults to the default
+         * version set by GKE which is not necessarily the latest version. This only affects
+         * nodes in the default node pool. While a fuzzy version can be specified, it&#39;s
+         * recommended that you specify explicit versions as the provider will see spurious diffs
+         * when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source&#39;s
+         * `version_prefix` field to approximate fuzzy versions.
+         * To update nodes in other node pools, use the `version` attribute on the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeVersion(String nodeVersion) {
             return nodeVersion(Output.of(nodeVersion));
         }
 
+        /**
+         * @param notificationConfig Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(@Nullable Output<ClusterNotificationConfigGetArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
 
+        /**
+         * @param notificationConfig Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(ClusterNotificationConfigGetArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
@@ -1304,128 +2392,348 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             return operation(Output.of(operation));
         }
 
+        /**
+         * @param podSecurityPolicyConfig ) Configuration for the
+         * [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSecurityPolicyConfig(@Nullable Output<ClusterPodSecurityPolicyConfigGetArgs> podSecurityPolicyConfig) {
             $.podSecurityPolicyConfig = podSecurityPolicyConfig;
             return this;
         }
 
+        /**
+         * @param podSecurityPolicyConfig ) Configuration for the
+         * [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSecurityPolicyConfig(ClusterPodSecurityPolicyConfigGetArgs podSecurityPolicyConfig) {
             return podSecurityPolicyConfig(Output.of(podSecurityPolicyConfig));
         }
 
+        /**
+         * @param privateClusterConfig Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
+         * clusters with private nodes. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateClusterConfig(@Nullable Output<ClusterPrivateClusterConfigGetArgs> privateClusterConfig) {
             $.privateClusterConfig = privateClusterConfig;
             return this;
         }
 
+        /**
+         * @param privateClusterConfig Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
+         * clusters with private nodes. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateClusterConfig(ClusterPrivateClusterConfigGetArgs privateClusterConfig) {
             return privateClusterConfig(Output.of(privateClusterConfig));
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
             $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             return privateIpv6GoogleAccess(Output.of(privateIpv6GoogleAccess));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param releaseChannel Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
+         * feature, which provide more control over automatic upgrades of your GKE clusters.
+         * When updating this field, GKE imposes specific version requirements. See
+         * [Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
+         * for more details; the `gcp.container.getEngineVersions` datasource can provide
+         * the default version for a channel. Note that removing the `release_channel`
+         * field from your config will cause the provider to stop managing your cluster&#39;s
+         * release channel, but will not unenroll it. Instead, use the `&#34;UNSPECIFIED&#34;`
+         * channel. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseChannel(@Nullable Output<ClusterReleaseChannelGetArgs> releaseChannel) {
             $.releaseChannel = releaseChannel;
             return this;
         }
 
+        /**
+         * @param releaseChannel Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
+         * feature, which provide more control over automatic upgrades of your GKE clusters.
+         * When updating this field, GKE imposes specific version requirements. See
+         * [Selecting a new release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels#selecting_a_new_release_channel)
+         * for more details; the `gcp.container.getEngineVersions` datasource can provide
+         * the default version for a channel. Note that removing the `release_channel`
+         * field from your config will cause the provider to stop managing your cluster&#39;s
+         * release channel, but will not unenroll it. Instead, use the `&#34;UNSPECIFIED&#34;`
+         * channel. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseChannel(ClusterReleaseChannelGetArgs releaseChannel) {
             return releaseChannel(Output.of(releaseChannel));
         }
 
+        /**
+         * @param removeDefaultNodePool If `true`, deletes the default node
+         * pool upon cluster creation. If you&#39;re using `gcp.container.NodePool`
+         * resources with no default node pool, this should be set to `true`, alongside
+         * setting `initial_node_count` to at least `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder removeDefaultNodePool(@Nullable Output<Boolean> removeDefaultNodePool) {
             $.removeDefaultNodePool = removeDefaultNodePool;
             return this;
         }
 
+        /**
+         * @param removeDefaultNodePool If `true`, deletes the default node
+         * pool upon cluster creation. If you&#39;re using `gcp.container.NodePool`
+         * resources with no default node pool, this should be set to `true`, alongside
+         * setting `initial_node_count` to at least `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder removeDefaultNodePool(Boolean removeDefaultNodePool) {
             return removeDefaultNodePool(Output.of(removeDefaultNodePool));
         }
 
+        /**
+         * @param resourceLabels The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabels(@Nullable Output<Map<String,String>> resourceLabels) {
             $.resourceLabels = resourceLabels;
             return this;
         }
 
+        /**
+         * @param resourceLabels The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabels(Map<String,String> resourceLabels) {
             return resourceLabels(Output.of(resourceLabels));
         }
 
+        /**
+         * @param resourceUsageExportConfig Configuration for the
+         * [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUsageExportConfig(@Nullable Output<ClusterResourceUsageExportConfigGetArgs> resourceUsageExportConfig) {
             $.resourceUsageExportConfig = resourceUsageExportConfig;
             return this;
         }
 
+        /**
+         * @param resourceUsageExportConfig Configuration for the
+         * [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUsageExportConfig(ClusterResourceUsageExportConfigGetArgs resourceUsageExportConfig) {
             return resourceUsageExportConfig(Output.of(resourceUsageExportConfig));
         }
 
+        /**
+         * @param selfLink The server-defined URL for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The server-defined URL for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param servicesIpv4Cidr The IP address range of the Kubernetes services in this
+         * cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+         * notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
+         * `/16` from the container CIDR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicesIpv4Cidr(@Nullable Output<String> servicesIpv4Cidr) {
             $.servicesIpv4Cidr = servicesIpv4Cidr;
             return this;
         }
 
+        /**
+         * @param servicesIpv4Cidr The IP address range of the Kubernetes services in this
+         * cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+         * notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
+         * `/16` from the container CIDR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicesIpv4Cidr(String servicesIpv4Cidr) {
             return servicesIpv4Cidr(Output.of(servicesIpv4Cidr));
         }
 
+        /**
+         * @param subnetwork The name or self_link of the Google Compute Engine
+         * subnetwork in which the cluster&#39;s instances are launched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork The name or self_link of the Google Compute Engine
+         * subnetwork in which the cluster&#39;s instances are launched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }
 
+        /**
+         * @param tpuIpv4CidrBlock The IP address range of the Cloud TPUs in this cluster, in
+         * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+         * notation (e.g. `1.2.3.4/29`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tpuIpv4CidrBlock(@Nullable Output<String> tpuIpv4CidrBlock) {
             $.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param tpuIpv4CidrBlock The IP address range of the Cloud TPUs in this cluster, in
+         * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+         * notation (e.g. `1.2.3.4/29`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
             return tpuIpv4CidrBlock(Output.of(tpuIpv4CidrBlock));
         }
 
+        /**
+         * @param verticalPodAutoscaling Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticalPodAutoscaling(@Nullable Output<ClusterVerticalPodAutoscalingGetArgs> verticalPodAutoscaling) {
             $.verticalPodAutoscaling = verticalPodAutoscaling;
             return this;
         }
 
+        /**
+         * @param verticalPodAutoscaling Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticalPodAutoscaling(ClusterVerticalPodAutoscalingGetArgs verticalPodAutoscaling) {
             return verticalPodAutoscaling(Output.of(verticalPodAutoscaling));
         }
 
+        /**
+         * @param workloadIdentityConfig Workload Identity allows Kubernetes service accounts to act as a user-managed
+         * [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityConfig(@Nullable Output<ClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfig) {
             $.workloadIdentityConfig = workloadIdentityConfig;
             return this;
         }
 
+        /**
+         * @param workloadIdentityConfig Workload Identity allows Kubernetes service accounts to act as a user-managed
+         * [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityConfig(ClusterWorkloadIdentityConfigGetArgs workloadIdentityConfig) {
             return workloadIdentityConfig(Output.of(workloadIdentityConfig));
         }

@@ -28,6 +28,10 @@ public final class ComplianceOccurrenceArgs extends com.pulumi.resources.Resourc
     @Import(name="nonComplianceReason")
     private @Nullable Output<String> nonComplianceReason;
 
+    /**
+     * @return The reason for non compliance of these files.
+     * 
+     */
     public Optional<Output<String>> nonComplianceReason() {
         return Optional.ofNullable(this.nonComplianceReason);
     }
@@ -39,6 +43,10 @@ public final class ComplianceOccurrenceArgs extends com.pulumi.resources.Resourc
     @Import(name="nonCompliantFiles")
     private @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles;
 
+    /**
+     * @return A list of files which are violating compliance checks.
+     * 
+     */
     public Optional<Output<List<NonCompliantFileArgs>>> nonCompliantFiles() {
         return Optional.ofNullable(this.nonCompliantFiles);
     }
@@ -68,24 +76,54 @@ public final class ComplianceOccurrenceArgs extends com.pulumi.resources.Resourc
             $ = new ComplianceOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nonComplianceReason The reason for non compliance of these files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonComplianceReason(@Nullable Output<String> nonComplianceReason) {
             $.nonComplianceReason = nonComplianceReason;
             return this;
         }
 
+        /**
+         * @param nonComplianceReason The reason for non compliance of these files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonComplianceReason(String nonComplianceReason) {
             return nonComplianceReason(Output.of(nonComplianceReason));
         }
 
+        /**
+         * @param nonCompliantFiles A list of files which are violating compliance checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonCompliantFiles(@Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles) {
             $.nonCompliantFiles = nonCompliantFiles;
             return this;
         }
 
+        /**
+         * @param nonCompliantFiles A list of files which are violating compliance checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonCompliantFiles(List<NonCompliantFileArgs> nonCompliantFiles) {
             return nonCompliantFiles(Output.of(nonCompliantFiles));
         }
 
+        /**
+         * @param nonCompliantFiles A list of files which are violating compliance checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonCompliantFiles(NonCompliantFileArgs... nonCompliantFiles) {
             return nonCompliantFiles(List.of(nonCompliantFiles));
         }

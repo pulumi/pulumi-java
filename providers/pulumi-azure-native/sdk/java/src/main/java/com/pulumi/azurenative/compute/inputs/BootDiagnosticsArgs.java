@@ -27,6 +27,10 @@ public final class BootDiagnosticsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether boot diagnostics should be enabled on the Virtual Machine.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class BootDiagnosticsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="storageUri")
     private @Nullable Output<String> storageUri;
 
+    /**
+     * @return Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
+     * 
+     */
     public Optional<Output<String>> storageUri() {
         return Optional.ofNullable(this.storageUri);
     }
@@ -67,20 +75,44 @@ public final class BootDiagnosticsArgs extends com.pulumi.resources.ResourceArgs
             $ = new BootDiagnosticsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether boot diagnostics should be enabled on the Virtual Machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether boot diagnostics should be enabled on the Virtual Machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param storageUri Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageUri(@Nullable Output<String> storageUri) {
             $.storageUri = storageUri;
             return this;
         }
 
+        /**
+         * @param storageUri Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageUri(String storageUri) {
             return storageUri(Output.of(storageUri));
         }

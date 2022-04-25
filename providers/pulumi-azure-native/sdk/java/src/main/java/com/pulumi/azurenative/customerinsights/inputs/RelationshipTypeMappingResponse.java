@@ -24,6 +24,10 @@ public final class RelationshipTypeMappingResponse extends com.pulumi.resources.
     @Import(name="fieldMappings", required=true)
     private List<RelationshipTypeFieldMappingResponse> fieldMappings;
 
+    /**
+     * @return Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
+     * 
+     */
     public List<RelationshipTypeFieldMappingResponse> fieldMappings() {
         return this.fieldMappings;
     }
@@ -52,11 +56,23 @@ public final class RelationshipTypeMappingResponse extends com.pulumi.resources.
             $ = new RelationshipTypeMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldMappings Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldMappings(List<RelationshipTypeFieldMappingResponse> fieldMappings) {
             $.fieldMappings = fieldMappings;
             return this;
         }
 
+        /**
+         * @param fieldMappings Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldMappings(RelationshipTypeFieldMappingResponse... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }

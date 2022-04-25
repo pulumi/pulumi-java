@@ -27,6 +27,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="conflictResolutionPolicy")
     private @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
 
+    /**
+     * @return The conflict resolution policy for the graph.
+     * 
+     */
     public Optional<ConflictResolutionPolicyResponse> conflictResolutionPolicy() {
         return Optional.ofNullable(this.conflictResolutionPolicy);
     }
@@ -38,6 +42,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="defaultTtl")
     private @Nullable Integer defaultTtl;
 
+    /**
+     * @return Default time to live
+     * 
+     */
     public Optional<Integer> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
@@ -49,6 +57,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -60,6 +72,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Name of the Cosmos DB Gremlin graph
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -71,6 +87,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="indexingPolicy")
     private @Nullable IndexingPolicyResponse indexingPolicy;
 
+    /**
+     * @return The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph
+     * 
+     */
     public Optional<IndexingPolicyResponse> indexingPolicy() {
         return Optional.ofNullable(this.indexingPolicy);
     }
@@ -82,6 +102,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="partitionKey")
     private @Nullable ContainerPartitionKeyResponse partitionKey;
 
+    /**
+     * @return The configuration of the partition key to be used for partitioning data into multiple partitions
+     * 
+     */
     public Optional<ContainerPartitionKeyResponse> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
@@ -93,6 +117,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="rid", required=true)
     private String rid;
 
+    /**
+     * @return A system generated property. A unique identifier.
+     * 
+     */
     public String rid() {
         return this.rid;
     }
@@ -104,6 +132,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="ts", required=true)
     private Double ts;
 
+    /**
+     * @return A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     public Double ts() {
         return this.ts;
     }
@@ -115,6 +147,10 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
     @Import(name="uniqueKeyPolicy")
     private @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 
+    /**
+     * @return The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
+     * 
+     */
     public Optional<UniqueKeyPolicyResponse> uniqueKeyPolicy() {
         return Optional.ofNullable(this.uniqueKeyPolicy);
     }
@@ -151,46 +187,100 @@ public final class GremlinGraphGetPropertiesResponseResource extends com.pulumi.
             $ = new GremlinGraphGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conflictResolutionPolicy The conflict resolution policy for the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conflictResolutionPolicy(@Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy) {
             $.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
 
+        /**
+         * @param defaultTtl Default time to live
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
             $.defaultTtl = defaultTtl;
             return this;
         }
 
+        /**
+         * @param etag A system generated property representing the resource etag required for optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB Gremlin graph
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param indexingPolicy The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
             $.indexingPolicy = indexingPolicy;
             return this;
         }
 
+        /**
+         * @param partitionKey The configuration of the partition key to be used for partitioning data into multiple partitions
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKey(@Nullable ContainerPartitionKeyResponse partitionKey) {
             $.partitionKey = partitionKey;
             return this;
         }
 
+        /**
+         * @param rid A system generated property. A unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rid(String rid) {
             $.rid = rid;
             return this;
         }
 
+        /**
+         * @param ts A system generated property that denotes the last updated timestamp of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ts(Double ts) {
             $.ts = ts;
             return this;
         }
 
+        /**
+         * @param uniqueKeyPolicy The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueKeyPolicy(@Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
             $.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;

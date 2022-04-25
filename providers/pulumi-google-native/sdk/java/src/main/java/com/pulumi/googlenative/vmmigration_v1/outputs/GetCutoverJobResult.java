@@ -13,42 +13,42 @@ import java.util.Objects;
 @CustomType
 public final class GetCutoverJobResult {
     /**
-     * Details of the target VM in Compute Engine.
+     * @return Details of the target VM in Compute Engine.
      * 
      */
     private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
     /**
-     * The time the cutover job was created (as an API call, not when it was actually created in the target).
+     * @return The time the cutover job was created (as an API call, not when it was actually created in the target).
      * 
      */
     private final String createTime;
     /**
-     * Provides details for the errors that led to the Cutover Job&#39;s state.
+     * @return Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
      */
     private final StatusResponse error;
     /**
-     * The name of the cutover job.
+     * @return The name of the cutover job.
      * 
      */
     private final String name;
     /**
-     * The current progress in percentage of the cutover job.
+     * @return The current progress in percentage of the cutover job.
      * 
      */
     private final Integer progressPercent;
     /**
-     * State of the cutover job.
+     * @return State of the cutover job.
      * 
      */
     private final String state;
     /**
-     * A message providing possible extra details about the current state.
+     * @return A message providing possible extra details about the current state.
      * 
      */
     private final String stateMessage;
     /**
-     * The time the state was last updated.
+     * @return The time the state was last updated.
      * 
      */
     private final String stateTime;
@@ -74,58 +74,58 @@ public final class GetCutoverJobResult {
     }
 
     /**
-     * Details of the target VM in Compute Engine.
+     * @return Details of the target VM in Compute Engine.
      * 
-    */
+     */
     public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
     /**
-     * The time the cutover job was created (as an API call, not when it was actually created in the target).
+     * @return The time the cutover job was created (as an API call, not when it was actually created in the target).
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Provides details for the errors that led to the Cutover Job&#39;s state.
+     * @return Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
-    */
+     */
     public StatusResponse error() {
         return this.error;
     }
     /**
-     * The name of the cutover job.
+     * @return The name of the cutover job.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current progress in percentage of the cutover job.
+     * @return The current progress in percentage of the cutover job.
      * 
-    */
+     */
     public Integer progressPercent() {
         return this.progressPercent;
     }
     /**
-     * State of the cutover job.
+     * @return State of the cutover job.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * A message providing possible extra details about the current state.
+     * @return A message providing possible extra details about the current state.
      * 
-    */
+     */
     public String stateMessage() {
         return this.stateMessage;
     }
     /**
-     * The time the state was last updated.
+     * @return The time the state was last updated.
      * 
-    */
+     */
     public String stateTime() {
         return this.stateTime;
     }

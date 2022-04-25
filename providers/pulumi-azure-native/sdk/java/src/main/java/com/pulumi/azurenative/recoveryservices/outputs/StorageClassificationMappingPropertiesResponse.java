@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageClassificationMappingPropertiesResponse {
     /**
-     * Target storage object Id.
+     * @return Target storage object Id.
      * 
      */
     private final @Nullable String targetStorageClassificationId;
@@ -23,9 +23,9 @@ public final class StorageClassificationMappingPropertiesResponse {
     }
 
     /**
-     * Target storage object Id.
+     * @return Target storage object Id.
      * 
-    */
+     */
     public Optional<String> targetStorageClassificationId() {
         return Optional.ofNullable(this.targetStorageClassificationId);
     }

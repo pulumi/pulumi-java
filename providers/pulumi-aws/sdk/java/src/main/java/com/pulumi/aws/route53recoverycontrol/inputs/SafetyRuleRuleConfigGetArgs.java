@@ -22,6 +22,10 @@ public final class SafetyRuleRuleConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="inverted", required=true)
     private Output<Boolean> inverted;
 
+    /**
+     * @return Logical negation of the rule.
+     * 
+     */
     public Output<Boolean> inverted() {
         return this.inverted;
     }
@@ -33,6 +37,10 @@ public final class SafetyRuleRuleConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="threshold", required=true)
     private Output<Integer> threshold;
 
+    /**
+     * @return Number of controls that must be set when you specify an `ATLEAST` type rule.
+     * 
+     */
     public Output<Integer> threshold() {
         return this.threshold;
     }
@@ -44,6 +52,10 @@ public final class SafetyRuleRuleConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -74,29 +86,65 @@ public final class SafetyRuleRuleConfigGetArgs extends com.pulumi.resources.Reso
             $ = new SafetyRuleRuleConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inverted Logical negation of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inverted(Output<Boolean> inverted) {
             $.inverted = inverted;
             return this;
         }
 
+        /**
+         * @param inverted Logical negation of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inverted(Boolean inverted) {
             return inverted(Output.of(inverted));
         }
 
+        /**
+         * @param threshold Number of controls that must be set when you specify an `ATLEAST` type rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Output<Integer> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold Number of controls that must be set when you specify an `ATLEAST` type rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Integer threshold) {
             return threshold(Output.of(threshold));
         }
 
+        /**
+         * @param type Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -29,6 +29,10 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
     @Import(name="arcAutoProvisioning")
     private @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
 
+    /**
+     * @return The ARC autoprovisioning configuration
+     * 
+     */
     public Optional<Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs>> arcAutoProvisioning() {
         return Optional.ofNullable(this.arcAutoProvisioning);
     }
@@ -40,6 +44,10 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
     @Import(name="defenderForServers")
     private @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
 
+    /**
+     * @return The Defender for servers connection configuration
+     * 
+     */
     public Optional<Output<DefenderForServersAwsOfferingDefenderForServersArgs>> defenderForServers() {
         return Optional.ofNullable(this.defenderForServers);
     }
@@ -52,6 +60,11 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
     @Import(name="offeringType", required=true)
     private Output<String> offeringType;
 
+    /**
+     * @return The type of the security offering.
+     * Expected value is &#39;DefenderForServersAWS&#39;.
+     * 
+     */
     public Output<String> offeringType() {
         return this.offeringType;
     }
@@ -82,29 +95,67 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
             $ = new DefenderForServersAwsOfferingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arcAutoProvisioning The ARC autoprovisioning configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder arcAutoProvisioning(@Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning) {
             $.arcAutoProvisioning = arcAutoProvisioning;
             return this;
         }
 
+        /**
+         * @param arcAutoProvisioning The ARC autoprovisioning configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder arcAutoProvisioning(DefenderForServersAwsOfferingArcAutoProvisioningArgs arcAutoProvisioning) {
             return arcAutoProvisioning(Output.of(arcAutoProvisioning));
         }
 
+        /**
+         * @param defenderForServers The Defender for servers connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder defenderForServers(@Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers) {
             $.defenderForServers = defenderForServers;
             return this;
         }
 
+        /**
+         * @param defenderForServers The Defender for servers connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder defenderForServers(DefenderForServersAwsOfferingDefenderForServersArgs defenderForServers) {
             return defenderForServers(Output.of(defenderForServers));
         }
 
+        /**
+         * @param offeringType The type of the security offering.
+         * Expected value is &#39;DefenderForServersAWS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offeringType(Output<String> offeringType) {
             $.offeringType = offeringType;
             return this;
         }
 
+        /**
+         * @param offeringType The type of the security offering.
+         * Expected value is &#39;DefenderForServersAWS&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offeringType(String offeringType) {
             return offeringType(Output.of(offeringType));
         }

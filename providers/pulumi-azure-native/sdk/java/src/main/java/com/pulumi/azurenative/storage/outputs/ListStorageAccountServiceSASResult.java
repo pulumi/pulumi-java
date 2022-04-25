@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ListStorageAccountServiceSASResult {
     /**
-     * List service SAS credentials of specific resource.
+     * @return List service SAS credentials of specific resource.
      * 
      */
     private final String serviceSasToken;
@@ -21,9 +21,9 @@ public final class ListStorageAccountServiceSASResult {
     }
 
     /**
-     * List service SAS credentials of specific resource.
+     * @return List service SAS credentials of specific resource.
      * 
-    */
+     */
     public String serviceSasToken() {
         return this.serviceSasToken;
     }

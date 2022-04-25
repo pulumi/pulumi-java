@@ -23,6 +23,10 @@ public final class TimeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hours", required=true)
     private Integer hours;
 
+    /**
+     * @return The hour.
+     * 
+     */
     public Integer hours() {
         return this.hours;
     }
@@ -34,6 +38,10 @@ public final class TimeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minutes", required=true)
     private Integer minutes;
 
+    /**
+     * @return The minute.
+     * 
+     */
     public Integer minutes() {
         return this.minutes;
     }
@@ -45,6 +53,10 @@ public final class TimeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="seconds", required=true)
     private Integer seconds;
 
+    /**
+     * @return The second.
+     * 
+     */
     public Integer seconds() {
         return this.seconds;
     }
@@ -75,16 +87,34 @@ public final class TimeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TimeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours The hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param minutes The minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer minutes) {
             $.minutes = minutes;
             return this;
         }
 
+        /**
+         * @param seconds The second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(Integer seconds) {
             $.seconds = seconds;
             return this;

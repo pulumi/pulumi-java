@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse {
     /**
-     * The number of replayed log entries with a difference between baseline and simulated policies.
+     * @return The number of replayed log entries with a difference between baseline and simulated policies.
      * 
      */
     private final Integer differenceCount;
     /**
-     * The number of log entries that could not be replayed.
+     * @return The number of log entries that could not be replayed.
      * 
      */
     private final Integer errorCount;
     /**
-     * The total number of log entries replayed.
+     * @return The total number of log entries replayed.
      * 
      */
     private final Integer logCount;
     /**
-     * The date of the newest log entry replayed.
+     * @return The date of the newest log entry replayed.
      * 
      */
     private final GoogleTypeDateResponse newestDate;
     /**
-     * The date of the oldest log entry replayed.
+     * @return The date of the oldest log entry replayed.
      * 
      */
     private final GoogleTypeDateResponse oldestDate;
     /**
-     * The number of replayed log entries with no difference between baseline and simulated policies.
+     * @return The number of replayed log entries with no difference between baseline and simulated policies.
      * 
      */
     private final Integer unchangedCount;
@@ -58,44 +58,44 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse {
     }
 
     /**
-     * The number of replayed log entries with a difference between baseline and simulated policies.
+     * @return The number of replayed log entries with a difference between baseline and simulated policies.
      * 
-    */
+     */
     public Integer differenceCount() {
         return this.differenceCount;
     }
     /**
-     * The number of log entries that could not be replayed.
+     * @return The number of log entries that could not be replayed.
      * 
-    */
+     */
     public Integer errorCount() {
         return this.errorCount;
     }
     /**
-     * The total number of log entries replayed.
+     * @return The total number of log entries replayed.
      * 
-    */
+     */
     public Integer logCount() {
         return this.logCount;
     }
     /**
-     * The date of the newest log entry replayed.
+     * @return The date of the newest log entry replayed.
      * 
-    */
+     */
     public GoogleTypeDateResponse newestDate() {
         return this.newestDate;
     }
     /**
-     * The date of the oldest log entry replayed.
+     * @return The date of the oldest log entry replayed.
      * 
-    */
+     */
     public GoogleTypeDateResponse oldestDate() {
         return this.oldestDate;
     }
     /**
-     * The number of replayed log entries with no difference between baseline and simulated policies.
+     * @return The number of replayed log entries with no difference between baseline and simulated policies.
      * 
-    */
+     */
     public Integer unchangedCount() {
         return this.unchangedCount;
     }

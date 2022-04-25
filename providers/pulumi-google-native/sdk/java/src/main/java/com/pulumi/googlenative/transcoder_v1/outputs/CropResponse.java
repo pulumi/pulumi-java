@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class CropResponse {
     /**
-     * The number of pixels to crop from the bottom. The default is 0.
+     * @return The number of pixels to crop from the bottom. The default is 0.
      * 
      */
     private final Integer bottomPixels;
     /**
-     * The number of pixels to crop from the left. The default is 0.
+     * @return The number of pixels to crop from the left. The default is 0.
      * 
      */
     private final Integer leftPixels;
     /**
-     * The number of pixels to crop from the right. The default is 0.
+     * @return The number of pixels to crop from the right. The default is 0.
      * 
      */
     private final Integer rightPixels;
     /**
-     * The number of pixels to crop from the top. The default is 0.
+     * @return The number of pixels to crop from the top. The default is 0.
      * 
      */
     private final Integer topPixels;
@@ -43,30 +43,30 @@ public final class CropResponse {
     }
 
     /**
-     * The number of pixels to crop from the bottom. The default is 0.
+     * @return The number of pixels to crop from the bottom. The default is 0.
      * 
-    */
+     */
     public Integer bottomPixels() {
         return this.bottomPixels;
     }
     /**
-     * The number of pixels to crop from the left. The default is 0.
+     * @return The number of pixels to crop from the left. The default is 0.
      * 
-    */
+     */
     public Integer leftPixels() {
         return this.leftPixels;
     }
     /**
-     * The number of pixels to crop from the right. The default is 0.
+     * @return The number of pixels to crop from the right. The default is 0.
      * 
-    */
+     */
     public Integer rightPixels() {
         return this.rightPixels;
     }
     /**
-     * The number of pixels to crop from the top. The default is 0.
+     * @return The number of pixels to crop from the top. The default is 0.
      * 
-    */
+     */
     public Integer topPixels() {
         return this.topPixels;
     }

@@ -24,6 +24,11 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="defaultPort")
     private @Nullable Output<Integer> defaultPort;
 
+    /**
+     * @return The default port used if the port number is not specified in the
+     * network endpoint.
+     * 
+     */
     public Optional<Output<Integer>> defaultPort() {
         return Optional.ofNullable(this.defaultPort);
     }
@@ -36,6 +41,11 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when
+     * you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +63,16 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,6 +85,11 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="network", required=true)
     private Output<String> network;
 
+    /**
+     * @return The network to which all network endpoints in the NEG belong.
+     * Uses &#34;default&#34; project network if unspecified.
+     * 
+     */
     public Output<String> network() {
         return this.network;
     }
@@ -78,6 +103,12 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="networkEndpointType")
     private @Nullable Output<String> networkEndpointType;
 
+    /**
+     * @return Type of network endpoints in this network endpoint group.
+     * Default value is `GCE_VM_IP_PORT`.
+     * Possible values are `GCE_VM_IP_PORT`.
+     * 
+     */
     public Optional<Output<String>> networkEndpointType() {
         return Optional.ofNullable(this.networkEndpointType);
     }
@@ -90,6 +121,11 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -101,6 +137,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return Optional subnetwork to which all network endpoints in the NEG belong.
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -112,6 +152,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Zone where the network endpoint group is located.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -147,74 +191,194 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
             $ = new NetworkEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultPort The default port used if the port number is not specified in the
+         * network endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPort(@Nullable Output<Integer> defaultPort) {
             $.defaultPort = defaultPort;
             return this;
         }
 
+        /**
+         * @param defaultPort The default port used if the port number is not specified in the
+         * network endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPort(Integer defaultPort) {
             return defaultPort(Output.of(defaultPort));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when
+         * you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network The network to which all network endpoints in the NEG belong.
+         * Uses &#34;default&#34; project network if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The network to which all network endpoints in the NEG belong.
+         * Uses &#34;default&#34; project network if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param networkEndpointType Type of network endpoints in this network endpoint group.
+         * Default value is `GCE_VM_IP_PORT`.
+         * Possible values are `GCE_VM_IP_PORT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
             $.networkEndpointType = networkEndpointType;
             return this;
         }
 
+        /**
+         * @param networkEndpointType Type of network endpoints in this network endpoint group.
+         * Default value is `GCE_VM_IP_PORT`.
+         * Possible values are `GCE_VM_IP_PORT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkEndpointType(String networkEndpointType) {
             return networkEndpointType(Output.of(networkEndpointType));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param subnetwork Optional subnetwork to which all network endpoints in the NEG belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork Optional subnetwork to which all network endpoints in the NEG belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }
 
+        /**
+         * @param zone Zone where the network endpoint group is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Zone where the network endpoint group is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

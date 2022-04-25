@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GetManagedInstanceAzureADOnlyAuthenticationResult {
     /**
-     * Azure Active Directory only Authentication enabled.
+     * @return Azure Active Directory only Authentication enabled.
      * 
      */
     private final Boolean azureADOnlyAuthentication;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -44,30 +44,30 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationResult {
     }
 
     /**
-     * Azure Active Directory only Authentication enabled.
+     * @return Azure Active Directory only Authentication enabled.
      * 
-    */
+     */
     public Boolean azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

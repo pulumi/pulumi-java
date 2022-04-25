@@ -24,6 +24,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultLimit", required=true)
     private String defaultLimit;
 
+    /**
+     * @return Default number of tokens that can be consumed during the specified duration. This is the number of tokens assigned when a client application developer activates the service for his/her project. Specifying a value of 0 will block all requests. This can be used if you are provisioning quota to selected consumers and blocking others. Similarly, a value of -1 will indicate an unlimited quota. No other negative values are allowed. Used by group-based quotas only.
+     * 
+     */
     public String defaultLimit() {
         return this.defaultLimit;
     }
@@ -35,6 +39,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. User-visible, extended description for this quota limit. Should be used only when more context is needed to understand this limit than provided by the limit&#39;s display name (see: `display_name`).
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return User-visible display name for this limit. Optional. If not set, the UI will provide a default display name based on the quota configuration. This field can be used to override the default display name generated from the configuration.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -57,6 +69,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return Duration of this limit in textual notation. Must be &#34;100s&#34; or &#34;1d&#34;. Used by group-based quotas only.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -68,6 +84,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="freeTier", required=true)
     private String freeTier;
 
+    /**
+     * @return Free tier value displayed in the Developers Console for this limit. The free tier is the number of tokens that will be subtracted from the billed amount when billing is enabled. This field can only be set on a limit with duration &#34;1d&#34;, in a billable group; it is invalid on any other limit. If this field is not set, it defaults to 0, indicating that there is no free tier for this service. Used by group-based quotas only.
+     * 
+     */
     public String freeTier() {
         return this.freeTier;
     }
@@ -79,6 +99,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxLimit", required=true)
     private String maxLimit;
 
+    /**
+     * @return Maximum number of tokens that can be consumed during the specified duration. Client application developers can override the default limit up to this maximum. If specified, this value cannot be set to a value less than the default limit. If not specified, it is set to the default limit. To allow clients to apply overrides with no upper bound, set this to -1, indicating unlimited maximum quota. Used by group-based quotas only.
+     * 
+     */
     public String maxLimit() {
         return this.maxLimit;
     }
@@ -90,6 +114,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metric", required=true)
     private String metric;
 
+    /**
+     * @return The name of the metric this quota limit applies to. The quota limits with the same metric will be checked together during runtime. The metric must be defined within the service config.
+     * 
+     */
     public String metric() {
         return this.metric;
     }
@@ -101,6 +129,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the quota limit. The name must be provided, and it must be unique within the service. The name can only include alphanumeric characters as well as &#39;-&#39;. The maximum length of the limit name is 64 characters.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -112,6 +144,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="unit", required=true)
     private String unit;
 
+    /**
+     * @return Specify the unit of the quota limit. It uses the same syntax as Metric.unit. The supported unit kinds are determined by the quota backend system. Here are some examples: * &#34;1/min/{project}&#34; for quota per minute per project. Note: the order of unit components is insignificant. The &#34;1&#34; at the beginning is required to follow the metric unit syntax.
+     * 
+     */
     public String unit() {
         return this.unit;
     }
@@ -123,6 +159,10 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="values", required=true)
     private Map<String,String> values;
 
+    /**
+     * @return Tiered limit values. You must specify this as a key:value pair, with an integer value that is the maximum number of requests allowed for the specified unit. Currently only STANDARD is supported.
+     * 
+     */
     public Map<String,String> values() {
         return this.values;
     }
@@ -160,51 +200,111 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
             $ = new QuotaLimitResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultLimit Default number of tokens that can be consumed during the specified duration. This is the number of tokens assigned when a client application developer activates the service for his/her project. Specifying a value of 0 will block all requests. This can be used if you are provisioning quota to selected consumers and blocking others. Similarly, a value of -1 will indicate an unlimited quota. No other negative values are allowed. Used by group-based quotas only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultLimit(String defaultLimit) {
             $.defaultLimit = defaultLimit;
             return this;
         }
 
+        /**
+         * @param description Optional. User-visible, extended description for this quota limit. Should be used only when more context is needed to understand this limit than provided by the limit&#39;s display name (see: `display_name`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName User-visible display name for this limit. Optional. If not set, the UI will provide a default display name based on the quota configuration. This field can be used to override the default display name generated from the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param duration Duration of this limit in textual notation. Must be &#34;100s&#34; or &#34;1d&#34;. Used by group-based quotas only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param freeTier Free tier value displayed in the Developers Console for this limit. The free tier is the number of tokens that will be subtracted from the billed amount when billing is enabled. This field can only be set on a limit with duration &#34;1d&#34;, in a billable group; it is invalid on any other limit. If this field is not set, it defaults to 0, indicating that there is no free tier for this service. Used by group-based quotas only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder freeTier(String freeTier) {
             $.freeTier = freeTier;
             return this;
         }
 
+        /**
+         * @param maxLimit Maximum number of tokens that can be consumed during the specified duration. Client application developers can override the default limit up to this maximum. If specified, this value cannot be set to a value less than the default limit. If not specified, it is set to the default limit. To allow clients to apply overrides with no upper bound, set this to -1, indicating unlimited maximum quota. Used by group-based quotas only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxLimit(String maxLimit) {
             $.maxLimit = maxLimit;
             return this;
         }
 
+        /**
+         * @param metric The name of the metric this quota limit applies to. The quota limits with the same metric will be checked together during runtime. The metric must be defined within the service config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param name Name of the quota limit. The name must be provided, and it must be unique within the service. The name can only include alphanumeric characters as well as &#39;-&#39;. The maximum length of the limit name is 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param unit Specify the unit of the quota limit. It uses the same syntax as Metric.unit. The supported unit kinds are determined by the quota backend system. Here are some examples: * &#34;1/min/{project}&#34; for quota per minute per project. Note: the order of unit components is insignificant. The &#34;1&#34; at the beginning is required to follow the metric unit syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param values Tiered limit values. You must specify this as a key:value pair, with an integer value that is the maximum number of requests allowed for the specified unit. Currently only STANDARD is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Map<String,String> values) {
             $.values = values;
             return this;

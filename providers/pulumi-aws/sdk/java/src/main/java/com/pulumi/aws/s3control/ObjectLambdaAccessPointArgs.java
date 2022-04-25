@@ -30,6 +30,10 @@ public final class ObjectLambdaAccessPointArgs extends com.pulumi.resources.Reso
     @Import(name="configuration", required=true)
     private Output<ObjectLambdaAccessPointConfigurationArgs> configuration;
 
+    /**
+     * @return A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
+     * 
+     */
     public Output<ObjectLambdaAccessPointConfigurationArgs> configuration() {
         return this.configuration;
     }
@@ -41,6 +45,10 @@ public final class ObjectLambdaAccessPointArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for this Object Lambda Access Point.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,20 +88,44 @@ public final class ObjectLambdaAccessPointArgs extends com.pulumi.resources.Reso
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param configuration A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(Output<ObjectLambdaAccessPointConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(ObjectLambdaAccessPointConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param name The name for this Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for this Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -23,6 +23,10 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="dataSourceType")
     private @Nullable Output<String> dataSourceType;
 
+    /**
+     * @return Linked storage accounts type.
+     * 
+     */
     public Optional<Output<String>> dataSourceType() {
         return Optional.ofNullable(this.dataSourceType);
     }
@@ -34,6 +38,10 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -45,6 +53,10 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="storageAccountIds")
     private @Nullable Output<List<String>> storageAccountIds;
 
+    /**
+     * @return Linked storage accounts resources ids.
+     * 
+     */
     public Optional<Output<List<String>>> storageAccountIds() {
         return Optional.ofNullable(this.storageAccountIds);
     }
@@ -56,6 +68,10 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -87,42 +103,96 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
             $ = new LinkedStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSourceType Linked storage accounts type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceType(@Nullable Output<String> dataSourceType) {
             $.dataSourceType = dataSourceType;
             return this;
         }
 
+        /**
+         * @param dataSourceType Linked storage accounts type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceType(String dataSourceType) {
             return dataSourceType(Output.of(dataSourceType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccountIds Linked storage accounts resources ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountIds(@Nullable Output<List<String>> storageAccountIds) {
             $.storageAccountIds = storageAccountIds;
             return this;
         }
 
+        /**
+         * @param storageAccountIds Linked storage accounts resources ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountIds(List<String> storageAccountIds) {
             return storageAccountIds(Output.of(storageAccountIds));
         }
 
+        /**
+         * @param storageAccountIds Linked storage accounts resources ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountIds(String... storageAccountIds) {
             return storageAccountIds(List.of(storageAccountIds));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

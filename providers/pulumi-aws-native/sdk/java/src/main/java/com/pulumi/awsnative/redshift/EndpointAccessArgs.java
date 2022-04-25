@@ -23,6 +23,10 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="clusterIdentifier")
     private @Nullable Output<String> clusterIdentifier;
 
+    /**
+     * @return A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+     * 
+     */
     public Optional<Output<String>> clusterIdentifier() {
         return Optional.ofNullable(this.clusterIdentifier);
     }
@@ -34,6 +38,10 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpointName", required=true)
     private Output<String> endpointName;
 
+    /**
+     * @return The name of the endpoint.
+     * 
+     */
     public Output<String> endpointName() {
         return this.endpointName;
     }
@@ -45,6 +53,10 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceOwner")
     private @Nullable Output<String> resourceOwner;
 
+    /**
+     * @return The AWS account ID of the owner of the cluster.
+     * 
+     */
     public Optional<Output<String>> resourceOwner() {
         return Optional.ofNullable(this.resourceOwner);
     }
@@ -56,6 +68,10 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="subnetGroupName")
     private @Nullable Output<String> subnetGroupName;
 
+    /**
+     * @return The subnet group name where Amazon Redshift chooses to deploy the endpoint.
+     * 
+     */
     public Optional<Output<String>> subnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
@@ -67,6 +83,10 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vpcSecurityGroupIds", required=true)
     private Output<List<String>> vpcSecurityGroupIds;
 
+    /**
+     * @return A list of vpc security group ids to apply to the created endpoint access.
+     * 
+     */
     public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
@@ -99,51 +119,117 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
             $ = new EndpointAccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterIdentifier A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterIdentifier A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             return clusterIdentifier(Output.of(clusterIdentifier));
         }
 
+        /**
+         * @param endpointName The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointName The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param resourceOwner The AWS account ID of the owner of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
             $.resourceOwner = resourceOwner;
             return this;
         }
 
+        /**
+         * @param resourceOwner The AWS account ID of the owner of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOwner(String resourceOwner) {
             return resourceOwner(Output.of(resourceOwner));
         }
 
+        /**
+         * @param subnetGroupName The subnet group name where Amazon Redshift chooses to deploy the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             $.subnetGroupName = subnetGroupName;
             return this;
         }
 
+        /**
+         * @param subnetGroupName The subnet group name where Amazon Redshift chooses to deploy the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(String subnetGroupName) {
             return subnetGroupName(Output.of(subnetGroupName));
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of vpc security group ids to apply to the created endpoint access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(Output<List<String>> vpcSecurityGroupIds) {
             $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of vpc security group ids to apply to the created endpoint access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
 
+        /**
+         * @param vpcSecurityGroupIds A list of vpc security group ids to apply to the created endpoint access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }

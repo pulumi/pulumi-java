@@ -23,6 +23,10 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Service-defined message code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="createdTimeUtc", required=true)
     private String createdTimeUtc;
 
+    /**
+     * @return Time in UTC at which the message was created.
+     * 
+     */
     public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
@@ -45,6 +53,10 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="level", required=true)
     private String level;
 
+    /**
+     * @return Severity level of the status message.
+     * 
+     */
     public String level() {
         return this.level;
     }
@@ -56,6 +68,10 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A human-readable representation of the message code.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -87,21 +103,45 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
             $ = new StatusMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Service-defined message code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param createdTimeUtc Time in UTC at which the message was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTimeUtc(String createdTimeUtc) {
             $.createdTimeUtc = createdTimeUtc;
             return this;
         }
 
+        /**
+         * @param level Severity level of the status message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param message A human-readable representation of the message code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

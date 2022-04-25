@@ -25,6 +25,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
     @Import(name="cdnPolicy")
     private @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> cdnPolicy;
 
+    /**
+     * @return The policy to use for defining caching and signed request behaviour for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs>> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
@@ -37,6 +42,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
     @Import(name="corsPolicy")
     private @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy;
 
+    /**
+     * @return CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs>> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
@@ -49,6 +59,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
     @Import(name="urlRewrite")
     private @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite;
 
+    /**
+     * @return The URL rewrite configuration for requests that match this route.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs>> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
@@ -79,29 +94,71 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs
             $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cdnPolicy The policy to use for defining caching and signed request behaviour for requests that match this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnPolicy(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs> cdnPolicy) {
             $.cdnPolicy = cdnPolicy;
             return this;
         }
 
+        /**
+         * @param cdnPolicy The policy to use for defining caching and signed request behaviour for requests that match this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnPolicy(EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyGetArgs cdnPolicy) {
             return cdnPolicy(Output.of(cdnPolicy));
         }
 
+        /**
+         * @param corsPolicy CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsPolicy(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs> corsPolicy) {
             $.corsPolicy = corsPolicy;
             return this;
         }
 
+        /**
+         * @param corsPolicy CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsPolicy(EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyGetArgs corsPolicy) {
             return corsPolicy(Output.of(corsPolicy));
         }
 
+        /**
+         * @param urlRewrite The URL rewrite configuration for requests that match this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRewrite(@Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs> urlRewrite) {
             $.urlRewrite = urlRewrite;
             return this;
         }
 
+        /**
+         * @param urlRewrite The URL rewrite configuration for requests that match this route.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRewrite(EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteGetArgs urlRewrite) {
             return urlRewrite(Output.of(urlRewrite));
         }

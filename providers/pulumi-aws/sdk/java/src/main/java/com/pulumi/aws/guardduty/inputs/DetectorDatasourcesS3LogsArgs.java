@@ -20,6 +20,10 @@ public final class DetectorDatasourcesS3LogsArgs extends com.pulumi.resources.Re
     @Import(name="enable", required=true)
     private Output<Boolean> enable;
 
+    /**
+     * @return If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+     * 
+     */
     public Output<Boolean> enable() {
         return this.enable;
     }
@@ -48,11 +52,23 @@ public final class DetectorDatasourcesS3LogsArgs extends com.pulumi.resources.Re
             $ = new DetectorDatasourcesS3LogsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }

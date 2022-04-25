@@ -23,6 +23,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     @Import(name="accessToken")
     private @Nullable Output<String> accessToken;
 
+    /**
+     * @return The credentials used to access protected resources.
+     * 
+     */
     public Optional<Output<String>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -34,6 +38,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     @Import(name="clientCredentialsArn")
     private @Nullable Output<String> clientCredentialsArn;
 
+    /**
+     * @return The client credentials to fetch access token and refresh token.
+     * 
+     */
     public Optional<Output<String>> clientCredentialsArn() {
         return Optional.ofNullable(this.clientCredentialsArn);
     }
@@ -45,6 +53,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     @Import(name="connectorOAuthRequest")
     private @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
+    /**
+     * @return The oauth needed to request security tokens from the connector endpoint.
+     * 
+     */
     public Optional<Output<ConnectorProfileConnectorOAuthRequestArgs>> connectorOAuthRequest() {
         return Optional.ofNullable(this.connectorOAuthRequest);
     }
@@ -56,6 +68,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     @Import(name="refreshToken")
     private @Nullable Output<String> refreshToken;
 
+    /**
+     * @return The credentials used to acquire new access tokens.
+     * 
+     */
     public Optional<Output<String>> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -87,38 +103,86 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
             $ = new ConnectorProfileSalesforceConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The credentials used to access protected resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<String> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken The credentials used to access protected resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param clientCredentialsArn The client credentials to fetch access token and refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCredentialsArn(@Nullable Output<String> clientCredentialsArn) {
             $.clientCredentialsArn = clientCredentialsArn;
             return this;
         }
 
+        /**
+         * @param clientCredentialsArn The client credentials to fetch access token and refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCredentialsArn(String clientCredentialsArn) {
             return clientCredentialsArn(Output.of(clientCredentialsArn));
         }
 
+        /**
+         * @param connectorOAuthRequest The oauth needed to request security tokens from the connector endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
             $.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
 
+        /**
+         * @param connectorOAuthRequest The oauth needed to request security tokens from the connector endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOAuthRequest(ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
             return connectorOAuthRequest(Output.of(connectorOAuthRequest));
         }
 
+        /**
+         * @param refreshToken The credentials used to acquire new access tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
         }
 
+        /**
+         * @param refreshToken The credentials used to acquire new access tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(String refreshToken) {
             return refreshToken(Output.of(refreshToken));
         }

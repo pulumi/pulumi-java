@@ -22,6 +22,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     @Import(name="errorTopic")
     private @Nullable Output<String> errorTopic;
 
+    /**
+     * @return Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+     * 
+     */
     public Optional<Output<String>> errorTopic() {
         return Optional.ofNullable(this.errorTopic);
     }
@@ -33,6 +37,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     @Import(name="successTopic")
     private @Nullable Output<String> successTopic;
 
+    /**
+     * @return Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+     * 
+     */
     public Optional<Output<String>> successTopic() {
         return Optional.ofNullable(this.successTopic);
     }
@@ -62,20 +70,44 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
             $ = new EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorTopic Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorTopic(@Nullable Output<String> errorTopic) {
             $.errorTopic = errorTopic;
             return this;
         }
 
+        /**
+         * @param errorTopic Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorTopic(String errorTopic) {
             return errorTopic(Output.of(errorTopic));
         }
 
+        /**
+         * @param successTopic Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successTopic(@Nullable Output<String> successTopic) {
             $.successTopic = successTopic;
             return this;
         }
 
+        /**
+         * @param successTopic Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successTopic(String successTopic) {
             return successTopic(Output.of(successTopic));
         }

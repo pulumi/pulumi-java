@@ -26,6 +26,11 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends com.pulumi.
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -37,6 +42,10 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends com.pulumi.
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Password for a username/password pair.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -48,6 +57,10 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends com.pulumi.
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return Username for a username/password pair.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -78,29 +91,67 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends com.pulumi.
             $ = new MediaGraphUsernamePasswordCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param password Password for a username/password pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for a username/password pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username Username for a username/password pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for a username/password pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

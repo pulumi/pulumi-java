@@ -27,6 +27,11 @@ public final class AutomationActionWorkspaceResponse extends com.pulumi.resource
     @Import(name="actionType", required=true)
     private String actionType;
 
+    /**
+     * @return The type of the action that will be triggered by the Automation
+     * Expected value is &#39;Workspace&#39;.
+     * 
+     */
     public String actionType() {
         return this.actionType;
     }
@@ -38,6 +43,10 @@ public final class AutomationActionWorkspaceResponse extends com.pulumi.resource
     @Import(name="workspaceResourceId")
     private @Nullable String workspaceResourceId;
 
+    /**
+     * @return The fully qualified Log Analytics Workspace Azure Resource ID.
+     * 
+     */
     public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -67,11 +76,24 @@ public final class AutomationActionWorkspaceResponse extends com.pulumi.resource
             $ = new AutomationActionWorkspaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType The type of the action that will be triggered by the Automation
+         * Expected value is &#39;Workspace&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId The fully qualified Log Analytics Workspace Azure Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;

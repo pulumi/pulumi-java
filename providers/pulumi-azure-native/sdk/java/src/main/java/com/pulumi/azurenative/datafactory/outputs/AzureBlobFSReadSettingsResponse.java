@@ -14,63 +14,63 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureBlobFSReadSettingsResponse {
     /**
-     * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object deleteFilesAfterCompletion;
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * Indicates whether to enable partition discovery.
+     * @return Indicates whether to enable partition discovery.
      * 
      */
     private final @Nullable Boolean enablePartitionDiscovery;
     /**
-     * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+     * @return Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object fileListPath;
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * @return The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeEnd;
     /**
-     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * @return The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object modifiedDatetimeStart;
     /**
-     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * @return Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object partitionRootPath;
     /**
-     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     * @return If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object recursive;
     /**
-     * The read setting type.
+     * @return The read setting type.
      * Expected value is &#39;AzureBlobFSReadSettings&#39;.
      * 
      */
     private final String type;
     /**
-     * Azure blobFS wildcardFileName. Type: string (or Expression with resultType string).
+     * @return Azure blobFS wildcardFileName. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object wildcardFileName;
     /**
-     * Azure blobFS wildcardFolderPath. Type: string (or Expression with resultType string).
+     * @return Azure blobFS wildcardFolderPath. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object wildcardFolderPath;
@@ -104,87 +104,87 @@ public final class AzureBlobFSReadSettingsResponse {
     }
 
     /**
-     * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> deleteFilesAfterCompletion() {
         return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * Indicates whether to enable partition discovery.
+     * @return Indicates whether to enable partition discovery.
      * 
-    */
+     */
     public Optional<Boolean> enablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
     /**
-     * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+     * @return Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileListPath() {
         return Optional.ofNullable(this.fileListPath);
     }
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * @return The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
-     * The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * @return The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> modifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
     /**
-     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * @return Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
     /**
-     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     * @return If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> recursive() {
         return Optional.ofNullable(this.recursive);
     }
     /**
-     * The read setting type.
+     * @return The read setting type.
      * Expected value is &#39;AzureBlobFSReadSettings&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Azure blobFS wildcardFileName. Type: string (or Expression with resultType string).
+     * @return Azure blobFS wildcardFileName. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> wildcardFileName() {
         return Optional.ofNullable(this.wildcardFileName);
     }
     /**
-     * Azure blobFS wildcardFolderPath. Type: string (or Expression with resultType string).
+     * @return Azure blobFS wildcardFolderPath. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> wildcardFolderPath() {
         return Optional.ofNullable(this.wildcardFolderPath);
     }

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScaleActionResponse {
     /**
-     * the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
+     * @return the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
      * 
      */
     private final String cooldown;
     /**
-     * the scale direction. Whether the scaling action increases or decreases the number of instances.
+     * @return the scale direction. Whether the scaling action increases or decreases the number of instances.
      * 
      */
     private final String direction;
     /**
-     * the type of action that should occur when the scale rule fires.
+     * @return the type of action that should occur when the scale rule fires.
      * 
      */
     private final String type;
     /**
-     * the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
+     * @return the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
      * 
      */
     private final @Nullable String value;
@@ -45,30 +45,30 @@ public final class ScaleActionResponse {
     }
 
     /**
-     * the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
+     * @return the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
      * 
-    */
+     */
     public String cooldown() {
         return this.cooldown;
     }
     /**
-     * the scale direction. Whether the scaling action increases or decreases the number of instances.
+     * @return the scale direction. Whether the scaling action increases or decreases the number of instances.
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * the type of action that should occur when the scale rule fires.
+     * @return the type of action that should occur when the scale rule fires.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
+     * @return the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

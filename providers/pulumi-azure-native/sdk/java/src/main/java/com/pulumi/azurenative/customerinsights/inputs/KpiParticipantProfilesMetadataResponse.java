@@ -23,6 +23,10 @@ public final class KpiParticipantProfilesMetadataResponse extends com.pulumi.res
     @Import(name="typeName", required=true)
     private String typeName;
 
+    /**
+     * @return Name of the type.
+     * 
+     */
     public String typeName() {
         return this.typeName;
     }
@@ -51,6 +55,12 @@ public final class KpiParticipantProfilesMetadataResponse extends com.pulumi.res
             $ = new KpiParticipantProfilesMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param typeName Name of the type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(String typeName) {
             $.typeName = typeName;
             return this;

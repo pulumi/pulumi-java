@@ -13,37 +13,37 @@ import java.util.Objects;
 @CustomType
 public final class MySqlConnectionProfileResponse {
     /**
-     * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
+     * @return If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
      * 
      */
     private final String cloudSqlId;
     /**
-     * The IP or hostname of the source MySQL database.
+     * @return The IP or hostname of the source MySQL database.
      * 
      */
     private final String host;
     /**
-     * Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
+     * @return Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
      * 
      */
     private final String password;
     /**
-     * Indicates If this connection profile password is stored.
+     * @return Indicates If this connection profile password is stored.
      * 
      */
     private final Boolean passwordSet;
     /**
-     * The network port of the source MySQL database.
+     * @return The network port of the source MySQL database.
      * 
      */
     private final Integer port;
     /**
-     * SSL configuration for the destination to connect to the source database.
+     * @return SSL configuration for the destination to connect to the source database.
      * 
      */
     private final SslConfigResponse ssl;
     /**
-     * The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
+     * @return The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
      * 
      */
     private final String username;
@@ -67,51 +67,51 @@ public final class MySqlConnectionProfileResponse {
     }
 
     /**
-     * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
+     * @return If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
      * 
-    */
+     */
     public String cloudSqlId() {
         return this.cloudSqlId;
     }
     /**
-     * The IP or hostname of the source MySQL database.
+     * @return The IP or hostname of the source MySQL database.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
+     * @return Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Indicates If this connection profile password is stored.
+     * @return Indicates If this connection profile password is stored.
      * 
-    */
+     */
     public Boolean passwordSet() {
         return this.passwordSet;
     }
     /**
-     * The network port of the source MySQL database.
+     * @return The network port of the source MySQL database.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * SSL configuration for the destination to connect to the source database.
+     * @return SSL configuration for the destination to connect to the source database.
      * 
-    */
+     */
     public SslConfigResponse ssl() {
         return this.ssl;
     }
     /**
-     * The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
+     * @return The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

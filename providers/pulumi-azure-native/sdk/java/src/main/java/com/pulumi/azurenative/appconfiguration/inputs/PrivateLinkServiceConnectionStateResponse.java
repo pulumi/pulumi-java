@@ -25,6 +25,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="actionsRequired", required=true)
     private String actionsRequired;
 
+    /**
+     * @return Any action that is required beyond basic workflow (approve/ reject/ disconnect)
+     * 
+     */
     public String actionsRequired() {
         return this.actionsRequired;
     }
@@ -36,6 +40,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The private link service connection description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The private link service connection status.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -77,16 +89,34 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
             $ = new PrivateLinkServiceConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired Any action that is required beyond basic workflow (approve/ reject/ disconnect)
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param description The private link service connection description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

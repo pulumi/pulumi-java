@@ -26,6 +26,10 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
     @Import(name="messageTtlSeconds")
     private @Nullable Output<Integer> messageTtlSeconds;
 
+    /**
+     * @return The period of time a signaling channel retains undelivered messages before they are discarded.
+     * 
+     */
     public Optional<Output<Integer>> messageTtlSeconds() {
         return Optional.ofNullable(this.messageTtlSeconds);
     }
@@ -37,6 +41,10 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Kinesis Video Signaling Channel.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<List<SignalingChannelTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<SignalingChannelTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -59,6 +71,10 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<SignalingChannelType> type;
 
+    /**
+     * @return The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
+     * 
+     */
     public Optional<Output<SignalingChannelType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -90,42 +106,96 @@ public final class SignalingChannelArgs extends com.pulumi.resources.ResourceArg
             $ = new SignalingChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageTtlSeconds The period of time a signaling channel retains undelivered messages before they are discarded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageTtlSeconds(@Nullable Output<Integer> messageTtlSeconds) {
             $.messageTtlSeconds = messageTtlSeconds;
             return this;
         }
 
+        /**
+         * @param messageTtlSeconds The period of time a signaling channel retains undelivered messages before they are discarded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageTtlSeconds(Integer messageTtlSeconds) {
             return messageTtlSeconds(Output.of(messageTtlSeconds));
         }
 
+        /**
+         * @param name The name of the Kinesis Video Signaling Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Kinesis Video Signaling Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<SignalingChannelTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<SignalingChannelTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(SignalingChannelTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<SignalingChannelType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SignalingChannelType type) {
             return type(Output.of(type));
         }

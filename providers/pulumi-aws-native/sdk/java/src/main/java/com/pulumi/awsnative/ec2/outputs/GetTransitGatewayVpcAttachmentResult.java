@@ -17,7 +17,7 @@ public final class GetTransitGatewayVpcAttachmentResult {
     private final @Nullable List<String> addSubnetIds;
     private final @Nullable String id;
     /**
-     * The options for the transit gateway vpc attachment.
+     * @return The options for the transit gateway vpc attachment.
      * 
      */
     private final @Nullable OptionsProperties options;
@@ -45,9 +45,9 @@ public final class GetTransitGatewayVpcAttachmentResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The options for the transit gateway vpc attachment.
+     * @return The options for the transit gateway vpc attachment.
      * 
-    */
+     */
     public Optional<OptionsProperties> options() {
         return Optional.ofNullable(this.options);
     }

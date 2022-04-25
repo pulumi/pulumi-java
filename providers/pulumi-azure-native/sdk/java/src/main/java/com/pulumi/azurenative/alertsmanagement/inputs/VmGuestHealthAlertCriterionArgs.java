@@ -29,6 +29,10 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
     @Import(name="healthStates", required=true)
     private Output<List<HealthStateArgs>> healthStates;
 
+    /**
+     * @return Health states to alert on
+     * 
+     */
     public Output<List<HealthStateArgs>> healthStates() {
         return this.healthStates;
     }
@@ -40,6 +44,10 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
     @Import(name="monitorNames")
     private @Nullable Output<List<String>> monitorNames;
 
+    /**
+     * @return Names of health monitor on which to define alert
+     * 
+     */
     public Optional<Output<List<String>>> monitorNames() {
         return Optional.ofNullable(this.monitorNames);
     }
@@ -51,6 +59,10 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
     @Import(name="monitorTypes")
     private @Nullable Output<List<String>> monitorTypes;
 
+    /**
+     * @return Names of health monitor type on which to define alert
+     * 
+     */
     public Optional<Output<List<String>>> monitorTypes() {
         return Optional.ofNullable(this.monitorTypes);
     }
@@ -63,6 +75,11 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return specifies the type of the alert criterion.
+     * Expected value is &#39;GuestVmHealth&#39;.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -94,50 +111,118 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
             $ = new VmGuestHealthAlertCriterionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthStates Health states to alert on
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStates(Output<List<HealthStateArgs>> healthStates) {
             $.healthStates = healthStates;
             return this;
         }
 
+        /**
+         * @param healthStates Health states to alert on
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStates(List<HealthStateArgs> healthStates) {
             return healthStates(Output.of(healthStates));
         }
 
+        /**
+         * @param healthStates Health states to alert on
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStates(HealthStateArgs... healthStates) {
             return healthStates(List.of(healthStates));
         }
 
+        /**
+         * @param monitorNames Names of health monitor on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorNames(@Nullable Output<List<String>> monitorNames) {
             $.monitorNames = monitorNames;
             return this;
         }
 
+        /**
+         * @param monitorNames Names of health monitor on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorNames(List<String> monitorNames) {
             return monitorNames(Output.of(monitorNames));
         }
 
+        /**
+         * @param monitorNames Names of health monitor on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorNames(String... monitorNames) {
             return monitorNames(List.of(monitorNames));
         }
 
+        /**
+         * @param monitorTypes Names of health monitor type on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorTypes(@Nullable Output<List<String>> monitorTypes) {
             $.monitorTypes = monitorTypes;
             return this;
         }
 
+        /**
+         * @param monitorTypes Names of health monitor type on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorTypes(List<String> monitorTypes) {
             return monitorTypes(Output.of(monitorTypes));
         }
 
+        /**
+         * @param monitorTypes Names of health monitor type on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorTypes(String... monitorTypes) {
             return monitorTypes(List.of(monitorTypes));
         }
 
+        /**
+         * @param namespace specifies the type of the alert criterion.
+         * Expected value is &#39;GuestVmHealth&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace specifies the type of the alert criterion.
+         * Expected value is &#39;GuestVmHealth&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncryption {
     /**
-     * Encryption mode to use for CloudWatch data. Valid values: `DISABLED`, `SSE-KMS`. Default value: `DISABLED`.
+     * @return Encryption mode to use for CloudWatch data. Valid values: `DISABLED`, `SSE-KMS`. Default value: `DISABLED`.
      * 
      */
     private final @Nullable String cloudwatchEncryptionMode;
     /**
-     * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+     * @return Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
      * 
      */
     private final @Nullable String kmsKeyArn;
@@ -31,16 +31,16 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     }
 
     /**
-     * Encryption mode to use for CloudWatch data. Valid values: `DISABLED`, `SSE-KMS`. Default value: `DISABLED`.
+     * @return Encryption mode to use for CloudWatch data. Valid values: `DISABLED`, `SSE-KMS`. Default value: `DISABLED`.
      * 
-    */
+     */
     public Optional<String> cloudwatchEncryptionMode() {
         return Optional.ofNullable(this.cloudwatchEncryptionMode);
     }
     /**
-     * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+     * @return Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }

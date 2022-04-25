@@ -25,6 +25,10 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceNodeId")
     private @Nullable String sourceNodeId;
 
+    /**
+     * @return The source graph node&#39;s identifier.
+     * 
+     */
     public Optional<String> sourceNodeId() {
         return Optional.ofNullable(this.sourceNodeId);
     }
@@ -36,6 +40,10 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourcePortId")
     private @Nullable String sourcePortId;
 
+    /**
+     * @return The identifier of the source node&#39;s port that the edge connects from.
+     * 
+     */
     public Optional<String> sourcePortId() {
         return Optional.ofNullable(this.sourcePortId);
     }
@@ -47,6 +55,10 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetNodeId")
     private @Nullable String targetNodeId;
 
+    /**
+     * @return The destination graph node&#39;s identifier.
+     * 
+     */
     public Optional<String> targetNodeId() {
         return Optional.ofNullable(this.targetNodeId);
     }
@@ -58,6 +70,10 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetPortId")
     private @Nullable String targetPortId;
 
+    /**
+     * @return The identifier of the destination node&#39;s port that the edge connects into.
+     * 
+     */
     public Optional<String> targetPortId() {
         return Optional.ofNullable(this.targetPortId);
     }
@@ -89,21 +105,45 @@ public final class GraphEdgeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GraphEdgeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceNodeId The source graph node&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNodeId(@Nullable String sourceNodeId) {
             $.sourceNodeId = sourceNodeId;
             return this;
         }
 
+        /**
+         * @param sourcePortId The identifier of the source node&#39;s port that the edge connects from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortId(@Nullable String sourcePortId) {
             $.sourcePortId = sourcePortId;
             return this;
         }
 
+        /**
+         * @param targetNodeId The destination graph node&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNodeId(@Nullable String targetNodeId) {
             $.targetNodeId = targetNodeId;
             return this;
         }
 
+        /**
+         * @param targetPortId The identifier of the destination node&#39;s port that the edge connects into.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPortId(@Nullable String targetPortId) {
             $.targetPortId = targetPortId;
             return this;

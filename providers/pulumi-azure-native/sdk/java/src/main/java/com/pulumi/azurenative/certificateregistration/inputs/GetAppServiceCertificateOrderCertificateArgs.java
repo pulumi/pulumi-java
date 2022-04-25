@@ -19,6 +19,10 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
     @Import(name="certificateOrderName", required=true)
     private String certificateOrderName;
 
+    /**
+     * @return Name of the certificate order.
+     * 
+     */
     public String certificateOrderName() {
         return this.certificateOrderName;
     }
@@ -30,6 +34,10 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the certificate.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
             $ = new GetAppServiceCertificateOrderCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateOrderName Name of the certificate order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateOrderName(String certificateOrderName) {
             $.certificateOrderName = certificateOrderName;
             return this;
         }
 
+        /**
+         * @param name Name of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

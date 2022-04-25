@@ -25,6 +25,10 @@ public final class ScanRunErrorTraceResponse extends com.pulumi.resources.Invoke
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Indicates the error reason code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -36,6 +40,10 @@ public final class ScanRunErrorTraceResponse extends com.pulumi.resources.Invoke
     @Import(name="mostCommonHttpErrorCode", required=true)
     private Integer mostCommonHttpErrorCode;
 
+    /**
+     * @return If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
+     * 
+     */
     public Integer mostCommonHttpErrorCode() {
         return this.mostCommonHttpErrorCode;
     }
@@ -47,6 +55,10 @@ public final class ScanRunErrorTraceResponse extends com.pulumi.resources.Invoke
     @Import(name="scanConfigError", required=true)
     private ScanConfigErrorResponse scanConfigError;
 
+    /**
+     * @return If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
+     * 
+     */
     public ScanConfigErrorResponse scanConfigError() {
         return this.scanConfigError;
     }
@@ -77,16 +89,34 @@ public final class ScanRunErrorTraceResponse extends com.pulumi.resources.Invoke
             $ = new ScanRunErrorTraceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Indicates the error reason code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param mostCommonHttpErrorCode If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostCommonHttpErrorCode(Integer mostCommonHttpErrorCode) {
             $.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
             return this;
         }
 
+        /**
+         * @param scanConfigError If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scanConfigError(ScanConfigErrorResponse scanConfigError) {
             $.scanConfigError = scanConfigError;
             return this;

@@ -17,109 +17,109 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetClusterResult {
     /**
-     * The name of the Access Control List to associate with the cluster.
+     * @return The name of the Access Control List to associate with the cluster.
      * 
      */
     private final @Nullable String aCLName;
     /**
-     * The Amazon Resource Name (ARN) of the cluster.
+     * @return The Amazon Resource Name (ARN) of the cluster.
      * 
      */
     private final @Nullable String aRN;
     /**
-     * A flag that enables automatic minor version upgrade when set to true.
+     * @return A flag that enables automatic minor version upgrade when set to true.
      * 
      * You cannot modify the value of AutoMinorVersionUpgrade after the cluster is created. To enable AutoMinorVersionUpgrade on a cluster you must set AutoMinorVersionUpgrade to true when you create a cluster.
      * 
      */
     private final @Nullable Boolean autoMinorVersionUpgrade;
     /**
-     * The cluster endpoint.
+     * @return The cluster endpoint.
      * 
      */
     private final @Nullable ClusterEndpoint clusterEndpoint;
     /**
-     * An optional description of the cluster.
+     * @return An optional description of the cluster.
      * 
      */
     private final @Nullable String description;
     /**
-     * The Redis engine version used by the cluster.
+     * @return The Redis engine version used by the cluster.
      * 
      */
     private final @Nullable String engineVersion;
     /**
-     * The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. MemoryDB creates the snapshot, and then deletes the cluster immediately afterward.
+     * @return The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. MemoryDB creates the snapshot, and then deletes the cluster immediately afterward.
      * 
      */
     private final @Nullable String finalSnapshotName;
     /**
-     * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
+     * @return Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
      * 
      */
     private final @Nullable String maintenanceWindow;
     /**
-     * The compute and memory capacity of the nodes in the cluster.
+     * @return The compute and memory capacity of the nodes in the cluster.
      * 
      */
     private final @Nullable String nodeType;
     /**
-     * The number of replicas to apply to each shard. The limit is 5.
+     * @return The number of replicas to apply to each shard. The limit is 5.
      * 
      */
     private final @Nullable Integer numReplicasPerShard;
     /**
-     * The number of shards the cluster will contain.
+     * @return The number of shards the cluster will contain.
      * 
      */
     private final @Nullable Integer numShards;
     /**
-     * The name of the parameter group associated with the cluster.
+     * @return The name of the parameter group associated with the cluster.
      * 
      */
     private final @Nullable String parameterGroupName;
     /**
-     * The status of the parameter group used by the cluster.
+     * @return The status of the parameter group used by the cluster.
      * 
      */
     private final @Nullable String parameterGroupStatus;
     /**
-     * One or more Amazon VPC security groups associated with this cluster.
+     * @return One or more Amazon VPC security groups associated with this cluster.
      * 
      */
     private final @Nullable List<String> securityGroupIds;
     /**
-     * The number of days for which MemoryDB retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted.
+     * @return The number of days for which MemoryDB retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted.
      * 
      */
     private final @Nullable Integer snapshotRetentionLimit;
     /**
-     * The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your cluster.
+     * @return The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your cluster.
      * 
      */
     private final @Nullable String snapshotWindow;
     /**
-     * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.
+     * @return The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.
      * 
      */
     private final @Nullable String snsTopicArn;
     /**
-     * The status of the Amazon SNS notification topic. Notifications are sent only if the status is enabled.
+     * @return The status of the Amazon SNS notification topic. Notifications are sent only if the status is enabled.
      * 
      */
     private final @Nullable String snsTopicStatus;
     /**
-     * The status of the cluster. For example, Available, Updating, Creating.
+     * @return The status of the cluster. For example, Available, Updating, Creating.
      * 
      */
     private final @Nullable String status;
     /**
-     * The name of the subnet group to be used for the cluster.
+     * @return The name of the subnet group to be used for the cluster.
      * 
      */
     private final @Nullable String subnetGroupName;
     /**
-     * An array of key-value pairs to apply to this cluster.
+     * @return An array of key-value pairs to apply to this cluster.
      * 
      */
     private final @Nullable List<ClusterTag> tags;
@@ -171,151 +171,151 @@ public final class GetClusterResult {
     }
 
     /**
-     * The name of the Access Control List to associate with the cluster.
+     * @return The name of the Access Control List to associate with the cluster.
      * 
-    */
+     */
     public Optional<String> aCLName() {
         return Optional.ofNullable(this.aCLName);
     }
     /**
-     * The Amazon Resource Name (ARN) of the cluster.
+     * @return The Amazon Resource Name (ARN) of the cluster.
      * 
-    */
+     */
     public Optional<String> aRN() {
         return Optional.ofNullable(this.aRN);
     }
     /**
-     * A flag that enables automatic minor version upgrade when set to true.
+     * @return A flag that enables automatic minor version upgrade when set to true.
      * 
      * You cannot modify the value of AutoMinorVersionUpgrade after the cluster is created. To enable AutoMinorVersionUpgrade on a cluster you must set AutoMinorVersionUpgrade to true when you create a cluster.
      * 
-    */
+     */
     public Optional<Boolean> autoMinorVersionUpgrade() {
         return Optional.ofNullable(this.autoMinorVersionUpgrade);
     }
     /**
-     * The cluster endpoint.
+     * @return The cluster endpoint.
      * 
-    */
+     */
     public Optional<ClusterEndpoint> clusterEndpoint() {
         return Optional.ofNullable(this.clusterEndpoint);
     }
     /**
-     * An optional description of the cluster.
+     * @return An optional description of the cluster.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The Redis engine version used by the cluster.
+     * @return The Redis engine version used by the cluster.
      * 
-    */
+     */
     public Optional<String> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
     /**
-     * The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. MemoryDB creates the snapshot, and then deletes the cluster immediately afterward.
+     * @return The user-supplied name of a final cluster snapshot. This is the unique name that identifies the snapshot. MemoryDB creates the snapshot, and then deletes the cluster immediately afterward.
      * 
-    */
+     */
     public Optional<String> finalSnapshotName() {
         return Optional.ofNullable(this.finalSnapshotName);
     }
     /**
-     * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
+     * @return Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
      * 
-    */
+     */
     public Optional<String> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
     /**
-     * The compute and memory capacity of the nodes in the cluster.
+     * @return The compute and memory capacity of the nodes in the cluster.
      * 
-    */
+     */
     public Optional<String> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
     /**
-     * The number of replicas to apply to each shard. The limit is 5.
+     * @return The number of replicas to apply to each shard. The limit is 5.
      * 
-    */
+     */
     public Optional<Integer> numReplicasPerShard() {
         return Optional.ofNullable(this.numReplicasPerShard);
     }
     /**
-     * The number of shards the cluster will contain.
+     * @return The number of shards the cluster will contain.
      * 
-    */
+     */
     public Optional<Integer> numShards() {
         return Optional.ofNullable(this.numShards);
     }
     /**
-     * The name of the parameter group associated with the cluster.
+     * @return The name of the parameter group associated with the cluster.
      * 
-    */
+     */
     public Optional<String> parameterGroupName() {
         return Optional.ofNullable(this.parameterGroupName);
     }
     /**
-     * The status of the parameter group used by the cluster.
+     * @return The status of the parameter group used by the cluster.
      * 
-    */
+     */
     public Optional<String> parameterGroupStatus() {
         return Optional.ofNullable(this.parameterGroupStatus);
     }
     /**
-     * One or more Amazon VPC security groups associated with this cluster.
+     * @return One or more Amazon VPC security groups associated with this cluster.
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
-     * The number of days for which MemoryDB retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted.
+     * @return The number of days for which MemoryDB retains automatic snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, a snapshot that was taken today is retained for 5 days before being deleted.
      * 
-    */
+     */
     public Optional<Integer> snapshotRetentionLimit() {
         return Optional.ofNullable(this.snapshotRetentionLimit);
     }
     /**
-     * The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your cluster.
+     * @return The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your cluster.
      * 
-    */
+     */
     public Optional<String> snapshotWindow() {
         return Optional.ofNullable(this.snapshotWindow);
     }
     /**
-     * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.
+     * @return The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which notifications are sent.
      * 
-    */
+     */
     public Optional<String> snsTopicArn() {
         return Optional.ofNullable(this.snsTopicArn);
     }
     /**
-     * The status of the Amazon SNS notification topic. Notifications are sent only if the status is enabled.
+     * @return The status of the Amazon SNS notification topic. Notifications are sent only if the status is enabled.
      * 
-    */
+     */
     public Optional<String> snsTopicStatus() {
         return Optional.ofNullable(this.snsTopicStatus);
     }
     /**
-     * The status of the cluster. For example, Available, Updating, Creating.
+     * @return The status of the cluster. For example, Available, Updating, Creating.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The name of the subnet group to be used for the cluster.
+     * @return The name of the subnet group to be used for the cluster.
      * 
-    */
+     */
     public Optional<String> subnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
     /**
-     * An array of key-value pairs to apply to this cluster.
+     * @return An array of key-value pairs to apply to this cluster.
      * 
-    */
+     */
     public List<ClusterTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

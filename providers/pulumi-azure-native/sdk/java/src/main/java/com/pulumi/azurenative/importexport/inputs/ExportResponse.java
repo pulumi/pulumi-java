@@ -26,6 +26,10 @@ public final class ExportResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blobListBlobPath")
     private @Nullable String blobListBlobPath;
 
+    /**
+     * @return The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
+     * 
+     */
     public Optional<String> blobListBlobPath() {
         return Optional.ofNullable(this.blobListBlobPath);
     }
@@ -37,6 +41,10 @@ public final class ExportResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blobPath")
     private @Nullable List<String> blobPath;
 
+    /**
+     * @return A collection of blob-path strings.
+     * 
+     */
     public Optional<List<String>> blobPath() {
         return Optional.ofNullable(this.blobPath);
     }
@@ -48,6 +56,10 @@ public final class ExportResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blobPathPrefix")
     private @Nullable List<String> blobPathPrefix;
 
+    /**
+     * @return A collection of blob-prefix strings.
+     * 
+     */
     public Optional<List<String>> blobPathPrefix() {
         return Optional.ofNullable(this.blobPathPrefix);
     }
@@ -78,25 +90,55 @@ public final class ExportResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ExportResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobListBlobPath The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobListBlobPath(@Nullable String blobListBlobPath) {
             $.blobListBlobPath = blobListBlobPath;
             return this;
         }
 
+        /**
+         * @param blobPath A collection of blob-path strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPath(@Nullable List<String> blobPath) {
             $.blobPath = blobPath;
             return this;
         }
 
+        /**
+         * @param blobPath A collection of blob-path strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPath(String... blobPath) {
             return blobPath(List.of(blobPath));
         }
 
+        /**
+         * @param blobPathPrefix A collection of blob-prefix strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathPrefix(@Nullable List<String> blobPathPrefix) {
             $.blobPathPrefix = blobPathPrefix;
             return this;
         }
 
+        /**
+         * @param blobPathPrefix A collection of blob-prefix strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobPathPrefix(String... blobPathPrefix) {
             return blobPathPrefix(List.of(blobPathPrefix));
         }

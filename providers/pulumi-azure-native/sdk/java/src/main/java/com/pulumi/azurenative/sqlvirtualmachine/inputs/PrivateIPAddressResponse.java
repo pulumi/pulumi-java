@@ -25,6 +25,10 @@ public final class PrivateIPAddressResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return Private IP address bound to the availability group listener.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -36,6 +40,10 @@ public final class PrivateIPAddressResponse extends com.pulumi.resources.InvokeA
     @Import(name="subnetResourceId")
     private @Nullable String subnetResourceId;
 
+    /**
+     * @return Subnet used to include private IP.
+     * 
+     */
     public Optional<String> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
@@ -65,11 +73,23 @@ public final class PrivateIPAddressResponse extends com.pulumi.resources.InvokeA
             $ = new PrivateIPAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress Private IP address bound to the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param subnetResourceId Subnet used to include private IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
             $.subnetResourceId = subnetResourceId;
             return this;

@@ -19,6 +19,10 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the Channel.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

@@ -27,6 +27,10 @@ public final class ConfigurationGroupResponse extends com.pulumi.resources.Invok
     @Import(name="conditionalMembership")
     private @Nullable String conditionalMembership;
 
+    /**
+     * @return Network group conditional filter.
+     * 
+     */
     public Optional<String> conditionalMembership() {
         return Optional.ofNullable(this.conditionalMembership);
     }
@@ -38,6 +42,10 @@ public final class ConfigurationGroupResponse extends com.pulumi.resources.Invok
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A description of the network group.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class ConfigurationGroupResponse extends com.pulumi.resources.Invok
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return A friendly name for the network group.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -60,6 +72,10 @@ public final class ConfigurationGroupResponse extends com.pulumi.resources.Invok
     @Import(name="groupMembers")
     private @Nullable List<GroupMembersItemResponse> groupMembers;
 
+    /**
+     * @return Group members of network group.
+     * 
+     */
     public Optional<List<GroupMembersItemResponse>> groupMembers() {
         return Optional.ofNullable(this.groupMembers);
     }
@@ -71,6 +87,10 @@ public final class ConfigurationGroupResponse extends com.pulumi.resources.Invok
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -82,6 +102,10 @@ public final class ConfigurationGroupResponse extends com.pulumi.resources.Invok
     @Import(name="memberType")
     private @Nullable String memberType;
 
+    /**
+     * @return Group member type.
+     * 
+     */
     public Optional<String> memberType() {
         return Optional.ofNullable(this.memberType);
     }
@@ -93,6 +117,10 @@ public final class ConfigurationGroupResponse extends com.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the scope assignment resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -127,40 +155,88 @@ public final class ConfigurationGroupResponse extends com.pulumi.resources.Invok
             $ = new ConfigurationGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditionalMembership Network group conditional filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionalMembership(@Nullable String conditionalMembership) {
             $.conditionalMembership = conditionalMembership;
             return this;
         }
 
+        /**
+         * @param description A description of the network group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName A friendly name for the network group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param groupMembers Group members of network group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMembers(@Nullable List<GroupMembersItemResponse> groupMembers) {
             $.groupMembers = groupMembers;
             return this;
         }
 
+        /**
+         * @param groupMembers Group members of network group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMembers(GroupMembersItemResponse... groupMembers) {
             return groupMembers(List.of(groupMembers));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param memberType Group member type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberType(@Nullable String memberType) {
             $.memberType = memberType;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the scope assignment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

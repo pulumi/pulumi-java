@@ -25,6 +25,10 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Source type of the content
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -36,6 +40,10 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the content source.  The repo name, solution name, LA workspace name etc.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sourceId")
     private @Nullable String sourceId;
 
+    /**
+     * @return ID of the content source.  The solution ID, workspace ID, etc
+     * 
+     */
     public Optional<String> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
@@ -77,16 +89,34 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
             $ = new MetadataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Source type of the content
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Name of the content source.  The repo name, solution name, LA workspace name etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sourceId ID of the content source.  The solution ID, workspace ID, etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceId(@Nullable String sourceId) {
             $.sourceId = sourceId;
             return this;

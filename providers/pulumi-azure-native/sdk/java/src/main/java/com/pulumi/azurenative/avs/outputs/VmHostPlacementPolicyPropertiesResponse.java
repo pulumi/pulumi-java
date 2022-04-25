@@ -13,38 +13,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VmHostPlacementPolicyPropertiesResponse {
     /**
-     * placement policy affinity type
+     * @return placement policy affinity type
      * 
      */
     private final String affinityType;
     /**
-     * Display name of the placement policy
+     * @return Display name of the placement policy
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Host members list
+     * @return Host members list
      * 
      */
     private final List<String> hostMembers;
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
      */
     private final String provisioningState;
     /**
-     * Whether the placement policy is enabled or disabled
+     * @return Whether the placement policy is enabled or disabled
      * 
      */
     private final @Nullable String state;
     /**
-     * placement policy type
+     * @return placement policy type
      * Expected value is &#39;VmHost&#39;.
      * 
      */
     private final String type;
     /**
-     * Virtual machine members list
+     * @return Virtual machine members list
      * 
      */
     private final List<String> vmMembers;
@@ -68,52 +68,52 @@ public final class VmHostPlacementPolicyPropertiesResponse {
     }
 
     /**
-     * placement policy affinity type
+     * @return placement policy affinity type
      * 
-    */
+     */
     public String affinityType() {
         return this.affinityType;
     }
     /**
-     * Display name of the placement policy
+     * @return Display name of the placement policy
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Host members list
+     * @return Host members list
      * 
-    */
+     */
     public List<String> hostMembers() {
         return this.hostMembers;
     }
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Whether the placement policy is enabled or disabled
+     * @return Whether the placement policy is enabled or disabled
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * placement policy type
+     * @return placement policy type
      * Expected value is &#39;VmHost&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Virtual machine members list
+     * @return Virtual machine members list
      * 
-    */
+     */
     public List<String> vmMembers() {
         return this.vmMembers;
     }

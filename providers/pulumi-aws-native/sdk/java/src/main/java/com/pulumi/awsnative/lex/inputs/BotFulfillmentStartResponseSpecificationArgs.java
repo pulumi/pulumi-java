@@ -29,6 +29,10 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends com.pulu
     @Import(name="allowInterrupt")
     private @Nullable Output<Boolean> allowInterrupt;
 
+    /**
+     * @return Determines whether the user can interrupt the start message while it is playing.
+     * 
+     */
     public Optional<Output<Boolean>> allowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
@@ -40,6 +44,10 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends com.pulu
     @Import(name="delayInSeconds", required=true)
     private Output<Integer> delayInSeconds;
 
+    /**
+     * @return The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
+     * 
+     */
     public Output<Integer> delayInSeconds() {
         return this.delayInSeconds;
     }
@@ -77,20 +85,44 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends com.pulu
             $ = new BotFulfillmentStartResponseSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowInterrupt Determines whether the user can interrupt the start message while it is playing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInterrupt(@Nullable Output<Boolean> allowInterrupt) {
             $.allowInterrupt = allowInterrupt;
             return this;
         }
 
+        /**
+         * @param allowInterrupt Determines whether the user can interrupt the start message while it is playing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInterrupt(Boolean allowInterrupt) {
             return allowInterrupt(Output.of(allowInterrupt));
         }
 
+        /**
+         * @param delayInSeconds The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayInSeconds(Output<Integer> delayInSeconds) {
             $.delayInSeconds = delayInSeconds;
             return this;
         }
 
+        /**
+         * @param delayInSeconds The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayInSeconds(Integer delayInSeconds) {
             return delayInSeconds(Output.of(delayInSeconds));
         }

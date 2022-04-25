@@ -26,6 +26,10 @@ public final class LogToMetricActionResponse extends com.pulumi.resources.Invoke
     @Import(name="criteria", required=true)
     private List<CriteriaResponse> criteria;
 
+    /**
+     * @return Criteria of Metric
+     * 
+     */
     public List<CriteriaResponse> criteria() {
         return this.criteria;
     }
@@ -38,6 +42,11 @@ public final class LogToMetricActionResponse extends com.pulumi.resources.Invoke
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return Specifies the action. Supported values - AlertingAction, LogToMetricAction
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -67,15 +76,34 @@ public final class LogToMetricActionResponse extends com.pulumi.resources.Invoke
             $ = new LogToMetricActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param criteria Criteria of Metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(List<CriteriaResponse> criteria) {
             $.criteria = criteria;
             return this;
         }
 
+        /**
+         * @param criteria Criteria of Metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(CriteriaResponse... criteria) {
             return criteria(List.of(criteria));
         }
 
+        /**
+         * @param odataType Specifies the action. Supported values - AlertingAction, LogToMetricAction
+         * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

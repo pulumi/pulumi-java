@@ -27,6 +27,10 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventType", required=true)
     private Output<String> eventType;
 
+    /**
+     * @return The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*{@literal /}eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is &#39;change&#39;. These parts are lower case.
+     * 
+     */
     public Output<String> eventType() {
         return this.eventType;
     }
@@ -38,6 +42,10 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failurePolicy")
     private @Nullable Output<FailurePolicyArgs> failurePolicy;
 
+    /**
+     * @return Specifies policy for failed executions.
+     * 
+     */
     public Optional<Output<FailurePolicyArgs>> failurePolicy() {
         return Optional.ofNullable(this.failurePolicy);
     }
@@ -49,6 +57,10 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resource", required=true)
     private Output<String> resource;
 
+    /**
+     * @return The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of &#34;google.pubsub.topic.publish&#34; should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized &#34;long&#34; format. See each *service&#39;s* documentation for supported formats.
+     * 
+     */
     public Output<String> resource() {
         return this.resource;
     }
@@ -60,6 +72,10 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -91,38 +107,86 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventType The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*{@literal /}eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is &#39;change&#39;. These parts are lower case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(Output<String> eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param eventType The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*{@literal /}eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is &#39;change&#39;. These parts are lower case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(String eventType) {
             return eventType(Output.of(eventType));
         }
 
+        /**
+         * @param failurePolicy Specifies policy for failed executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failurePolicy(@Nullable Output<FailurePolicyArgs> failurePolicy) {
             $.failurePolicy = failurePolicy;
             return this;
         }
 
+        /**
+         * @param failurePolicy Specifies policy for failed executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failurePolicy(FailurePolicyArgs failurePolicy) {
             return failurePolicy(Output.of(failurePolicy));
         }
 
+        /**
+         * @param resource The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of &#34;google.pubsub.topic.publish&#34; should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized &#34;long&#34; format. See each *service&#39;s* documentation for supported formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of &#34;google.pubsub.topic.publish&#34; should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized &#34;long&#34; format. See each *service&#39;s* documentation for supported formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param service The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

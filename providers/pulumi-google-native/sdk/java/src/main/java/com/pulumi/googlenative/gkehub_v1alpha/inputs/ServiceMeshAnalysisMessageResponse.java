@@ -26,6 +26,10 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
     @Import(name="args", required=true)
     private Map<String,String> args;
 
+    /**
+     * @return A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
+     * 
+     */
     public Map<String,String> args() {
         return this.args;
     }
@@ -37,6 +41,10 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A human readable description of what the error means. It is suitable for non-internationalize display purposes.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -48,6 +56,10 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
     @Import(name="messageBase", required=true)
     private ServiceMeshAnalysisMessageBaseResponse messageBase;
 
+    /**
+     * @return Details common to all types of Istio and ServiceMesh analysis messages.
+     * 
+     */
     public ServiceMeshAnalysisMessageBaseResponse messageBase() {
         return this.messageBase;
     }
@@ -59,6 +71,10 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
     @Import(name="resourcePaths", required=true)
     private List<String> resourcePaths;
 
+    /**
+     * @return A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
+     * 
+     */
     public List<String> resourcePaths() {
         return this.resourcePaths;
     }
@@ -90,26 +106,56 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
             $ = new ServiceMeshAnalysisMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(Map<String,String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param description A human readable description of what the error means. It is suitable for non-internationalize display purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param messageBase Details common to all types of Istio and ServiceMesh analysis messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageBase(ServiceMeshAnalysisMessageBaseResponse messageBase) {
             $.messageBase = messageBase;
             return this;
         }
 
+        /**
+         * @param resourcePaths A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePaths(List<String> resourcePaths) {
             $.resourcePaths = resourcePaths;
             return this;
         }
 
+        /**
+         * @param resourcePaths A list of strings specifying the resource identifiers that were the cause of message generation. A &#34;path&#34; here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePaths(String... resourcePaths) {
             return resourcePaths(List.of(resourcePaths));
         }

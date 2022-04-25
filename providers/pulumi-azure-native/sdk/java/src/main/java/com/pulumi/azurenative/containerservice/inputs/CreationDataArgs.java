@@ -26,6 +26,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceResourceId")
     private @Nullable Output<String> sourceResourceId;
 
+    /**
+     * @return This is the ARM ID of the source object to be used to create the target object.
+     * 
+     */
     public Optional<Output<String>> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -54,11 +58,23 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CreationDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceResourceId This is the ARM ID of the source object to be used to create the target object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param sourceResourceId This is the ARM ID of the source object to be used to create the target object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(String sourceResourceId) {
             return sourceResourceId(Output.of(sourceResourceId));
         }

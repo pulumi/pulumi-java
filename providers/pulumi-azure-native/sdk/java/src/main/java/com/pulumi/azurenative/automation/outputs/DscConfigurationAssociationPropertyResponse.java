@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DscConfigurationAssociationPropertyResponse {
     /**
-     * Gets or sets the name of the Dsc configuration.
+     * @return Gets or sets the name of the Dsc configuration.
      * 
      */
     private final @Nullable String name;
@@ -23,9 +23,9 @@ public final class DscConfigurationAssociationPropertyResponse {
     }
 
     /**
-     * Gets or sets the name of the Dsc configuration.
+     * @return Gets or sets the name of the Dsc configuration.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

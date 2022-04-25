@@ -25,6 +25,12 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends com.pulumi.res
     @Import(name="cooldownPeriod")
     private @Nullable Output<String> cooldownPeriod;
 
+    /**
+     * @return Duration between scaling events. A scaling period starts after the
+     * update operation from the previous event has completed.
+     * Bounds: [2m, 1d]. Default: 2m.
+     * 
+     */
     public Optional<Output<String>> cooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
@@ -37,6 +43,11 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends com.pulumi.res
     @Import(name="yarnConfig", required=true)
     private Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig;
 
+    /**
+     * @return YARN autoscaling configuration.
+     * Structure is documented below.
+     * 
+     */
     public Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig() {
         return this.yarnConfig;
     }
@@ -66,20 +77,50 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends com.pulumi.res
             $ = new AutoscalingPolicyBasicAlgorithmGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cooldownPeriod Duration between scaling events. A scaling period starts after the
+         * update operation from the previous event has completed.
+         * Bounds: [2m, 1d]. Default: 2m.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldownPeriod(@Nullable Output<String> cooldownPeriod) {
             $.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
+        /**
+         * @param cooldownPeriod Duration between scaling events. A scaling period starts after the
+         * update operation from the previous event has completed.
+         * Bounds: [2m, 1d]. Default: 2m.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldownPeriod(String cooldownPeriod) {
             return cooldownPeriod(Output.of(cooldownPeriod));
         }
 
+        /**
+         * @param yarnConfig YARN autoscaling configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yarnConfig(Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig) {
             $.yarnConfig = yarnConfig;
             return this;
         }
 
+        /**
+         * @param yarnConfig YARN autoscaling configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yarnConfig(AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs yarnConfig) {
             return yarnConfig(Output.of(yarnConfig));
         }

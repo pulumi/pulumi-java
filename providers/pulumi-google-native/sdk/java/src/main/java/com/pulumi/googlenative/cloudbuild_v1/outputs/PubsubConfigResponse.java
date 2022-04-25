@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class PubsubConfigResponse {
     /**
-     * Service account that will make the push request.
+     * @return Service account that will make the push request.
      * 
      */
     private final String serviceAccountEmail;
     /**
-     * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+     * @return Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
      * 
      */
     private final String state;
     /**
-     * Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
+     * @return Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
      * 
      */
     private final String subscription;
     /**
-     * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
+     * @return The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
      * 
      */
     private final String topic;
@@ -43,30 +43,30 @@ public final class PubsubConfigResponse {
     }
 
     /**
-     * Service account that will make the push request.
+     * @return Service account that will make the push request.
      * 
-    */
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
-     * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+     * @return Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
+     * @return Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
      * 
-    */
+     */
     public String subscription() {
         return this.subscription;
     }
     /**
-     * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
+     * @return The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
      * 
-    */
+     */
     public String topic() {
         return this.topic;
     }

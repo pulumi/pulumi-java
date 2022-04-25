@@ -19,123 +19,123 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMachineResult {
     /**
-     * Specifies the AD fully qualified display name.
+     * @return Specifies the AD fully qualified display name.
      * 
      */
     private final String adFqdn;
     /**
-     * The hybrid machine agent full version.
+     * @return The hybrid machine agent full version.
      * 
      */
     private final String agentVersion;
     /**
-     * Public Key that the client provides to be used during initial resource onboarding
+     * @return Public Key that the client provides to be used during initial resource onboarding
      * 
      */
     private final @Nullable String clientPublicKey;
     /**
-     * Specifies the hybrid machine display name.
+     * @return Specifies the hybrid machine display name.
      * 
      */
     private final String displayName;
     /**
-     * Specifies the DNS fully qualified display name.
+     * @return Specifies the DNS fully qualified display name.
      * 
      */
     private final String dnsFqdn;
     /**
-     * Specifies the Windows domain name.
+     * @return Specifies the Windows domain name.
      * 
      */
     private final String domainName;
     /**
-     * Details about the error state.
+     * @return Details about the error state.
      * 
      */
     private final List<ErrorDetailResponse> errorDetails;
     /**
-     * Machine Extensions information
+     * @return Machine Extensions information
      * 
      */
     private final List<MachineExtensionInstanceViewResponse> extensions;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     private final @Nullable MachineResponseIdentity identity;
     /**
-     * The time of the last status change.
+     * @return The time of the last status change.
      * 
      */
     private final String lastStatusChange;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * Metadata pertaining to the geographic location of the resource.
+     * @return Metadata pertaining to the geographic location of the resource.
      * 
      */
     private final @Nullable LocationDataResponse locationData;
     /**
-     * Specifies the hybrid machine FQDN.
+     * @return Specifies the hybrid machine FQDN.
      * 
      */
     private final String machineFqdn;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The Operating System running on the hybrid machine.
+     * @return The Operating System running on the hybrid machine.
      * 
      */
     private final String osName;
     /**
-     * Specifies the operating system settings for the hybrid machine.
+     * @return Specifies the operating system settings for the hybrid machine.
      * 
      */
     private final @Nullable MachinePropertiesResponseOsProfile osProfile;
     /**
-     * Specifies the Operating System product SKU.
+     * @return Specifies the Operating System product SKU.
      * 
      */
     private final String osSku;
     /**
-     * The version of Operating System running on the hybrid machine.
+     * @return The version of Operating System running on the hybrid machine.
      * 
      */
     private final String osVersion;
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * The status of the hybrid machine agent.
+     * @return The status of the hybrid machine agent.
      * 
      */
     private final String status;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * Specifies the hybrid machine unique ID.
+     * @return Specifies the hybrid machine unique ID.
      * 
      */
     private final @Nullable String vmId;
     /**
-     * Specifies the Arc Machine&#39;s unique SMBIOS ID
+     * @return Specifies the Arc Machine&#39;s unique SMBIOS ID
      * 
      */
     private final String vmUuid;
@@ -195,65 +195,65 @@ public final class GetMachineResult {
     }
 
     /**
-     * Specifies the AD fully qualified display name.
+     * @return Specifies the AD fully qualified display name.
      * 
-    */
+     */
     public String adFqdn() {
         return this.adFqdn;
     }
     /**
-     * The hybrid machine agent full version.
+     * @return The hybrid machine agent full version.
      * 
-    */
+     */
     public String agentVersion() {
         return this.agentVersion;
     }
     /**
-     * Public Key that the client provides to be used during initial resource onboarding
+     * @return Public Key that the client provides to be used during initial resource onboarding
      * 
-    */
+     */
     public Optional<String> clientPublicKey() {
         return Optional.ofNullable(this.clientPublicKey);
     }
     /**
-     * Specifies the hybrid machine display name.
+     * @return Specifies the hybrid machine display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Specifies the DNS fully qualified display name.
+     * @return Specifies the DNS fully qualified display name.
      * 
-    */
+     */
     public String dnsFqdn() {
         return this.dnsFqdn;
     }
     /**
-     * Specifies the Windows domain name.
+     * @return Specifies the Windows domain name.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * Details about the error state.
+     * @return Details about the error state.
      * 
-    */
+     */
     public List<ErrorDetailResponse> errorDetails() {
         return this.errorDetails;
     }
     /**
-     * Machine Extensions information
+     * @return Machine Extensions information
      * 
-    */
+     */
     public List<MachineExtensionInstanceViewResponse> extensions() {
         return this.extensions;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -261,107 +261,107 @@ public final class GetMachineResult {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The time of the last status change.
+     * @return The time of the last status change.
      * 
-    */
+     */
     public String lastStatusChange() {
         return this.lastStatusChange;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Metadata pertaining to the geographic location of the resource.
+     * @return Metadata pertaining to the geographic location of the resource.
      * 
-    */
+     */
     public Optional<LocationDataResponse> locationData() {
         return Optional.ofNullable(this.locationData);
     }
     /**
-     * Specifies the hybrid machine FQDN.
+     * @return Specifies the hybrid machine FQDN.
      * 
-    */
+     */
     public String machineFqdn() {
         return this.machineFqdn;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Operating System running on the hybrid machine.
+     * @return The Operating System running on the hybrid machine.
      * 
-    */
+     */
     public String osName() {
         return this.osName;
     }
     /**
-     * Specifies the operating system settings for the hybrid machine.
+     * @return Specifies the operating system settings for the hybrid machine.
      * 
-    */
+     */
     public Optional<MachinePropertiesResponseOsProfile> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
-     * Specifies the Operating System product SKU.
+     * @return Specifies the Operating System product SKU.
      * 
-    */
+     */
     public String osSku() {
         return this.osSku;
     }
     /**
-     * The version of Operating System running on the hybrid machine.
+     * @return The version of Operating System running on the hybrid machine.
      * 
-    */
+     */
     public String osVersion() {
         return this.osVersion;
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The status of the hybrid machine agent.
+     * @return The status of the hybrid machine agent.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies the hybrid machine unique ID.
+     * @return Specifies the hybrid machine unique ID.
      * 
-    */
+     */
     public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
-     * Specifies the Arc Machine&#39;s unique SMBIOS ID
+     * @return Specifies the Arc Machine&#39;s unique SMBIOS ID
      * 
-    */
+     */
     public String vmUuid() {
         return this.vmUuid;
     }

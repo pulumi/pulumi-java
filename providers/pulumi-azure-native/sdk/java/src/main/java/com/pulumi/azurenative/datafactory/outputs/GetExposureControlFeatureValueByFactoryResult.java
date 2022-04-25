@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetExposureControlFeatureValueByFactoryResult {
     /**
-     * The feature name.
+     * @return The feature name.
      * 
      */
     private final String featureName;
     /**
-     * The feature value.
+     * @return The feature value.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class GetExposureControlFeatureValueByFactoryResult {
     }
 
     /**
-     * The feature name.
+     * @return The feature name.
      * 
-    */
+     */
     public String featureName() {
         return this.featureName;
     }
     /**
-     * The feature value.
+     * @return The feature value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

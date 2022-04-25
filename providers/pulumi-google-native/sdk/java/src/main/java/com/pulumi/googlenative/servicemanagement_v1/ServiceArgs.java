@@ -22,6 +22,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="producerProjectId")
     private @Nullable Output<String> producerProjectId;
 
+    /**
+     * @return ID of the project that produces and owns this service.
+     * 
+     */
     public Optional<Output<String>> producerProjectId() {
         return Optional.ofNullable(this.producerProjectId);
     }
@@ -33,6 +37,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -62,20 +70,44 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param producerProjectId ID of the project that produces and owns this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerProjectId(@Nullable Output<String> producerProjectId) {
             $.producerProjectId = producerProjectId;
             return this;
         }
 
+        /**
+         * @param producerProjectId ID of the project that produces and owns this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder producerProjectId(String producerProjectId) {
             return producerProjectId(Output.of(producerProjectId));
         }
 
+        /**
+         * @param serviceName The name of the service. See the [overview](/service-management/overview) for naming requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service. See the [overview](/service-management/overview) for naming requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

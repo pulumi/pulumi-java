@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceNetworkInterface {
     /**
-     * Access configurations, i.e. IPs via which this
+     * @return Access configurations, i.e. IPs via which this
      * instance can be accessed via the Internet. Omit to ensure that the instance
      * is not accessible from the Internet. If omitted, ssh will not
      * work unless this provider can send traffic to the instance&#39;s network (e.g. via
@@ -27,61 +27,61 @@ public final class InstanceNetworkInterface {
      */
     private final @Nullable List<InstanceNetworkInterfaceAccessConfig> accessConfigs;
     /**
-     * An
+     * @return An
      * array of alias IP ranges for this network interface. Can only be specified for network
      * interfaces on subnet-mode networks. Structure documented below.
      * 
      */
     private final @Nullable List<InstanceNetworkInterfaceAliasIpRange> aliasIpRanges;
     /**
-     * An array of IPv6 access configurations for this interface.
+     * @return An array of IPv6 access configurations for this interface.
      * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
      * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
      * 
      */
     private final @Nullable List<InstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
     /**
-     * One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet.
+     * @return One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet.
      * This field is always inherited from its subnetwork.
      * 
      */
     private final @Nullable String ipv6AccessType;
     /**
-     * A unique name for the resource, required by GCE.
+     * @return A unique name for the resource, required by GCE.
      * Changing this forces a new resource to be created.
      * 
      */
     private final @Nullable String name;
     /**
-     * The name or self_link of the network to attach this interface to.
+     * @return The name or self_link of the network to attach this interface to.
      * Either `network` or `subnetwork` must be provided. If network isn&#39;t provided it will
      * be inferred from the subnetwork.
      * 
      */
     private final @Nullable String network;
     /**
-     * The private IP address to assign to the instance. If
+     * @return The private IP address to assign to the instance. If
      * empty, the address will be automatically assigned.
      * 
      */
     private final @Nullable String networkIp;
     /**
-     * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+     * @return The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
      * 
      */
     private final @Nullable String nicType;
     /**
-     * The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+     * @return The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
      */
     private final @Nullable Integer queueCount;
     /**
-     * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+     * @return The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
      * 
      */
     private final @Nullable String stackType;
     /**
-     * The name or self_link of the subnetwork to attach this
+     * @return The name or self_link of the subnetwork to attach this
      * interface to. Either `network` or `subnetwork` must be provided. If network isn&#39;t provided
      * it will be inferred from the subnetwork. The subnetwork must exist in the same region this
      * instance will be created in. If the network resource is in
@@ -92,7 +92,7 @@ public final class InstanceNetworkInterface {
      */
     private final @Nullable String subnetwork;
     /**
-     * The project in which the subnetwork belongs.
+     * @return The project in which the subnetwork belongs.
      * If the `subnetwork` is a self_link, this field is ignored in favor of the project
      * defined in the subnetwork self_link. If the `subnetwork` is a name and this
      * field is not provided, the provider project is used.
@@ -129,91 +129,91 @@ public final class InstanceNetworkInterface {
     }
 
     /**
-     * Access configurations, i.e. IPs via which this
+     * @return Access configurations, i.e. IPs via which this
      * instance can be accessed via the Internet. Omit to ensure that the instance
      * is not accessible from the Internet. If omitted, ssh will not
      * work unless this provider can send traffic to the instance&#39;s network (e.g. via
      * tunnel or because it is running on another cloud instance on that network).
      * This block can be repeated multiple times. Structure documented below.
      * 
-    */
+     */
     public List<InstanceNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs == null ? List.of() : this.accessConfigs;
     }
     /**
-     * An
+     * @return An
      * array of alias IP ranges for this network interface. Can only be specified for network
      * interfaces on subnet-mode networks. Structure documented below.
      * 
-    */
+     */
     public List<InstanceNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges == null ? List.of() : this.aliasIpRanges;
     }
     /**
-     * An array of IPv6 access configurations for this interface.
+     * @return An array of IPv6 access configurations for this interface.
      * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
      * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
      * 
-    */
+     */
     public List<InstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? List.of() : this.ipv6AccessConfigs;
     }
     /**
-     * One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet.
+     * @return One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet.
      * This field is always inherited from its subnetwork.
      * 
-    */
+     */
     public Optional<String> ipv6AccessType() {
         return Optional.ofNullable(this.ipv6AccessType);
     }
     /**
-     * A unique name for the resource, required by GCE.
+     * @return A unique name for the resource, required by GCE.
      * Changing this forces a new resource to be created.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The name or self_link of the network to attach this interface to.
+     * @return The name or self_link of the network to attach this interface to.
      * Either `network` or `subnetwork` must be provided. If network isn&#39;t provided it will
      * be inferred from the subnetwork.
      * 
-    */
+     */
     public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
-     * The private IP address to assign to the instance. If
+     * @return The private IP address to assign to the instance. If
      * empty, the address will be automatically assigned.
      * 
-    */
+     */
     public Optional<String> networkIp() {
         return Optional.ofNullable(this.networkIp);
     }
     /**
-     * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
+     * @return The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
      * 
-    */
+     */
     public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
-     * The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
+     * @return The networking queue count that&#39;s specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
-    */
+     */
     public Optional<Integer> queueCount() {
         return Optional.ofNullable(this.queueCount);
     }
     /**
-     * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+     * @return The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
      * 
-    */
+     */
     public Optional<String> stackType() {
         return Optional.ofNullable(this.stackType);
     }
     /**
-     * The name or self_link of the subnetwork to attach this
+     * @return The name or self_link of the subnetwork to attach this
      * interface to. Either `network` or `subnetwork` must be provided. If network isn&#39;t provided
      * it will be inferred from the subnetwork. The subnetwork must exist in the same region this
      * instance will be created in. If the network resource is in
@@ -221,17 +221,17 @@ public final class InstanceNetworkInterface {
      * network is in auto subnet mode, specifying the subnetwork is optional. If the network is
      * in custom subnet mode, specifying the subnetwork is required.
      * 
-    */
+     */
     public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
     /**
-     * The project in which the subnetwork belongs.
+     * @return The project in which the subnetwork belongs.
      * If the `subnetwork` is a self_link, this field is ignored in favor of the project
      * defined in the subnetwork self_link. If the `subnetwork` is a name and this
      * field is not provided, the provider project is used.
      * 
-    */
+     */
     public Optional<String> subnetworkProject() {
         return Optional.ofNullable(this.subnetworkProject);
     }

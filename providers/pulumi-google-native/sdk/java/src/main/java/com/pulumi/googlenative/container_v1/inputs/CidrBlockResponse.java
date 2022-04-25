@@ -23,6 +23,10 @@ public final class CidrBlockResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cidrBlock", required=true)
     private String cidrBlock;
 
+    /**
+     * @return cidr_block must be specified in CIDR notation.
+     * 
+     */
     public String cidrBlock() {
         return this.cidrBlock;
     }
@@ -34,6 +38,10 @@ public final class CidrBlockResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return display_name is an optional field for users to identify CIDR blocks.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -63,11 +71,23 @@ public final class CidrBlockResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CidrBlockResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlock cidr_block must be specified in CIDR notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param displayName display_name is an optional field for users to identify CIDR blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;

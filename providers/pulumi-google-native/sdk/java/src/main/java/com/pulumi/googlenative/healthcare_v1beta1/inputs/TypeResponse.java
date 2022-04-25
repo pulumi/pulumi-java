@@ -25,6 +25,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
     private List<FieldResponse> fields;
 
+    /**
+     * @return The (sub) fields this type has (if not primitive).
+     * 
+     */
     public List<FieldResponse> fields() {
         return this.fields;
     }
@@ -36,6 +40,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="primitive", required=true)
     private String primitive;
 
+    /**
+     * @return If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
+     * 
+     */
     public String primitive() {
         return this.primitive;
     }
@@ -77,20 +89,44 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields The (sub) fields this type has (if not primitive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<FieldResponse> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The (sub) fields this type has (if not primitive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(FieldResponse... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param name The name of this type. This would be the segment or datatype name. For example, &#34;PID&#34; or &#34;XPN&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param primitive If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitive(String primitive) {
             $.primitive = primitive;
             return this;

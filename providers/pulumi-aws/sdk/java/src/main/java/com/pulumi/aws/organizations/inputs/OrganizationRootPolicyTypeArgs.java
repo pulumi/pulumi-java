@@ -22,6 +22,10 @@ public final class OrganizationRootPolicyTypeArgs extends com.pulumi.resources.R
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status of the policy type as it relates to the associated root
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -58,11 +62,23 @@ public final class OrganizationRootPolicyTypeArgs extends com.pulumi.resources.R
             $ = new OrganizationRootPolicyTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The status of the policy type as it relates to the associated root
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the policy type as it relates to the associated root
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

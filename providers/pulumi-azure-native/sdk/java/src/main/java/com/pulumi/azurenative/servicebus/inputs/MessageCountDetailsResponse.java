@@ -23,6 +23,10 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="activeMessageCount", required=true)
     private Double activeMessageCount;
 
+    /**
+     * @return Number of active messages in the queue, topic, or subscription.
+     * 
+     */
     public Double activeMessageCount() {
         return this.activeMessageCount;
     }
@@ -34,6 +38,10 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="deadLetterMessageCount", required=true)
     private Double deadLetterMessageCount;
 
+    /**
+     * @return Number of messages that are dead lettered.
+     * 
+     */
     public Double deadLetterMessageCount() {
         return this.deadLetterMessageCount;
     }
@@ -45,6 +53,10 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="scheduledMessageCount", required=true)
     private Double scheduledMessageCount;
 
+    /**
+     * @return Number of scheduled messages.
+     * 
+     */
     public Double scheduledMessageCount() {
         return this.scheduledMessageCount;
     }
@@ -56,6 +68,10 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="transferDeadLetterMessageCount", required=true)
     private Double transferDeadLetterMessageCount;
 
+    /**
+     * @return Number of messages transferred into dead letters.
+     * 
+     */
     public Double transferDeadLetterMessageCount() {
         return this.transferDeadLetterMessageCount;
     }
@@ -67,6 +83,10 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="transferMessageCount", required=true)
     private Double transferMessageCount;
 
+    /**
+     * @return Number of messages transferred to another queue, topic, or subscription.
+     * 
+     */
     public Double transferMessageCount() {
         return this.transferMessageCount;
     }
@@ -99,26 +119,56 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
             $ = new MessageCountDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeMessageCount Number of active messages in the queue, topic, or subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeMessageCount(Double activeMessageCount) {
             $.activeMessageCount = activeMessageCount;
             return this;
         }
 
+        /**
+         * @param deadLetterMessageCount Number of messages that are dead lettered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterMessageCount(Double deadLetterMessageCount) {
             $.deadLetterMessageCount = deadLetterMessageCount;
             return this;
         }
 
+        /**
+         * @param scheduledMessageCount Number of scheduled messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledMessageCount(Double scheduledMessageCount) {
             $.scheduledMessageCount = scheduledMessageCount;
             return this;
         }
 
+        /**
+         * @param transferDeadLetterMessageCount Number of messages transferred into dead letters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferDeadLetterMessageCount(Double transferDeadLetterMessageCount) {
             $.transferDeadLetterMessageCount = transferDeadLetterMessageCount;
             return this;
         }
 
+        /**
+         * @param transferMessageCount Number of messages transferred to another queue, topic, or subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferMessageCount(Double transferMessageCount) {
             $.transferMessageCount = transferMessageCount;
             return this;

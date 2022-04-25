@@ -29,6 +29,15 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
     @Import(name="minimalAction")
     private @Nullable Output<String> minimalAction;
 
+    /**
+     * @return The minimal action to perform on the instance during an update.
+     * Default is `NONE`. Possible values are:
+     * * REPLACE
+     * * RESTART
+     * * REFRESH
+     * * NONE
+     * 
+     */
     public Optional<Output<String>> minimalAction() {
         return Optional.ofNullable(this.minimalAction);
     }
@@ -45,6 +54,15 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
     @Import(name="mostDisruptiveAllowedAction")
     private @Nullable Output<String> mostDisruptiveAllowedAction;
 
+    /**
+     * @return The most disruptive action to perform on the instance during an update.
+     * Default is `REPLACE`. Possible values are:
+     * * REPLACE
+     * * RESTART
+     * * REFRESH
+     * * NONE
+     * 
+     */
     public Optional<Output<String>> mostDisruptiveAllowedAction() {
         return Optional.ofNullable(this.mostDisruptiveAllowedAction);
     }
@@ -56,6 +74,10 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for this per-instance config and its corresponding instance.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +90,11 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
     @Import(name="preservedState")
     private @Nullable Output<RegionPerInstanceConfigPreservedStateGetArgs> preservedState;
 
+    /**
+     * @return The preserved state for this instance.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionPerInstanceConfigPreservedStateGetArgs>> preservedState() {
         return Optional.ofNullable(this.preservedState);
     }
@@ -80,6 +107,11 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -91,6 +123,10 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region where the containing instance group manager is located
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -102,6 +138,10 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
     @Import(name="regionInstanceGroupManager")
     private @Nullable Output<String> regionInstanceGroupManager;
 
+    /**
+     * @return The region instance group manager this instance config is part of.
+     * 
+     */
     public Optional<Output<String>> regionInstanceGroupManager() {
         return Optional.ofNullable(this.regionInstanceGroupManager);
     }
@@ -115,6 +155,12 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
     @Import(name="removeInstanceStateOnDestroy")
     private @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
+    /**
+     * @return When true, deleting this config will immediately remove any specified state from the underlying instance.
+     * When false, deleting this config will *not* immediately remove any state from the underlying instance.
+     * State will be removed on the next instance recreation or update.
+     * 
+     */
     public Optional<Output<Boolean>> removeInstanceStateOnDestroy() {
         return Optional.ofNullable(this.removeInstanceStateOnDestroy);
     }
@@ -150,74 +196,198 @@ public final class RegionPerInstanceConfigState extends com.pulumi.resources.Res
             $ = new RegionPerInstanceConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minimalAction The minimal action to perform on the instance during an update.
+         * Default is `NONE`. Possible values are:
+         * * REPLACE
+         * * RESTART
+         * * REFRESH
+         * * NONE
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalAction(@Nullable Output<String> minimalAction) {
             $.minimalAction = minimalAction;
             return this;
         }
 
+        /**
+         * @param minimalAction The minimal action to perform on the instance during an update.
+         * Default is `NONE`. Possible values are:
+         * * REPLACE
+         * * RESTART
+         * * REFRESH
+         * * NONE
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimalAction(String minimalAction) {
             return minimalAction(Output.of(minimalAction));
         }
 
+        /**
+         * @param mostDisruptiveAllowedAction The most disruptive action to perform on the instance during an update.
+         * Default is `REPLACE`. Possible values are:
+         * * REPLACE
+         * * RESTART
+         * * REFRESH
+         * * NONE
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostDisruptiveAllowedAction(@Nullable Output<String> mostDisruptiveAllowedAction) {
             $.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
 
+        /**
+         * @param mostDisruptiveAllowedAction The most disruptive action to perform on the instance during an update.
+         * Default is `REPLACE`. Possible values are:
+         * * REPLACE
+         * * RESTART
+         * * REFRESH
+         * * NONE
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
             return mostDisruptiveAllowedAction(Output.of(mostDisruptiveAllowedAction));
         }
 
+        /**
+         * @param name The name for this per-instance config and its corresponding instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for this per-instance config and its corresponding instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param preservedState The preserved state for this instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preservedState(@Nullable Output<RegionPerInstanceConfigPreservedStateGetArgs> preservedState) {
             $.preservedState = preservedState;
             return this;
         }
 
+        /**
+         * @param preservedState The preserved state for this instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preservedState(RegionPerInstanceConfigPreservedStateGetArgs preservedState) {
             return preservedState(Output.of(preservedState));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Region where the containing instance group manager is located
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region where the containing instance group manager is located
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param regionInstanceGroupManager The region instance group manager this instance config is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionInstanceGroupManager(@Nullable Output<String> regionInstanceGroupManager) {
             $.regionInstanceGroupManager = regionInstanceGroupManager;
             return this;
         }
 
+        /**
+         * @param regionInstanceGroupManager The region instance group manager this instance config is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionInstanceGroupManager(String regionInstanceGroupManager) {
             return regionInstanceGroupManager(Output.of(regionInstanceGroupManager));
         }
 
+        /**
+         * @param removeInstanceStateOnDestroy When true, deleting this config will immediately remove any specified state from the underlying instance.
+         * When false, deleting this config will *not* immediately remove any state from the underlying instance.
+         * State will be removed on the next instance recreation or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder removeInstanceStateOnDestroy(@Nullable Output<Boolean> removeInstanceStateOnDestroy) {
             $.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
             return this;
         }
 
+        /**
+         * @param removeInstanceStateOnDestroy When true, deleting this config will immediately remove any specified state from the underlying instance.
+         * When false, deleting this config will *not* immediately remove any state from the underlying instance.
+         * State will be removed on the next instance recreation or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder removeInstanceStateOnDestroy(Boolean removeInstanceStateOnDestroy) {
             return removeInstanceStateOnDestroy(Output.of(removeInstanceStateOnDestroy));
         }

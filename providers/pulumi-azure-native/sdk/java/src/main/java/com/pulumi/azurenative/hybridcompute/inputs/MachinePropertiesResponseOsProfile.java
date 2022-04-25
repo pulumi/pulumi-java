@@ -23,6 +23,10 @@ public final class MachinePropertiesResponseOsProfile extends com.pulumi.resourc
     @Import(name="computerName", required=true)
     private String computerName;
 
+    /**
+     * @return Specifies the host OS name of the hybrid machine.
+     * 
+     */
     public String computerName() {
         return this.computerName;
     }
@@ -51,6 +55,12 @@ public final class MachinePropertiesResponseOsProfile extends com.pulumi.resourc
             $ = new MachinePropertiesResponseOsProfile(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computerName Specifies the host OS name of the hybrid machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(String computerName) {
             $.computerName = computerName;
             return this;

@@ -26,6 +26,10 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="branch")
     private @Nullable String branch;
 
+    /**
+     * @return The branch name of the source code.
+     * 
+     */
     public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
@@ -37,6 +41,10 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="repositoryUrl", required=true)
     private String repositoryUrl;
 
+    /**
+     * @return The full URL to the source code repository
+     * 
+     */
     public String repositoryUrl() {
         return this.repositoryUrl;
     }
@@ -49,6 +57,11 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceControlAuthProperties")
     private @Nullable AuthInfoResponse sourceControlAuthProperties;
 
+    /**
+     * @return The authorization properties for accessing the source code repository and to set up
+     * webhooks for notifications.
+     * 
+     */
     public Optional<AuthInfoResponse> sourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
@@ -60,6 +73,10 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceControlType", required=true)
     private String sourceControlType;
 
+    /**
+     * @return The type of source control service.
+     * 
+     */
     public String sourceControlType() {
         return this.sourceControlType;
     }
@@ -91,21 +108,46 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new SourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch The branch name of the source code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(@Nullable String branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param repositoryUrl The full URL to the source code repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(String repositoryUrl) {
             $.repositoryUrl = repositoryUrl;
             return this;
         }
 
+        /**
+         * @param sourceControlAuthProperties The authorization properties for accessing the source code repository and to set up
+         * webhooks for notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlAuthProperties(@Nullable AuthInfoResponse sourceControlAuthProperties) {
             $.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
 
+        /**
+         * @param sourceControlType The type of source control service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlType(String sourceControlType) {
             $.sourceControlType = sourceControlType;
             return this;

@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GetAddonResult {
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * Addon type.
+     * @return Addon type.
      * 
      */
     private final String kind;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * Addon type
+     * @return Addon type
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
@@ -51,37 +51,37 @@ public final class GetAddonResult {
     }
 
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Addon type.
+     * @return Addon type.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Addon type
+     * @return Addon type
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

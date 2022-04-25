@@ -20,6 +20,10 @@ public final class MetricStreamIncludeFilterGetArgs extends com.pulumi.resources
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return Name of the metric namespace in the filter.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -48,11 +52,23 @@ public final class MetricStreamIncludeFilterGetArgs extends com.pulumi.resources
             $ = new MetricStreamIncludeFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespace Name of the metric namespace in the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Name of the metric namespace in the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

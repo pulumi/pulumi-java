@@ -27,6 +27,10 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
     @Import(name="fileName")
     private @Nullable Object fileName;
 
+    /**
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -38,6 +42,10 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
     @Import(name="fileSystem")
     private @Nullable Object fileSystem;
 
+    /**
+     * @return Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -49,6 +57,10 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
     @Import(name="folderPath")
     private @Nullable Object folderPath;
 
+    /**
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -61,6 +73,11 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset storage location.
+     * Expected value is &#39;AzureBlobFSLocation&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -92,21 +109,46 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
             $ = new AzureBlobFSLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Object fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileSystem Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable Object fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Object folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;AzureBlobFSLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

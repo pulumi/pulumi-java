@@ -19,6 +19,10 @@ public final class GetNetworkFunctionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="networkFunctionName", required=true)
     private String networkFunctionName;
 
+    /**
+     * @return The name of the network function resource.
+     * 
+     */
     public String networkFunctionName() {
         return this.networkFunctionName;
     }
@@ -30,6 +34,10 @@ public final class GetNetworkFunctionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetNetworkFunctionArgs extends com.pulumi.resources.InvokeArg
             $ = new GetNetworkFunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkFunctionName The name of the network function resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionName(String networkFunctionName) {
             $.networkFunctionName = networkFunctionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

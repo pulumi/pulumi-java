@@ -26,6 +26,10 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return User readable description of the volume.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,11 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Specifies the application-scoped volume kind.
+     * Expected value is &#39;ServiceFabricVolumeDisk&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -49,6 +58,10 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     @Import(name="sizeDisk", required=true)
     private String sizeDisk;
 
+    /**
+     * @return Volume size
+     * 
+     */
     public String sizeDisk() {
         return this.sizeDisk;
     }
@@ -79,16 +92,35 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             $ = new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User readable description of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param kind Specifies the application-scoped volume kind.
+         * Expected value is &#39;ServiceFabricVolumeDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param sizeDisk Volume size
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeDisk(String sizeDisk) {
             $.sizeDisk = sizeDisk;
             return this;

@@ -26,6 +26,10 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="error", required=true)
     private StatusResponse error;
 
+    /**
+     * @return The details of a failure or a cancellation of reachability analysis.
+     * 
+     */
     public StatusResponse error() {
         return this.error;
     }
@@ -37,6 +41,10 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="result", required=true)
     private String result;
 
+    /**
+     * @return The overall result of the test&#39;s configuration analysis.
+     * 
+     */
     public String result() {
         return this.result;
     }
@@ -48,6 +56,10 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="traces", required=true)
     private List<TraceResponse> traces;
 
+    /**
+     * @return Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
+     * 
+     */
     public List<TraceResponse> traces() {
         return this.traces;
     }
@@ -59,6 +71,10 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="verifyTime", required=true)
     private String verifyTime;
 
+    /**
+     * @return The time of the configuration analysis.
+     * 
+     */
     public String verifyTime() {
         return this.verifyTime;
     }
@@ -90,25 +106,55 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
             $ = new ReachabilityDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error The details of a failure or a cancellation of reachability analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(StatusResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param result The overall result of the test&#39;s configuration analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(String result) {
             $.result = result;
             return this;
         }
 
+        /**
+         * @param traces Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traces(List<TraceResponse> traces) {
             $.traces = traces;
             return this;
         }
 
+        /**
+         * @param traces Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traces(TraceResponse... traces) {
             return traces(List.of(traces));
         }
 
+        /**
+         * @param verifyTime The time of the configuration analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyTime(String verifyTime) {
             $.verifyTime = verifyTime;
             return this;

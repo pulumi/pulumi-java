@@ -21,6 +21,10 @@ public final class CompositePathResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="order")
     private @Nullable String order;
 
+    /**
+     * @return Sort order for composite paths.
+     * 
+     */
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
     }
@@ -32,6 +36,10 @@ public final class CompositePathResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -61,11 +69,23 @@ public final class CompositePathResponse extends com.pulumi.resources.InvokeArgs
             $ = new CompositePathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param order Sort order for composite paths.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable String order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param path The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;

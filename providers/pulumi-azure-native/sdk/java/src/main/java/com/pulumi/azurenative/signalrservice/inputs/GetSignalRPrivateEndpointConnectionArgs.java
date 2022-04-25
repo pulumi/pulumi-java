@@ -19,6 +19,10 @@ public final class GetSignalRPrivateEndpointConnectionArgs extends com.pulumi.re
     @Import(name="privateEndpointConnectionName", required=true)
     private String privateEndpointConnectionName;
 
+    /**
+     * @return The name of the private endpoint connection associated with the SignalR resource.
+     * 
+     */
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
@@ -30,6 +34,10 @@ public final class GetSignalRPrivateEndpointConnectionArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSignalRPrivateEndpointConnectionArgs extends com.pulumi.re
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the SignalR resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetSignalRPrivateEndpointConnectionArgs extends com.pulumi.re
             $ = new GetSignalRPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection associated with the SignalR resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the SignalR resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

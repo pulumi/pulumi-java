@@ -19,6 +19,10 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
     @Import(name="billingAccountName", required=true)
     private String billingAccountName;
 
+    /**
+     * @return The ID that uniquely identifies a billing account.
+     * 
+     */
     public String billingAccountName() {
         return this.billingAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
     @Import(name="billingRoleAssignmentName", required=true)
     private String billingRoleAssignmentName;
 
+    /**
+     * @return The ID that uniquely identifies a role assignment.
+     * 
+     */
     public String billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
@@ -41,6 +49,10 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
     @Import(name="enrollmentAccountName", required=true)
     private String enrollmentAccountName;
 
+    /**
+     * @return The ID that uniquely identifies an enrollment account.
+     * 
+     */
     public String enrollmentAccountName() {
         return this.enrollmentAccountName;
     }
@@ -71,16 +83,34 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
             $ = new GetBillingRoleAssignmentByEnrollmentAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountName(String billingAccountName) {
             $.billingAccountName = billingAccountName;
             return this;
         }
 
+        /**
+         * @param billingRoleAssignmentName The ID that uniquely identifies a role assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
             $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
 
+        /**
+         * @param enrollmentAccountName The ID that uniquely identifies an enrollment account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrollmentAccountName(String enrollmentAccountName) {
             $.enrollmentAccountName = enrollmentAccountName;
             return this;

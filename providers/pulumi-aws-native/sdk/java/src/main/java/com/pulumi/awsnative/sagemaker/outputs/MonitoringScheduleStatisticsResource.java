@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MonitoringScheduleStatisticsResource {
     /**
-     * The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
+     * @return The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
      * 
      */
     private final @Nullable String s3Uri;
@@ -23,9 +23,9 @@ public final class MonitoringScheduleStatisticsResource {
     }
 
     /**
-     * The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
+     * @return The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
      * 
-    */
+     */
     public Optional<String> s3Uri() {
         return Optional.ofNullable(this.s3Uri);
     }

@@ -25,6 +25,10 @@ public final class TimeSpanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="end")
     private @Nullable String end;
 
+    /**
+     * @return The end of a time span
+     * 
+     */
     public Optional<String> end() {
         return Optional.ofNullable(this.end);
     }
@@ -36,6 +40,10 @@ public final class TimeSpanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="start")
     private @Nullable String start;
 
+    /**
+     * @return The start of a time span
+     * 
+     */
     public Optional<String> start() {
         return Optional.ofNullable(this.start);
     }
@@ -65,11 +73,23 @@ public final class TimeSpanResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TimeSpanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end The end of a time span
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable String end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param start The start of a time span
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable String start) {
             $.start = start;
             return this;

@@ -27,6 +27,10 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return The Hostname of this endpoint
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -38,6 +42,10 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ip", required=true)
     private Output<String> ip;
 
+    /**
+     * @return The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
+     * 
+     */
     public Output<String> ip() {
         return this.ip;
     }
@@ -49,6 +57,10 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="nodeName")
     private @Nullable Output<String> nodeName;
 
+    /**
+     * @return Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
+     * 
+     */
     public Optional<Output<String>> nodeName() {
         return Optional.ofNullable(this.nodeName);
     }
@@ -60,6 +72,10 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="targetRef")
     private @Nullable Output<ObjectReferenceArgs> targetRef;
 
+    /**
+     * @return Reference to object providing the endpoint.
+     * 
+     */
     public Optional<Output<ObjectReferenceArgs>> targetRef() {
         return Optional.ofNullable(this.targetRef);
     }
@@ -91,38 +107,86 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
             $ = new EndpointAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname The Hostname of this endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname The Hostname of this endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param ip The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }
 
+        /**
+         * @param nodeName Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(@Nullable Output<String> nodeName) {
             $.nodeName = nodeName;
             return this;
         }
 
+        /**
+         * @param nodeName Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(String nodeName) {
             return nodeName(Output.of(nodeName));
         }
 
+        /**
+         * @param targetRef Reference to object providing the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
             $.targetRef = targetRef;
             return this;
         }
 
+        /**
+         * @param targetRef Reference to object providing the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRef(ObjectReferenceArgs targetRef) {
             return targetRef(Output.of(targetRef));
         }

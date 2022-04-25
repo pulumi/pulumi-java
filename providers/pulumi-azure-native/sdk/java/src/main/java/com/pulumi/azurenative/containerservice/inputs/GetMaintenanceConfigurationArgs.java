@@ -19,6 +19,10 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
     @Import(name="configName", required=true)
     private String configName;
 
+    /**
+     * @return The name of the maintenance configuration.
+     * 
+     */
     public String configName() {
         return this.configName;
     }
@@ -30,6 +34,10 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the managed cluster resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
             $ = new GetMaintenanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configName The name of the maintenance configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configName(String configName) {
             $.configName = configName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

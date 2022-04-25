@@ -27,6 +27,10 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends com.pul
     @Import(name="dataType")
     private @Nullable Output<String> dataType;
 
+    /**
+     * @return The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+     * 
+     */
     public Optional<Output<String>> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -38,6 +42,10 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends com.pul
     @Import(name="mapTo")
     private @Nullable Output<Integer> mapTo;
 
+    /**
+     * @return The zero based index of the function parameter this input maps to.
+     * 
+     */
     public Optional<Output<Integer>> mapTo() {
         return Optional.ofNullable(this.mapTo);
     }
@@ -49,6 +57,10 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends com.pul
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the input column.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,29 +91,65 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends com.pul
             $ = new AzureMachineLearningWebServiceInputColumnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable Output<String> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param mapTo The zero based index of the function parameter this input maps to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapTo(@Nullable Output<Integer> mapTo) {
             $.mapTo = mapTo;
             return this;
         }
 
+        /**
+         * @param mapTo The zero based index of the function parameter this input maps to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapTo(Integer mapTo) {
             return mapTo(Output.of(mapTo));
         }
 
+        /**
+         * @param name The name of the input column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the input column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

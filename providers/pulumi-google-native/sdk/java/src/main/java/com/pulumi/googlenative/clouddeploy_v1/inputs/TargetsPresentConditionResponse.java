@@ -25,6 +25,10 @@ public final class TargetsPresentConditionResponse extends com.pulumi.resources.
     @Import(name="missingTargets", required=true)
     private List<String> missingTargets;
 
+    /**
+     * @return The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
+     * 
+     */
     public List<String> missingTargets() {
         return this.missingTargets;
     }
@@ -36,6 +40,10 @@ public final class TargetsPresentConditionResponse extends com.pulumi.resources.
     @Import(name="status", required=true)
     private Boolean status;
 
+    /**
+     * @return True if there aren&#39;t any missing Targets.
+     * 
+     */
     public Boolean status() {
         return this.status;
     }
@@ -47,6 +55,10 @@ public final class TargetsPresentConditionResponse extends com.pulumi.resources.
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return Last time the condition was updated.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -77,20 +89,44 @@ public final class TargetsPresentConditionResponse extends com.pulumi.resources.
             $ = new TargetsPresentConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param missingTargets The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder missingTargets(List<String> missingTargets) {
             $.missingTargets = missingTargets;
             return this;
         }
 
+        /**
+         * @param missingTargets The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder missingTargets(String... missingTargets) {
             return missingTargets(List.of(missingTargets));
         }
 
+        /**
+         * @param status True if there aren&#39;t any missing Targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Boolean status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param updateTime Last time the condition was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

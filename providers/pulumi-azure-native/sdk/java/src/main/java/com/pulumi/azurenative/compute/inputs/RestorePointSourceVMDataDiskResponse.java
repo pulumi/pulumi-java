@@ -28,6 +28,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="caching")
     private @Nullable String caching;
 
+    /**
+     * @return Gets the caching type.
+     * 
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -39,6 +43,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="diskRestorePoint")
     private @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
+    /**
+     * @return Gets the disk restore point Id.
+     * 
+     */
     public Optional<ApiEntityReferenceResponse> diskRestorePoint() {
         return Optional.ofNullable(this.diskRestorePoint);
     }
@@ -50,6 +58,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -61,6 +73,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="lun")
     private @Nullable Integer lun;
 
+    /**
+     * @return Gets the logical unit number.
+     * 
+     */
     public Optional<Integer> lun() {
         return Optional.ofNullable(this.lun);
     }
@@ -72,6 +88,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="managedDisk")
     private @Nullable ManagedDiskParametersResponse managedDisk;
 
+    /**
+     * @return Gets the managed disk details
+     * 
+     */
     public Optional<ManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
@@ -83,6 +103,10 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets the disk name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -116,31 +140,67 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
             $ = new RestorePointSourceVMDataDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caching Gets the caching type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(@Nullable String caching) {
             $.caching = caching;
             return this;
         }
 
+        /**
+         * @param diskRestorePoint Gets the disk restore point Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
             $.diskRestorePoint = diskRestorePoint;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param lun Gets the logical unit number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(@Nullable Integer lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param managedDisk Gets the managed disk details
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             $.managedDisk = managedDisk;
             return this;
         }
 
+        /**
+         * @param name Gets the disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

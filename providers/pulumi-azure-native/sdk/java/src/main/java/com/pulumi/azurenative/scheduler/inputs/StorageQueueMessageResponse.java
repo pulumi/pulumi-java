@@ -21,6 +21,10 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Gets or sets the message.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -32,6 +36,10 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
     @Import(name="queueName")
     private @Nullable String queueName;
 
+    /**
+     * @return Gets or sets the queue name.
+     * 
+     */
     public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
@@ -43,6 +51,10 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
     @Import(name="sasToken")
     private @Nullable String sasToken;
 
+    /**
+     * @return Gets or sets the SAS key.
+     * 
+     */
     public Optional<String> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
@@ -54,6 +66,10 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
     @Import(name="storageAccount")
     private @Nullable String storageAccount;
 
+    /**
+     * @return Gets or sets the storage account name.
+     * 
+     */
     public Optional<String> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
@@ -85,21 +101,45 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
             $ = new StorageQueueMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message Gets or sets the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param queueName Gets or sets the queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(@Nullable String queueName) {
             $.queueName = queueName;
             return this;
         }
 
+        /**
+         * @param sasToken Gets or sets the SAS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(@Nullable String sasToken) {
             $.sasToken = sasToken;
             return this;
         }
 
+        /**
+         * @param storageAccount Gets or sets the storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(@Nullable String storageAccount) {
             $.storageAccount = storageAccount;
             return this;

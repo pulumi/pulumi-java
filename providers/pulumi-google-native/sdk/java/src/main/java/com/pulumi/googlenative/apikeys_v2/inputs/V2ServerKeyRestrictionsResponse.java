@@ -24,6 +24,10 @@ public final class V2ServerKeyRestrictionsResponse extends com.pulumi.resources.
     @Import(name="allowedIps", required=true)
     private List<String> allowedIps;
 
+    /**
+     * @return A list of the caller IP addresses that are allowed to make API calls with this key.
+     * 
+     */
     public List<String> allowedIps() {
         return this.allowedIps;
     }
@@ -52,11 +56,23 @@ public final class V2ServerKeyRestrictionsResponse extends com.pulumi.resources.
             $ = new V2ServerKeyRestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedIps A list of the caller IP addresses that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIps(List<String> allowedIps) {
             $.allowedIps = allowedIps;
             return this;
         }
 
+        /**
+         * @param allowedIps A list of the caller IP addresses that are allowed to make API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIps(String... allowedIps) {
             return allowedIps(List.of(allowedIps));
         }

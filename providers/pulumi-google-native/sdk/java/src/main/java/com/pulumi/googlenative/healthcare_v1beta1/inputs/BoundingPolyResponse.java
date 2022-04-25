@@ -25,6 +25,10 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return A description of this polygon.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -36,6 +40,10 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vertices", required=true)
     private List<VertexResponse> vertices;
 
+    /**
+     * @return List of the vertices of this polygon.
+     * 
+     */
     public List<VertexResponse> vertices() {
         return this.vertices;
     }
@@ -65,16 +73,34 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new BoundingPolyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label A description of this polygon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param vertices List of the vertices of this polygon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(List<VertexResponse> vertices) {
             $.vertices = vertices;
             return this;
         }
 
+        /**
+         * @param vertices List of the vertices of this polygon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(VertexResponse... vertices) {
             return vertices(List.of(vertices));
         }

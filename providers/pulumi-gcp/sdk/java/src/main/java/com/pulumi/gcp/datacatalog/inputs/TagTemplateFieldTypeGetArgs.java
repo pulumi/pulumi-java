@@ -25,6 +25,12 @@ public final class TagTemplateFieldTypeGetArgs extends com.pulumi.resources.Reso
     @Import(name="enumType")
     private @Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType;
 
+    /**
+     * @return Represents an enum type.
+     * Exactly one of `primitive_type` or `enum_type` must be set
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TagTemplateFieldTypeEnumTypeGetArgs>> enumType() {
         return Optional.ofNullable(this.enumType);
     }
@@ -38,6 +44,12 @@ public final class TagTemplateFieldTypeGetArgs extends com.pulumi.resources.Reso
     @Import(name="primitiveType")
     private @Nullable Output<String> primitiveType;
 
+    /**
+     * @return Represents primitive types - string, bool etc.
+     * Exactly one of `primitive_type` or `enum_type` must be set
+     * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
+     * 
+     */
     public Optional<Output<String>> primitiveType() {
         return Optional.ofNullable(this.primitiveType);
     }
@@ -67,20 +79,52 @@ public final class TagTemplateFieldTypeGetArgs extends com.pulumi.resources.Reso
             $ = new TagTemplateFieldTypeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enumType Represents an enum type.
+         * Exactly one of `primitive_type` or `enum_type` must be set
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumType(@Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType) {
             $.enumType = enumType;
             return this;
         }
 
+        /**
+         * @param enumType Represents an enum type.
+         * Exactly one of `primitive_type` or `enum_type` must be set
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumType(TagTemplateFieldTypeEnumTypeGetArgs enumType) {
             return enumType(Output.of(enumType));
         }
 
+        /**
+         * @param primitiveType Represents primitive types - string, bool etc.
+         * Exactly one of `primitive_type` or `enum_type` must be set
+         * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveType(@Nullable Output<String> primitiveType) {
             $.primitiveType = primitiveType;
             return this;
         }
 
+        /**
+         * @param primitiveType Represents primitive types - string, bool etc.
+         * Exactly one of `primitive_type` or `enum_type` must be set
+         * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primitiveType(String primitiveType) {
             return primitiveType(Output.of(primitiveType));
         }

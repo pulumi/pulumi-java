@@ -19,6 +19,10 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
     @Import(name="certificateName", required=true)
     private String certificateName;
 
+    /**
+     * @return Name of of the certificate to get.
+     * 
+     */
     public String certificateName() {
         return this.certificateName;
     }
@@ -30,6 +34,10 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
     @Import(name="managedInstanceName", required=true)
     private String managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public String managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -41,6 +49,10 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetServerTrustCertificateArgs extends com.pulumi.resources.In
             $ = new GetServerTrustCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName Name of of the certificate to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

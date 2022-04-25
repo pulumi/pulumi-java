@@ -25,6 +25,13 @@ public final class AlertPolicyDocumentationArgs extends com.pulumi.resources.Res
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The text of the documentation, interpreted according to mimeType.
+     * The content may not exceed 8,192 Unicode characters and may not
+     * exceed more than 10,240 bytes when encoded in UTF-8 format,
+     * whichever is smaller.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -37,6 +44,11 @@ public final class AlertPolicyDocumentationArgs extends com.pulumi.resources.Res
     @Import(name="mimeType")
     private @Nullable Output<String> mimeType;
 
+    /**
+     * @return The format of the content field. Presently, only the value
+     * &#34;text/markdown&#34; is supported.
+     * 
+     */
     public Optional<Output<String>> mimeType() {
         return Optional.ofNullable(this.mimeType);
     }
@@ -66,20 +78,52 @@ public final class AlertPolicyDocumentationArgs extends com.pulumi.resources.Res
             $ = new AlertPolicyDocumentationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The text of the documentation, interpreted according to mimeType.
+         * The content may not exceed 8,192 Unicode characters and may not
+         * exceed more than 10,240 bytes when encoded in UTF-8 format,
+         * whichever is smaller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The text of the documentation, interpreted according to mimeType.
+         * The content may not exceed 8,192 Unicode characters and may not
+         * exceed more than 10,240 bytes when encoded in UTF-8 format,
+         * whichever is smaller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param mimeType The format of the content field. Presently, only the value
+         * &#34;text/markdown&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(@Nullable Output<String> mimeType) {
             $.mimeType = mimeType;
             return this;
         }
 
+        /**
+         * @param mimeType The format of the content field. Presently, only the value
+         * &#34;text/markdown&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             return mimeType(Output.of(mimeType));
         }

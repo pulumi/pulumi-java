@@ -25,6 +25,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="category")
     private @Nullable Output<String> category;
 
+    /**
+     * @return category of the standard provided
+     * 
+     */
     public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
@@ -36,6 +40,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="components")
     private @Nullable Output<List<StandardComponentPropertiesArgs>> components;
 
+    /**
+     * @return List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+     * 
+     */
     public Optional<Output<List<StandardComponentPropertiesArgs>>> components() {
         return Optional.ofNullable(this.components);
     }
@@ -47,6 +55,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return description of the standard
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return display name of the standard, equivalent to the standardId
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -69,6 +85,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of the resource
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -80,6 +100,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location where the resource is stored
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -91,6 +115,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,6 +130,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="standardId")
     private @Nullable Output<String> standardId;
 
+    /**
+     * @return The Security Standard key - unique key for the standard type
+     * 
+     */
     public Optional<Output<String>> standardId() {
         return Optional.ofNullable(this.standardId);
     }
@@ -113,6 +145,10 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A list of key value pairs that describe the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -149,87 +185,201 @@ public final class StandardArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StandardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category category of the standard provided
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category category of the standard provided
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param components List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(@Nullable Output<List<StandardComponentPropertiesArgs>> components) {
             $.components = components;
             return this;
         }
 
+        /**
+         * @param components List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(List<StandardComponentPropertiesArgs> components) {
             return components(Output.of(components));
         }
 
+        /**
+         * @param components List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(StandardComponentPropertiesArgs... components) {
             return components(List.of(components));
         }
 
+        /**
+         * @param description description of the standard
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description description of the standard
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName display name of the standard, equivalent to the standardId
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName display name of the standard, equivalent to the standardId
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Location where the resource is stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location where the resource is stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param standardId The Security Standard key - unique key for the standard type
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardId(@Nullable Output<String> standardId) {
             $.standardId = standardId;
             return this;
         }
 
+        /**
+         * @param standardId The Security Standard key - unique key for the standard type
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardId(String standardId) {
             return standardId(Output.of(standardId));
         }
 
+        /**
+         * @param tags A list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -23,6 +23,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="currentKeyIdentifier", required=true)
     private String currentKeyIdentifier;
 
+    /**
+     * @return The current key used to encrypt Video Analyzer account, including the key version.
+     * 
+     */
     public String currentKeyIdentifier() {
         return this.currentKeyIdentifier;
     }
@@ -34,6 +38,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyIdentifier", required=true)
     private String keyIdentifier;
 
+    /**
+     * @return The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
+     * 
+     */
     public String keyIdentifier() {
         return this.keyIdentifier;
     }
@@ -63,11 +71,23 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentKeyIdentifier The current key used to encrypt Video Analyzer account, including the key version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentKeyIdentifier(String currentKeyIdentifier) {
             $.currentKeyIdentifier = currentKeyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyIdentifier The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(String keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;

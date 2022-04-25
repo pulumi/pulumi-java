@@ -22,6 +22,10 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentItemId")
     private @Nullable Output<String> contentItemId;
 
+    /**
+     * @return Content item identifier.
+     * 
+     */
     public Optional<Output<String>> contentItemId() {
         return Optional.ofNullable(this.contentItemId);
     }
@@ -33,6 +37,10 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentTypeId", required=true)
     private Output<String> contentTypeId;
 
+    /**
+     * @return Content type identifier.
+     * 
+     */
     public Output<String> contentTypeId() {
         return this.contentTypeId;
     }
@@ -44,6 +52,10 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -86,38 +102,86 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContentItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentItemId Content item identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentItemId(@Nullable Output<String> contentItemId) {
             $.contentItemId = contentItemId;
             return this;
         }
 
+        /**
+         * @param contentItemId Content item identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentItemId(String contentItemId) {
             return contentItemId(Output.of(contentItemId));
         }
 
+        /**
+         * @param contentTypeId Content type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypeId(Output<String> contentTypeId) {
             $.contentTypeId = contentTypeId;
             return this;
         }
 
+        /**
+         * @param contentTypeId Content type identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypeId(String contentTypeId) {
             return contentTypeId(Output.of(contentTypeId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

@@ -26,6 +26,10 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="csvClassifier")
     private @Nullable Output<ClassifierCsvClassifierGetArgs> csvClassifier;
 
+    /**
+     * @return A classifier for Csv content. Defined below.
+     * 
+     */
     public Optional<Output<ClassifierCsvClassifierGetArgs>> csvClassifier() {
         return Optional.ofNullable(this.csvClassifier);
     }
@@ -37,6 +41,10 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="grokClassifier")
     private @Nullable Output<ClassifierGrokClassifierGetArgs> grokClassifier;
 
+    /**
+     * @return A classifier that uses grok patterns. Defined below.
+     * 
+     */
     public Optional<Output<ClassifierGrokClassifierGetArgs>> grokClassifier() {
         return Optional.ofNullable(this.grokClassifier);
     }
@@ -48,6 +56,10 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jsonClassifier")
     private @Nullable Output<ClassifierJsonClassifierGetArgs> jsonClassifier;
 
+    /**
+     * @return A classifier for JSON content. Defined below.
+     * 
+     */
     public Optional<Output<ClassifierJsonClassifierGetArgs>> jsonClassifier() {
         return Optional.ofNullable(this.jsonClassifier);
     }
@@ -59,6 +71,10 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the classifier.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="xmlClassifier")
     private @Nullable Output<ClassifierXmlClassifierGetArgs> xmlClassifier;
 
+    /**
+     * @return A classifier for XML content. Defined below.
+     * 
+     */
     public Optional<Output<ClassifierXmlClassifierGetArgs>> xmlClassifier() {
         return Optional.ofNullable(this.xmlClassifier);
     }
@@ -102,47 +122,107 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
             $ = new ClassifierState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param csvClassifier A classifier for Csv content. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvClassifier(@Nullable Output<ClassifierCsvClassifierGetArgs> csvClassifier) {
             $.csvClassifier = csvClassifier;
             return this;
         }
 
+        /**
+         * @param csvClassifier A classifier for Csv content. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvClassifier(ClassifierCsvClassifierGetArgs csvClassifier) {
             return csvClassifier(Output.of(csvClassifier));
         }
 
+        /**
+         * @param grokClassifier A classifier that uses grok patterns. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grokClassifier(@Nullable Output<ClassifierGrokClassifierGetArgs> grokClassifier) {
             $.grokClassifier = grokClassifier;
             return this;
         }
 
+        /**
+         * @param grokClassifier A classifier that uses grok patterns. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grokClassifier(ClassifierGrokClassifierGetArgs grokClassifier) {
             return grokClassifier(Output.of(grokClassifier));
         }
 
+        /**
+         * @param jsonClassifier A classifier for JSON content. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonClassifier(@Nullable Output<ClassifierJsonClassifierGetArgs> jsonClassifier) {
             $.jsonClassifier = jsonClassifier;
             return this;
         }
 
+        /**
+         * @param jsonClassifier A classifier for JSON content. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonClassifier(ClassifierJsonClassifierGetArgs jsonClassifier) {
             return jsonClassifier(Output.of(jsonClassifier));
         }
 
+        /**
+         * @param name The name of the classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param xmlClassifier A classifier for XML content. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xmlClassifier(@Nullable Output<ClassifierXmlClassifierGetArgs> xmlClassifier) {
             $.xmlClassifier = xmlClassifier;
             return this;
         }
 
+        /**
+         * @param xmlClassifier A classifier for XML content. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xmlClassifier(ClassifierXmlClassifierGetArgs xmlClassifier) {
             return xmlClassifier(Output.of(xmlClassifier));
         }

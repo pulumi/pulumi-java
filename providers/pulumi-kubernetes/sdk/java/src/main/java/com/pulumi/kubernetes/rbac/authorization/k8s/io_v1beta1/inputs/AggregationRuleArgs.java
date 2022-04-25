@@ -27,6 +27,10 @@ public final class AggregationRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterRoleSelectors")
     private @Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors;
 
+    /**
+     * @return ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole&#39;s permissions will be added
+     * 
+     */
     public Optional<Output<List<LabelSelectorArgs>>> clusterRoleSelectors() {
         return Optional.ofNullable(this.clusterRoleSelectors);
     }
@@ -55,15 +59,33 @@ public final class AggregationRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new AggregationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterRoleSelectors ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole&#39;s permissions will be added
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRoleSelectors(@Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors) {
             $.clusterRoleSelectors = clusterRoleSelectors;
             return this;
         }
 
+        /**
+         * @param clusterRoleSelectors ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole&#39;s permissions will be added
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRoleSelectors(List<LabelSelectorArgs> clusterRoleSelectors) {
             return clusterRoleSelectors(Output.of(clusterRoleSelectors));
         }
 
+        /**
+         * @param clusterRoleSelectors ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole&#39;s permissions will be added
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRoleSelectors(LabelSelectorArgs... clusterRoleSelectors) {
             return clusterRoleSelectors(List.of(clusterRoleSelectors));
         }

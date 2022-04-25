@@ -20,6 +20,10 @@ public final class InstanceGroupManagerStatusStatefulResponse extends com.pulumi
     @Import(name="hasStatefulConfig", required=true)
     private Boolean hasStatefulConfig;
 
+    /**
+     * @return A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+     * 
+     */
     public Boolean hasStatefulConfig() {
         return this.hasStatefulConfig;
     }
@@ -31,6 +35,10 @@ public final class InstanceGroupManagerStatusStatefulResponse extends com.pulumi
     @Import(name="perInstanceConfigs", required=true)
     private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
 
+    /**
+     * @return Status of per-instance configs on the instance.
+     * 
+     */
     public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs() {
         return this.perInstanceConfigs;
     }
@@ -60,11 +68,23 @@ public final class InstanceGroupManagerStatusStatefulResponse extends com.pulumi
             $ = new InstanceGroupManagerStatusStatefulResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hasStatefulConfig A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasStatefulConfig(Boolean hasStatefulConfig) {
             $.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
 
+        /**
+         * @param perInstanceConfigs Status of per-instance configs on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs) {
             $.perInstanceConfigs = perInstanceConfigs;
             return this;

@@ -26,69 +26,69 @@ public final class GetJobResult {
     private final @Nullable List<JobDataCatalogOutput> dataCatalogOutputs;
     private final @Nullable List<JobDatabaseOutput> databaseOutputs;
     /**
-     * Dataset name
+     * @return Dataset name
      * 
      */
     private final @Nullable String datasetName;
     /**
-     * Encryption Key Arn
+     * @return Encryption Key Arn
      * 
      */
     private final @Nullable String encryptionKeyArn;
     /**
-     * Encryption mode
+     * @return Encryption mode
      * 
      */
     private final @Nullable JobEncryptionMode encryptionMode;
     /**
-     * Job Sample
+     * @return Job Sample
      * 
      */
     private final @Nullable JobSample jobSample;
     /**
-     * Log subscription
+     * @return Log subscription
      * 
      */
     private final @Nullable JobLogSubscription logSubscription;
     /**
-     * Max capacity
+     * @return Max capacity
      * 
      */
     private final @Nullable Integer maxCapacity;
     /**
-     * Max retries
+     * @return Max retries
      * 
      */
     private final @Nullable Integer maxRetries;
     /**
-     * Output location
+     * @return Output location
      * 
      */
     private final @Nullable JobOutputLocation outputLocation;
     private final @Nullable List<JobOutput> outputs;
     /**
-     * Profile Job configuration
+     * @return Profile Job configuration
      * 
      */
     private final @Nullable JobProfileConfiguration profileConfiguration;
     /**
-     * Project name
+     * @return Project name
      * 
      */
     private final @Nullable String projectName;
     private final @Nullable JobRecipe recipe;
     /**
-     * Role arn
+     * @return Role arn
      * 
      */
     private final @Nullable String roleArn;
     /**
-     * Timeout
+     * @return Timeout
      * 
      */
     private final @Nullable Integer timeout;
     /**
-     * Data quality rules configuration
+     * @return Data quality rules configuration
      * 
      */
     private final @Nullable List<JobValidationConfiguration> validationConfigurations;
@@ -138,58 +138,58 @@ public final class GetJobResult {
         return this.databaseOutputs == null ? List.of() : this.databaseOutputs;
     }
     /**
-     * Dataset name
+     * @return Dataset name
      * 
-    */
+     */
     public Optional<String> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
     /**
-     * Encryption Key Arn
+     * @return Encryption Key Arn
      * 
-    */
+     */
     public Optional<String> encryptionKeyArn() {
         return Optional.ofNullable(this.encryptionKeyArn);
     }
     /**
-     * Encryption mode
+     * @return Encryption mode
      * 
-    */
+     */
     public Optional<JobEncryptionMode> encryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
     /**
-     * Job Sample
+     * @return Job Sample
      * 
-    */
+     */
     public Optional<JobSample> jobSample() {
         return Optional.ofNullable(this.jobSample);
     }
     /**
-     * Log subscription
+     * @return Log subscription
      * 
-    */
+     */
     public Optional<JobLogSubscription> logSubscription() {
         return Optional.ofNullable(this.logSubscription);
     }
     /**
-     * Max capacity
+     * @return Max capacity
      * 
-    */
+     */
     public Optional<Integer> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
     /**
-     * Max retries
+     * @return Max retries
      * 
-    */
+     */
     public Optional<Integer> maxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
     /**
-     * Output location
+     * @return Output location
      * 
-    */
+     */
     public Optional<JobOutputLocation> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
@@ -197,16 +197,16 @@ public final class GetJobResult {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
-     * Profile Job configuration
+     * @return Profile Job configuration
      * 
-    */
+     */
     public Optional<JobProfileConfiguration> profileConfiguration() {
         return Optional.ofNullable(this.profileConfiguration);
     }
     /**
-     * Project name
+     * @return Project name
      * 
-    */
+     */
     public Optional<String> projectName() {
         return Optional.ofNullable(this.projectName);
     }
@@ -214,23 +214,23 @@ public final class GetJobResult {
         return Optional.ofNullable(this.recipe);
     }
     /**
-     * Role arn
+     * @return Role arn
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
-     * Timeout
+     * @return Timeout
      * 
-    */
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * Data quality rules configuration
+     * @return Data quality rules configuration
      * 
-    */
+     */
     public List<JobValidationConfiguration> validationConfigurations() {
         return this.validationConfigurations == null ? List.of() : this.validationConfigurations;
     }

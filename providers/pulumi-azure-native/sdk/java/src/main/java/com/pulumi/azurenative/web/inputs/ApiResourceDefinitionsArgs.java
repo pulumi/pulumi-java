@@ -26,6 +26,10 @@ public final class ApiResourceDefinitionsArgs extends com.pulumi.resources.Resou
     @Import(name="modifiedSwaggerUrl")
     private @Nullable Output<String> modifiedSwaggerUrl;
 
+    /**
+     * @return The modified swagger URL
+     * 
+     */
     public Optional<Output<String>> modifiedSwaggerUrl() {
         return Optional.ofNullable(this.modifiedSwaggerUrl);
     }
@@ -37,6 +41,10 @@ public final class ApiResourceDefinitionsArgs extends com.pulumi.resources.Resou
     @Import(name="originalSwaggerUrl")
     private @Nullable Output<String> originalSwaggerUrl;
 
+    /**
+     * @return The original swagger URL
+     * 
+     */
     public Optional<Output<String>> originalSwaggerUrl() {
         return Optional.ofNullable(this.originalSwaggerUrl);
     }
@@ -66,20 +74,44 @@ public final class ApiResourceDefinitionsArgs extends com.pulumi.resources.Resou
             $ = new ApiResourceDefinitionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modifiedSwaggerUrl The modified swagger URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedSwaggerUrl(@Nullable Output<String> modifiedSwaggerUrl) {
             $.modifiedSwaggerUrl = modifiedSwaggerUrl;
             return this;
         }
 
+        /**
+         * @param modifiedSwaggerUrl The modified swagger URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedSwaggerUrl(String modifiedSwaggerUrl) {
             return modifiedSwaggerUrl(Output.of(modifiedSwaggerUrl));
         }
 
+        /**
+         * @param originalSwaggerUrl The original swagger URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalSwaggerUrl(@Nullable Output<String> originalSwaggerUrl) {
             $.originalSwaggerUrl = originalSwaggerUrl;
             return this;
         }
 
+        /**
+         * @param originalSwaggerUrl The original swagger URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalSwaggerUrl(String originalSwaggerUrl) {
             return originalSwaggerUrl(Output.of(originalSwaggerUrl));
         }

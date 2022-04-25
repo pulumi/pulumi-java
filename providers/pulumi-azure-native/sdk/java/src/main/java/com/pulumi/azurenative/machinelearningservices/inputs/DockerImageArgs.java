@@ -29,6 +29,11 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dockerImageUri", required=true)
     private Output<String> dockerImageUri;
 
+    /**
+     * @return Image name of a custom base image.
+     * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
+     * 
+     */
     public Output<String> dockerImageUri() {
         return this.dockerImageUri;
     }
@@ -41,6 +46,11 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dockerSpecificationType", required=true)
     private Output<String> dockerSpecificationType;
 
+    /**
+     * @return Enum to determine docker specification type. Must be either Build or Image.
+     * Expected value is &#39;Image&#39;.
+     * 
+     */
     public Output<String> dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
@@ -52,6 +62,10 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform")
     private @Nullable Output<DockerImagePlatformArgs> platform;
 
+    /**
+     * @return The platform information of the docker image.
+     * 
+     */
     public Optional<Output<DockerImagePlatformArgs>> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -82,29 +96,69 @@ public final class DockerImageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DockerImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dockerImageUri Image name of a custom base image.
+         * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerImageUri(Output<String> dockerImageUri) {
             $.dockerImageUri = dockerImageUri;
             return this;
         }
 
+        /**
+         * @param dockerImageUri Image name of a custom base image.
+         * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerImageUri(String dockerImageUri) {
             return dockerImageUri(Output.of(dockerImageUri));
         }
 
+        /**
+         * @param dockerSpecificationType Enum to determine docker specification type. Must be either Build or Image.
+         * Expected value is &#39;Image&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerSpecificationType(Output<String> dockerSpecificationType) {
             $.dockerSpecificationType = dockerSpecificationType;
             return this;
         }
 
+        /**
+         * @param dockerSpecificationType Enum to determine docker specification type. Must be either Build or Image.
+         * Expected value is &#39;Image&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerSpecificationType(String dockerSpecificationType) {
             return dockerSpecificationType(Output.of(dockerSpecificationType));
         }
 
+        /**
+         * @param platform The platform information of the docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable Output<DockerImagePlatformArgs> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform The platform information of the docker image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(DockerImagePlatformArgs platform) {
             return platform(Output.of(platform));
         }

@@ -25,6 +25,10 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Secret Name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Secret Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IncidentOwnerInfoResponse {
     /**
-     * The name of the user the incident is assigned to.
+     * @return The name of the user the incident is assigned to.
      * 
      */
     private final @Nullable String assignedTo;
     /**
-     * The email of the user the incident is assigned to.
+     * @return The email of the user the incident is assigned to.
      * 
      */
     private final @Nullable String email;
     /**
-     * The object id of the user the incident is assigned to.
+     * @return The object id of the user the incident is assigned to.
      * 
      */
     private final @Nullable String objectId;
     /**
-     * The user principal name of the user the incident is assigned to.
+     * @return The user principal name of the user the incident is assigned to.
      * 
      */
     private final @Nullable String userPrincipalName;
@@ -45,30 +45,30 @@ public final class IncidentOwnerInfoResponse {
     }
 
     /**
-     * The name of the user the incident is assigned to.
+     * @return The name of the user the incident is assigned to.
      * 
-    */
+     */
     public Optional<String> assignedTo() {
         return Optional.ofNullable(this.assignedTo);
     }
     /**
-     * The email of the user the incident is assigned to.
+     * @return The email of the user the incident is assigned to.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * The object id of the user the incident is assigned to.
+     * @return The object id of the user the incident is assigned to.
      * 
-    */
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
-     * The user principal name of the user the incident is assigned to.
+     * @return The user principal name of the user the incident is assigned to.
      * 
-    */
+     */
     public Optional<String> userPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);
     }

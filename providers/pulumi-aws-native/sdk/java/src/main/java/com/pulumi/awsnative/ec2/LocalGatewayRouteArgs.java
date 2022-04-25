@@ -20,6 +20,10 @@ public final class LocalGatewayRouteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destinationCidrBlock", required=true)
     private Output<String> destinationCidrBlock;
 
+    /**
+     * @return The CIDR block used for destination matches.
+     * 
+     */
     public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
@@ -31,6 +35,10 @@ public final class LocalGatewayRouteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="localGatewayRouteTableId", required=true)
     private Output<String> localGatewayRouteTableId;
 
+    /**
+     * @return The ID of the local gateway route table.
+     * 
+     */
     public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
@@ -42,6 +50,10 @@ public final class LocalGatewayRouteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="localGatewayVirtualInterfaceGroupId", required=true)
     private Output<String> localGatewayVirtualInterfaceGroupId;
 
+    /**
+     * @return The ID of the virtual interface group.
+     * 
+     */
     public Output<String> localGatewayVirtualInterfaceGroupId() {
         return this.localGatewayVirtualInterfaceGroupId;
     }
@@ -72,29 +84,65 @@ public final class LocalGatewayRouteArgs extends com.pulumi.resources.ResourceAr
             $ = new LocalGatewayRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationCidrBlock The CIDR block used for destination matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
             $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
+        /**
+         * @param destinationCidrBlock The CIDR block used for destination matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
 
+        /**
+         * @param localGatewayRouteTableId The ID of the local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(Output<String> localGatewayRouteTableId) {
             $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
+        /**
+         * @param localGatewayRouteTableId The ID of the local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
 
+        /**
+         * @param localGatewayVirtualInterfaceGroupId The ID of the virtual interface group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayVirtualInterfaceGroupId(Output<String> localGatewayVirtualInterfaceGroupId) {
             $.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
             return this;
         }
 
+        /**
+         * @param localGatewayVirtualInterfaceGroupId The ID of the virtual interface group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
             return localGatewayVirtualInterfaceGroupId(Output.of(localGatewayVirtualInterfaceGroupId));
         }

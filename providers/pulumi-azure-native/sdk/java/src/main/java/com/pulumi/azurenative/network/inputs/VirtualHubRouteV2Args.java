@@ -27,6 +27,10 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
     @Import(name="destinationType")
     private @Nullable Output<String> destinationType;
 
+    /**
+     * @return The type of destinations.
+     * 
+     */
     public Optional<Output<String>> destinationType() {
         return Optional.ofNullable(this.destinationType);
     }
@@ -38,6 +42,10 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
     @Import(name="destinations")
     private @Nullable Output<List<String>> destinations;
 
+    /**
+     * @return List of all destinations.
+     * 
+     */
     public Optional<Output<List<String>>> destinations() {
         return Optional.ofNullable(this.destinations);
     }
@@ -49,6 +57,10 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
     @Import(name="nextHopType")
     private @Nullable Output<String> nextHopType;
 
+    /**
+     * @return The type of next hops.
+     * 
+     */
     public Optional<Output<String>> nextHopType() {
         return Optional.ofNullable(this.nextHopType);
     }
@@ -60,6 +72,10 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
     @Import(name="nextHops")
     private @Nullable Output<List<String>> nextHops;
 
+    /**
+     * @return NextHops ip address.
+     * 
+     */
     public Optional<Output<List<String>>> nextHops() {
         return Optional.ofNullable(this.nextHops);
     }
@@ -91,46 +107,106 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
             $ = new VirtualHubRouteV2Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationType The type of destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationType(@Nullable Output<String> destinationType) {
             $.destinationType = destinationType;
             return this;
         }
 
+        /**
+         * @param destinationType The type of destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationType(String destinationType) {
             return destinationType(Output.of(destinationType));
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(@Nullable Output<List<String>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<String> destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param nextHopType The type of next hops.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(@Nullable Output<String> nextHopType) {
             $.nextHopType = nextHopType;
             return this;
         }
 
+        /**
+         * @param nextHopType The type of next hops.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(String nextHopType) {
             return nextHopType(Output.of(nextHopType));
         }
 
+        /**
+         * @param nextHops NextHops ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHops(@Nullable Output<List<String>> nextHops) {
             $.nextHops = nextHops;
             return this;
         }
 
+        /**
+         * @param nextHops NextHops ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHops(List<String> nextHops) {
             return nextHops(Output.of(nextHops));
         }
 
+        /**
+         * @param nextHops NextHops ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHops(String... nextHops) {
             return nextHops(List.of(nextHops));
         }

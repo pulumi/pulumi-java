@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class WaitStatisticsResponse {
     /**
-     * Total no. of waits
+     * @return Total no. of waits
      * 
      */
     private final Double waitCount;
     /**
-     * Total wait time in millisecond(s)
+     * @return Total wait time in millisecond(s)
      * 
      */
     private final Double waitTimeMs;
     /**
-     * Type of the Wait
+     * @return Type of the Wait
      * 
      */
     private final String waitType;
@@ -37,23 +37,23 @@ public final class WaitStatisticsResponse {
     }
 
     /**
-     * Total no. of waits
+     * @return Total no. of waits
      * 
-    */
+     */
     public Double waitCount() {
         return this.waitCount;
     }
     /**
-     * Total wait time in millisecond(s)
+     * @return Total wait time in millisecond(s)
      * 
-    */
+     */
     public Double waitTimeMs() {
         return this.waitTimeMs;
     }
     /**
-     * Type of the Wait
+     * @return Type of the Wait
      * 
-    */
+     */
     public String waitType() {
         return this.waitType;
     }

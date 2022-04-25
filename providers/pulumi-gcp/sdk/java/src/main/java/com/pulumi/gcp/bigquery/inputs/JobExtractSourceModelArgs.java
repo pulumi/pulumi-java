@@ -20,6 +20,10 @@ public final class JobExtractSourceModelArgs extends com.pulumi.resources.Resour
     @Import(name="datasetId", required=true)
     private Output<String> datasetId;
 
+    /**
+     * @return The ID of the dataset containing this model.
+     * 
+     */
     public Output<String> datasetId() {
         return this.datasetId;
     }
@@ -31,6 +35,10 @@ public final class JobExtractSourceModelArgs extends com.pulumi.resources.Resour
     @Import(name="modelId", required=true)
     private Output<String> modelId;
 
+    /**
+     * @return The ID of the model.
+     * 
+     */
     public Output<String> modelId() {
         return this.modelId;
     }
@@ -42,6 +50,10 @@ public final class JobExtractSourceModelArgs extends com.pulumi.resources.Resour
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return The ID of the project containing this model.
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -72,29 +84,65 @@ public final class JobExtractSourceModelArgs extends com.pulumi.resources.Resour
             $ = new JobExtractSourceModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param modelId The ID of the model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelId(Output<String> modelId) {
             $.modelId = modelId;
             return this;
         }
 
+        /**
+         * @param modelId The ID of the model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelId(String modelId) {
             return modelId(Output.of(modelId));
         }
 
+        /**
+         * @param projectId The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The ID of the project containing this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

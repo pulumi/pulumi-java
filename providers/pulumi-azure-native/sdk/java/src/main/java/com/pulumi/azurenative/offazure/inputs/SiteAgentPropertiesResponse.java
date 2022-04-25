@@ -25,6 +25,10 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return ID of the agent.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="keyVaultId")
     private @Nullable String keyVaultId;
 
+    /**
+     * @return Key vault ARM Id.
+     * 
+     */
     public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
@@ -47,6 +55,10 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="keyVaultUri")
     private @Nullable String keyVaultUri;
 
+    /**
+     * @return Key vault URI.
+     * 
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
@@ -58,6 +70,10 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="lastHeartBeatUtc", required=true)
     private String lastHeartBeatUtc;
 
+    /**
+     * @return Last heartbeat time of the agent in UTC.
+     * 
+     */
     public String lastHeartBeatUtc() {
         return this.lastHeartBeatUtc;
     }
@@ -69,6 +85,10 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Version of the agent.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -101,26 +121,56 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
             $ = new SiteAgentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id ID of the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param keyVaultId Key vault ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(@Nullable String keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultUri Key vault URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param lastHeartBeatUtc Last heartbeat time of the agent in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartBeatUtc(String lastHeartBeatUtc) {
             $.lastHeartBeatUtc = lastHeartBeatUtc;
             return this;
         }
 
+        /**
+         * @param version Version of the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

@@ -12,37 +12,37 @@ import java.util.Objects;
 @CustomType
 public final class GetEnvironmentResult {
     /**
-     * Configuration parameters for this environment.
+     * @return Configuration parameters for this environment.
      * 
      */
     private final EnvironmentConfigResponse config;
     /**
-     * The time at which this environment was created.
+     * @return The time at which this environment was created.
      * 
      */
     private final String createTime;
     /**
-     * Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+     * @return Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The resource name of the environment, in the form: &#34;projects/{projectId}/locations/{locationId}/environments/{environmentId}&#34; EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+     * @return The resource name of the environment, in the form: &#34;projects/{projectId}/locations/{locationId}/environments/{environmentId}&#34; EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
      * 
      */
     private final String name;
     /**
-     * The current state of the environment.
+     * @return The current state of the environment.
      * 
      */
     private final String state;
     /**
-     * The time at which this environment was last modified.
+     * @return The time at which this environment was last modified.
      * 
      */
     private final String updateTime;
     /**
-     * The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
+     * @return The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
      * 
      */
     private final String uuid;
@@ -66,51 +66,51 @@ public final class GetEnvironmentResult {
     }
 
     /**
-     * Configuration parameters for this environment.
+     * @return Configuration parameters for this environment.
      * 
-    */
+     */
     public EnvironmentConfigResponse config() {
         return this.config;
     }
     /**
-     * The time at which this environment was created.
+     * @return The time at which this environment was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+     * @return Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The resource name of the environment, in the form: &#34;projects/{projectId}/locations/{locationId}/environments/{environmentId}&#34; EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+     * @return The resource name of the environment, in the form: &#34;projects/{projectId}/locations/{locationId}/environments/{environmentId}&#34; EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current state of the environment.
+     * @return The current state of the environment.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The time at which this environment was last modified.
+     * @return The time at which this environment was last modified.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
+     * @return The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
      * 
-    */
+     */
     public String uuid() {
         return this.uuid;
     }

@@ -23,6 +23,10 @@ public final class CustomerManagedEncryptionResponse extends com.pulumi.resource
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -51,6 +55,12 @@ public final class CustomerManagedEncryptionResponse extends com.pulumi.resource
             $ = new CustomerManagedEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;

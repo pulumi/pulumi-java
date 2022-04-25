@@ -27,6 +27,10 @@ public final class PrivateEndpointConnectionReferenceResponse extends com.pulumi
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class PrivateEndpointConnectionReferenceResponse extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class PrivateEndpointConnectionReferenceResponse extends com.pulumi
     @Import(name="privateEndpoint")
     private @Nullable PrivateEndpointResponse privateEndpoint;
 
+    /**
+     * @return The resource of private endpoint.
+     * 
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -60,6 +72,10 @@ public final class PrivateEndpointConnectionReferenceResponse extends com.pulumi
     @Import(name="privateLinkServiceConnectionState", required=true)
     private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
@@ -71,6 +87,10 @@ public final class PrivateEndpointConnectionReferenceResponse extends com.pulumi
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning status of the private endpoint connection.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -82,6 +102,10 @@ public final class PrivateEndpointConnectionReferenceResponse extends com.pulumi
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -115,31 +139,67 @@ public final class PrivateEndpointConnectionReferenceResponse extends com.pulumi
             $ = new PrivateEndpointConnectionReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateEndpoint The resource of private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning status of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -25,6 +25,10 @@ public final class PartnerRegionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Geo location of the partner managed instances.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class PartnerRegionInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="replicationRole", required=true)
     private String replicationRole;
 
+    /**
+     * @return Replication role of the partner managed instances.
+     * 
+     */
     public String replicationRole() {
         return this.replicationRole;
     }
@@ -65,11 +73,23 @@ public final class PartnerRegionInfoResponse extends com.pulumi.resources.Invoke
             $ = new PartnerRegionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Geo location of the partner managed instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param replicationRole Replication role of the partner managed instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationRole(String replicationRole) {
             $.replicationRole = replicationRole;
             return this;

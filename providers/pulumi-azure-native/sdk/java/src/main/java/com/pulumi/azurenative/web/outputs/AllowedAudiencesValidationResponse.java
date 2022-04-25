@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AllowedAudiencesValidationResponse {
     /**
-     * The configuration settings of the allowed list of audiences from which to validate the JWT token.
+     * @return The configuration settings of the allowed list of audiences from which to validate the JWT token.
      * 
      */
     private final @Nullable List<String> allowedAudiences;
@@ -23,9 +23,9 @@ public final class AllowedAudiencesValidationResponse {
     }
 
     /**
-     * The configuration settings of the allowed list of audiences from which to validate the JWT token.
+     * @return The configuration settings of the allowed list of audiences from which to validate the JWT token.
      * 
-    */
+     */
     public List<String> allowedAudiences() {
         return this.allowedAudiences == null ? List.of() : this.allowedAudiences;
     }

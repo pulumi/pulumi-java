@@ -19,6 +19,10 @@ public final class ListManagerActivationKeyArgs extends com.pulumi.resources.Inv
     @Import(name="managerName", required=true)
     private String managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public String managerName() {
         return this.managerName;
     }
@@ -30,6 +34,10 @@ public final class ListManagerActivationKeyArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListManagerActivationKeyArgs extends com.pulumi.resources.Inv
             $ = new ListManagerActivationKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

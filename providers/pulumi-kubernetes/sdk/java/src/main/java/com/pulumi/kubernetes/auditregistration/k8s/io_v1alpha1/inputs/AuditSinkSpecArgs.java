@@ -25,6 +25,10 @@ public final class AuditSinkSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
     private Output<PolicyArgs> policy;
 
+    /**
+     * @return Policy defines the policy for selecting which events should be sent to the webhook required
+     * 
+     */
     public Output<PolicyArgs> policy() {
         return this.policy;
     }
@@ -36,6 +40,10 @@ public final class AuditSinkSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webhook", required=true)
     private Output<WebhookArgs> webhook;
 
+    /**
+     * @return Webhook to send events required
+     * 
+     */
     public Output<WebhookArgs> webhook() {
         return this.webhook;
     }
@@ -65,20 +73,44 @@ public final class AuditSinkSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuditSinkSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policy Policy defines the policy for selecting which events should be sent to the webhook required
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Output<PolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Policy defines the policy for selecting which events should be sent to the webhook required
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(PolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param webhook Webhook to send events required
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhook(Output<WebhookArgs> webhook) {
             $.webhook = webhook;
             return this;
         }
 
+        /**
+         * @param webhook Webhook to send events required
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhook(WebhookArgs webhook) {
             return webhook(Output.of(webhook));
         }

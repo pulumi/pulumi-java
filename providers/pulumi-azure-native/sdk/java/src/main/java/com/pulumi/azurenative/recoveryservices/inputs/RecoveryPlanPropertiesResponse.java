@@ -29,6 +29,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="allowedOperations")
     private @Nullable List<String> allowedOperations;
 
+    /**
+     * @return The list of allowed operations.
+     * 
+     */
     public Optional<List<String>> allowedOperations() {
         return Optional.ofNullable(this.allowedOperations);
     }
@@ -40,6 +44,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="currentScenario")
     private @Nullable CurrentScenarioDetailsResponse currentScenario;
 
+    /**
+     * @return The current scenario details.
+     * 
+     */
     public Optional<CurrentScenarioDetailsResponse> currentScenario() {
         return Optional.ofNullable(this.currentScenario);
     }
@@ -51,6 +59,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="currentScenarioStatus")
     private @Nullable String currentScenarioStatus;
 
+    /**
+     * @return The recovery plan status.
+     * 
+     */
     public Optional<String> currentScenarioStatus() {
         return Optional.ofNullable(this.currentScenarioStatus);
     }
@@ -62,6 +74,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="currentScenarioStatusDescription")
     private @Nullable String currentScenarioStatusDescription;
 
+    /**
+     * @return The recovery plan status description.
+     * 
+     */
     public Optional<String> currentScenarioStatusDescription() {
         return Optional.ofNullable(this.currentScenarioStatusDescription);
     }
@@ -73,6 +89,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="failoverDeploymentModel")
     private @Nullable String failoverDeploymentModel;
 
+    /**
+     * @return The failover deployment model.
+     * 
+     */
     public Optional<String> failoverDeploymentModel() {
         return Optional.ofNullable(this.failoverDeploymentModel);
     }
@@ -84,6 +104,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return The friendly name.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -95,6 +119,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="groups")
     private @Nullable List<RecoveryPlanGroupResponse> groups;
 
+    /**
+     * @return The recovery plan groups.
+     * 
+     */
     public Optional<List<RecoveryPlanGroupResponse>> groups() {
         return Optional.ofNullable(this.groups);
     }
@@ -106,6 +134,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="lastPlannedFailoverTime")
     private @Nullable String lastPlannedFailoverTime;
 
+    /**
+     * @return The start time of the last planned failover.
+     * 
+     */
     public Optional<String> lastPlannedFailoverTime() {
         return Optional.ofNullable(this.lastPlannedFailoverTime);
     }
@@ -117,6 +149,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="lastTestFailoverTime")
     private @Nullable String lastTestFailoverTime;
 
+    /**
+     * @return The start time of the last test failover.
+     * 
+     */
     public Optional<String> lastTestFailoverTime() {
         return Optional.ofNullable(this.lastTestFailoverTime);
     }
@@ -128,6 +164,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="lastUnplannedFailoverTime")
     private @Nullable String lastUnplannedFailoverTime;
 
+    /**
+     * @return The start time of the last unplanned failover.
+     * 
+     */
     public Optional<String> lastUnplannedFailoverTime() {
         return Optional.ofNullable(this.lastUnplannedFailoverTime);
     }
@@ -139,6 +179,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="primaryFabricFriendlyName")
     private @Nullable String primaryFabricFriendlyName;
 
+    /**
+     * @return The primary fabric friendly name.
+     * 
+     */
     public Optional<String> primaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
@@ -150,6 +194,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="primaryFabricId")
     private @Nullable String primaryFabricId;
 
+    /**
+     * @return The primary fabric Id.
+     * 
+     */
     public Optional<String> primaryFabricId() {
         return Optional.ofNullable(this.primaryFabricId);
     }
@@ -161,6 +209,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="providerSpecificDetails", required=true)
     private List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
 
+    /**
+     * @return The provider id and provider specific details.
+     * 
+     */
     public List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails() {
         return this.providerSpecificDetails;
     }
@@ -172,6 +224,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="recoveryFabricFriendlyName")
     private @Nullable String recoveryFabricFriendlyName;
 
+    /**
+     * @return The recovery fabric friendly name.
+     * 
+     */
     public Optional<String> recoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
@@ -183,6 +239,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="recoveryFabricId")
     private @Nullable String recoveryFabricId;
 
+    /**
+     * @return The recovery fabric Id.
+     * 
+     */
     public Optional<String> recoveryFabricId() {
         return Optional.ofNullable(this.recoveryFabricId);
     }
@@ -194,6 +254,10 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
     @Import(name="replicationProviders")
     private @Nullable List<String> replicationProviders;
 
+    /**
+     * @return The list of replication providers.
+     * 
+     */
     public Optional<List<String>> replicationProviders() {
         return Optional.ofNullable(this.replicationProviders);
     }
@@ -237,98 +301,218 @@ public final class RecoveryPlanPropertiesResponse extends com.pulumi.resources.I
             $ = new RecoveryPlanPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedOperations The list of allowed operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOperations(@Nullable List<String> allowedOperations) {
             $.allowedOperations = allowedOperations;
             return this;
         }
 
+        /**
+         * @param allowedOperations The list of allowed operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOperations(String... allowedOperations) {
             return allowedOperations(List.of(allowedOperations));
         }
 
+        /**
+         * @param currentScenario The current scenario details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
             $.currentScenario = currentScenario;
             return this;
         }
 
+        /**
+         * @param currentScenarioStatus The recovery plan status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentScenarioStatus(@Nullable String currentScenarioStatus) {
             $.currentScenarioStatus = currentScenarioStatus;
             return this;
         }
 
+        /**
+         * @param currentScenarioStatusDescription The recovery plan status description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentScenarioStatusDescription(@Nullable String currentScenarioStatusDescription) {
             $.currentScenarioStatusDescription = currentScenarioStatusDescription;
             return this;
         }
 
+        /**
+         * @param failoverDeploymentModel The failover deployment model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverDeploymentModel(@Nullable String failoverDeploymentModel) {
             $.failoverDeploymentModel = failoverDeploymentModel;
             return this;
         }
 
+        /**
+         * @param friendlyName The friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param groups The recovery plan groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(@Nullable List<RecoveryPlanGroupResponse> groups) {
             $.groups = groups;
             return this;
         }
 
+        /**
+         * @param groups The recovery plan groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(RecoveryPlanGroupResponse... groups) {
             return groups(List.of(groups));
         }
 
+        /**
+         * @param lastPlannedFailoverTime The start time of the last planned failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPlannedFailoverTime(@Nullable String lastPlannedFailoverTime) {
             $.lastPlannedFailoverTime = lastPlannedFailoverTime;
             return this;
         }
 
+        /**
+         * @param lastTestFailoverTime The start time of the last test failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTestFailoverTime(@Nullable String lastTestFailoverTime) {
             $.lastTestFailoverTime = lastTestFailoverTime;
             return this;
         }
 
+        /**
+         * @param lastUnplannedFailoverTime The start time of the last unplanned failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUnplannedFailoverTime(@Nullable String lastUnplannedFailoverTime) {
             $.lastUnplannedFailoverTime = lastUnplannedFailoverTime;
             return this;
         }
 
+        /**
+         * @param primaryFabricFriendlyName The primary fabric friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
             $.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param primaryFabricId The primary fabric Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryFabricId(@Nullable String primaryFabricId) {
             $.primaryFabricId = primaryFabricId;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails The provider id and provider specific details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails) {
             $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails The provider id and provider specific details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(RecoveryPlanA2ADetailsResponse... providerSpecificDetails) {
             return providerSpecificDetails(List.of(providerSpecificDetails));
         }
 
+        /**
+         * @param recoveryFabricFriendlyName The recovery fabric friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
             $.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
 
+        /**
+         * @param recoveryFabricId The recovery fabric Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricId(@Nullable String recoveryFabricId) {
             $.recoveryFabricId = recoveryFabricId;
             return this;
         }
 
+        /**
+         * @param replicationProviders The list of replication providers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationProviders(@Nullable List<String> replicationProviders) {
             $.replicationProviders = replicationProviders;
             return this;
         }
 
+        /**
+         * @param replicationProviders The list of replication providers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationProviders(String... replicationProviders) {
             return replicationProviders(List.of(replicationProviders));
         }

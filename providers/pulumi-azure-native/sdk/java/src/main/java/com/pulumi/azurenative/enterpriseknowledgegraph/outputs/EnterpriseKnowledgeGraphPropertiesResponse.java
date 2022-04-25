@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnterpriseKnowledgeGraphPropertiesResponse {
     /**
-     * The description of the EnterpriseKnowledgeGraph
+     * @return The description of the EnterpriseKnowledgeGraph
      * 
      */
     private final @Nullable String description;
     /**
-     * Specifies the metadata  of the resource.
+     * @return Specifies the metadata  of the resource.
      * 
      */
     private final @Nullable Object metadata;
     /**
-     * The state of EnterpriseKnowledgeGraph provisioning
+     * @return The state of EnterpriseKnowledgeGraph provisioning
      * 
      */
     private final @Nullable String provisioningState;
@@ -39,23 +39,23 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
     }
 
     /**
-     * The description of the EnterpriseKnowledgeGraph
+     * @return The description of the EnterpriseKnowledgeGraph
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Specifies the metadata  of the resource.
+     * @return Specifies the metadata  of the resource.
      * 
-    */
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * The state of EnterpriseKnowledgeGraph provisioning
+     * @return The state of EnterpriseKnowledgeGraph provisioning
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

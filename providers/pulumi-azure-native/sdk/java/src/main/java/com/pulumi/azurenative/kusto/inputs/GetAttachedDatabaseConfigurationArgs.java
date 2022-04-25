@@ -19,6 +19,10 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
     @Import(name="attachedDatabaseConfigurationName", required=true)
     private String attachedDatabaseConfigurationName;
 
+    /**
+     * @return The name of the attached database configuration.
+     * 
+     */
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
@@ -30,6 +34,10 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -41,6 +49,10 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
             $ = new GetAttachedDatabaseConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedDatabaseConfigurationName The name of the attached database configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
             $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

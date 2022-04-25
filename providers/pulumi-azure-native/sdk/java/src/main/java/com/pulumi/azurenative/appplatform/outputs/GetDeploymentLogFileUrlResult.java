@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetDeploymentLogFileUrlResult {
     /**
-     * URL of the log file
+     * @return URL of the log file
      * 
      */
     private final String url;
@@ -21,9 +21,9 @@ public final class GetDeploymentLogFileUrlResult {
     }
 
     /**
-     * URL of the log file
+     * @return URL of the log file
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends com.pul
     @Import(name="largeCustomDictionary", required=true)
     private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
 
+    /**
+     * @return StoredInfoType where findings are defined by a dictionary of phrases.
+     * 
+     */
     public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends com.pul
             $ = new GooglePrivacyDlpV2StoredInfoTypeStatsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param largeCustomDictionary StoredInfoType where findings are defined by a dictionary of phrases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary) {
             $.largeCustomDictionary = largeCustomDictionary;
             return this;

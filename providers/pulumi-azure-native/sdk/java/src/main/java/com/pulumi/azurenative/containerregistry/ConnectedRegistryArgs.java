@@ -27,6 +27,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clientTokenIds")
     private @Nullable Output<List<String>> clientTokenIds;
 
+    /**
+     * @return The list of the ACR token resource IDs used to authenticate clients to the connected registry.
+     * 
+     */
     public Optional<Output<List<String>>> clientTokenIds() {
         return Optional.ofNullable(this.clientTokenIds);
     }
@@ -38,6 +42,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectedRegistryName")
     private @Nullable Output<String> connectedRegistryName;
 
+    /**
+     * @return The name of the connected registry.
+     * 
+     */
     public Optional<Output<String>> connectedRegistryName() {
         return Optional.ofNullable(this.connectedRegistryName);
     }
@@ -49,6 +57,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="logging")
     private @Nullable Output<LoggingPropertiesArgs> logging;
 
+    /**
+     * @return The logging properties of the connected registry.
+     * 
+     */
     public Optional<Output<LoggingPropertiesArgs>> logging() {
         return Optional.ofNullable(this.logging);
     }
@@ -60,6 +72,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mode", required=true)
     private Output<Either<String,ConnectedRegistryMode>> mode;
 
+    /**
+     * @return The mode of the connected registry resource that indicates the permissions of the registry.
+     * 
+     */
     public Output<Either<String,ConnectedRegistryMode>> mode() {
         return this.mode;
     }
@@ -71,6 +87,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parent", required=true)
     private Output<ParentPropertiesArgs> parent;
 
+    /**
+     * @return The parent of the connected registry.
+     * 
+     */
     public Output<ParentPropertiesArgs> parent() {
         return this.parent;
     }
@@ -82,6 +102,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -93,6 +117,10 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -127,77 +155,179 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
             $ = new ConnectedRegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientTokenIds The list of the ACR token resource IDs used to authenticate clients to the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTokenIds(@Nullable Output<List<String>> clientTokenIds) {
             $.clientTokenIds = clientTokenIds;
             return this;
         }
 
+        /**
+         * @param clientTokenIds The list of the ACR token resource IDs used to authenticate clients to the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTokenIds(List<String> clientTokenIds) {
             return clientTokenIds(Output.of(clientTokenIds));
         }
 
+        /**
+         * @param clientTokenIds The list of the ACR token resource IDs used to authenticate clients to the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientTokenIds(String... clientTokenIds) {
             return clientTokenIds(List.of(clientTokenIds));
         }
 
+        /**
+         * @param connectedRegistryName The name of the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectedRegistryName(@Nullable Output<String> connectedRegistryName) {
             $.connectedRegistryName = connectedRegistryName;
             return this;
         }
 
+        /**
+         * @param connectedRegistryName The name of the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectedRegistryName(String connectedRegistryName) {
             return connectedRegistryName(Output.of(connectedRegistryName));
         }
 
+        /**
+         * @param logging The logging properties of the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(@Nullable Output<LoggingPropertiesArgs> logging) {
             $.logging = logging;
             return this;
         }
 
+        /**
+         * @param logging The logging properties of the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(LoggingPropertiesArgs logging) {
             return logging(Output.of(logging));
         }
 
+        /**
+         * @param mode The mode of the connected registry resource that indicates the permissions of the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Output<Either<String,ConnectedRegistryMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The mode of the connected registry resource that indicates the permissions of the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,ConnectedRegistryMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode The mode of the connected registry resource that indicates the permissions of the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode The mode of the connected registry resource that indicates the permissions of the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(ConnectedRegistryMode mode) {
             return mode(Either.ofRight(mode));
         }
 
+        /**
+         * @param parent The parent of the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<ParentPropertiesArgs> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(ParentPropertiesArgs parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

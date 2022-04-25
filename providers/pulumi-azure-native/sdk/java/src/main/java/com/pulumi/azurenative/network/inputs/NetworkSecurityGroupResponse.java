@@ -31,6 +31,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="defaultSecurityRules", required=true)
     private List<SecurityRuleResponse> defaultSecurityRules;
 
+    /**
+     * @return The default security rules of network security group.
+     * 
+     */
     public List<SecurityRuleResponse> defaultSecurityRules() {
         return this.defaultSecurityRules;
     }
@@ -42,6 +46,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -53,6 +61,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="flowLogs", required=true)
     private List<FlowLogResponse> flowLogs;
 
+    /**
+     * @return A collection of references to flow log resources.
+     * 
+     */
     public List<FlowLogResponse> flowLogs() {
         return this.flowLogs;
     }
@@ -64,6 +76,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -75,6 +91,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -86,6 +106,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -97,6 +121,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="networkInterfaces", required=true)
     private List<NetworkInterfaceResponse> networkInterfaces;
 
+    /**
+     * @return A collection of references to network interfaces.
+     * 
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
@@ -108,6 +136,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the network security group resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -119,6 +151,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="resourceGuid", required=true)
     private String resourceGuid;
 
+    /**
+     * @return The resource GUID property of the network security group resource.
+     * 
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
@@ -130,6 +166,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="securityRules")
     private @Nullable List<SecurityRuleResponse> securityRules;
 
+    /**
+     * @return A collection of security rules of the network security group.
+     * 
+     */
     public Optional<List<SecurityRuleResponse>> securityRules() {
         return Optional.ofNullable(this.securityRules);
     }
@@ -141,6 +181,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="subnets", required=true)
     private List<SubnetResponse> subnets;
 
+    /**
+     * @return A collection of references to subnets.
+     * 
+     */
     public List<SubnetResponse> subnets() {
         return this.subnets;
     }
@@ -152,6 +196,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -163,6 +211,10 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -203,86 +255,194 @@ public final class NetworkSecurityGroupResponse extends com.pulumi.resources.Inv
             $ = new NetworkSecurityGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultSecurityRules The default security rules of network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSecurityRules(List<SecurityRuleResponse> defaultSecurityRules) {
             $.defaultSecurityRules = defaultSecurityRules;
             return this;
         }
 
+        /**
+         * @param defaultSecurityRules The default security rules of network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSecurityRules(SecurityRuleResponse... defaultSecurityRules) {
             return defaultSecurityRules(List.of(defaultSecurityRules));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param flowLogs A collection of references to flow log resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowLogs(List<FlowLogResponse> flowLogs) {
             $.flowLogs = flowLogs;
             return this;
         }
 
+        /**
+         * @param flowLogs A collection of references to flow log resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowLogs(FlowLogResponse... flowLogs) {
             return flowLogs(List.of(flowLogs));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkInterfaces A collection of references to network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces A collection of references to network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the network security group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceGuid The resource GUID property of the network security group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuid(String resourceGuid) {
             $.resourceGuid = resourceGuid;
             return this;
         }
 
+        /**
+         * @param securityRules A collection of security rules of the network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityRules(@Nullable List<SecurityRuleResponse> securityRules) {
             $.securityRules = securityRules;
             return this;
         }
 
+        /**
+         * @param securityRules A collection of security rules of the network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityRules(SecurityRuleResponse... securityRules) {
             return securityRules(List.of(securityRules));
         }
 
+        /**
+         * @param subnets A collection of references to subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<SubnetResponse> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets A collection of references to subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(SubnetResponse... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

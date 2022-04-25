@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ParallelismConfigurationProperties {
     /**
-     * Maximum parallel execution steps
+     * @return Maximum parallel execution steps
      * 
      */
     private final Integer maxParallelExecutionSteps;
@@ -21,9 +21,9 @@ public final class ParallelismConfigurationProperties {
     }
 
     /**
-     * Maximum parallel execution steps
+     * @return Maximum parallel execution steps
      * 
-    */
+     */
     public Integer maxParallelExecutionSteps() {
         return this.maxParallelExecutionSteps;
     }

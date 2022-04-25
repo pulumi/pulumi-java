@@ -28,6 +28,10 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends c
     @Import(name="httpErrorRanges")
     private @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges;
 
+    /**
+     * @return The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
+     * 
+     */
     public Optional<List<HttpErrorRangeParametersResponse>> httpErrorRanges() {
         return Optional.ofNullable(this.httpErrorRanges);
     }
@@ -39,6 +43,10 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends c
     @Import(name="responseBasedDetectedErrorTypes")
     private @Nullable String responseBasedDetectedErrorTypes;
 
+    /**
+     * @return Type of response errors for real user requests for which origin will be deemed unhealthy
+     * 
+     */
     public Optional<String> responseBasedDetectedErrorTypes() {
         return Optional.ofNullable(this.responseBasedDetectedErrorTypes);
     }
@@ -50,6 +58,10 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends c
     @Import(name="responseBasedFailoverThresholdPercentage")
     private @Nullable Integer responseBasedFailoverThresholdPercentage;
 
+    /**
+     * @return The percentage of failed requests in the sample where failover should trigger.
+     * 
+     */
     public Optional<Integer> responseBasedFailoverThresholdPercentage() {
         return Optional.ofNullable(this.responseBasedFailoverThresholdPercentage);
     }
@@ -80,20 +92,44 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends c
             $ = new ResponseBasedOriginErrorDetectionParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpErrorRanges The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpErrorRanges(@Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges) {
             $.httpErrorRanges = httpErrorRanges;
             return this;
         }
 
+        /**
+         * @param httpErrorRanges The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpErrorRanges(HttpErrorRangeParametersResponse... httpErrorRanges) {
             return httpErrorRanges(List.of(httpErrorRanges));
         }
 
+        /**
+         * @param responseBasedDetectedErrorTypes Type of response errors for real user requests for which origin will be deemed unhealthy
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBasedDetectedErrorTypes(@Nullable String responseBasedDetectedErrorTypes) {
             $.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
             return this;
         }
 
+        /**
+         * @param responseBasedFailoverThresholdPercentage The percentage of failed requests in the sample where failover should trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBasedFailoverThresholdPercentage(@Nullable Integer responseBasedFailoverThresholdPercentage) {
             $.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
             return this;

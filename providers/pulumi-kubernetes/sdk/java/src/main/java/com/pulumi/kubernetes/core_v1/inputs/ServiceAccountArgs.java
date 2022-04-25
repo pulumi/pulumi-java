@@ -32,6 +32,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -43,6 +47,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="automountServiceAccountToken")
     private @Nullable Output<Boolean> automountServiceAccountToken;
 
+    /**
+     * @return AutomountServiceAccountToken indicates whether pods running as this service account should have an API token automatically mounted. Can be overridden at the pod level.
+     * 
+     */
     public Optional<Output<Boolean>> automountServiceAccountToken() {
         return Optional.ofNullable(this.automountServiceAccountToken);
     }
@@ -54,6 +62,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="imagePullSecrets")
     private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
+    /**
+     * @return ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
+     * 
+     */
     public Optional<Output<List<LocalObjectReferenceArgs>>> imagePullSecrets() {
         return Optional.ofNullable(this.imagePullSecrets);
     }
@@ -65,6 +77,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -76,6 +92,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="metadata")
     private @Nullable Output<ObjectMetaArgs> metadata;
 
+    /**
+     * @return Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Optional<Output<ObjectMetaArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -87,6 +107,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secrets")
     private @Nullable Output<List<ObjectReferenceArgs>> secrets;
 
+    /**
+     * @return Secrets is the list of secrets allowed to be used by pods running using this ServiceAccount. More info: https://kubernetes.io/docs/concepts/configuration/secret
+     * 
+     */
     public Optional<Output<List<ObjectReferenceArgs>>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -120,64 +144,148 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param automountServiceAccountToken AutomountServiceAccountToken indicates whether pods running as this service account should have an API token automatically mounted. Can be overridden at the pod level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
             $.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
 
+        /**
+         * @param automountServiceAccountToken AutomountServiceAccountToken indicates whether pods running as this service account should have an API token automatically mounted. Can be overridden at the pod level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automountServiceAccountToken(Boolean automountServiceAccountToken) {
             return automountServiceAccountToken(Output.of(automountServiceAccountToken));
         }
 
+        /**
+         * @param imagePullSecrets ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             $.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
+        /**
+         * @param imagePullSecrets ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecrets(List<LocalObjectReferenceArgs> imagePullSecrets) {
             return imagePullSecrets(Output.of(imagePullSecrets));
         }
 
+        /**
+         * @param imagePullSecrets ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
             return imagePullSecrets(List.of(imagePullSecrets));
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param metadata Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ObjectMetaArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param secrets Secrets is the list of secrets allowed to be used by pods running using this ServiceAccount. More info: https://kubernetes.io/docs/concepts/configuration/secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable Output<List<ObjectReferenceArgs>> secrets) {
             $.secrets = secrets;
             return this;
         }
 
+        /**
+         * @param secrets Secrets is the list of secrets allowed to be used by pods running using this ServiceAccount. More info: https://kubernetes.io/docs/concepts/configuration/secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(List<ObjectReferenceArgs> secrets) {
             return secrets(Output.of(secrets));
         }
 
+        /**
+         * @param secrets Secrets is the list of secrets allowed to be used by pods running using this ServiceAccount. More info: https://kubernetes.io/docs/concepts/configuration/secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(ObjectReferenceArgs... secrets) {
             return secrets(List.of(secrets));
         }

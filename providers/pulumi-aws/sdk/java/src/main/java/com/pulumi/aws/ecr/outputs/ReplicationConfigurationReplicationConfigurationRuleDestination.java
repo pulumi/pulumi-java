@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ReplicationConfigurationReplicationConfigurationRuleDestination {
     /**
-     * A Region to replicate to.
+     * @return A Region to replicate to.
      * 
      */
     private final String region;
     /**
-     * The account ID of the destination registry to replicate to.
+     * @return The account ID of the destination registry to replicate to.
      * 
      */
     private final String registryId;
@@ -29,16 +29,16 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
     }
 
     /**
-     * A Region to replicate to.
+     * @return A Region to replicate to.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The account ID of the destination registry to replicate to.
+     * @return The account ID of the destination registry to replicate to.
      * 
-    */
+     */
     public String registryId() {
         return this.registryId;
     }

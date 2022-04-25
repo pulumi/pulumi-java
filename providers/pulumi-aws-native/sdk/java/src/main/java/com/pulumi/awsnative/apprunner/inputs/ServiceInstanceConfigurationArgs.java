@@ -26,6 +26,10 @@ public final class ServiceInstanceConfigurationArgs extends com.pulumi.resources
     @Import(name="cpu")
     private @Nullable Output<String> cpu;
 
+    /**
+     * @return CPU
+     * 
+     */
     public Optional<Output<String>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -37,6 +41,10 @@ public final class ServiceInstanceConfigurationArgs extends com.pulumi.resources
     @Import(name="instanceRoleArn")
     private @Nullable Output<String> instanceRoleArn;
 
+    /**
+     * @return Instance Role Arn
+     * 
+     */
     public Optional<Output<String>> instanceRoleArn() {
         return Optional.ofNullable(this.instanceRoleArn);
     }
@@ -48,6 +56,10 @@ public final class ServiceInstanceConfigurationArgs extends com.pulumi.resources
     @Import(name="memory")
     private @Nullable Output<String> memory;
 
+    /**
+     * @return Memory
+     * 
+     */
     public Optional<Output<String>> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -78,29 +90,65 @@ public final class ServiceInstanceConfigurationArgs extends com.pulumi.resources
             $ = new ServiceInstanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu CPU
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<String> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu CPU
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(String cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param instanceRoleArn Instance Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRoleArn(@Nullable Output<String> instanceRoleArn) {
             $.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
+        /**
+         * @param instanceRoleArn Instance Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRoleArn(String instanceRoleArn) {
             return instanceRoleArn(Output.of(instanceRoleArn));
         }
 
+        /**
+         * @param memory Memory
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable Output<String> memory) {
             $.memory = memory;
             return this;
         }
 
+        /**
+         * @param memory Memory
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(String memory) {
             return memory(Output.of(memory));
         }

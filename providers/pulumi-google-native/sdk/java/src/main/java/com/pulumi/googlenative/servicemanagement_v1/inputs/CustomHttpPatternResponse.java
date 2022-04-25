@@ -23,6 +23,10 @@ public final class CustomHttpPatternResponse extends com.pulumi.resources.Invoke
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The name of this custom HTTP verb.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -34,6 +38,10 @@ public final class CustomHttpPatternResponse extends com.pulumi.resources.Invoke
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The path matched by this custom verb.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -63,11 +71,23 @@ public final class CustomHttpPatternResponse extends com.pulumi.resources.Invoke
             $ = new CustomHttpPatternResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The name of this custom HTTP verb.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param path The path matched by this custom verb.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

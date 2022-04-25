@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class ZypperSettingsResponse {
     /**
-     * Install only patches with these categories. Common categories include security, recommended, and feature.
+     * @return Install only patches with these categories. Common categories include security, recommended, and feature.
      * 
      */
     private final List<String> categories;
     /**
-     * List of patches to exclude from update.
+     * @return List of patches to exclude from update.
      * 
      */
     private final List<String> excludes;
     /**
-     * An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
+     * @return An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
      * 
      */
     private final List<String> exclusivePatches;
     /**
-     * Install only patches with these severities. Common severities include critical, important, moderate, and low.
+     * @return Install only patches with these severities. Common severities include critical, important, moderate, and low.
      * 
      */
     private final List<String> severities;
     /**
-     * Adds the `--with-optional` flag to `zypper patch`.
+     * @return Adds the `--with-optional` flag to `zypper patch`.
      * 
      */
     private final Boolean withOptional;
     /**
-     * Adds the `--with-update` flag, to `zypper patch`.
+     * @return Adds the `--with-update` flag, to `zypper patch`.
      * 
      */
     private final Boolean withUpdate;
@@ -59,44 +59,44 @@ public final class ZypperSettingsResponse {
     }
 
     /**
-     * Install only patches with these categories. Common categories include security, recommended, and feature.
+     * @return Install only patches with these categories. Common categories include security, recommended, and feature.
      * 
-    */
+     */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * List of patches to exclude from update.
+     * @return List of patches to exclude from update.
      * 
-    */
+     */
     public List<String> excludes() {
         return this.excludes;
     }
     /**
-     * An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
+     * @return An exclusive list of patches to be updated. These are the only patches that will be installed using &#39;zypper patch patch:&#39; command. This field must not be used with any other patch configuration fields.
      * 
-    */
+     */
     public List<String> exclusivePatches() {
         return this.exclusivePatches;
     }
     /**
-     * Install only patches with these severities. Common severities include critical, important, moderate, and low.
+     * @return Install only patches with these severities. Common severities include critical, important, moderate, and low.
      * 
-    */
+     */
     public List<String> severities() {
         return this.severities;
     }
     /**
-     * Adds the `--with-optional` flag to `zypper patch`.
+     * @return Adds the `--with-optional` flag to `zypper patch`.
      * 
-    */
+     */
     public Boolean withOptional() {
         return this.withOptional;
     }
     /**
-     * Adds the `--with-update` flag, to `zypper patch`.
+     * @return Adds the `--with-update` flag, to `zypper patch`.
      * 
-    */
+     */
     public Boolean withUpdate() {
         return this.withUpdate;
     }

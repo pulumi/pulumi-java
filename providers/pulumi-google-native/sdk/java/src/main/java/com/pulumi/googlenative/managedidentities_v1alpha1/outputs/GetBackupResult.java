@@ -11,37 +11,37 @@ import java.util.Objects;
 @CustomType
 public final class GetBackupResult {
     /**
-     * The time the backups was created.
+     * @return The time the backups was created.
      * 
      */
     private final String createTime;
     /**
-     * Optional. Resource labels to represent user provided metadata.
+     * @return Optional. Resource labels to represent user provided metadata.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
+     * @return The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
      * 
      */
     private final String name;
     /**
-     * The current state of the backup.
+     * @return The current state of the backup.
      * 
      */
     private final String state;
     /**
-     * Additional information about the current status of this backup, if available.
+     * @return Additional information about the current status of this backup, if available.
      * 
      */
     private final String statusMessage;
     /**
-     * Indicates whether it’s an on-demand backup or scheduled.
+     * @return Indicates whether it’s an on-demand backup or scheduled.
      * 
      */
     private final String type;
     /**
-     * Last update time.
+     * @return Last update time.
      * 
      */
     private final String updateTime;
@@ -65,51 +65,51 @@ public final class GetBackupResult {
     }
 
     /**
-     * The time the backups was created.
+     * @return The time the backups was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Optional. Resource labels to represent user provided metadata.
+     * @return Optional. Resource labels to represent user provided metadata.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
+     * @return The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current state of the backup.
+     * @return The current state of the backup.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Additional information about the current status of this backup, if available.
+     * @return Additional information about the current status of this backup, if available.
      * 
-    */
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
     /**
-     * Indicates whether it’s an on-demand backup or scheduled.
+     * @return Indicates whether it’s an on-demand backup or scheduled.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Last update time.
+     * @return Last update time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

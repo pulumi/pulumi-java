@@ -27,6 +27,10 @@ public final class CompensationInfoArgs extends com.pulumi.resources.ResourceArg
     @Import(name="entries")
     private @Nullable Output<List<CompensationEntryArgs>> entries;
 
+    /**
+     * @return Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
+     * 
+     */
     public Optional<Output<List<CompensationEntryArgs>>> entries() {
         return Optional.ofNullable(this.entries);
     }
@@ -55,15 +59,33 @@ public final class CompensationInfoArgs extends com.pulumi.resources.ResourceArg
             $ = new CompensationInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entries Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(@Nullable Output<List<CompensationEntryArgs>> entries) {
             $.entries = entries;
             return this;
         }
 
+        /**
+         * @param entries Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(List<CompensationEntryArgs> entries) {
             return entries(Output.of(entries));
         }
 
+        /**
+         * @param entries Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entries(CompensationEntryArgs... entries) {
             return entries(List.of(entries));
         }

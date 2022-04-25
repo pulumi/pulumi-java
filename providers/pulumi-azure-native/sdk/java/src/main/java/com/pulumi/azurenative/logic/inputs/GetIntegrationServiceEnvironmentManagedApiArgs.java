@@ -19,6 +19,10 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
     @Import(name="apiName", required=true)
     private String apiName;
 
+    /**
+     * @return The api name.
+     * 
+     */
     public String apiName() {
         return this.apiName;
     }
@@ -30,6 +34,10 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
     @Import(name="integrationServiceEnvironmentName", required=true)
     private String integrationServiceEnvironmentName;
 
+    /**
+     * @return The integration service environment name.
+     * 
+     */
     public String integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
@@ -41,6 +49,10 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
     @Import(name="resourceGroup", required=true)
     private String resourceGroup;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
@@ -71,16 +83,34 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
             $ = new GetIntegrationServiceEnvironmentManagedApiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiName The api name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiName(String apiName) {
             $.apiName = apiName;
             return this;
         }
 
+        /**
+         * @param integrationServiceEnvironmentName The integration service environment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
             $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
 
+        /**
+         * @param resourceGroup The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

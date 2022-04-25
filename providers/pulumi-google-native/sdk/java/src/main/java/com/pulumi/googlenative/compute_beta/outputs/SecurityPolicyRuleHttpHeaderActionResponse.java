@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class SecurityPolicyRuleHttpHeaderActionResponse {
     /**
-     * The list of request headers to add or overwrite if they&#39;re already present.
+     * @return The list of request headers to add or overwrite if they&#39;re already present.
      * 
      */
     private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
@@ -22,9 +22,9 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
     }
 
     /**
-     * The list of request headers to add or overwrite if they&#39;re already present.
+     * @return The list of request headers to add or overwrite if they&#39;re already present.
      * 
-    */
+     */
     public List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds() {
         return this.requestHeadersToAdds;
     }

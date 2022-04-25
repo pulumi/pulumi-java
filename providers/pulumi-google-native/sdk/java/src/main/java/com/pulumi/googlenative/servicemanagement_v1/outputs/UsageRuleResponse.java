@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class UsageRuleResponse {
     /**
-     * If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
+     * @return If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
      * 
      */
     private final Boolean allowUnregisteredCalls;
     /**
-     * Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+     * @return Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
      */
     private final String selector;
     /**
-     * If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
+     * @return If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
      * 
      */
     private final Boolean skipServiceControl;
@@ -37,23 +37,23 @@ public final class UsageRuleResponse {
     }
 
     /**
-     * If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
+     * @return If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
      * 
-    */
+     */
     public Boolean allowUnregisteredCalls() {
         return this.allowUnregisteredCalls;
     }
     /**
-     * Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+     * @return Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
-    */
+     */
     public String selector() {
         return this.selector;
     }
     /**
-     * If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
+     * @return If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
      * 
-    */
+     */
     public Boolean skipServiceControl() {
         return this.skipServiceControl;
     }

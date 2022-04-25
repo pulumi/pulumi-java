@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 public final class MonitoringScheduleMonitoringJobDefinition {
     private final @Nullable MonitoringScheduleBaselineConfig baselineConfig;
     /**
-     * Sets the environment variables in the Docker container
+     * @return Sets the environment variables in the Docker container
      * 
      */
     private final @Nullable Object environment;
@@ -32,7 +32,7 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     private final MonitoringScheduleMonitoringResources monitoringResources;
     private final @Nullable MonitoringScheduleNetworkConfig networkConfig;
     /**
-     * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
     private final String roleArn;
@@ -64,9 +64,9 @@ public final class MonitoringScheduleMonitoringJobDefinition {
         return Optional.ofNullable(this.baselineConfig);
     }
     /**
-     * Sets the environment variables in the Docker container
+     * @return Sets the environment variables in the Docker container
      * 
-    */
+     */
     public Optional<Object> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -86,9 +86,9 @@ public final class MonitoringScheduleMonitoringJobDefinition {
         return Optional.ofNullable(this.networkConfig);
     }
     /**
-     * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
+     * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

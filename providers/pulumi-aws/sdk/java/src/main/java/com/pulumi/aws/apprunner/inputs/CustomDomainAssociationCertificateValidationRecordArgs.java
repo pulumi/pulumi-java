@@ -22,6 +22,10 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The certificate CNAME record name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -44,6 +52,10 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The record type, always `CNAME`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -55,6 +67,10 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The certificate CNAME record value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -86,38 +102,86 @@ public final class CustomDomainAssociationCertificateValidationRecordArgs extend
             $ = new CustomDomainAssociationCertificateValidationRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The certificate CNAME record name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The certificate CNAME record name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param status The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param type The record type, always `CNAME`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The record type, always `CNAME`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value The certificate CNAME record value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The certificate CNAME record value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -25,6 +25,10 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends com.pulumi.
     @Import(name="failureAction")
     private @Nullable String failureAction;
 
+    /**
+     * @return The activation Mode of the service package
+     * 
+     */
     public Optional<String> failureAction() {
         return Optional.ofNullable(this.failureAction);
     }
@@ -36,6 +40,10 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends com.pulumi.
     @Import(name="healthCheckRetryTimeout")
     private @Nullable String healthCheckRetryTimeout;
 
+    /**
+     * @return The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     * 
+     */
     public Optional<String> healthCheckRetryTimeout() {
         return Optional.ofNullable(this.healthCheckRetryTimeout);
     }
@@ -47,6 +55,10 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends com.pulumi.
     @Import(name="healthCheckStableDuration")
     private @Nullable String healthCheckStableDuration;
 
+    /**
+     * @return The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     * 
+     */
     public Optional<String> healthCheckStableDuration() {
         return Optional.ofNullable(this.healthCheckStableDuration);
     }
@@ -58,6 +70,10 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends com.pulumi.
     @Import(name="healthCheckWaitDuration")
     private @Nullable String healthCheckWaitDuration;
 
+    /**
+     * @return The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     * 
+     */
     public Optional<String> healthCheckWaitDuration() {
         return Optional.ofNullable(this.healthCheckWaitDuration);
     }
@@ -69,6 +85,10 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends com.pulumi.
     @Import(name="upgradeDomainTimeout")
     private @Nullable String upgradeDomainTimeout;
 
+    /**
+     * @return The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     * 
+     */
     public Optional<String> upgradeDomainTimeout() {
         return Optional.ofNullable(this.upgradeDomainTimeout);
     }
@@ -80,6 +100,10 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends com.pulumi.
     @Import(name="upgradeTimeout")
     private @Nullable String upgradeTimeout;
 
+    /**
+     * @return The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     * 
+     */
     public Optional<String> upgradeTimeout() {
         return Optional.ofNullable(this.upgradeTimeout);
     }
@@ -113,31 +137,67 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse extends com.pulumi.
             $ = new ArmRollingUpgradeMonitoringPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureAction The activation Mode of the service package
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureAction(@Nullable String failureAction) {
             $.failureAction = failureAction;
             return this;
         }
 
+        /**
+         * @param healthCheckRetryTimeout The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
             $.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;
         }
 
+        /**
+         * @param healthCheckStableDuration The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckStableDuration(@Nullable String healthCheckStableDuration) {
             $.healthCheckStableDuration = healthCheckStableDuration;
             return this;
         }
 
+        /**
+         * @param healthCheckWaitDuration The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
             $.healthCheckWaitDuration = healthCheckWaitDuration;
             return this;
         }
 
+        /**
+         * @param upgradeDomainTimeout The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
             $.upgradeDomainTimeout = upgradeDomainTimeout;
             return this;
         }
 
+        /**
+         * @param upgradeTimeout The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeTimeout(@Nullable String upgradeTimeout) {
             $.upgradeTimeout = upgradeTimeout;
             return this;

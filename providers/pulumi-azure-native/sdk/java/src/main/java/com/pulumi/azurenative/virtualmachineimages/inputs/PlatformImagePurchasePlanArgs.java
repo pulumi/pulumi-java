@@ -24,6 +24,10 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
     @Import(name="planName", required=true)
     private Output<String> planName;
 
+    /**
+     * @return Name of the purchase plan.
+     * 
+     */
     public Output<String> planName() {
         return this.planName;
     }
@@ -35,6 +39,10 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
     @Import(name="planProduct", required=true)
     private Output<String> planProduct;
 
+    /**
+     * @return Product of the purchase plan.
+     * 
+     */
     public Output<String> planProduct() {
         return this.planProduct;
     }
@@ -46,6 +54,10 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
     @Import(name="planPublisher", required=true)
     private Output<String> planPublisher;
 
+    /**
+     * @return Publisher of the purchase plan.
+     * 
+     */
     public Output<String> planPublisher() {
         return this.planPublisher;
     }
@@ -76,29 +88,65 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
             $ = new PlatformImagePurchasePlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param planName Name of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planName(Output<String> planName) {
             $.planName = planName;
             return this;
         }
 
+        /**
+         * @param planName Name of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planName(String planName) {
             return planName(Output.of(planName));
         }
 
+        /**
+         * @param planProduct Product of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planProduct(Output<String> planProduct) {
             $.planProduct = planProduct;
             return this;
         }
 
+        /**
+         * @param planProduct Product of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planProduct(String planProduct) {
             return planProduct(Output.of(planProduct));
         }
 
+        /**
+         * @param planPublisher Publisher of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planPublisher(Output<String> planPublisher) {
             $.planPublisher = planPublisher;
             return this;
         }
 
+        /**
+         * @param planPublisher Publisher of the purchase plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planPublisher(String planPublisher) {
             return planPublisher(Output.of(planPublisher));
         }

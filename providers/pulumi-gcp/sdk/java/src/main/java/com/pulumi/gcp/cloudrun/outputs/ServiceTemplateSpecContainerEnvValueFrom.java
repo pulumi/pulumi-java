@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ServiceTemplateSpecContainerEnvValueFrom {
     /**
-     * Selects a key (version) of a secret in Secret Manager.
+     * @return Selects a key (version) of a secret in Secret Manager.
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
     }
 
     /**
-     * Selects a key (version) of a secret in Secret Manager.
+     * @return Selects a key (version) of a secret in Secret Manager.
      * Structure is documented below.
      * 
-    */
+     */
     public ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef() {
         return this.secretKeyRef;
     }

@@ -19,6 +19,10 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return The name of the Traffic Manager profile.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -30,6 +34,10 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Traffic Manager profile.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileName The name of the Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

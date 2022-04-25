@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetConfigurationResult {
     /**
-     * Allowed values of the configuration.
+     * @return Allowed values of the configuration.
      * 
      */
     private final String allowedValues;
     /**
-     * Data type of the configuration.
+     * @return Data type of the configuration.
      * 
      */
     private final String dataType;
     /**
-     * Default value of the configuration.
+     * @return Default value of the configuration.
      * 
      */
     private final String defaultValue;
     /**
-     * Description of the configuration.
+     * @return Description of the configuration.
      * 
      */
     private final String description;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Source of the configuration.
+     * @return Source of the configuration.
      * 
      */
     private final @Nullable String source;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * Value of the configuration.
+     * @return Value of the configuration.
      * 
      */
     private final @Nullable String value;
@@ -80,65 +80,65 @@ public final class GetConfigurationResult {
     }
 
     /**
-     * Allowed values of the configuration.
+     * @return Allowed values of the configuration.
      * 
-    */
+     */
     public String allowedValues() {
         return this.allowedValues;
     }
     /**
-     * Data type of the configuration.
+     * @return Data type of the configuration.
      * 
-    */
+     */
     public String dataType() {
         return this.dataType;
     }
     /**
-     * Default value of the configuration.
+     * @return Default value of the configuration.
      * 
-    */
+     */
     public String defaultValue() {
         return this.defaultValue;
     }
     /**
-     * Description of the configuration.
+     * @return Description of the configuration.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Source of the configuration.
+     * @return Source of the configuration.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value of the configuration.
+     * @return Value of the configuration.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

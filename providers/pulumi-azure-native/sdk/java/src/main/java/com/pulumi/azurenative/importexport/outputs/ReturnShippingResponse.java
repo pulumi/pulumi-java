@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ReturnShippingResponse {
     /**
-     * The customer&#39;s account number with the carrier.
+     * @return The customer&#39;s account number with the carrier.
      * 
      */
     private final String carrierAccountNumber;
     /**
-     * The carrier&#39;s name.
+     * @return The carrier&#39;s name.
      * 
      */
     private final String carrierName;
@@ -29,16 +29,16 @@ public final class ReturnShippingResponse {
     }
 
     /**
-     * The customer&#39;s account number with the carrier.
+     * @return The customer&#39;s account number with the carrier.
      * 
-    */
+     */
     public String carrierAccountNumber() {
         return this.carrierAccountNumber;
     }
     /**
-     * The carrier&#39;s name.
+     * @return The carrier&#39;s name.
      * 
-    */
+     */
     public String carrierName() {
         return this.carrierName;
     }

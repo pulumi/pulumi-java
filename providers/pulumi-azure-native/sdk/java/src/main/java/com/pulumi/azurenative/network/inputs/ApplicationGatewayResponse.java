@@ -53,6 +53,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="authenticationCertificates")
     private @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates;
 
+    /**
+     * @return Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayAuthenticationCertificateResponse>> authenticationCertificates() {
         return Optional.ofNullable(this.authenticationCertificates);
     }
@@ -64,6 +68,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="autoscaleConfiguration")
     private @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration;
 
+    /**
+     * @return Autoscale Configuration.
+     * 
+     */
     public Optional<ApplicationGatewayAutoscaleConfigurationResponse> autoscaleConfiguration() {
         return Optional.ofNullable(this.autoscaleConfiguration);
     }
@@ -75,6 +83,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="backendAddressPools")
     private @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools;
 
+    /**
+     * @return Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayBackendAddressPoolResponse>> backendAddressPools() {
         return Optional.ofNullable(this.backendAddressPools);
     }
@@ -86,6 +98,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="backendHttpSettingsCollection")
     private @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection;
 
+    /**
+     * @return Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayBackendHttpSettingsResponse>> backendHttpSettingsCollection() {
         return Optional.ofNullable(this.backendHttpSettingsCollection);
     }
@@ -97,6 +113,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="customErrorConfigurations")
     private @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
+    /**
+     * @return Custom error configurations of the application gateway resource.
+     * 
+     */
     public Optional<List<ApplicationGatewayCustomErrorResponse>> customErrorConfigurations() {
         return Optional.ofNullable(this.customErrorConfigurations);
     }
@@ -108,6 +128,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="enableFips")
     private @Nullable Boolean enableFips;
 
+    /**
+     * @return Whether FIPS is enabled on the application gateway resource.
+     * 
+     */
     public Optional<Boolean> enableFips() {
         return Optional.ofNullable(this.enableFips);
     }
@@ -119,6 +143,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="enableHttp2")
     private @Nullable Boolean enableHttp2;
 
+    /**
+     * @return Whether HTTP2 is enabled on the application gateway resource.
+     * 
+     */
     public Optional<Boolean> enableHttp2() {
         return Optional.ofNullable(this.enableHttp2);
     }
@@ -130,6 +158,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -141,6 +173,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="firewallPolicy")
     private @Nullable SubResourceResponse firewallPolicy;
 
+    /**
+     * @return Reference to the FirewallPolicy resource.
+     * 
+     */
     public Optional<SubResourceResponse> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
@@ -152,6 +188,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="forceFirewallPolicyAssociation")
     private @Nullable Boolean forceFirewallPolicyAssociation;
 
+    /**
+     * @return If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
+     * 
+     */
     public Optional<Boolean> forceFirewallPolicyAssociation() {
         return Optional.ofNullable(this.forceFirewallPolicyAssociation);
     }
@@ -163,6 +203,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="frontendIPConfigurations")
     private @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations;
 
+    /**
+     * @return Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayFrontendIPConfigurationResponse>> frontendIPConfigurations() {
         return Optional.ofNullable(this.frontendIPConfigurations);
     }
@@ -174,6 +218,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="frontendPorts")
     private @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts;
 
+    /**
+     * @return Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayFrontendPortResponse>> frontendPorts() {
         return Optional.ofNullable(this.frontendPorts);
     }
@@ -185,6 +233,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="gatewayIPConfigurations")
     private @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations;
 
+    /**
+     * @return Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayIPConfigurationResponse>> gatewayIPConfigurations() {
         return Optional.ofNullable(this.gatewayIPConfigurations);
     }
@@ -196,6 +248,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="httpListeners")
     private @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners;
 
+    /**
+     * @return Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayHttpListenerResponse>> httpListeners() {
         return Optional.ofNullable(this.httpListeners);
     }
@@ -207,6 +263,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -218,6 +278,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="identity")
     private @Nullable ManagedServiceIdentityResponse identity;
 
+    /**
+     * @return The identity of the application gateway, if configured.
+     * 
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -229,6 +293,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -240,6 +308,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -251,6 +323,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="operationalState", required=true)
     private String operationalState;
 
+    /**
+     * @return Operational state of the application gateway resource.
+     * 
+     */
     public String operationalState() {
         return this.operationalState;
     }
@@ -262,6 +338,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="privateEndpointConnections", required=true)
     private List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections;
 
+    /**
+     * @return Private Endpoint connections on application gateway.
+     * 
+     */
     public List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
@@ -273,6 +353,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="privateLinkConfigurations")
     private @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations;
 
+    /**
+     * @return PrivateLink configurations on application gateway.
+     * 
+     */
     public Optional<List<ApplicationGatewayPrivateLinkConfigurationResponse>> privateLinkConfigurations() {
         return Optional.ofNullable(this.privateLinkConfigurations);
     }
@@ -284,6 +368,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="probes")
     private @Nullable List<ApplicationGatewayProbeResponse> probes;
 
+    /**
+     * @return Probes of the application gateway resource.
+     * 
+     */
     public Optional<List<ApplicationGatewayProbeResponse>> probes() {
         return Optional.ofNullable(this.probes);
     }
@@ -295,6 +383,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the application gateway resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -306,6 +398,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="redirectConfigurations")
     private @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations;
 
+    /**
+     * @return Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayRedirectConfigurationResponse>> redirectConfigurations() {
         return Optional.ofNullable(this.redirectConfigurations);
     }
@@ -317,6 +413,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="requestRoutingRules")
     private @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules;
 
+    /**
+     * @return Request routing rules of the application gateway resource.
+     * 
+     */
     public Optional<List<ApplicationGatewayRequestRoutingRuleResponse>> requestRoutingRules() {
         return Optional.ofNullable(this.requestRoutingRules);
     }
@@ -328,6 +428,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="resourceGuid", required=true)
     private String resourceGuid;
 
+    /**
+     * @return The resource GUID property of the application gateway resource.
+     * 
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
@@ -339,6 +443,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="rewriteRuleSets")
     private @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets;
 
+    /**
+     * @return Rewrite rules for the application gateway resource.
+     * 
+     */
     public Optional<List<ApplicationGatewayRewriteRuleSetResponse>> rewriteRuleSets() {
         return Optional.ofNullable(this.rewriteRuleSets);
     }
@@ -350,6 +458,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="sku")
     private @Nullable ApplicationGatewaySkuResponse sku;
 
+    /**
+     * @return SKU of the application gateway resource.
+     * 
+     */
     public Optional<ApplicationGatewaySkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -361,6 +473,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="sslCertificates")
     private @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates;
 
+    /**
+     * @return SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewaySslCertificateResponse>> sslCertificates() {
         return Optional.ofNullable(this.sslCertificates);
     }
@@ -372,6 +488,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="sslPolicy")
     private @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
 
+    /**
+     * @return SSL policy of the application gateway resource.
+     * 
+     */
     public Optional<ApplicationGatewaySslPolicyResponse> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
@@ -383,6 +503,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="sslProfiles")
     private @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles;
 
+    /**
+     * @return SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewaySslProfileResponse>> sslProfiles() {
         return Optional.ofNullable(this.sslProfiles);
     }
@@ -394,6 +518,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -405,6 +533,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="trustedClientCertificates")
     private @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates;
 
+    /**
+     * @return Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayTrustedClientCertificateResponse>> trustedClientCertificates() {
         return Optional.ofNullable(this.trustedClientCertificates);
     }
@@ -416,6 +548,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="trustedRootCertificates")
     private @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates;
 
+    /**
+     * @return Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayTrustedRootCertificateResponse>> trustedRootCertificates() {
         return Optional.ofNullable(this.trustedRootCertificates);
     }
@@ -427,6 +563,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -438,6 +578,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="urlPathMaps")
     private @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps;
 
+    /**
+     * @return URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+     * 
+     */
     public Optional<List<ApplicationGatewayUrlPathMapResponse>> urlPathMaps() {
         return Optional.ofNullable(this.urlPathMaps);
     }
@@ -449,6 +593,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="webApplicationFirewallConfiguration")
     private @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration;
 
+    /**
+     * @return Web application firewall configuration.
+     * 
+     */
     public Optional<ApplicationGatewayWebApplicationFirewallConfigurationResponse> webApplicationFirewallConfiguration() {
         return Optional.ofNullable(this.webApplicationFirewallConfiguration);
     }
@@ -460,6 +608,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
     @Import(name="zones")
     private @Nullable List<String> zones;
 
+    /**
+     * @return A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     public Optional<List<String>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -525,272 +677,620 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
             $ = new ApplicationGatewayResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationCertificates Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationCertificates(@Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates) {
             $.authenticationCertificates = authenticationCertificates;
             return this;
         }
 
+        /**
+         * @param authenticationCertificates Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationCertificates(ApplicationGatewayAuthenticationCertificateResponse... authenticationCertificates) {
             return authenticationCertificates(List.of(authenticationCertificates));
         }
 
+        /**
+         * @param autoscaleConfiguration Autoscale Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleConfiguration(@Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration) {
             $.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
 
+        /**
+         * @param backendAddressPools Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools) {
             $.backendAddressPools = backendAddressPools;
             return this;
         }
 
+        /**
+         * @param backendAddressPools Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(ApplicationGatewayBackendAddressPoolResponse... backendAddressPools) {
             return backendAddressPools(List.of(backendAddressPools));
         }
 
+        /**
+         * @param backendHttpSettingsCollection Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHttpSettingsCollection(@Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection) {
             $.backendHttpSettingsCollection = backendHttpSettingsCollection;
             return this;
         }
 
+        /**
+         * @param backendHttpSettingsCollection Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHttpSettingsCollection(ApplicationGatewayBackendHttpSettingsResponse... backendHttpSettingsCollection) {
             return backendHttpSettingsCollection(List.of(backendHttpSettingsCollection));
         }
 
+        /**
+         * @param customErrorConfigurations Custom error configurations of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations) {
             $.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
 
+        /**
+         * @param customErrorConfigurations Custom error configurations of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customErrorConfigurations(ApplicationGatewayCustomErrorResponse... customErrorConfigurations) {
             return customErrorConfigurations(List.of(customErrorConfigurations));
         }
 
+        /**
+         * @param enableFips Whether FIPS is enabled on the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFips(@Nullable Boolean enableFips) {
             $.enableFips = enableFips;
             return this;
         }
 
+        /**
+         * @param enableHttp2 Whether HTTP2 is enabled on the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttp2(@Nullable Boolean enableHttp2) {
             $.enableHttp2 = enableHttp2;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param firewallPolicy Reference to the FirewallPolicy resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
             $.firewallPolicy = firewallPolicy;
             return this;
         }
 
+        /**
+         * @param forceFirewallPolicyAssociation If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceFirewallPolicyAssociation(@Nullable Boolean forceFirewallPolicyAssociation) {
             $.forceFirewallPolicyAssociation = forceFirewallPolicyAssociation;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(@Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations) {
             $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(ApplicationGatewayFrontendIPConfigurationResponse... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
 
+        /**
+         * @param frontendPorts Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPorts(@Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts) {
             $.frontendPorts = frontendPorts;
             return this;
         }
 
+        /**
+         * @param frontendPorts Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPorts(ApplicationGatewayFrontendPortResponse... frontendPorts) {
             return frontendPorts(List.of(frontendPorts));
         }
 
+        /**
+         * @param gatewayIPConfigurations Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIPConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations) {
             $.gatewayIPConfigurations = gatewayIPConfigurations;
             return this;
         }
 
+        /**
+         * @param gatewayIPConfigurations Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIPConfigurations(ApplicationGatewayIPConfigurationResponse... gatewayIPConfigurations) {
             return gatewayIPConfigurations(List.of(gatewayIPConfigurations));
         }
 
+        /**
+         * @param httpListeners Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpListeners(@Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners) {
             $.httpListeners = httpListeners;
             return this;
         }
 
+        /**
+         * @param httpListeners Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpListeners(ApplicationGatewayHttpListenerResponse... httpListeners) {
             return httpListeners(List.of(httpListeners));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param identity The identity of the application gateway, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operationalState Operational state of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalState(String operationalState) {
             $.operationalState = operationalState;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections Private Endpoint connections on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections Private Endpoint connections on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(ApplicationGatewayPrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param privateLinkConfigurations PrivateLink configurations on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkConfigurations(@Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations) {
             $.privateLinkConfigurations = privateLinkConfigurations;
             return this;
         }
 
+        /**
+         * @param privateLinkConfigurations PrivateLink configurations on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkConfigurations(ApplicationGatewayPrivateLinkConfigurationResponse... privateLinkConfigurations) {
             return privateLinkConfigurations(List.of(privateLinkConfigurations));
         }
 
+        /**
+         * @param probes Probes of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probes(@Nullable List<ApplicationGatewayProbeResponse> probes) {
             $.probes = probes;
             return this;
         }
 
+        /**
+         * @param probes Probes of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probes(ApplicationGatewayProbeResponse... probes) {
             return probes(List.of(probes));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param redirectConfigurations Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectConfigurations(@Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations) {
             $.redirectConfigurations = redirectConfigurations;
             return this;
         }
 
+        /**
+         * @param redirectConfigurations Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectConfigurations(ApplicationGatewayRedirectConfigurationResponse... redirectConfigurations) {
             return redirectConfigurations(List.of(redirectConfigurations));
         }
 
+        /**
+         * @param requestRoutingRules Request routing rules of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestRoutingRules(@Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules) {
             $.requestRoutingRules = requestRoutingRules;
             return this;
         }
 
+        /**
+         * @param requestRoutingRules Request routing rules of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestRoutingRules(ApplicationGatewayRequestRoutingRuleResponse... requestRoutingRules) {
             return requestRoutingRules(List.of(requestRoutingRules));
         }
 
+        /**
+         * @param resourceGuid The resource GUID property of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuid(String resourceGuid) {
             $.resourceGuid = resourceGuid;
             return this;
         }
 
+        /**
+         * @param rewriteRuleSets Rewrite rules for the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRuleSets(@Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets) {
             $.rewriteRuleSets = rewriteRuleSets;
             return this;
         }
 
+        /**
+         * @param rewriteRuleSets Rewrite rules for the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRuleSets(ApplicationGatewayRewriteRuleSetResponse... rewriteRuleSets) {
             return rewriteRuleSets(List.of(rewriteRuleSets));
         }
 
+        /**
+         * @param sku SKU of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable ApplicationGatewaySkuResponse sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sslCertificates SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(@Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates) {
             $.sslCertificates = sslCertificates;
             return this;
         }
 
+        /**
+         * @param sslCertificates SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(ApplicationGatewaySslCertificateResponse... sslCertificates) {
             return sslCertificates(List.of(sslCertificates));
         }
 
+        /**
+         * @param sslPolicy SSL policy of the application gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyResponse sslPolicy) {
             $.sslPolicy = sslPolicy;
             return this;
         }
 
+        /**
+         * @param sslProfiles SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslProfiles(@Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles) {
             $.sslProfiles = sslProfiles;
             return this;
         }
 
+        /**
+         * @param sslProfiles SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslProfiles(ApplicationGatewaySslProfileResponse... sslProfiles) {
             return sslProfiles(List.of(sslProfiles));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param trustedClientCertificates Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedClientCertificates(@Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates) {
             $.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
 
+        /**
+         * @param trustedClientCertificates Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedClientCertificates(ApplicationGatewayTrustedClientCertificateResponse... trustedClientCertificates) {
             return trustedClientCertificates(List.of(trustedClientCertificates));
         }
 
+        /**
+         * @param trustedRootCertificates Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedRootCertificates(@Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates) {
             $.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
 
+        /**
+         * @param trustedRootCertificates Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedRootCertificates(ApplicationGatewayTrustedRootCertificateResponse... trustedRootCertificates) {
             return trustedRootCertificates(List.of(trustedRootCertificates));
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param urlPathMaps URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlPathMaps(@Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps) {
             $.urlPathMaps = urlPathMaps;
             return this;
         }
 
+        /**
+         * @param urlPathMaps URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlPathMaps(ApplicationGatewayUrlPathMapResponse... urlPathMaps) {
             return urlPathMaps(List.of(urlPathMaps));
         }
 
+        /**
+         * @param webApplicationFirewallConfiguration Web application firewall configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webApplicationFirewallConfiguration(@Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration) {
             $.webApplicationFirewallConfiguration = webApplicationFirewallConfiguration;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting where the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable List<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting where the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

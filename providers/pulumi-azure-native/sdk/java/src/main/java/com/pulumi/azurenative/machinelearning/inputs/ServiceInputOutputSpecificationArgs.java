@@ -29,6 +29,10 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the Swagger schema.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
     @Import(name="properties", required=true)
     private Output<Map<String,TableSpecificationArgs>> properties;
 
+    /**
+     * @return Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+     * 
+     */
     public Output<Map<String,TableSpecificationArgs>> properties() {
         return this.properties;
     }
@@ -51,6 +59,10 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return The title of your Swagger schema.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -62,6 +74,10 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the entity described in swagger. Always &#39;object&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -93,38 +109,86 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
             $ = new ServiceInputOutputSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the Swagger schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the Swagger schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param properties Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Map<String,TableSpecificationArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,TableSpecificationArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param title The title of your Swagger schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The title of your Swagger schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }
 
+        /**
+         * @param type The type of the entity described in swagger. Always &#39;object&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the entity described in swagger. Always &#39;object&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

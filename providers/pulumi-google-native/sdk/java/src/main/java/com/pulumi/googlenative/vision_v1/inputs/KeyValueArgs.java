@@ -26,6 +26,10 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -37,6 +41,10 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,20 +74,44 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

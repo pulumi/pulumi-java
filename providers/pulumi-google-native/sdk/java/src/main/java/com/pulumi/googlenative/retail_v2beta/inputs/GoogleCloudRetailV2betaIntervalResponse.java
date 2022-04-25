@@ -23,6 +23,10 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
     @Import(name="exclusiveMaximum", required=true)
     private Double exclusiveMaximum;
 
+    /**
+     * @return Exclusive upper bound.
+     * 
+     */
     public Double exclusiveMaximum() {
         return this.exclusiveMaximum;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
     @Import(name="exclusiveMinimum", required=true)
     private Double exclusiveMinimum;
 
+    /**
+     * @return Exclusive lower bound.
+     * 
+     */
     public Double exclusiveMinimum() {
         return this.exclusiveMinimum;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
     @Import(name="maximum", required=true)
     private Double maximum;
 
+    /**
+     * @return Inclusive upper bound.
+     * 
+     */
     public Double maximum() {
         return this.maximum;
     }
@@ -56,6 +68,10 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
     @Import(name="minimum", required=true)
     private Double minimum;
 
+    /**
+     * @return Inclusive lower bound.
+     * 
+     */
     public Double minimum() {
         return this.minimum;
     }
@@ -87,21 +103,45 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
             $ = new GoogleCloudRetailV2betaIntervalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclusiveMaximum Exclusive upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusiveMaximum(Double exclusiveMaximum) {
             $.exclusiveMaximum = exclusiveMaximum;
             return this;
         }
 
+        /**
+         * @param exclusiveMinimum Exclusive lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusiveMinimum(Double exclusiveMinimum) {
             $.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
 
+        /**
+         * @param maximum Inclusive upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(Double maximum) {
             $.maximum = maximum;
             return this;
         }
 
+        /**
+         * @param minimum Inclusive lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(Double minimum) {
             $.minimum = minimum;
             return this;

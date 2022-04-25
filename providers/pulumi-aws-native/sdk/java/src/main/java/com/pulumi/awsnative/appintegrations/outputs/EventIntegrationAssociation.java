@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventIntegrationAssociation {
     /**
-     * The metadata associated with the client.
+     * @return The metadata associated with the client.
      * 
      */
     private final @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
     /**
-     * The identifier for the client that is associated with the event integration.
+     * @return The identifier for the client that is associated with the event integration.
      * 
      */
     private final @Nullable String clientId;
     /**
-     * The name of the Eventbridge rule.
+     * @return The name of the Eventbridge rule.
      * 
      */
     private final @Nullable String eventBridgeRuleName;
     /**
-     * The Amazon Resource Name (ARN) for the event integration association.
+     * @return The Amazon Resource Name (ARN) for the event integration association.
      * 
      */
     private final @Nullable String eventIntegrationAssociationArn;
     /**
-     * The identifier for the event integration association.
+     * @return The identifier for the event integration association.
      * 
      */
     private final @Nullable String eventIntegrationAssociationId;
@@ -54,37 +54,37 @@ public final class EventIntegrationAssociation {
     }
 
     /**
-     * The metadata associated with the client.
+     * @return The metadata associated with the client.
      * 
-    */
+     */
     public List<EventIntegrationMetadata> clientAssociationMetadata() {
         return this.clientAssociationMetadata == null ? List.of() : this.clientAssociationMetadata;
     }
     /**
-     * The identifier for the client that is associated with the event integration.
+     * @return The identifier for the client that is associated with the event integration.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The name of the Eventbridge rule.
+     * @return The name of the Eventbridge rule.
      * 
-    */
+     */
     public Optional<String> eventBridgeRuleName() {
         return Optional.ofNullable(this.eventBridgeRuleName);
     }
     /**
-     * The Amazon Resource Name (ARN) for the event integration association.
+     * @return The Amazon Resource Name (ARN) for the event integration association.
      * 
-    */
+     */
     public Optional<String> eventIntegrationAssociationArn() {
         return Optional.ofNullable(this.eventIntegrationAssociationArn);
     }
     /**
-     * The identifier for the event integration association.
+     * @return The identifier for the event integration association.
      * 
-    */
+     */
     public Optional<String> eventIntegrationAssociationId() {
         return Optional.ofNullable(this.eventIntegrationAssociationId);
     }

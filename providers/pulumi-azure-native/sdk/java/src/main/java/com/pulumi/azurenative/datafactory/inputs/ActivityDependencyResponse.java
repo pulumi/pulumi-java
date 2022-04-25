@@ -24,6 +24,10 @@ public final class ActivityDependencyResponse extends com.pulumi.resources.Invok
     @Import(name="activity", required=true)
     private String activity;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String activity() {
         return this.activity;
     }
@@ -35,6 +39,10 @@ public final class ActivityDependencyResponse extends com.pulumi.resources.Invok
     @Import(name="dependencyConditions", required=true)
     private List<String> dependencyConditions;
 
+    /**
+     * @return Match-Condition for the dependency.
+     * 
+     */
     public List<String> dependencyConditions() {
         return this.dependencyConditions;
     }
@@ -64,16 +72,34 @@ public final class ActivityDependencyResponse extends com.pulumi.resources.Invok
             $ = new ActivityDependencyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activity Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activity(String activity) {
             $.activity = activity;
             return this;
         }
 
+        /**
+         * @param dependencyConditions Match-Condition for the dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyConditions(List<String> dependencyConditions) {
             $.dependencyConditions = dependencyConditions;
             return this;
         }
 
+        /**
+         * @param dependencyConditions Match-Condition for the dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyConditions(String... dependencyConditions) {
             return dependencyConditions(List.of(dependencyConditions));
         }

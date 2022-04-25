@@ -25,6 +25,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="capacityReservationGroupName", required=true)
     private Output<String> capacityReservationGroupName;
 
+    /**
+     * @return The name of the capacity reservation group.
+     * 
+     */
     public Output<String> capacityReservationGroupName() {
         return this.capacityReservationGroupName;
     }
@@ -36,6 +40,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="capacityReservationName")
     private @Nullable Output<String> capacityReservationName;
 
+    /**
+     * @return The name of the capacity reservation.
+     * 
+     */
     public Optional<Output<String>> capacityReservationName() {
         return Optional.ofNullable(this.capacityReservationName);
     }
@@ -47,6 +55,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +70,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called &#39;CapacityReservationSupported&#39; set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -80,6 +100,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -125,69 +153,159 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
             $ = new CapacityReservationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityReservationGroupName The name of the capacity reservation group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationGroupName(Output<String> capacityReservationGroupName) {
             $.capacityReservationGroupName = capacityReservationGroupName;
             return this;
         }
 
+        /**
+         * @param capacityReservationGroupName The name of the capacity reservation group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationGroupName(String capacityReservationGroupName) {
             return capacityReservationGroupName(Output.of(capacityReservationGroupName));
         }
 
+        /**
+         * @param capacityReservationName The name of the capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationName(@Nullable Output<String> capacityReservationName) {
             $.capacityReservationName = capacityReservationName;
             return this;
         }
 
+        /**
+         * @param capacityReservationName The name of the capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationName(String capacityReservationName) {
             return capacityReservationName(Output.of(capacityReservationName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called &#39;CapacityReservationSupported&#39; set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called &#39;CapacityReservationSupported&#39; set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param zones Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

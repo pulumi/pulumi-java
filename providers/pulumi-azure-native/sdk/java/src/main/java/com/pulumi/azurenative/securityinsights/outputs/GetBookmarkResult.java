@@ -15,87 +15,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBookmarkResult {
     /**
-     * The time the bookmark was created
+     * @return The time the bookmark was created
      * 
      */
     private final @Nullable String created;
     /**
-     * Describes a user that created the bookmark
+     * @return Describes a user that created the bookmark
      * 
      */
     private final @Nullable UserInfoResponse createdBy;
     /**
-     * The display name of the bookmark
+     * @return The display name of the bookmark
      * 
      */
     private final String displayName;
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * The bookmark event time
+     * @return The bookmark event time
      * 
      */
     private final @Nullable String eventTime;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * Describes an incident that relates to bookmark
+     * @return Describes an incident that relates to bookmark
      * 
      */
     private final @Nullable IncidentInfoResponse incidentInfo;
     /**
-     * List of labels relevant to this bookmark
+     * @return List of labels relevant to this bookmark
      * 
      */
     private final @Nullable List<String> labels;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * The notes of the bookmark
+     * @return The notes of the bookmark
      * 
      */
     private final @Nullable String notes;
     /**
-     * The query of the bookmark.
+     * @return The query of the bookmark.
      * 
      */
     private final String query;
     /**
-     * The end time for the query
+     * @return The end time for the query
      * 
      */
     private final @Nullable String queryEndTime;
     /**
-     * The query result of the bookmark.
+     * @return The query result of the bookmark.
      * 
      */
     private final @Nullable String queryResult;
     /**
-     * The start time for the query
+     * @return The start time for the query
      * 
      */
     private final @Nullable String queryStartTime;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
     /**
-     * The last time the bookmark was updated
+     * @return The last time the bookmark was updated
      * 
      */
     private final @Nullable String updated;
     /**
-     * Describes a user that updated the bookmark
+     * @return Describes a user that updated the bookmark
      * 
      */
     private final @Nullable UserInfoResponse updatedBy;
@@ -139,121 +139,121 @@ public final class GetBookmarkResult {
     }
 
     /**
-     * The time the bookmark was created
+     * @return The time the bookmark was created
      * 
-    */
+     */
     public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
     /**
-     * Describes a user that created the bookmark
+     * @return Describes a user that created the bookmark
      * 
-    */
+     */
     public Optional<UserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The display name of the bookmark
+     * @return The display name of the bookmark
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The bookmark event time
+     * @return The bookmark event time
      * 
-    */
+     */
     public Optional<String> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Describes an incident that relates to bookmark
+     * @return Describes an incident that relates to bookmark
      * 
-    */
+     */
     public Optional<IncidentInfoResponse> incidentInfo() {
         return Optional.ofNullable(this.incidentInfo);
     }
     /**
-     * List of labels relevant to this bookmark
+     * @return List of labels relevant to this bookmark
      * 
-    */
+     */
     public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The notes of the bookmark
+     * @return The notes of the bookmark
      * 
-    */
+     */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
-     * The query of the bookmark.
+     * @return The query of the bookmark.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * The end time for the query
+     * @return The end time for the query
      * 
-    */
+     */
     public Optional<String> queryEndTime() {
         return Optional.ofNullable(this.queryEndTime);
     }
     /**
-     * The query result of the bookmark.
+     * @return The query result of the bookmark.
      * 
-    */
+     */
     public Optional<String> queryResult() {
         return Optional.ofNullable(this.queryResult);
     }
     /**
-     * The start time for the query
+     * @return The start time for the query
      * 
-    */
+     */
     public Optional<String> queryStartTime() {
         return Optional.ofNullable(this.queryStartTime);
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The last time the bookmark was updated
+     * @return The last time the bookmark was updated
      * 
-    */
+     */
     public Optional<String> updated() {
         return Optional.ofNullable(this.updated);
     }
     /**
-     * Describes a user that updated the bookmark
+     * @return Describes a user that updated the bookmark
      * 
-    */
+     */
     public Optional<UserInfoResponse> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }

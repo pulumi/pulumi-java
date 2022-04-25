@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FacebookChannelPropertiesResponse {
     /**
-     * Facebook application id
+     * @return Facebook application id
      * 
      */
     private final String appId;
     /**
-     * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final @Nullable String appSecret;
     /**
-     * Callback Url
+     * @return Callback Url
      * 
      */
     private final String callbackUrl;
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The list of Facebook pages
+     * @return The list of Facebook pages
      * 
      */
     private final @Nullable List<FacebookPageResponse> pages;
     /**
-     * Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final String verifyToken;
@@ -62,44 +62,44 @@ public final class FacebookChannelPropertiesResponse {
     }
 
     /**
-     * Facebook application id
+     * @return Facebook application id
      * 
-    */
+     */
     public String appId() {
         return this.appId;
     }
     /**
-     * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public Optional<String> appSecret() {
         return Optional.ofNullable(this.appSecret);
     }
     /**
-     * Callback Url
+     * @return Callback Url
      * 
-    */
+     */
     public String callbackUrl() {
         return this.callbackUrl;
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The list of Facebook pages
+     * @return The list of Facebook pages
      * 
-    */
+     */
     public List<FacebookPageResponse> pages() {
         return this.pages == null ? List.of() : this.pages;
     }
     /**
-     * Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public String verifyToken() {
         return this.verifyToken;
     }

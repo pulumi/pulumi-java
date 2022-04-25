@@ -22,6 +22,10 @@ public final class JobReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
     private @Nullable Output<String> jobId;
 
+    /**
+     * @return [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     * 
+     */
     public Optional<Output<String>> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -33,6 +37,10 @@ public final class JobReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -44,6 +52,10 @@ public final class JobReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return [Required] The ID of the project containing this job.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -74,29 +86,65 @@ public final class JobReferenceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobId [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(@Nullable Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param jobId [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(String jobId) {
             return jobId(Output.of(jobId));
         }
 
+        /**
+         * @param location The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

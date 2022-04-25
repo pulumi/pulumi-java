@@ -20,6 +20,10 @@ public final class AccessPointVpcConfigurationArgs extends com.pulumi.resources.
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return This access point will only allow connections from the specified VPC ID.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -48,11 +52,23 @@ public final class AccessPointVpcConfigurationArgs extends com.pulumi.resources.
             $ = new AccessPointVpcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpcId This access point will only allow connections from the specified VPC ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId This access point will only allow connections from the specified VPC ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

@@ -19,6 +19,10 @@ public final class GetFeatureGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="featureGroupName", required=true)
     private String featureGroupName;
 
+    /**
+     * @return The Name of the FeatureGroup.
+     * 
+     */
     public String featureGroupName() {
         return this.featureGroupName;
     }
@@ -47,6 +51,12 @@ public final class GetFeatureGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFeatureGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param featureGroupName The Name of the FeatureGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureGroupName(String featureGroupName) {
             $.featureGroupName = featureGroupName;
             return this;

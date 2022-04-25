@@ -23,6 +23,10 @@ public final class ConnectionStatePropertiesResponse extends com.pulumi.resource
     @Import(name="actionsRequired", required=true)
     private String actionsRequired;
 
+    /**
+     * @return The actions required on the managed private endpoint
+     * 
+     */
     public String actionsRequired() {
         return this.actionsRequired;
     }
@@ -34,6 +38,10 @@ public final class ConnectionStatePropertiesResponse extends com.pulumi.resource
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The managed private endpoint description
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -45,6 +53,10 @@ public final class ConnectionStatePropertiesResponse extends com.pulumi.resource
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The approval status
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -75,16 +87,34 @@ public final class ConnectionStatePropertiesResponse extends com.pulumi.resource
             $ = new ConnectionStatePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired The actions required on the managed private endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param description The managed private endpoint description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status The approval status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

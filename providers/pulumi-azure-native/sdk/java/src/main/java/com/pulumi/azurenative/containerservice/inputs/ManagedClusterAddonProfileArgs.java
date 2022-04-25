@@ -28,6 +28,10 @@ public final class ManagedClusterAddonProfileArgs extends com.pulumi.resources.R
     @Import(name="config")
     private @Nullable Output<Map<String,String>> config;
 
+    /**
+     * @return Key-value pairs for configuring an add-on.
+     * 
+     */
     public Optional<Output<Map<String,String>>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -39,6 +43,10 @@ public final class ManagedClusterAddonProfileArgs extends com.pulumi.resources.R
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Whether the add-on is enabled or not.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -68,20 +76,44 @@ public final class ManagedClusterAddonProfileArgs extends com.pulumi.resources.R
             $ = new ManagedClusterAddonProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Key-value pairs for configuring an add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<Map<String,String>> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Key-value pairs for configuring an add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Map<String,String> config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param enabled Whether the add-on is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether the add-on is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

@@ -21,6 +21,11 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends com.pu
     @Import(name="mountPath", required=true)
     private Output<String> mountPath;
 
+    /**
+     * @return Path within the container at which the volume should be mounted.  Must
+     * not contain &#39;:&#39;.
+     * 
+     */
     public Output<String> mountPath() {
         return this.mountPath;
     }
@@ -32,6 +37,10 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends com.pu
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Volume&#39;s name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -61,20 +70,46 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends com.pu
             $ = new ServiceTemplateSpecContainerVolumeMountGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath Path within the container at which the volume should be mounted.  Must
+         * not contain &#39;:&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(Output<String> mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param mountPath Path within the container at which the volume should be mounted.  Must
+         * not contain &#39;:&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(String mountPath) {
             return mountPath(Output.of(mountPath));
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -26,6 +26,10 @@ public final class AzureResourceErrorInfoResponse extends com.pulumi.resources.I
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The error code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -37,6 +41,10 @@ public final class AzureResourceErrorInfoResponse extends com.pulumi.resources.I
     @Import(name="details")
     private @Nullable List<AzureResourceErrorInfoResponse> details;
 
+    /**
+     * @return The error details.
+     * 
+     */
     public Optional<List<AzureResourceErrorInfoResponse>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -48,6 +56,10 @@ public final class AzureResourceErrorInfoResponse extends com.pulumi.resources.I
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The error message.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -78,20 +90,44 @@ public final class AzureResourceErrorInfoResponse extends com.pulumi.resources.I
             $ = new AzureResourceErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details The error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable List<AzureResourceErrorInfoResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details The error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(AzureResourceErrorInfoResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message The error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

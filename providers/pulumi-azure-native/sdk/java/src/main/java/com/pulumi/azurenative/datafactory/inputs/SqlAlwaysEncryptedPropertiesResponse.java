@@ -30,6 +30,10 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
     @Import(name="alwaysEncryptedAkvAuthType", required=true)
     private String alwaysEncryptedAkvAuthType;
 
+    /**
+     * @return Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+     * 
+     */
     public String alwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
     }
@@ -41,6 +45,10 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
     @Import(name="credential")
     private @Nullable CredentialReferenceResponse credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -52,6 +60,10 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
     @Import(name="servicePrincipalId")
     private @Nullable Object servicePrincipalId;
 
+    /**
+     * @return The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
@@ -63,6 +75,10 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
     @Import(name="servicePrincipalKey")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
+    /**
+     * @return The key of the service principal used to authenticate against Azure Key Vault.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
@@ -94,30 +110,66 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends com.pulumi.resou
             $ = new SqlAlwaysEncryptedPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alwaysEncryptedAkvAuthType Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alwaysEncryptedAkvAuthType(String alwaysEncryptedAkvAuthType) {
             $.alwaysEncryptedAkvAuthType = alwaysEncryptedAkvAuthType;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param servicePrincipalId The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }

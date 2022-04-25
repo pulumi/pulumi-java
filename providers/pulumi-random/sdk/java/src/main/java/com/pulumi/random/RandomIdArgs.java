@@ -25,6 +25,10 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="byteLength", required=true)
     private Output<Integer> byteLength;
 
+    /**
+     * @return The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+     * 
+     */
     public Output<Integer> byteLength() {
         return this.byteLength;
     }
@@ -36,6 +40,10 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> keepers() {
         return Optional.ofNullable(this.keepers);
     }
@@ -47,6 +55,10 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -77,29 +89,65 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RandomIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param byteLength The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteLength(Output<Integer> byteLength) {
             $.byteLength = byteLength;
             return this;
         }
 
+        /**
+         * @param byteLength The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteLength(Integer byteLength) {
             return byteLength(Output.of(byteLength));
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             $.keepers = keepers;
             return this;
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(Map<String,Object> keepers) {
             return keepers(Output.of(keepers));
         }
 
+        /**
+         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

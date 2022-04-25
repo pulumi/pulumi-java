@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class NetworkInterfaceResponse {
     /**
-     * The external IP to define in the NIC.
+     * @return The external IP to define in the NIC.
      * 
      */
     private final String externalIp;
     /**
-     * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+     * @return The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
      * 
      */
     private final String internalIp;
     /**
-     * The network to connect the NIC to.
+     * @return The network to connect the NIC to.
      * 
      */
     private final String network;
     /**
-     * The subnetwork to connect the NIC to.
+     * @return The subnetwork to connect the NIC to.
      * 
      */
     private final String subnetwork;
@@ -43,30 +43,30 @@ public final class NetworkInterfaceResponse {
     }
 
     /**
-     * The external IP to define in the NIC.
+     * @return The external IP to define in the NIC.
      * 
-    */
+     */
     public String externalIp() {
         return this.externalIp;
     }
     /**
-     * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+     * @return The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
      * 
-    */
+     */
     public String internalIp() {
         return this.internalIp;
     }
     /**
-     * The network to connect the NIC to.
+     * @return The network to connect the NIC to.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * The subnetwork to connect the NIC to.
+     * @return The subnetwork to connect the NIC to.
      * 
-    */
+     */
     public String subnetwork() {
         return this.subnetwork;
     }

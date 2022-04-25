@@ -26,6 +26,10 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
     @Import(name="availableReplicas")
     private @Nullable Integer availableReplicas;
 
+    /**
+     * @return The number of available replicas.
+     * 
+     */
     public Optional<Integer> availableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
@@ -37,6 +41,10 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
     @Import(name="desiredReplicas")
     private @Nullable Integer desiredReplicas;
 
+    /**
+     * @return The desired number of replicas.
+     * 
+     */
     public Optional<Integer> desiredReplicas() {
         return Optional.ofNullable(this.desiredReplicas);
     }
@@ -48,6 +56,10 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
     @Import(name="error")
     private @Nullable AKSReplicaStatusResponseError error;
 
+    /**
+     * @return The error details.
+     * 
+     */
     public Optional<AKSReplicaStatusResponseError> error() {
         return Optional.ofNullable(this.error);
     }
@@ -59,6 +71,10 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
     @Import(name="updatedReplicas")
     private @Nullable Integer updatedReplicas;
 
+    /**
+     * @return The number of updated replicas.
+     * 
+     */
     public Optional<Integer> updatedReplicas() {
         return Optional.ofNullable(this.updatedReplicas);
     }
@@ -90,21 +106,45 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
             $ = new AKSServiceResponseResponseDeploymentStatus(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableReplicas The number of available replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableReplicas(@Nullable Integer availableReplicas) {
             $.availableReplicas = availableReplicas;
             return this;
         }
 
+        /**
+         * @param desiredReplicas The desired number of replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredReplicas(@Nullable Integer desiredReplicas) {
             $.desiredReplicas = desiredReplicas;
             return this;
         }
 
+        /**
+         * @param error The error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable AKSReplicaStatusResponseError error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param updatedReplicas The number of updated replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             $.updatedReplicas = updatedReplicas;
             return this;

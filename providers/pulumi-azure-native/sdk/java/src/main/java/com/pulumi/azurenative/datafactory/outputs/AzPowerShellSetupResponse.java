@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class AzPowerShellSetupResponse {
     /**
-     * The type of custom setup.
+     * @return The type of custom setup.
      * Expected value is &#39;AzPowerShellSetup&#39;.
      * 
      */
     private final String type;
     /**
-     * The required version of Azure PowerShell to install.
+     * @return The required version of Azure PowerShell to install.
      * 
      */
     private final String version;
@@ -30,17 +30,17 @@ public final class AzPowerShellSetupResponse {
     }
 
     /**
-     * The type of custom setup.
+     * @return The type of custom setup.
      * Expected value is &#39;AzPowerShellSetup&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The required version of Azure PowerShell to install.
+     * @return The required version of Azure PowerShell to install.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

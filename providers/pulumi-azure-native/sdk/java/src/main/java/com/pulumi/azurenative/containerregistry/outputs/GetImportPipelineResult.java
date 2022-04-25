@@ -17,52 +17,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetImportPipelineResult {
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
      */
     private final String id;
     /**
-     * The identity of the import pipeline.
+     * @return The identity of the import pipeline.
      * 
      */
     private final @Nullable IdentityPropertiesResponse identity;
     /**
-     * The location of the import pipeline.
+     * @return The location of the import pipeline.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The list of all options configured for the pipeline.
+     * @return The list of all options configured for the pipeline.
      * 
      */
     private final @Nullable List<String> options;
     /**
-     * The provisioning state of the pipeline at the time the operation was called.
+     * @return The provisioning state of the pipeline at the time the operation was called.
      * 
      */
     private final String provisioningState;
     /**
-     * The source properties of the import pipeline.
+     * @return The source properties of the import pipeline.
      * 
      */
     private final ImportPipelineSourcePropertiesResponse source;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The properties that describe the trigger of the import pipeline.
+     * @return The properties that describe the trigger of the import pipeline.
      * 
      */
     private final @Nullable PipelineTriggerPropertiesResponse trigger;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -92,72 +92,72 @@ public final class GetImportPipelineResult {
     }
 
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the import pipeline.
+     * @return The identity of the import pipeline.
      * 
-    */
+     */
     public Optional<IdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The location of the import pipeline.
+     * @return The location of the import pipeline.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of all options configured for the pipeline.
+     * @return The list of all options configured for the pipeline.
      * 
-    */
+     */
     public List<String> options() {
         return this.options == null ? List.of() : this.options;
     }
     /**
-     * The provisioning state of the pipeline at the time the operation was called.
+     * @return The provisioning state of the pipeline at the time the operation was called.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The source properties of the import pipeline.
+     * @return The source properties of the import pipeline.
      * 
-    */
+     */
     public ImportPipelineSourcePropertiesResponse source() {
         return this.source;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The properties that describe the trigger of the import pipeline.
+     * @return The properties that describe the trigger of the import pipeline.
      * 
-    */
+     */
     public Optional<PipelineTriggerPropertiesResponse> trigger() {
         return Optional.ofNullable(this.trigger);
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

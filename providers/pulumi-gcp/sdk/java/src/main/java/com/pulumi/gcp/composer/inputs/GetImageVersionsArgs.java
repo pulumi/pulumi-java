@@ -22,6 +22,11 @@ public final class GetImageVersionsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project to list versions in.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -34,6 +39,11 @@ public final class GetImageVersionsArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return The location to list versions in.
+     * If it is not provider, the provider region is used.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -63,11 +73,25 @@ public final class GetImageVersionsArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetImageVersionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The ID of the project to list versions in.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param region The location to list versions in.
+         * If it is not provider, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;

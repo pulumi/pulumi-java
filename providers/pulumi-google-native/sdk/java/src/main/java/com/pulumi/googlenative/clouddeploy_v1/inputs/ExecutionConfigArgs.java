@@ -30,6 +30,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="artifactStorage")
     private @Nullable Output<String> artifactStorage;
 
+    /**
+     * @return Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+     * 
+     */
     public Optional<Output<String>> artifactStorage() {
         return Optional.ofNullable(this.artifactStorage);
     }
@@ -41,6 +45,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultPool")
     private @Nullable Output<DefaultPoolArgs> defaultPool;
 
+    /**
+     * @return Optional. Use default Cloud Build pool.
+     * 
+     */
     public Optional<Output<DefaultPoolArgs>> defaultPool() {
         return Optional.ofNullable(this.defaultPool);
     }
@@ -52,6 +60,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privatePool")
     private @Nullable Output<PrivatePoolArgs> privatePool;
 
+    /**
+     * @return Optional. Use private Cloud Build pool.
+     * 
+     */
     public Optional<Output<PrivatePoolArgs>> privatePool() {
         return Optional.ofNullable(this.privatePool);
     }
@@ -63,6 +75,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -74,6 +90,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="usages", required=true)
     private Output<List<ExecutionConfigUsagesItem>> usages;
 
+    /**
+     * @return Usages when this configuration should be applied.
+     * 
+     */
     public Output<List<ExecutionConfigUsagesItem>> usages() {
         return this.usages;
     }
@@ -85,6 +105,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="workerPool")
     private @Nullable Output<String> workerPool;
 
+    /**
+     * @return Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
+     * 
+     */
     public Optional<Output<String>> workerPool() {
         return Optional.ofNullable(this.workerPool);
     }
@@ -118,60 +142,138 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new ExecutionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactStorage Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStorage(@Nullable Output<String> artifactStorage) {
             $.artifactStorage = artifactStorage;
             return this;
         }
 
+        /**
+         * @param artifactStorage Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactStorage(String artifactStorage) {
             return artifactStorage(Output.of(artifactStorage));
         }
 
+        /**
+         * @param defaultPool Optional. Use default Cloud Build pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPool(@Nullable Output<DefaultPoolArgs> defaultPool) {
             $.defaultPool = defaultPool;
             return this;
         }
 
+        /**
+         * @param defaultPool Optional. Use default Cloud Build pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPool(DefaultPoolArgs defaultPool) {
             return defaultPool(Output.of(defaultPool));
         }
 
+        /**
+         * @param privatePool Optional. Use private Cloud Build pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privatePool(@Nullable Output<PrivatePoolArgs> privatePool) {
             $.privatePool = privatePool;
             return this;
         }
 
+        /**
+         * @param privatePool Optional. Use private Cloud Build pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privatePool(PrivatePoolArgs privatePool) {
             return privatePool(Output.of(privatePool));
         }
 
+        /**
+         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param usages Usages when this configuration should be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(Output<List<ExecutionConfigUsagesItem>> usages) {
             $.usages = usages;
             return this;
         }
 
+        /**
+         * @param usages Usages when this configuration should be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(List<ExecutionConfigUsagesItem> usages) {
             return usages(Output.of(usages));
         }
 
+        /**
+         * @param usages Usages when this configuration should be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(ExecutionConfigUsagesItem... usages) {
             return usages(List.of(usages));
         }
 
+        /**
+         * @param workerPool Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPool(@Nullable Output<String> workerPool) {
             $.workerPool = workerPool;
             return this;
         }
 
+        /**
+         * @param workerPool Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPool(String workerPool) {
             return workerPool(Output.of(workerPool));
         }

@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
     @Import(name="action")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
 
+    /**
+     * @return Predefined client side actions that user can choose
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
     @Import(name="reply")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
 
+    /**
+     * @return Predefined replies for user to select instead of typing
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs>> reply() {
         return Optional.ofNullable(this.reply);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Predefined client side actions that user can choose
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Predefined client side actions that user can choose
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param reply Predefined replies for user to select instead of typing
+         * 
+         * @return builder
+         * 
+         */
         public Builder reply(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply) {
             $.reply = reply;
             return this;
         }
 
+        /**
+         * @param reply Predefined replies for user to select instead of typing
+         * 
+         * @return builder
+         * 
+         */
         public Builder reply(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs reply) {
             return reply(Output.of(reply));
         }

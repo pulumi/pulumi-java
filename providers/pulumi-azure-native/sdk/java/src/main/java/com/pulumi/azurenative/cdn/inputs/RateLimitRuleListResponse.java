@@ -26,6 +26,10 @@ public final class RateLimitRuleListResponse extends com.pulumi.resources.Invoke
     @Import(name="rules")
     private @Nullable List<RateLimitRuleResponse> rules;
 
+    /**
+     * @return List of rules
+     * 
+     */
     public Optional<List<RateLimitRuleResponse>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -54,11 +58,23 @@ public final class RateLimitRuleListResponse extends com.pulumi.resources.Invoke
             $ = new RateLimitRuleListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules List of rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<RateLimitRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RateLimitRuleResponse... rules) {
             return rules(List.of(rules));
         }

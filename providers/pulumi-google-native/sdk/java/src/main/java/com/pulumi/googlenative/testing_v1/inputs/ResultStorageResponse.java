@@ -26,6 +26,10 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="googleCloudStorage", required=true)
     private GoogleCloudStorageResponse googleCloudStorage;
 
+    /**
+     * @return Required.
+     * 
+     */
     public GoogleCloudStorageResponse googleCloudStorage() {
         return this.googleCloudStorage;
     }
@@ -37,6 +41,10 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resultsUrl", required=true)
     private String resultsUrl;
 
+    /**
+     * @return URL to the results in the Firebase Web Console.
+     * 
+     */
     public String resultsUrl() {
         return this.resultsUrl;
     }
@@ -48,6 +56,10 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="toolResultsExecution", required=true)
     private ToolResultsExecutionResponse toolResultsExecution;
 
+    /**
+     * @return The tool results execution that results are written to.
+     * 
+     */
     public ToolResultsExecutionResponse toolResultsExecution() {
         return this.toolResultsExecution;
     }
@@ -59,6 +71,10 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="toolResultsHistory", required=true)
     private ToolResultsHistoryResponse toolResultsHistory;
 
+    /**
+     * @return The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
+     * 
+     */
     public ToolResultsHistoryResponse toolResultsHistory() {
         return this.toolResultsHistory;
     }
@@ -90,21 +106,45 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
             $ = new ResultStorageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param googleCloudStorage Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleCloudStorage(GoogleCloudStorageResponse googleCloudStorage) {
             $.googleCloudStorage = googleCloudStorage;
             return this;
         }
 
+        /**
+         * @param resultsUrl URL to the results in the Firebase Web Console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultsUrl(String resultsUrl) {
             $.resultsUrl = resultsUrl;
             return this;
         }
 
+        /**
+         * @param toolResultsExecution The tool results execution that results are written to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolResultsExecution(ToolResultsExecutionResponse toolResultsExecution) {
             $.toolResultsExecution = toolResultsExecution;
             return this;
         }
 
+        /**
+         * @param toolResultsHistory The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolResultsHistory(ToolResultsHistoryResponse toolResultsHistory) {
             $.toolResultsHistory = toolResultsHistory;
             return this;

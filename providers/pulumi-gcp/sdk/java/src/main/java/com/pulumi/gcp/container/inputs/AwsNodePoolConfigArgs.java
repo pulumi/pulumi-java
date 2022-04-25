@@ -28,6 +28,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="configEncryption", required=true)
     private Output<AwsNodePoolConfigConfigEncryptionArgs> configEncryption;
 
+    /**
+     * @return Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+     * 
+     */
     public Output<AwsNodePoolConfigConfigEncryptionArgs> configEncryption() {
         return this.configEncryption;
     }
@@ -39,6 +43,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="iamInstanceProfile", required=true)
     private Output<String> iamInstanceProfile;
 
+    /**
+     * @return Required. The name of the AWS IAM role assigned to nodes in the pool.
+     * 
+     */
     public Output<String> iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
@@ -50,6 +58,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -61,6 +73,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -72,6 +88,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rootVolume")
     private @Nullable Output<AwsNodePoolConfigRootVolumeArgs> rootVolume;
 
+    /**
+     * @return Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+     * 
+     */
     public Optional<Output<AwsNodePoolConfigRootVolumeArgs>> rootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
@@ -83,6 +103,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -94,6 +118,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sshConfig")
     private @Nullable Output<AwsNodePoolConfigSshConfigArgs> sshConfig;
 
+    /**
+     * @return Optional. The SSH configuration.
+     * 
+     */
     public Optional<Output<AwsNodePoolConfigSshConfigArgs>> sshConfig() {
         return Optional.ofNullable(this.sshConfig);
     }
@@ -105,6 +133,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -116,6 +148,10 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="taints")
     private @Nullable Output<List<AwsNodePoolConfigTaintArgs>> taints;
 
+    /**
+     * @return Optional. The initial taints assigned to nodes of this node pool.
+     * 
+     */
     public Optional<Output<List<AwsNodePoolConfigTaintArgs>>> taints() {
         return Optional.ofNullable(this.taints);
     }
@@ -152,91 +188,211 @@ public final class AwsNodePoolConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new AwsNodePoolConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configEncryption Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configEncryption(Output<AwsNodePoolConfigConfigEncryptionArgs> configEncryption) {
             $.configEncryption = configEncryption;
             return this;
         }
 
+        /**
+         * @param configEncryption Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configEncryption(AwsNodePoolConfigConfigEncryptionArgs configEncryption) {
             return configEncryption(Output.of(configEncryption));
         }
 
+        /**
+         * @param iamInstanceProfile Required. The name of the AWS IAM role assigned to nodes in the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamInstanceProfile(Output<String> iamInstanceProfile) {
             $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
+        /**
+         * @param iamInstanceProfile Required. The name of the AWS IAM role assigned to nodes in the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamInstanceProfile(String iamInstanceProfile) {
             return iamInstanceProfile(Output.of(iamInstanceProfile));
         }
 
+        /**
+         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param labels Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param rootVolume Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolume(@Nullable Output<AwsNodePoolConfigRootVolumeArgs> rootVolume) {
             $.rootVolume = rootVolume;
             return this;
         }
 
+        /**
+         * @param rootVolume Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolume(AwsNodePoolConfigRootVolumeArgs rootVolume) {
             return rootVolume(Output.of(rootVolume));
         }
 
+        /**
+         * @param securityGroupIds Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param sshConfig Optional. The SSH configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshConfig(@Nullable Output<AwsNodePoolConfigSshConfigArgs> sshConfig) {
             $.sshConfig = sshConfig;
             return this;
         }
 
+        /**
+         * @param sshConfig Optional. The SSH configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshConfig(AwsNodePoolConfigSshConfigArgs sshConfig) {
             return sshConfig(Output.of(sshConfig));
         }
 
+        /**
+         * @param tags Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param taints Optional. The initial taints assigned to nodes of this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taints(@Nullable Output<List<AwsNodePoolConfigTaintArgs>> taints) {
             $.taints = taints;
             return this;
         }
 
+        /**
+         * @param taints Optional. The initial taints assigned to nodes of this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taints(List<AwsNodePoolConfigTaintArgs> taints) {
             return taints(Output.of(taints));
         }
 
+        /**
+         * @param taints Optional. The initial taints assigned to nodes of this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taints(AwsNodePoolConfigTaintArgs... taints) {
             return taints(List.of(taints));
         }

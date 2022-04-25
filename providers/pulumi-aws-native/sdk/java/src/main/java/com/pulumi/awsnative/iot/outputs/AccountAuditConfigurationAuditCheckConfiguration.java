@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccountAuditConfigurationAuditCheckConfiguration {
     /**
-     * True if the check is enabled.
+     * @return True if the check is enabled.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -23,9 +23,9 @@ public final class AccountAuditConfigurationAuditCheckConfiguration {
     }
 
     /**
-     * True if the check is enabled.
+     * @return True if the check is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

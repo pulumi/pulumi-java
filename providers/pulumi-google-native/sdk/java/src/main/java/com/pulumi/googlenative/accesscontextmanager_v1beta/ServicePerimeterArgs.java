@@ -31,6 +31,10 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the `ServicePerimeter` and its use. Does not affect behavior.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -42,6 +46,10 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +61,10 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="perimeterType")
     private @Nullable Output<ServicePerimeterPerimeterType> perimeterType;
 
+    /**
+     * @return Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
+     * 
+     */
     public Optional<Output<ServicePerimeterPerimeterType>> perimeterType() {
         return Optional.ofNullable(this.perimeterType);
     }
@@ -64,6 +76,10 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
     private @Nullable Output<ServicePerimeterConfigArgs> status;
 
+    /**
+     * @return Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
+     * 
+     */
     public Optional<Output<ServicePerimeterConfigArgs>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -75,6 +91,10 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Human readable title. Must be unique within the Policy.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -117,47 +137,107 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
             return accessPolicyId(Output.of(accessPolicyId));
         }
 
+        /**
+         * @param description Description of the `ServicePerimeter` and its use. Does not affect behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the `ServicePerimeter` and its use. Does not affect behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and &#39;_&#39;. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param perimeterType Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perimeterType(@Nullable Output<ServicePerimeterPerimeterType> perimeterType) {
             $.perimeterType = perimeterType;
             return this;
         }
 
+        /**
+         * @param perimeterType Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perimeterType(ServicePerimeterPerimeterType perimeterType) {
             return perimeterType(Output.of(perimeterType));
         }
 
+        /**
+         * @param status Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<ServicePerimeterConfigArgs> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(ServicePerimeterConfigArgs status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param title Human readable title. Must be unique within the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Human readable title. Must be unique within the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

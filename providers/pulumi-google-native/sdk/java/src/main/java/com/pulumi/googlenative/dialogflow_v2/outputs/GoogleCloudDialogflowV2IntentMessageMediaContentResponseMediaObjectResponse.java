@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse {
     /**
-     * Url where the media is stored.
+     * @return Url where the media is stored.
      * 
      */
     private final String contentUrl;
     /**
-     * Optional. Description of media card.
+     * @return Optional. Description of media card.
      * 
      */
     private final String description;
     /**
-     * Optional. Icon to display above media content.
+     * @return Optional. Icon to display above media content.
      * 
      */
     private final GoogleCloudDialogflowV2IntentMessageImageResponse icon;
     /**
-     * Optional. Image to display above media content.
+     * @return Optional. Image to display above media content.
      * 
      */
     private final GoogleCloudDialogflowV2IntentMessageImageResponse largeImage;
     /**
-     * Name of media card.
+     * @return Name of media card.
      * 
      */
     private final String name;
@@ -51,37 +51,37 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
     }
 
     /**
-     * Url where the media is stored.
+     * @return Url where the media is stored.
      * 
-    */
+     */
     public String contentUrl() {
         return this.contentUrl;
     }
     /**
-     * Optional. Description of media card.
+     * @return Optional. Description of media card.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Optional. Icon to display above media content.
+     * @return Optional. Icon to display above media content.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse icon() {
         return this.icon;
     }
     /**
-     * Optional. Image to display above media content.
+     * @return Optional. Image to display above media content.
      * 
-    */
+     */
     public GoogleCloudDialogflowV2IntentMessageImageResponse largeImage() {
         return this.largeImage;
     }
     /**
-     * Name of media card.
+     * @return Name of media card.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

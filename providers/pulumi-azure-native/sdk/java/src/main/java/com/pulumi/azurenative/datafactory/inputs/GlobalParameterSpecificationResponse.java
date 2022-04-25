@@ -24,6 +24,10 @@ public final class GlobalParameterSpecificationResponse extends com.pulumi.resou
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Global Parameter type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -35,6 +39,10 @@ public final class GlobalParameterSpecificationResponse extends com.pulumi.resou
     @Import(name="value", required=true)
     private Object value;
 
+    /**
+     * @return Value of parameter.
+     * 
+     */
     public Object value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class GlobalParameterSpecificationResponse extends com.pulumi.resou
             $ = new GlobalParameterSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Global Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             $.value = value;
             return this;

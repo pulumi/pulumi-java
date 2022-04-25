@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1QuotaResponse extends com.pulumi.resources
     @Import(name="interval", required=true)
     private String interval;
 
+    /**
+     * @return Time interval over which the number of request messages is calculated.
+     * 
+     */
     public String interval() {
         return this.interval;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudApigeeV1QuotaResponse extends com.pulumi.resources
     @Import(name="limit", required=true)
     private String limit;
 
+    /**
+     * @return Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.
+     * 
+     */
     public String limit() {
         return this.limit;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudApigeeV1QuotaResponse extends com.pulumi.resources
     @Import(name="timeUnit", required=true)
     private String timeUnit;
 
+    /**
+     * @return Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.
+     * 
+     */
     public String timeUnit() {
         return this.timeUnit;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudApigeeV1QuotaResponse extends com.pulumi.resources
             $ = new GoogleCloudApigeeV1QuotaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interval Time interval over which the number of request messages is calculated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(String interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param limit Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(String limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param timeUnit Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeUnit(String timeUnit) {
             $.timeUnit = timeUnit;
             return this;

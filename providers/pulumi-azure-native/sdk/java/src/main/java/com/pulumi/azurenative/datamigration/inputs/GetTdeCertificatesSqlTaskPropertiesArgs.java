@@ -28,6 +28,10 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends com.pulumi.re
     @Import(name="input")
     private @Nullable Output<GetTdeCertificatesSqlTaskInputArgs> input;
 
+    /**
+     * @return Task input
+     * 
+     */
     public Optional<Output<GetTdeCertificatesSqlTaskInputArgs>> input() {
         return Optional.ofNullable(this.input);
     }
@@ -40,6 +44,11 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends com.pulumi.re
     @Import(name="taskType", required=true)
     private Output<String> taskType;
 
+    /**
+     * @return Task type.
+     * Expected value is &#39;GetTDECertificates.Sql&#39;.
+     * 
+     */
     public Output<String> taskType() {
         return this.taskType;
     }
@@ -69,20 +78,46 @@ public final class GetTdeCertificatesSqlTaskPropertiesArgs extends com.pulumi.re
             $ = new GetTdeCertificatesSqlTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param input Task input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable Output<GetTdeCertificatesSqlTaskInputArgs> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input Task input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(GetTdeCertificatesSqlTaskInputArgs input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param taskType Task type.
+         * Expected value is &#39;GetTDECertificates.Sql&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(Output<String> taskType) {
             $.taskType = taskType;
             return this;
         }
 
+        /**
+         * @param taskType Task type.
+         * Expected value is &#39;GetTDECertificates.Sql&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(String taskType) {
             return taskType(Output.of(taskType));
         }

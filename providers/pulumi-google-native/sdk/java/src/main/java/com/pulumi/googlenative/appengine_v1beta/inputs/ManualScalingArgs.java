@@ -26,6 +26,10 @@ public final class ManualScalingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instances")
     private @Nullable Output<Integer> instances;
 
+    /**
+     * @return Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
+     * 
+     */
     public Optional<Output<Integer>> instances() {
         return Optional.ofNullable(this.instances);
     }
@@ -54,11 +58,23 @@ public final class ManualScalingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ManualScalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(@Nullable Output<Integer> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(Integer instances) {
             return instances(Output.of(instances));
         }

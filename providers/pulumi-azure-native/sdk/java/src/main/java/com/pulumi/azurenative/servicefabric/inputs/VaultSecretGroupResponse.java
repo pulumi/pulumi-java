@@ -25,6 +25,10 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceVault", required=true)
     private SubResourceResponse sourceVault;
 
+    /**
+     * @return The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+     * 
+     */
     public SubResourceResponse sourceVault() {
         return this.sourceVault;
     }
@@ -36,6 +40,10 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
     @Import(name="vaultCertificates", required=true)
     private List<VaultCertificateResponse> vaultCertificates;
 
+    /**
+     * @return The list of key vault references in SourceVault which contain certificates.
+     * 
+     */
     public List<VaultCertificateResponse> vaultCertificates() {
         return this.vaultCertificates;
     }
@@ -65,16 +73,34 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
             $ = new VaultSecretGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceVault The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(SubResourceResponse sourceVault) {
             $.sourceVault = sourceVault;
             return this;
         }
 
+        /**
+         * @param vaultCertificates The list of key vault references in SourceVault which contain certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCertificates(List<VaultCertificateResponse> vaultCertificates) {
             $.vaultCertificates = vaultCertificates;
             return this;
         }
 
+        /**
+         * @param vaultCertificates The list of key vault references in SourceVault which contain certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCertificates(VaultCertificateResponse... vaultCertificates) {
             return vaultCertificates(List.of(vaultCertificates));
         }

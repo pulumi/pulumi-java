@@ -23,6 +23,10 @@ public final class MixinResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The fully qualified name of the interface which is included.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class MixinResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="root", required=true)
     private String root;
 
+    /**
+     * @return If non-empty specifies a path under which inherited HTTP paths are rooted.
+     * 
+     */
     public String root() {
         return this.root;
     }
@@ -63,11 +71,23 @@ public final class MixinResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MixinResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The fully qualified name of the interface which is included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param root If non-empty specifies a path under which inherited HTTP paths are rooted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder root(String root) {
             $.root = root;
             return this;

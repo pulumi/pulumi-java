@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AS2SecuritySettingsResponse {
     /**
-     * The value indicating whether to enable NRR for inbound decoded messages.
+     * @return The value indicating whether to enable NRR for inbound decoded messages.
      * 
      */
     private final Boolean enableNRRForInboundDecodedMessages;
     /**
-     * The value indicating whether to enable NRR for inbound encoded messages.
+     * @return The value indicating whether to enable NRR for inbound encoded messages.
      * 
      */
     private final Boolean enableNRRForInboundEncodedMessages;
     /**
-     * The value indicating whether to enable NRR for inbound MDN.
+     * @return The value indicating whether to enable NRR for inbound MDN.
      * 
      */
     private final Boolean enableNRRForInboundMDN;
     /**
-     * The value indicating whether to enable NRR for outbound decoded messages.
+     * @return The value indicating whether to enable NRR for outbound decoded messages.
      * 
      */
     private final Boolean enableNRRForOutboundDecodedMessages;
     /**
-     * The value indicating whether to enable NRR for outbound encoded messages.
+     * @return The value indicating whether to enable NRR for outbound encoded messages.
      * 
      */
     private final Boolean enableNRRForOutboundEncodedMessages;
     /**
-     * The value indicating whether to enable NRR for outbound MDN.
+     * @return The value indicating whether to enable NRR for outbound MDN.
      * 
      */
     private final Boolean enableNRRForOutboundMDN;
     /**
-     * The name of the encryption certificate.
+     * @return The name of the encryption certificate.
      * 
      */
     private final @Nullable String encryptionCertificateName;
     /**
-     * The value indicating whether to send or request a MDN.
+     * @return The value indicating whether to send or request a MDN.
      * 
      */
     private final Boolean overrideGroupSigningCertificate;
     /**
-     * The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
+     * @return The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
      * 
      */
     private final @Nullable String sha2AlgorithmFormat;
     /**
-     * The name of the signing certificate.
+     * @return The name of the signing certificate.
      * 
      */
     private final @Nullable String signingCertificateName;
@@ -88,72 +88,72 @@ public final class AS2SecuritySettingsResponse {
     }
 
     /**
-     * The value indicating whether to enable NRR for inbound decoded messages.
+     * @return The value indicating whether to enable NRR for inbound decoded messages.
      * 
-    */
+     */
     public Boolean enableNRRForInboundDecodedMessages() {
         return this.enableNRRForInboundDecodedMessages;
     }
     /**
-     * The value indicating whether to enable NRR for inbound encoded messages.
+     * @return The value indicating whether to enable NRR for inbound encoded messages.
      * 
-    */
+     */
     public Boolean enableNRRForInboundEncodedMessages() {
         return this.enableNRRForInboundEncodedMessages;
     }
     /**
-     * The value indicating whether to enable NRR for inbound MDN.
+     * @return The value indicating whether to enable NRR for inbound MDN.
      * 
-    */
+     */
     public Boolean enableNRRForInboundMDN() {
         return this.enableNRRForInboundMDN;
     }
     /**
-     * The value indicating whether to enable NRR for outbound decoded messages.
+     * @return The value indicating whether to enable NRR for outbound decoded messages.
      * 
-    */
+     */
     public Boolean enableNRRForOutboundDecodedMessages() {
         return this.enableNRRForOutboundDecodedMessages;
     }
     /**
-     * The value indicating whether to enable NRR for outbound encoded messages.
+     * @return The value indicating whether to enable NRR for outbound encoded messages.
      * 
-    */
+     */
     public Boolean enableNRRForOutboundEncodedMessages() {
         return this.enableNRRForOutboundEncodedMessages;
     }
     /**
-     * The value indicating whether to enable NRR for outbound MDN.
+     * @return The value indicating whether to enable NRR for outbound MDN.
      * 
-    */
+     */
     public Boolean enableNRRForOutboundMDN() {
         return this.enableNRRForOutboundMDN;
     }
     /**
-     * The name of the encryption certificate.
+     * @return The name of the encryption certificate.
      * 
-    */
+     */
     public Optional<String> encryptionCertificateName() {
         return Optional.ofNullable(this.encryptionCertificateName);
     }
     /**
-     * The value indicating whether to send or request a MDN.
+     * @return The value indicating whether to send or request a MDN.
      * 
-    */
+     */
     public Boolean overrideGroupSigningCertificate() {
         return this.overrideGroupSigningCertificate;
     }
     /**
-     * The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
+     * @return The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
      * 
-    */
+     */
     public Optional<String> sha2AlgorithmFormat() {
         return Optional.ofNullable(this.sha2AlgorithmFormat);
     }
     /**
-     * The name of the signing certificate.
+     * @return The name of the signing certificate.
      * 
-    */
+     */
     public Optional<String> signingCertificateName() {
         return Optional.ofNullable(this.signingCertificateName);
     }

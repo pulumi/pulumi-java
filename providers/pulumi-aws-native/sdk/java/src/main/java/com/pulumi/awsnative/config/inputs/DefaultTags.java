@@ -26,6 +26,10 @@ public final class DefaultTags extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A group of tags to set across all resources.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -54,6 +58,12 @@ public final class DefaultTags extends com.pulumi.resources.InvokeArgs {
             $ = new DefaultTags(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tags A group of tags to set across all resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

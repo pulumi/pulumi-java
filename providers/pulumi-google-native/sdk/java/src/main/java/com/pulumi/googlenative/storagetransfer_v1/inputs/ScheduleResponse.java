@@ -25,6 +25,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTimeOfDay", required=true)
     private TimeOfDayResponse endTimeOfDay;
 
+    /**
+     * @return The time in UTC that no further transfer operations are scheduled. Combined with schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer operations. This field must be greater than or equal to the timestamp corresponding to the combintation of schedule_start_date and start_time_of_day, and is subject to the following: * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not set, then INVALID_ARGUMENT is returned.
+     * 
+     */
     public TimeOfDayResponse endTimeOfDay() {
         return this.endTimeOfDay;
     }
@@ -36,6 +40,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="repeatInterval", required=true)
     private String repeatInterval;
 
+    /**
+     * @return Interval between the start of each scheduled TransferOperation. If unspecified, the default value is 24 hours. This value may not be less than 1 hour.
+     * 
+     */
     public String repeatInterval() {
         return this.repeatInterval;
     }
@@ -47,6 +55,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scheduleEndDate", required=true)
     private DateResponse scheduleEndDate;
 
+    /**
+     * @return The last day a transfer runs. Date boundaries are determined relative to UTC time. A job runs once per 24 hours within the following guidelines: * If `schedule_end_date` and schedule_start_date are the same and in the future relative to UTC, the transfer is executed only one time. * If `schedule_end_date` is later than `schedule_start_date` and `schedule_end_date` is in the future relative to UTC, the job runs each day at start_time_of_day through `schedule_end_date`.
+     * 
+     */
     public DateResponse scheduleEndDate() {
         return this.scheduleEndDate;
     }
@@ -58,6 +70,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scheduleStartDate", required=true)
     private DateResponse scheduleStartDate;
 
+    /**
+     * @return The start date of a transfer. Date boundaries are determined relative to UTC time. If `schedule_start_date` and start_time_of_day are in the past relative to the job&#39;s creation time, the transfer starts the day after you schedule the transfer request. **Note:** When starting jobs at or near midnight UTC it is possible that a job starts later than expected. For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and the Storage Transfer Service server receives the request on June 2, then it creates a TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight UTC. The first scheduled TransferOperation takes place on June 3 at midnight UTC.
+     * 
+     */
     public DateResponse scheduleStartDate() {
         return this.scheduleStartDate;
     }
@@ -69,6 +85,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTimeOfDay", required=true)
     private TimeOfDayResponse startTimeOfDay;
 
+    /**
+     * @return The time in UTC that a transfer job is scheduled to run. Transfers may start later than this time. If `start_time_of_day` is not specified: * One-time transfers run immediately. * Recurring transfers run immediately, and each day at midnight UTC, through schedule_end_date. If `start_time_of_day` is specified: * One-time transfers run at the specified time. * Recurring transfers run at the specified time each day, through `schedule_end_date`.
+     * 
+     */
     public TimeOfDayResponse startTimeOfDay() {
         return this.startTimeOfDay;
     }
@@ -101,26 +121,56 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTimeOfDay The time in UTC that no further transfer operations are scheduled. Combined with schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer operations. This field must be greater than or equal to the timestamp corresponding to the combintation of schedule_start_date and start_time_of_day, and is subject to the following: * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not set, then INVALID_ARGUMENT is returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeOfDay(TimeOfDayResponse endTimeOfDay) {
             $.endTimeOfDay = endTimeOfDay;
             return this;
         }
 
+        /**
+         * @param repeatInterval Interval between the start of each scheduled TransferOperation. If unspecified, the default value is 24 hours. This value may not be less than 1 hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repeatInterval(String repeatInterval) {
             $.repeatInterval = repeatInterval;
             return this;
         }
 
+        /**
+         * @param scheduleEndDate The last day a transfer runs. Date boundaries are determined relative to UTC time. A job runs once per 24 hours within the following guidelines: * If `schedule_end_date` and schedule_start_date are the same and in the future relative to UTC, the transfer is executed only one time. * If `schedule_end_date` is later than `schedule_start_date` and `schedule_end_date` is in the future relative to UTC, the job runs each day at start_time_of_day through `schedule_end_date`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleEndDate(DateResponse scheduleEndDate) {
             $.scheduleEndDate = scheduleEndDate;
             return this;
         }
 
+        /**
+         * @param scheduleStartDate The start date of a transfer. Date boundaries are determined relative to UTC time. If `schedule_start_date` and start_time_of_day are in the past relative to the job&#39;s creation time, the transfer starts the day after you schedule the transfer request. **Note:** When starting jobs at or near midnight UTC it is possible that a job starts later than expected. For example, if you send an outbound request on June 1 one millisecond prior to midnight UTC and the Storage Transfer Service server receives the request on June 2, then it creates a TransferJob with `schedule_start_date` set to June 2 and a `start_time_of_day` set to midnight UTC. The first scheduled TransferOperation takes place on June 3 at midnight UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleStartDate(DateResponse scheduleStartDate) {
             $.scheduleStartDate = scheduleStartDate;
             return this;
         }
 
+        /**
+         * @param startTimeOfDay The time in UTC that a transfer job is scheduled to run. Transfers may start later than this time. If `start_time_of_day` is not specified: * One-time transfers run immediately. * Recurring transfers run immediately, and each day at midnight UTC, through schedule_end_date. If `start_time_of_day` is specified: * One-time transfers run at the specified time. * Recurring transfers run at the specified time each day, through `schedule_end_date`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOfDay(TimeOfDayResponse startTimeOfDay) {
             $.startTimeOfDay = startTimeOfDay;
             return this;

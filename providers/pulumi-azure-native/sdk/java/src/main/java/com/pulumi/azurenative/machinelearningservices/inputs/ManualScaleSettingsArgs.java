@@ -24,6 +24,10 @@ public final class ManualScaleSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="instanceCount")
     private @Nullable Output<Integer> instanceCount;
 
+    /**
+     * @return Fixed number of instances for this deployment.
+     * 
+     */
     public Optional<Output<Integer>> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
@@ -35,6 +39,10 @@ public final class ManualScaleSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="maxInstances")
     private @Nullable Output<Integer> maxInstances;
 
+    /**
+     * @return Maximum number of instances for this deployment.
+     * 
+     */
     public Optional<Output<Integer>> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
@@ -46,6 +54,10 @@ public final class ManualScaleSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="minInstances")
     private @Nullable Output<Integer> minInstances;
 
+    /**
+     * @return Minimum number of instances for this deployment.
+     * 
+     */
     public Optional<Output<Integer>> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
@@ -57,6 +69,11 @@ public final class ManualScaleSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="scaleType", required=true)
     private Output<String> scaleType;
 
+    /**
+     * @return
+     * Expected value is &#39;Manual&#39;.
+     * 
+     */
     public Output<String> scaleType() {
         return this.scaleType;
     }
@@ -88,38 +105,88 @@ public final class ManualScaleSettingsArgs extends com.pulumi.resources.Resource
             $ = new ManualScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceCount Fixed number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceCount Fixed number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(Integer instanceCount) {
             return instanceCount(Output.of(instanceCount));
         }
 
+        /**
+         * @param maxInstances Maximum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param maxInstances Maximum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(Integer maxInstances) {
             return maxInstances(Output.of(maxInstances));
         }
 
+        /**
+         * @param minInstances Minimum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
             $.minInstances = minInstances;
             return this;
         }
 
+        /**
+         * @param minInstances Minimum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(Integer minInstances) {
             return minInstances(Output.of(minInstances));
         }
 
+        /**
+         * @param scaleType
+         * Expected value is &#39;Manual&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(Output<String> scaleType) {
             $.scaleType = scaleType;
             return this;
         }
 
+        /**
+         * @param scaleType
+         * Expected value is &#39;Manual&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(String scaleType) {
             return scaleType(Output.of(scaleType));
         }

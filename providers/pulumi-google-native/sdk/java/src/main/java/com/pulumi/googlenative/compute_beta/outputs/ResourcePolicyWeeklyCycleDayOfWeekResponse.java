@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
     /**
-     * Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+     * @return Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
      * 
      */
     private final String day;
     /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
      */
     private final String duration;
     /**
-     * Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+     * @return Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
      * 
      */
     private final String startTime;
@@ -36,23 +36,23 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
     }
 
     /**
-     * Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+     * @return Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
      * 
-    */
+     */
     public String day() {
         return this.day;
     }
     /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+     * @return Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

@@ -27,6 +27,10 @@ public final class FunctionInputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
     private @Nullable Output<String> dataType;
 
+    /**
+     * @return The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+     * 
+     */
     public Optional<Output<String>> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -38,6 +42,10 @@ public final class FunctionInputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isConfigurationParameter")
     private @Nullable Output<Boolean> isConfigurationParameter;
 
+    /**
+     * @return A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
+     * 
+     */
     public Optional<Output<Boolean>> isConfigurationParameter() {
         return Optional.ofNullable(this.isConfigurationParameter);
     }
@@ -67,20 +75,44 @@ public final class FunctionInputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FunctionInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable Output<String> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(String dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param isConfigurationParameter A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isConfigurationParameter(@Nullable Output<Boolean> isConfigurationParameter) {
             $.isConfigurationParameter = isConfigurationParameter;
             return this;
         }
 
+        /**
+         * @param isConfigurationParameter A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isConfigurationParameter(Boolean isConfigurationParameter) {
             return isConfigurationParameter(Output.of(isConfigurationParameter));
         }

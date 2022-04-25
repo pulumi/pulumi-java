@@ -19,6 +19,10 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
     @Import(name="networkInterfaceName", required=true)
     private String networkInterfaceName;
 
+    /**
+     * @return The name of the network interface.
+     * 
+     */
     public String networkInterfaceName() {
         return this.networkInterfaceName;
     }
@@ -30,6 +34,10 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
     @Import(name="tapConfigurationName", required=true)
     private String tapConfigurationName;
 
+    /**
+     * @return The name of the tap configuration.
+     * 
+     */
     public String tapConfigurationName() {
         return this.tapConfigurationName;
     }
@@ -71,16 +83,34 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
             $ = new GetNetworkInterfaceTapConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(String networkInterfaceName) {
             $.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param tapConfigurationName The name of the tap configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapConfigurationName(String tapConfigurationName) {
             $.tapConfigurationName = tapConfigurationName;
             return this;

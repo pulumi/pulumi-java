@@ -24,6 +24,10 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends com.pulumi
     @Import(name="pullDeps", required=true)
     private Boolean pullDeps;
 
+    /**
+     * @return Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * 
+     */
     public Boolean pullDeps() {
         return this.pullDeps;
     }
@@ -35,6 +39,10 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends com.pulumi
     @Import(name="source", required=true)
     private OSPolicyResourceFileResponse source;
 
+    /**
+     * @return An rpm package.
+     * 
+     */
     public OSPolicyResourceFileResponse source() {
         return this.source;
     }
@@ -64,11 +72,23 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends com.pulumi
             $ = new OSPolicyResourcePackageResourceRPMResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pullDeps Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDeps(Boolean pullDeps) {
             $.pullDeps = pullDeps;
             return this;
         }
 
+        /**
+         * @param source An rpm package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(OSPolicyResourceFileResponse source) {
             $.source = source;
             return this;

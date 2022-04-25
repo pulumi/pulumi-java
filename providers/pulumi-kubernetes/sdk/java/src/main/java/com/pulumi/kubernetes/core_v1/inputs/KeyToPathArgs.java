@@ -27,6 +27,10 @@ public final class KeyToPathArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The key to project.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -38,6 +42,10 @@ public final class KeyToPathArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
     private @Nullable Output<Integer> mode;
 
+    /**
+     * @return Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * 
+     */
     public Optional<Output<Integer>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -49,6 +57,10 @@ public final class KeyToPathArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The relative path of the file to map the key to. May not be an absolute path. May not contain the path element &#39;..&#39;. May not start with the string &#39;..&#39;.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -79,29 +91,65 @@ public final class KeyToPathArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyToPathArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key to project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key to project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param mode Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Integer> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Integer mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param path The relative path of the file to map the key to. May not be an absolute path. May not contain the path element &#39;..&#39;. May not start with the string &#39;..&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The relative path of the file to map the key to. May not be an absolute path. May not contain the path element &#39;..&#39;. May not start with the string &#39;..&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

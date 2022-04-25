@@ -25,6 +25,10 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends com.pulumi
     @Import(name="logLevel", required=true)
     private Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel;
 
+    /**
+     * @return  Specifies which types of information are logged.
+     * 
+     */
     public Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel() {
         return this.logLevel;
     }
@@ -36,6 +40,10 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends com.pulumi
     @Import(name="roleArnForLogging", required=true)
     private Output<String> roleArnForLogging;
 
+    /**
+     * @return  The ARN of the IAM role used for logging.
+     * 
+     */
     public Output<String> roleArnForLogging() {
         return this.roleArnForLogging;
     }
@@ -65,20 +73,44 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends com.pulumi
             $ = new MitigationActionEnableIoTLoggingParamsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logLevel  Specifies which types of information are logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(Output<MitigationActionEnableIoTLoggingParamsLogLevel> logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param logLevel  Specifies which types of information are logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
             return logLevel(Output.of(logLevel));
         }
 
+        /**
+         * @param roleArnForLogging  The ARN of the IAM role used for logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArnForLogging(Output<String> roleArnForLogging) {
             $.roleArnForLogging = roleArnForLogging;
             return this;
         }
 
+        /**
+         * @param roleArnForLogging  The ARN of the IAM role used for logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArnForLogging(String roleArnForLogging) {
             return roleArnForLogging(Output.of(roleArnForLogging));
         }

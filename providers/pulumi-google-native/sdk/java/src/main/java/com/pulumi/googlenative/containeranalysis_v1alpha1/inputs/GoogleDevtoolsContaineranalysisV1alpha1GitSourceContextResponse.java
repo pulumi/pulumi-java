@@ -23,6 +23,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
     @Import(name="revisionId", required=true)
     private String revisionId;
 
+    /**
+     * @return Git commit hash.
+     * 
+     */
     public String revisionId() {
         return this.revisionId;
     }
@@ -34,6 +38,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return Git repository URL.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -63,11 +71,23 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
             $ = new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param revisionId Git commit hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(String revisionId) {
             $.revisionId = revisionId;
             return this;
         }
 
+        /**
+         * @param url Git repository URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

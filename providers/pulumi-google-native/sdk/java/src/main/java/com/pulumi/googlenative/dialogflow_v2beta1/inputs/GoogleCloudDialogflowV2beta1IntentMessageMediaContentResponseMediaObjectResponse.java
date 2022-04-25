@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="contentUrl", required=true)
     private String contentUrl;
 
+    /**
+     * @return Url where the media is stored.
+     * 
+     */
     public String contentUrl() {
         return this.contentUrl;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. Description of media card.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="icon", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
 
+    /**
+     * @return Optional. Icon to display above media content.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon() {
         return this.icon;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="largeImage", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
 
+    /**
+     * @return Optional. Image to display above media content.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage() {
         return this.largeImage;
     }
@@ -68,6 +84,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of media card.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -100,26 +120,56 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             $ = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentUrl Url where the media is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentUrl(String contentUrl) {
             $.contentUrl = contentUrl;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of media card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param icon Optional. Icon to display above media content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder icon(GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon) {
             $.icon = icon;
             return this;
         }
 
+        /**
+         * @param largeImage Optional. Image to display above media content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeImage(GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage) {
             $.largeImage = largeImage;
             return this;
         }
 
+        /**
+         * @param name Name of media card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

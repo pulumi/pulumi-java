@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateSigningRequestStatus {
     /**
-     * If request was approved, the controller will place the issued certificate here.
+     * @return If request was approved, the controller will place the issued certificate here.
      * 
      */
     private final @Nullable String certificate;
     /**
-     * Conditions applied to the request, such as approval or denial.
+     * @return Conditions applied to the request, such as approval or denial.
      * 
      */
     private final @Nullable List<CertificateSigningRequestCondition> conditions;
@@ -33,16 +33,16 @@ public final class CertificateSigningRequestStatus {
     }
 
     /**
-     * If request was approved, the controller will place the issued certificate here.
+     * @return If request was approved, the controller will place the issued certificate here.
      * 
-    */
+     */
     public Optional<String> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
-     * Conditions applied to the request, such as approval or denial.
+     * @return Conditions applied to the request, such as approval or denial.
      * 
-    */
+     */
     public List<CertificateSigningRequestCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }

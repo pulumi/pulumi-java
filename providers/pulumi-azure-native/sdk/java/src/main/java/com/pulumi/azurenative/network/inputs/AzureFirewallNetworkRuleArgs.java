@@ -29,6 +29,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="destinationAddresses")
     private @Nullable Output<List<String>> destinationAddresses;
 
+    /**
+     * @return List of destination IP addresses.
+     * 
+     */
     public Optional<Output<List<String>>> destinationAddresses() {
         return Optional.ofNullable(this.destinationAddresses);
     }
@@ -51,6 +59,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="destinationFqdns")
     private @Nullable Output<List<String>> destinationFqdns;
 
+    /**
+     * @return List of destination FQDNs.
+     * 
+     */
     public Optional<Output<List<String>>> destinationFqdns() {
         return Optional.ofNullable(this.destinationFqdns);
     }
@@ -62,6 +74,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="destinationIpGroups")
     private @Nullable Output<List<String>> destinationIpGroups;
 
+    /**
+     * @return List of destination IpGroups for this rule.
+     * 
+     */
     public Optional<Output<List<String>>> destinationIpGroups() {
         return Optional.ofNullable(this.destinationIpGroups);
     }
@@ -73,6 +89,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="destinationPorts")
     private @Nullable Output<List<String>> destinationPorts;
 
+    /**
+     * @return List of destination ports.
+     * 
+     */
     public Optional<Output<List<String>>> destinationPorts() {
         return Optional.ofNullable(this.destinationPorts);
     }
@@ -84,6 +104,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the network rule.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +119,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="protocols")
     private @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
 
+    /**
+     * @return Array of AzureFirewallNetworkRuleProtocols.
+     * 
+     */
     public Optional<Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>>> protocols() {
         return Optional.ofNullable(this.protocols);
     }
@@ -106,6 +134,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="sourceAddresses")
     private @Nullable Output<List<String>> sourceAddresses;
 
+    /**
+     * @return List of source IP addresses for this rule.
+     * 
+     */
     public Optional<Output<List<String>>> sourceAddresses() {
         return Optional.ofNullable(this.sourceAddresses);
     }
@@ -117,6 +149,10 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
     @Import(name="sourceIpGroups")
     private @Nullable Output<List<String>> sourceIpGroups;
 
+    /**
+     * @return List of source IpGroups for this rule.
+     * 
+     */
     public Optional<Output<List<String>>> sourceIpGroups() {
         return Optional.ofNullable(this.sourceIpGroups);
     }
@@ -153,111 +189,261 @@ public final class AzureFirewallNetworkRuleArgs extends com.pulumi.resources.Res
             $ = new AzureFirewallNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
             $.destinationAddresses = destinationAddresses;
             return this;
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(List<String> destinationAddresses) {
             return destinationAddresses(Output.of(destinationAddresses));
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
 
+        /**
+         * @param destinationFqdns List of destination FQDNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFqdns(@Nullable Output<List<String>> destinationFqdns) {
             $.destinationFqdns = destinationFqdns;
             return this;
         }
 
+        /**
+         * @param destinationFqdns List of destination FQDNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFqdns(List<String> destinationFqdns) {
             return destinationFqdns(Output.of(destinationFqdns));
         }
 
+        /**
+         * @param destinationFqdns List of destination FQDNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFqdns(String... destinationFqdns) {
             return destinationFqdns(List.of(destinationFqdns));
         }
 
+        /**
+         * @param destinationIpGroups List of destination IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIpGroups(@Nullable Output<List<String>> destinationIpGroups) {
             $.destinationIpGroups = destinationIpGroups;
             return this;
         }
 
+        /**
+         * @param destinationIpGroups List of destination IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIpGroups(List<String> destinationIpGroups) {
             return destinationIpGroups(Output.of(destinationIpGroups));
         }
 
+        /**
+         * @param destinationIpGroups List of destination IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIpGroups(String... destinationIpGroups) {
             return destinationIpGroups(List.of(destinationIpGroups));
         }
 
+        /**
+         * @param destinationPorts List of destination ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
             $.destinationPorts = destinationPorts;
             return this;
         }
 
+        /**
+         * @param destinationPorts List of destination ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(List<String> destinationPorts) {
             return destinationPorts(Output.of(destinationPorts));
         }
 
+        /**
+         * @param destinationPorts List of destination ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
 
+        /**
+         * @param name Name of the network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param protocols Array of AzureFirewallNetworkRuleProtocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocols(@Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols) {
             $.protocols = protocols;
             return this;
         }
 
+        /**
+         * @param protocols Array of AzureFirewallNetworkRuleProtocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocols(List<Either<String,AzureFirewallNetworkRuleProtocol>> protocols) {
             return protocols(Output.of(protocols));
         }
 
+        /**
+         * @param protocols Array of AzureFirewallNetworkRuleProtocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocols(Either<String,AzureFirewallNetworkRuleProtocol>... protocols) {
             return protocols(List.of(protocols));
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
             $.sourceAddresses = sourceAddresses;
             return this;
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(List<String> sourceAddresses) {
             return sourceAddresses(Output.of(sourceAddresses));
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
             $.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(List<String> sourceIpGroups) {
             return sourceIpGroups(Output.of(sourceIpGroups));
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(String... sourceIpGroups) {
             return sourceIpGroups(List.of(sourceIpGroups));
         }

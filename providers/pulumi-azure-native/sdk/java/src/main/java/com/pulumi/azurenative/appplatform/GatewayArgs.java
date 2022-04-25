@@ -24,6 +24,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
     private @Nullable Output<String> gatewayName;
 
+    /**
+     * @return The name of Spring Cloud Gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayName() {
         return Optional.ofNullable(this.gatewayName);
     }
@@ -35,6 +39,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<GatewayPropertiesArgs> properties;
 
+    /**
+     * @return Spring Cloud Gateway properties payload
+     * 
+     */
     public Optional<Output<GatewayPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -46,6 +54,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -68,6 +84,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Sku of the Spring Cloud Gateway resource
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -100,47 +120,107 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             return gatewayName(Output.of(gatewayName));
         }
 
+        /**
+         * @param properties Spring Cloud Gateway properties payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<GatewayPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Spring Cloud Gateway properties payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(GatewayPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param sku Sku of the Spring Cloud Gateway resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Sku of the Spring Cloud Gateway resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }

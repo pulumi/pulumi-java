@@ -23,6 +23,10 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -34,6 +38,10 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="historyId")
     private @Nullable Output<String> historyId;
 
+    /**
+     * @return A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
+     * 
+     */
     public Optional<Output<String>> historyId() {
         return Optional.ofNullable(this.historyId);
     }
@@ -45,6 +53,10 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +82,10 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testPlatform")
     private @Nullable Output<HistoryTestPlatform> testPlatform;
 
+    /**
+     * @return The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
+     * 
+     */
     public Optional<Output<HistoryTestPlatform>> testPlatform() {
         return Optional.ofNullable(this.testPlatform);
     }
@@ -103,29 +119,65 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HistoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param historyId A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
+         * 
+         * @return builder
+         * 
+         */
         public Builder historyId(@Nullable Output<String> historyId) {
             $.historyId = historyId;
             return this;
         }
 
+        /**
+         * @param historyId A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
+         * 
+         * @return builder
+         * 
+         */
         public Builder historyId(String historyId) {
             return historyId(Output.of(historyId));
         }
 
+        /**
+         * @param name A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -148,11 +200,23 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param testPlatform The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testPlatform(@Nullable Output<HistoryTestPlatform> testPlatform) {
             $.testPlatform = testPlatform;
             return this;
         }
 
+        /**
+         * @param testPlatform The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testPlatform(HistoryTestPlatform testPlatform) {
             return testPlatform(Output.of(testPlatform));
         }

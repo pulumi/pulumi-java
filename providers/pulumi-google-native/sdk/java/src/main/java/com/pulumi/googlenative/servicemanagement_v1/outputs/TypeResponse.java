@@ -14,32 +14,32 @@ import java.util.Objects;
 @CustomType
 public final class TypeResponse {
     /**
-     * The list of fields.
+     * @return The list of fields.
      * 
      */
     private final List<FieldResponse> fields;
     /**
-     * The fully qualified message name.
+     * @return The fully qualified message name.
      * 
      */
     private final String name;
     /**
-     * The list of types appearing in `oneof` definitions in this type.
+     * @return The list of types appearing in `oneof` definitions in this type.
      * 
      */
     private final List<String> oneofs;
     /**
-     * The protocol buffer options.
+     * @return The protocol buffer options.
      * 
      */
     private final List<OptionResponse> options;
     /**
-     * The source context.
+     * @return The source context.
      * 
      */
     private final SourceContextResponse sourceContext;
     /**
-     * The source syntax.
+     * @return The source syntax.
      * 
      */
     private final String syntax;
@@ -61,44 +61,44 @@ public final class TypeResponse {
     }
 
     /**
-     * The list of fields.
+     * @return The list of fields.
      * 
-    */
+     */
     public List<FieldResponse> fields() {
         return this.fields;
     }
     /**
-     * The fully qualified message name.
+     * @return The fully qualified message name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of types appearing in `oneof` definitions in this type.
+     * @return The list of types appearing in `oneof` definitions in this type.
      * 
-    */
+     */
     public List<String> oneofs() {
         return this.oneofs;
     }
     /**
-     * The protocol buffer options.
+     * @return The protocol buffer options.
      * 
-    */
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
     /**
-     * The source context.
+     * @return The source context.
      * 
-    */
+     */
     public SourceContextResponse sourceContext() {
         return this.sourceContext;
     }
     /**
-     * The source syntax.
+     * @return The source syntax.
      * 
-    */
+     */
     public String syntax() {
         return this.syntax;
     }

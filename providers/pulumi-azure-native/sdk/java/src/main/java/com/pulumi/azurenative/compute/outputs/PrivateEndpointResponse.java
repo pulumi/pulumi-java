@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PrivateEndpointResponse {
     /**
-     * The ARM identifier for Private Endpoint
+     * @return The ARM identifier for Private Endpoint
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class PrivateEndpointResponse {
     }
 
     /**
-     * The ARM identifier for Private Endpoint
+     * @return The ARM identifier for Private Endpoint
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

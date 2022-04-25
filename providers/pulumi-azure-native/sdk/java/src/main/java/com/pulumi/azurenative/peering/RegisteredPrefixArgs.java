@@ -22,6 +22,10 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
     @Import(name="peeringName", required=true)
     private Output<String> peeringName;
 
+    /**
+     * @return The name of the peering.
+     * 
+     */
     public Output<String> peeringName() {
         return this.peeringName;
     }
@@ -33,6 +37,10 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The customer&#39;s prefix from which traffic originates.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -44,6 +52,10 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
     @Import(name="registeredPrefixName")
     private @Nullable Output<String> registeredPrefixName;
 
+    /**
+     * @return The name of the registered prefix.
+     * 
+     */
     public Optional<Output<String>> registeredPrefixName() {
         return Optional.ofNullable(this.registeredPrefixName);
     }
@@ -55,6 +67,10 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -86,38 +102,86 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
             $ = new RegisteredPrefixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(Output<String> peeringName) {
             $.peeringName = peeringName;
             return this;
         }
 
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(String peeringName) {
             return peeringName(Output.of(peeringName));
         }
 
+        /**
+         * @param prefix The customer&#39;s prefix from which traffic originates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The customer&#39;s prefix from which traffic originates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param registeredPrefixName The name of the registered prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredPrefixName(@Nullable Output<String> registeredPrefixName) {
             $.registeredPrefixName = registeredPrefixName;
             return this;
         }
 
+        /**
+         * @param registeredPrefixName The name of the registered prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredPrefixName(String registeredPrefixName) {
             return registeredPrefixName(Output.of(registeredPrefixName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

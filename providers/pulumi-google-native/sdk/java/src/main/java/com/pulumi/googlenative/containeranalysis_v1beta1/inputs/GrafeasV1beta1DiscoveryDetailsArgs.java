@@ -24,6 +24,10 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends com.pulumi.resourc
     @Import(name="discovered", required=true)
     private Output<DiscoveredArgs> discovered;
 
+    /**
+     * @return Analysis status for the discovered resource.
+     * 
+     */
     public Output<DiscoveredArgs> discovered() {
         return this.discovered;
     }
@@ -52,11 +56,23 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends com.pulumi.resourc
             $ = new GrafeasV1beta1DiscoveryDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param discovered Analysis status for the discovered resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discovered(Output<DiscoveredArgs> discovered) {
             $.discovered = discovered;
             return this;
         }
 
+        /**
+         * @param discovered Analysis status for the discovered resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discovered(DiscoveredArgs discovered) {
             return discovered(Output.of(discovered));
         }

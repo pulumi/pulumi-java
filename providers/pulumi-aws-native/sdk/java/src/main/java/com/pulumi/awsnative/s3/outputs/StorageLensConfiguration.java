@@ -23,12 +23,12 @@ public final class StorageLensConfiguration {
     private final String id;
     private final @Nullable StorageLensBucketsAndRegions include;
     /**
-     * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
+     * @return Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The ARN for the Amazon S3 Storage Lens configuration.
+     * @return The ARN for the Amazon S3 Storage Lens configuration.
      * 
      */
     private final @Nullable String storageLensArn;
@@ -72,16 +72,16 @@ public final class StorageLensConfiguration {
         return Optional.ofNullable(this.include);
     }
     /**
-     * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
+     * @return Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The ARN for the Amazon S3 Storage Lens configuration.
+     * @return The ARN for the Amazon S3 Storage Lens configuration.
      * 
-    */
+     */
     public Optional<String> storageLensArn() {
         return Optional.ofNullable(this.storageLensArn);
     }

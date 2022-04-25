@@ -23,6 +23,10 @@ public final class VpcIpamPoolCidrState extends com.pulumi.resources.ResourceArg
     @Import(name="cidr")
     private @Nullable Output<String> cidr;
 
+    /**
+     * @return The CIDR you want to assign to the pool.
+     * 
+     */
     public Optional<Output<String>> cidr() {
         return Optional.ofNullable(this.cidr);
     }
@@ -34,6 +38,10 @@ public final class VpcIpamPoolCidrState extends com.pulumi.resources.ResourceArg
     @Import(name="cidrAuthorizationContext")
     private @Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs> cidrAuthorizationContext;
 
+    /**
+     * @return A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. This is not stored in the state file. See cidr_authorization_context for more information.
+     * 
+     */
     public Optional<Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs>> cidrAuthorizationContext() {
         return Optional.ofNullable(this.cidrAuthorizationContext);
     }
@@ -45,6 +53,10 @@ public final class VpcIpamPoolCidrState extends com.pulumi.resources.ResourceArg
     @Import(name="ipamPoolId")
     private @Nullable Output<String> ipamPoolId;
 
+    /**
+     * @return The ID of the pool to which you want to assign a CIDR.
+     * 
+     */
     public Optional<Output<String>> ipamPoolId() {
         return Optional.ofNullable(this.ipamPoolId);
     }
@@ -75,29 +87,65 @@ public final class VpcIpamPoolCidrState extends com.pulumi.resources.ResourceArg
             $ = new VpcIpamPoolCidrState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidr The CIDR you want to assign to the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidr(@Nullable Output<String> cidr) {
             $.cidr = cidr;
             return this;
         }
 
+        /**
+         * @param cidr The CIDR you want to assign to the pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidr(String cidr) {
             return cidr(Output.of(cidr));
         }
 
+        /**
+         * @param cidrAuthorizationContext A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. This is not stored in the state file. See cidr_authorization_context for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrAuthorizationContext(@Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs> cidrAuthorizationContext) {
             $.cidrAuthorizationContext = cidrAuthorizationContext;
             return this;
         }
 
+        /**
+         * @param cidrAuthorizationContext A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. This is not stored in the state file. See cidr_authorization_context for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrAuthorizationContext(VpcIpamPoolCidrCidrAuthorizationContextGetArgs cidrAuthorizationContext) {
             return cidrAuthorizationContext(Output.of(cidrAuthorizationContext));
         }
 
+        /**
+         * @param ipamPoolId The ID of the pool to which you want to assign a CIDR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamPoolId(@Nullable Output<String> ipamPoolId) {
             $.ipamPoolId = ipamPoolId;
             return this;
         }
 
+        /**
+         * @param ipamPoolId The ID of the pool to which you want to assign a CIDR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamPoolId(String ipamPoolId) {
             return ipamPoolId(Output.of(ipamPoolId));
         }

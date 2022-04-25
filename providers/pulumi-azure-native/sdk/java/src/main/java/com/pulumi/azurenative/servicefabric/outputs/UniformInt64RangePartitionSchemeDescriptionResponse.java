@@ -11,24 +11,24 @@ import java.util.Objects;
 @CustomType
 public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     /**
-     * The number of partitions.
+     * @return The number of partitions.
      * 
      */
     private final Integer count;
     /**
-     * String indicating the upper bound of the partition key range that
+     * @return String indicating the upper bound of the partition key range that
      * should be split between the partition ‘count’
      * 
      */
     private final String highKey;
     /**
-     * String indicating the lower bound of the partition key range that
+     * @return String indicating the lower bound of the partition key range that
      * should be split between the partition ‘count’
      * 
      */
     private final String lowKey;
     /**
-     * Enumerates the ways that a service can be partitioned.
+     * @return Enumerates the ways that a service can be partitioned.
      * Expected value is &#39;UniformInt64Range&#39;.
      * 
      */
@@ -47,33 +47,33 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     }
 
     /**
-     * The number of partitions.
+     * @return The number of partitions.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * String indicating the upper bound of the partition key range that
+     * @return String indicating the upper bound of the partition key range that
      * should be split between the partition ‘count’
      * 
-    */
+     */
     public String highKey() {
         return this.highKey;
     }
     /**
-     * String indicating the lower bound of the partition key range that
+     * @return String indicating the lower bound of the partition key range that
      * should be split between the partition ‘count’
      * 
-    */
+     */
     public String lowKey() {
         return this.lowKey;
     }
     /**
-     * Enumerates the ways that a service can be partitioned.
+     * @return Enumerates the ways that a service can be partitioned.
      * Expected value is &#39;UniformInt64Range&#39;.
      * 
-    */
+     */
     public String partitionScheme() {
         return this.partitionScheme;
     }

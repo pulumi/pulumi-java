@@ -25,6 +25,10 @@ public final class FailoverGroupReadOnlyEndpointResponse extends com.pulumi.reso
     @Import(name="failoverPolicy")
     private @Nullable String failoverPolicy;
 
+    /**
+     * @return Failover policy of the read-only endpoint for the failover group.
+     * 
+     */
     public Optional<String> failoverPolicy() {
         return Optional.ofNullable(this.failoverPolicy);
     }
@@ -53,6 +57,12 @@ public final class FailoverGroupReadOnlyEndpointResponse extends com.pulumi.reso
             $ = new FailoverGroupReadOnlyEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-only endpoint for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(@Nullable String failoverPolicy) {
             $.failoverPolicy = failoverPolicy;
             return this;

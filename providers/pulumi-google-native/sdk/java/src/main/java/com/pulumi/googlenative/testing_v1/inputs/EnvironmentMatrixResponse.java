@@ -25,6 +25,10 @@ public final class EnvironmentMatrixResponse extends com.pulumi.resources.Invoke
     @Import(name="androidDeviceList", required=true)
     private AndroidDeviceListResponse androidDeviceList;
 
+    /**
+     * @return A list of Android devices; the test will be run only on the specified devices.
+     * 
+     */
     public AndroidDeviceListResponse androidDeviceList() {
         return this.androidDeviceList;
     }
@@ -36,6 +40,10 @@ public final class EnvironmentMatrixResponse extends com.pulumi.resources.Invoke
     @Import(name="androidMatrix", required=true)
     private AndroidMatrixResponse androidMatrix;
 
+    /**
+     * @return A matrix of Android devices.
+     * 
+     */
     public AndroidMatrixResponse androidMatrix() {
         return this.androidMatrix;
     }
@@ -47,6 +55,10 @@ public final class EnvironmentMatrixResponse extends com.pulumi.resources.Invoke
     @Import(name="iosDeviceList", required=true)
     private IosDeviceListResponse iosDeviceList;
 
+    /**
+     * @return A list of iOS devices.
+     * 
+     */
     public IosDeviceListResponse iosDeviceList() {
         return this.iosDeviceList;
     }
@@ -77,16 +89,34 @@ public final class EnvironmentMatrixResponse extends com.pulumi.resources.Invoke
             $ = new EnvironmentMatrixResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidDeviceList A list of Android devices; the test will be run only on the specified devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidDeviceList(AndroidDeviceListResponse androidDeviceList) {
             $.androidDeviceList = androidDeviceList;
             return this;
         }
 
+        /**
+         * @param androidMatrix A matrix of Android devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidMatrix(AndroidMatrixResponse androidMatrix) {
             $.androidMatrix = androidMatrix;
             return this;
         }
 
+        /**
+         * @param iosDeviceList A list of iOS devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDeviceList(IosDeviceListResponse iosDeviceList) {
             $.iosDeviceList = iosDeviceList;
             return this;

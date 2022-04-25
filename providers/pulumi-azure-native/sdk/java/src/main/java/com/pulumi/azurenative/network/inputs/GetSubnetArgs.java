@@ -21,6 +21,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetName", required=true)
     private String subnetName;
 
+    /**
+     * @return The name of the subnet.
+     * 
+     */
     public String subnetName() {
         return this.subnetName;
     }
@@ -54,6 +66,10 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualNetworkName", required=true)
     private String virtualNetworkName;
 
+    /**
+     * @return The name of the virtual network.
+     * 
+     */
     public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
@@ -85,21 +101,45 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSubnetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param subnetName The name of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetName(String subnetName) {
             $.subnetName = subnetName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkName(String virtualNetworkName) {
             $.virtualNetworkName = virtualNetworkName;
             return this;

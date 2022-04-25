@@ -22,6 +22,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
     @Import(name="failureCount")
     private @Nullable Double failureCount;
 
+    /**
+     * @return Total number of times that the HelmRelease failed to install or upgrade
+     * 
+     */
     public Optional<Double> failureCount() {
         return Optional.ofNullable(this.failureCount);
     }
@@ -33,6 +37,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
     @Import(name="helmChartRef")
     private @Nullable ObjectReferenceDefinitionResponse helmChartRef;
 
+    /**
+     * @return The reference to the HelmChart object used as the source to this HelmRelease
+     * 
+     */
     public Optional<ObjectReferenceDefinitionResponse> helmChartRef() {
         return Optional.ofNullable(this.helmChartRef);
     }
@@ -44,6 +52,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
     @Import(name="installFailureCount")
     private @Nullable Double installFailureCount;
 
+    /**
+     * @return Number of times that the HelmRelease failed to install
+     * 
+     */
     public Optional<Double> installFailureCount() {
         return Optional.ofNullable(this.installFailureCount);
     }
@@ -55,6 +67,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
     @Import(name="lastRevisionApplied")
     private @Nullable Double lastRevisionApplied;
 
+    /**
+     * @return The revision number of the last released object change
+     * 
+     */
     public Optional<Double> lastRevisionApplied() {
         return Optional.ofNullable(this.lastRevisionApplied);
     }
@@ -66,6 +82,10 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
     @Import(name="upgradeFailureCount")
     private @Nullable Double upgradeFailureCount;
 
+    /**
+     * @return Number of times that the HelmRelease failed to upgrade
+     * 
+     */
     public Optional<Double> upgradeFailureCount() {
         return Optional.ofNullable(this.upgradeFailureCount);
     }
@@ -98,26 +118,56 @@ public final class HelmReleasePropertiesDefinitionResponse extends com.pulumi.re
             $ = new HelmReleasePropertiesDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureCount Total number of times that the HelmRelease failed to install or upgrade
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureCount(@Nullable Double failureCount) {
             $.failureCount = failureCount;
             return this;
         }
 
+        /**
+         * @param helmChartRef The reference to the HelmChart object used as the source to this HelmRelease
+         * 
+         * @return builder
+         * 
+         */
         public Builder helmChartRef(@Nullable ObjectReferenceDefinitionResponse helmChartRef) {
             $.helmChartRef = helmChartRef;
             return this;
         }
 
+        /**
+         * @param installFailureCount Number of times that the HelmRelease failed to install
+         * 
+         * @return builder
+         * 
+         */
         public Builder installFailureCount(@Nullable Double installFailureCount) {
             $.installFailureCount = installFailureCount;
             return this;
         }
 
+        /**
+         * @param lastRevisionApplied The revision number of the last released object change
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRevisionApplied(@Nullable Double lastRevisionApplied) {
             $.lastRevisionApplied = lastRevisionApplied;
             return this;
         }
 
+        /**
+         * @param upgradeFailureCount Number of times that the HelmRelease failed to upgrade
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeFailureCount(@Nullable Double upgradeFailureCount) {
             $.upgradeFailureCount = upgradeFailureCount;
             return this;

@@ -25,6 +25,10 @@ public final class DatabaseStatisticsResponse extends com.pulumi.resources.Invok
     @Import(name="size")
     private @Nullable Double size;
 
+    /**
+     * @return The database size - the total size of compressed data and index in bytes.
+     * 
+     */
     public Optional<Double> size() {
         return Optional.ofNullable(this.size);
     }
@@ -53,6 +57,12 @@ public final class DatabaseStatisticsResponse extends com.pulumi.resources.Invok
             $ = new DatabaseStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param size The database size - the total size of compressed data and index in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Double size) {
             $.size = size;
             return this;

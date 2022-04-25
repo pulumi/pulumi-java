@@ -21,6 +21,10 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends com.pulumi.re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends com.pulumi.re
     @Import(name="properties", required=true)
     private Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties;
 
+    /**
+     * @return Properties of load balancer frontend ip configuration.
+     * 
+     */
     public Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties() {
         return this.properties;
     }
@@ -61,20 +69,44 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends com.pulumi.re
             $ = new LoadBalancerFrontendIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Properties of load balancer frontend ip configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of load balancer frontend ip configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(LoadBalancerFrontendIPConfigurationPropertiesArgs properties) {
             return properties(Output.of(properties));
         }

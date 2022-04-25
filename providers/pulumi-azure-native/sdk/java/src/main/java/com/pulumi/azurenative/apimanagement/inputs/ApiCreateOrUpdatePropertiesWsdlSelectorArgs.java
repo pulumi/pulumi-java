@@ -26,6 +26,10 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends com.pulum
     @Import(name="wsdlEndpointName")
     private @Nullable Output<String> wsdlEndpointName;
 
+    /**
+     * @return Name of endpoint(port) to import from WSDL
+     * 
+     */
     public Optional<Output<String>> wsdlEndpointName() {
         return Optional.ofNullable(this.wsdlEndpointName);
     }
@@ -37,6 +41,10 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends com.pulum
     @Import(name="wsdlServiceName")
     private @Nullable Output<String> wsdlServiceName;
 
+    /**
+     * @return Name of service to import from WSDL
+     * 
+     */
     public Optional<Output<String>> wsdlServiceName() {
         return Optional.ofNullable(this.wsdlServiceName);
     }
@@ -66,20 +74,44 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends com.pulum
             $ = new ApiCreateOrUpdatePropertiesWsdlSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param wsdlEndpointName Name of endpoint(port) to import from WSDL
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsdlEndpointName(@Nullable Output<String> wsdlEndpointName) {
             $.wsdlEndpointName = wsdlEndpointName;
             return this;
         }
 
+        /**
+         * @param wsdlEndpointName Name of endpoint(port) to import from WSDL
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsdlEndpointName(String wsdlEndpointName) {
             return wsdlEndpointName(Output.of(wsdlEndpointName));
         }
 
+        /**
+         * @param wsdlServiceName Name of service to import from WSDL
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsdlServiceName(@Nullable Output<String> wsdlServiceName) {
             $.wsdlServiceName = wsdlServiceName;
             return this;
         }
 
+        /**
+         * @param wsdlServiceName Name of service to import from WSDL
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsdlServiceName(String wsdlServiceName) {
             return wsdlServiceName(Output.of(wsdlServiceName));
         }

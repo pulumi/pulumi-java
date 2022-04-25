@@ -23,6 +23,10 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="complianceStatus", required=true)
     private String complianceStatus;
 
+    /**
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
+     * 
+     */
     public String complianceStatus() {
         return this.complianceStatus;
     }
@@ -34,6 +38,10 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastComplianceChecked", required=true)
     private String lastComplianceChecked;
 
+    /**
+     * @return Date and time when last compliance status was checked.
+     * 
+     */
     public String lastComplianceChecked() {
         return this.lastComplianceChecked;
     }
@@ -45,6 +53,10 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="latestReportId", required=true)
     private String latestReportId;
 
+    /**
+     * @return Id of the latest report for the guest configuration assignment.
+     * 
+     */
     public String latestReportId() {
         return this.latestReportId;
     }
@@ -56,6 +68,10 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmId", required=true)
     private String vmId;
 
+    /**
+     * @return UUID of the VM.
+     * 
+     */
     public String vmId() {
         return this.vmId;
     }
@@ -67,6 +83,10 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmResourceId", required=true)
     private String vmResourceId;
 
+    /**
+     * @return Azure resource Id of the VM.
+     * 
+     */
     public String vmResourceId() {
         return this.vmResourceId;
     }
@@ -99,26 +119,56 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VMSSVMInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param complianceStatus A value indicating compliance status of the machine for the assigned guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceStatus(String complianceStatus) {
             $.complianceStatus = complianceStatus;
             return this;
         }
 
+        /**
+         * @param lastComplianceChecked Date and time when last compliance status was checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastComplianceChecked(String lastComplianceChecked) {
             $.lastComplianceChecked = lastComplianceChecked;
             return this;
         }
 
+        /**
+         * @param latestReportId Id of the latest report for the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestReportId(String latestReportId) {
             $.latestReportId = latestReportId;
             return this;
         }
 
+        /**
+         * @param vmId UUID of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(String vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param vmResourceId Azure resource Id of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmResourceId(String vmResourceId) {
             $.vmResourceId = vmResourceId;
             return this;

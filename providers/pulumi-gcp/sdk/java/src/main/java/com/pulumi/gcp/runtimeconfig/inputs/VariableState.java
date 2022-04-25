@@ -23,6 +23,11 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the variable to manage. Note that variable
+     * names can be hierarchical using slashes (e.g. &#34;prod-variables/hostname&#34;).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -35,6 +40,11 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The name of the RuntimeConfig resource containing this
+     * variable.
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -47,6 +57,11 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -61,6 +76,13 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="text")
     private @Nullable Output<String> text;
 
+    /**
+     * @return or `value` - (Required) The content to associate with the variable.
+     * Exactly one of `text` or `variable` must be specified. If `text` is specified,
+     * it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
+     * is specified, it must be base64 encoded and less than 4096 bytes in length.
+     * 
+     */
     public Optional<Output<String>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -74,6 +96,12 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return (Computed) The timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+     * accurate to nanoseconds, representing when the variable was last updated.
+     * Example: &#34;2016-10-09T12:33:37.578138407Z&#34;.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -114,47 +142,123 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
             $ = new VariableState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the variable to manage. Note that variable
+         * names can be hierarchical using slashes (e.g. &#34;prod-variables/hostname&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the variable to manage. Note that variable
+         * names can be hierarchical using slashes (e.g. &#34;prod-variables/hostname&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent The name of the RuntimeConfig resource containing this
+         * variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The name of the RuntimeConfig resource containing this
+         * variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param text or `value` - (Required) The content to associate with the variable.
+         * Exactly one of `text` or `variable` must be specified. If `text` is specified,
+         * it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
+         * is specified, it must be base64 encoded and less than 4096 bytes in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text or `value` - (Required) The content to associate with the variable.
+         * Exactly one of `text` or `variable` must be specified. If `text` is specified,
+         * it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
+         * is specified, it must be base64 encoded and less than 4096 bytes in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }
 
+        /**
+         * @param updateTime (Computed) The timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+         * accurate to nanoseconds, representing when the variable was last updated.
+         * Example: &#34;2016-10-09T12:33:37.578138407Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime (Computed) The timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+         * accurate to nanoseconds, representing when the variable was last updated.
+         * Example: &#34;2016-10-09T12:33:37.578138407Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

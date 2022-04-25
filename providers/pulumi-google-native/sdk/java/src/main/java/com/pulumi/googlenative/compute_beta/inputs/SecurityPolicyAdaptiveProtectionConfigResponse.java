@@ -23,6 +23,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse extends com.pu
     @Import(name="layer7DdosDefenseConfig", required=true)
     private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 
+    /**
+     * @return If set to true, enables Cloud Armor Machine Learning.
+     * 
+     */
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig;
     }
@@ -51,6 +55,12 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse extends com.pu
             $ = new SecurityPolicyAdaptiveProtectionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param layer7DdosDefenseConfig If set to true, enables Cloud Armor Machine Learning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer7DdosDefenseConfig(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
             $.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;

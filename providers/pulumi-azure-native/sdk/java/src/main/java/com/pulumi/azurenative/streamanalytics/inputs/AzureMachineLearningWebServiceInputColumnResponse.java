@@ -26,6 +26,10 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends com
     @Import(name="dataType")
     private @Nullable String dataType;
 
+    /**
+     * @return The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+     * 
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -37,6 +41,10 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends com
     @Import(name="mapTo")
     private @Nullable Integer mapTo;
 
+    /**
+     * @return The zero based index of the function parameter this input maps to.
+     * 
+     */
     public Optional<Integer> mapTo() {
         return Optional.ofNullable(this.mapTo);
     }
@@ -48,6 +56,10 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends com
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the input column.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,16 +90,34 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends com
             $ = new AzureMachineLearningWebServiceInputColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param mapTo The zero based index of the function parameter this input maps to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapTo(@Nullable Integer mapTo) {
             $.mapTo = mapTo;
             return this;
         }
 
+        /**
+         * @param name The name of the input column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

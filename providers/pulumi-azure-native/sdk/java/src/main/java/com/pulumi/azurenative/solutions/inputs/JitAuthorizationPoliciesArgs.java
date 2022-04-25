@@ -24,6 +24,10 @@ public final class JitAuthorizationPoliciesArgs extends com.pulumi.resources.Res
     @Import(name="principalId", required=true)
     private Output<String> principalId;
 
+    /**
+     * @return The the principal id that will be granted JIT access.
+     * 
+     */
     public Output<String> principalId() {
         return this.principalId;
     }
@@ -35,6 +39,10 @@ public final class JitAuthorizationPoliciesArgs extends com.pulumi.resources.Res
     @Import(name="roleDefinitionId", required=true)
     private Output<String> roleDefinitionId;
 
+    /**
+     * @return The role definition id that will be granted to the Principal.
+     * 
+     */
     public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -64,20 +72,44 @@ public final class JitAuthorizationPoliciesArgs extends com.pulumi.resources.Res
             $ = new JitAuthorizationPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The the principal id that will be granted JIT access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The the principal id that will be granted JIT access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param roleDefinitionId The role definition id that will be granted to the Principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The role definition id that will be granted to the Principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }

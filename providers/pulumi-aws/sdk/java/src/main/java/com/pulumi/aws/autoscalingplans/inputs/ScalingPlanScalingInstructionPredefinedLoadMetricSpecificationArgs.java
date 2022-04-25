@@ -22,6 +22,10 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
     @Import(name="predefinedLoadMetricType", required=true)
     private Output<String> predefinedLoadMetricType;
 
+    /**
+     * @return The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
+     * 
+     */
     public Output<String> predefinedLoadMetricType() {
         return this.predefinedLoadMetricType;
     }
@@ -33,6 +37,10 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
     @Import(name="resourceLabel")
     private @Nullable Output<String> resourceLabel;
 
+    /**
+     * @return Identifies the resource associated with the metric type.
+     * 
+     */
     public Optional<Output<String>> resourceLabel() {
         return Optional.ofNullable(this.resourceLabel);
     }
@@ -62,20 +70,44 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
             $ = new ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param predefinedLoadMetricType The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedLoadMetricType(Output<String> predefinedLoadMetricType) {
             $.predefinedLoadMetricType = predefinedLoadMetricType;
             return this;
         }
 
+        /**
+         * @param predefinedLoadMetricType The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedLoadMetricType(String predefinedLoadMetricType) {
             return predefinedLoadMetricType(Output.of(predefinedLoadMetricType));
         }
 
+        /**
+         * @param resourceLabel Identifies the resource associated with the metric type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabel(@Nullable Output<String> resourceLabel) {
             $.resourceLabel = resourceLabel;
             return this;
         }
 
+        /**
+         * @param resourceLabel Identifies the resource associated with the metric type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabel(String resourceLabel) {
             return resourceLabel(Output.of(resourceLabel));
         }

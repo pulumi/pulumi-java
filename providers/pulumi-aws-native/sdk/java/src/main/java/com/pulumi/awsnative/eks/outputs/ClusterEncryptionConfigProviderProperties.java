@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterEncryptionConfigProviderProperties {
     /**
-     * Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
+     * @return Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
      * 
      */
     private final @Nullable String keyArn;
@@ -23,9 +23,9 @@ public final class ClusterEncryptionConfigProviderProperties {
     }
 
     /**
-     * Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
+     * @return Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
      * 
-    */
+     */
     public Optional<String> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }

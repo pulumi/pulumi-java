@@ -24,6 +24,10 @@ public final class JitNetworkAccessRequestArgs extends com.pulumi.resources.Reso
     @Import(name="justification")
     private @Nullable Output<String> justification;
 
+    /**
+     * @return The justification for making the initiate request
+     * 
+     */
     public Optional<Output<String>> justification() {
         return Optional.ofNullable(this.justification);
     }
@@ -35,6 +39,10 @@ public final class JitNetworkAccessRequestArgs extends com.pulumi.resources.Reso
     @Import(name="requestor", required=true)
     private Output<String> requestor;
 
+    /**
+     * @return The identity of the person who made the request
+     * 
+     */
     public Output<String> requestor() {
         return this.requestor;
     }
@@ -46,6 +54,10 @@ public final class JitNetworkAccessRequestArgs extends com.pulumi.resources.Reso
     @Import(name="startTimeUtc", required=true)
     private Output<String> startTimeUtc;
 
+    /**
+     * @return The start time of the request in UTC
+     * 
+     */
     public Output<String> startTimeUtc() {
         return this.startTimeUtc;
     }
@@ -84,29 +96,65 @@ public final class JitNetworkAccessRequestArgs extends com.pulumi.resources.Reso
             $ = new JitNetworkAccessRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param justification The justification for making the initiate request
+         * 
+         * @return builder
+         * 
+         */
         public Builder justification(@Nullable Output<String> justification) {
             $.justification = justification;
             return this;
         }
 
+        /**
+         * @param justification The justification for making the initiate request
+         * 
+         * @return builder
+         * 
+         */
         public Builder justification(String justification) {
             return justification(Output.of(justification));
         }
 
+        /**
+         * @param requestor The identity of the person who made the request
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestor(Output<String> requestor) {
             $.requestor = requestor;
             return this;
         }
 
+        /**
+         * @param requestor The identity of the person who made the request
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestor(String requestor) {
             return requestor(Output.of(requestor));
         }
 
+        /**
+         * @param startTimeUtc The start time of the request in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeUtc(Output<String> startTimeUtc) {
             $.startTimeUtc = startTimeUtc;
             return this;
         }
 
+        /**
+         * @param startTimeUtc The start time of the request in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeUtc(String startTimeUtc) {
             return startTimeUtc(Output.of(startTimeUtc));
         }

@@ -27,6 +27,10 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
     @Import(name="limits")
     private @Nullable Output<Map<String,String>> limits;
 
+    /**
+     * @return (Optional) Only memory and CPU are supported. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+     * 
+     */
     public Optional<Output<Map<String,String>>> limits() {
         return Optional.ofNullable(this.limits);
     }
@@ -38,6 +42,10 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
     @Import(name="requests")
     private @Nullable Output<Map<String,String>> requests;
 
+    /**
+     * @return (Optional) Only memory and CPU are supported. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+     * 
+     */
     public Optional<Output<Map<String,String>>> requests() {
         return Optional.ofNullable(this.requests);
     }
@@ -67,20 +75,44 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
             $ = new ResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limits (Optional) Only memory and CPU are supported. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(@Nullable Output<Map<String,String>> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits (Optional) Only memory and CPU are supported. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(Map<String,String> limits) {
             return limits(Output.of(limits));
         }
 
+        /**
+         * @param requests (Optional) Only memory and CPU are supported. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(@Nullable Output<Map<String,String>> requests) {
             $.requests = requests;
             return this;
         }
 
+        /**
+         * @param requests (Optional) Only memory and CPU are supported. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(Map<String,String> requests) {
             return requests(Output.of(requests));
         }

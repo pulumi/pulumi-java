@@ -20,6 +20,10 @@ public final class ModelContainerImageConfigGetArgs extends com.pulumi.resources
     @Import(name="repositoryAccessMode", required=true)
     private Output<String> repositoryAccessMode;
 
+    /**
+     * @return Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+     * 
+     */
     public Output<String> repositoryAccessMode() {
         return this.repositoryAccessMode;
     }
@@ -48,11 +52,23 @@ public final class ModelContainerImageConfigGetArgs extends com.pulumi.resources
             $ = new ModelContainerImageConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repositoryAccessMode Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryAccessMode(Output<String> repositoryAccessMode) {
             $.repositoryAccessMode = repositoryAccessMode;
             return this;
         }
 
+        /**
+         * @param repositoryAccessMode Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryAccessMode(String repositoryAccessMode) {
             return repositoryAccessMode(Output.of(repositoryAccessMode));
         }

@@ -24,6 +24,10 @@ public final class ManagementGroupLogSettingsResponse extends com.pulumi.resourc
     @Import(name="category", required=true)
     private String category;
 
+    /**
+     * @return Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
+     * 
+     */
     public String category() {
         return this.category;
     }
@@ -35,6 +39,10 @@ public final class ManagementGroupLogSettingsResponse extends com.pulumi.resourc
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return a value indicating whether this log is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -64,11 +72,23 @@ public final class ManagementGroupLogSettingsResponse extends com.pulumi.resourc
             $ = new ManagementGroupLogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param enabled a value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

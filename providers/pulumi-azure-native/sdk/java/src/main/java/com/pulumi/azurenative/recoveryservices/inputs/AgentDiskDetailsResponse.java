@@ -25,6 +25,10 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="capacityInBytes", required=true)
     private Double capacityInBytes;
 
+    /**
+     * @return The disk capacity in bytes.
+     * 
+     */
     public Double capacityInBytes() {
         return this.capacityInBytes;
     }
@@ -36,6 +40,10 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="diskId", required=true)
     private String diskId;
 
+    /**
+     * @return The disk Id.
+     * 
+     */
     public String diskId() {
         return this.diskId;
     }
@@ -47,6 +55,10 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="diskName", required=true)
     private String diskName;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public String diskName() {
         return this.diskName;
     }
@@ -58,6 +70,10 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="isOSDisk", required=true)
     private String isOSDisk;
 
+    /**
+     * @return A value indicating whether the disk is the OS disk.
+     * 
+     */
     public String isOSDisk() {
         return this.isOSDisk;
     }
@@ -69,6 +85,10 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="lunId", required=true)
     private Integer lunId;
 
+    /**
+     * @return The lun of disk.
+     * 
+     */
     public Integer lunId() {
         return this.lunId;
     }
@@ -101,26 +121,56 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
             $ = new AgentDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityInBytes The disk capacity in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityInBytes(Double capacityInBytes) {
             $.capacityInBytes = capacityInBytes;
             return this;
         }
 
+        /**
+         * @param diskId The disk Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(String diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param diskName The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param isOSDisk A value indicating whether the disk is the OS disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOSDisk(String isOSDisk) {
             $.isOSDisk = isOSDisk;
             return this;
         }
 
+        /**
+         * @param lunId The lun of disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lunId(Integer lunId) {
             $.lunId = lunId;
             return this;

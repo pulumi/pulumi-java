@@ -19,6 +19,10 @@ public final class GetSuiteDefinitionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="suiteDefinitionId", required=true)
     private String suiteDefinitionId;
 
+    /**
+     * @return The unique identifier for the suite definition.
+     * 
+     */
     public String suiteDefinitionId() {
         return this.suiteDefinitionId;
     }
@@ -47,6 +51,12 @@ public final class GetSuiteDefinitionArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSuiteDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param suiteDefinitionId The unique identifier for the suite definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suiteDefinitionId(String suiteDefinitionId) {
             $.suiteDefinitionId = suiteDefinitionId;
             return this;

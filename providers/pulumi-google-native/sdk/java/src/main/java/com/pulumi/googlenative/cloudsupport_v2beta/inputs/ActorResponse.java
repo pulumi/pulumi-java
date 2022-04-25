@@ -24,6 +24,10 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -35,6 +39,10 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -46,6 +54,10 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="googleSupport", required=true)
     private Boolean googleSupport;
 
+    /**
+     * @return Whether the actor is a Google support actor.
+     * 
+     */
     public Boolean googleSupport() {
         return this.googleSupport;
     }
@@ -57,6 +69,10 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -88,21 +104,45 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ActorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param email The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param googleSupport Whether the actor is a Google support actor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleSupport(Boolean googleSupport) {
             $.googleSupport = googleSupport;
             return this;
         }
 
+        /**
+         * @param principalId An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;

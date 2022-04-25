@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GetFoldersResult {
     /**
-     * A list of projects matching the provided filter. Structure is defined below.
+     * @return A list of projects matching the provided filter. Structure is defined below.
      * 
      */
     private final List<GetFoldersFolder> folders;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -34,16 +34,16 @@ public final class GetFoldersResult {
     }
 
     /**
-     * A list of projects matching the provided filter. Structure is defined below.
+     * @return A list of projects matching the provided filter. Structure is defined below.
      * 
-    */
+     */
     public List<GetFoldersFolder> folders() {
         return this.folders;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

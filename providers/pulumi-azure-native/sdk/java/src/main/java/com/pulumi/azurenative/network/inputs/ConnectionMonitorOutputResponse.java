@@ -26,6 +26,10 @@ public final class ConnectionMonitorOutputResponse extends com.pulumi.resources.
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -37,6 +41,10 @@ public final class ConnectionMonitorOutputResponse extends com.pulumi.resources.
     @Import(name="workspaceSettings")
     private @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
 
+    /**
+     * @return Describes the settings for producing output into a log analytics workspace.
+     * 
+     */
     public Optional<ConnectionMonitorWorkspaceSettingsResponse> workspaceSettings() {
         return Optional.ofNullable(this.workspaceSettings);
     }
@@ -66,11 +74,23 @@ public final class ConnectionMonitorOutputResponse extends com.pulumi.resources.
             $ = new ConnectionMonitorOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Connection monitor output destination type. Currently, only &#34;Workspace&#34; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param workspaceSettings Describes the settings for producing output into a log analytics workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
             $.workspaceSettings = workspaceSettings;
             return this;

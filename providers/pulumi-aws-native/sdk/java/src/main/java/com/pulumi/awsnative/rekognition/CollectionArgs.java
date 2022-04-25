@@ -31,6 +31,10 @@ public final class CollectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<CollectionTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<CollectionTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -69,15 +73,33 @@ public final class CollectionArgs extends com.pulumi.resources.ResourceArgs {
             return collectionId(Output.of(collectionId));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<CollectionTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<CollectionTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(CollectionTagArgs... tags) {
             return tags(List.of(tags));
         }

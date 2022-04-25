@@ -27,6 +27,10 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends com.
     @Import(name="name", required=true)
     private Output<SimulationApplicationSimulationSoftwareSuiteName> name;
 
+    /**
+     * @return The name of the simulation software suite.
+     * 
+     */
     public Output<SimulationApplicationSimulationSoftwareSuiteName> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends com.
     @Import(name="version")
     private @Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version;
 
+    /**
+     * @return The version of the simulation software suite.
+     * 
+     */
     public Optional<Output<SimulationApplicationSimulationSoftwareSuiteVersion>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -67,20 +75,44 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends com.
             $ = new SimulationApplicationSimulationSoftwareSuiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the simulation software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<SimulationApplicationSimulationSoftwareSuiteName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the simulation software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param version The version of the simulation software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the simulation software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(SimulationApplicationSimulationSoftwareSuiteVersion version) {
             return version(Output.of(version));
         }

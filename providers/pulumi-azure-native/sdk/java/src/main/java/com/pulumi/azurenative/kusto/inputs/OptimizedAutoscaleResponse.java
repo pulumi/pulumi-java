@@ -24,6 +24,10 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return A boolean value that indicate if the optimized autoscale feature is enabled or not.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -35,6 +39,10 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
     @Import(name="maximum", required=true)
     private Integer maximum;
 
+    /**
+     * @return Maximum allowed instances count.
+     * 
+     */
     public Integer maximum() {
         return this.maximum;
     }
@@ -46,6 +54,10 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
     @Import(name="minimum", required=true)
     private Integer minimum;
 
+    /**
+     * @return Minimum allowed instances count.
+     * 
+     */
     public Integer minimum() {
         return this.minimum;
     }
@@ -57,6 +69,10 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
     @Import(name="version", required=true)
     private Integer version;
 
+    /**
+     * @return The version of the template defined, for instance 1.
+     * 
+     */
     public Integer version() {
         return this.version;
     }
@@ -88,21 +104,45 @@ public final class OptimizedAutoscaleResponse extends com.pulumi.resources.Invok
             $ = new OptimizedAutoscaleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled A boolean value that indicate if the optimized autoscale feature is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param maximum Maximum allowed instances count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(Integer maximum) {
             $.maximum = maximum;
             return this;
         }
 
+        /**
+         * @param minimum Minimum allowed instances count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(Integer minimum) {
             $.minimum = minimum;
             return this;
         }
 
+        /**
+         * @param version The version of the template defined, for instance 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             $.version = version;
             return this;

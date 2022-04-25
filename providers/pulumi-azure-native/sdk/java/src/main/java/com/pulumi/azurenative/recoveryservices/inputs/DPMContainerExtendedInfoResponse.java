@@ -25,6 +25,10 @@ public final class DPMContainerExtendedInfoResponse extends com.pulumi.resources
     @Import(name="lastRefreshedAt")
     private @Nullable String lastRefreshedAt;
 
+    /**
+     * @return Last refresh time of the DPMContainer.
+     * 
+     */
     public Optional<String> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
@@ -53,6 +57,12 @@ public final class DPMContainerExtendedInfoResponse extends com.pulumi.resources
             $ = new DPMContainerExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastRefreshedAt Last refresh time of the DPMContainer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             $.lastRefreshedAt = lastRefreshedAt;
             return this;

@@ -28,6 +28,10 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
     @Import(name="packages")
     private @Nullable List<SparkMavenPackageResponse> packages;
 
+    /**
+     * @return The Spark packages to use.
+     * 
+     */
     public Optional<List<SparkMavenPackageResponse>> packages() {
         return Optional.ofNullable(this.packages);
     }
@@ -39,6 +43,10 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
     @Import(name="precachePackages")
     private @Nullable Boolean precachePackages;
 
+    /**
+     * @return Whether to precache the packages.
+     * 
+     */
     public Optional<Boolean> precachePackages() {
         return Optional.ofNullable(this.precachePackages);
     }
@@ -50,6 +58,10 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
     @Import(name="repositories")
     private @Nullable List<String> repositories;
 
+    /**
+     * @return The list of spark repositories.
+     * 
+     */
     public Optional<List<String>> repositories() {
         return Optional.ofNullable(this.repositories);
     }
@@ -80,25 +92,55 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
             $ = new ModelEnvironmentDefinitionResponseResponseSpark(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packages The Spark packages to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(@Nullable List<SparkMavenPackageResponse> packages) {
             $.packages = packages;
             return this;
         }
 
+        /**
+         * @param packages The Spark packages to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(SparkMavenPackageResponse... packages) {
             return packages(List.of(packages));
         }
 
+        /**
+         * @param precachePackages Whether to precache the packages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precachePackages(@Nullable Boolean precachePackages) {
             $.precachePackages = precachePackages;
             return this;
         }
 
+        /**
+         * @param repositories The list of spark repositories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositories(@Nullable List<String> repositories) {
             $.repositories = repositories;
             return this;
         }
 
+        /**
+         * @param repositories The list of spark repositories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositories(String... repositories) {
             return repositories(List.of(repositories));
         }

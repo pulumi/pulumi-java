@@ -26,6 +26,10 @@ public final class DailyMaintenanceWindowArgs extends com.pulumi.resources.Resou
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -54,11 +58,23 @@ public final class DailyMaintenanceWindowArgs extends com.pulumi.resources.Resou
             $ = new DailyMaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startTime Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Time within the maintenance window to start the maintenance operations. Time format should be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-59] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

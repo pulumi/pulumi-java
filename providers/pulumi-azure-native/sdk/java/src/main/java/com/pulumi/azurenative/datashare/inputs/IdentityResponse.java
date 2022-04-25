@@ -25,6 +25,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return service principal Id
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -36,6 +40,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return Tenant Id
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -47,6 +55,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Identity Type
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId service principal Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Identity Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

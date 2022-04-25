@@ -23,6 +23,10 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
     @Import(name="instanceUrl")
     private @Nullable Output<String> instanceUrl;
 
+    /**
+     * @return The location of the Salesforce resource
+     * 
+     */
     public Optional<Output<String>> instanceUrl() {
         return Optional.ofNullable(this.instanceUrl);
     }
@@ -59,11 +63,23 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
             $ = new ConnectorProfileSalesforceConnectorProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceUrl The location of the Salesforce resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceUrl(@Nullable Output<String> instanceUrl) {
             $.instanceUrl = instanceUrl;
             return this;
         }
 
+        /**
+         * @param instanceUrl The location of the Salesforce resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceUrl(String instanceUrl) {
             return instanceUrl(Output.of(instanceUrl));
         }

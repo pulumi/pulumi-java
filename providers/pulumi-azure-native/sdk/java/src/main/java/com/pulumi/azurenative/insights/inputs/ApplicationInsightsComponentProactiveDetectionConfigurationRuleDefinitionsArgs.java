@@ -27,6 +27,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The rule description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The rule name as it is displayed in UI
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -49,6 +57,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="helpUrl")
     private @Nullable Output<String> helpUrl;
 
+    /**
+     * @return URL which displays additional info about the proactive detection rule
+     * 
+     */
     public Optional<Output<String>> helpUrl() {
         return Optional.ofNullable(this.helpUrl);
     }
@@ -60,6 +72,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="isEnabledByDefault")
     private @Nullable Output<Boolean> isEnabledByDefault;
 
+    /**
+     * @return A flag indicating whether the rule is enabled by default
+     * 
+     */
     public Optional<Output<Boolean>> isEnabledByDefault() {
         return Optional.ofNullable(this.isEnabledByDefault);
     }
@@ -71,6 +87,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="isHidden")
     private @Nullable Output<Boolean> isHidden;
 
+    /**
+     * @return A flag indicating whether the rule is hidden (from the UI)
+     * 
+     */
     public Optional<Output<Boolean>> isHidden() {
         return Optional.ofNullable(this.isHidden);
     }
@@ -82,6 +102,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="isInPreview")
     private @Nullable Output<Boolean> isInPreview;
 
+    /**
+     * @return A flag indicating whether the rule is in preview
+     * 
+     */
     public Optional<Output<Boolean>> isInPreview() {
         return Optional.ofNullable(this.isInPreview);
     }
@@ -93,6 +117,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The rule name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
     @Import(name="supportsEmailNotifications")
     private @Nullable Output<Boolean> supportsEmailNotifications;
 
+    /**
+     * @return A flag indicating whether email notifications are supported for detections for this rule
+     * 
+     */
     public Optional<Output<Boolean>> supportsEmailNotifications() {
         return Optional.ofNullable(this.supportsEmailNotifications);
     }
@@ -139,74 +171,170 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             $ = new ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The rule description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The rule description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The rule name as it is displayed in UI
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The rule name as it is displayed in UI
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param helpUrl URL which displays additional info about the proactive detection rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder helpUrl(@Nullable Output<String> helpUrl) {
             $.helpUrl = helpUrl;
             return this;
         }
 
+        /**
+         * @param helpUrl URL which displays additional info about the proactive detection rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder helpUrl(String helpUrl) {
             return helpUrl(Output.of(helpUrl));
         }
 
+        /**
+         * @param isEnabledByDefault A flag indicating whether the rule is enabled by default
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabledByDefault(@Nullable Output<Boolean> isEnabledByDefault) {
             $.isEnabledByDefault = isEnabledByDefault;
             return this;
         }
 
+        /**
+         * @param isEnabledByDefault A flag indicating whether the rule is enabled by default
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabledByDefault(Boolean isEnabledByDefault) {
             return isEnabledByDefault(Output.of(isEnabledByDefault));
         }
 
+        /**
+         * @param isHidden A flag indicating whether the rule is hidden (from the UI)
+         * 
+         * @return builder
+         * 
+         */
         public Builder isHidden(@Nullable Output<Boolean> isHidden) {
             $.isHidden = isHidden;
             return this;
         }
 
+        /**
+         * @param isHidden A flag indicating whether the rule is hidden (from the UI)
+         * 
+         * @return builder
+         * 
+         */
         public Builder isHidden(Boolean isHidden) {
             return isHidden(Output.of(isHidden));
         }
 
+        /**
+         * @param isInPreview A flag indicating whether the rule is in preview
+         * 
+         * @return builder
+         * 
+         */
         public Builder isInPreview(@Nullable Output<Boolean> isInPreview) {
             $.isInPreview = isInPreview;
             return this;
         }
 
+        /**
+         * @param isInPreview A flag indicating whether the rule is in preview
+         * 
+         * @return builder
+         * 
+         */
         public Builder isInPreview(Boolean isInPreview) {
             return isInPreview(Output.of(isInPreview));
         }
 
+        /**
+         * @param name The rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param supportsEmailNotifications A flag indicating whether email notifications are supported for detections for this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportsEmailNotifications(@Nullable Output<Boolean> supportsEmailNotifications) {
             $.supportsEmailNotifications = supportsEmailNotifications;
             return this;
         }
 
+        /**
+         * @param supportsEmailNotifications A flag indicating whether email notifications are supported for detections for this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportsEmailNotifications(Boolean supportsEmailNotifications) {
             return supportsEmailNotifications(Output.of(supportsEmailNotifications));
         }

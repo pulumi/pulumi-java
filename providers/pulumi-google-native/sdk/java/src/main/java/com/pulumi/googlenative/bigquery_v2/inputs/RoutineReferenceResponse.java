@@ -19,6 +19,10 @@ public final class RoutineReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return [Required] The ID of the dataset containing this routine.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -30,6 +34,10 @@ public final class RoutineReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return [Required] The ID of the project containing this routine.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -41,6 +49,10 @@ public final class RoutineReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="routineId", required=true)
     private String routineId;
 
+    /**
+     * @return [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+     * 
+     */
     public String routineId() {
         return this.routineId;
     }
@@ -71,16 +83,34 @@ public final class RoutineReferenceResponse extends com.pulumi.resources.InvokeA
             $ = new RoutineReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId [Required] The ID of the dataset containing this routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param project [Required] The ID of the project containing this routine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param routineId [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineId(String routineId) {
             $.routineId = routineId;
             return this;

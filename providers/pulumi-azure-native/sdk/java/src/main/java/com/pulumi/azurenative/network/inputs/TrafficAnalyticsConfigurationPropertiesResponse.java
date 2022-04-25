@@ -27,6 +27,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Flag to enable/disable traffic analytics.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
     @Import(name="trafficAnalyticsInterval")
     private @Nullable Integer trafficAnalyticsInterval;
 
+    /**
+     * @return The interval in minutes which would decide how frequently TA service should do flow analytics.
+     * 
+     */
     public Optional<Integer> trafficAnalyticsInterval() {
         return Optional.ofNullable(this.trafficAnalyticsInterval);
     }
@@ -49,6 +57,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
     @Import(name="workspaceId")
     private @Nullable String workspaceId;
 
+    /**
+     * @return The resource guid of the attached workspace.
+     * 
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -60,6 +72,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
     @Import(name="workspaceRegion")
     private @Nullable String workspaceRegion;
 
+    /**
+     * @return The location of the attached workspace.
+     * 
+     */
     public Optional<String> workspaceRegion() {
         return Optional.ofNullable(this.workspaceRegion);
     }
@@ -71,6 +87,10 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
     @Import(name="workspaceResourceId")
     private @Nullable String workspaceResourceId;
 
+    /**
+     * @return Resource Id of the attached workspace.
+     * 
+     */
     public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -103,26 +123,56 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends com.p
             $ = new TrafficAnalyticsConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag to enable/disable traffic analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param trafficAnalyticsInterval The interval in minutes which would decide how frequently TA service should do flow analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
             $.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
 
+        /**
+         * @param workspaceId The resource guid of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceRegion The location of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceRegion(@Nullable String workspaceRegion) {
             $.workspaceRegion = workspaceRegion;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId Resource Id of the attached workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;

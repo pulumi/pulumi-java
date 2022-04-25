@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatasetAccess {
     /**
-     * A domain to grant access to. Any users signed in with the
+     * @return A domain to grant access to. Any users signed in with the
      * domain specified will be granted the specified access
      * 
      */
     private final @Nullable String domain;
     /**
-     * An email address of a Google Group to grant access to.
+     * @return An email address of a Google Group to grant access to.
      * 
      */
     private final @Nullable String groupByEmail;
     /**
-     * Describes the rights granted to the user specified by the other
+     * @return Describes the rights granted to the user specified by the other
      * member of the access object. Basic, predefined, and custom roles
      * are supported. Predefined roles that have equivalent basic roles
      * are swapped by the API to their basic counterparts. See
@@ -33,18 +33,18 @@ public final class DatasetAccess {
      */
     private final @Nullable String role;
     /**
-     * A special group to grant access to. Possible values include:
+     * @return A special group to grant access to. Possible values include:
      * 
      */
     private final @Nullable String specialGroup;
     /**
-     * An email address of a user to grant access to. For example:
+     * @return An email address of a user to grant access to. For example:
      * fred@example.com
      * 
      */
     private final @Nullable String userByEmail;
     /**
-     * A view from a different dataset to grant access to. Queries
+     * @return A view from a different dataset to grant access to. Queries
      * executed against that view will have read access to tables in
      * this dataset. The role field is not required when this field is
      * set. If that view is updated by any user, access to the view
@@ -71,55 +71,55 @@ public final class DatasetAccess {
     }
 
     /**
-     * A domain to grant access to. Any users signed in with the
+     * @return A domain to grant access to. Any users signed in with the
      * domain specified will be granted the specified access
      * 
-    */
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
-     * An email address of a Google Group to grant access to.
+     * @return An email address of a Google Group to grant access to.
      * 
-    */
+     */
     public Optional<String> groupByEmail() {
         return Optional.ofNullable(this.groupByEmail);
     }
     /**
-     * Describes the rights granted to the user specified by the other
+     * @return Describes the rights granted to the user specified by the other
      * member of the access object. Basic, predefined, and custom roles
      * are supported. Predefined roles that have equivalent basic roles
      * are swapped by the API to their basic counterparts. See
      * [official docs](https://cloud.google.com/bigquery/docs/access-control).
      * 
-    */
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
-     * A special group to grant access to. Possible values include:
+     * @return A special group to grant access to. Possible values include:
      * 
-    */
+     */
     public Optional<String> specialGroup() {
         return Optional.ofNullable(this.specialGroup);
     }
     /**
-     * An email address of a user to grant access to. For example:
+     * @return An email address of a user to grant access to. For example:
      * fred@example.com
      * 
-    */
+     */
     public Optional<String> userByEmail() {
         return Optional.ofNullable(this.userByEmail);
     }
     /**
-     * A view from a different dataset to grant access to. Queries
+     * @return A view from a different dataset to grant access to. Queries
      * executed against that view will have read access to tables in
      * this dataset. The role field is not required when this field is
      * set. If that view is updated by any user, access to the view
      * needs to be granted again via an update operation.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<DatasetAccessView> view() {
         return Optional.ofNullable(this.view);
     }

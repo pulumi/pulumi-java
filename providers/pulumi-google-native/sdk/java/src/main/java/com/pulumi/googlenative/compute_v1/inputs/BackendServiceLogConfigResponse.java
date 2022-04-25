@@ -24,6 +24,10 @@ public final class BackendServiceLogConfigResponse extends com.pulumi.resources.
     @Import(name="enable", required=true)
     private Boolean enable;
 
+    /**
+     * @return This field denotes whether to enable logging for the load balancer traffic served by this backend service.
+     * 
+     */
     public Boolean enable() {
         return this.enable;
     }
@@ -35,6 +39,10 @@ public final class BackendServiceLogConfigResponse extends com.pulumi.resources.
     @Import(name="sampleRate", required=true)
     private Double sampleRate;
 
+    /**
+     * @return This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.
+     * 
+     */
     public Double sampleRate() {
         return this.sampleRate;
     }
@@ -64,11 +72,23 @@ public final class BackendServiceLogConfigResponse extends com.pulumi.resources.
             $ = new BackendServiceLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable This field denotes whether to enable logging for the load balancer traffic served by this backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param sampleRate This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRate(Double sampleRate) {
             $.sampleRate = sampleRate;
             return this;

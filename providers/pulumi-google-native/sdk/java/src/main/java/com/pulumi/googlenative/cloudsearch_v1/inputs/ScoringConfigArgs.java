@@ -26,6 +26,10 @@ public final class ScoringConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableFreshness")
     private @Nullable Output<Boolean> disableFreshness;
 
+    /**
+     * @return Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
+     * 
+     */
     public Optional<Output<Boolean>> disableFreshness() {
         return Optional.ofNullable(this.disableFreshness);
     }
@@ -37,6 +41,10 @@ public final class ScoringConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disablePersonalization")
     private @Nullable Output<Boolean> disablePersonalization;
 
+    /**
+     * @return Whether to personalize the results. By default, personal signals will be used to boost results.
+     * 
+     */
     public Optional<Output<Boolean>> disablePersonalization() {
         return Optional.ofNullable(this.disablePersonalization);
     }
@@ -66,20 +74,44 @@ public final class ScoringConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableFreshness Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableFreshness(@Nullable Output<Boolean> disableFreshness) {
             $.disableFreshness = disableFreshness;
             return this;
         }
 
+        /**
+         * @param disableFreshness Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableFreshness(Boolean disableFreshness) {
             return disableFreshness(Output.of(disableFreshness));
         }
 
+        /**
+         * @param disablePersonalization Whether to personalize the results. By default, personal signals will be used to boost results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePersonalization(@Nullable Output<Boolean> disablePersonalization) {
             $.disablePersonalization = disablePersonalization;
             return this;
         }
 
+        /**
+         * @param disablePersonalization Whether to personalize the results. By default, personal signals will be used to boost results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePersonalization(Boolean disablePersonalization) {
             return disablePersonalization(Output.of(disablePersonalization));
         }

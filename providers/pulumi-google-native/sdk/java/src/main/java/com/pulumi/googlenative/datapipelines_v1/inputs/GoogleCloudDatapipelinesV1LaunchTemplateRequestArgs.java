@@ -28,6 +28,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
     @Import(name="gcsPath")
     private @Nullable Output<String> gcsPath;
 
+    /**
+     * @return A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
+     * 
+     */
     public Optional<Output<String>> gcsPath() {
         return Optional.ofNullable(this.gcsPath);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
     @Import(name="launchParameters")
     private @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
 
+    /**
+     * @return The parameters of the template to launch. This should be part of the body of the POST request.
+     * 
+     */
     public Optional<Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs>> launchParameters() {
         return Optional.ofNullable(this.launchParameters);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return The ID of the Cloud Platform project that the job belongs to.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
     @Import(name="validateOnly")
     private @Nullable Output<Boolean> validateOnly;
 
+    /**
+     * @return If true, the request is validated but not actually executed. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -104,47 +124,107 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
             $ = new GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcsPath A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsPath(@Nullable Output<String> gcsPath) {
             $.gcsPath = gcsPath;
             return this;
         }
 
+        /**
+         * @param gcsPath A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with &#39;gs://&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsPath(String gcsPath) {
             return gcsPath(Output.of(gcsPath));
         }
 
+        /**
+         * @param launchParameters The parameters of the template to launch. This should be part of the body of the POST request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchParameters(@Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters) {
             $.launchParameters = launchParameters;
             return this;
         }
 
+        /**
+         * @param launchParameters The parameters of the template to launch. This should be part of the body of the POST request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchParameters(GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs launchParameters) {
             return launchParameters(Output.of(launchParameters));
         }
 
+        /**
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param project The ID of the Cloud Platform project that the job belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the Cloud Platform project that the job belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param validateOnly If true, the request is validated but not actually executed. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly If true, the request is validated but not actually executed. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(Boolean validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

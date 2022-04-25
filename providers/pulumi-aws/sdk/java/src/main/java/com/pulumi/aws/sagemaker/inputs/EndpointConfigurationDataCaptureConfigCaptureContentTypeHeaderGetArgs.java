@@ -23,6 +23,10 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
     @Import(name="csvContentTypes")
     private @Nullable Output<List<String>> csvContentTypes;
 
+    /**
+     * @return The CSV content type headers to capture.
+     * 
+     */
     public Optional<Output<List<String>>> csvContentTypes() {
         return Optional.ofNullable(this.csvContentTypes);
     }
@@ -34,6 +38,10 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
     @Import(name="jsonContentTypes")
     private @Nullable Output<List<String>> jsonContentTypes;
 
+    /**
+     * @return The JSON content type headers to capture.
+     * 
+     */
     public Optional<Output<List<String>>> jsonContentTypes() {
         return Optional.ofNullable(this.jsonContentTypes);
     }
@@ -63,28 +71,64 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
             $ = new EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param csvContentTypes The CSV content type headers to capture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvContentTypes(@Nullable Output<List<String>> csvContentTypes) {
             $.csvContentTypes = csvContentTypes;
             return this;
         }
 
+        /**
+         * @param csvContentTypes The CSV content type headers to capture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvContentTypes(List<String> csvContentTypes) {
             return csvContentTypes(Output.of(csvContentTypes));
         }
 
+        /**
+         * @param csvContentTypes The CSV content type headers to capture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvContentTypes(String... csvContentTypes) {
             return csvContentTypes(List.of(csvContentTypes));
         }
 
+        /**
+         * @param jsonContentTypes The JSON content type headers to capture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonContentTypes(@Nullable Output<List<String>> jsonContentTypes) {
             $.jsonContentTypes = jsonContentTypes;
             return this;
         }
 
+        /**
+         * @param jsonContentTypes The JSON content type headers to capture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonContentTypes(List<String> jsonContentTypes) {
             return jsonContentTypes(Output.of(jsonContentTypes));
         }
 
+        /**
+         * @param jsonContentTypes The JSON content type headers to capture.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonContentTypes(String... jsonContentTypes) {
             return jsonContentTypes(List.of(jsonContentTypes));
         }

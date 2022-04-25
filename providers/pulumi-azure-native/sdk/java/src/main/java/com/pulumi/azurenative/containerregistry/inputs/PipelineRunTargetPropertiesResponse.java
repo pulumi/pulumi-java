@@ -22,6 +22,10 @@ public final class PipelineRunTargetPropertiesResponse extends com.pulumi.resour
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the target.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class PipelineRunTargetPropertiesResponse extends com.pulumi.resour
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the target.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -62,11 +70,23 @@ public final class PipelineRunTargetPropertiesResponse extends com.pulumi.resour
             $ = new PipelineRunTargetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The type of the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

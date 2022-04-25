@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayCustomErrorResponse {
     /**
-     * Error page URL of the application gateway customer error.
+     * @return Error page URL of the application gateway customer error.
      * 
      */
     private final @Nullable String customErrorPageUrl;
     /**
-     * Status code of the application gateway customer error.
+     * @return Status code of the application gateway customer error.
      * 
      */
     private final @Nullable String statusCode;
@@ -31,16 +31,16 @@ public final class ApplicationGatewayCustomErrorResponse {
     }
 
     /**
-     * Error page URL of the application gateway customer error.
+     * @return Error page URL of the application gateway customer error.
      * 
-    */
+     */
     public Optional<String> customErrorPageUrl() {
         return Optional.ofNullable(this.customErrorPageUrl);
     }
     /**
-     * Status code of the application gateway customer error.
+     * @return Status code of the application gateway customer error.
      * 
-    */
+     */
     public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExpressRouteLinkMacSecConfigResponse {
     /**
-     * Keyvault Secret Identifier URL containing Mac security CAK key.
+     * @return Keyvault Secret Identifier URL containing Mac security CAK key.
      * 
      */
     private final @Nullable String cakSecretIdentifier;
     /**
-     * Mac security cipher.
+     * @return Mac security cipher.
      * 
      */
     private final @Nullable String cipher;
     /**
-     * Keyvault Secret Identifier URL containing Mac security CKN key.
+     * @return Keyvault Secret Identifier URL containing Mac security CKN key.
      * 
      */
     private final @Nullable String cknSecretIdentifier;
     /**
-     * Sci mode enabled/disabled.
+     * @return Sci mode enabled/disabled.
      * 
      */
     private final @Nullable String sciState;
@@ -45,30 +45,30 @@ public final class ExpressRouteLinkMacSecConfigResponse {
     }
 
     /**
-     * Keyvault Secret Identifier URL containing Mac security CAK key.
+     * @return Keyvault Secret Identifier URL containing Mac security CAK key.
      * 
-    */
+     */
     public Optional<String> cakSecretIdentifier() {
         return Optional.ofNullable(this.cakSecretIdentifier);
     }
     /**
-     * Mac security cipher.
+     * @return Mac security cipher.
      * 
-    */
+     */
     public Optional<String> cipher() {
         return Optional.ofNullable(this.cipher);
     }
     /**
-     * Keyvault Secret Identifier URL containing Mac security CKN key.
+     * @return Keyvault Secret Identifier URL containing Mac security CKN key.
      * 
-    */
+     */
     public Optional<String> cknSecretIdentifier() {
         return Optional.ofNullable(this.cknSecretIdentifier);
     }
     /**
-     * Sci mode enabled/disabled.
+     * @return Sci mode enabled/disabled.
      * 
-    */
+     */
     public Optional<String> sciState() {
         return Optional.ofNullable(this.sciState);
     }

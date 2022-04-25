@@ -27,6 +27,10 @@ public final class ActionListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionGroups")
     private @Nullable Output<List<ActionGroupArgs>> actionGroups;
 
+    /**
+     * @return The list of the Action Groups.
+     * 
+     */
     public Optional<Output<List<ActionGroupArgs>>> actionGroups() {
         return Optional.ofNullable(this.actionGroups);
     }
@@ -55,15 +59,33 @@ public final class ActionListArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ActionListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroups The list of the Action Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroups(@Nullable Output<List<ActionGroupArgs>> actionGroups) {
             $.actionGroups = actionGroups;
             return this;
         }
 
+        /**
+         * @param actionGroups The list of the Action Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroups(List<ActionGroupArgs> actionGroups) {
             return actionGroups(Output.of(actionGroups));
         }
 
+        /**
+         * @param actionGroups The list of the Action Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroups(ActionGroupArgs... actionGroups) {
             return actionGroups(List.of(actionGroups));
         }

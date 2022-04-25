@@ -27,6 +27,10 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dependsOnStepGroups")
     private @Nullable List<String> dependsOnStepGroups;
 
+    /**
+     * @return The list of step group names on which this step group depends on.
+     * 
+     */
     public Optional<List<String>> dependsOnStepGroups() {
         return Optional.ofNullable(this.dependsOnStepGroups);
     }
@@ -38,6 +42,10 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deploymentTargetId", required=true)
     private String deploymentTargetId;
 
+    /**
+     * @return The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
+     * 
+     */
     public String deploymentTargetId() {
         return this.deploymentTargetId;
     }
@@ -49,6 +57,10 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the step group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="postDeploymentSteps")
     private @Nullable List<PrePostStepResponse> postDeploymentSteps;
 
+    /**
+     * @return The list of steps to be run after deploying the target.
+     * 
+     */
     public Optional<List<PrePostStepResponse>> postDeploymentSteps() {
         return Optional.ofNullable(this.postDeploymentSteps);
     }
@@ -71,6 +87,10 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preDeploymentSteps")
     private @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
+    /**
+     * @return The list of steps to be run before deploying the target.
+     * 
+     */
     public Optional<List<PrePostStepResponse>> preDeploymentSteps() {
         return Optional.ofNullable(this.preDeploymentSteps);
     }
@@ -103,39 +123,87 @@ public final class StepGroupResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StepGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOnStepGroups The list of step group names on which this step group depends on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOnStepGroups(@Nullable List<String> dependsOnStepGroups) {
             $.dependsOnStepGroups = dependsOnStepGroups;
             return this;
         }
 
+        /**
+         * @param dependsOnStepGroups The list of step group names on which this step group depends on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOnStepGroups(String... dependsOnStepGroups) {
             return dependsOnStepGroups(List.of(dependsOnStepGroups));
         }
 
+        /**
+         * @param deploymentTargetId The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentTargetId(String deploymentTargetId) {
             $.deploymentTargetId = deploymentTargetId;
             return this;
         }
 
+        /**
+         * @param name The name of the step group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param postDeploymentSteps The list of steps to be run after deploying the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postDeploymentSteps(@Nullable List<PrePostStepResponse> postDeploymentSteps) {
             $.postDeploymentSteps = postDeploymentSteps;
             return this;
         }
 
+        /**
+         * @param postDeploymentSteps The list of steps to be run after deploying the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postDeploymentSteps(PrePostStepResponse... postDeploymentSteps) {
             return postDeploymentSteps(List.of(postDeploymentSteps));
         }
 
+        /**
+         * @param preDeploymentSteps The list of steps to be run before deploying the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preDeploymentSteps(@Nullable List<PrePostStepResponse> preDeploymentSteps) {
             $.preDeploymentSteps = preDeploymentSteps;
             return this;
         }
 
+        /**
+         * @param preDeploymentSteps The list of steps to be run before deploying the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preDeploymentSteps(PrePostStepResponse... preDeploymentSteps) {
             return preDeploymentSteps(List.of(preDeploymentSteps));
         }

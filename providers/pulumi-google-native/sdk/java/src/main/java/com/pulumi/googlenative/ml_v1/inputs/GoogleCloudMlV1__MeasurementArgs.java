@@ -28,6 +28,10 @@ public final class GoogleCloudMlV1__MeasurementArgs extends com.pulumi.resources
     @Import(name="metrics")
     private @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
 
+    /**
+     * @return Provides a list of metrics that act as inputs into the objective function.
+     * 
+     */
     public Optional<Output<List<GoogleCloudMlV1_Measurement_MetricArgs>>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudMlV1__MeasurementArgs extends com.pulumi.resources
     @Import(name="stepCount")
     private @Nullable Output<String> stepCount;
 
+    /**
+     * @return The number of steps a machine learning model has been trained for. Must be non-negative.
+     * 
+     */
     public Optional<Output<String>> stepCount() {
         return Optional.ofNullable(this.stepCount);
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudMlV1__MeasurementArgs extends com.pulumi.resources
             $ = new GoogleCloudMlV1__MeasurementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metrics Provides a list of metrics that act as inputs into the objective function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Provides a list of metrics that act as inputs into the objective function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudMlV1_Measurement_MetricArgs> metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param metrics Provides a list of metrics that act as inputs into the objective function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudMlV1_Measurement_MetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param stepCount The number of steps a machine learning model has been trained for. Must be non-negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepCount(@Nullable Output<String> stepCount) {
             $.stepCount = stepCount;
             return this;
         }
 
+        /**
+         * @param stepCount The number of steps a machine learning model has been trained for. Must be non-negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepCount(String stepCount) {
             return stepCount(Output.of(stepCount));
         }

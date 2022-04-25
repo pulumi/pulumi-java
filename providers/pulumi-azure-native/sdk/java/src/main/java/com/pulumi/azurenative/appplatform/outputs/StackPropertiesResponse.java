@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StackPropertiesResponse {
     /**
-     * Id of the ClusterStack.
+     * @return Id of the ClusterStack.
      * 
      */
     private final @Nullable String id;
     /**
-     * Version of the ClusterStack
+     * @return Version of the ClusterStack
      * 
      */
     private final @Nullable String version;
@@ -31,16 +31,16 @@ public final class StackPropertiesResponse {
     }
 
     /**
-     * Id of the ClusterStack.
+     * @return Id of the ClusterStack.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Version of the ClusterStack
+     * @return Version of the ClusterStack
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends com.pulumi.resources
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends com.pulumi.resources
             $ = new GooglePrivacyDlpV2StoredTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param name Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class TargetConfigurationResponse {
     /**
-     * The configuration to use for this deployment.
+     * @return The configuration to use for this deployment.
      * 
      */
     private final ConfigFileResponse config;
     /**
-     * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+     * @return Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
      * 
      */
     private final List<ImportFileResponse> imports;
@@ -31,16 +31,16 @@ public final class TargetConfigurationResponse {
     }
 
     /**
-     * The configuration to use for this deployment.
+     * @return The configuration to use for this deployment.
      * 
-    */
+     */
     public ConfigFileResponse config() {
         return this.config;
     }
     /**
-     * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+     * @return Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
      * 
-    */
+     */
     public List<ImportFileResponse> imports() {
         return this.imports;
     }

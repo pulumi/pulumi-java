@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class GetDHCPOptionsResult {
     private final @Nullable String dhcpOptionsId;
     /**
-     * Any tags assigned to the DHCP options set.
+     * @return Any tags assigned to the DHCP options set.
      * 
      */
     private final @Nullable List<DHCPOptionsTag> tags;
@@ -32,9 +32,9 @@ public final class GetDHCPOptionsResult {
         return Optional.ofNullable(this.dhcpOptionsId);
     }
     /**
-     * Any tags assigned to the DHCP options set.
+     * @return Any tags assigned to the DHCP options set.
      * 
-    */
+     */
     public List<DHCPOptionsTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

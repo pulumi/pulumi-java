@@ -23,6 +23,10 @@ public final class ViolationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return Error message.
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -34,6 +38,10 @@ public final class ViolationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Id of the item that violates tenant configuration.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -45,6 +53,10 @@ public final class ViolationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return Id of the user who owns violated item.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -75,16 +87,34 @@ public final class ViolationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ViolationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorMessage Error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param id Id of the item that violates tenant configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param userId Id of the user who owns violated item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;

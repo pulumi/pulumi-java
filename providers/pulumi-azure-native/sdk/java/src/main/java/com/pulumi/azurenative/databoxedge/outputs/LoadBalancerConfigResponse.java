@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LoadBalancerConfigResponse {
     /**
-     * Load balancer type
+     * @return Load balancer type
      * 
      */
     private final String type;
     /**
-     * Load balancer version
+     * @return Load balancer version
      * 
      */
     private final String version;
@@ -29,16 +29,16 @@ public final class LoadBalancerConfigResponse {
     }
 
     /**
-     * Load balancer type
+     * @return Load balancer type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Load balancer version
+     * @return Load balancer version
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

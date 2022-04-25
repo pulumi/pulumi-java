@@ -26,6 +26,10 @@ public final class SubscriptionLogSettingsResponse extends com.pulumi.resources.
     @Import(name="category")
     private @Nullable String category;
 
+    /**
+     * @return Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+     * 
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
@@ -37,6 +41,10 @@ public final class SubscriptionLogSettingsResponse extends com.pulumi.resources.
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return a value indicating whether this log is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -66,11 +74,23 @@ public final class SubscriptionLogSettingsResponse extends com.pulumi.resources.
             $ = new SubscriptionLogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param enabled a value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

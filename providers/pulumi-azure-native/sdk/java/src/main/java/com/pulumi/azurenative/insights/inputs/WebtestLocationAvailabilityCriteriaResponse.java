@@ -25,6 +25,10 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
     @Import(name="componentId", required=true)
     private String componentId;
 
+    /**
+     * @return The Application Insights resource Id.
+     * 
+     */
     public String componentId() {
         return this.componentId;
     }
@@ -36,6 +40,10 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
     @Import(name="failedLocationCount", required=true)
     private Double failedLocationCount;
 
+    /**
+     * @return The number of failed locations.
+     * 
+     */
     public Double failedLocationCount() {
         return this.failedLocationCount;
     }
@@ -48,6 +56,11 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return specifies the type of the alert criteria.
+     * Expected value is &#39;Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -59,6 +72,10 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
     @Import(name="webTestId", required=true)
     private String webTestId;
 
+    /**
+     * @return The Application Insights web test Id.
+     * 
+     */
     public String webTestId() {
         return this.webTestId;
     }
@@ -90,21 +107,46 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
             $ = new WebtestLocationAvailabilityCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentId The Application Insights resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentId(String componentId) {
             $.componentId = componentId;
             return this;
         }
 
+        /**
+         * @param failedLocationCount The number of failed locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedLocationCount(Double failedLocationCount) {
             $.failedLocationCount = failedLocationCount;
             return this;
         }
 
+        /**
+         * @param odataType specifies the type of the alert criteria.
+         * Expected value is &#39;Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param webTestId The Application Insights web test Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webTestId(String webTestId) {
             $.webTestId = webTestId;
             return this;

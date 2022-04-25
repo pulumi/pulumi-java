@@ -27,6 +27,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="creationTimeUtc")
     private @Nullable String creationTimeUtc;
 
+    /**
+     * @return Error creation time (UTC)
+     * 
+     */
     public Optional<String> creationTimeUtc() {
         return Optional.ofNullable(this.creationTimeUtc);
     }
@@ -38,6 +42,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customerResolvability")
     private @Nullable String customerResolvability;
 
+    /**
+     * @return Value indicating whether the health error is customer resolvable.
+     * 
+     */
     public Optional<String> customerResolvability() {
         return Optional.ofNullable(this.customerResolvability);
     }
@@ -49,6 +57,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="entityId")
     private @Nullable String entityId;
 
+    /**
+     * @return ID of the entity.
+     * 
+     */
     public Optional<String> entityId() {
         return Optional.ofNullable(this.entityId);
     }
@@ -60,6 +72,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorCategory")
     private @Nullable String errorCategory;
 
+    /**
+     * @return Category of error.
+     * 
+     */
     public Optional<String> errorCategory() {
         return Optional.ofNullable(this.errorCategory);
     }
@@ -71,6 +87,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorCode")
     private @Nullable String errorCode;
 
+    /**
+     * @return Error code.
+     * 
+     */
     public Optional<String> errorCode() {
         return Optional.ofNullable(this.errorCode);
     }
@@ -82,6 +102,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorId")
     private @Nullable String errorId;
 
+    /**
+     * @return The health error unique id.
+     * 
+     */
     public Optional<String> errorId() {
         return Optional.ofNullable(this.errorId);
     }
@@ -93,6 +117,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorLevel")
     private @Nullable String errorLevel;
 
+    /**
+     * @return Level of error.
+     * 
+     */
     public Optional<String> errorLevel() {
         return Optional.ofNullable(this.errorLevel);
     }
@@ -104,6 +132,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorMessage")
     private @Nullable String errorMessage;
 
+    /**
+     * @return Error message.
+     * 
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
@@ -115,6 +147,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorSource")
     private @Nullable String errorSource;
 
+    /**
+     * @return Source of error.
+     * 
+     */
     public Optional<String> errorSource() {
         return Optional.ofNullable(this.errorSource);
     }
@@ -126,6 +162,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="errorType")
     private @Nullable String errorType;
 
+    /**
+     * @return Type of error.
+     * 
+     */
     public Optional<String> errorType() {
         return Optional.ofNullable(this.errorType);
     }
@@ -137,6 +177,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="innerHealthErrors")
     private @Nullable List<InnerHealthErrorResponse> innerHealthErrors;
 
+    /**
+     * @return The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&amp;gt; InnerException.
+     * 
+     */
     public Optional<List<InnerHealthErrorResponse>> innerHealthErrors() {
         return Optional.ofNullable(this.innerHealthErrors);
     }
@@ -148,6 +192,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="possibleCauses")
     private @Nullable String possibleCauses;
 
+    /**
+     * @return Possible causes of error.
+     * 
+     */
     public Optional<String> possibleCauses() {
         return Optional.ofNullable(this.possibleCauses);
     }
@@ -159,6 +207,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="recommendedAction")
     private @Nullable String recommendedAction;
 
+    /**
+     * @return Recommended action to resolve error.
+     * 
+     */
     public Optional<String> recommendedAction() {
         return Optional.ofNullable(this.recommendedAction);
     }
@@ -170,6 +222,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="recoveryProviderErrorMessage")
     private @Nullable String recoveryProviderErrorMessage;
 
+    /**
+     * @return DRA error message.
+     * 
+     */
     public Optional<String> recoveryProviderErrorMessage() {
         return Optional.ofNullable(this.recoveryProviderErrorMessage);
     }
@@ -181,6 +237,10 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="summaryMessage")
     private @Nullable String summaryMessage;
 
+    /**
+     * @return Summary message of the entity.
+     * 
+     */
     public Optional<String> summaryMessage() {
         return Optional.ofNullable(this.summaryMessage);
     }
@@ -223,80 +283,176 @@ public final class HealthErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HealthErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTimeUtc Error creation time (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimeUtc(@Nullable String creationTimeUtc) {
             $.creationTimeUtc = creationTimeUtc;
             return this;
         }
 
+        /**
+         * @param customerResolvability Value indicating whether the health error is customer resolvable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerResolvability(@Nullable String customerResolvability) {
             $.customerResolvability = customerResolvability;
             return this;
         }
 
+        /**
+         * @param entityId ID of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityId(@Nullable String entityId) {
             $.entityId = entityId;
             return this;
         }
 
+        /**
+         * @param errorCategory Category of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCategory(@Nullable String errorCategory) {
             $.errorCategory = errorCategory;
             return this;
         }
 
+        /**
+         * @param errorCode Error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(@Nullable String errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param errorId The health error unique id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorId(@Nullable String errorId) {
             $.errorId = errorId;
             return this;
         }
 
+        /**
+         * @param errorLevel Level of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorLevel(@Nullable String errorLevel) {
             $.errorLevel = errorLevel;
             return this;
         }
 
+        /**
+         * @param errorMessage Error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(@Nullable String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param errorSource Source of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorSource(@Nullable String errorSource) {
             $.errorSource = errorSource;
             return this;
         }
 
+        /**
+         * @param errorType Type of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorType(@Nullable String errorType) {
             $.errorType = errorType;
             return this;
         }
 
+        /**
+         * @param innerHealthErrors The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&amp;gt; InnerException.
+         * 
+         * @return builder
+         * 
+         */
         public Builder innerHealthErrors(@Nullable List<InnerHealthErrorResponse> innerHealthErrors) {
             $.innerHealthErrors = innerHealthErrors;
             return this;
         }
 
+        /**
+         * @param innerHealthErrors The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&amp;gt; InnerException.
+         * 
+         * @return builder
+         * 
+         */
         public Builder innerHealthErrors(InnerHealthErrorResponse... innerHealthErrors) {
             return innerHealthErrors(List.of(innerHealthErrors));
         }
 
+        /**
+         * @param possibleCauses Possible causes of error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder possibleCauses(@Nullable String possibleCauses) {
             $.possibleCauses = possibleCauses;
             return this;
         }
 
+        /**
+         * @param recommendedAction Recommended action to resolve error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendedAction(@Nullable String recommendedAction) {
             $.recommendedAction = recommendedAction;
             return this;
         }
 
+        /**
+         * @param recoveryProviderErrorMessage DRA error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
             $.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
             return this;
         }
 
+        /**
+         * @param summaryMessage Summary message of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summaryMessage(@Nullable String summaryMessage) {
             $.summaryMessage = summaryMessage;
             return this;

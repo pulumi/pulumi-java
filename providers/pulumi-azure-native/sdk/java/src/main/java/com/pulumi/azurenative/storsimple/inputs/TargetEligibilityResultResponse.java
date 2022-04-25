@@ -27,6 +27,10 @@ public final class TargetEligibilityResultResponse extends com.pulumi.resources.
     @Import(name="eligibilityStatus")
     private @Nullable String eligibilityStatus;
 
+    /**
+     * @return The eligibility status of device, as a failover target device.
+     * 
+     */
     public Optional<String> eligibilityStatus() {
         return Optional.ofNullable(this.eligibilityStatus);
     }
@@ -38,6 +42,10 @@ public final class TargetEligibilityResultResponse extends com.pulumi.resources.
     @Import(name="messages")
     private @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
+    /**
+     * @return The list of error messages, if a device does not qualify as a failover target device.
+     * 
+     */
     public Optional<List<TargetEligibilityErrorMessageResponse>> messages() {
         return Optional.ofNullable(this.messages);
     }
@@ -67,16 +75,34 @@ public final class TargetEligibilityResultResponse extends com.pulumi.resources.
             $ = new TargetEligibilityResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eligibilityStatus The eligibility status of device, as a failover target device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eligibilityStatus(@Nullable String eligibilityStatus) {
             $.eligibilityStatus = eligibilityStatus;
             return this;
         }
 
+        /**
+         * @param messages The list of error messages, if a device does not qualify as a failover target device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(@Nullable List<TargetEligibilityErrorMessageResponse> messages) {
             $.messages = messages;
             return this;
         }
 
+        /**
+         * @param messages The list of error messages, if a device does not qualify as a failover target device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(TargetEligibilityErrorMessageResponse... messages) {
             return messages(List.of(messages));
         }

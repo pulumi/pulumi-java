@@ -15,101 +15,101 @@ import java.util.Objects;
 @CustomType
 public final class GetUserPoolClientResult {
     /**
-     * (Optional) Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
+     * @return (Optional) Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
      */
     private final Integer accessTokenValidity;
     /**
-     * (Optional) List of allowed OAuth flows (code, implicit, client_credentials).
+     * @return (Optional) List of allowed OAuth flows (code, implicit, client_credentials).
      * 
      */
     private final List<String> allowedOauthFlows;
     /**
-     * (Optional) Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
+     * @return (Optional) Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
      * 
      */
     private final Boolean allowedOauthFlowsUserPoolClient;
     /**
-     * (Optional) List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
+     * @return (Optional) List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
      * 
      */
     private final List<String> allowedOauthScopes;
     /**
-     * (Optional) Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
+     * @return (Optional) Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
      * 
      */
     private final List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations;
     /**
-     * (Optional) List of allowed callback URLs for the identity providers.
+     * @return (Optional) List of allowed callback URLs for the identity providers.
      * 
      */
     private final List<String> callbackUrls;
     private final String clientId;
     private final String clientSecret;
     /**
-     * (Optional) Default redirect URI. Must be in the list of callback URLs.
+     * @return (Optional) Default redirect URI. Must be in the list of callback URLs.
      * 
      */
     private final String defaultRedirectUri;
     /**
-     * (Optional) Enables or disables token revocation.
+     * @return (Optional) Enables or disables token revocation.
      * 
      */
     private final Boolean enableTokenRevocation;
     /**
-     * (Optional) List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+     * @return (Optional) List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
      * 
      */
     private final List<String> explicitAuthFlows;
     /**
-     * (Optional) Should an application secret be generated.
+     * @return (Optional) Should an application secret be generated.
      * 
      */
     private final Boolean generateSecret;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * (Optional) Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
+     * @return (Optional) Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
      */
     private final Integer idTokenValidity;
     /**
-     * (Optional) List of allowed logout URLs for the identity providers.
+     * @return (Optional) List of allowed logout URLs for the identity providers.
      * 
      */
     private final List<String> logoutUrls;
     private final String name;
     /**
-     * (Optional) Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
+     * @return (Optional) Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
      * 
      */
     private final String preventUserExistenceErrors;
     /**
-     * (Optional) List of user pool attributes the application client can read from.
+     * @return (Optional) List of user pool attributes the application client can read from.
      * 
      */
     private final List<String> readAttributes;
     /**
-     * (Optional) Time limit in days refresh tokens are valid for.
+     * @return (Optional) Time limit in days refresh tokens are valid for.
      * 
      */
     private final Integer refreshTokenValidity;
     /**
-     * (Optional) List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
+     * @return (Optional) List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
      * 
      */
     private final List<String> supportedIdentityProviders;
     /**
-     * (Optional) Configuration block for units in which the validity times are represented in. Detailed below.
+     * @return (Optional) Configuration block for units in which the validity times are represented in. Detailed below.
      * 
      */
     private final List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits;
     private final String userPoolId;
     /**
-     * (Optional) List of user pool attributes the application client can write to.
+     * @return (Optional) List of user pool attributes the application client can write to.
      * 
      */
     private final List<String> writeAttributes;
@@ -165,44 +165,44 @@ public final class GetUserPoolClientResult {
     }
 
     /**
-     * (Optional) Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
+     * @return (Optional) Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
-    */
+     */
     public Integer accessTokenValidity() {
         return this.accessTokenValidity;
     }
     /**
-     * (Optional) List of allowed OAuth flows (code, implicit, client_credentials).
+     * @return (Optional) List of allowed OAuth flows (code, implicit, client_credentials).
      * 
-    */
+     */
     public List<String> allowedOauthFlows() {
         return this.allowedOauthFlows;
     }
     /**
-     * (Optional) Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
+     * @return (Optional) Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
      * 
-    */
+     */
     public Boolean allowedOauthFlowsUserPoolClient() {
         return this.allowedOauthFlowsUserPoolClient;
     }
     /**
-     * (Optional) List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
+     * @return (Optional) List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
      * 
-    */
+     */
     public List<String> allowedOauthScopes() {
         return this.allowedOauthScopes;
     }
     /**
-     * (Optional) Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
+     * @return (Optional) Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
      * 
-    */
+     */
     public List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations() {
         return this.analyticsConfigurations;
     }
     /**
-     * (Optional) List of allowed callback URLs for the identity providers.
+     * @return (Optional) List of allowed callback URLs for the identity providers.
      * 
-    */
+     */
     public List<String> callbackUrls() {
         return this.callbackUrls;
     }
@@ -213,51 +213,51 @@ public final class GetUserPoolClientResult {
         return this.clientSecret;
     }
     /**
-     * (Optional) Default redirect URI. Must be in the list of callback URLs.
+     * @return (Optional) Default redirect URI. Must be in the list of callback URLs.
      * 
-    */
+     */
     public String defaultRedirectUri() {
         return this.defaultRedirectUri;
     }
     /**
-     * (Optional) Enables or disables token revocation.
+     * @return (Optional) Enables or disables token revocation.
      * 
-    */
+     */
     public Boolean enableTokenRevocation() {
         return this.enableTokenRevocation;
     }
     /**
-     * (Optional) List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+     * @return (Optional) List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
      * 
-    */
+     */
     public List<String> explicitAuthFlows() {
         return this.explicitAuthFlows;
     }
     /**
-     * (Optional) Should an application secret be generated.
+     * @return (Optional) Should an application secret be generated.
      * 
-    */
+     */
     public Boolean generateSecret() {
         return this.generateSecret;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * (Optional) Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
+     * @return (Optional) Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
-    */
+     */
     public Integer idTokenValidity() {
         return this.idTokenValidity;
     }
     /**
-     * (Optional) List of allowed logout URLs for the identity providers.
+     * @return (Optional) List of allowed logout URLs for the identity providers.
      * 
-    */
+     */
     public List<String> logoutUrls() {
         return this.logoutUrls;
     }
@@ -265,37 +265,37 @@ public final class GetUserPoolClientResult {
         return this.name;
     }
     /**
-     * (Optional) Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
+     * @return (Optional) Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
      * 
-    */
+     */
     public String preventUserExistenceErrors() {
         return this.preventUserExistenceErrors;
     }
     /**
-     * (Optional) List of user pool attributes the application client can read from.
+     * @return (Optional) List of user pool attributes the application client can read from.
      * 
-    */
+     */
     public List<String> readAttributes() {
         return this.readAttributes;
     }
     /**
-     * (Optional) Time limit in days refresh tokens are valid for.
+     * @return (Optional) Time limit in days refresh tokens are valid for.
      * 
-    */
+     */
     public Integer refreshTokenValidity() {
         return this.refreshTokenValidity;
     }
     /**
-     * (Optional) List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
+     * @return (Optional) List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
      * 
-    */
+     */
     public List<String> supportedIdentityProviders() {
         return this.supportedIdentityProviders;
     }
     /**
-     * (Optional) Configuration block for units in which the validity times are represented in. Detailed below.
+     * @return (Optional) Configuration block for units in which the validity times are represented in. Detailed below.
      * 
-    */
+     */
     public List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits() {
         return this.tokenValidityUnits;
     }
@@ -303,9 +303,9 @@ public final class GetUserPoolClientResult {
         return this.userPoolId;
     }
     /**
-     * (Optional) List of user pool attributes the application client can write to.
+     * @return (Optional) List of user pool attributes the application client can write to.
      * 
-    */
+     */
     public List<String> writeAttributes() {
         return this.writeAttributes;
     }

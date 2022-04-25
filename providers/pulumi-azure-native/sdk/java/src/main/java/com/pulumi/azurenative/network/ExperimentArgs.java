@@ -26,6 +26,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the details or intents of the Experiment
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
     private @Nullable Output<Either<String,State>> enabledState;
 
+    /**
+     * @return The state of the Experiment
+     * 
+     */
     public Optional<Output<Either<String,State>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -48,6 +56,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointA")
     private @Nullable Output<ExperimentEndpointArgs> endpointA;
 
+    /**
+     * @return The endpoint A of an experiment
+     * 
+     */
     public Optional<Output<ExperimentEndpointArgs>> endpointA() {
         return Optional.ofNullable(this.endpointA);
     }
@@ -59,6 +71,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointB")
     private @Nullable Output<ExperimentEndpointArgs> endpointB;
 
+    /**
+     * @return The endpoint B of an experiment
+     * 
+     */
     public Optional<Output<ExperimentEndpointArgs>> endpointB() {
         return Optional.ofNullable(this.endpointB);
     }
@@ -70,6 +86,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
     private @Nullable Output<String> experimentName;
 
+    /**
+     * @return The Experiment identifier associated with the Experiment
+     * 
+     */
     public Optional<Output<String>> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
@@ -81,6 +101,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -92,6 +116,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return The Profile identifier associated with the Tenant and Partner
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -103,6 +131,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -150,91 +186,211 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExperimentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the details or intents of the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the details or intents of the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enabledState The state of the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,State>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState The state of the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,State> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState The state of the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState The state of the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(State enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param endpointA The endpoint A of an experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointA(@Nullable Output<ExperimentEndpointArgs> endpointA) {
             $.endpointA = endpointA;
             return this;
         }
 
+        /**
+         * @param endpointA The endpoint A of an experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointA(ExperimentEndpointArgs endpointA) {
             return endpointA(Output.of(endpointA));
         }
 
+        /**
+         * @param endpointB The endpoint B of an experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointB(@Nullable Output<ExperimentEndpointArgs> endpointB) {
             $.endpointB = endpointB;
             return this;
         }
 
+        /**
+         * @param endpointB The endpoint B of an experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointB(ExperimentEndpointArgs endpointB) {
             return endpointB(Output.of(endpointB));
         }
 
+        /**
+         * @param experimentName The Experiment identifier associated with the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(@Nullable Output<String> experimentName) {
             $.experimentName = experimentName;
             return this;
         }
 
+        /**
+         * @param experimentName The Experiment identifier associated with the Experiment
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(String experimentName) {
             return experimentName(Output.of(experimentName));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param profileName The Profile identifier associated with the Tenant and Partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName The Profile identifier associated with the Tenant and Partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

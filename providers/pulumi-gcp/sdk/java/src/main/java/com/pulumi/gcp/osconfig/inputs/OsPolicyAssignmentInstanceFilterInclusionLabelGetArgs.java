@@ -23,6 +23,10 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs extends
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -51,11 +55,23 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs extends
             $ = new OsPolicyAssignmentInstanceFilterInclusionLabelGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

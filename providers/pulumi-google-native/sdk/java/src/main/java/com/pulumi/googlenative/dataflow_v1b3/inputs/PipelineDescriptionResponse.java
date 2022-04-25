@@ -26,6 +26,10 @@ public final class PipelineDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="displayData", required=true)
     private List<DisplayDataResponse> displayData;
 
+    /**
+     * @return Pipeline level display data.
+     * 
+     */
     public List<DisplayDataResponse> displayData() {
         return this.displayData;
     }
@@ -37,6 +41,10 @@ public final class PipelineDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="executionPipelineStage", required=true)
     private List<ExecutionStageSummaryResponse> executionPipelineStage;
 
+    /**
+     * @return Description of each stage of execution of the pipeline.
+     * 
+     */
     public List<ExecutionStageSummaryResponse> executionPipelineStage() {
         return this.executionPipelineStage;
     }
@@ -48,6 +56,10 @@ public final class PipelineDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="originalPipelineTransform", required=true)
     private List<TransformSummaryResponse> originalPipelineTransform;
 
+    /**
+     * @return Description of each transform in the pipeline and collections between them.
+     * 
+     */
     public List<TransformSummaryResponse> originalPipelineTransform() {
         return this.originalPipelineTransform;
     }
@@ -78,29 +90,65 @@ public final class PipelineDescriptionResponse extends com.pulumi.resources.Invo
             $ = new PipelineDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayData Pipeline level display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(List<DisplayDataResponse> displayData) {
             $.displayData = displayData;
             return this;
         }
 
+        /**
+         * @param displayData Pipeline level display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(DisplayDataResponse... displayData) {
             return displayData(List.of(displayData));
         }
 
+        /**
+         * @param executionPipelineStage Description of each stage of execution of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionPipelineStage(List<ExecutionStageSummaryResponse> executionPipelineStage) {
             $.executionPipelineStage = executionPipelineStage;
             return this;
         }
 
+        /**
+         * @param executionPipelineStage Description of each stage of execution of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionPipelineStage(ExecutionStageSummaryResponse... executionPipelineStage) {
             return executionPipelineStage(List.of(executionPipelineStage));
         }
 
+        /**
+         * @param originalPipelineTransform Description of each transform in the pipeline and collections between them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPipelineTransform(List<TransformSummaryResponse> originalPipelineTransform) {
             $.originalPipelineTransform = originalPipelineTransform;
             return this;
         }
 
+        /**
+         * @param originalPipelineTransform Description of each transform in the pipeline and collections between them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalPipelineTransform(TransformSummaryResponse... originalPipelineTransform) {
             return originalPipelineTransform(List.of(originalPipelineTransform));
         }

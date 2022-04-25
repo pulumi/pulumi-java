@@ -20,6 +20,10 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends com.pulu
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The TLS Common Name string of the certificate.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -31,6 +35,10 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends com.pulu
     @Import(name="wildcardMatch", required=true)
     private Boolean wildcardMatch;
 
+    /**
+     * @return Indicates whether the cert should be matched against as a wildcard cert.
+     * 
+     */
     public Boolean wildcardMatch() {
         return this.wildcardMatch;
     }
@@ -60,11 +68,23 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends com.pulu
             $ = new GoogleCloudApigeeV1TlsInfoCommonNameResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The TLS Common Name string of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param wildcardMatch Indicates whether the cert should be matched against as a wildcard cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardMatch(Boolean wildcardMatch) {
             $.wildcardMatch = wildcardMatch;
             return this;

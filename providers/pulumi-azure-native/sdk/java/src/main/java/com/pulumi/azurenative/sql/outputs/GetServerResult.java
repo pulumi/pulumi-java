@@ -17,92 +17,92 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServerResult {
     /**
-     * Administrator username for the server. Once created it cannot be changed.
+     * @return Administrator username for the server. Once created it cannot be changed.
      * 
      */
     private final @Nullable String administratorLogin;
     /**
-     * The Azure Active Directory identity of the server.
+     * @return The Azure Active Directory identity of the server.
      * 
      */
     private final @Nullable ServerExternalAdministratorResponse administrators;
     /**
-     * The fully qualified domain name of the server.
+     * @return The fully qualified domain name of the server.
      * 
      */
     private final String fullyQualifiedDomainName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * The Azure Active Directory identity of the server.
+     * @return The Azure Active Directory identity of the server.
      * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
-     * A CMK URI of the key to use for encryption.
+     * @return A CMK URI of the key to use for encryption.
      * 
      */
     private final @Nullable String keyId;
     /**
-     * Kind of sql server. This is metadata used for the Azure portal experience.
+     * @return Kind of sql server. This is metadata used for the Azure portal experience.
      * 
      */
     private final String kind;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
+     * @return Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
      */
     private final @Nullable String minimalTlsVersion;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The resource id of a user assigned identity to be used by default.
+     * @return The resource id of a user assigned identity to be used by default.
      * 
      */
     private final @Nullable String primaryUserAssignedIdentityId;
     /**
-     * List of private endpoint connections on a server
+     * @return List of private endpoint connections on a server
      * 
      */
     private final List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
-     * The state of the server.
+     * @return The state of the server.
      * 
      */
     private final String state;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The version of the server.
+     * @return The version of the server.
      * 
      */
     private final @Nullable String version;
     /**
-     * Whether or not existing server has a workspace created and if it allows connection from workspace
+     * @return Whether or not existing server has a workspace created and if it allows connection from workspace
      * 
      */
     private final String workspaceFeature;
@@ -148,128 +148,128 @@ public final class GetServerResult {
     }
 
     /**
-     * Administrator username for the server. Once created it cannot be changed.
+     * @return Administrator username for the server. Once created it cannot be changed.
      * 
-    */
+     */
     public Optional<String> administratorLogin() {
         return Optional.ofNullable(this.administratorLogin);
     }
     /**
-     * The Azure Active Directory identity of the server.
+     * @return The Azure Active Directory identity of the server.
      * 
-    */
+     */
     public Optional<ServerExternalAdministratorResponse> administrators() {
         return Optional.ofNullable(this.administrators);
     }
     /**
-     * The fully qualified domain name of the server.
+     * @return The fully qualified domain name of the server.
      * 
-    */
+     */
     public String fullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Azure Active Directory identity of the server.
+     * @return The Azure Active Directory identity of the server.
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * A CMK URI of the key to use for encryption.
+     * @return A CMK URI of the key to use for encryption.
      * 
-    */
+     */
     public Optional<String> keyId() {
         return Optional.ofNullable(this.keyId);
     }
     /**
-     * Kind of sql server. This is metadata used for the Azure portal experience.
+     * @return Kind of sql server. This is metadata used for the Azure portal experience.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
+     * @return Minimal TLS version. Allowed values: &#39;1.0&#39;, &#39;1.1&#39;, &#39;1.2&#39;
      * 
-    */
+     */
     public Optional<String> minimalTlsVersion() {
         return Optional.ofNullable(this.minimalTlsVersion);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource id of a user assigned identity to be used by default.
+     * @return The resource id of a user assigned identity to be used by default.
      * 
-    */
+     */
     public Optional<String> primaryUserAssignedIdentityId() {
         return Optional.ofNullable(this.primaryUserAssignedIdentityId);
     }
     /**
-     * List of private endpoint connections on a server
+     * @return List of private endpoint connections on a server
      * 
-    */
+     */
     public List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * The state of the server.
+     * @return The state of the server.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The version of the server.
+     * @return The version of the server.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
     /**
-     * Whether or not existing server has a workspace created and if it allows connection from workspace
+     * @return Whether or not existing server has a workspace created and if it allows connection from workspace
      * 
-    */
+     */
     public String workspaceFeature() {
         return this.workspaceFeature;
     }

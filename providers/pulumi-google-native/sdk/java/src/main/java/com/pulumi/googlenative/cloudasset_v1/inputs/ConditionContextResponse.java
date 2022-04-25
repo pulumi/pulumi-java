@@ -23,6 +23,10 @@ public final class ConditionContextResponse extends com.pulumi.resources.InvokeA
     @Import(name="accessTime", required=true)
     private String accessTime;
 
+    /**
+     * @return The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
+     * 
+     */
     public String accessTime() {
         return this.accessTime;
     }
@@ -51,6 +55,12 @@ public final class ConditionContextResponse extends com.pulumi.resources.InvokeA
             $ = new ConditionContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTime The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTime(String accessTime) {
             $.accessTime = accessTime;
             return this;

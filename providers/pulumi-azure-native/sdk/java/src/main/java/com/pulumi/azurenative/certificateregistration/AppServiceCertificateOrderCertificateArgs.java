@@ -23,6 +23,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
     @Import(name="certificateOrderName", required=true)
     private Output<String> certificateOrderName;
 
+    /**
+     * @return Name of the certificate order.
+     * 
+     */
     public Output<String> certificateOrderName() {
         return this.certificateOrderName;
     }
@@ -34,6 +38,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
     @Import(name="keyVaultId")
     private @Nullable Output<String> keyVaultId;
 
+    /**
+     * @return Key Vault resource Id.
+     * 
+     */
     public Optional<Output<String>> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
@@ -45,6 +53,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
     @Import(name="keyVaultSecretName")
     private @Nullable Output<String> keyVaultSecretName;
 
+    /**
+     * @return Key Vault secret name.
+     * 
+     */
     public Optional<Output<String>> keyVaultSecretName() {
         return Optional.ofNullable(this.keyVaultSecretName);
     }
@@ -56,6 +68,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -67,6 +83,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -78,6 +98,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the certificate.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -89,6 +113,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -100,6 +128,10 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -135,74 +167,170 @@ public final class AppServiceCertificateOrderCertificateArgs extends com.pulumi.
             $ = new AppServiceCertificateOrderCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateOrderName Name of the certificate order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateOrderName(Output<String> certificateOrderName) {
             $.certificateOrderName = certificateOrderName;
             return this;
         }
 
+        /**
+         * @param certificateOrderName Name of the certificate order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateOrderName(String certificateOrderName) {
             return certificateOrderName(Output.of(certificateOrderName));
         }
 
+        /**
+         * @param keyVaultId Key Vault resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
             $.keyVaultId = keyVaultId;
             return this;
         }
 
+        /**
+         * @param keyVaultId Key Vault resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultId(String keyVaultId) {
             return keyVaultId(Output.of(keyVaultId));
         }
 
+        /**
+         * @param keyVaultSecretName Key Vault secret name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
             $.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
 
+        /**
+         * @param keyVaultSecretName Key Vault secret name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultSecretName(String keyVaultSecretName) {
             return keyVaultSecretName(Output.of(keyVaultSecretName));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

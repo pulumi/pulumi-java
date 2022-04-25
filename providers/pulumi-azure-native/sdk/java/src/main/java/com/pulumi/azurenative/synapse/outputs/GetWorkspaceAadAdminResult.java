@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkspaceAadAdminResult {
     /**
-     * Workspace active directory administrator type
+     * @return Workspace active directory administrator type
      * 
      */
     private final @Nullable String administratorType;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Login of the workspace active directory administrator
+     * @return Login of the workspace active directory administrator
      * 
      */
     private final @Nullable String login;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Object ID of the workspace active directory administrator
+     * @return Object ID of the workspace active directory administrator
      * 
      */
     private final @Nullable String sid;
     /**
-     * Tenant ID of the workspace active directory administrator
+     * @return Tenant ID of the workspace active directory administrator
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -66,51 +66,51 @@ public final class GetWorkspaceAadAdminResult {
     }
 
     /**
-     * Workspace active directory administrator type
+     * @return Workspace active directory administrator type
      * 
-    */
+     */
     public Optional<String> administratorType() {
         return Optional.ofNullable(this.administratorType);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Login of the workspace active directory administrator
+     * @return Login of the workspace active directory administrator
      * 
-    */
+     */
     public Optional<String> login() {
         return Optional.ofNullable(this.login);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Object ID of the workspace active directory administrator
+     * @return Object ID of the workspace active directory administrator
      * 
-    */
+     */
     public Optional<String> sid() {
         return Optional.ofNullable(this.sid);
     }
     /**
-     * Tenant ID of the workspace active directory administrator
+     * @return Tenant ID of the workspace active directory administrator
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

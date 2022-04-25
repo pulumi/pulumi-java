@@ -24,6 +24,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSetName")
     private @Nullable Output<String> dataSetName;
 
+    /**
+     * @return The name of the dataSet.
+     * 
+     */
     public Optional<Output<String>> dataSetName() {
         return Optional.ofNullable(this.dataSetName);
     }
@@ -46,6 +54,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,DataSetKind>> kind;
 
+    /**
+     * @return Kind of data set.
+     * 
+     */
     public Output<Either<String,DataSetKind>> kind() {
         return this.kind;
     }
@@ -57,6 +69,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return The name of the share to add the data set to.
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -100,55 +120,127 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(@Nullable Output<String> dataSetName) {
             $.dataSetName = dataSetName;
             return this;
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(String dataSetName) {
             return dataSetName(Output.of(dataSetName));
         }
 
+        /**
+         * @param kind Kind of data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,DataSetKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,DataSetKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Kind of data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Kind of data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(DataSetKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareName The name of the share to add the data set to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share to add the data set to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }

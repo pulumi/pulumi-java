@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class EncryptionIdentityResponse {
     /**
-     * The principal identifier associated with the encryption.
+     * @return The principal identifier associated with the encryption.
      * 
      */
     private final String principalId;
     /**
-     * The tenant identifier associated with the encryption.
+     * @return The tenant identifier associated with the encryption.
      * 
      */
     private final String tenantId;
     /**
-     * The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
+     * @return The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
      * 
      */
     private final String type;
@@ -36,23 +36,23 @@ public final class EncryptionIdentityResponse {
     }
 
     /**
-     * The principal identifier associated with the encryption.
+     * @return The principal identifier associated with the encryption.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant identifier associated with the encryption.
+     * @return The tenant identifier associated with the encryption.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
+     * @return The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

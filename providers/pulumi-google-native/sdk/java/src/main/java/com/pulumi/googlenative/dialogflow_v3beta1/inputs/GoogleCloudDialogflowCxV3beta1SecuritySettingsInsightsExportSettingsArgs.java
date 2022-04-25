@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
     @Import(name="enableInsightsExport")
     private @Nullable Output<Boolean> enableInsightsExport;
 
+    /**
+     * @return If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
+     * 
+     */
     public Optional<Output<Boolean>> enableInsightsExport() {
         return Optional.ofNullable(this.enableInsightsExport);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
             $ = new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableInsightsExport If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInsightsExport(@Nullable Output<Boolean> enableInsightsExport) {
             $.enableInsightsExport = enableInsightsExport;
             return this;
         }
 
+        /**
+         * @param enableInsightsExport If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInsightsExport(Boolean enableInsightsExport) {
             return enableInsightsExport(Output.of(enableInsightsExport));
         }

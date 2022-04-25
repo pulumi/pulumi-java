@@ -26,6 +26,10 @@ public final class DefenderForContainersAwsOfferingKubernetesServiceArgs extends
     @Import(name="cloudRoleArn")
     private @Nullable Output<String> cloudRoleArn;
 
+    /**
+     * @return The cloud role ARN in AWS for this feature
+     * 
+     */
     public Optional<Output<String>> cloudRoleArn() {
         return Optional.ofNullable(this.cloudRoleArn);
     }
@@ -54,11 +58,23 @@ public final class DefenderForContainersAwsOfferingKubernetesServiceArgs extends
             $ = new DefenderForContainersAwsOfferingKubernetesServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudRoleArn The cloud role ARN in AWS for this feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRoleArn(@Nullable Output<String> cloudRoleArn) {
             $.cloudRoleArn = cloudRoleArn;
             return this;
         }
 
+        /**
+         * @param cloudRoleArn The cloud role ARN in AWS for this feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRoleArn(String cloudRoleArn) {
             return cloudRoleArn(Output.of(cloudRoleArn));
         }

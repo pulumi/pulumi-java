@@ -23,6 +23,10 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="auditConfigs")
     private @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
 
+    /**
+     * @return A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
+     * 
+     */
     public Optional<List<GetIAMPolicyAuditConfig>> auditConfigs() {
         return Optional.ofNullable(this.auditConfigs);
     }
@@ -36,6 +40,12 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="bindings")
     private @Nullable List<GetIAMPolicyBinding> bindings;
 
+    /**
+     * @return A nested configuration block (described below)
+     * defining a binding to be included in the policy document. Multiple
+     * `binding` arguments are supported.
+     * 
+     */
     public Optional<List<GetIAMPolicyBinding>> bindings() {
         return Optional.ofNullable(this.bindings);
     }
@@ -65,20 +75,48 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditConfigs A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditConfigs(@Nullable List<GetIAMPolicyAuditConfig> auditConfigs) {
             $.auditConfigs = auditConfigs;
             return this;
         }
 
+        /**
+         * @param auditConfigs A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditConfigs(GetIAMPolicyAuditConfig... auditConfigs) {
             return auditConfigs(List.of(auditConfigs));
         }
 
+        /**
+         * @param bindings A nested configuration block (described below)
+         * defining a binding to be included in the policy document. Multiple
+         * `binding` arguments are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindings(@Nullable List<GetIAMPolicyBinding> bindings) {
             $.bindings = bindings;
             return this;
         }
 
+        /**
+         * @param bindings A nested configuration block (described below)
+         * defining a binding to be included in the policy document. Multiple
+         * `binding` arguments are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindings(GetIAMPolicyBinding... bindings) {
             return bindings(List.of(bindings));
         }

@@ -31,6 +31,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
     private @Nullable Output<List<FieldArgs>> fields;
 
+    /**
+     * @return The list of fields.
+     * 
+     */
     public Optional<Output<List<FieldArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -42,6 +46,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The fully qualified message name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +61,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oneofs")
     private @Nullable Output<List<String>> oneofs;
 
+    /**
+     * @return The list of types appearing in `oneof` definitions in this type.
+     * 
+     */
     public Optional<Output<List<String>>> oneofs() {
         return Optional.ofNullable(this.oneofs);
     }
@@ -64,6 +76,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<List<OptionArgs>> options;
 
+    /**
+     * @return The protocol buffer options.
+     * 
+     */
     public Optional<Output<List<OptionArgs>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -75,6 +91,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceContext")
     private @Nullable Output<SourceContextArgs> sourceContext;
 
+    /**
+     * @return The source context.
+     * 
+     */
     public Optional<Output<SourceContextArgs>> sourceContext() {
         return Optional.ofNullable(this.sourceContext);
     }
@@ -86,6 +106,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syntax")
     private @Nullable Output<TypeSyntax> syntax;
 
+    /**
+     * @return The source syntax.
+     * 
+     */
     public Optional<Output<TypeSyntax>> syntax() {
         return Optional.ofNullable(this.syntax);
     }
@@ -119,68 +143,158 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fields The list of fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable Output<List<FieldArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The list of fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<FieldArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields The list of fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(FieldArgs... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param name The fully qualified message name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The fully qualified message name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param oneofs The list of types appearing in `oneof` definitions in this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneofs(@Nullable Output<List<String>> oneofs) {
             $.oneofs = oneofs;
             return this;
         }
 
+        /**
+         * @param oneofs The list of types appearing in `oneof` definitions in this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneofs(List<String> oneofs) {
             return oneofs(Output.of(oneofs));
         }
 
+        /**
+         * @param oneofs The list of types appearing in `oneof` definitions in this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneofs(String... oneofs) {
             return oneofs(List.of(oneofs));
         }
 
+        /**
+         * @param options The protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionArgs> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options The protocol buffer options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param sourceContext The source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
             $.sourceContext = sourceContext;
             return this;
         }
 
+        /**
+         * @param sourceContext The source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContext(SourceContextArgs sourceContext) {
             return sourceContext(Output.of(sourceContext));
         }
 
+        /**
+         * @param syntax The source syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(@Nullable Output<TypeSyntax> syntax) {
             $.syntax = syntax;
             return this;
         }
 
+        /**
+         * @param syntax The source syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syntax(TypeSyntax syntax) {
             return syntax(Output.of(syntax));
         }

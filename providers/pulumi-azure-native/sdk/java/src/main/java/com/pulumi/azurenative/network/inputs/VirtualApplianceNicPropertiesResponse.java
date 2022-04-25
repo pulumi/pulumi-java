@@ -23,6 +23,10 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return NIC name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
     @Import(name="privateIpAddress", required=true)
     private String privateIpAddress;
 
+    /**
+     * @return Private IP address.
+     * 
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
@@ -45,6 +53,10 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
     @Import(name="publicIpAddress", required=true)
     private String publicIpAddress;
 
+    /**
+     * @return Public IP address.
+     * 
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
@@ -75,16 +87,34 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
             $ = new VirtualApplianceNicPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name NIC name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Private IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param publicIpAddress Public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(String publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;

@@ -25,6 +25,10 @@ public final class HttpHostConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return http hostname config name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class HttpHostConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="routes", required=true)
     private List<HttpRouteConfigResponse> routes;
 
+    /**
+     * @return Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
+     * 
+     */
     public List<HttpRouteConfigResponse> routes() {
         return this.routes;
     }
@@ -65,16 +73,34 @@ public final class HttpHostConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new HttpHostConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name http hostname config name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param routes Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<HttpRouteConfigResponse> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(HttpRouteConfigResponse... routes) {
             return routes(List.of(routes));
         }

@@ -28,6 +28,10 @@ public final class OracleSchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oracleTables")
     private @Nullable Output<List<OracleTableArgs>> oracleTables;
 
+    /**
+     * @return Tables in the schema.
+     * 
+     */
     public Optional<Output<List<OracleTableArgs>>> oracleTables() {
         return Optional.ofNullable(this.oracleTables);
     }
@@ -39,6 +43,10 @@ public final class OracleSchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaName")
     private @Nullable Output<String> schemaName;
 
+    /**
+     * @return Schema name.
+     * 
+     */
     public Optional<Output<String>> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
@@ -68,24 +76,54 @@ public final class OracleSchemaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OracleSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oracleTables Tables in the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleTables(@Nullable Output<List<OracleTableArgs>> oracleTables) {
             $.oracleTables = oracleTables;
             return this;
         }
 
+        /**
+         * @param oracleTables Tables in the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleTables(List<OracleTableArgs> oracleTables) {
             return oracleTables(Output.of(oracleTables));
         }
 
+        /**
+         * @param oracleTables Tables in the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleTables(OracleTableArgs... oracleTables) {
             return oracleTables(List.of(oracleTables));
         }
 
+        /**
+         * @param schemaName Schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(@Nullable Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName Schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }

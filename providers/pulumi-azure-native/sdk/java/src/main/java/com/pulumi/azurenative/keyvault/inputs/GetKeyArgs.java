@@ -19,6 +19,10 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The name of the key to be retrieved.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -30,6 +34,10 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group which contains the specified key vault.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the vault which contains the key to be retrieved.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -71,16 +83,34 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of the key to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group which contains the specified key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the vault which contains the key to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

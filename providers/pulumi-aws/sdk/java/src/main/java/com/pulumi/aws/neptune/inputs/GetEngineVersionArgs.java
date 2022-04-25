@@ -22,6 +22,10 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="engine")
     private @Nullable String engine;
 
+    /**
+     * @return DB engine. (Default: `neptune`)
+     * 
+     */
     public Optional<String> engine() {
         return Optional.ofNullable(this.engine);
     }
@@ -33,6 +37,10 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="parameterGroupFamily")
     private @Nullable String parameterGroupFamily;
 
+    /**
+     * @return The name of a specific DB parameter group family. An example parameter group family is `neptune1`.
+     * 
+     */
     public Optional<String> parameterGroupFamily() {
         return Optional.ofNullable(this.parameterGroupFamily);
     }
@@ -44,6 +52,10 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="preferredVersions")
     private @Nullable List<String> preferredVersions;
 
+    /**
+     * @return Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
+     * 
+     */
     public Optional<List<String>> preferredVersions() {
         return Optional.ofNullable(this.preferredVersions);
     }
@@ -55,6 +67,10 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Version of the DB engine. For example, `1.0.1.0`, `1.0.2.2`, and `1.0.3.0`. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -86,25 +102,55 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetEngineVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param engine DB engine. (Default: `neptune`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(@Nullable String engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param parameterGroupFamily The name of a specific DB parameter group family. An example parameter group family is `neptune1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupFamily(@Nullable String parameterGroupFamily) {
             $.parameterGroupFamily = parameterGroupFamily;
             return this;
         }
 
+        /**
+         * @param preferredVersions Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredVersions(@Nullable List<String> preferredVersions) {
             $.preferredVersions = preferredVersions;
             return this;
         }
 
+        /**
+         * @param preferredVersions Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredVersions(String... preferredVersions) {
             return preferredVersions(List.of(preferredVersions));
         }
 
+        /**
+         * @param version Version of the DB engine. For example, `1.0.1.0`, `1.0.2.2`, and `1.0.3.0`. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

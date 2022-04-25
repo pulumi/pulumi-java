@@ -22,6 +22,10 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration exten
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -33,6 +37,10 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration exten
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +59,10 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration exten
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -82,11 +94,23 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration exten
             $ = new DefaultRolloutSpecificationResponseProviderRegistration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
@@ -97,6 +121,12 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration exten
             return this;
         }
 
+        /**
+         * @param type The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

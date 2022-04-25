@@ -19,6 +19,10 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group the template will be deployed to. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
     @Import(name="rmplName", required=true)
     private String rmplName;
 
+    /**
+     * @return The name of the resource management private link.
+     * 
+     */
     public String rmplName() {
         return this.rmplName;
     }
@@ -59,11 +67,23 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
             $ = new GetResourceManagementPrivateLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group the template will be deployed to. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param rmplName The name of the resource management private link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rmplName(String rmplName) {
             $.rmplName = rmplName;
             return this;

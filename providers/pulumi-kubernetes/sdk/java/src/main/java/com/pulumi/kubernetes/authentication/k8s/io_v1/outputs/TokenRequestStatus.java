@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class TokenRequestStatus {
     /**
-     * ExpirationTimestamp is the time of expiration of the returned token.
+     * @return ExpirationTimestamp is the time of expiration of the returned token.
      * 
      */
     private final String expirationTimestamp;
     /**
-     * Token is the opaque bearer token.
+     * @return Token is the opaque bearer token.
      * 
      */
     private final String token;
@@ -29,16 +29,16 @@ public final class TokenRequestStatus {
     }
 
     /**
-     * ExpirationTimestamp is the time of expiration of the returned token.
+     * @return ExpirationTimestamp is the time of expiration of the returned token.
      * 
-    */
+     */
     public String expirationTimestamp() {
         return this.expirationTimestamp;
     }
     /**
-     * Token is the opaque bearer token.
+     * @return Token is the opaque bearer token.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }

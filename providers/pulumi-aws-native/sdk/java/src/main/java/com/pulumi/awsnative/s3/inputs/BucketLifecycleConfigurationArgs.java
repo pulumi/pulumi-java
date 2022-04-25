@@ -21,6 +21,10 @@ public final class BucketLifecycleConfigurationArgs extends com.pulumi.resources
     @Import(name="rules", required=true)
     private Output<List<BucketRuleArgs>> rules;
 
+    /**
+     * @return A lifecycle rule for individual objects in an Amazon S3 bucket.
+     * 
+     */
     public Output<List<BucketRuleArgs>> rules() {
         return this.rules;
     }
@@ -49,15 +53,33 @@ public final class BucketLifecycleConfigurationArgs extends com.pulumi.resources
             $ = new BucketLifecycleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<BucketRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BucketRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BucketRuleArgs... rules) {
             return rules(List.of(rules));
         }

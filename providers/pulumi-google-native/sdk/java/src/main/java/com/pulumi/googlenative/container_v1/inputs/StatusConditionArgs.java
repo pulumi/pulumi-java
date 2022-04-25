@@ -27,6 +27,10 @@ public final class StatusConditionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="canonicalCode")
     private @Nullable Output<StatusConditionCanonicalCode> canonicalCode;
 
+    /**
+     * @return Canonical code of the condition.
+     * 
+     */
     public Optional<Output<StatusConditionCanonicalCode>> canonicalCode() {
         return Optional.ofNullable(this.canonicalCode);
     }
@@ -38,6 +42,10 @@ public final class StatusConditionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Human-friendly representation of the condition
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -67,20 +75,44 @@ public final class StatusConditionArgs extends com.pulumi.resources.ResourceArgs
             $ = new StatusConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canonicalCode Canonical code of the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalCode(@Nullable Output<StatusConditionCanonicalCode> canonicalCode) {
             $.canonicalCode = canonicalCode;
             return this;
         }
 
+        /**
+         * @param canonicalCode Canonical code of the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canonicalCode(StatusConditionCanonicalCode canonicalCode) {
             return canonicalCode(Output.of(canonicalCode));
         }
 
+        /**
+         * @param message Human-friendly representation of the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Human-friendly representation of the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }

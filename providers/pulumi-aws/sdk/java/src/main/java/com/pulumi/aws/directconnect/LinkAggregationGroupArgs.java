@@ -24,6 +24,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="connectionId")
     private @Nullable Output<String> connectionId;
 
+    /**
+     * @return The ID of an existing dedicated connection to migrate to the LAG.
+     * 
+     */
     public Optional<Output<String>> connectionId() {
         return Optional.ofNullable(this.connectionId);
     }
@@ -35,6 +39,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="connectionsBandwidth", required=true)
     private Output<String> connectionsBandwidth;
 
+    /**
+     * @return The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
+     * 
+     */
     public Output<String> connectionsBandwidth() {
         return this.connectionsBandwidth;
     }
@@ -46,6 +54,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="forceDestroy")
     private @Nullable Output<Boolean> forceDestroy;
 
+    /**
+     * @return A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
+     * 
+     */
     public Optional<Output<Boolean>> forceDestroy() {
         return Optional.ofNullable(this.forceDestroy);
     }
@@ -57,6 +69,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -68,6 +84,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the LAG.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +99,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="providerName")
     private @Nullable Output<String> providerName;
 
+    /**
+     * @return The name of the service provider associated with the LAG.
+     * 
+     */
     public Optional<Output<String>> providerName() {
         return Optional.ofNullable(this.providerName);
     }
@@ -90,6 +114,10 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,65 +152,149 @@ public final class LinkAggregationGroupArgs extends com.pulumi.resources.Resourc
             $ = new LinkAggregationGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionId The ID of an existing dedicated connection to migrate to the LAG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(@Nullable Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionId The ID of an existing dedicated connection to migrate to the LAG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             return connectionId(Output.of(connectionId));
         }
 
+        /**
+         * @param connectionsBandwidth The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionsBandwidth(Output<String> connectionsBandwidth) {
             $.connectionsBandwidth = connectionsBandwidth;
             return this;
         }
 
+        /**
+         * @param connectionsBandwidth The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionsBandwidth(String connectionsBandwidth) {
             return connectionsBandwidth(Output.of(connectionsBandwidth));
         }
 
+        /**
+         * @param forceDestroy A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             $.forceDestroy = forceDestroy;
             return this;
         }
 
+        /**
+         * @param forceDestroy A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(Boolean forceDestroy) {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param location The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the LAG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the LAG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param providerName The name of the service provider associated with the LAG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(@Nullable Output<String> providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param providerName The name of the service provider associated with the LAG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             return providerName(Output.of(providerName));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

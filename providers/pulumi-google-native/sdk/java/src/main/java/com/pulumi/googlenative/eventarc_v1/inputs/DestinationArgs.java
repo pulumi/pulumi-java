@@ -28,6 +28,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudFunction")
     private @Nullable Output<String> cloudFunction;
 
+    /**
+     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * 
+     */
     public Optional<Output<String>> cloudFunction() {
         return Optional.ofNullable(this.cloudFunction);
     }
@@ -39,6 +43,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudRun")
     private @Nullable Output<CloudRunArgs> cloudRun;
 
+    /**
+     * @return Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
+     * 
+     */
     public Optional<Output<CloudRunArgs>> cloudRun() {
         return Optional.ofNullable(this.cloudRun);
     }
@@ -50,6 +58,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gke")
     private @Nullable Output<GKEArgs> gke;
 
+    /**
+     * @return A GKE service capable of receiving events. The service should be running in the same project as the trigger.
+     * 
+     */
     public Optional<Output<GKEArgs>> gke() {
         return Optional.ofNullable(this.gke);
     }
@@ -80,29 +92,65 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudFunction(@Nullable Output<String> cloudFunction) {
             $.cloudFunction = cloudFunction;
             return this;
         }
 
+        /**
+         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudFunction(String cloudFunction) {
             return cloudFunction(Output.of(cloudFunction));
         }
 
+        /**
+         * @param cloudRun Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRun(@Nullable Output<CloudRunArgs> cloudRun) {
             $.cloudRun = cloudRun;
             return this;
         }
 
+        /**
+         * @param cloudRun Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRun(CloudRunArgs cloudRun) {
             return cloudRun(Output.of(cloudRun));
         }
 
+        /**
+         * @param gke A GKE service capable of receiving events. The service should be running in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gke(@Nullable Output<GKEArgs> gke) {
             $.gke = gke;
             return this;
         }
 
+        /**
+         * @param gke A GKE service capable of receiving events. The service should be running in the same project as the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gke(GKEArgs gke) {
             return gke(Output.of(gke));
         }

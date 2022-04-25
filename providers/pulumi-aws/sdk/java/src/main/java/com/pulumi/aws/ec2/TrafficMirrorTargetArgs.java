@@ -23,6 +23,10 @@ public final class TrafficMirrorTargetArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the traffic mirror session.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class TrafficMirrorTargetArgs extends com.pulumi.resources.Resource
     @Import(name="networkInterfaceId")
     private @Nullable Output<String> networkInterfaceId;
 
+    /**
+     * @return The network interface ID that is associated with the target.
+     * 
+     */
     public Optional<Output<String>> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
@@ -45,6 +53,10 @@ public final class TrafficMirrorTargetArgs extends com.pulumi.resources.Resource
     @Import(name="networkLoadBalancerArn")
     private @Nullable Output<String> networkLoadBalancerArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
+     * 
+     */
     public Optional<Output<String>> networkLoadBalancerArn() {
         return Optional.ofNullable(this.networkLoadBalancerArn);
     }
@@ -56,6 +68,10 @@ public final class TrafficMirrorTargetArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -87,38 +103,86 @@ public final class TrafficMirrorTargetArgs extends com.pulumi.resources.Resource
             $ = new TrafficMirrorTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the traffic mirror session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the traffic mirror session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param networkInterfaceId The network interface ID that is associated with the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId The network interface ID that is associated with the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }
 
+        /**
+         * @param networkLoadBalancerArn The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkLoadBalancerArn(@Nullable Output<String> networkLoadBalancerArn) {
             $.networkLoadBalancerArn = networkLoadBalancerArn;
             return this;
         }
 
+        /**
+         * @param networkLoadBalancerArn The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkLoadBalancerArn(String networkLoadBalancerArn) {
             return networkLoadBalancerArn(Output.of(networkLoadBalancerArn));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

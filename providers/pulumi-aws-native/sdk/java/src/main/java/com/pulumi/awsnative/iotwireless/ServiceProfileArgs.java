@@ -25,6 +25,10 @@ public final class ServiceProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="loRaWAN")
     private @Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN;
 
+    /**
+     * @return LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
+     * 
+     */
     public Optional<Output<ServiceProfileLoRaWANServiceProfileArgs>> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
@@ -36,6 +40,10 @@ public final class ServiceProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of service profile
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class ServiceProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<ServiceProfileTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the service profile.
+     * 
+     */
     public Optional<Output<List<ServiceProfileTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,33 +89,75 @@ public final class ServiceProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ServiceProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loRaWAN LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder loRaWAN(@Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN) {
             $.loRaWAN = loRaWAN;
             return this;
         }
 
+        /**
+         * @param loRaWAN LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder loRaWAN(ServiceProfileLoRaWANServiceProfileArgs loRaWAN) {
             return loRaWAN(Output.of(loRaWAN));
         }
 
+        /**
+         * @param name Name of service profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of service profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the service profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ServiceProfileTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the service profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ServiceProfileTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the service profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ServiceProfileTagArgs... tags) {
             return tags(List.of(tags));
         }

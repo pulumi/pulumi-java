@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEndpointResult {
     /**
-     * The Amazon Resource Name (ARN) of the endpoint.
+     * @return The Amazon Resource Name (ARN) of the endpoint.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The VPC CIDR committed by this endpoint.
+     * @return The VPC CIDR committed by this endpoint.
      * 
      */
     private final @Nullable String cidrBlock;
     /**
-     * The time the endpoint was created.
+     * @return The time the endpoint was created.
      * 
      */
     private final @Nullable String creationTime;
     /**
-     * The ID of the endpoint.
+     * @return The ID of the endpoint.
      * 
      */
     private final @Nullable String id;
     /**
-     * The network interfaces of the endpoint.
+     * @return The network interfaces of the endpoint.
      * 
      */
     private final @Nullable List<EndpointNetworkInterface> networkInterfaces;
@@ -58,37 +58,37 @@ public final class GetEndpointResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the endpoint.
+     * @return The Amazon Resource Name (ARN) of the endpoint.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The VPC CIDR committed by this endpoint.
+     * @return The VPC CIDR committed by this endpoint.
      * 
-    */
+     */
     public Optional<String> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
     /**
-     * The time the endpoint was created.
+     * @return The time the endpoint was created.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The ID of the endpoint.
+     * @return The ID of the endpoint.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The network interfaces of the endpoint.
+     * @return The network interfaces of the endpoint.
      * 
-    */
+     */
     public List<EndpointNetworkInterface> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }

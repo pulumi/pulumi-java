@@ -21,6 +21,10 @@ public final class DatadogInstallMethodResponse extends com.pulumi.resources.Inv
     @Import(name="installerVersion")
     private @Nullable String installerVersion;
 
+    /**
+     * @return The installer version.
+     * 
+     */
     public Optional<String> installerVersion() {
         return Optional.ofNullable(this.installerVersion);
     }
@@ -32,6 +36,10 @@ public final class DatadogInstallMethodResponse extends com.pulumi.resources.Inv
     @Import(name="tool")
     private @Nullable String tool;
 
+    /**
+     * @return The tool.
+     * 
+     */
     public Optional<String> tool() {
         return Optional.ofNullable(this.tool);
     }
@@ -43,6 +51,10 @@ public final class DatadogInstallMethodResponse extends com.pulumi.resources.Inv
     @Import(name="toolVersion")
     private @Nullable String toolVersion;
 
+    /**
+     * @return The tool version.
+     * 
+     */
     public Optional<String> toolVersion() {
         return Optional.ofNullable(this.toolVersion);
     }
@@ -73,16 +85,34 @@ public final class DatadogInstallMethodResponse extends com.pulumi.resources.Inv
             $ = new DatadogInstallMethodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param installerVersion The installer version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installerVersion(@Nullable String installerVersion) {
             $.installerVersion = installerVersion;
             return this;
         }
 
+        /**
+         * @param tool The tool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tool(@Nullable String tool) {
             $.tool = tool;
             return this;
         }
 
+        /**
+         * @param toolVersion The tool version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolVersion(@Nullable String toolVersion) {
             $.toolVersion = toolVersion;
             return this;

@@ -30,6 +30,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bgpSettings")
     private @Nullable Output<BgpSettingsArgs> bgpSettings;
 
+    /**
+     * @return Local network gateway&#39;s BGP speaker settings.
+     * 
+     */
     public Optional<Output<BgpSettingsArgs>> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
@@ -41,6 +45,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connections")
     private @Nullable Output<List<VpnConnectionArgs>> connections;
 
+    /**
+     * @return List of all vpn connections to the gateway.
+     * 
+     */
     public Optional<Output<List<VpnConnectionArgs>>> connections() {
         return Optional.ofNullable(this.connections);
     }
@@ -52,6 +60,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
     private @Nullable Output<String> gatewayName;
 
+    /**
+     * @return The name of the gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayName() {
         return Optional.ofNullable(this.gatewayName);
     }
@@ -63,6 +75,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -74,6 +90,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isRoutingPreferenceInternet")
     private @Nullable Output<Boolean> isRoutingPreferenceInternet;
 
+    /**
+     * @return Enable Routing Preference property for the Public IP Interface of the VpnGateway.
+     * 
+     */
     public Optional<Output<Boolean>> isRoutingPreferenceInternet() {
         return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
@@ -85,6 +105,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -96,6 +120,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="natRules")
     private @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules;
 
+    /**
+     * @return List of all the nat Rules associated with the gateway.
+     * 
+     */
     public Optional<Output<List<VpnGatewayNatRuleArgs>>> natRules() {
         return Optional.ofNullable(this.natRules);
     }
@@ -107,6 +135,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name of the VpnGateway.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -118,6 +150,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -129,6 +165,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualHub")
     private @Nullable Output<SubResourceArgs> virtualHub;
 
+    /**
+     * @return The VirtualHub to which the gateway belongs.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
@@ -140,6 +180,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpnGatewayScaleUnit")
     private @Nullable Output<Integer> vpnGatewayScaleUnit;
 
+    /**
+     * @return The scale unit for this vpn gateway.
+     * 
+     */
     public Optional<Output<Integer>> vpnGatewayScaleUnit() {
         return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }
@@ -178,109 +222,253 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bgpSettings Local network gateway&#39;s BGP speaker settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSettings(@Nullable Output<BgpSettingsArgs> bgpSettings) {
             $.bgpSettings = bgpSettings;
             return this;
         }
 
+        /**
+         * @param bgpSettings Local network gateway&#39;s BGP speaker settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSettings(BgpSettingsArgs bgpSettings) {
             return bgpSettings(Output.of(bgpSettings));
         }
 
+        /**
+         * @param connections List of all vpn connections to the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(@Nullable Output<List<VpnConnectionArgs>> connections) {
             $.connections = connections;
             return this;
         }
 
+        /**
+         * @param connections List of all vpn connections to the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(List<VpnConnectionArgs> connections) {
             return connections(Output.of(connections));
         }
 
+        /**
+         * @param connections List of all vpn connections to the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(VpnConnectionArgs... connections) {
             return connections(List.of(connections));
         }
 
+        /**
+         * @param gatewayName The name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param gatewayName The name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             return gatewayName(Output.of(gatewayName));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param isRoutingPreferenceInternet Enable Routing Preference property for the Public IP Interface of the VpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRoutingPreferenceInternet(@Nullable Output<Boolean> isRoutingPreferenceInternet) {
             $.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
 
+        /**
+         * @param isRoutingPreferenceInternet Enable Routing Preference property for the Public IP Interface of the VpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRoutingPreferenceInternet(Boolean isRoutingPreferenceInternet) {
             return isRoutingPreferenceInternet(Output.of(isRoutingPreferenceInternet));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param natRules List of all the nat Rules associated with the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natRules(@Nullable Output<List<VpnGatewayNatRuleArgs>> natRules) {
             $.natRules = natRules;
             return this;
         }
 
+        /**
+         * @param natRules List of all the nat Rules associated with the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natRules(List<VpnGatewayNatRuleArgs> natRules) {
             return natRules(Output.of(natRules));
         }
 
+        /**
+         * @param natRules List of all the nat Rules associated with the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natRules(VpnGatewayNatRuleArgs... natRules) {
             return natRules(List.of(natRules));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualHub The VirtualHub to which the gateway belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
             $.virtualHub = virtualHub;
             return this;
         }
 
+        /**
+         * @param virtualHub The VirtualHub to which the gateway belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(SubResourceArgs virtualHub) {
             return virtualHub(Output.of(virtualHub));
         }
 
+        /**
+         * @param vpnGatewayScaleUnit The scale unit for this vpn gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayScaleUnit(@Nullable Output<Integer> vpnGatewayScaleUnit) {
             $.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
 
+        /**
+         * @param vpnGatewayScaleUnit The scale unit for this vpn gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayScaleUnit(Integer vpnGatewayScaleUnit) {
             return vpnGatewayScaleUnit(Output.of(vpnGatewayScaleUnit));
         }

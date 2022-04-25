@@ -28,6 +28,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -39,6 +43,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpHeaders")
     private @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
 
+    /**
+     * @return (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+     * 
+     */
     public Optional<Output<List<HTTPHeaderArgs>>> httpHeaders() {
         return Optional.ofNullable(this.httpHeaders);
     }
@@ -50,6 +58,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return (Optional) Path to access on the HTTP server.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -61,6 +73,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheme")
     private @Nullable Output<String> scheme;
 
+    /**
+     * @return (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+     * 
+     */
     public Optional<Output<String>> scheme() {
         return Optional.ofNullable(this.scheme);
     }
@@ -92,42 +108,96 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HTTPGetActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param httpHeaders (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(@Nullable Output<List<HTTPHeaderArgs>> httpHeaders) {
             $.httpHeaders = httpHeaders;
             return this;
         }
 
+        /**
+         * @param httpHeaders (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(List<HTTPHeaderArgs> httpHeaders) {
             return httpHeaders(Output.of(httpHeaders));
         }
 
+        /**
+         * @param httpHeaders (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(HTTPHeaderArgs... httpHeaders) {
             return httpHeaders(List.of(httpHeaders));
         }
 
+        /**
+         * @param path (Optional) Path to access on the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path (Optional) Path to access on the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param scheme (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(@Nullable Output<String> scheme) {
             $.scheme = scheme;
             return this;
         }
 
+        /**
+         * @param scheme (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             return scheme(Output.of(scheme));
         }

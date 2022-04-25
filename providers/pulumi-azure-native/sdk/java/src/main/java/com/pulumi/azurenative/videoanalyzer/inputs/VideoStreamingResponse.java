@@ -31,6 +31,16 @@ public final class VideoStreamingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="archiveBaseUrl")
     private @Nullable String archiveBaseUrl;
 
+    /**
+     * @return Video streaming base URL for the video archive. When present, archived video can be played through the Azure Video Analyzer player. Alternatively, this URL can be used with compatible DASH or HLS players by appending the following to the base URL:
+     * 
+     *   - HLSv4:     /manifest(format=m3u8-aapl).m3u8
+     *   - HLS CMAF:  /manifest(format=m3u8-cmaf)
+     *   - DASH CMAF: /manifest(format=mpd-time-cmaf)
+     * 
+     * Moreover, an ongoing video recording can be played in &#34;live mode&#34; with latencies which are approximately double of the chosen video segment length.
+     * 
+     */
     public Optional<String> archiveBaseUrl() {
         return Optional.ofNullable(this.archiveBaseUrl);
     }
@@ -59,6 +69,18 @@ public final class VideoStreamingResponse extends com.pulumi.resources.InvokeArg
             $ = new VideoStreamingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveBaseUrl Video streaming base URL for the video archive. When present, archived video can be played through the Azure Video Analyzer player. Alternatively, this URL can be used with compatible DASH or HLS players by appending the following to the base URL:
+         * 
+         *   - HLSv4:     /manifest(format=m3u8-aapl).m3u8
+         *   - HLS CMAF:  /manifest(format=m3u8-cmaf)
+         *   - DASH CMAF: /manifest(format=mpd-time-cmaf)
+         * 
+         * Moreover, an ongoing video recording can be played in &#34;live mode&#34; with latencies which are approximately double of the chosen video segment length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveBaseUrl(@Nullable String archiveBaseUrl) {
             $.archiveBaseUrl = archiveBaseUrl;
             return this;

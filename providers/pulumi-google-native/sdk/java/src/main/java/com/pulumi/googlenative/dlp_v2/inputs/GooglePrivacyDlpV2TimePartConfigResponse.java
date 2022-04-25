@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse extends com.pulumi.r
     @Import(name="partToExtract", required=true)
     private String partToExtract;
 
+    /**
+     * @return The part of the time to keep.
+     * 
+     */
     public String partToExtract() {
         return this.partToExtract;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse extends com.pulumi.r
             $ = new GooglePrivacyDlpV2TimePartConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partToExtract The part of the time to keep.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partToExtract(String partToExtract) {
             $.partToExtract = partToExtract;
             return this;

@@ -25,6 +25,10 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the distribution configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="distributions", required=true)
     private Output<List<DistributionConfigurationDistributionArgs>> distributions;
 
+    /**
+     * @return The distributions of the distribution configuration.
+     * 
+     */
     public Output<List<DistributionConfigurationDistributionArgs>> distributions() {
         return this.distributions;
     }
@@ -47,6 +55,10 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the distribution configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="tags")
     private @Nullable Output<Object> tags;
 
+    /**
+     * @return The tags associated with the component.
+     * 
+     */
     public Optional<Output<Object>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,42 +105,96 @@ public final class DistributionConfigurationArgs extends com.pulumi.resources.Re
             $ = new DistributionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param distributions The distributions of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(Output<List<DistributionConfigurationDistributionArgs>> distributions) {
             $.distributions = distributions;
             return this;
         }
 
+        /**
+         * @param distributions The distributions of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(List<DistributionConfigurationDistributionArgs> distributions) {
             return distributions(Output.of(distributions));
         }
 
+        /**
+         * @param distributions The distributions of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(DistributionConfigurationDistributionArgs... distributions) {
             return distributions(List.of(distributions));
         }
 
+        /**
+         * @param name The name of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags The tags associated with the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Object> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags associated with the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Object tags) {
             return tags(Output.of(tags));
         }

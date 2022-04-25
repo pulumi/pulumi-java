@@ -22,6 +22,10 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
     @Import(name="originalRouteTableId")
     private @Nullable Output<String> originalRouteTableId;
 
+    /**
+     * @return Used internally, see __Notes__ below
+     * 
+     */
     public Optional<Output<String>> originalRouteTableId() {
         return Optional.ofNullable(this.originalRouteTableId);
     }
@@ -34,6 +38,11 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
     @Import(name="routeTableId")
     private @Nullable Output<String> routeTableId;
 
+    /**
+     * @return The ID of the Route Table to set as the new
+     * main route table for the target VPC
+     * 
+     */
     public Optional<Output<String>> routeTableId() {
         return Optional.ofNullable(this.routeTableId);
     }
@@ -45,6 +54,10 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The ID of the VPC whose main route table should be set
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -75,29 +88,67 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
             $ = new MainRouteTableAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param originalRouteTableId Used internally, see __Notes__ below
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalRouteTableId(@Nullable Output<String> originalRouteTableId) {
             $.originalRouteTableId = originalRouteTableId;
             return this;
         }
 
+        /**
+         * @param originalRouteTableId Used internally, see __Notes__ below
+         * 
+         * @return builder
+         * 
+         */
         public Builder originalRouteTableId(String originalRouteTableId) {
             return originalRouteTableId(Output.of(originalRouteTableId));
         }
 
+        /**
+         * @param routeTableId The ID of the Route Table to set as the new
+         * main route table for the target VPC
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
             $.routeTableId = routeTableId;
             return this;
         }
 
+        /**
+         * @param routeTableId The ID of the Route Table to set as the new
+         * main route table for the target VPC
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableId(String routeTableId) {
             return routeTableId(Output.of(routeTableId));
         }
 
+        /**
+         * @param vpcId The ID of the VPC whose main route table should be set
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the VPC whose main route table should be set
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

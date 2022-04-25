@@ -25,6 +25,10 @@ public final class CodeSigningConfigAllowedPublishersArgs extends com.pulumi.res
     @Import(name="signingProfileVersionArns", required=true)
     private Output<List<String>> signingProfileVersionArns;
 
+    /**
+     * @return List of Signing profile version Arns
+     * 
+     */
     public Output<List<String>> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
@@ -53,15 +57,33 @@ public final class CodeSigningConfigAllowedPublishersArgs extends com.pulumi.res
             $ = new CodeSigningConfigAllowedPublishersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param signingProfileVersionArns List of Signing profile version Arns
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingProfileVersionArns(Output<List<String>> signingProfileVersionArns) {
             $.signingProfileVersionArns = signingProfileVersionArns;
             return this;
         }
 
+        /**
+         * @param signingProfileVersionArns List of Signing profile version Arns
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingProfileVersionArns(List<String> signingProfileVersionArns) {
             return signingProfileVersionArns(Output.of(signingProfileVersionArns));
         }
 
+        /**
+         * @param signingProfileVersionArns List of Signing profile version Arns
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingProfileVersionArns(String... signingProfileVersionArns) {
             return signingProfileVersionArns(List.of(signingProfileVersionArns));
         }

@@ -24,6 +24,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endTime", required=true)
     private Output<String> endTime;
 
+    /**
+     * @return Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end_time must be in the future, relative to `start_time`.
+     * 
+     */
     public Output<String> endTime() {
         return this.endTime;
     }
@@ -35,6 +39,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="recurrence", required=true)
     private Output<String> recurrence;
 
+    /**
+     * @return Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.
+     * 
+     */
     public Output<String> recurrence() {
         return this.recurrence;
     }
@@ -46,6 +54,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return Start time of the first recurrence of the maintenance window.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -76,29 +88,65 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
             $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end_time must be in the future, relative to `start_time`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end_time must be in the future, relative to `start_time`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param recurrence Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(Output<String> recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param recurrence Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(String recurrence) {
             return recurrence(Output.of(recurrence));
         }
 
+        /**
+         * @param startTime Start time of the first recurrence of the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the first recurrence of the maintenance window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

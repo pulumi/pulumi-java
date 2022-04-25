@@ -28,6 +28,10 @@ public final class RetentionPolicyParametersArgs extends com.pulumi.resources.Re
     @Import(name="days")
     private @Nullable Output<Integer> days;
 
+    /**
+     * @return Number of days to retain flow log records.
+     * 
+     */
     public Optional<Output<Integer>> days() {
         return Optional.ofNullable(this.days);
     }
@@ -39,6 +43,10 @@ public final class RetentionPolicyParametersArgs extends com.pulumi.resources.Re
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Flag to enable/disable retention.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -68,20 +76,44 @@ public final class RetentionPolicyParametersArgs extends com.pulumi.resources.Re
             $ = new RetentionPolicyParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days Number of days to retain flow log records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days Number of days to retain flow log records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param enabled Flag to enable/disable retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Flag to enable/disable retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

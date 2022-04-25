@@ -23,6 +23,10 @@ public final class S3BucketAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return The name of the S3 bucket that you want to associate with Amazon Macie.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -34,6 +38,10 @@ public final class S3BucketAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="classificationType")
     private @Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType;
 
+    /**
+     * @return The configuration of how Amazon Macie classifies the S3 objects.
+     * 
+     */
     public Optional<Output<S3BucketAssociationClassificationTypeArgs>> classificationType() {
         return Optional.ofNullable(this.classificationType);
     }
@@ -45,6 +53,10 @@ public final class S3BucketAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="memberAccountId")
     private @Nullable Output<String> memberAccountId;
 
+    /**
+     * @return The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn&#39;t specified, the action associates specified S3 resources with Macie for the current master account.
+     * 
+     */
     public Optional<Output<String>> memberAccountId() {
         return Optional.ofNullable(this.memberAccountId);
     }
@@ -56,6 +68,10 @@ public final class S3BucketAssociationArgs extends com.pulumi.resources.Resource
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return Object key prefix identifying one or more S3 objects to which the association applies.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -87,38 +103,86 @@ public final class S3BucketAssociationArgs extends com.pulumi.resources.Resource
             $ = new S3BucketAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The name of the S3 bucket that you want to associate with Amazon Macie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The name of the S3 bucket that you want to associate with Amazon Macie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param classificationType The configuration of how Amazon Macie classifies the S3 objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationType(@Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType) {
             $.classificationType = classificationType;
             return this;
         }
 
+        /**
+         * @param classificationType The configuration of how Amazon Macie classifies the S3 objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationType(S3BucketAssociationClassificationTypeArgs classificationType) {
             return classificationType(Output.of(classificationType));
         }
 
+        /**
+         * @param memberAccountId The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn&#39;t specified, the action associates specified S3 resources with Macie for the current master account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberAccountId(@Nullable Output<String> memberAccountId) {
             $.memberAccountId = memberAccountId;
             return this;
         }
 
+        /**
+         * @param memberAccountId The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn&#39;t specified, the action associates specified S3 resources with Macie for the current master account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberAccountId(String memberAccountId) {
             return memberAccountId(Output.of(memberAccountId));
         }
 
+        /**
+         * @param prefix Object key prefix identifying one or more S3 objects to which the association applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Object key prefix identifying one or more S3 objects to which the association applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

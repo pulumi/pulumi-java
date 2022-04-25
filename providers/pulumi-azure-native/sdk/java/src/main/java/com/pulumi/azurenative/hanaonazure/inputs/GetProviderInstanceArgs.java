@@ -19,6 +19,10 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="providerInstanceName", required=true)
     private String providerInstanceName;
 
+    /**
+     * @return Name of the provider instance.
+     * 
+     */
     public String providerInstanceName() {
         return this.providerInstanceName;
     }
@@ -30,6 +34,10 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="sapMonitorName", required=true)
     private String sapMonitorName;
 
+    /**
+     * @return Name of the SAP monitor resource.
+     * 
+     */
     public String sapMonitorName() {
         return this.sapMonitorName;
     }
@@ -71,16 +83,34 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
             $ = new GetProviderInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providerInstanceName Name of the provider instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerInstanceName(String providerInstanceName) {
             $.providerInstanceName = providerInstanceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sapMonitorName Name of the SAP monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sapMonitorName(String sapMonitorName) {
             $.sapMonitorName = sapMonitorName;
             return this;

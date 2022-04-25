@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class CertificateChainsResponse {
     /**
-     * Cavium certificate chain corresponding to the attestation.
+     * @return Cavium certificate chain corresponding to the attestation.
      * 
      */
     private final List<String> caviumCerts;
     /**
-     * Google card certificate chain corresponding to the attestation.
+     * @return Google card certificate chain corresponding to the attestation.
      * 
      */
     private final List<String> googleCardCerts;
     /**
-     * Google partition certificate chain corresponding to the attestation.
+     * @return Google partition certificate chain corresponding to the attestation.
      * 
      */
     private final List<String> googlePartitionCerts;
@@ -37,23 +37,23 @@ public final class CertificateChainsResponse {
     }
 
     /**
-     * Cavium certificate chain corresponding to the attestation.
+     * @return Cavium certificate chain corresponding to the attestation.
      * 
-    */
+     */
     public List<String> caviumCerts() {
         return this.caviumCerts;
     }
     /**
-     * Google card certificate chain corresponding to the attestation.
+     * @return Google card certificate chain corresponding to the attestation.
      * 
-    */
+     */
     public List<String> googleCardCerts() {
         return this.googleCardCerts;
     }
     /**
-     * Google partition certificate chain corresponding to the attestation.
+     * @return Google partition certificate chain corresponding to the attestation.
      * 
-    */
+     */
     public List<String> googlePartitionCerts() {
         return this.googlePartitionCerts;
     }

@@ -27,6 +27,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cardinality")
     private @Nullable Output<CardinalityTypes> cardinality;
 
+    /**
+     * @return The Relationship Cardinality.
+     * 
+     */
     public Optional<Output<CardinalityTypes>> cardinality() {
         return Optional.ofNullable(this.cardinality);
     }
@@ -38,6 +42,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<Map<String,String>> description;
 
+    /**
+     * @return Localized descriptions for the Relationship.
+     * 
+     */
     public Optional<Output<Map<String,String>>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<Map<String,String>> displayName;
 
+    /**
+     * @return Localized display name for the Relationship.
+     * 
+     */
     public Optional<Output<Map<String,String>>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -60,6 +72,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiryDateTimeUtc")
     private @Nullable Output<String> expiryDateTimeUtc;
 
+    /**
+     * @return The expiry date time in UTC.
+     * 
+     */
     public Optional<Output<String>> expiryDateTimeUtc() {
         return Optional.ofNullable(this.expiryDateTimeUtc);
     }
@@ -71,6 +87,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
     private @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
+    /**
+     * @return The properties of the Relationship.
+     * 
+     */
     public Optional<Output<List<PropertyDefinitionArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -82,6 +102,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
     private Output<String> hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public Output<String> hubName() {
         return this.hubName;
     }
@@ -93,6 +117,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lookupMappings")
     private @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
 
+    /**
+     * @return Optional property to be used to map fields in profile to their strong ids in related profile.
+     * 
+     */
     public Optional<Output<List<RelationshipTypeMappingArgs>>> lookupMappings() {
         return Optional.ofNullable(this.lookupMappings);
     }
@@ -104,6 +132,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileType", required=true)
     private Output<String> profileType;
 
+    /**
+     * @return Profile type.
+     * 
+     */
     public Output<String> profileType() {
         return this.profileType;
     }
@@ -115,6 +147,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relatedProfileType", required=true)
     private Output<String> relatedProfileType;
 
+    /**
+     * @return Related profile being referenced.
+     * 
+     */
     public Output<String> relatedProfileType() {
         return this.relatedProfileType;
     }
@@ -126,6 +162,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relationshipName")
     private @Nullable Output<String> relationshipName;
 
+    /**
+     * @return The name of the Relationship.
+     * 
+     */
     public Optional<Output<String>> relationshipName() {
         return Optional.ofNullable(this.relationshipName);
     }
@@ -137,6 +177,10 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -175,109 +219,253 @@ public final class RelationshipArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RelationshipArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cardinality The Relationship Cardinality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardinality(@Nullable Output<CardinalityTypes> cardinality) {
             $.cardinality = cardinality;
             return this;
         }
 
+        /**
+         * @param cardinality The Relationship Cardinality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardinality(CardinalityTypes cardinality) {
             return cardinality(Output.of(cardinality));
         }
 
+        /**
+         * @param description Localized descriptions for the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<Map<String,String>> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Localized descriptions for the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Map<String,String> description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Localized display name for the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Localized display name for the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Map<String,String> displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param expiryDateTimeUtc The expiry date time in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDateTimeUtc(@Nullable Output<String> expiryDateTimeUtc) {
             $.expiryDateTimeUtc = expiryDateTimeUtc;
             return this;
         }
 
+        /**
+         * @param expiryDateTimeUtc The expiry date time in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDateTimeUtc(String expiryDateTimeUtc) {
             return expiryDateTimeUtc(Output.of(expiryDateTimeUtc));
         }
 
+        /**
+         * @param fields The properties of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The properties of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<PropertyDefinitionArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields The properties of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(PropertyDefinitionArgs... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param lookupMappings Optional property to be used to map fields in profile to their strong ids in related profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lookupMappings(@Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings) {
             $.lookupMappings = lookupMappings;
             return this;
         }
 
+        /**
+         * @param lookupMappings Optional property to be used to map fields in profile to their strong ids in related profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lookupMappings(List<RelationshipTypeMappingArgs> lookupMappings) {
             return lookupMappings(Output.of(lookupMappings));
         }
 
+        /**
+         * @param lookupMappings Optional property to be used to map fields in profile to their strong ids in related profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lookupMappings(RelationshipTypeMappingArgs... lookupMappings) {
             return lookupMappings(List.of(lookupMappings));
         }
 
+        /**
+         * @param profileType Profile type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileType(Output<String> profileType) {
             $.profileType = profileType;
             return this;
         }
 
+        /**
+         * @param profileType Profile type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileType(String profileType) {
             return profileType(Output.of(profileType));
         }
 
+        /**
+         * @param relatedProfileType Related profile being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedProfileType(Output<String> relatedProfileType) {
             $.relatedProfileType = relatedProfileType;
             return this;
         }
 
+        /**
+         * @param relatedProfileType Related profile being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedProfileType(String relatedProfileType) {
             return relatedProfileType(Output.of(relatedProfileType));
         }
 
+        /**
+         * @param relationshipName The name of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipName(@Nullable Output<String> relationshipName) {
             $.relationshipName = relationshipName;
             return this;
         }
 
+        /**
+         * @param relationshipName The name of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipName(String relationshipName) {
             return relationshipName(Output.of(relationshipName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

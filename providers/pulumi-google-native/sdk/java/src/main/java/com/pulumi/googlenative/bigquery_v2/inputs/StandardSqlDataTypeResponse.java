@@ -24,6 +24,10 @@ public final class StandardSqlDataTypeResponse extends com.pulumi.resources.Invo
     @Import(name="arrayElementType", required=true)
     private StandardSqlDataTypeResponse arrayElementType;
 
+    /**
+     * @return The type of the array&#39;s elements, if type_kind = &#34;ARRAY&#34;.
+     * 
+     */
     public StandardSqlDataTypeResponse arrayElementType() {
         return this.arrayElementType;
     }
@@ -35,6 +39,10 @@ public final class StandardSqlDataTypeResponse extends com.pulumi.resources.Invo
     @Import(name="structType", required=true)
     private StandardSqlStructTypeResponse structType;
 
+    /**
+     * @return The fields of this struct, in order, if type_kind = &#34;STRUCT&#34;.
+     * 
+     */
     public StandardSqlStructTypeResponse structType() {
         return this.structType;
     }
@@ -46,6 +54,10 @@ public final class StandardSqlDataTypeResponse extends com.pulumi.resources.Invo
     @Import(name="typeKind", required=true)
     private String typeKind;
 
+    /**
+     * @return The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
+     * 
+     */
     public String typeKind() {
         return this.typeKind;
     }
@@ -76,16 +88,34 @@ public final class StandardSqlDataTypeResponse extends com.pulumi.resources.Invo
             $ = new StandardSqlDataTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayElementType The type of the array&#39;s elements, if type_kind = &#34;ARRAY&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayElementType(StandardSqlDataTypeResponse arrayElementType) {
             $.arrayElementType = arrayElementType;
             return this;
         }
 
+        /**
+         * @param structType The fields of this struct, in order, if type_kind = &#34;STRUCT&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structType(StandardSqlStructTypeResponse structType) {
             $.structType = structType;
             return this;
         }
 
+        /**
+         * @param typeKind The top level type of this field. Can be any standard SQL data type (e.g., &#34;INT64&#34;, &#34;DATE&#34;, &#34;ARRAY&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeKind(String typeKind) {
             $.typeKind = typeKind;
             return this;

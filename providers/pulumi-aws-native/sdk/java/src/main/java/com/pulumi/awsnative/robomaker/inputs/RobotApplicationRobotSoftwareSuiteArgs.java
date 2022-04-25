@@ -27,6 +27,10 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends com.pulumi.res
     @Import(name="name", required=true)
     private Output<RobotApplicationRobotSoftwareSuiteName> name;
 
+    /**
+     * @return The name of robot software suite.
+     * 
+     */
     public Output<RobotApplicationRobotSoftwareSuiteName> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends com.pulumi.res
     @Import(name="version")
     private @Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version;
 
+    /**
+     * @return The version of robot software suite.
+     * 
+     */
     public Optional<Output<RobotApplicationRobotSoftwareSuiteVersion>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -67,20 +75,44 @@ public final class RobotApplicationRobotSoftwareSuiteArgs extends com.pulumi.res
             $ = new RobotApplicationRobotSoftwareSuiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<RobotApplicationRobotSoftwareSuiteName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(RobotApplicationRobotSoftwareSuiteName name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param version The version of robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<RobotApplicationRobotSoftwareSuiteVersion> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(RobotApplicationRobotSoftwareSuiteVersion version) {
             return version(Output.of(version));
         }

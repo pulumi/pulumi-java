@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class EndpointsApiServiceResponse {
     /**
-     * Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
+     * @return Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
      * 
      */
     private final String configId;
     /**
-     * Enable or disable trace sampling. By default, this is set to false for enabled.
+     * @return Enable or disable trace sampling. By default, this is set to false for enabled.
      * 
      */
     private final Boolean disableTraceSampling;
     /**
-     * Endpoints service name which is the name of the &#34;service&#34; resource in the Service Management API. For example &#34;myapi.endpoints.myproject.cloud.goog&#34;
+     * @return Endpoints service name which is the name of the &#34;service&#34; resource in the Service Management API. For example &#34;myapi.endpoints.myproject.cloud.goog&#34;
      * 
      */
     private final String name;
     /**
-     * Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
+     * @return Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
      * 
      */
     private final String rolloutStrategy;
@@ -44,30 +44,30 @@ public final class EndpointsApiServiceResponse {
     }
 
     /**
-     * Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
+     * @return Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
      * 
-    */
+     */
     public String configId() {
         return this.configId;
     }
     /**
-     * Enable or disable trace sampling. By default, this is set to false for enabled.
+     * @return Enable or disable trace sampling. By default, this is set to false for enabled.
      * 
-    */
+     */
     public Boolean disableTraceSampling() {
         return this.disableTraceSampling;
     }
     /**
-     * Endpoints service name which is the name of the &#34;service&#34; resource in the Service Management API. For example &#34;myapi.endpoints.myproject.cloud.goog&#34;
+     * @return Endpoints service name which is the name of the &#34;service&#34; resource in the Service Management API. For example &#34;myapi.endpoints.myproject.cloud.goog&#34;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
+     * @return Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
      * 
-    */
+     */
     public String rolloutStrategy() {
         return this.rolloutStrategy;
     }

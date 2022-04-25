@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetClusterIdentityOidc {
     /**
-     * Issuer URL for the OpenID Connect identity provider.
+     * @return Issuer URL for the OpenID Connect identity provider.
      * 
      */
     private final String issuer;
@@ -21,9 +21,9 @@ public final class GetClusterIdentityOidc {
     }
 
     /**
-     * Issuer URL for the OpenID Connect identity provider.
+     * @return Issuer URL for the OpenID Connect identity provider.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }

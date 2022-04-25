@@ -25,6 +25,10 @@ public final class MigrationValidationOptionsResponse extends com.pulumi.resourc
     @Import(name="enableDataIntegrityValidation")
     private @Nullable Boolean enableDataIntegrityValidation;
 
+    /**
+     * @return Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
+     * 
+     */
     public Optional<Boolean> enableDataIntegrityValidation() {
         return Optional.ofNullable(this.enableDataIntegrityValidation);
     }
@@ -36,6 +40,10 @@ public final class MigrationValidationOptionsResponse extends com.pulumi.resourc
     @Import(name="enableQueryAnalysisValidation")
     private @Nullable Boolean enableQueryAnalysisValidation;
 
+    /**
+     * @return Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
+     * 
+     */
     public Optional<Boolean> enableQueryAnalysisValidation() {
         return Optional.ofNullable(this.enableQueryAnalysisValidation);
     }
@@ -47,6 +55,10 @@ public final class MigrationValidationOptionsResponse extends com.pulumi.resourc
     @Import(name="enableSchemaValidation")
     private @Nullable Boolean enableSchemaValidation;
 
+    /**
+     * @return Allows to compare the schema information between source and target.
+     * 
+     */
     public Optional<Boolean> enableSchemaValidation() {
         return Optional.ofNullable(this.enableSchemaValidation);
     }
@@ -77,16 +89,34 @@ public final class MigrationValidationOptionsResponse extends com.pulumi.resourc
             $ = new MigrationValidationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableDataIntegrityValidation Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
             $.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
 
+        /**
+         * @param enableQueryAnalysisValidation Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
             $.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
 
+        /**
+         * @param enableSchemaValidation Allows to compare the schema information between source and target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
             $.enableSchemaValidation = enableSchemaValidation;
             return this;

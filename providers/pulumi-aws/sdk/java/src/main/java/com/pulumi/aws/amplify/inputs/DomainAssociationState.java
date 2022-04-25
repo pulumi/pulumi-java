@@ -25,6 +25,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="appId")
     private @Nullable Output<String> appId;
 
+    /**
+     * @return The unique ID for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -36,6 +40,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the domain association.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -47,6 +55,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="certificateVerificationDnsRecord")
     private @Nullable Output<String> certificateVerificationDnsRecord;
 
+    /**
+     * @return The DNS record for certificate verification.
+     * 
+     */
     public Optional<Output<String>> certificateVerificationDnsRecord() {
         return Optional.ofNullable(this.certificateVerificationDnsRecord);
     }
@@ -58,6 +70,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The domain name for the domain association.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -69,6 +85,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="subDomains")
     private @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains;
 
+    /**
+     * @return The setting for the subdomain. Documented below.
+     * 
+     */
     public Optional<Output<List<DomainAssociationSubDomainGetArgs>>> subDomains() {
         return Optional.ofNullable(this.subDomains);
     }
@@ -80,6 +100,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
     @Import(name="waitForVerification")
     private @Nullable Output<Boolean> waitForVerification;
 
+    /**
+     * @return If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
+     * 
+     */
     public Optional<Output<Boolean>> waitForVerification() {
         return Optional.ofNullable(this.waitForVerification);
     }
@@ -113,60 +137,138 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
             $ = new DomainAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId The unique ID for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) for the domain association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) for the domain association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param certificateVerificationDnsRecord The DNS record for certificate verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateVerificationDnsRecord(@Nullable Output<String> certificateVerificationDnsRecord) {
             $.certificateVerificationDnsRecord = certificateVerificationDnsRecord;
             return this;
         }
 
+        /**
+         * @param certificateVerificationDnsRecord The DNS record for certificate verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateVerificationDnsRecord(String certificateVerificationDnsRecord) {
             return certificateVerificationDnsRecord(Output.of(certificateVerificationDnsRecord));
         }
 
+        /**
+         * @param domainName The domain name for the domain association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name for the domain association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param subDomains The setting for the subdomain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subDomains(@Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains) {
             $.subDomains = subDomains;
             return this;
         }
 
+        /**
+         * @param subDomains The setting for the subdomain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subDomains(List<DomainAssociationSubDomainGetArgs> subDomains) {
             return subDomains(Output.of(subDomains));
         }
 
+        /**
+         * @param subDomains The setting for the subdomain. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subDomains(DomainAssociationSubDomainGetArgs... subDomains) {
             return subDomains(List.of(subDomains));
         }
 
+        /**
+         * @param waitForVerification If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForVerification(@Nullable Output<Boolean> waitForVerification) {
             $.waitForVerification = waitForVerification;
             return this;
         }
 
+        /**
+         * @param waitForVerification If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForVerification(Boolean waitForVerification) {
             return waitForVerification(Output.of(waitForVerification));
         }

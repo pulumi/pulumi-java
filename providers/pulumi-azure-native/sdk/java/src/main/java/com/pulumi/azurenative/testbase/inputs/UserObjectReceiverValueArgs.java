@@ -27,6 +27,10 @@ public final class UserObjectReceiverValueArgs extends com.pulumi.resources.Reso
     @Import(name="userObjectIds")
     private @Nullable Output<List<String>> userObjectIds;
 
+    /**
+     * @return user object ids.
+     * 
+     */
     public Optional<Output<List<String>>> userObjectIds() {
         return Optional.ofNullable(this.userObjectIds);
     }
@@ -55,15 +59,33 @@ public final class UserObjectReceiverValueArgs extends com.pulumi.resources.Reso
             $ = new UserObjectReceiverValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userObjectIds user object ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userObjectIds(@Nullable Output<List<String>> userObjectIds) {
             $.userObjectIds = userObjectIds;
             return this;
         }
 
+        /**
+         * @param userObjectIds user object ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userObjectIds(List<String> userObjectIds) {
             return userObjectIds(Output.of(userObjectIds));
         }
 
+        /**
+         * @param userObjectIds user object ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userObjectIds(String... userObjectIds) {
             return userObjectIds(List.of(userObjectIds));
         }

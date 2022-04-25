@@ -23,6 +23,10 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -52,6 +60,10 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
     @Import(name="proxyBind")
     private @Nullable Output<Boolean> proxyBind;
 
+    /**
+     * @return This field only applies when the forwarding rule that references this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies set up inbound traffic interception and bind to the IP address and port specified in the forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for inbound requests and handles requests when it receives them. The default is false.
+     * 
+     */
     public Optional<Output<Boolean>> proxyBind() {
         return Optional.ofNullable(this.proxyBind);
     }
@@ -77,6 +89,10 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
     @Import(name="urlMap")
     private @Nullable Output<String> urlMap;
 
+    /**
+     * @return URL to the UrlMap resource that defines the mapping from URL to the BackendService.
+     * 
+     */
     public Optional<Output<String>> urlMap() {
         return Optional.ofNullable(this.urlMap);
     }
@@ -111,20 +127,44 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
             $ = new RegionTargetHttpProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -138,11 +178,23 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
             return project(Output.of(project));
         }
 
+        /**
+         * @param proxyBind This field only applies when the forwarding rule that references this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies set up inbound traffic interception and bind to the IP address and port specified in the forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for inbound requests and handles requests when it receives them. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
             $.proxyBind = proxyBind;
             return this;
         }
 
+        /**
+         * @param proxyBind This field only applies when the forwarding rule that references this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies set up inbound traffic interception and bind to the IP address and port specified in the forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for inbound requests and handles requests when it receives them. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyBind(Boolean proxyBind) {
             return proxyBind(Output.of(proxyBind));
         }
@@ -165,11 +217,23 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param urlMap URL to the UrlMap resource that defines the mapping from URL to the BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMap(@Nullable Output<String> urlMap) {
             $.urlMap = urlMap;
             return this;
         }
 
+        /**
+         * @param urlMap URL to the UrlMap resource that defines the mapping from URL to the BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMap(String urlMap) {
             return urlMap(Output.of(urlMap));
         }

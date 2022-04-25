@@ -23,6 +23,10 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="instanceCount")
     private @Nullable Integer instanceCount;
 
+    /**
+     * @return Fixed number of instances for this deployment.
+     * 
+     */
     public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
@@ -34,6 +38,10 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="maxInstances")
     private @Nullable Integer maxInstances;
 
+    /**
+     * @return Maximum number of instances for this deployment.
+     * 
+     */
     public Optional<Integer> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
@@ -45,6 +53,10 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="minInstances")
     private @Nullable Integer minInstances;
 
+    /**
+     * @return Minimum number of instances for this deployment.
+     * 
+     */
     public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
@@ -56,6 +68,11 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="scaleType", required=true)
     private String scaleType;
 
+    /**
+     * @return
+     * Expected value is &#39;Manual&#39;.
+     * 
+     */
     public String scaleType() {
         return this.scaleType;
     }
@@ -87,21 +104,46 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
             $ = new ManualScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceCount Fixed number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(@Nullable Integer instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param maxInstances Maximum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstances(@Nullable Integer maxInstances) {
             $.maxInstances = maxInstances;
             return this;
         }
 
+        /**
+         * @param minInstances Minimum number of instances for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstances(@Nullable Integer minInstances) {
             $.minInstances = minInstances;
             return this;
         }
 
+        /**
+         * @param scaleType
+         * Expected value is &#39;Manual&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(String scaleType) {
             $.scaleType = scaleType;
             return this;

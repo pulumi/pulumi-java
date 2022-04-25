@@ -27,6 +27,10 @@ public final class CriteriaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dimensions")
     private @Nullable List<DimensionResponse> dimensions;
 
+    /**
+     * @return List of Dimensions for creating metric
+     * 
+     */
     public Optional<List<DimensionResponse>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -38,6 +42,10 @@ public final class CriteriaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metricName", required=true)
     private String metricName;
 
+    /**
+     * @return Name of the metric
+     * 
+     */
     public String metricName() {
         return this.metricName;
     }
@@ -67,15 +75,33 @@ public final class CriteriaResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensions List of Dimensions for creating metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable List<DimensionResponse> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions List of Dimensions for creating metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(DimensionResponse... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param metricName Name of the metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             $.metricName = metricName;
             return this;

@@ -23,6 +23,10 @@ public final class ConfidentialNodesResponse extends com.pulumi.resources.Invoke
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether Confidential Nodes feature is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class ConfidentialNodesResponse extends com.pulumi.resources.Invoke
             $ = new ConfidentialNodesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether Confidential Nodes feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

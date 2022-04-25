@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImagePipelineImageTestsConfiguration {
     /**
-     * Whether image tests are enabled. Defaults to `true`.
+     * @return Whether image tests are enabled. Defaults to `true`.
      * 
      */
     private final @Nullable Boolean imageTestsEnabled;
     /**
-     * Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
+     * @return Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
      * 
      */
     private final @Nullable Integer timeoutMinutes;
@@ -32,16 +32,16 @@ public final class ImagePipelineImageTestsConfiguration {
     }
 
     /**
-     * Whether image tests are enabled. Defaults to `true`.
+     * @return Whether image tests are enabled. Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> imageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
     /**
-     * Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
+     * @return Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
      * 
-    */
+     */
     public Optional<Integer> timeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }

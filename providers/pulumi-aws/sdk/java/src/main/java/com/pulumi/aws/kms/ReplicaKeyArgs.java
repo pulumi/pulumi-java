@@ -28,6 +28,13 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bypassPolicyLockoutSafetyCheck")
     private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
+    /**
+     * @return A flag to indicate whether to bypass the key policy lockout safety check.
+     * Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value to true indiscriminately.
+     * For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the _AWS Key Management Service Developer Guide_.
+     * The default value is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> bypassPolicyLockoutSafetyCheck() {
         return Optional.ofNullable(this.bypassPolicyLockoutSafetyCheck);
     }
@@ -40,6 +47,11 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionWindowInDays")
     private @Nullable Output<Integer> deletionWindowInDays;
 
+    /**
+     * @return The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the KMS key.
+     * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
+     * 
+     */
     public Optional<Output<Integer>> deletionWindowInDays() {
         return Optional.ofNullable(this.deletionWindowInDays);
     }
@@ -51,6 +63,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the KMS key.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +78,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. The default value is `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -80,6 +100,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryKeyArn", required=true)
     private Output<String> primaryKeyArn;
 
+    /**
+     * @return The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.
+     * 
+     */
     public Output<String> primaryKeyArn() {
         return this.primaryKeyArn;
     }
@@ -91,6 +115,10 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,38 +153,94 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReplicaKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bypassPolicyLockoutSafetyCheck A flag to indicate whether to bypass the key policy lockout safety check.
+         * Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value to true indiscriminately.
+         * For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the _AWS Key Management Service Developer Guide_.
+         * The default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
             $.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
+        /**
+         * @param bypassPolicyLockoutSafetyCheck A flag to indicate whether to bypass the key policy lockout safety check.
+         * Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value to true indiscriminately.
+         * For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the _AWS Key Management Service Developer Guide_.
+         * The default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
             return bypassPolicyLockoutSafetyCheck(Output.of(bypassPolicyLockoutSafetyCheck));
         }
 
+        /**
+         * @param deletionWindowInDays The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the KMS key.
+         * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
             $.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
 
+        /**
+         * @param deletionWindowInDays The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the KMS key.
+         * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionWindowInDays(Integer deletionWindowInDays) {
             return deletionWindowInDays(Output.of(deletionWindowInDays));
         }
 
+        /**
+         * @param description A description of the KMS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the KMS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enabled Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. The default value is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. The default value is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
@@ -170,20 +254,44 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param primaryKeyArn The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKeyArn(Output<String> primaryKeyArn) {
             $.primaryKeyArn = primaryKeyArn;
             return this;
         }
 
+        /**
+         * @param primaryKeyArn The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKeyArn(String primaryKeyArn) {
             return primaryKeyArn(Output.of(primaryKeyArn));
         }
 
+        /**
+         * @param tags A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

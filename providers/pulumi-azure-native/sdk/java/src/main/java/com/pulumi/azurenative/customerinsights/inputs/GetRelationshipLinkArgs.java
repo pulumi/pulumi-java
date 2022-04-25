@@ -19,6 +19,10 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
     @Import(name="hubName", required=true)
     private String hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public String hubName() {
         return this.hubName;
     }
@@ -30,6 +34,10 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
     @Import(name="relationshipLinkName", required=true)
     private String relationshipLinkName;
 
+    /**
+     * @return The name of the relationship link.
+     * 
+     */
     public String relationshipLinkName() {
         return this.relationshipLinkName;
     }
@@ -41,6 +49,10 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
             $ = new GetRelationshipLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param relationshipLinkName The name of the relationship link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipLinkName(String relationshipLinkName) {
             $.relationshipLinkName = relationshipLinkName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

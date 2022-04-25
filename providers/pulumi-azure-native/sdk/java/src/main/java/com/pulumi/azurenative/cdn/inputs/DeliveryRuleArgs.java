@@ -51,6 +51,10 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
     private Output<List<Object>> actions;
 
+    /**
+     * @return A list of actions that are executed when all the conditions of a rule are satisfied.
+     * 
+     */
     public Output<List<Object>> actions() {
         return this.actions;
     }
@@ -62,6 +66,10 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<List<Object>> conditions;
 
+    /**
+     * @return A list of conditions that must be matched for the actions to be executed
+     * 
+     */
     public Optional<Output<List<Object>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -73,6 +81,10 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the rule
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +96,10 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="order", required=true)
     private Output<Integer> order;
 
+    /**
+     * @return The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+     * 
+     */
     public Output<Integer> order() {
         return this.order;
     }
@@ -115,46 +131,106 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeliveryRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions A list of actions that are executed when all the conditions of a rule are satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<Object>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions A list of actions that are executed when all the conditions of a rule are satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<Object> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions A list of actions that are executed when all the conditions of a rule are satisfied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param conditions A list of conditions that must be matched for the actions to be executed
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<Object>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A list of conditions that must be matched for the actions to be executed
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<Object> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions A list of conditions that must be matched for the actions to be executed
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(Object... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param name Name of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param order The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Output<Integer> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             return order(Output.of(order));
         }

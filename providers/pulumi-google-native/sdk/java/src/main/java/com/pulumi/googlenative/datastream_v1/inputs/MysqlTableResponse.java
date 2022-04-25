@@ -25,6 +25,10 @@ public final class MysqlTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mysqlColumns", required=true)
     private List<MysqlColumnResponse> mysqlColumns;
 
+    /**
+     * @return MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * 
+     */
     public List<MysqlColumnResponse> mysqlColumns() {
         return this.mysqlColumns;
     }
@@ -36,6 +40,10 @@ public final class MysqlTableResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="table", required=true)
     private String table;
 
+    /**
+     * @return Table name.
+     * 
+     */
     public String table() {
         return this.table;
     }
@@ -65,15 +73,33 @@ public final class MysqlTableResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MysqlTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlColumns(List<MysqlColumnResponse> mysqlColumns) {
             $.mysqlColumns = mysqlColumns;
             return this;
         }
 
+        /**
+         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlColumns(MysqlColumnResponse... mysqlColumns) {
             return mysqlColumns(List.of(mysqlColumns));
         }
 
+        /**
+         * @param table Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             $.table = table;
             return this;

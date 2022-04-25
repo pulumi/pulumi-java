@@ -26,6 +26,10 @@ public final class CryptoKeyConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="keyReference")
     private @Nullable Output<String> keyReference;
 
+    /**
+     * @return The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+     * 
+     */
     public Optional<Output<String>> keyReference() {
         return Optional.ofNullable(this.keyReference);
     }
@@ -54,11 +58,23 @@ public final class CryptoKeyConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new CryptoKeyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyReference The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyReference(@Nullable Output<String> keyReference) {
             $.keyReference = keyReference;
             return this;
         }
 
+        /**
+         * @param keyReference The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyReference(String keyReference) {
             return keyReference(Output.of(keyReference));
         }

@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ErrorHandlerResponse {
     /**
-     * Error condition this handler applies to.
+     * @return Error condition this handler applies to.
      * 
      */
     private final String errorCode;
     /**
-     * MIME type of file. Defaults to text/html.
+     * @return MIME type of file. Defaults to text/html.
      * 
      */
     private final String mimeType;
     /**
-     * Static file content to be served for this error.
+     * @return Static file content to be served for this error.
      * 
      */
     private final String staticFile;
@@ -36,23 +36,23 @@ public final class ErrorHandlerResponse {
     }
 
     /**
-     * Error condition this handler applies to.
+     * @return Error condition this handler applies to.
      * 
-    */
+     */
     public String errorCode() {
         return this.errorCode;
     }
     /**
-     * MIME type of file. Defaults to text/html.
+     * @return MIME type of file. Defaults to text/html.
      * 
-    */
+     */
     public String mimeType() {
         return this.mimeType;
     }
     /**
-     * Static file content to be served for this error.
+     * @return Static file content to be served for this error.
      * 
-    */
+     */
     public String staticFile() {
         return this.staticFile;
     }

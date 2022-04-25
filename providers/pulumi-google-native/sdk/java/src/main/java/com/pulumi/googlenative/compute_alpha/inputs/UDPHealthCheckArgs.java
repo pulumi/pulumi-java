@@ -23,6 +23,10 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The UDP port number for the health check request. Valid values are 1 through 65535.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -34,6 +38,10 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="portName")
     private @Nullable Output<String> portName;
 
+    /**
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+     * 
+     */
     public Optional<Output<String>> portName() {
         return Optional.ofNullable(this.portName);
     }
@@ -45,6 +53,10 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="request")
     private @Nullable Output<String> request;
 
+    /**
+     * @return Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
+     * 
+     */
     public Optional<Output<String>> request() {
         return Optional.ofNullable(this.request);
     }
@@ -56,6 +68,10 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="response")
     private @Nullable Output<String> response;
 
+    /**
+     * @return The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
+     * 
+     */
     public Optional<Output<String>> response() {
         return Optional.ofNullable(this.response);
     }
@@ -87,38 +103,86 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
             $ = new UDPHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The UDP port number for the health check request. Valid values are 1 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The UDP port number for the health check request. Valid values are 1 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param portName Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(@Nullable Output<String> portName) {
             $.portName = portName;
             return this;
         }
 
+        /**
+         * @param portName Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(String portName) {
             return portName(Output.of(portName));
         }
 
+        /**
+         * @param request Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(@Nullable Output<String> request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param request Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(String request) {
             return request(Output.of(request));
         }
 
+        /**
+         * @param response The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(@Nullable Output<String> response) {
             $.response = response;
             return this;
         }
 
+        /**
+         * @param response The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
+         * 
+         * @return builder
+         * 
+         */
         public Builder response(String response) {
             return response(Output.of(response));
         }

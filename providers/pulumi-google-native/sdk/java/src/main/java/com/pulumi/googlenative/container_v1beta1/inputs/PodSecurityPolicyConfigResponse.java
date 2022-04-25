@@ -23,6 +23,10 @@ public final class PodSecurityPolicyConfigResponse extends com.pulumi.resources.
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class PodSecurityPolicyConfigResponse extends com.pulumi.resources.
             $ = new PodSecurityPolicyConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

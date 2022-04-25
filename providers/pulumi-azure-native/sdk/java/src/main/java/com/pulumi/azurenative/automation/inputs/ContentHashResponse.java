@@ -23,6 +23,10 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="algorithm", required=true)
     private String algorithm;
 
+    /**
+     * @return Gets or sets the content hash algorithm used to hash the content.
+     * 
+     */
     public String algorithm() {
         return this.algorithm;
     }
@@ -34,6 +38,10 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Gets or sets expected hash value of the content.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContentHashResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm Gets or sets the content hash algorithm used to hash the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param value Gets or sets expected hash value of the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

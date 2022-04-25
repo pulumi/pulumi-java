@@ -24,6 +24,10 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
     @Import(name="cpuAveragePercent", required=true)
     private Integer cpuAveragePercent;
 
+    /**
+     * @return Average CPU usage, percent.
+     * 
+     */
     public Integer cpuAveragePercent() {
         return this.cpuAveragePercent;
     }
@@ -35,6 +39,10 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
     @Import(name="cpuMaxPercent", required=true)
     private Integer cpuMaxPercent;
 
+    /**
+     * @return Max CPU usage, percent.
+     * 
+     */
     public Integer cpuMaxPercent() {
         return this.cpuMaxPercent;
     }
@@ -46,6 +54,10 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
     @Import(name="diskIoRateAverageKbps", required=true)
     private String diskIoRateAverageKbps;
 
+    /**
+     * @return Average disk IO rate, in kilobytes per second.
+     * 
+     */
     public String diskIoRateAverageKbps() {
         return this.diskIoRateAverageKbps;
     }
@@ -57,6 +69,10 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
     @Import(name="diskIoRateMaxKbps", required=true)
     private String diskIoRateMaxKbps;
 
+    /**
+     * @return Max disk IO rate, in kilobytes per second.
+     * 
+     */
     public String diskIoRateMaxKbps() {
         return this.diskIoRateMaxKbps;
     }
@@ -68,6 +84,10 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
     @Import(name="memoryAveragePercent", required=true)
     private Integer memoryAveragePercent;
 
+    /**
+     * @return Average memory usage, percent.
+     * 
+     */
     public Integer memoryAveragePercent() {
         return this.memoryAveragePercent;
     }
@@ -79,6 +99,10 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
     @Import(name="memoryMaxPercent", required=true)
     private Integer memoryMaxPercent;
 
+    /**
+     * @return Max memory usage, percent.
+     * 
+     */
     public Integer memoryMaxPercent() {
         return this.memoryMaxPercent;
     }
@@ -90,6 +114,10 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
     @Import(name="networkThroughputAverageKbps", required=true)
     private String networkThroughputAverageKbps;
 
+    /**
+     * @return Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     * 
+     */
     public String networkThroughputAverageKbps() {
         return this.networkThroughputAverageKbps;
     }
@@ -101,6 +129,10 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
     @Import(name="networkThroughputMaxKbps", required=true)
     private String networkThroughputMaxKbps;
 
+    /**
+     * @return Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     * 
+     */
     public String networkThroughputMaxKbps() {
         return this.networkThroughputMaxKbps;
     }
@@ -136,41 +168,89 @@ public final class VmUtilizationMetricsResponse extends com.pulumi.resources.Inv
             $ = new VmUtilizationMetricsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuAveragePercent Average CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuAveragePercent(Integer cpuAveragePercent) {
             $.cpuAveragePercent = cpuAveragePercent;
             return this;
         }
 
+        /**
+         * @param cpuMaxPercent Max CPU usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuMaxPercent(Integer cpuMaxPercent) {
             $.cpuMaxPercent = cpuMaxPercent;
             return this;
         }
 
+        /**
+         * @param diskIoRateAverageKbps Average disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateAverageKbps(String diskIoRateAverageKbps) {
             $.diskIoRateAverageKbps = diskIoRateAverageKbps;
             return this;
         }
 
+        /**
+         * @param diskIoRateMaxKbps Max disk IO rate, in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIoRateMaxKbps(String diskIoRateMaxKbps) {
             $.diskIoRateMaxKbps = diskIoRateMaxKbps;
             return this;
         }
 
+        /**
+         * @param memoryAveragePercent Average memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryAveragePercent(Integer memoryAveragePercent) {
             $.memoryAveragePercent = memoryAveragePercent;
             return this;
         }
 
+        /**
+         * @param memoryMaxPercent Max memory usage, percent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMaxPercent(Integer memoryMaxPercent) {
             $.memoryMaxPercent = memoryMaxPercent;
             return this;
         }
 
+        /**
+         * @param networkThroughputAverageKbps Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputAverageKbps(String networkThroughputAverageKbps) {
             $.networkThroughputAverageKbps = networkThroughputAverageKbps;
             return this;
         }
 
+        /**
+         * @param networkThroughputMaxKbps Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkThroughputMaxKbps(String networkThroughputMaxKbps) {
             $.networkThroughputMaxKbps = networkThroughputMaxKbps;
             return this;

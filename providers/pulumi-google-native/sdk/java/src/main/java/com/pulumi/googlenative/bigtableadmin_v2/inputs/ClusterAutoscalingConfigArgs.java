@@ -25,6 +25,10 @@ public final class ClusterAutoscalingConfigArgs extends com.pulumi.resources.Res
     @Import(name="autoscalingLimits", required=true)
     private Output<AutoscalingLimitsArgs> autoscalingLimits;
 
+    /**
+     * @return Autoscaling limits for this cluster.
+     * 
+     */
     public Output<AutoscalingLimitsArgs> autoscalingLimits() {
         return this.autoscalingLimits;
     }
@@ -36,6 +40,10 @@ public final class ClusterAutoscalingConfigArgs extends com.pulumi.resources.Res
     @Import(name="autoscalingTargets", required=true)
     private Output<AutoscalingTargetsArgs> autoscalingTargets;
 
+    /**
+     * @return Autoscaling targets for this cluster.
+     * 
+     */
     public Output<AutoscalingTargetsArgs> autoscalingTargets() {
         return this.autoscalingTargets;
     }
@@ -65,20 +73,44 @@ public final class ClusterAutoscalingConfigArgs extends com.pulumi.resources.Res
             $ = new ClusterAutoscalingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingLimits Autoscaling limits for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingLimits(Output<AutoscalingLimitsArgs> autoscalingLimits) {
             $.autoscalingLimits = autoscalingLimits;
             return this;
         }
 
+        /**
+         * @param autoscalingLimits Autoscaling limits for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingLimits(AutoscalingLimitsArgs autoscalingLimits) {
             return autoscalingLimits(Output.of(autoscalingLimits));
         }
 
+        /**
+         * @param autoscalingTargets Autoscaling targets for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingTargets(Output<AutoscalingTargetsArgs> autoscalingTargets) {
             $.autoscalingTargets = autoscalingTargets;
             return this;
         }
 
+        /**
+         * @param autoscalingTargets Autoscaling targets for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingTargets(AutoscalingTargetsArgs autoscalingTargets) {
             return autoscalingTargets(Output.of(autoscalingTargets));
         }

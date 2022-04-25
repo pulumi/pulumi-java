@@ -23,6 +23,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
     @Import(name="values")
     private @Nullable Output<List<Double>> values;
 
+    /**
+     * @return Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+     * 
+     */
     public Optional<Output<List<Double>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -51,15 +55,33 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<Double>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<Double> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Double... values) {
             return values(List.of(values));
         }

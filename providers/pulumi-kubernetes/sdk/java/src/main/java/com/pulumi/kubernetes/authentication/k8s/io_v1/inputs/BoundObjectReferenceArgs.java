@@ -26,6 +26,10 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return API version of the referent.
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -37,6 +41,10 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of the referent. Valid kinds are &#39;Pod&#39; and &#39;Secret&#39;.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -48,6 +56,10 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the referent.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return UID of the referent.
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -90,38 +106,86 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
             $ = new BoundObjectReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion API version of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion API version of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param kind Kind of the referent. Valid kinds are &#39;Pod&#39; and &#39;Secret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the referent. Valid kinds are &#39;Pod&#39; and &#39;Secret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param uid UID of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid UID of the referent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }

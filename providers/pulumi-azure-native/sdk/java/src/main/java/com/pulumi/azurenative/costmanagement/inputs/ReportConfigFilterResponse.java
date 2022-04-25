@@ -26,6 +26,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="and")
     private @Nullable List<ReportConfigFilterResponse> and;
 
+    /**
+     * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
+     * 
+     */
     public Optional<List<ReportConfigFilterResponse>> and() {
         return Optional.ofNullable(this.and);
     }
@@ -37,6 +41,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="dimensions")
     private @Nullable ReportConfigComparisonExpressionResponse dimensions;
 
+    /**
+     * @return Has comparison expression for a dimension
+     * 
+     */
     public Optional<ReportConfigComparisonExpressionResponse> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -48,6 +56,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="or")
     private @Nullable List<ReportConfigFilterResponse> or;
 
+    /**
+     * @return The logical &#34;OR&#34; expression. Must have at least 2 items.
+     * 
+     */
     public Optional<List<ReportConfigFilterResponse>> or() {
         return Optional.ofNullable(this.or);
     }
@@ -59,6 +71,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="tagKey")
     private @Nullable ReportConfigComparisonExpressionResponse tagKey;
 
+    /**
+     * @return Has comparison expression for a tag key
+     * 
+     */
     public Optional<ReportConfigComparisonExpressionResponse> tagKey() {
         return Optional.ofNullable(this.tagKey);
     }
@@ -70,6 +86,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="tagValue")
     private @Nullable ReportConfigComparisonExpressionResponse tagValue;
 
+    /**
+     * @return Has comparison expression for a tag value
+     * 
+     */
     public Optional<ReportConfigComparisonExpressionResponse> tagValue() {
         return Optional.ofNullable(this.tagValue);
     }
@@ -81,6 +101,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="tags")
     private @Nullable ReportConfigComparisonExpressionResponse tags;
 
+    /**
+     * @return Has comparison expression for a tag
+     * 
+     */
     public Optional<ReportConfigComparisonExpressionResponse> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,39 +138,87 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
             $ = new ReportConfigFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(@Nullable List<ReportConfigFilterResponse> and) {
             $.and = and;
             return this;
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(ReportConfigFilterResponse... and) {
             return and(List.of(and));
         }
 
+        /**
+         * @param dimensions Has comparison expression for a dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable ReportConfigComparisonExpressionResponse dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param or The logical &#34;OR&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder or(@Nullable List<ReportConfigFilterResponse> or) {
             $.or = or;
             return this;
         }
 
+        /**
+         * @param or The logical &#34;OR&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder or(ReportConfigFilterResponse... or) {
             return or(List.of(or));
         }
 
+        /**
+         * @param tagKey Has comparison expression for a tag key
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagKey(@Nullable ReportConfigComparisonExpressionResponse tagKey) {
             $.tagKey = tagKey;
             return this;
         }
 
+        /**
+         * @param tagValue Has comparison expression for a tag value
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(@Nullable ReportConfigComparisonExpressionResponse tagValue) {
             $.tagValue = tagValue;
             return this;
         }
 
+        /**
+         * @param tags Has comparison expression for a tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable ReportConfigComparisonExpressionResponse tags) {
             $.tags = tags;
             return this;

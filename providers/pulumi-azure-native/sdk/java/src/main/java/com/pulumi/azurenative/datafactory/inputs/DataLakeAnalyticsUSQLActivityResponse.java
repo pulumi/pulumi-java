@@ -33,6 +33,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="compilationMode")
     private @Nullable Object compilationMode;
 
+    /**
+     * @return Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> compilationMode() {
         return Optional.ofNullable(this.compilationMode);
     }
@@ -44,6 +48,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="degreeOfParallelism")
     private @Nullable Object degreeOfParallelism;
 
+    /**
+     * @return The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
+     * 
+     */
     public Optional<Object> degreeOfParallelism() {
         return Optional.ofNullable(this.degreeOfParallelism);
     }
@@ -55,6 +63,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -66,6 +78,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -77,6 +93,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -88,6 +108,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -99,6 +123,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="parameters")
     private @Nullable Map<String,Object> parameters;
 
+    /**
+     * @return Parameters for U-SQL job request.
+     * 
+     */
     public Optional<Map<String,Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -110,6 +138,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -121,6 +153,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="priority")
     private @Nullable Object priority;
 
+    /**
+     * @return Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
+     * 
+     */
     public Optional<Object> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -132,6 +168,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="runtimeVersion")
     private @Nullable Object runtimeVersion;
 
+    /**
+     * @return Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -143,6 +183,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="scriptLinkedService", required=true)
     private LinkedServiceReferenceResponse scriptLinkedService;
 
+    /**
+     * @return Script linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse scriptLinkedService() {
         return this.scriptLinkedService;
     }
@@ -154,6 +198,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="scriptPath", required=true)
     private Object scriptPath;
 
+    /**
+     * @return Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object scriptPath() {
         return this.scriptPath;
     }
@@ -166,6 +214,11 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;DataLakeAnalyticsU-SQL&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -177,6 +230,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -218,80 +275,177 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
             $ = new DataLakeAnalyticsUSQLActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compilationMode Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder compilationMode(@Nullable Object compilationMode) {
             $.compilationMode = compilationMode;
             return this;
         }
 
+        /**
+         * @param degreeOfParallelism The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder degreeOfParallelism(@Nullable Object degreeOfParallelism) {
             $.degreeOfParallelism = degreeOfParallelism;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for U-SQL job request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param priority Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Object priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param runtimeVersion Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(@Nullable Object runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param scriptLinkedService Script linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptLinkedService(LinkedServiceReferenceResponse scriptLinkedService) {
             $.scriptLinkedService = scriptLinkedService;
             return this;
         }
 
+        /**
+         * @param scriptPath Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptPath(Object scriptPath) {
             $.scriptPath = scriptPath;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;DataLakeAnalyticsU-SQL&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

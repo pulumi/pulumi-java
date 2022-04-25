@@ -27,6 +27,10 @@ public final class DdosSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="ddosCustomPolicy")
     private @Nullable SubResourceResponse ddosCustomPolicy;
 
+    /**
+     * @return The DDoS custom policy associated with the public IP.
+     * 
+     */
     public Optional<SubResourceResponse> ddosCustomPolicy() {
         return Optional.ofNullable(this.ddosCustomPolicy);
     }
@@ -38,6 +42,10 @@ public final class DdosSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="protectedIP")
     private @Nullable Boolean protectedIP;
 
+    /**
+     * @return Enables DDoS protection on the public IP.
+     * 
+     */
     public Optional<Boolean> protectedIP() {
         return Optional.ofNullable(this.protectedIP);
     }
@@ -49,6 +57,10 @@ public final class DdosSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="protectionCoverage")
     private @Nullable String protectionCoverage;
 
+    /**
+     * @return The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+     * 
+     */
     public Optional<String> protectionCoverage() {
         return Optional.ofNullable(this.protectionCoverage);
     }
@@ -79,16 +91,34 @@ public final class DdosSettingsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DdosSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ddosCustomPolicy The DDoS custom policy associated with the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosCustomPolicy(@Nullable SubResourceResponse ddosCustomPolicy) {
             $.ddosCustomPolicy = ddosCustomPolicy;
             return this;
         }
 
+        /**
+         * @param protectedIP Enables DDoS protection on the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedIP(@Nullable Boolean protectedIP) {
             $.protectedIP = protectedIP;
             return this;
         }
 
+        /**
+         * @param protectionCoverage The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionCoverage(@Nullable String protectionCoverage) {
             $.protectionCoverage = protectionCoverage;
             return this;

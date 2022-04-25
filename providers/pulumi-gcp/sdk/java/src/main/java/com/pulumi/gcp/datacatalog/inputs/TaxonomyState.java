@@ -25,6 +25,12 @@ public final class TaxonomyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="activatedPolicyTypes")
     private @Nullable Output<List<String>> activatedPolicyTypes;
 
+    /**
+     * @return A list of policy types that are activated for this taxonomy. If not set,
+     * defaults to an empty list.
+     * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
+     * 
+     */
     public Optional<Output<List<String>>> activatedPolicyTypes() {
         return Optional.ofNullable(this.activatedPolicyTypes);
     }
@@ -38,6 +44,12 @@ public final class TaxonomyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this taxonomy. It must: contain only unicode characters,
+     * tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
+     * long when encoded in UTF-8. If not set, defaults to an empty description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +64,13 @@ public final class TaxonomyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User defined name of this taxonomy.
+     * It must: contain only unicode letters, numbers, underscores, dashes
+     * and spaces; not start or end with spaces; and be at most 200 bytes
+     * long when encoded in UTF-8.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -63,6 +82,10 @@ public final class TaxonomyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name of this taxonomy, whose format is: &#34;projects/{project}/locations/{region}/taxonomies/{taxonomy}&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -75,6 +98,11 @@ public final class TaxonomyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -86,6 +114,10 @@ public final class TaxonomyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Taxonomy location region.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -119,60 +151,156 @@ public final class TaxonomyState extends com.pulumi.resources.ResourceArgs {
             $ = new TaxonomyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activatedPolicyTypes A list of policy types that are activated for this taxonomy. If not set,
+         * defaults to an empty list.
+         * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedPolicyTypes(@Nullable Output<List<String>> activatedPolicyTypes) {
             $.activatedPolicyTypes = activatedPolicyTypes;
             return this;
         }
 
+        /**
+         * @param activatedPolicyTypes A list of policy types that are activated for this taxonomy. If not set,
+         * defaults to an empty list.
+         * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedPolicyTypes(List<String> activatedPolicyTypes) {
             return activatedPolicyTypes(Output.of(activatedPolicyTypes));
         }
 
+        /**
+         * @param activatedPolicyTypes A list of policy types that are activated for this taxonomy. If not set,
+         * defaults to an empty list.
+         * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedPolicyTypes(String... activatedPolicyTypes) {
             return activatedPolicyTypes(List.of(activatedPolicyTypes));
         }
 
+        /**
+         * @param description Description of this taxonomy. It must: contain only unicode characters,
+         * tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
+         * long when encoded in UTF-8. If not set, defaults to an empty description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this taxonomy. It must: contain only unicode characters,
+         * tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
+         * long when encoded in UTF-8. If not set, defaults to an empty description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User defined name of this taxonomy.
+         * It must: contain only unicode letters, numbers, underscores, dashes
+         * and spaces; not start or end with spaces; and be at most 200 bytes
+         * long when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User defined name of this taxonomy.
+         * It must: contain only unicode letters, numbers, underscores, dashes
+         * and spaces; not start or end with spaces; and be at most 200 bytes
+         * long when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name Resource name of this taxonomy, whose format is: &#34;projects/{project}/locations/{region}/taxonomies/{taxonomy}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name of this taxonomy, whose format is: &#34;projects/{project}/locations/{region}/taxonomies/{taxonomy}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Taxonomy location region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Taxonomy location region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

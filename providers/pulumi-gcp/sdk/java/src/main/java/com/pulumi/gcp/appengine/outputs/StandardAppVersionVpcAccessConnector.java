@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class StandardAppVersionVpcAccessConnector {
     /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class StandardAppVersionVpcAccessConnector {
     }
 
     /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

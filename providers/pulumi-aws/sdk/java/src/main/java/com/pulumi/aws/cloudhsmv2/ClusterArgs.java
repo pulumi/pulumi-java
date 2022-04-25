@@ -24,6 +24,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hsmType", required=true)
     private Output<String> hsmType;
 
+    /**
+     * @return The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
+     * 
+     */
     public Output<String> hsmType() {
         return this.hsmType;
     }
@@ -35,6 +39,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceBackupIdentifier")
     private @Nullable Output<String> sourceBackupIdentifier;
 
+    /**
+     * @return The id of Cloud HSM v2 cluster backup to be restored.
+     * 
+     */
     public Optional<Output<String>> sourceBackupIdentifier() {
         return Optional.ofNullable(this.sourceBackupIdentifier);
     }
@@ -46,6 +54,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
+    /**
+     * @return The IDs of subnets in which cluster will operate.
+     * 
+     */
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
@@ -57,6 +69,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,42 +104,96 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hsmType The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmType(Output<String> hsmType) {
             $.hsmType = hsmType;
             return this;
         }
 
+        /**
+         * @param hsmType The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmType(String hsmType) {
             return hsmType(Output.of(hsmType));
         }
 
+        /**
+         * @param sourceBackupIdentifier The id of Cloud HSM v2 cluster backup to be restored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBackupIdentifier(@Nullable Output<String> sourceBackupIdentifier) {
             $.sourceBackupIdentifier = sourceBackupIdentifier;
             return this;
         }
 
+        /**
+         * @param sourceBackupIdentifier The id of Cloud HSM v2 cluster backup to be restored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBackupIdentifier(String sourceBackupIdentifier) {
             return sourceBackupIdentifier(Output.of(sourceBackupIdentifier));
         }
 
+        /**
+         * @param subnetIds The IDs of subnets in which cluster will operate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The IDs of subnets in which cluster will operate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds The IDs of subnets in which cluster will operate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

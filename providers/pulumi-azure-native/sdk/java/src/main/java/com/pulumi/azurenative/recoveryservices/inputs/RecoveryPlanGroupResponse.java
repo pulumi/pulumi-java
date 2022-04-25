@@ -28,6 +28,10 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="endGroupActions")
     private @Nullable List<RecoveryPlanActionResponse> endGroupActions;
 
+    /**
+     * @return The end group actions.
+     * 
+     */
     public Optional<List<RecoveryPlanActionResponse>> endGroupActions() {
         return Optional.ofNullable(this.endGroupActions);
     }
@@ -39,6 +43,10 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="groupType", required=true)
     private String groupType;
 
+    /**
+     * @return The group type.
+     * 
+     */
     public String groupType() {
         return this.groupType;
     }
@@ -50,6 +58,10 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="replicationProtectedItems")
     private @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems;
 
+    /**
+     * @return The list of protected items.
+     * 
+     */
     public Optional<List<RecoveryPlanProtectedItemResponse>> replicationProtectedItems() {
         return Optional.ofNullable(this.replicationProtectedItems);
     }
@@ -61,6 +73,10 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="startGroupActions")
     private @Nullable List<RecoveryPlanActionResponse> startGroupActions;
 
+    /**
+     * @return The start group actions.
+     * 
+     */
     public Optional<List<RecoveryPlanActionResponse>> startGroupActions() {
         return Optional.ofNullable(this.startGroupActions);
     }
@@ -92,34 +108,76 @@ public final class RecoveryPlanGroupResponse extends com.pulumi.resources.Invoke
             $ = new RecoveryPlanGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endGroupActions The end group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endGroupActions(@Nullable List<RecoveryPlanActionResponse> endGroupActions) {
             $.endGroupActions = endGroupActions;
             return this;
         }
 
+        /**
+         * @param endGroupActions The end group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endGroupActions(RecoveryPlanActionResponse... endGroupActions) {
             return endGroupActions(List.of(endGroupActions));
         }
 
+        /**
+         * @param groupType The group type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(String groupType) {
             $.groupType = groupType;
             return this;
         }
 
+        /**
+         * @param replicationProtectedItems The list of protected items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationProtectedItems(@Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems) {
             $.replicationProtectedItems = replicationProtectedItems;
             return this;
         }
 
+        /**
+         * @param replicationProtectedItems The list of protected items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationProtectedItems(RecoveryPlanProtectedItemResponse... replicationProtectedItems) {
             return replicationProtectedItems(List.of(replicationProtectedItems));
         }
 
+        /**
+         * @param startGroupActions The start group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startGroupActions(@Nullable List<RecoveryPlanActionResponse> startGroupActions) {
             $.startGroupActions = startGroupActions;
             return this;
         }
 
+        /**
+         * @param startGroupActions The start group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startGroupActions(RecoveryPlanActionResponse... startGroupActions) {
             return startGroupActions(List.of(startGroupActions));
         }

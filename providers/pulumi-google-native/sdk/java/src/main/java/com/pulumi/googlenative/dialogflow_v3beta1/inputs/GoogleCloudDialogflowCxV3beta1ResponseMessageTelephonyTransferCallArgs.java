@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
     @Import(name="phoneNumber")
     private @Nullable Output<String> phoneNumber;
 
+    /**
+     * @return Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
+     * 
+     */
     public Optional<Output<String>> phoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
             $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phoneNumber Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param phoneNumber Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             return phoneNumber(Output.of(phoneNumber));
         }

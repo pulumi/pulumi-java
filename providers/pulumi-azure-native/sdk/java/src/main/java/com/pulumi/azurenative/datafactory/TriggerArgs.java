@@ -31,6 +31,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
     private Output<String> factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public Output<String> factoryName() {
         return this.factoryName;
     }
@@ -42,6 +46,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<Object> properties;
 
+    /**
+     * @return Properties of the trigger.
+     * 
+     */
     public Output<Object> properties() {
         return this.properties;
     }
@@ -53,6 +61,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -64,6 +76,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggerName")
     private @Nullable Output<String> triggerName;
 
+    /**
+     * @return The trigger name.
+     * 
+     */
     public Optional<Output<String>> triggerName() {
         return Optional.ofNullable(this.triggerName);
     }
@@ -95,38 +111,86 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             return factoryName(Output.of(factoryName));
         }
 
+        /**
+         * @param properties Properties of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param triggerName The trigger name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerName(@Nullable Output<String> triggerName) {
             $.triggerName = triggerName;
             return this;
         }
 
+        /**
+         * @param triggerName The trigger name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerName(String triggerName) {
             return triggerName(Output.of(triggerName));
         }

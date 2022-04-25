@@ -26,6 +26,10 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceNodeId")
     private @Nullable Output<String> sourceNodeId;
 
+    /**
+     * @return The source graph node&#39;s identifier.
+     * 
+     */
     public Optional<Output<String>> sourceNodeId() {
         return Optional.ofNullable(this.sourceNodeId);
     }
@@ -37,6 +41,10 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourcePortId")
     private @Nullable Output<String> sourcePortId;
 
+    /**
+     * @return The identifier of the source node&#39;s port that the edge connects from.
+     * 
+     */
     public Optional<Output<String>> sourcePortId() {
         return Optional.ofNullable(this.sourcePortId);
     }
@@ -48,6 +56,10 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetNodeId")
     private @Nullable Output<String> targetNodeId;
 
+    /**
+     * @return The destination graph node&#39;s identifier.
+     * 
+     */
     public Optional<Output<String>> targetNodeId() {
         return Optional.ofNullable(this.targetNodeId);
     }
@@ -59,6 +71,10 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetPortId")
     private @Nullable Output<String> targetPortId;
 
+    /**
+     * @return The identifier of the destination node&#39;s port that the edge connects into.
+     * 
+     */
     public Optional<Output<String>> targetPortId() {
         return Optional.ofNullable(this.targetPortId);
     }
@@ -90,38 +106,86 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GraphEdgeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceNodeId The source graph node&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNodeId(@Nullable Output<String> sourceNodeId) {
             $.sourceNodeId = sourceNodeId;
             return this;
         }
 
+        /**
+         * @param sourceNodeId The source graph node&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNodeId(String sourceNodeId) {
             return sourceNodeId(Output.of(sourceNodeId));
         }
 
+        /**
+         * @param sourcePortId The identifier of the source node&#39;s port that the edge connects from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortId(@Nullable Output<String> sourcePortId) {
             $.sourcePortId = sourcePortId;
             return this;
         }
 
+        /**
+         * @param sourcePortId The identifier of the source node&#39;s port that the edge connects from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortId(String sourcePortId) {
             return sourcePortId(Output.of(sourcePortId));
         }
 
+        /**
+         * @param targetNodeId The destination graph node&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNodeId(@Nullable Output<String> targetNodeId) {
             $.targetNodeId = targetNodeId;
             return this;
         }
 
+        /**
+         * @param targetNodeId The destination graph node&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNodeId(String targetNodeId) {
             return targetNodeId(Output.of(targetNodeId));
         }
 
+        /**
+         * @param targetPortId The identifier of the destination node&#39;s port that the edge connects into.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPortId(@Nullable Output<String> targetPortId) {
             $.targetPortId = targetPortId;
             return this;
         }
 
+        /**
+         * @param targetPortId The identifier of the destination node&#39;s port that the edge connects into.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPortId(String targetPortId) {
             return targetPortId(Output.of(targetPortId));
         }

@@ -24,6 +24,10 @@ public final class StartActivityIntentResponse extends com.pulumi.resources.Invo
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return Action name. Required for START_ACTIVITY.
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -35,6 +39,10 @@ public final class StartActivityIntentResponse extends com.pulumi.resources.Invo
     @Import(name="categories", required=true)
     private List<String> categories;
 
+    /**
+     * @return Intent categories to set on the intent.
+     * 
+     */
     public List<String> categories() {
         return this.categories;
     }
@@ -46,6 +54,10 @@ public final class StartActivityIntentResponse extends com.pulumi.resources.Invo
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI for the action.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -76,20 +88,44 @@ public final class StartActivityIntentResponse extends com.pulumi.resources.Invo
             $ = new StartActivityIntentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action name. Required for START_ACTIVITY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param categories Intent categories to set on the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(List<String> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories Intent categories to set on the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
 
+        /**
+         * @param uri URI for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

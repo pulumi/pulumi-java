@@ -23,6 +23,10 @@ public final class CompanyDerivedInfoResponse extends com.pulumi.resources.Invok
     @Import(name="headquartersLocation", required=true)
     private LocationResponse headquartersLocation;
 
+    /**
+     * @return A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
+     * 
+     */
     public LocationResponse headquartersLocation() {
         return this.headquartersLocation;
     }
@@ -51,6 +55,12 @@ public final class CompanyDerivedInfoResponse extends com.pulumi.resources.Invok
             $ = new CompanyDerivedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headquartersLocation A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headquartersLocation(LocationResponse headquartersLocation) {
             $.headquartersLocation = headquartersLocation;
             return this;

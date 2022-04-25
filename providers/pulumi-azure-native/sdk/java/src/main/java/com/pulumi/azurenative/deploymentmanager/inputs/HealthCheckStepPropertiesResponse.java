@@ -25,6 +25,10 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
     @Import(name="attributes", required=true)
     private RestHealthCheckStepAttributesResponse attributes;
 
+    /**
+     * @return The health check step attributes
+     * 
+     */
     public RestHealthCheckStepAttributesResponse attributes() {
         return this.attributes;
     }
@@ -37,6 +41,11 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
     @Import(name="stepType", required=true)
     private String stepType;
 
+    /**
+     * @return The type of step.
+     * Expected value is &#39;HealthCheck&#39;.
+     * 
+     */
     public String stepType() {
         return this.stepType;
     }
@@ -66,11 +75,24 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
             $ = new HealthCheckStepPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The health check step attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(RestHealthCheckStepAttributesResponse attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param stepType The type of step.
+         * Expected value is &#39;HealthCheck&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepType(String stepType) {
             $.stepType = stepType;
             return this;

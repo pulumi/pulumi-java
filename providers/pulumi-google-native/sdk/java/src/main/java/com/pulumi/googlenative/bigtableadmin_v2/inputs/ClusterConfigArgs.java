@@ -26,6 +26,10 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterAutoscalingConfig")
     private @Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
 
+    /**
+     * @return Autoscaling configuration for this cluster.
+     * 
+     */
     public Optional<Output<ClusterAutoscalingConfigArgs>> clusterAutoscalingConfig() {
         return Optional.ofNullable(this.clusterAutoscalingConfig);
     }
@@ -54,11 +58,23 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterAutoscalingConfig Autoscaling configuration for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAutoscalingConfig(@Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig) {
             $.clusterAutoscalingConfig = clusterAutoscalingConfig;
             return this;
         }
 
+        /**
+         * @param clusterAutoscalingConfig Autoscaling configuration for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterAutoscalingConfig(ClusterAutoscalingConfigArgs clusterAutoscalingConfig) {
             return clusterAutoscalingConfig(Output.of(clusterAutoscalingConfig));
         }

@@ -24,158 +24,158 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualMachineResult {
     /**
-     * Gets the name of the corresponding resource in Kubernetes.
+     * @return Gets the name of the corresponding resource in Kubernetes.
      * 
      */
     private final String customResourceName;
     /**
-     * Gets or sets the extended location.
+     * @return Gets or sets the extended location.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * Firmware type
+     * @return Firmware type
      * 
      */
     private final @Nullable String firmwareType;
     /**
-     * Gets or sets the folder path of the vm.
+     * @return Gets or sets the folder path of the vm.
      * 
      */
     private final String folderPath;
     /**
-     * Guest agent status properties.
+     * @return Guest agent status properties.
      * 
      */
     private final @Nullable GuestAgentProfileResponse guestAgentProfile;
     /**
-     * Hardware properties.
+     * @return Hardware properties.
      * 
      */
     private final @Nullable HardwareProfileResponse hardwareProfile;
     /**
-     * Gets or sets the Id.
+     * @return Gets or sets the Id.
      * 
      */
     private final String id;
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * Gets or sets the instance uuid of the vm.
+     * @return Gets or sets the instance uuid of the vm.
      * 
      */
     private final String instanceUuid;
     /**
-     * Gets or sets the inventory Item ID for the virtual machine.
+     * @return Gets or sets the inventory Item ID for the virtual machine.
      * 
      */
     private final @Nullable String inventoryItemId;
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Gets or sets the location.
+     * @return Gets or sets the location.
      * 
      */
     private final String location;
     /**
-     * Gets or sets the vCenter Managed Object name for the virtual machine.
+     * @return Gets or sets the vCenter Managed Object name for the virtual machine.
      * 
      */
     private final String moName;
     /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine.
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine.
      * 
      */
     private final @Nullable String moRefId;
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
      */
     private final String name;
     /**
-     * Network properties.
+     * @return Network properties.
      * 
      */
     private final @Nullable NetworkProfileResponse networkProfile;
     /**
-     * OS properties.
+     * @return OS properties.
      * 
      */
     private final @Nullable OsProfileResponse osProfile;
     /**
-     * Placement properties.
+     * @return Placement properties.
      * 
      */
     private final @Nullable PlacementProfileResponse placementProfile;
     /**
-     * Gets the power state of the virtual machine.
+     * @return Gets the power state of the virtual machine.
      * 
      */
     private final String powerState;
     /**
-     * Gets or sets the provisioning state.
+     * @return Gets or sets the provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will
+     * @return Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will
      * deploy.
      * 
      */
     private final @Nullable String resourcePoolId;
     /**
-     * Gets or sets the SMBIOS UUID of the vm.
+     * @return Gets or sets the SMBIOS UUID of the vm.
      * 
      */
     private final @Nullable String smbiosUuid;
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
      */
     private final List<ResourceStatusResponse> statuses;
     /**
-     * Storage properties.
+     * @return Storage properties.
      * 
      */
     private final @Nullable StorageProfileResponse storageProfile;
     /**
-     * The system data.
+     * @return The system data.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Gets or sets the Resource tags.
+     * @return Gets or sets the Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets or sets the ARM Id of the template resource to deploy the virtual machine.
+     * @return Gets or sets the ARM Id of the template resource to deploy the virtual machine.
      * 
      */
     private final @Nullable String templateId;
     /**
-     * Gets or sets the type of the resource.
+     * @return Gets or sets the type of the resource.
      * 
      */
     private final String type;
     /**
-     * Gets or sets a unique identifier for this resource.
+     * @return Gets or sets a unique identifier for this resource.
      * 
      */
     private final String uuid;
     /**
-     * Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
+     * @return Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
      * 
      */
     private final @Nullable String vCenterId;
     /**
-     * Gets or sets a unique identifier for the vm resource.
+     * @return Gets or sets a unique identifier for the vm resource.
      * 
      */
     private final String vmId;
@@ -247,220 +247,220 @@ public final class GetVirtualMachineResult {
     }
 
     /**
-     * Gets the name of the corresponding resource in Kubernetes.
+     * @return Gets the name of the corresponding resource in Kubernetes.
      * 
-    */
+     */
     public String customResourceName() {
         return this.customResourceName;
     }
     /**
-     * Gets or sets the extended location.
+     * @return Gets or sets the extended location.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * Firmware type
+     * @return Firmware type
      * 
-    */
+     */
     public Optional<String> firmwareType() {
         return Optional.ofNullable(this.firmwareType);
     }
     /**
-     * Gets or sets the folder path of the vm.
+     * @return Gets or sets the folder path of the vm.
      * 
-    */
+     */
     public String folderPath() {
         return this.folderPath;
     }
     /**
-     * Guest agent status properties.
+     * @return Guest agent status properties.
      * 
-    */
+     */
     public Optional<GuestAgentProfileResponse> guestAgentProfile() {
         return Optional.ofNullable(this.guestAgentProfile);
     }
     /**
-     * Hardware properties.
+     * @return Hardware properties.
      * 
-    */
+     */
     public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
-     * Gets or sets the Id.
+     * @return Gets or sets the Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Gets or sets the instance uuid of the vm.
+     * @return Gets or sets the instance uuid of the vm.
      * 
-    */
+     */
     public String instanceUuid() {
         return this.instanceUuid;
     }
     /**
-     * Gets or sets the inventory Item ID for the virtual machine.
+     * @return Gets or sets the inventory Item ID for the virtual machine.
      * 
-    */
+     */
     public Optional<String> inventoryItemId() {
         return Optional.ofNullable(this.inventoryItemId);
     }
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Gets or sets the location.
+     * @return Gets or sets the location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Gets or sets the vCenter Managed Object name for the virtual machine.
+     * @return Gets or sets the vCenter Managed Object name for the virtual machine.
      * 
-    */
+     */
     public String moName() {
         return this.moName;
     }
     /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine.
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine.
      * 
-    */
+     */
     public Optional<String> moRefId() {
         return Optional.ofNullable(this.moRefId);
     }
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network properties.
+     * @return Network properties.
      * 
-    */
+     */
     public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
-     * OS properties.
+     * @return OS properties.
      * 
-    */
+     */
     public Optional<OsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
-     * Placement properties.
+     * @return Placement properties.
      * 
-    */
+     */
     public Optional<PlacementProfileResponse> placementProfile() {
         return Optional.ofNullable(this.placementProfile);
     }
     /**
-     * Gets the power state of the virtual machine.
+     * @return Gets the power state of the virtual machine.
      * 
-    */
+     */
     public String powerState() {
         return this.powerState;
     }
     /**
-     * Gets or sets the provisioning state.
+     * @return Gets or sets the provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will
+     * @return Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will
      * deploy.
      * 
-    */
+     */
     public Optional<String> resourcePoolId() {
         return Optional.ofNullable(this.resourcePoolId);
     }
     /**
-     * Gets or sets the SMBIOS UUID of the vm.
+     * @return Gets or sets the SMBIOS UUID of the vm.
      * 
-    */
+     */
     public Optional<String> smbiosUuid() {
         return Optional.ofNullable(this.smbiosUuid);
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<ResourceStatusResponse> statuses() {
         return this.statuses;
     }
     /**
-     * Storage properties.
+     * @return Storage properties.
      * 
-    */
+     */
     public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
-     * The system data.
+     * @return The system data.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Gets or sets the Resource tags.
+     * @return Gets or sets the Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets or sets the ARM Id of the template resource to deploy the virtual machine.
+     * @return Gets or sets the ARM Id of the template resource to deploy the virtual machine.
      * 
-    */
+     */
     public Optional<String> templateId() {
         return Optional.ofNullable(this.templateId);
     }
     /**
-     * Gets or sets the type of the resource.
+     * @return Gets or sets the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets a unique identifier for this resource.
+     * @return Gets or sets a unique identifier for this resource.
      * 
-    */
+     */
     public String uuid() {
         return this.uuid;
     }
     /**
-     * Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
+     * @return Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
      * 
-    */
+     */
     public Optional<String> vCenterId() {
         return Optional.ofNullable(this.vCenterId);
     }
     /**
-     * Gets or sets a unique identifier for the vm resource.
+     * @return Gets or sets a unique identifier for the vm resource.
      * 
-    */
+     */
     public String vmId() {
         return this.vmId;
     }

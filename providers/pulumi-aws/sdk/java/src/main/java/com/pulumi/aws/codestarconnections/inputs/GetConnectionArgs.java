@@ -22,6 +22,10 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The CodeStar Connection ARN.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -33,6 +37,10 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Map of key-value resource tags to associate with the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The CodeStar Connection ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param tags Map of key-value resource tags to associate with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

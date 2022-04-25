@@ -23,6 +23,10 @@ public final class AssetHierarchy extends com.pulumi.resources.InvokeArgs {
     @Import(name="childAssetId", required=true)
     private String childAssetId;
 
+    /**
+     * @return The ID of the child asset to be associated.
+     * 
+     */
     public String childAssetId() {
         return this.childAssetId;
     }
@@ -34,6 +38,10 @@ public final class AssetHierarchy extends com.pulumi.resources.InvokeArgs {
     @Import(name="logicalId", required=true)
     private String logicalId;
 
+    /**
+     * @return The LogicalID of a hierarchy in the parent asset&#39;s model.
+     * 
+     */
     public String logicalId() {
         return this.logicalId;
     }
@@ -63,11 +71,23 @@ public final class AssetHierarchy extends com.pulumi.resources.InvokeArgs {
             $ = new AssetHierarchy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param childAssetId The ID of the child asset to be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childAssetId(String childAssetId) {
             $.childAssetId = childAssetId;
             return this;
         }
 
+        /**
+         * @param logicalId The LogicalID of a hierarchy in the parent asset&#39;s model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(String logicalId) {
             $.logicalId = logicalId;
             return this;

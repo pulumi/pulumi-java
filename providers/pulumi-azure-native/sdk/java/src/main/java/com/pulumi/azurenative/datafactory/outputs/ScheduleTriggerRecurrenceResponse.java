@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduleTriggerRecurrenceResponse {
     /**
-     * The end time.
+     * @return The end time.
      * 
      */
     private final @Nullable String endTime;
     /**
-     * The frequency.
+     * @return The frequency.
      * 
      */
     private final @Nullable String frequency;
     /**
-     * The interval.
+     * @return The interval.
      * 
      */
     private final @Nullable Integer interval;
     /**
-     * The recurrence schedule.
+     * @return The recurrence schedule.
      * 
      */
     private final @Nullable RecurrenceScheduleResponse schedule;
     /**
-     * The start time.
+     * @return The start time.
      * 
      */
     private final @Nullable String startTime;
     /**
-     * The time zone.
+     * @return The time zone.
      * 
      */
     private final @Nullable String timeZone;
@@ -61,44 +61,44 @@ public final class ScheduleTriggerRecurrenceResponse {
     }
 
     /**
-     * The end time.
+     * @return The end time.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * The frequency.
+     * @return The frequency.
      * 
-    */
+     */
     public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
-     * The interval.
+     * @return The interval.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * The recurrence schedule.
+     * @return The recurrence schedule.
      * 
-    */
+     */
     public Optional<RecurrenceScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * The start time.
+     * @return The start time.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The time zone.
+     * @return The time zone.
      * 
-    */
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }

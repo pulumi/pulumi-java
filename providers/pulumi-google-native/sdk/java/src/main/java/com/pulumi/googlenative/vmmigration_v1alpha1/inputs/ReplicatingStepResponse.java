@@ -23,6 +23,10 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="lastThirtyMinutesAverageBytesPerSecond", required=true)
     private String lastThirtyMinutesAverageBytesPerSecond;
 
+    /**
+     * @return The source disks replication rate for the last 30 minutes in bytes per second.
+     * 
+     */
     public String lastThirtyMinutesAverageBytesPerSecond() {
         return this.lastThirtyMinutesAverageBytesPerSecond;
     }
@@ -34,6 +38,10 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="lastTwoMinutesAverageBytesPerSecond", required=true)
     private String lastTwoMinutesAverageBytesPerSecond;
 
+    /**
+     * @return The source disks replication rate for the last 2 minutes in bytes per second.
+     * 
+     */
     public String lastTwoMinutesAverageBytesPerSecond() {
         return this.lastTwoMinutesAverageBytesPerSecond;
     }
@@ -45,6 +53,10 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="replicatedBytes", required=true)
     private String replicatedBytes;
 
+    /**
+     * @return Replicated bytes in the step.
+     * 
+     */
     public String replicatedBytes() {
         return this.replicatedBytes;
     }
@@ -56,6 +68,10 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="totalBytes", required=true)
     private String totalBytes;
 
+    /**
+     * @return Total bytes to be handled in the step.
+     * 
+     */
     public String totalBytes() {
         return this.totalBytes;
     }
@@ -87,21 +103,45 @@ public final class ReplicatingStepResponse extends com.pulumi.resources.InvokeAr
             $ = new ReplicatingStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastThirtyMinutesAverageBytesPerSecond The source disks replication rate for the last 30 minutes in bytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastThirtyMinutesAverageBytesPerSecond(String lastThirtyMinutesAverageBytesPerSecond) {
             $.lastThirtyMinutesAverageBytesPerSecond = lastThirtyMinutesAverageBytesPerSecond;
             return this;
         }
 
+        /**
+         * @param lastTwoMinutesAverageBytesPerSecond The source disks replication rate for the last 2 minutes in bytes per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTwoMinutesAverageBytesPerSecond(String lastTwoMinutesAverageBytesPerSecond) {
             $.lastTwoMinutesAverageBytesPerSecond = lastTwoMinutesAverageBytesPerSecond;
             return this;
         }
 
+        /**
+         * @param replicatedBytes Replicated bytes in the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicatedBytes(String replicatedBytes) {
             $.replicatedBytes = replicatedBytes;
             return this;
         }
 
+        /**
+         * @param totalBytes Total bytes to be handled in the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalBytes(String totalBytes) {
             $.totalBytes = totalBytes;
             return this;

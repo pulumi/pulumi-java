@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The creation time of the resource within the given system.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
     @Import(name="expireTime", required=true)
     private String expireTime;
 
+    /**
+     * @return The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.
+     * 
+     */
     public String expireTime() {
         return this.expireTime;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The last-modified time of the resource within the given system.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
             $ = new GoogleCloudDatacatalogV1beta1SystemTimestampsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The creation time of the resource within the given system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param expireTime The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param updateTime The last-modified time of the resource within the given system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

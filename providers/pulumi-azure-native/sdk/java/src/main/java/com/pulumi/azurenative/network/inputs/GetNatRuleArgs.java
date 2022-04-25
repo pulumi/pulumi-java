@@ -19,6 +19,10 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayName", required=true)
     private String gatewayName;
 
+    /**
+     * @return The name of the gateway.
+     * 
+     */
     public String gatewayName() {
         return this.gatewayName;
     }
@@ -30,6 +34,10 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="natRuleName", required=true)
     private String natRuleName;
 
+    /**
+     * @return The name of the nat rule.
+     * 
+     */
     public String natRuleName() {
         return this.natRuleName;
     }
@@ -41,6 +49,10 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the VpnGateway.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayName The name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param natRuleName The name of the nat rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natRuleName(String natRuleName) {
             $.natRuleName = natRuleName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

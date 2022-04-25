@@ -26,6 +26,10 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="approveAfterDays")
     private @Nullable Output<Integer> approveAfterDays;
 
+    /**
+     * @return The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
+     * 
+     */
     public Optional<Output<Integer>> approveAfterDays() {
         return Optional.ofNullable(this.approveAfterDays);
     }
@@ -37,6 +41,10 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="approveUntilDate")
     private @Nullable Output<String> approveUntilDate;
 
+    /**
+     * @return The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
+     * 
+     */
     public Optional<Output<String>> approveUntilDate() {
         return Optional.ofNullable(this.approveUntilDate);
     }
@@ -48,6 +56,10 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="complianceLevel")
     private @Nullable Output<String> complianceLevel;
 
+    /**
+     * @return Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
+     * 
+     */
     public Optional<Output<String>> complianceLevel() {
         return Optional.ofNullable(this.complianceLevel);
     }
@@ -59,6 +71,10 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="enableNonSecurity")
     private @Nullable Output<Boolean> enableNonSecurity;
 
+    /**
+     * @return Boolean enabling the application of non-security updates. The default value is &#39;false&#39;. Valid for Linux instances only.
+     * 
+     */
     public Optional<Output<Boolean>> enableNonSecurity() {
         return Optional.ofNullable(this.enableNonSecurity);
     }
@@ -70,6 +86,10 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
     @Import(name="patchFilters", required=true)
     private Output<List<PatchBaselineApprovalRulePatchFilterArgs>> patchFilters;
 
+    /**
+     * @return The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
+     * 
+     */
     public Output<List<PatchBaselineApprovalRulePatchFilterArgs>> patchFilters() {
         return this.patchFilters;
     }
@@ -102,51 +122,117 @@ public final class PatchBaselineApprovalRuleArgs extends com.pulumi.resources.Re
             $ = new PatchBaselineApprovalRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approveAfterDays The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
+         * 
+         * @return builder
+         * 
+         */
         public Builder approveAfterDays(@Nullable Output<Integer> approveAfterDays) {
             $.approveAfterDays = approveAfterDays;
             return this;
         }
 
+        /**
+         * @param approveAfterDays The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
+         * 
+         * @return builder
+         * 
+         */
         public Builder approveAfterDays(Integer approveAfterDays) {
             return approveAfterDays(Output.of(approveAfterDays));
         }
 
+        /**
+         * @param approveUntilDate The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
+         * 
+         * @return builder
+         * 
+         */
         public Builder approveUntilDate(@Nullable Output<String> approveUntilDate) {
             $.approveUntilDate = approveUntilDate;
             return this;
         }
 
+        /**
+         * @param approveUntilDate The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
+         * 
+         * @return builder
+         * 
+         */
         public Builder approveUntilDate(String approveUntilDate) {
             return approveUntilDate(Output.of(approveUntilDate));
         }
 
+        /**
+         * @param complianceLevel Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceLevel(@Nullable Output<String> complianceLevel) {
             $.complianceLevel = complianceLevel;
             return this;
         }
 
+        /**
+         * @param complianceLevel Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceLevel(String complianceLevel) {
             return complianceLevel(Output.of(complianceLevel));
         }
 
+        /**
+         * @param enableNonSecurity Boolean enabling the application of non-security updates. The default value is &#39;false&#39;. Valid for Linux instances only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNonSecurity(@Nullable Output<Boolean> enableNonSecurity) {
             $.enableNonSecurity = enableNonSecurity;
             return this;
         }
 
+        /**
+         * @param enableNonSecurity Boolean enabling the application of non-security updates. The default value is &#39;false&#39;. Valid for Linux instances only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNonSecurity(Boolean enableNonSecurity) {
             return enableNonSecurity(Output.of(enableNonSecurity));
         }
 
+        /**
+         * @param patchFilters The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchFilters(Output<List<PatchBaselineApprovalRulePatchFilterArgs>> patchFilters) {
             $.patchFilters = patchFilters;
             return this;
         }
 
+        /**
+         * @param patchFilters The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchFilters(List<PatchBaselineApprovalRulePatchFilterArgs> patchFilters) {
             return patchFilters(Output.of(patchFilters));
         }
 
+        /**
+         * @param patchFilters The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchFilters(PatchBaselineApprovalRulePatchFilterArgs... patchFilters) {
             return patchFilters(List.of(patchFilters));
         }

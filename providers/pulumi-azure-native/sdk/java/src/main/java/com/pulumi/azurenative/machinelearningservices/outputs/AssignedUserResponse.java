@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AssignedUserResponse {
     /**
-     * User’s AAD Object Id.
+     * @return User’s AAD Object Id.
      * 
      */
     private final String objectId;
     /**
-     * User’s AAD Tenant Id.
+     * @return User’s AAD Tenant Id.
      * 
      */
     private final String tenantId;
@@ -29,16 +29,16 @@ public final class AssignedUserResponse {
     }
 
     /**
-     * User’s AAD Object Id.
+     * @return User’s AAD Object Id.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * User’s AAD Tenant Id.
+     * @return User’s AAD Tenant Id.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

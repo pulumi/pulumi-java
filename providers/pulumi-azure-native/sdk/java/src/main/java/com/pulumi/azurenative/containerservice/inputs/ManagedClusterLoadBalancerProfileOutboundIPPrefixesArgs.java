@@ -27,6 +27,10 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs exten
     @Import(name="publicIPPrefixes")
     private @Nullable Output<List<ResourceReferenceArgs>> publicIPPrefixes;
 
+    /**
+     * @return A list of public IP prefix resources.
+     * 
+     */
     public Optional<Output<List<ResourceReferenceArgs>>> publicIPPrefixes() {
         return Optional.ofNullable(this.publicIPPrefixes);
     }
@@ -55,15 +59,33 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs exten
             $ = new ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicIPPrefixes A list of public IP prefix resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefixes(@Nullable Output<List<ResourceReferenceArgs>> publicIPPrefixes) {
             $.publicIPPrefixes = publicIPPrefixes;
             return this;
         }
 
+        /**
+         * @param publicIPPrefixes A list of public IP prefix resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefixes(List<ResourceReferenceArgs> publicIPPrefixes) {
             return publicIPPrefixes(Output.of(publicIPPrefixes));
         }
 
+        /**
+         * @param publicIPPrefixes A list of public IP prefix resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefixes(ResourceReferenceArgs... publicIPPrefixes) {
             return publicIPPrefixes(List.of(publicIPPrefixes));
         }

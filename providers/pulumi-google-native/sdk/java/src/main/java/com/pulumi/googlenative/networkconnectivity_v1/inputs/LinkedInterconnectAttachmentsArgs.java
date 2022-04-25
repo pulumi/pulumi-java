@@ -28,6 +28,10 @@ public final class LinkedInterconnectAttachmentsArgs extends com.pulumi.resource
     @Import(name="siteToSiteDataTransfer")
     private @Nullable Output<Boolean> siteToSiteDataTransfer;
 
+    /**
+     * @return A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+     * 
+     */
     public Optional<Output<Boolean>> siteToSiteDataTransfer() {
         return Optional.ofNullable(this.siteToSiteDataTransfer);
     }
@@ -39,6 +43,10 @@ public final class LinkedInterconnectAttachmentsArgs extends com.pulumi.resource
     @Import(name="uris")
     private @Nullable Output<List<String>> uris;
 
+    /**
+     * @return The URIs of linked interconnect attachment resources
+     * 
+     */
     public Optional<Output<List<String>>> uris() {
         return Optional.ofNullable(this.uris);
     }
@@ -68,24 +76,54 @@ public final class LinkedInterconnectAttachmentsArgs extends com.pulumi.resource
             $ = new LinkedInterconnectAttachmentsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(@Nullable Output<Boolean> siteToSiteDataTransfer) {
             $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
 
+        /**
+         * @param siteToSiteDataTransfer A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             return siteToSiteDataTransfer(Output.of(siteToSiteDataTransfer));
         }
 
+        /**
+         * @param uris The URIs of linked interconnect attachment resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(@Nullable Output<List<String>> uris) {
             $.uris = uris;
             return this;
         }
 
+        /**
+         * @param uris The URIs of linked interconnect attachment resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(List<String> uris) {
             return uris(Output.of(uris));
         }
 
+        /**
+         * @param uris The URIs of linked interconnect attachment resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(String... uris) {
             return uris(List.of(uris));
         }

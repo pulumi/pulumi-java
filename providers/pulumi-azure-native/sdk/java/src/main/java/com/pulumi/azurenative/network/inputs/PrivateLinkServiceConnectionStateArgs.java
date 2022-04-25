@@ -26,6 +26,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="actionsRequired")
     private @Nullable Output<String> actionsRequired;
 
+    /**
+     * @return A message indicating if changes on the service provider require any updates on the consumer.
+     * 
+     */
     public Optional<Output<String>> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -37,6 +41,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The reason for approval/rejection of the connection.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,29 +90,65 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
             $ = new PrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param actionsRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             return actionsRequired(Output.of(actionsRequired));
         }
 
+        /**
+         * @param description The reason for approval/rejection of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The reason for approval/rejection of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

@@ -23,6 +23,10 @@ public final class CrawlerJdbcTargetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectionName", required=true)
     private Output<String> connectionName;
 
+    /**
+     * @return The name of the connection to use to connect to the Delta table target.
+     * 
+     */
     public Output<String> connectionName() {
         return this.connectionName;
     }
@@ -34,6 +38,10 @@ public final class CrawlerJdbcTargetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="exclusions")
     private @Nullable Output<List<String>> exclusions;
 
+    /**
+     * @return A list of glob patterns used to exclude from the crawl.
+     * 
+     */
     public Optional<Output<List<String>>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
@@ -45,6 +53,10 @@ public final class CrawlerJdbcTargetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The path of the Amazon DocumentDB or MongoDB target (database/collection).
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -75,33 +87,75 @@ public final class CrawlerJdbcTargetArgs extends com.pulumi.resources.ResourceAr
             $ = new CrawlerJdbcTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName The name of the connection to use to connect to the Delta table target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName The name of the connection to use to connect to the Delta table target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param exclusions A list of glob patterns used to exclude from the crawl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(@Nullable Output<List<String>> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
 
+        /**
+         * @param exclusions A list of glob patterns used to exclude from the crawl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(List<String> exclusions) {
             return exclusions(Output.of(exclusions));
         }
 
+        /**
+         * @param exclusions A list of glob patterns used to exclude from the crawl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(String... exclusions) {
             return exclusions(List.of(exclusions));
         }
 
+        /**
+         * @param path The path of the Amazon DocumentDB or MongoDB target (database/collection).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path of the Amazon DocumentDB or MongoDB target (database/collection).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

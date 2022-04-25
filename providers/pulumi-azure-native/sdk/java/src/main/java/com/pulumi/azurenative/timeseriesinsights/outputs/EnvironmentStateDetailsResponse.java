@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvironmentStateDetailsResponse {
     /**
-     * Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
+     * @return Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
      * 
      */
     private final @Nullable String code;
     /**
-     * A message that describes the state in detail.
+     * @return A message that describes the state in detail.
      * 
      */
     private final @Nullable String message;
@@ -31,16 +31,16 @@ public final class EnvironmentStateDetailsResponse {
     }
 
     /**
-     * Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
+     * @return Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * A message that describes the state in detail.
+     * @return A message that describes the state in detail.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

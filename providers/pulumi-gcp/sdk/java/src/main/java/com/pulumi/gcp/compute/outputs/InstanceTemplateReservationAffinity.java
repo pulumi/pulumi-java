@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceTemplateReservationAffinity {
     /**
-     * Specifies the label selector for the reservation to use..
+     * @return Specifies the label selector for the reservation to use..
      * Structure is documented below.
      * 
      */
     private final @Nullable InstanceTemplateReservationAffinitySpecificReservation specificReservation;
     /**
-     * The type of reservation from which this instance can consume resources.
+     * @return The type of reservation from which this instance can consume resources.
      * 
      */
     private final String type;
@@ -33,17 +33,17 @@ public final class InstanceTemplateReservationAffinity {
     }
 
     /**
-     * Specifies the label selector for the reservation to use..
+     * @return Specifies the label selector for the reservation to use..
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<InstanceTemplateReservationAffinitySpecificReservation> specificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
     /**
-     * The type of reservation from which this instance can consume resources.
+     * @return The type of reservation from which this instance can consume resources.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

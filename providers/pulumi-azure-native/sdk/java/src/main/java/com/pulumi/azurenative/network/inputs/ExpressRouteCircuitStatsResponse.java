@@ -25,6 +25,10 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
     @Import(name="primarybytesIn")
     private @Nullable Double primarybytesIn;
 
+    /**
+     * @return The Primary BytesIn of the peering.
+     * 
+     */
     public Optional<Double> primarybytesIn() {
         return Optional.ofNullable(this.primarybytesIn);
     }
@@ -36,6 +40,10 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
     @Import(name="primarybytesOut")
     private @Nullable Double primarybytesOut;
 
+    /**
+     * @return The primary BytesOut of the peering.
+     * 
+     */
     public Optional<Double> primarybytesOut() {
         return Optional.ofNullable(this.primarybytesOut);
     }
@@ -47,6 +55,10 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
     @Import(name="secondarybytesIn")
     private @Nullable Double secondarybytesIn;
 
+    /**
+     * @return The secondary BytesIn of the peering.
+     * 
+     */
     public Optional<Double> secondarybytesIn() {
         return Optional.ofNullable(this.secondarybytesIn);
     }
@@ -58,6 +70,10 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
     @Import(name="secondarybytesOut")
     private @Nullable Double secondarybytesOut;
 
+    /**
+     * @return The secondary BytesOut of the peering.
+     * 
+     */
     public Optional<Double> secondarybytesOut() {
         return Optional.ofNullable(this.secondarybytesOut);
     }
@@ -89,21 +105,45 @@ public final class ExpressRouteCircuitStatsResponse extends com.pulumi.resources
             $ = new ExpressRouteCircuitStatsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primarybytesIn The Primary BytesIn of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primarybytesIn(@Nullable Double primarybytesIn) {
             $.primarybytesIn = primarybytesIn;
             return this;
         }
 
+        /**
+         * @param primarybytesOut The primary BytesOut of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primarybytesOut(@Nullable Double primarybytesOut) {
             $.primarybytesOut = primarybytesOut;
             return this;
         }
 
+        /**
+         * @param secondarybytesIn The secondary BytesIn of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarybytesIn(@Nullable Double secondarybytesIn) {
             $.secondarybytesIn = secondarybytesIn;
             return this;
         }
 
+        /**
+         * @param secondarybytesOut The secondary BytesOut of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarybytesOut(@Nullable Double secondarybytesOut) {
             $.secondarybytesOut = secondarybytesOut;
             return this;

@@ -33,6 +33,10 @@ public final class GetListenerDefaultActionRedirect extends com.pulumi.resources
     @Import(name="port", required=true)
     private String port;
 
+    /**
+     * @return Port of the listener. Required if `arn` is not set.
+     * 
+     */
     public String port() {
         return this.port;
     }
@@ -97,6 +101,12 @@ public final class GetListenerDefaultActionRedirect extends com.pulumi.resources
             return this;
         }
 
+        /**
+         * @param port Port of the listener. Required if `arn` is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             $.port = port;
             return this;

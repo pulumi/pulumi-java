@@ -37,6 +37,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -50,6 +54,12 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
     @Import(name="capacity")
     private @Nullable Output<String> capacity;
 
+    /**
+     * @return Capacity is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
+     * 
+     * The semantic is currently (CSI spec 1.2) defined as: The available capacity, in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable and treated like zero capacity.
+     * 
+     */
     public Optional<Output<String>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -61,6 +71,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -74,6 +88,12 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
     @Import(name="maximumVolumeSize")
     private @Nullable Output<String> maximumVolumeSize;
 
+    /**
+     * @return MaximumVolumeSize is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
+     * 
+     * This is defined since CSI spec 1.4.0 as the largest size that may be used in a CreateVolumeRequest.capacity_range.required_bytes field to create a volume with the same parameters as those in GetCapacityRequest. The corresponding value in the Kubernetes API is ResourceRequirements.Requests in a volume claim.
+     * 
+     */
     public Optional<Output<String>> maximumVolumeSize() {
         return Optional.ofNullable(this.maximumVolumeSize);
     }
@@ -89,6 +109,14 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
     @Import(name="metadata")
     private @Nullable Output<ObjectMetaArgs> metadata;
 
+    /**
+     * @return Standard object&#39;s metadata. The name has no particular meaning. It must be be a DNS subdomain (dots allowed, 253 characters). To ensure that there are no conflicts with other CSI drivers on the cluster, the recommendation is to use csisc-&lt;uuid&gt;, a generated name, or a reverse-domain name which ends with the unique CSI driver name.
+     * 
+     * Objects are namespaced.
+     * 
+     * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Optional<Output<ObjectMetaArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -100,6 +128,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodeTopology")
     private @Nullable Output<LabelSelectorArgs> nodeTopology;
 
+    /**
+     * @return NodeTopology defines which nodes have access to the storage for which capacity was reported. If not set, the storage is not accessible from any node in the cluster. If empty, the storage is accessible from all nodes. This field is immutable.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> nodeTopology() {
         return Optional.ofNullable(this.nodeTopology);
     }
@@ -111,6 +143,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
     @Import(name="storageClassName", required=true)
     private Output<String> storageClassName;
 
+    /**
+     * @return The name of the StorageClass that the reported capacity applies to. It must meet the same requirements as the name of a StorageClass object (non-empty, DNS subdomain). If that object no longer exists, the CSIStorageCapacity object is obsolete and should be removed by its creator. This field is immutable.
+     * 
+     */
     public Output<String> storageClassName() {
         return this.storageClassName;
     }
@@ -145,65 +181,165 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
             $ = new CSIStorageCapacityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param capacity Capacity is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
+         * 
+         * The semantic is currently (CSI spec 1.2) defined as: The available capacity, in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable and treated like zero capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<String> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Capacity is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
+         * 
+         * The semantic is currently (CSI spec 1.2) defined as: The available capacity, in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable and treated like zero capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(String capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param maximumVolumeSize MaximumVolumeSize is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
+         * 
+         * This is defined since CSI spec 1.4.0 as the largest size that may be used in a CreateVolumeRequest.capacity_range.required_bytes field to create a volume with the same parameters as those in GetCapacityRequest. The corresponding value in the Kubernetes API is ResourceRequirements.Requests in a volume claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumVolumeSize(@Nullable Output<String> maximumVolumeSize) {
             $.maximumVolumeSize = maximumVolumeSize;
             return this;
         }
 
+        /**
+         * @param maximumVolumeSize MaximumVolumeSize is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
+         * 
+         * This is defined since CSI spec 1.4.0 as the largest size that may be used in a CreateVolumeRequest.capacity_range.required_bytes field to create a volume with the same parameters as those in GetCapacityRequest. The corresponding value in the Kubernetes API is ResourceRequirements.Requests in a volume claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumVolumeSize(String maximumVolumeSize) {
             return maximumVolumeSize(Output.of(maximumVolumeSize));
         }
 
+        /**
+         * @param metadata Standard object&#39;s metadata. The name has no particular meaning. It must be be a DNS subdomain (dots allowed, 253 characters). To ensure that there are no conflicts with other CSI drivers on the cluster, the recommendation is to use csisc-&lt;uuid&gt;, a generated name, or a reverse-domain name which ends with the unique CSI driver name.
+         * 
+         * Objects are namespaced.
+         * 
+         * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Standard object&#39;s metadata. The name has no particular meaning. It must be be a DNS subdomain (dots allowed, 253 characters). To ensure that there are no conflicts with other CSI drivers on the cluster, the recommendation is to use csisc-&lt;uuid&gt;, a generated name, or a reverse-domain name which ends with the unique CSI driver name.
+         * 
+         * Objects are namespaced.
+         * 
+         * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ObjectMetaArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param nodeTopology NodeTopology defines which nodes have access to the storage for which capacity was reported. If not set, the storage is not accessible from any node in the cluster. If empty, the storage is accessible from all nodes. This field is immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTopology(@Nullable Output<LabelSelectorArgs> nodeTopology) {
             $.nodeTopology = nodeTopology;
             return this;
         }
 
+        /**
+         * @param nodeTopology NodeTopology defines which nodes have access to the storage for which capacity was reported. If not set, the storage is not accessible from any node in the cluster. If empty, the storage is accessible from all nodes. This field is immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTopology(LabelSelectorArgs nodeTopology) {
             return nodeTopology(Output.of(nodeTopology));
         }
 
+        /**
+         * @param storageClassName The name of the StorageClass that the reported capacity applies to. It must meet the same requirements as the name of a StorageClass object (non-empty, DNS subdomain). If that object no longer exists, the CSIStorageCapacity object is obsolete and should be removed by its creator. This field is immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassName(Output<String> storageClassName) {
             $.storageClassName = storageClassName;
             return this;
         }
 
+        /**
+         * @param storageClassName The name of the StorageClass that the reported capacity applies to. It must meet the same requirements as the name of a StorageClass object (non-empty, DNS subdomain). If that object no longer exists, the CSIStorageCapacity object is obsolete and should be removed by its creator. This field is immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassName(String storageClassName) {
             return storageClassName(Output.of(storageClassName));
         }

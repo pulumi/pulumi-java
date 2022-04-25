@@ -24,6 +24,10 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the ADP account
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataPoolName")
     private @Nullable Output<String> dataPoolName;
 
+    /**
+     * @return The name of the Data Pool
+     * 
+     */
     public Optional<Output<String>> dataPoolName() {
         return Optional.ofNullable(this.dataPoolName);
     }
@@ -46,6 +54,10 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locations", required=true)
     private Output<List<DataPoolLocationArgs>> locations;
 
+    /**
+     * @return Gets or sets the collection of locations where Data Pool resources should be created
+     * 
+     */
     public Output<List<DataPoolLocationArgs>> locations() {
         return this.locations;
     }
@@ -57,6 +69,10 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,42 +104,96 @@ public final class DataPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the ADP account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the ADP account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dataPoolName The name of the Data Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPoolName(@Nullable Output<String> dataPoolName) {
             $.dataPoolName = dataPoolName;
             return this;
         }
 
+        /**
+         * @param dataPoolName The name of the Data Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPoolName(String dataPoolName) {
             return dataPoolName(Output.of(dataPoolName));
         }
 
+        /**
+         * @param locations Gets or sets the collection of locations where Data Pool resources should be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(Output<List<DataPoolLocationArgs>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations Gets or sets the collection of locations where Data Pool resources should be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<DataPoolLocationArgs> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations Gets or sets the collection of locations where Data Pool resources should be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(DataPoolLocationArgs... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

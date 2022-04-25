@@ -24,6 +24,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return Optional arguments to pass to the source during execution.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -35,6 +39,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
     @Import(name="file")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs> file;
 
+    /**
+     * @return A remote or local source.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -46,6 +54,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
     @Import(name="interpreter", required=true)
     private Output<String> interpreter;
 
+    /**
+     * @return Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
+     * 
+     */
     public Output<String> interpreter() {
         return this.interpreter;
     }
@@ -57,6 +69,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
     @Import(name="outputFilePath")
     private @Nullable Output<String> outputFilePath;
 
+    /**
+     * @return Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+     * 
+     */
     public Optional<Output<String>> outputFilePath() {
         return Optional.ofNullable(this.outputFilePath);
     }
@@ -68,6 +84,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
     @Import(name="script")
     private @Nullable Output<String> script;
 
+    /**
+     * @return An inline script. The size of the script is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> script() {
         return Optional.ofNullable(this.script);
     }
@@ -100,51 +120,117 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateAr
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Optional arguments to pass to the source during execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Optional arguments to pass to the source during execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args Optional arguments to pass to the source during execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param file A remote or local source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file A remote or local source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param interpreter Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(Output<String> interpreter) {
             $.interpreter = interpreter;
             return this;
         }
 
+        /**
+         * @param interpreter Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(String interpreter) {
             return interpreter(Output.of(interpreter));
         }
 
+        /**
+         * @param outputFilePath Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFilePath(@Nullable Output<String> outputFilePath) {
             $.outputFilePath = outputFilePath;
             return this;
         }
 
+        /**
+         * @param outputFilePath Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFilePath(String outputFilePath) {
             return outputFilePath(Output.of(outputFilePath));
         }
 
+        /**
+         * @param script An inline script. The size of the script is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script An inline script. The size of the script is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }

@@ -26,6 +26,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The plan name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="product", required=true)
     private Output<String> product;
 
+    /**
+     * @return The product code.
+     * 
+     */
     public Output<String> product() {
         return this.product;
     }
@@ -48,6 +56,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="promotionCode")
     private @Nullable Output<String> promotionCode;
 
+    /**
+     * @return The promotion code.
+     * 
+     */
     public Optional<Output<String>> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -59,6 +71,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publisher", required=true)
     private Output<String> publisher;
 
+    /**
+     * @return The publisher ID.
+     * 
+     */
     public Output<String> publisher() {
         return this.publisher;
     }
@@ -70,6 +86,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return The plan&#39;s version.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -102,47 +122,107 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The plan name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The plan name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param product The product code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(Output<String> product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param product The product code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(String product) {
             return product(Output.of(product));
         }
 
+        /**
+         * @param promotionCode The promotion code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param promotionCode The promotion code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(String promotionCode) {
             return promotionCode(Output.of(promotionCode));
         }
 
+        /**
+         * @param publisher The publisher ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The publisher ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param version The plan&#39;s version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The plan&#39;s version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

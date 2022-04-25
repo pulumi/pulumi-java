@@ -29,6 +29,10 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
     @Import(name="computeProperties")
     private @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
+    /**
+     * @return The compute resource for managed integration runtime.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeComputePropertiesArgs>> computeProperties() {
         return Optional.ofNullable(this.computeProperties);
     }
@@ -40,6 +44,10 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Integration runtime description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
     @Import(name="ssisProperties")
     private @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
+    /**
+     * @return SSIS properties for managed integration runtime.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeSsisPropertiesArgs>> ssisProperties() {
         return Optional.ofNullable(this.ssisProperties);
     }
@@ -63,6 +75,11 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of integration runtime.
+     * Expected value is &#39;Managed&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -94,38 +111,88 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
             $ = new ManagedIntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeProperties The compute resource for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeProperties(@Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties) {
             $.computeProperties = computeProperties;
             return this;
         }
 
+        /**
+         * @param computeProperties The compute resource for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeProperties(IntegrationRuntimeComputePropertiesArgs computeProperties) {
             return computeProperties(Output.of(computeProperties));
         }
 
+        /**
+         * @param description Integration runtime description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Integration runtime description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ssisProperties SSIS properties for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssisProperties(@Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
             $.ssisProperties = ssisProperties;
             return this;
         }
 
+        /**
+         * @param ssisProperties SSIS properties for managed integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssisProperties(IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
             return ssisProperties(Output.of(ssisProperties));
         }
 
+        /**
+         * @param type The type of integration runtime.
+         * Expected value is &#39;Managed&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of integration runtime.
+         * Expected value is &#39;Managed&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

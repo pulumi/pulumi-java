@@ -20,6 +20,10 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdArgs extends co
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return Number of HTTP(S) requests for calculating the threshold.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -31,6 +35,10 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdArgs extends co
     @Import(name="intervalSec", required=true)
     private Output<Integer> intervalSec;
 
+    /**
+     * @return Interval over which the threshold is computed.
+     * 
+     */
     public Output<Integer> intervalSec() {
         return this.intervalSec;
     }
@@ -60,20 +68,44 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdArgs extends co
             $ = new SecurityPolicyRuleRateLimitOptionsBanThresholdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Number of HTTP(S) requests for calculating the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Number of HTTP(S) requests for calculating the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param intervalSec Interval over which the threshold is computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalSec(Output<Integer> intervalSec) {
             $.intervalSec = intervalSec;
             return this;
         }
 
+        /**
+         * @param intervalSec Interval over which the threshold is computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalSec(Integer intervalSec) {
             return intervalSec(Output.of(intervalSec));
         }

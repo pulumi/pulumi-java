@@ -24,6 +24,10 @@ public final class WebServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class WebServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<WebServicePropertiesForGraphArgs> properties;
 
+    /**
+     * @return Contains the property payload that describes the web service.
+     * 
+     */
     public Output<WebServicePropertiesForGraphArgs> properties() {
         return this.properties;
     }
@@ -46,6 +54,10 @@ public final class WebServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which the web service is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class WebServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class WebServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webServiceName")
     private @Nullable Output<String> webServiceName;
 
+    /**
+     * @return The name of the web service.
+     * 
+     */
     public Optional<Output<String>> webServiceName() {
         return Optional.ofNullable(this.webServiceName);
     }
@@ -100,47 +120,107 @@ public final class WebServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Contains the property payload that describes the web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<WebServicePropertiesForGraphArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Contains the property payload that describes the web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(WebServicePropertiesForGraphArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which the web service is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which the web service is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param webServiceName The name of the web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServiceName(@Nullable Output<String> webServiceName) {
             $.webServiceName = webServiceName;
             return this;
         }
 
+        /**
+         * @param webServiceName The name of the web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServiceName(String webServiceName) {
             return webServiceName(Output.of(webServiceName));
         }

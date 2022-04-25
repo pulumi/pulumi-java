@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectToSourceSqlServerTaskInputResponse {
     /**
-     * Permission group for validations
+     * @return Permission group for validations
      * 
      */
     private final @Nullable String checkPermissionsGroup;
     /**
-     * Flag for whether to collect agent jobs from source server.
+     * @return Flag for whether to collect agent jobs from source server.
      * 
      */
     private final @Nullable Boolean collectAgentJobs;
     /**
-     * Flag for whether to collect logins from source server.
+     * @return Flag for whether to collect logins from source server.
      * 
      */
     private final @Nullable Boolean collectLogins;
     /**
-     * Connection information for Source SQL Server
+     * @return Connection information for Source SQL Server
      * 
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
@@ -47,30 +47,30 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
     }
 
     /**
-     * Permission group for validations
+     * @return Permission group for validations
      * 
-    */
+     */
     public Optional<String> checkPermissionsGroup() {
         return Optional.ofNullable(this.checkPermissionsGroup);
     }
     /**
-     * Flag for whether to collect agent jobs from source server.
+     * @return Flag for whether to collect agent jobs from source server.
      * 
-    */
+     */
     public Optional<Boolean> collectAgentJobs() {
         return Optional.ofNullable(this.collectAgentJobs);
     }
     /**
-     * Flag for whether to collect logins from source server.
+     * @return Flag for whether to collect logins from source server.
      * 
-    */
+     */
     public Optional<Boolean> collectLogins() {
         return Optional.ofNullable(this.collectLogins);
     }
     /**
-     * Connection information for Source SQL Server
+     * @return Connection information for Source SQL Server
      * 
-    */
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }

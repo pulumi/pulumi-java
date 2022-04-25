@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
     /**
-     * Optional. One or more suggestions to show to the user.
+     * @return Optional. One or more suggestions to show to the user.
      * 
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
     /**
-     * Text sent and displayed to the user.
+     * @return Text sent and displayed to the user.
      * 
      */
     private final String text;
@@ -31,16 +31,16 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
     }
 
     /**
-     * Optional. One or more suggestions to show to the user.
+     * @return Optional. One or more suggestions to show to the user.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion() {
         return this.rbmSuggestion;
     }
     /**
-     * Text sent and displayed to the user.
+     * @return Text sent and displayed to the user.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

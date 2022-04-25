@@ -28,6 +28,10 @@ public final class ThemeDataColorPalette extends com.pulumi.resources.InvokeArgs
     @Import(name="colors")
     private @Nullable List<String> colors;
 
+    /**
+     * @return &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
+     * 
+     */
     public Optional<List<String>> colors() {
         return Optional.ofNullable(this.colors);
     }
@@ -40,6 +44,11 @@ public final class ThemeDataColorPalette extends com.pulumi.resources.InvokeArgs
     @Import(name="emptyFillColor")
     private @Nullable String emptyFillColor;
 
+    /**
+     * @return &lt;p&gt;The hexadecimal code of a color that applies to charts where a lack of data is
+     *             highlighted.&lt;/p&gt;
+     * 
+     */
     public Optional<String> emptyFillColor() {
         return Optional.ofNullable(this.emptyFillColor);
     }
@@ -51,6 +60,10 @@ public final class ThemeDataColorPalette extends com.pulumi.resources.InvokeArgs
     @Import(name="minMaxGradient")
     private @Nullable List<String> minMaxGradient;
 
+    /**
+     * @return &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
+     * 
+     */
     public Optional<List<String>> minMaxGradient() {
         return Optional.ofNullable(this.minMaxGradient);
     }
@@ -81,25 +94,56 @@ public final class ThemeDataColorPalette extends com.pulumi.resources.InvokeArgs
             $ = new ThemeDataColorPalette(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param colors &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder colors(@Nullable List<String> colors) {
             $.colors = colors;
             return this;
         }
 
+        /**
+         * @param colors &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder colors(String... colors) {
             return colors(List.of(colors));
         }
 
+        /**
+         * @param emptyFillColor &lt;p&gt;The hexadecimal code of a color that applies to charts where a lack of data is
+         *             highlighted.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder emptyFillColor(@Nullable String emptyFillColor) {
             $.emptyFillColor = emptyFillColor;
             return this;
         }
 
+        /**
+         * @param minMaxGradient &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMaxGradient(@Nullable List<String> minMaxGradient) {
             $.minMaxGradient = minMaxGradient;
             return this;
         }
 
+        /**
+         * @param minMaxGradient &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMaxGradient(String... minMaxGradient) {
             return minMaxGradient(List.of(minMaxGradient));
         }

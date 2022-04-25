@@ -24,6 +24,10 @@ public final class FHIRDatastorePreloadDataConfigArgs extends com.pulumi.resourc
     @Import(name="preloadDataType", required=true)
     private Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType;
 
+    /**
+     * @return The type of preloaded data. Only Synthea preloaded data is supported.
+     * 
+     */
     public Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType() {
         return this.preloadDataType;
     }
@@ -52,11 +56,23 @@ public final class FHIRDatastorePreloadDataConfigArgs extends com.pulumi.resourc
             $ = new FHIRDatastorePreloadDataConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preloadDataType The type of preloaded data. Only Synthea preloaded data is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preloadDataType(Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType) {
             $.preloadDataType = preloadDataType;
             return this;
         }
 
+        /**
+         * @param preloadDataType The type of preloaded data. Only Synthea preloaded data is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preloadDataType(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
             return preloadDataType(Output.of(preloadDataType));
         }

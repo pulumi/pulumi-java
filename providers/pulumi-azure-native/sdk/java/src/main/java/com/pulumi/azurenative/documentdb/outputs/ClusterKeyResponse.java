@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterKeyResponse {
     /**
-     * Name of the Cosmos DB Cassandra table cluster key
+     * @return Name of the Cosmos DB Cassandra table cluster key
      * 
      */
     private final @Nullable String name;
     /**
-     * Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
+     * @return Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
      * 
      */
     private final @Nullable String orderBy;
@@ -31,16 +31,16 @@ public final class ClusterKeyResponse {
     }
 
     /**
-     * Name of the Cosmos DB Cassandra table cluster key
+     * @return Name of the Cosmos DB Cassandra table cluster key
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
+     * @return Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
      * 
-    */
+     */
     public Optional<String> orderBy() {
         return Optional.ofNullable(this.orderBy);
     }

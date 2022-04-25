@@ -35,6 +35,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="kerberosArmoring")
     private @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring;
 
+    /**
+     * @return A flag to determine whether or not KerberosArmoring is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,KerberosArmoring>>> kerberosArmoring() {
         return Optional.ofNullable(this.kerberosArmoring);
     }
@@ -46,6 +50,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="kerberosRc4Encryption")
     private @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
 
+    /**
+     * @return A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,KerberosRc4Encryption>>> kerberosRc4Encryption() {
         return Optional.ofNullable(this.kerberosRc4Encryption);
     }
@@ -57,6 +65,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="ntlmV1")
     private @Nullable Output<Either<String,NtlmV1>> ntlmV1;
 
+    /**
+     * @return A flag to determine whether or not NtlmV1 is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,NtlmV1>>> ntlmV1() {
         return Optional.ofNullable(this.ntlmV1);
     }
@@ -68,6 +80,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="syncKerberosPasswords")
     private @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
 
+    /**
+     * @return A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,SyncKerberosPasswords>>> syncKerberosPasswords() {
         return Optional.ofNullable(this.syncKerberosPasswords);
     }
@@ -79,6 +95,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="syncNtlmPasswords")
     private @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
 
+    /**
+     * @return A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,SyncNtlmPasswords>>> syncNtlmPasswords() {
         return Optional.ofNullable(this.syncNtlmPasswords);
     }
@@ -90,6 +110,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="syncOnPremPasswords")
     private @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
 
+    /**
+     * @return A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,SyncOnPremPasswords>>> syncOnPremPasswords() {
         return Optional.ofNullable(this.syncOnPremPasswords);
     }
@@ -101,6 +125,10 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
     @Import(name="tlsV1")
     private @Nullable Output<Either<String,TlsV1>> tlsV1;
 
+    /**
+     * @return A flag to determine whether or not TlsV1 is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,TlsV1>>> tlsV1() {
         return Optional.ofNullable(this.tlsV1);
     }
@@ -135,121 +163,289 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
             $ = new DomainSecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kerberosArmoring A flag to determine whether or not KerberosArmoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosArmoring(@Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring) {
             $.kerberosArmoring = kerberosArmoring;
             return this;
         }
 
+        /**
+         * @param kerberosArmoring A flag to determine whether or not KerberosArmoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosArmoring(Either<String,KerberosArmoring> kerberosArmoring) {
             return kerberosArmoring(Output.of(kerberosArmoring));
         }
 
+        /**
+         * @param kerberosArmoring A flag to determine whether or not KerberosArmoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosArmoring(String kerberosArmoring) {
             return kerberosArmoring(Either.ofLeft(kerberosArmoring));
         }
 
+        /**
+         * @param kerberosArmoring A flag to determine whether or not KerberosArmoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosArmoring(KerberosArmoring kerberosArmoring) {
             return kerberosArmoring(Either.ofRight(kerberosArmoring));
         }
 
+        /**
+         * @param kerberosRc4Encryption A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosRc4Encryption(@Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption) {
             $.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
 
+        /**
+         * @param kerberosRc4Encryption A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosRc4Encryption(Either<String,KerberosRc4Encryption> kerberosRc4Encryption) {
             return kerberosRc4Encryption(Output.of(kerberosRc4Encryption));
         }
 
+        /**
+         * @param kerberosRc4Encryption A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosRc4Encryption(String kerberosRc4Encryption) {
             return kerberosRc4Encryption(Either.ofLeft(kerberosRc4Encryption));
         }
 
+        /**
+         * @param kerberosRc4Encryption A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosRc4Encryption(KerberosRc4Encryption kerberosRc4Encryption) {
             return kerberosRc4Encryption(Either.ofRight(kerberosRc4Encryption));
         }
 
+        /**
+         * @param ntlmV1 A flag to determine whether or not NtlmV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntlmV1(@Nullable Output<Either<String,NtlmV1>> ntlmV1) {
             $.ntlmV1 = ntlmV1;
             return this;
         }
 
+        /**
+         * @param ntlmV1 A flag to determine whether or not NtlmV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntlmV1(Either<String,NtlmV1> ntlmV1) {
             return ntlmV1(Output.of(ntlmV1));
         }
 
+        /**
+         * @param ntlmV1 A flag to determine whether or not NtlmV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntlmV1(String ntlmV1) {
             return ntlmV1(Either.ofLeft(ntlmV1));
         }
 
+        /**
+         * @param ntlmV1 A flag to determine whether or not NtlmV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntlmV1(NtlmV1 ntlmV1) {
             return ntlmV1(Either.ofRight(ntlmV1));
         }
 
+        /**
+         * @param syncKerberosPasswords A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncKerberosPasswords(@Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords) {
             $.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
 
+        /**
+         * @param syncKerberosPasswords A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncKerberosPasswords(Either<String,SyncKerberosPasswords> syncKerberosPasswords) {
             return syncKerberosPasswords(Output.of(syncKerberosPasswords));
         }
 
+        /**
+         * @param syncKerberosPasswords A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncKerberosPasswords(String syncKerberosPasswords) {
             return syncKerberosPasswords(Either.ofLeft(syncKerberosPasswords));
         }
 
+        /**
+         * @param syncKerberosPasswords A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncKerberosPasswords(SyncKerberosPasswords syncKerberosPasswords) {
             return syncKerberosPasswords(Either.ofRight(syncKerberosPasswords));
         }
 
+        /**
+         * @param syncNtlmPasswords A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncNtlmPasswords(@Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords) {
             $.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
 
+        /**
+         * @param syncNtlmPasswords A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncNtlmPasswords(Either<String,SyncNtlmPasswords> syncNtlmPasswords) {
             return syncNtlmPasswords(Output.of(syncNtlmPasswords));
         }
 
+        /**
+         * @param syncNtlmPasswords A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncNtlmPasswords(String syncNtlmPasswords) {
             return syncNtlmPasswords(Either.ofLeft(syncNtlmPasswords));
         }
 
+        /**
+         * @param syncNtlmPasswords A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncNtlmPasswords(SyncNtlmPasswords syncNtlmPasswords) {
             return syncNtlmPasswords(Either.ofRight(syncNtlmPasswords));
         }
 
+        /**
+         * @param syncOnPremPasswords A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncOnPremPasswords(@Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords) {
             $.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
 
+        /**
+         * @param syncOnPremPasswords A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncOnPremPasswords(Either<String,SyncOnPremPasswords> syncOnPremPasswords) {
             return syncOnPremPasswords(Output.of(syncOnPremPasswords));
         }
 
+        /**
+         * @param syncOnPremPasswords A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncOnPremPasswords(String syncOnPremPasswords) {
             return syncOnPremPasswords(Either.ofLeft(syncOnPremPasswords));
         }
 
+        /**
+         * @param syncOnPremPasswords A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncOnPremPasswords(SyncOnPremPasswords syncOnPremPasswords) {
             return syncOnPremPasswords(Either.ofRight(syncOnPremPasswords));
         }
 
+        /**
+         * @param tlsV1 A flag to determine whether or not TlsV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsV1(@Nullable Output<Either<String,TlsV1>> tlsV1) {
             $.tlsV1 = tlsV1;
             return this;
         }
 
+        /**
+         * @param tlsV1 A flag to determine whether or not TlsV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsV1(Either<String,TlsV1> tlsV1) {
             return tlsV1(Output.of(tlsV1));
         }
 
+        /**
+         * @param tlsV1 A flag to determine whether or not TlsV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsV1(String tlsV1) {
             return tlsV1(Either.ofLeft(tlsV1));
         }
 
+        /**
+         * @param tlsV1 A flag to determine whether or not TlsV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsV1(TlsV1 tlsV1) {
             return tlsV1(Either.ofRight(tlsV1));
         }

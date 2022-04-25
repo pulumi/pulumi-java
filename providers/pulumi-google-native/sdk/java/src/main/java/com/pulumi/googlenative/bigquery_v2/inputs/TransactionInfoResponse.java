@@ -19,6 +19,10 @@ public final class TransactionInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="transactionId", required=true)
     private String transactionId;
 
+    /**
+     * @return // [Alpha] Id of the transaction.
+     * 
+     */
     public String transactionId() {
         return this.transactionId;
     }
@@ -47,6 +51,12 @@ public final class TransactionInfoResponse extends com.pulumi.resources.InvokeAr
             $ = new TransactionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transactionId // [Alpha] Id of the transaction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionId(String transactionId) {
             $.transactionId = transactionId;
             return this;

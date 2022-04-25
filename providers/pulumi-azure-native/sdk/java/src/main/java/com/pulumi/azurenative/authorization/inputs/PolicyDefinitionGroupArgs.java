@@ -26,6 +26,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="additionalMetadataId")
     private @Nullable Output<String> additionalMetadataId;
 
+    /**
+     * @return A resource ID of a resource that contains additional metadata about the group.
+     * 
+     */
     public Optional<Output<String>> additionalMetadataId() {
         return Optional.ofNullable(this.additionalMetadataId);
     }
@@ -37,6 +41,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="category")
     private @Nullable Output<String> category;
 
+    /**
+     * @return The group&#39;s category.
+     * 
+     */
     public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
@@ -48,6 +56,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The group&#39;s description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The group&#39;s display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -70,6 +86,10 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -102,47 +122,107 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
             $ = new PolicyDefinitionGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalMetadataId A resource ID of a resource that contains additional metadata about the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalMetadataId(@Nullable Output<String> additionalMetadataId) {
             $.additionalMetadataId = additionalMetadataId;
             return this;
         }
 
+        /**
+         * @param additionalMetadataId A resource ID of a resource that contains additional metadata about the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalMetadataId(String additionalMetadataId) {
             return additionalMetadataId(Output.of(additionalMetadataId));
         }
 
+        /**
+         * @param category The group&#39;s category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category The group&#39;s category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param description The group&#39;s description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The group&#39;s description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The group&#39;s display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The group&#39;s display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name The name of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

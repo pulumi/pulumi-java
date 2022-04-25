@@ -21,6 +21,10 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends com.pul
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return An unique alphanumeric string to identify the `port_set`.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -32,6 +36,10 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends com.pul
     @Import(name="portSet", required=true)
     private Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet;
 
+    /**
+     * @return A configuration block that defines a set of port ranges. See Port Set below for details.
+     * 
+     */
     public Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet() {
         return this.portSet;
     }
@@ -61,20 +69,44 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends com.pul
             $ = new RuleGroupRuleGroupRuleVariablesPortSetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key An unique alphanumeric string to identify the `port_set`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key An unique alphanumeric string to identify the `port_set`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param portSet A configuration block that defines a set of port ranges. See Port Set below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSet(Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet) {
             $.portSet = portSet;
             return this;
         }
 
+        /**
+         * @param portSet A configuration block that defines a set of port ranges. See Port Set below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs portSet) {
             return portSet(Output.of(portSet));
         }

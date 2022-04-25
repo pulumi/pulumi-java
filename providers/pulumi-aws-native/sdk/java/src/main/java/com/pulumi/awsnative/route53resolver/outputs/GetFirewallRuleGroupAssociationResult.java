@@ -17,62 +17,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFirewallRuleGroupAssociationResult {
     /**
-     * Arn
+     * @return Arn
      * 
      */
     private final @Nullable String arn;
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
      */
     private final @Nullable String creationTime;
     /**
-     * The id of the creator request.
+     * @return The id of the creator request.
      * 
      */
     private final @Nullable String creatorRequestId;
     /**
-     * Id
+     * @return Id
      * 
      */
     private final @Nullable String id;
     /**
-     * ServicePrincipal
+     * @return ServicePrincipal
      * 
      */
     private final @Nullable String managedOwnerName;
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
      */
     private final @Nullable String modificationTime;
     /**
-     * MutationProtectionStatus
+     * @return MutationProtectionStatus
      * 
      */
     private final @Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection;
     /**
-     * FirewallRuleGroupAssociationName
+     * @return FirewallRuleGroupAssociationName
      * 
      */
     private final @Nullable String name;
     /**
-     * Priority
+     * @return Priority
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
+     * @return ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
      */
     private final @Nullable FirewallRuleGroupAssociationStatus status;
     /**
-     * FirewallDomainListAssociationStatus
+     * @return FirewallDomainListAssociationStatus
      * 
      */
     private final @Nullable String statusMessage;
     /**
-     * Tags
+     * @return Tags
      * 
      */
     private final @Nullable List<FirewallRuleGroupAssociationTag> tags;
@@ -106,86 +106,86 @@ public final class GetFirewallRuleGroupAssociationResult {
     }
 
     /**
-     * Arn
+     * @return Arn
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The id of the creator request.
+     * @return The id of the creator request.
      * 
-    */
+     */
     public Optional<String> creatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
-     * Id
+     * @return Id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * ServicePrincipal
+     * @return ServicePrincipal
      * 
-    */
+     */
     public Optional<String> managedOwnerName() {
         return Optional.ofNullable(this.managedOwnerName);
     }
     /**
-     * Rfc3339TimeString
+     * @return Rfc3339TimeString
      * 
-    */
+     */
     public Optional<String> modificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
     /**
-     * MutationProtectionStatus
+     * @return MutationProtectionStatus
      * 
-    */
+     */
     public Optional<FirewallRuleGroupAssociationMutationProtection> mutationProtection() {
         return Optional.ofNullable(this.mutationProtection);
     }
     /**
-     * FirewallRuleGroupAssociationName
+     * @return FirewallRuleGroupAssociationName
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Priority
+     * @return Priority
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
+     * @return ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
-    */
+     */
     public Optional<FirewallRuleGroupAssociationStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * FirewallDomainListAssociationStatus
+     * @return FirewallDomainListAssociationStatus
      * 
-    */
+     */
     public Optional<String> statusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
     /**
-     * Tags
+     * @return Tags
      * 
-    */
+     */
     public List<FirewallRuleGroupAssociationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

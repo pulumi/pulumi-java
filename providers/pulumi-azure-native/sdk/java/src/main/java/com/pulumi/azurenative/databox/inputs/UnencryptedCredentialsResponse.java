@@ -27,6 +27,10 @@ public final class UnencryptedCredentialsResponse extends com.pulumi.resources.I
     @Import(name="jobName", required=true)
     private String jobName;
 
+    /**
+     * @return Name of the job.
+     * 
+     */
     public String jobName() {
         return this.jobName;
     }
@@ -38,6 +42,10 @@ public final class UnencryptedCredentialsResponse extends com.pulumi.resources.I
     @Import(name="jobSecrets", required=true)
     private Object jobSecrets;
 
+    /**
+     * @return Secrets related to this job.
+     * 
+     */
     public Object jobSecrets() {
         return this.jobSecrets;
     }
@@ -67,11 +75,23 @@ public final class UnencryptedCredentialsResponse extends com.pulumi.resources.I
             $ = new UnencryptedCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobName Name of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobSecrets Secrets related to this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobSecrets(Object jobSecrets) {
             $.jobSecrets = jobSecrets;
             return this;

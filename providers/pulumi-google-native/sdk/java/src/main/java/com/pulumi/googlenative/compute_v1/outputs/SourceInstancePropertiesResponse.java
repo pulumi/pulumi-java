@@ -20,67 +20,67 @@ import java.util.Objects;
 @CustomType
 public final class SourceInstancePropertiesResponse {
     /**
-     * Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+     * @return Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
      * 
      */
     private final Boolean canIpForward;
     /**
-     * Whether the instance created from this machine image should be protected against deletion.
+     * @return Whether the instance created from this machine image should be protected against deletion.
      * 
      */
     private final Boolean deletionProtection;
     /**
-     * An optional text description for the instances that are created from this machine image.
+     * @return An optional text description for the instances that are created from this machine image.
      * 
      */
     private final String description;
     /**
-     * An array of disks that are associated with the instances that are created from this machine image.
+     * @return An array of disks that are associated with the instances that are created from this machine image.
      * 
      */
     private final List<SavedAttachedDiskResponse> disks;
     /**
-     * A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
+     * @return A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
      * 
      */
     private final List<AcceleratorConfigResponse> guestAccelerators;
     /**
-     * Labels to apply to instances that are created from this machine image.
+     * @return Labels to apply to instances that are created from this machine image.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The machine type to use for instances that are created from this machine image.
+     * @return The machine type to use for instances that are created from this machine image.
      * 
      */
     private final String machineType;
     /**
-     * The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+     * @return The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
      * 
      */
     private final MetadataResponse metadata;
     /**
-     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+     * @return Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
      * 
      */
     private final String minCpuPlatform;
     /**
-     * An array of network access configurations for this interface.
+     * @return An array of network access configurations for this interface.
      * 
      */
     private final List<NetworkInterfaceResponse> networkInterfaces;
     /**
-     * Specifies the scheduling options for the instances that are created from this machine image.
+     * @return Specifies the scheduling options for the instances that are created from this machine image.
      * 
      */
     private final SchedulingResponse scheduling;
     /**
-     * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
+     * @return A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
      * 
      */
     private final List<ServiceAccountResponse> serviceAccounts;
     /**
-     * A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+     * @return A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
      * 
      */
     private final TagsResponse tags;
@@ -116,93 +116,93 @@ public final class SourceInstancePropertiesResponse {
     }
 
     /**
-     * Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+     * @return Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
      * 
-    */
+     */
     public Boolean canIpForward() {
         return this.canIpForward;
     }
     /**
-     * Whether the instance created from this machine image should be protected against deletion.
+     * @return Whether the instance created from this machine image should be protected against deletion.
      * 
-    */
+     */
     public Boolean deletionProtection() {
         return this.deletionProtection;
     }
     /**
-     * An optional text description for the instances that are created from this machine image.
+     * @return An optional text description for the instances that are created from this machine image.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * An array of disks that are associated with the instances that are created from this machine image.
+     * @return An array of disks that are associated with the instances that are created from this machine image.
      * 
-    */
+     */
     public List<SavedAttachedDiskResponse> disks() {
         return this.disks;
     }
     /**
-     * A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
+     * @return A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
      * 
-    */
+     */
     public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
-     * Labels to apply to instances that are created from this machine image.
+     * @return Labels to apply to instances that are created from this machine image.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The machine type to use for instances that are created from this machine image.
+     * @return The machine type to use for instances that are created from this machine image.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+     * @return The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
      * 
-    */
+     */
     public MetadataResponse metadata() {
         return this.metadata;
     }
     /**
-     * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+     * @return Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
      * 
-    */
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
-     * An array of network access configurations for this interface.
+     * @return An array of network access configurations for this interface.
      * 
-    */
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
-     * Specifies the scheduling options for the instances that are created from this machine image.
+     * @return Specifies the scheduling options for the instances that are created from this machine image.
      * 
-    */
+     */
     public SchedulingResponse scheduling() {
         return this.scheduling;
     }
     /**
-     * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
+     * @return A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
      * 
-    */
+     */
     public List<ServiceAccountResponse> serviceAccounts() {
         return this.serviceAccounts;
     }
     /**
-     * A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+     * @return A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
      * 
-    */
+     */
     public TagsResponse tags() {
         return this.tags;
     }

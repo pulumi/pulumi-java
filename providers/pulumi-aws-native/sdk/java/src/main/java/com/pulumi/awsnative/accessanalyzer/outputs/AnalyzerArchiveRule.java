@@ -13,7 +13,7 @@ import java.util.Objects;
 public final class AnalyzerArchiveRule {
     private final List<AnalyzerFilter> filter;
     /**
-     * The archive rule name
+     * @return The archive rule name
      * 
      */
     private final String ruleName;
@@ -30,9 +30,9 @@ public final class AnalyzerArchiveRule {
         return this.filter;
     }
     /**
-     * The archive rule name
+     * @return The archive rule name
      * 
-    */
+     */
     public String ruleName() {
         return this.ruleName;
     }

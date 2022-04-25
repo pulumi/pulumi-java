@@ -25,6 +25,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
     private Output<String> applicationId;
 
+    /**
+     * @return The AppConfig application ID. Must be between 4 and 7 characters in length.
+     * 
+     */
     public Output<String> applicationId() {
         return this.applicationId;
     }
@@ -36,6 +40,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the environment. Can be at most 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitors")
     private @Nullable Output<List<EnvironmentMonitorArgs>> monitors;
 
+    /**
+     * @return Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
+     * 
+     */
     public Optional<Output<List<EnvironmentMonitorArgs>>> monitors() {
         return Optional.ofNullable(this.monitors);
     }
@@ -58,6 +70,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the environment. Must be between 1 and 64 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,51 +121,117 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The AppConfig application ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The AppConfig application ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param description The description of the environment. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the environment. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param monitors Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(@Nullable Output<List<EnvironmentMonitorArgs>> monitors) {
             $.monitors = monitors;
             return this;
         }
 
+        /**
+         * @param monitors Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(List<EnvironmentMonitorArgs> monitors) {
             return monitors(Output.of(monitors));
         }
 
+        /**
+         * @param monitors Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(EnvironmentMonitorArgs... monitors) {
             return monitors(List.of(monitors));
         }
 
+        /**
+         * @param name The name for the environment. Must be between 1 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the environment. Must be between 1 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

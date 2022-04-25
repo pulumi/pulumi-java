@@ -26,6 +26,10 @@ public final class JitRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationResourceId", required=true)
     private Output<String> applicationResourceId;
 
+    /**
+     * @return The parent application id.
+     * 
+     */
     public Output<String> applicationResourceId() {
         return this.applicationResourceId;
     }
@@ -37,6 +41,10 @@ public final class JitRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jitAuthorizationPolicies", required=true)
     private Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
 
+    /**
+     * @return The JIT authorization policies.
+     * 
+     */
     public Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
@@ -48,6 +56,10 @@ public final class JitRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jitRequestName")
     private @Nullable Output<String> jitRequestName;
 
+    /**
+     * @return The name of the JIT request.
+     * 
+     */
     public Optional<Output<String>> jitRequestName() {
         return Optional.ofNullable(this.jitRequestName);
     }
@@ -59,6 +71,10 @@ public final class JitRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jitSchedulingPolicy", required=true)
     private Output<JitSchedulingPolicyArgs> jitSchedulingPolicy;
 
+    /**
+     * @return The JIT request properties.
+     * 
+     */
     public Output<JitSchedulingPolicyArgs> jitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
@@ -70,6 +86,10 @@ public final class JitRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +101,10 @@ public final class JitRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class JitRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -126,69 +154,159 @@ public final class JitRequestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JitRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationResourceId The parent application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationResourceId(Output<String> applicationResourceId) {
             $.applicationResourceId = applicationResourceId;
             return this;
         }
 
+        /**
+         * @param applicationResourceId The parent application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationResourceId(String applicationResourceId) {
             return applicationResourceId(Output.of(applicationResourceId));
         }
 
+        /**
+         * @param jitAuthorizationPolicies The JIT authorization policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitAuthorizationPolicies(Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies) {
             $.jitAuthorizationPolicies = jitAuthorizationPolicies;
             return this;
         }
 
+        /**
+         * @param jitAuthorizationPolicies The JIT authorization policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitAuthorizationPolicies(List<JitAuthorizationPoliciesArgs> jitAuthorizationPolicies) {
             return jitAuthorizationPolicies(Output.of(jitAuthorizationPolicies));
         }
 
+        /**
+         * @param jitAuthorizationPolicies The JIT authorization policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitAuthorizationPolicies(JitAuthorizationPoliciesArgs... jitAuthorizationPolicies) {
             return jitAuthorizationPolicies(List.of(jitAuthorizationPolicies));
         }
 
+        /**
+         * @param jitRequestName The name of the JIT request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitRequestName(@Nullable Output<String> jitRequestName) {
             $.jitRequestName = jitRequestName;
             return this;
         }
 
+        /**
+         * @param jitRequestName The name of the JIT request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitRequestName(String jitRequestName) {
             return jitRequestName(Output.of(jitRequestName));
         }
 
+        /**
+         * @param jitSchedulingPolicy The JIT request properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitSchedulingPolicy(Output<JitSchedulingPolicyArgs> jitSchedulingPolicy) {
             $.jitSchedulingPolicy = jitSchedulingPolicy;
             return this;
         }
 
+        /**
+         * @param jitSchedulingPolicy The JIT request properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitSchedulingPolicy(JitSchedulingPolicyArgs jitSchedulingPolicy) {
             return jitSchedulingPolicy(Output.of(jitSchedulingPolicy));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -23,6 +23,10 @@ public final class HostedZoneVPC extends com.pulumi.resources.InvokeArgs {
     @Import(name="vPCId", required=true)
     private String vPCId;
 
+    /**
+     * @return The ID of an Amazon VPC.
+     * 
+     */
     public String vPCId() {
         return this.vPCId;
     }
@@ -34,6 +38,10 @@ public final class HostedZoneVPC extends com.pulumi.resources.InvokeArgs {
     @Import(name="vPCRegion", required=true)
     private String vPCRegion;
 
+    /**
+     * @return The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
+     * 
+     */
     public String vPCRegion() {
         return this.vPCRegion;
     }
@@ -63,11 +71,23 @@ public final class HostedZoneVPC extends com.pulumi.resources.InvokeArgs {
             $ = new HostedZoneVPC(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vPCId The ID of an Amazon VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCId(String vPCId) {
             $.vPCId = vPCId;
             return this;
         }
 
+        /**
+         * @param vPCRegion The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vPCRegion(String vPCRegion) {
             $.vPCRegion = vPCRegion;
             return this;

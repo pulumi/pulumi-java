@@ -27,6 +27,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends com.pulum
     @Import(name="contacts")
     private @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
 
+    /**
+     * @return Contact people for the entry.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1ContactsArgs>> contacts() {
         return Optional.ofNullable(this.contacts);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends com.pulum
     @Import(name="entryOverview")
     private @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 
+    /**
+     * @return Entry overview fields for rich text descriptions of entries.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1EntryOverviewArgs>> entryOverview() {
         return Optional.ofNullable(this.entryOverview);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends com.pulum
             $ = new GoogleCloudDatacatalogV1BusinessContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contacts Contact people for the entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contacts(@Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts) {
             $.contacts = contacts;
             return this;
         }
 
+        /**
+         * @param contacts Contact people for the entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contacts(GoogleCloudDatacatalogV1ContactsArgs contacts) {
             return contacts(Output.of(contacts));
         }
 
+        /**
+         * @param entryOverview Entry overview fields for rich text descriptions of entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryOverview(@Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
             $.entryOverview = entryOverview;
             return this;
         }
 
+        /**
+         * @param entryOverview Entry overview fields for rich text descriptions of entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryOverview(GoogleCloudDatacatalogV1EntryOverviewArgs entryOverview) {
             return entryOverview(Output.of(entryOverview));
         }

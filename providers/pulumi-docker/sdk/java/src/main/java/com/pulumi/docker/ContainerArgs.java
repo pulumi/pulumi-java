@@ -38,6 +38,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attach")
     private @Nullable Output<Boolean> attach;
 
+    /**
+     * @return If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> attach() {
         return Optional.ofNullable(this.attach);
     }
@@ -49,6 +53,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
     private @Nullable Output<ContainerCapabilitiesArgs> capabilities;
 
+    /**
+     * @return Add or drop certrain linux capabilities.
+     * 
+     */
     public Optional<Output<ContainerCapabilitiesArgs>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -61,6 +69,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="command")
     private @Nullable Output<List<String>> command;
 
+    /**
+     * @return The command to use to start the container. For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be
+     * `[&#34;/usr/bin/myprogram&#34;,&#34;-&#34;,&#34;baz.con&#34;]`.
+     * 
+     */
     public Optional<Output<List<String>>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -72,6 +85,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuSet")
     private @Nullable Output<String> cpuSet;
 
+    /**
+     * @return A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
+     * 
+     */
     public Optional<Output<String>> cpuSet() {
         return Optional.ofNullable(this.cpuSet);
     }
@@ -83,6 +100,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuShares")
     private @Nullable Output<Integer> cpuShares;
 
+    /**
+     * @return CPU shares (relative weight) for the container.
+     * 
+     */
     public Optional<Output<Integer>> cpuShares() {
         return Optional.ofNullable(this.cpuShares);
     }
@@ -95,6 +116,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destroyGraceSeconds")
     private @Nullable Output<Integer> destroyGraceSeconds;
 
+    /**
+     * @return If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on
+     * successful stop.
+     * 
+     */
     public Optional<Output<Integer>> destroyGraceSeconds() {
         return Optional.ofNullable(this.destroyGraceSeconds);
     }
@@ -106,6 +132,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="devices")
     private @Nullable Output<List<ContainerDeviceArgs>> devices;
 
+    /**
+     * @return Bind devices to the container.
+     * 
+     */
     public Optional<Output<List<ContainerDeviceArgs>>> devices() {
         return Optional.ofNullable(this.devices);
     }
@@ -117,6 +147,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dns")
     private @Nullable Output<List<String>> dns;
 
+    /**
+     * @return DNS servers to use.
+     * 
+     */
     public Optional<Output<List<String>>> dns() {
         return Optional.ofNullable(this.dns);
     }
@@ -128,6 +162,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsOpts")
     private @Nullable Output<List<String>> dnsOpts;
 
+    /**
+     * @return DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
+     * 
+     */
     public Optional<Output<List<String>>> dnsOpts() {
         return Optional.ofNullable(this.dnsOpts);
     }
@@ -139,6 +177,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsSearches")
     private @Nullable Output<List<String>> dnsSearches;
 
+    /**
+     * @return DNS search domains that are used when bare unqualified hostnames are used inside of the container.
+     * 
+     */
     public Optional<Output<List<String>>> dnsSearches() {
         return Optional.ofNullable(this.dnsSearches);
     }
@@ -150,6 +192,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainname")
     private @Nullable Output<String> domainname;
 
+    /**
+     * @return Domain name of the container.
+     * 
+     */
     public Optional<Output<String>> domainname() {
         return Optional.ofNullable(this.domainname);
     }
@@ -163,6 +209,12 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="entrypoints")
     private @Nullable Output<List<String>> entrypoints;
 
+    /**
+     * @return The command to use as the Entrypoint for the container. The Entrypoint allows you to configure a container to run as an
+     * executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be
+     * `&#34;/usr/bin/myprogra&#34;]`.
+     * 
+     */
     public Optional<Output<List<String>>> entrypoints() {
         return Optional.ofNullable(this.entrypoints);
     }
@@ -174,6 +226,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="envs")
     private @Nullable Output<List<String>> envs;
 
+    /**
+     * @return Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`
+     * 
+     */
     public Optional<Output<List<String>>> envs() {
         return Optional.ofNullable(this.envs);
     }
@@ -185,6 +241,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupAdds")
     private @Nullable Output<List<String>> groupAdds;
 
+    /**
+     * @return Additional groups for the container user
+     * 
+     */
     public Optional<Output<List<String>>> groupAdds() {
         return Optional.ofNullable(this.groupAdds);
     }
@@ -196,6 +256,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthcheck")
     private @Nullable Output<ContainerHealthcheckArgs> healthcheck;
 
+    /**
+     * @return A test to perform to check that the container is healthy
+     * 
+     */
     public Optional<Output<ContainerHealthcheckArgs>> healthcheck() {
         return Optional.ofNullable(this.healthcheck);
     }
@@ -207,6 +271,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return Hostname of the container.
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -218,6 +286,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hosts")
     private @Nullable Output<List<ContainerHostArgs>> hosts;
 
+    /**
+     * @return Additional hosts to add to the container.
+     * 
+     */
     public Optional<Output<List<ContainerHostArgs>>> hosts() {
         return Optional.ofNullable(this.hosts);
     }
@@ -230,6 +302,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image", required=true)
     private Output<String> image;
 
+    /**
+     * @return The ID of the image to back this container. The easiest way to get this value is to use the `docker_image` resource as
+     * is shown in the example.
+     * 
+     */
     public Output<String> image() {
         return this.image;
     }
@@ -242,6 +319,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="init")
     private @Nullable Output<Boolean> init;
 
+    /**
+     * @return Configured whether an init process should be injected for this container. If unset this will default to the `dockerd`
+     * defaults.
+     * 
+     */
     public Optional<Output<Boolean>> init() {
         return Optional.ofNullable(this.init);
     }
@@ -254,6 +336,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipcMode")
     private @Nullable Output<String> ipcMode;
 
+    /**
+     * @return IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:&lt;name|id&gt;` or
+     * `host`.
+     * 
+     */
     public Optional<Output<String>> ipcMode() {
         return Optional.ofNullable(this.ipcMode);
     }
@@ -265,6 +352,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<ContainerLabelArgs>> labels;
 
+    /**
+     * @return User-defined key/value metadata
+     * 
+     */
     public Optional<Output<List<ContainerLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -280,6 +371,13 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="links")
     private @Nullable Output<List<String>> links;
 
+    /**
+     * @return Set of links for link based connectivity between containers that are running on the same host.
+     * 
+     * @deprecated
+     * The --link flag is a legacy feature of Docker. It may eventually be removed.
+     * 
+     */
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
     public Optional<Output<List<String>>> links() {
         return Optional.ofNullable(this.links);
@@ -292,6 +390,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logDriver")
     private @Nullable Output<String> logDriver;
 
+    /**
+     * @return The logging driver to use for the container. Defaults to `json-file`.
+     * 
+     */
     public Optional<Output<String>> logDriver() {
         return Optional.ofNullable(this.logDriver);
     }
@@ -303,6 +405,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logOpts")
     private @Nullable Output<Map<String,Object>> logOpts;
 
+    /**
+     * @return Key/value pairs to use as options for the logging driver.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> logOpts() {
         return Optional.ofNullable(this.logOpts);
     }
@@ -314,6 +420,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logs")
     private @Nullable Output<Boolean> logs;
 
+    /**
+     * @return Save the container logs (`attach` must be enabled). Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> logs() {
         return Optional.ofNullable(this.logs);
     }
@@ -325,6 +435,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxRetryCount")
     private @Nullable Output<Integer> maxRetryCount;
 
+    /**
+     * @return The maximum amount of times to an attempt a restart when `restart` is set to &#39;on-failure&#39;.
+     * 
+     */
     public Optional<Output<Integer>> maxRetryCount() {
         return Optional.ofNullable(this.maxRetryCount);
     }
@@ -336,6 +450,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="memory")
     private @Nullable Output<Integer> memory;
 
+    /**
+     * @return The memory limit for the container in MBs.
+     * 
+     */
     public Optional<Output<Integer>> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -348,6 +466,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="memorySwap")
     private @Nullable Output<Integer> memorySwap;
 
+    /**
+     * @return The total memory limit (memory + swap) for the container in MBs. This setting may compute to `-1` after `terraform
+     * apply` if the target host doesn&#39;t support memory swap, when that is the case docker will use a soft limitation.
+     * 
+     */
     public Optional<Output<Integer>> memorySwap() {
         return Optional.ofNullable(this.memorySwap);
     }
@@ -359,6 +482,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mounts")
     private @Nullable Output<List<ContainerMountArgs>> mounts;
 
+    /**
+     * @return Specification for mounts to be added to containers created as part of the service.
+     * 
+     */
     public Optional<Output<List<ContainerMountArgs>>> mounts() {
         return Optional.ofNullable(this.mounts);
     }
@@ -371,6 +498,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mustRun")
     private @Nullable Output<Boolean> mustRun;
 
+    /**
+     * @return If `true`, then the Docker container will be kept running. If `false`, then as long as the container exists, Terraform
+     * assumes it is successful. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> mustRun() {
         return Optional.ofNullable(this.mustRun);
     }
@@ -382,6 +514,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the container.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -397,6 +533,13 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkAliases")
     private @Nullable Output<List<String>> networkAliases;
 
+    /**
+     * @return Set an alias for the container in all specified networks
+     * 
+     * @deprecated
+     * Use networks_advanced instead. Will be removed in v3.0.0
+     * 
+     */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     public Optional<Output<List<String>>> networkAliases() {
         return Optional.ofNullable(this.networkAliases);
@@ -409,6 +552,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkMode")
     private @Nullable Output<String> networkMode;
 
+    /**
+     * @return Network mode of the container.
+     * 
+     */
     public Optional<Output<String>> networkMode() {
         return Optional.ofNullable(this.networkMode);
     }
@@ -424,6 +571,13 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networks")
     private @Nullable Output<List<String>> networks;
 
+    /**
+     * @return ID of the networks in which the container is.
+     * 
+     * @deprecated
+     * Use networks_advanced instead. Will be removed in v3.0.0
+     * 
+     */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     public Optional<Output<List<String>>> networks() {
         return Optional.ofNullable(this.networks);
@@ -436,6 +590,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networksAdvanced")
     private @Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced;
 
+    /**
+     * @return The networks the container is attached to
+     * 
+     */
     public Optional<Output<List<ContainerNetworksAdvancedArgs>>> networksAdvanced() {
         return Optional.ofNullable(this.networksAdvanced);
     }
@@ -447,6 +605,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pidMode")
     private @Nullable Output<String> pidMode;
 
+    /**
+     * @return he PID (Process) Namespace mode for the container. Either `container:&lt;name|id&gt;` or `host`.
+     * 
+     */
     public Optional<Output<String>> pidMode() {
         return Optional.ofNullable(this.pidMode);
     }
@@ -458,6 +620,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ports")
     private @Nullable Output<List<ContainerPortArgs>> ports;
 
+    /**
+     * @return Publish a container&#39;s port(s) to the host.
+     * 
+     */
     public Optional<Output<List<ContainerPortArgs>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -469,6 +635,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privileged")
     private @Nullable Output<Boolean> privileged;
 
+    /**
+     * @return If `true`, the container runs in privileged mode.
+     * 
+     */
     public Optional<Output<Boolean>> privileged() {
         return Optional.ofNullable(this.privileged);
     }
@@ -480,6 +650,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publishAllPorts")
     private @Nullable Output<Boolean> publishAllPorts;
 
+    /**
+     * @return Publish all ports of the container.
+     * 
+     */
     public Optional<Output<Boolean>> publishAllPorts() {
         return Optional.ofNullable(this.publishAllPorts);
     }
@@ -491,6 +665,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return If `true`, the container will be started as readonly. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -502,6 +680,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="removeVolumes")
     private @Nullable Output<Boolean> removeVolumes;
 
+    /**
+     * @return If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> removeVolumes() {
         return Optional.ofNullable(this.removeVolumes);
     }
@@ -513,6 +695,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restart")
     private @Nullable Output<String> restart;
 
+    /**
+     * @return The restart policy for the container. Must be one of &#39;no&#39;, &#39;on-failure&#39;, &#39;always&#39;, &#39;unless-stopped&#39;. Defaults to `no`.
+     * 
+     */
     public Optional<Output<String>> restart() {
         return Optional.ofNullable(this.restart);
     }
@@ -525,6 +711,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rm")
     private @Nullable Output<Boolean> rm;
 
+    /**
+     * @return If `true`, then the container will be automatically removed after his execution. Terraform won&#39;t check this container
+     * after creation. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> rm() {
         return Optional.ofNullable(this.rm);
     }
@@ -537,6 +728,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityOpts")
     private @Nullable Output<List<String>> securityOpts;
 
+    /**
+     * @return List of string values to customize labels for MLS systems, such as SELinux. See
+     * https://docs.docker.com/engine/reference/run/#security-configuration.
+     * 
+     */
     public Optional<Output<List<String>>> securityOpts() {
         return Optional.ofNullable(this.securityOpts);
     }
@@ -548,6 +744,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shmSize")
     private @Nullable Output<Integer> shmSize;
 
+    /**
+     * @return Size of `/dev/shm` in MBs.
+     * 
+     */
     public Optional<Output<Integer>> shmSize() {
         return Optional.ofNullable(this.shmSize);
     }
@@ -560,6 +760,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="start")
     private @Nullable Output<Boolean> start;
 
+    /**
+     * @return If `true`, then the Docker container will be started after creation. If `false`, then the container is only created.
+     * Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> start() {
         return Optional.ofNullable(this.start);
     }
@@ -571,6 +776,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stdinOpen")
     private @Nullable Output<Boolean> stdinOpen;
 
+    /**
+     * @return If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> stdinOpen() {
         return Optional.ofNullable(this.stdinOpen);
     }
@@ -582,6 +791,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageOpts")
     private @Nullable Output<Map<String,Object>> storageOpts;
 
+    /**
+     * @return Key/value pairs for the storage driver options, e.g. `size`: `120G`
+     * 
+     */
     public Optional<Output<Map<String,Object>>> storageOpts() {
         return Optional.ofNullable(this.storageOpts);
     }
@@ -593,6 +806,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sysctls")
     private @Nullable Output<Map<String,Object>> sysctls;
 
+    /**
+     * @return A map of kernel parameters (sysctls) to set in the container.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> sysctls() {
         return Optional.ofNullable(this.sysctls);
     }
@@ -604,6 +821,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tmpfs")
     private @Nullable Output<Map<String,Object>> tmpfs;
 
+    /**
+     * @return A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> tmpfs() {
         return Optional.ofNullable(this.tmpfs);
     }
@@ -615,6 +836,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tty")
     private @Nullable Output<Boolean> tty;
 
+    /**
+     * @return If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> tty() {
         return Optional.ofNullable(this.tty);
     }
@@ -626,6 +851,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ulimits")
     private @Nullable Output<List<ContainerUlimitArgs>> ulimits;
 
+    /**
+     * @return Ulimit options to add.
+     * 
+     */
     public Optional<Output<List<ContainerUlimitArgs>>> ulimits() {
         return Optional.ofNullable(this.ulimits);
     }
@@ -638,6 +867,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uploads")
     private @Nullable Output<List<ContainerUploadArgs>> uploads;
 
+    /**
+     * @return Specifies files to upload to the container before starting it. Only one of `content` or `content_base64` can be set and
+     * at least one of them has to be set.
+     * 
+     */
     public Optional<Output<List<ContainerUploadArgs>>> uploads() {
         return Optional.ofNullable(this.uploads);
     }
@@ -650,6 +884,11 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="user")
     private @Nullable Output<String> user;
 
+    /**
+     * @return User used for run the first process. Format is `user` or `user:group` which user and group can be passed literraly or by
+     * name.
+     * 
+     */
     public Optional<Output<String>> user() {
         return Optional.ofNullable(this.user);
     }
@@ -661,6 +900,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="usernsMode")
     private @Nullable Output<String> usernsMode;
 
+    /**
+     * @return Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
+     * 
+     */
     public Optional<Output<String>> usernsMode() {
         return Optional.ofNullable(this.usernsMode);
     }
@@ -672,6 +915,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
     private @Nullable Output<List<ContainerVolumeArgs>> volumes;
 
+    /**
+     * @return Spec for mounting volumes in the container.
+     * 
+     */
     public Optional<Output<List<ContainerVolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -683,6 +930,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workingDir")
     private @Nullable Output<String> workingDir;
 
+    /**
+     * @return The working directory for commands to run in.
+     * 
+     */
     public Optional<Output<String>> workingDir() {
         return Optional.ofNullable(this.workingDir);
     }
@@ -767,595 +1018,1468 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attach If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attach(@Nullable Output<Boolean> attach) {
             $.attach = attach;
             return this;
         }
 
+        /**
+         * @param attach If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attach(Boolean attach) {
             return attach(Output.of(attach));
         }
 
+        /**
+         * @param capabilities Add or drop certrain linux capabilities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable Output<ContainerCapabilitiesArgs> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities Add or drop certrain linux capabilities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(ContainerCapabilitiesArgs capabilities) {
             return capabilities(Output.of(capabilities));
         }
 
+        /**
+         * @param command The command to use to start the container. For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be
+         * `[&#34;/usr/bin/myprogram&#34;,&#34;-&#34;,&#34;baz.con&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable Output<List<String>> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command The command to use to start the container. For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be
+         * `[&#34;/usr/bin/myprogram&#34;,&#34;-&#34;,&#34;baz.con&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param command The command to use to start the container. For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be
+         * `[&#34;/usr/bin/myprogram&#34;,&#34;-&#34;,&#34;baz.con&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param cpuSet A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuSet(@Nullable Output<String> cpuSet) {
             $.cpuSet = cpuSet;
             return this;
         }
 
+        /**
+         * @param cpuSet A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuSet(String cpuSet) {
             return cpuSet(Output.of(cpuSet));
         }
 
+        /**
+         * @param cpuShares CPU shares (relative weight) for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
             $.cpuShares = cpuShares;
             return this;
         }
 
+        /**
+         * @param cpuShares CPU shares (relative weight) for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuShares(Integer cpuShares) {
             return cpuShares(Output.of(cpuShares));
         }
 
+        /**
+         * @param destroyGraceSeconds If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on
+         * successful stop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyGraceSeconds(@Nullable Output<Integer> destroyGraceSeconds) {
             $.destroyGraceSeconds = destroyGraceSeconds;
             return this;
         }
 
+        /**
+         * @param destroyGraceSeconds If defined will attempt to stop the container before destroying. Container will be destroyed after `n` seconds or on
+         * successful stop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destroyGraceSeconds(Integer destroyGraceSeconds) {
             return destroyGraceSeconds(Output.of(destroyGraceSeconds));
         }
 
+        /**
+         * @param devices Bind devices to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devices(@Nullable Output<List<ContainerDeviceArgs>> devices) {
             $.devices = devices;
             return this;
         }
 
+        /**
+         * @param devices Bind devices to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devices(List<ContainerDeviceArgs> devices) {
             return devices(Output.of(devices));
         }
 
+        /**
+         * @param devices Bind devices to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devices(ContainerDeviceArgs... devices) {
             return devices(List.of(devices));
         }
 
+        /**
+         * @param dns DNS servers to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dns(@Nullable Output<List<String>> dns) {
             $.dns = dns;
             return this;
         }
 
+        /**
+         * @param dns DNS servers to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dns(List<String> dns) {
             return dns(Output.of(dns));
         }
 
+        /**
+         * @param dns DNS servers to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dns(String... dns) {
             return dns(List.of(dns));
         }
 
+        /**
+         * @param dnsOpts DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsOpts(@Nullable Output<List<String>> dnsOpts) {
             $.dnsOpts = dnsOpts;
             return this;
         }
 
+        /**
+         * @param dnsOpts DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsOpts(List<String> dnsOpts) {
             return dnsOpts(Output.of(dnsOpts));
         }
 
+        /**
+         * @param dnsOpts DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsOpts(String... dnsOpts) {
             return dnsOpts(List.of(dnsOpts));
         }
 
+        /**
+         * @param dnsSearches DNS search domains that are used when bare unqualified hostnames are used inside of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSearches(@Nullable Output<List<String>> dnsSearches) {
             $.dnsSearches = dnsSearches;
             return this;
         }
 
+        /**
+         * @param dnsSearches DNS search domains that are used when bare unqualified hostnames are used inside of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSearches(List<String> dnsSearches) {
             return dnsSearches(Output.of(dnsSearches));
         }
 
+        /**
+         * @param dnsSearches DNS search domains that are used when bare unqualified hostnames are used inside of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSearches(String... dnsSearches) {
             return dnsSearches(List.of(dnsSearches));
         }
 
+        /**
+         * @param domainname Domain name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainname(@Nullable Output<String> domainname) {
             $.domainname = domainname;
             return this;
         }
 
+        /**
+         * @param domainname Domain name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainname(String domainname) {
             return domainname(Output.of(domainname));
         }
 
+        /**
+         * @param entrypoints The command to use as the Entrypoint for the container. The Entrypoint allows you to configure a container to run as an
+         * executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be
+         * `&#34;/usr/bin/myprogra&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entrypoints(@Nullable Output<List<String>> entrypoints) {
             $.entrypoints = entrypoints;
             return this;
         }
 
+        /**
+         * @param entrypoints The command to use as the Entrypoint for the container. The Entrypoint allows you to configure a container to run as an
+         * executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be
+         * `&#34;/usr/bin/myprogra&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entrypoints(List<String> entrypoints) {
             return entrypoints(Output.of(entrypoints));
         }
 
+        /**
+         * @param entrypoints The command to use as the Entrypoint for the container. The Entrypoint allows you to configure a container to run as an
+         * executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be
+         * `&#34;/usr/bin/myprogra&#34;]`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entrypoints(String... entrypoints) {
             return entrypoints(List.of(entrypoints));
         }
 
+        /**
+         * @param envs Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder envs(@Nullable Output<List<String>> envs) {
             $.envs = envs;
             return this;
         }
 
+        /**
+         * @param envs Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder envs(List<String> envs) {
             return envs(Output.of(envs));
         }
 
+        /**
+         * @param envs Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`
+         * 
+         * @return builder
+         * 
+         */
         public Builder envs(String... envs) {
             return envs(List.of(envs));
         }
 
+        /**
+         * @param groupAdds Additional groups for the container user
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupAdds(@Nullable Output<List<String>> groupAdds) {
             $.groupAdds = groupAdds;
             return this;
         }
 
+        /**
+         * @param groupAdds Additional groups for the container user
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupAdds(List<String> groupAdds) {
             return groupAdds(Output.of(groupAdds));
         }
 
+        /**
+         * @param groupAdds Additional groups for the container user
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupAdds(String... groupAdds) {
             return groupAdds(List.of(groupAdds));
         }
 
+        /**
+         * @param healthcheck A test to perform to check that the container is healthy
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthcheck(@Nullable Output<ContainerHealthcheckArgs> healthcheck) {
             $.healthcheck = healthcheck;
             return this;
         }
 
+        /**
+         * @param healthcheck A test to perform to check that the container is healthy
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthcheck(ContainerHealthcheckArgs healthcheck) {
             return healthcheck(Output.of(healthcheck));
         }
 
+        /**
+         * @param hostname Hostname of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Hostname of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param hosts Additional hosts to add to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(@Nullable Output<List<ContainerHostArgs>> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts Additional hosts to add to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<ContainerHostArgs> hosts) {
             return hosts(Output.of(hosts));
         }
 
+        /**
+         * @param hosts Additional hosts to add to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(ContainerHostArgs... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param image The ID of the image to back this container. The easiest way to get this value is to use the `docker_image` resource as
+         * is shown in the example.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The ID of the image to back this container. The easiest way to get this value is to use the `docker_image` resource as
+         * is shown in the example.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param init Configured whether an init process should be injected for this container. If unset this will default to the `dockerd`
+         * defaults.
+         * 
+         * @return builder
+         * 
+         */
         public Builder init(@Nullable Output<Boolean> init) {
             $.init = init;
             return this;
         }
 
+        /**
+         * @param init Configured whether an init process should be injected for this container. If unset this will default to the `dockerd`
+         * defaults.
+         * 
+         * @return builder
+         * 
+         */
         public Builder init(Boolean init) {
             return init(Output.of(init));
         }
 
+        /**
+         * @param ipcMode IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:&lt;name|id&gt;` or
+         * `host`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipcMode(@Nullable Output<String> ipcMode) {
             $.ipcMode = ipcMode;
             return this;
         }
 
+        /**
+         * @param ipcMode IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:&lt;name|id&gt;` or
+         * `host`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipcMode(String ipcMode) {
             return ipcMode(Output.of(ipcMode));
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<ContainerLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<ContainerLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(ContainerLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param links Set of links for link based connectivity between containers that are running on the same host.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The --link flag is a legacy feature of Docker. It may eventually be removed.
+         * 
+         */
+        @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
         public Builder links(@Nullable Output<List<String>> links) {
             $.links = links;
             return this;
         }
 
+        /**
+         * @param links Set of links for link based connectivity between containers that are running on the same host.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The --link flag is a legacy feature of Docker. It may eventually be removed.
+         * 
+         */
+        @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
         public Builder links(List<String> links) {
             return links(Output.of(links));
         }
 
+        /**
+         * @param links Set of links for link based connectivity between containers that are running on the same host.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The --link flag is a legacy feature of Docker. It may eventually be removed.
+         * 
+         */
+        @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
         public Builder links(String... links) {
             return links(List.of(links));
         }
 
+        /**
+         * @param logDriver The logging driver to use for the container. Defaults to `json-file`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDriver(@Nullable Output<String> logDriver) {
             $.logDriver = logDriver;
             return this;
         }
 
+        /**
+         * @param logDriver The logging driver to use for the container. Defaults to `json-file`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDriver(String logDriver) {
             return logDriver(Output.of(logDriver));
         }
 
+        /**
+         * @param logOpts Key/value pairs to use as options for the logging driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logOpts(@Nullable Output<Map<String,Object>> logOpts) {
             $.logOpts = logOpts;
             return this;
         }
 
+        /**
+         * @param logOpts Key/value pairs to use as options for the logging driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logOpts(Map<String,Object> logOpts) {
             return logOpts(Output.of(logOpts));
         }
 
+        /**
+         * @param logs Save the container logs (`attach` must be enabled). Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(@Nullable Output<Boolean> logs) {
             $.logs = logs;
             return this;
         }
 
+        /**
+         * @param logs Save the container logs (`attach` must be enabled). Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(Boolean logs) {
             return logs(Output.of(logs));
         }
 
+        /**
+         * @param maxRetryCount The maximum amount of times to an attempt a restart when `restart` is set to &#39;on-failure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetryCount(@Nullable Output<Integer> maxRetryCount) {
             $.maxRetryCount = maxRetryCount;
             return this;
         }
 
+        /**
+         * @param maxRetryCount The maximum amount of times to an attempt a restart when `restart` is set to &#39;on-failure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetryCount(Integer maxRetryCount) {
             return maxRetryCount(Output.of(maxRetryCount));
         }
 
+        /**
+         * @param memory The memory limit for the container in MBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable Output<Integer> memory) {
             $.memory = memory;
             return this;
         }
 
+        /**
+         * @param memory The memory limit for the container in MBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(Integer memory) {
             return memory(Output.of(memory));
         }
 
+        /**
+         * @param memorySwap The total memory limit (memory + swap) for the container in MBs. This setting may compute to `-1` after `terraform
+         * apply` if the target host doesn&#39;t support memory swap, when that is the case docker will use a soft limitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
             $.memorySwap = memorySwap;
             return this;
         }
 
+        /**
+         * @param memorySwap The total memory limit (memory + swap) for the container in MBs. This setting may compute to `-1` after `terraform
+         * apply` if the target host doesn&#39;t support memory swap, when that is the case docker will use a soft limitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySwap(Integer memorySwap) {
             return memorySwap(Output.of(memorySwap));
         }
 
+        /**
+         * @param mounts Specification for mounts to be added to containers created as part of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mounts(@Nullable Output<List<ContainerMountArgs>> mounts) {
             $.mounts = mounts;
             return this;
         }
 
+        /**
+         * @param mounts Specification for mounts to be added to containers created as part of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mounts(List<ContainerMountArgs> mounts) {
             return mounts(Output.of(mounts));
         }
 
+        /**
+         * @param mounts Specification for mounts to be added to containers created as part of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mounts(ContainerMountArgs... mounts) {
             return mounts(List.of(mounts));
         }
 
+        /**
+         * @param mustRun If `true`, then the Docker container will be kept running. If `false`, then as long as the container exists, Terraform
+         * assumes it is successful. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mustRun(@Nullable Output<Boolean> mustRun) {
             $.mustRun = mustRun;
             return this;
         }
 
+        /**
+         * @param mustRun If `true`, then the Docker container will be kept running. If `false`, then as long as the container exists, Terraform
+         * assumes it is successful. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mustRun(Boolean mustRun) {
             return mustRun(Output.of(mustRun));
         }
 
+        /**
+         * @param name The name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkAliases Set an alias for the container in all specified networks
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use networks_advanced instead. Will be removed in v3.0.0
+         * 
+         */
+        @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
         public Builder networkAliases(@Nullable Output<List<String>> networkAliases) {
             $.networkAliases = networkAliases;
             return this;
         }
 
+        /**
+         * @param networkAliases Set an alias for the container in all specified networks
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use networks_advanced instead. Will be removed in v3.0.0
+         * 
+         */
+        @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
         public Builder networkAliases(List<String> networkAliases) {
             return networkAliases(Output.of(networkAliases));
         }
 
+        /**
+         * @param networkAliases Set an alias for the container in all specified networks
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use networks_advanced instead. Will be removed in v3.0.0
+         * 
+         */
+        @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
         public Builder networkAliases(String... networkAliases) {
             return networkAliases(List.of(networkAliases));
         }
 
+        /**
+         * @param networkMode Network mode of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(@Nullable Output<String> networkMode) {
             $.networkMode = networkMode;
             return this;
         }
 
+        /**
+         * @param networkMode Network mode of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(String networkMode) {
             return networkMode(Output.of(networkMode));
         }
 
+        /**
+         * @param networks ID of the networks in which the container is.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use networks_advanced instead. Will be removed in v3.0.0
+         * 
+         */
+        @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
         public Builder networks(@Nullable Output<List<String>> networks) {
             $.networks = networks;
             return this;
         }
 
+        /**
+         * @param networks ID of the networks in which the container is.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use networks_advanced instead. Will be removed in v3.0.0
+         * 
+         */
+        @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
         public Builder networks(List<String> networks) {
             return networks(Output.of(networks));
         }
 
+        /**
+         * @param networks ID of the networks in which the container is.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use networks_advanced instead. Will be removed in v3.0.0
+         * 
+         */
+        @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
         public Builder networks(String... networks) {
             return networks(List.of(networks));
         }
 
+        /**
+         * @param networksAdvanced The networks the container is attached to
+         * 
+         * @return builder
+         * 
+         */
         public Builder networksAdvanced(@Nullable Output<List<ContainerNetworksAdvancedArgs>> networksAdvanced) {
             $.networksAdvanced = networksAdvanced;
             return this;
         }
 
+        /**
+         * @param networksAdvanced The networks the container is attached to
+         * 
+         * @return builder
+         * 
+         */
         public Builder networksAdvanced(List<ContainerNetworksAdvancedArgs> networksAdvanced) {
             return networksAdvanced(Output.of(networksAdvanced));
         }
 
+        /**
+         * @param networksAdvanced The networks the container is attached to
+         * 
+         * @return builder
+         * 
+         */
         public Builder networksAdvanced(ContainerNetworksAdvancedArgs... networksAdvanced) {
             return networksAdvanced(List.of(networksAdvanced));
         }
 
+        /**
+         * @param pidMode he PID (Process) Namespace mode for the container. Either `container:&lt;name|id&gt;` or `host`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pidMode(@Nullable Output<String> pidMode) {
             $.pidMode = pidMode;
             return this;
         }
 
+        /**
+         * @param pidMode he PID (Process) Namespace mode for the container. Either `container:&lt;name|id&gt;` or `host`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pidMode(String pidMode) {
             return pidMode(Output.of(pidMode));
         }
 
+        /**
+         * @param ports Publish a container&#39;s port(s) to the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Publish a container&#39;s port(s) to the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<ContainerPortArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports Publish a container&#39;s port(s) to the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(ContainerPortArgs... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param privileged If `true`, the container runs in privileged mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privileged(@Nullable Output<Boolean> privileged) {
             $.privileged = privileged;
             return this;
         }
 
+        /**
+         * @param privileged If `true`, the container runs in privileged mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privileged(Boolean privileged) {
             return privileged(Output.of(privileged));
         }
 
+        /**
+         * @param publishAllPorts Publish all ports of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishAllPorts(@Nullable Output<Boolean> publishAllPorts) {
             $.publishAllPorts = publishAllPorts;
             return this;
         }
 
+        /**
+         * @param publishAllPorts Publish all ports of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishAllPorts(Boolean publishAllPorts) {
             return publishAllPorts(Output.of(publishAllPorts));
         }
 
+        /**
+         * @param readOnly If `true`, the container will be started as readonly. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly If `true`, the container will be started as readonly. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param removeVolumes If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder removeVolumes(@Nullable Output<Boolean> removeVolumes) {
             $.removeVolumes = removeVolumes;
             return this;
         }
 
+        /**
+         * @param removeVolumes If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder removeVolumes(Boolean removeVolumes) {
             return removeVolumes(Output.of(removeVolumes));
         }
 
+        /**
+         * @param restart The restart policy for the container. Must be one of &#39;no&#39;, &#39;on-failure&#39;, &#39;always&#39;, &#39;unless-stopped&#39;. Defaults to `no`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restart(@Nullable Output<String> restart) {
             $.restart = restart;
             return this;
         }
 
+        /**
+         * @param restart The restart policy for the container. Must be one of &#39;no&#39;, &#39;on-failure&#39;, &#39;always&#39;, &#39;unless-stopped&#39;. Defaults to `no`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restart(String restart) {
             return restart(Output.of(restart));
         }
 
+        /**
+         * @param rm If `true`, then the container will be automatically removed after his execution. Terraform won&#39;t check this container
+         * after creation. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rm(@Nullable Output<Boolean> rm) {
             $.rm = rm;
             return this;
         }
 
+        /**
+         * @param rm If `true`, then the container will be automatically removed after his execution. Terraform won&#39;t check this container
+         * after creation. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rm(Boolean rm) {
             return rm(Output.of(rm));
         }
 
+        /**
+         * @param securityOpts List of string values to customize labels for MLS systems, such as SELinux. See
+         * https://docs.docker.com/engine/reference/run/#security-configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
             $.securityOpts = securityOpts;
             return this;
         }
 
+        /**
+         * @param securityOpts List of string values to customize labels for MLS systems, such as SELinux. See
+         * https://docs.docker.com/engine/reference/run/#security-configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityOpts(List<String> securityOpts) {
             return securityOpts(Output.of(securityOpts));
         }
 
+        /**
+         * @param securityOpts List of string values to customize labels for MLS systems, such as SELinux. See
+         * https://docs.docker.com/engine/reference/run/#security-configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityOpts(String... securityOpts) {
             return securityOpts(List.of(securityOpts));
         }
 
+        /**
+         * @param shmSize Size of `/dev/shm` in MBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shmSize(@Nullable Output<Integer> shmSize) {
             $.shmSize = shmSize;
             return this;
         }
 
+        /**
+         * @param shmSize Size of `/dev/shm` in MBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shmSize(Integer shmSize) {
             return shmSize(Output.of(shmSize));
         }
 
+        /**
+         * @param start If `true`, then the Docker container will be started after creation. If `false`, then the container is only created.
+         * Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable Output<Boolean> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start If `true`, then the Docker container will be started after creation. If `false`, then the container is only created.
+         * Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(Boolean start) {
             return start(Output.of(start));
         }
 
+        /**
+         * @param stdinOpen If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stdinOpen(@Nullable Output<Boolean> stdinOpen) {
             $.stdinOpen = stdinOpen;
             return this;
         }
 
+        /**
+         * @param stdinOpen If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stdinOpen(Boolean stdinOpen) {
             return stdinOpen(Output.of(stdinOpen));
         }
 
+        /**
+         * @param storageOpts Key/value pairs for the storage driver options, e.g. `size`: `120G`
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageOpts(@Nullable Output<Map<String,Object>> storageOpts) {
             $.storageOpts = storageOpts;
             return this;
         }
 
+        /**
+         * @param storageOpts Key/value pairs for the storage driver options, e.g. `size`: `120G`
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageOpts(Map<String,Object> storageOpts) {
             return storageOpts(Output.of(storageOpts));
         }
 
+        /**
+         * @param sysctls A map of kernel parameters (sysctls) to set in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sysctls(@Nullable Output<Map<String,Object>> sysctls) {
             $.sysctls = sysctls;
             return this;
         }
 
+        /**
+         * @param sysctls A map of kernel parameters (sysctls) to set in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sysctls(Map<String,Object> sysctls) {
             return sysctls(Output.of(sysctls));
         }
 
+        /**
+         * @param tmpfs A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tmpfs(@Nullable Output<Map<String,Object>> tmpfs) {
             $.tmpfs = tmpfs;
             return this;
         }
 
+        /**
+         * @param tmpfs A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tmpfs(Map<String,Object> tmpfs) {
             return tmpfs(Output.of(tmpfs));
         }
 
+        /**
+         * @param tty If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tty(@Nullable Output<Boolean> tty) {
             $.tty = tty;
             return this;
         }
 
+        /**
+         * @param tty If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tty(Boolean tty) {
             return tty(Output.of(tty));
         }
 
+        /**
+         * @param ulimits Ulimit options to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ulimits(@Nullable Output<List<ContainerUlimitArgs>> ulimits) {
             $.ulimits = ulimits;
             return this;
         }
 
+        /**
+         * @param ulimits Ulimit options to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ulimits(List<ContainerUlimitArgs> ulimits) {
             return ulimits(Output.of(ulimits));
         }
 
+        /**
+         * @param ulimits Ulimit options to add.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ulimits(ContainerUlimitArgs... ulimits) {
             return ulimits(List.of(ulimits));
         }
 
+        /**
+         * @param uploads Specifies files to upload to the container before starting it. Only one of `content` or `content_base64` can be set and
+         * at least one of them has to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploads(@Nullable Output<List<ContainerUploadArgs>> uploads) {
             $.uploads = uploads;
             return this;
         }
 
+        /**
+         * @param uploads Specifies files to upload to the container before starting it. Only one of `content` or `content_base64` can be set and
+         * at least one of them has to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploads(List<ContainerUploadArgs> uploads) {
             return uploads(Output.of(uploads));
         }
 
+        /**
+         * @param uploads Specifies files to upload to the container before starting it. Only one of `content` or `content_base64` can be set and
+         * at least one of them has to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploads(ContainerUploadArgs... uploads) {
             return uploads(List.of(uploads));
         }
 
+        /**
+         * @param user User used for run the first process. Format is `user` or `user:group` which user and group can be passed literraly or by
+         * name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(@Nullable Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user User used for run the first process. Format is `user` or `user:group` which user and group can be passed literraly or by
+         * name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }
 
+        /**
+         * @param usernsMode Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernsMode(@Nullable Output<String> usernsMode) {
             $.usernsMode = usernsMode;
             return this;
         }
 
+        /**
+         * @param usernsMode Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernsMode(String usernsMode) {
             return usernsMode(Output.of(usernsMode));
         }
 
+        /**
+         * @param volumes Spec for mounting volumes in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<ContainerVolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes Spec for mounting volumes in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<ContainerVolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes Spec for mounting volumes in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(ContainerVolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }
 
+        /**
+         * @param workingDir The working directory for commands to run in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDir(@Nullable Output<String> workingDir) {
             $.workingDir = workingDir;
             return this;
         }
 
+        /**
+         * @param workingDir The working directory for commands to run in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDir(String workingDir) {
             return workingDir(Output.of(workingDir));
         }

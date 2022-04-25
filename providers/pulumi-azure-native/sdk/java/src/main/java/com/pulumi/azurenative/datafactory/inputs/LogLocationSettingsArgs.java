@@ -27,6 +27,10 @@ public final class LogLocationSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="linkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Log storage linked service reference.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -38,6 +42,10 @@ public final class LogLocationSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="path")
     private @Nullable Output<Object> path;
 
+    /**
+     * @return The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -67,20 +75,44 @@ public final class LogLocationSettingsArgs extends com.pulumi.resources.Resource
             $ = new LogLocationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedServiceName Log storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Log storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param path The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<Object> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Object path) {
             return path(Output.of(path));
         }

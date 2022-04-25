@@ -25,6 +25,11 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends com.pulumi.re
     @Import(name="configOverrides")
     private @Nullable Output<Map<String,String>> configOverrides;
 
+    /**
+     * @return A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
+     * The mappings override system defaults (some keys cannot be overridden)
+     * 
+     */
     public Optional<Output<Map<String,String>>> configOverrides() {
         return Optional.ofNullable(this.configOverrides);
     }
@@ -37,6 +42,11 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends com.pulumi.re
     @Import(name="kerberosConfig")
     private @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
 
+    /**
+     * @return Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs>> kerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }
@@ -48,6 +58,10 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends com.pulumi.re
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return The Hive metastore schema version.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -78,29 +92,69 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends com.pulumi.re
             $ = new MetastoreServiceHiveMetastoreConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configOverrides A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
+         * The mappings override system defaults (some keys cannot be overridden)
+         * 
+         * @return builder
+         * 
+         */
         public Builder configOverrides(@Nullable Output<Map<String,String>> configOverrides) {
             $.configOverrides = configOverrides;
             return this;
         }
 
+        /**
+         * @param configOverrides A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
+         * The mappings override system defaults (some keys cannot be overridden)
+         * 
+         * @return builder
+         * 
+         */
         public Builder configOverrides(Map<String,String> configOverrides) {
             return configOverrides(Output.of(configOverrides));
         }
 
+        /**
+         * @param kerberosConfig Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig) {
             $.kerberosConfig = kerberosConfig;
             return this;
         }
 
+        /**
+         * @param kerberosConfig Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(MetastoreServiceHiveMetastoreConfigKerberosConfigArgs kerberosConfig) {
             return kerberosConfig(Output.of(kerberosConfig));
         }
 
+        /**
+         * @param version The Hive metastore schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The Hive metastore schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

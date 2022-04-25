@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageRawDisk {
     /**
-     * The format used to encode and transmit the block device, which
+     * @return The format used to encode and transmit the block device, which
      * should be TAR. This is just a container and transmission format
      * and not a runtime format. Provided by the client when the disk
      * image is created.
@@ -22,13 +22,13 @@ public final class ImageRawDisk {
      */
     private final @Nullable String containerType;
     /**
-     * An optional SHA1 checksum of the disk image before unpackaging.
+     * @return An optional SHA1 checksum of the disk image before unpackaging.
      * This is provided by the client when the disk image is created.
      * 
      */
     private final @Nullable String sha1;
     /**
-     * The full Google Cloud Storage URL where disk storage is stored
+     * @return The full Google Cloud Storage URL where disk storage is stored
      * You must provide either this property or the sourceDisk property
      * but not both.
      * 
@@ -46,31 +46,31 @@ public final class ImageRawDisk {
     }
 
     /**
-     * The format used to encode and transmit the block device, which
+     * @return The format used to encode and transmit the block device, which
      * should be TAR. This is just a container and transmission format
      * and not a runtime format. Provided by the client when the disk
      * image is created.
      * Default value is `TAR`.
      * Possible values are `TAR`.
      * 
-    */
+     */
     public Optional<String> containerType() {
         return Optional.ofNullable(this.containerType);
     }
     /**
-     * An optional SHA1 checksum of the disk image before unpackaging.
+     * @return An optional SHA1 checksum of the disk image before unpackaging.
      * This is provided by the client when the disk image is created.
      * 
-    */
+     */
     public Optional<String> sha1() {
         return Optional.ofNullable(this.sha1);
     }
     /**
-     * The full Google Cloud Storage URL where disk storage is stored
+     * @return The full Google Cloud Storage URL where disk storage is stored
      * You must provide either this property or the sourceDisk property
      * but not both.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }

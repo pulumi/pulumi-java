@@ -23,6 +23,10 @@ public final class OutputConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destination", required=true)
     private String destination;
 
+    /**
+     * @return The destination for writing trace data. Currently only BigQuery is supported. E.g.: &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34;
+     * 
+     */
     public String destination() {
         return this.destination;
     }
@@ -51,6 +55,12 @@ public final class OutputConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new OutputConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination The destination for writing trace data. Currently only BigQuery is supported. E.g.: &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             $.destination = destination;
             return this;

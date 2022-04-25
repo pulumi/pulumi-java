@@ -24,6 +24,10 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return The name of the bucket this analytics configuration is associated with.
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -35,6 +39,10 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
     @Import(name="filter")
     private @Nullable Output<AnalyticsConfigurationFilterGetArgs> filter;
 
+    /**
+     * @return Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
+     * 
+     */
     public Optional<Output<AnalyticsConfigurationFilterGetArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -46,6 +54,10 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique identifier of the analytics configuration for the bucket.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
     @Import(name="storageClassAnalysis")
     private @Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis;
 
+    /**
+     * @return Configuration for the analytics data export (documented below).
+     * 
+     */
     public Optional<Output<AnalyticsConfigurationStorageClassAnalysisGetArgs>> storageClassAnalysis() {
         return Optional.ofNullable(this.storageClassAnalysis);
     }
@@ -88,38 +104,86 @@ public final class AnalyticsConfigurationState extends com.pulumi.resources.Reso
             $ = new AnalyticsConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket this analytics configuration is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the bucket this analytics configuration is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param filter Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<AnalyticsConfigurationFilterGetArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(AnalyticsConfigurationFilterGetArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param name Unique identifier of the analytics configuration for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique identifier of the analytics configuration for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param storageClassAnalysis Configuration for the analytics data export (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassAnalysis(@Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis) {
             $.storageClassAnalysis = storageClassAnalysis;
             return this;
         }
 
+        /**
+         * @param storageClassAnalysis Configuration for the analytics data export (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassAnalysis(AnalyticsConfigurationStorageClassAnalysisGetArgs storageClassAnalysis) {
             return storageClassAnalysis(Output.of(storageClassAnalysis));
         }

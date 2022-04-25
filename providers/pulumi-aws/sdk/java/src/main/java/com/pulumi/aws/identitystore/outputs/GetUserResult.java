@@ -13,14 +13,14 @@ import java.util.Objects;
 public final class GetUserResult {
     private final List<GetUserFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String identityStoreId;
     private final String userId;
     /**
-     * The user&#39;s user name value.
+     * @return The user&#39;s user name value.
      * 
      */
     private final String userName;
@@ -43,9 +43,9 @@ public final class GetUserResult {
         return this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -56,9 +56,9 @@ public final class GetUserResult {
         return this.userId;
     }
     /**
-     * The user&#39;s user name value.
+     * @return The user&#39;s user name value.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

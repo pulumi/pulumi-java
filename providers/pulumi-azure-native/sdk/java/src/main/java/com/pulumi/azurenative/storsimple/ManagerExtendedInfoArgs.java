@@ -23,6 +23,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="algorithm", required=true)
     private Output<String> algorithm;
 
+    /**
+     * @return Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
+     * 
+     */
     public Output<String> algorithm() {
         return this.algorithm;
     }
@@ -34,6 +38,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="encryptionKey")
     private @Nullable Output<String> encryptionKey;
 
+    /**
+     * @return Represents the CEK of the resource.
+     * 
+     */
     public Optional<Output<String>> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
@@ -45,6 +53,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="encryptionKeyThumbprint")
     private @Nullable Output<String> encryptionKeyThumbprint;
 
+    /**
+     * @return Represents the Cert thumbprint that was used to encrypt the CEK.
+     * 
+     */
     public Optional<Output<String>> encryptionKeyThumbprint() {
         return Optional.ofNullable(this.encryptionKeyThumbprint);
     }
@@ -56,6 +68,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="integrityKey", required=true)
     private Output<String> integrityKey;
 
+    /**
+     * @return Represents the CIK of the resource.
+     * 
+     */
     public Output<String> integrityKey() {
         return this.integrityKey;
     }
@@ -67,6 +83,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="kind")
     private @Nullable Output<Kind> kind;
 
+    /**
+     * @return The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     public Optional<Output<Kind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -78,6 +98,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="managerName", required=true)
     private Output<String> managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public Output<String> managerName() {
         return this.managerName;
     }
@@ -89,6 +113,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="portalCertificateThumbprint")
     private @Nullable Output<String> portalCertificateThumbprint;
 
+    /**
+     * @return Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
+     * 
+     */
     public Optional<Output<String>> portalCertificateThumbprint() {
         return Optional.ofNullable(this.portalCertificateThumbprint);
     }
@@ -100,6 +128,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -111,6 +143,10 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the extended info being persisted.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -147,83 +183,191 @@ public final class ManagerExtendedInfoArgs extends com.pulumi.resources.Resource
             $ = new ManagerExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Output<String> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param encryptionKey Represents the CEK of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             $.encryptionKey = encryptionKey;
             return this;
         }
 
+        /**
+         * @param encryptionKey Represents the CEK of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(String encryptionKey) {
             return encryptionKey(Output.of(encryptionKey));
         }
 
+        /**
+         * @param encryptionKeyThumbprint Represents the Cert thumbprint that was used to encrypt the CEK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyThumbprint(@Nullable Output<String> encryptionKeyThumbprint) {
             $.encryptionKeyThumbprint = encryptionKeyThumbprint;
             return this;
         }
 
+        /**
+         * @param encryptionKeyThumbprint Represents the Cert thumbprint that was used to encrypt the CEK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyThumbprint(String encryptionKeyThumbprint) {
             return encryptionKeyThumbprint(Output.of(encryptionKeyThumbprint));
         }
 
+        /**
+         * @param integrityKey Represents the CIK of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrityKey(Output<String> integrityKey) {
             $.integrityKey = integrityKey;
             return this;
         }
 
+        /**
+         * @param integrityKey Represents the CIK of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrityKey(String integrityKey) {
             return integrityKey(Output.of(integrityKey));
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Kind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(Output<String> managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             return managerName(Output.of(managerName));
         }
 
+        /**
+         * @param portalCertificateThumbprint Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalCertificateThumbprint(@Nullable Output<String> portalCertificateThumbprint) {
             $.portalCertificateThumbprint = portalCertificateThumbprint;
             return this;
         }
 
+        /**
+         * @param portalCertificateThumbprint Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalCertificateThumbprint(String portalCertificateThumbprint) {
             return portalCertificateThumbprint(Output.of(portalCertificateThumbprint));
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param version The version of the extended info being persisted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the extended info being persisted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

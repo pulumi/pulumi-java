@@ -23,6 +23,10 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
     @Import(name="affinity")
     private @Nullable Output<String> affinity;
 
+    /**
+     * @return The affinity setting for an instance on a Dedicated Host.
+     * 
+     */
     public Optional<Output<String>> affinity() {
         return Optional.ofNullable(this.affinity);
     }
@@ -34,6 +38,10 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return The Availability Zone for the instance.
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -45,6 +53,10 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
     @Import(name="groupName")
     private @Nullable Output<String> groupName;
 
+    /**
+     * @return The name of the placement group for the instance.
+     * 
+     */
     public Optional<Output<String>> groupName() {
         return Optional.ofNullable(this.groupName);
     }
@@ -56,6 +68,10 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
     @Import(name="hostId")
     private @Nullable Output<String> hostId;
 
+    /**
+     * @return The ID of the Dedicated Host for the instance.
+     * 
+     */
     public Optional<Output<String>> hostId() {
         return Optional.ofNullable(this.hostId);
     }
@@ -67,6 +83,10 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
     @Import(name="hostResourceGroupArn")
     private @Nullable Output<String> hostResourceGroupArn;
 
+    /**
+     * @return The ARN of the Host Resource Group in which to launch instances.
+     * 
+     */
     public Optional<Output<String>> hostResourceGroupArn() {
         return Optional.ofNullable(this.hostResourceGroupArn);
     }
@@ -78,6 +98,10 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
     @Import(name="partitionNumber")
     private @Nullable Output<Integer> partitionNumber;
 
+    /**
+     * @return The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
+     * 
+     */
     public Optional<Output<Integer>> partitionNumber() {
         return Optional.ofNullable(this.partitionNumber);
     }
@@ -89,6 +113,10 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
     @Import(name="spreadDomain")
     private @Nullable Output<String> spreadDomain;
 
+    /**
+     * @return Reserved for future use.
+     * 
+     */
     public Optional<Output<String>> spreadDomain() {
         return Optional.ofNullable(this.spreadDomain);
     }
@@ -100,6 +128,10 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
     @Import(name="tenancy")
     private @Nullable Output<String> tenancy;
 
+    /**
+     * @return The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
+     * 
+     */
     public Optional<Output<String>> tenancy() {
         return Optional.ofNullable(this.tenancy);
     }
@@ -135,74 +167,170 @@ public final class LaunchTemplatePlacementGetArgs extends com.pulumi.resources.R
             $ = new LaunchTemplatePlacementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affinity The affinity setting for an instance on a Dedicated Host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinity(@Nullable Output<String> affinity) {
             $.affinity = affinity;
             return this;
         }
 
+        /**
+         * @param affinity The affinity setting for an instance on a Dedicated Host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinity(String affinity) {
             return affinity(Output.of(affinity));
         }
 
+        /**
+         * @param availabilityZone The Availability Zone for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone The Availability Zone for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param groupName The name of the placement group for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(@Nullable Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName The name of the placement group for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }
 
+        /**
+         * @param hostId The ID of the Dedicated Host for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostId(@Nullable Output<String> hostId) {
             $.hostId = hostId;
             return this;
         }
 
+        /**
+         * @param hostId The ID of the Dedicated Host for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostId(String hostId) {
             return hostId(Output.of(hostId));
         }
 
+        /**
+         * @param hostResourceGroupArn The ARN of the Host Resource Group in which to launch instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostResourceGroupArn(@Nullable Output<String> hostResourceGroupArn) {
             $.hostResourceGroupArn = hostResourceGroupArn;
             return this;
         }
 
+        /**
+         * @param hostResourceGroupArn The ARN of the Host Resource Group in which to launch instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostResourceGroupArn(String hostResourceGroupArn) {
             return hostResourceGroupArn(Output.of(hostResourceGroupArn));
         }
 
+        /**
+         * @param partitionNumber The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionNumber(@Nullable Output<Integer> partitionNumber) {
             $.partitionNumber = partitionNumber;
             return this;
         }
 
+        /**
+         * @param partitionNumber The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionNumber(Integer partitionNumber) {
             return partitionNumber(Output.of(partitionNumber));
         }
 
+        /**
+         * @param spreadDomain Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spreadDomain(@Nullable Output<String> spreadDomain) {
             $.spreadDomain = spreadDomain;
             return this;
         }
 
+        /**
+         * @param spreadDomain Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spreadDomain(String spreadDomain) {
             return spreadDomain(Output.of(spreadDomain));
         }
 
+        /**
+         * @param tenancy The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenancy(@Nullable Output<String> tenancy) {
             $.tenancy = tenancy;
             return this;
         }
 
+        /**
+         * @param tenancy The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenancy(String tenancy) {
             return tenancy(Output.of(tenancy));
         }

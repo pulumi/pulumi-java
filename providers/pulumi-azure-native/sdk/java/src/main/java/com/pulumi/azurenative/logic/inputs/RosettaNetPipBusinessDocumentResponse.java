@@ -25,6 +25,10 @@ public final class RosettaNetPipBusinessDocumentResponse extends com.pulumi.reso
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The business document description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class RosettaNetPipBusinessDocumentResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The business document name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class RosettaNetPipBusinessDocumentResponse extends com.pulumi.reso
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The business document version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -77,16 +89,34 @@ public final class RosettaNetPipBusinessDocumentResponse extends com.pulumi.reso
             $ = new RosettaNetPipBusinessDocumentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The business document description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name The business document name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The business document version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

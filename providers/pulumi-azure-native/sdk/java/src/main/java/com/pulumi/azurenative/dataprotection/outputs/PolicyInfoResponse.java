@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class PolicyInfoResponse {
     private final String policyId;
     /**
-     * Policy parameters for the backup instance
+     * @return Policy parameters for the backup instance
      * 
      */
     private final @Nullable PolicyParametersResponse policyParameters;
@@ -34,9 +34,9 @@ public final class PolicyInfoResponse {
         return this.policyId;
     }
     /**
-     * Policy parameters for the backup instance
+     * @return Policy parameters for the backup instance
      * 
-    */
+     */
     public Optional<PolicyParametersResponse> policyParameters() {
         return Optional.ofNullable(this.policyParameters);
     }

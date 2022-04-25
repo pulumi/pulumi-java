@@ -26,6 +26,10 @@ public final class DayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="date")
     private @Nullable Integer date;
 
+    /**
+     * @return Date of the month
+     * 
+     */
     public Optional<Integer> date() {
         return Optional.ofNullable(this.date);
     }
@@ -37,6 +41,10 @@ public final class DayResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isLast")
     private @Nullable Boolean isLast;
 
+    /**
+     * @return Whether Date is last date of month
+     * 
+     */
     public Optional<Boolean> isLast() {
         return Optional.ofNullable(this.isLast);
     }
@@ -66,11 +74,23 @@ public final class DayResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DayResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param date Date of the month
+         * 
+         * @return builder
+         * 
+         */
         public Builder date(@Nullable Integer date) {
             $.date = date;
             return this;
         }
 
+        /**
+         * @param isLast Whether Date is last date of month
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLast(@Nullable Boolean isLast) {
             $.isLast = isLast;
             return this;

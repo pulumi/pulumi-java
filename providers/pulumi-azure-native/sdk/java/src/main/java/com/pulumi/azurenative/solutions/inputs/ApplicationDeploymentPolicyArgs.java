@@ -26,6 +26,10 @@ public final class ApplicationDeploymentPolicyArgs extends com.pulumi.resources.
     @Import(name="deploymentMode", required=true)
     private Output<Either<String,DeploymentMode>> deploymentMode;
 
+    /**
+     * @return The managed application deployment mode.
+     * 
+     */
     public Output<Either<String,DeploymentMode>> deploymentMode() {
         return this.deploymentMode;
     }
@@ -54,19 +58,43 @@ public final class ApplicationDeploymentPolicyArgs extends com.pulumi.resources.
             $ = new ApplicationDeploymentPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentMode The managed application deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(Output<Either<String,DeploymentMode>> deploymentMode) {
             $.deploymentMode = deploymentMode;
             return this;
         }
 
+        /**
+         * @param deploymentMode The managed application deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(Either<String,DeploymentMode> deploymentMode) {
             return deploymentMode(Output.of(deploymentMode));
         }
 
+        /**
+         * @param deploymentMode The managed application deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(String deploymentMode) {
             return deploymentMode(Either.ofLeft(deploymentMode));
         }
 
+        /**
+         * @param deploymentMode The managed application deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(DeploymentMode deploymentMode) {
             return deploymentMode(Either.ofRight(deploymentMode));
         }

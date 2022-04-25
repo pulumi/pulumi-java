@@ -30,6 +30,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inboundIpRules")
     private @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
+    /**
+     * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     * 
+     */
     public Optional<Output<List<InboundIpRuleArgs>>> inboundIpRules() {
         return Optional.ofNullable(this.inboundIpRules);
     }
@@ -41,6 +45,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputSchema")
     private @Nullable Output<Either<String,InputSchema>> inputSchema;
 
+    /**
+     * @return This determines the format that Event Grid should expect for incoming events published to the topic.
+     * 
+     */
     public Optional<Output<Either<String,InputSchema>>> inputSchema() {
         return Optional.ofNullable(this.inputSchema);
     }
@@ -52,6 +60,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputSchemaMapping")
     private @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
+    /**
+     * @return This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
+     * 
+     */
     public Optional<Output<JsonInputSchemaMappingArgs>> inputSchemaMapping() {
         return Optional.ofNullable(this.inputSchemaMapping);
     }
@@ -63,6 +75,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -75,6 +91,11 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return This determines if traffic is allowed over public network. By default it is enabled.
+     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -86,6 +107,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -97,6 +122,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -108,6 +137,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicName")
     private @Nullable Output<String> topicName;
 
+    /**
+     * @return Name of the topic.
+     * 
+     */
     public Optional<Output<String>> topicName() {
         return Optional.ofNullable(this.topicName);
     }
@@ -143,94 +176,224 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TopicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
             $.inboundIpRules = inboundIpRules;
             return this;
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(List<InboundIpRuleArgs> inboundIpRules) {
             return inboundIpRules(Output.of(inboundIpRules));
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
             return inboundIpRules(List.of(inboundIpRules));
         }
 
+        /**
+         * @param inputSchema This determines the format that Event Grid should expect for incoming events published to the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(@Nullable Output<Either<String,InputSchema>> inputSchema) {
             $.inputSchema = inputSchema;
             return this;
         }
 
+        /**
+         * @param inputSchema This determines the format that Event Grid should expect for incoming events published to the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(Either<String,InputSchema> inputSchema) {
             return inputSchema(Output.of(inputSchema));
         }
 
+        /**
+         * @param inputSchema This determines the format that Event Grid should expect for incoming events published to the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(String inputSchema) {
             return inputSchema(Either.ofLeft(inputSchema));
         }
 
+        /**
+         * @param inputSchema This determines the format that Event Grid should expect for incoming events published to the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(InputSchema inputSchema) {
             return inputSchema(Either.ofRight(inputSchema));
         }
 
+        /**
+         * @param inputSchemaMapping This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchemaMapping(@Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping) {
             $.inputSchemaMapping = inputSchemaMapping;
             return this;
         }
 
+        /**
+         * @param inputSchemaMapping This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchemaMapping(JsonInputSchemaMappingArgs inputSchemaMapping) {
             return inputSchemaMapping(Output.of(inputSchemaMapping));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param topicName Name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(@Nullable Output<String> topicName) {
             $.topicName = topicName;
             return this;
         }
 
+        /**
+         * @param topicName Name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             return topicName(Output.of(topicName));
         }

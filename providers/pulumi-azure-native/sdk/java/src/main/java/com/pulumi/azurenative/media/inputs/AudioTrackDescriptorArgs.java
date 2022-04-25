@@ -29,6 +29,10 @@ public final class AudioTrackDescriptorArgs extends com.pulumi.resources.Resourc
     @Import(name="channelMapping")
     private @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
+    /**
+     * @return Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     public Optional<Output<Either<String,ChannelMapping>>> channelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
@@ -41,6 +45,11 @@ public final class AudioTrackDescriptorArgs extends com.pulumi.resources.Resourc
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -70,28 +79,66 @@ public final class AudioTrackDescriptorArgs extends com.pulumi.resources.Resourc
             $ = new AudioTrackDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(@Nullable Output<Either<String,ChannelMapping>> channelMapping) {
             $.channelMapping = channelMapping;
             return this;
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(Either<String,ChannelMapping> channelMapping) {
             return channelMapping(Output.of(channelMapping));
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(String channelMapping) {
             return channelMapping(Either.ofLeft(channelMapping));
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(ChannelMapping channelMapping) {
             return channelMapping(Either.ofRight(channelMapping));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

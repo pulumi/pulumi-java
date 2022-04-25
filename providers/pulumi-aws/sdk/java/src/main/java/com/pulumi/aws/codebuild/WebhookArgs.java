@@ -24,6 +24,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="branchFilter")
     private @Nullable Output<String> branchFilter;
 
+    /**
+     * @return A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+     * 
+     */
     public Optional<Output<String>> branchFilter() {
         return Optional.ofNullable(this.branchFilter);
     }
@@ -35,6 +39,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildType")
     private @Nullable Output<String> buildType;
 
+    /**
+     * @return The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+     * 
+     */
     public Optional<Output<String>> buildType() {
         return Optional.ofNullable(this.buildType);
     }
@@ -46,6 +54,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filterGroups")
     private @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
 
+    /**
+     * @return Information about the webhook&#39;s trigger. Filter group blocks are documented below.
+     * 
+     */
     public Optional<Output<List<WebhookFilterGroupArgs>>> filterGroups() {
         return Optional.ofNullable(this.filterGroups);
     }
@@ -57,6 +69,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
     private Output<String> projectName;
 
+    /**
+     * @return The name of the build project.
+     * 
+     */
     public Output<String> projectName() {
         return this.projectName;
     }
@@ -88,42 +104,96 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchFilter A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchFilter(@Nullable Output<String> branchFilter) {
             $.branchFilter = branchFilter;
             return this;
         }
 
+        /**
+         * @param branchFilter A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchFilter(String branchFilter) {
             return branchFilter(Output.of(branchFilter));
         }
 
+        /**
+         * @param buildType The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildType(@Nullable Output<String> buildType) {
             $.buildType = buildType;
             return this;
         }
 
+        /**
+         * @param buildType The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildType(String buildType) {
             return buildType(Output.of(buildType));
         }
 
+        /**
+         * @param filterGroups Information about the webhook&#39;s trigger. Filter group blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupArgs>> filterGroups) {
             $.filterGroups = filterGroups;
             return this;
         }
 
+        /**
+         * @param filterGroups Information about the webhook&#39;s trigger. Filter group blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterGroups(List<WebhookFilterGroupArgs> filterGroups) {
             return filterGroups(Output.of(filterGroups));
         }
 
+        /**
+         * @param filterGroups Information about the webhook&#39;s trigger. Filter group blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterGroups(WebhookFilterGroupArgs... filterGroups) {
             return filterGroups(List.of(filterGroups));
         }
 
+        /**
+         * @param projectName The name of the build project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName The name of the build project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }

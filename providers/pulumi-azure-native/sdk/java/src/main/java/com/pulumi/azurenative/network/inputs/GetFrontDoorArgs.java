@@ -19,6 +19,10 @@ public final class GetFrontDoorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="frontDoorName", required=true)
     private String frontDoorName;
 
+    /**
+     * @return Name of the Front Door which is globally unique.
+     * 
+     */
     public String frontDoorName() {
         return this.frontDoorName;
     }
@@ -30,6 +34,10 @@ public final class GetFrontDoorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetFrontDoorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFrontDoorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frontDoorName Name of the Front Door which is globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontDoorName(String frontDoorName) {
             $.frontDoorName = frontDoorName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

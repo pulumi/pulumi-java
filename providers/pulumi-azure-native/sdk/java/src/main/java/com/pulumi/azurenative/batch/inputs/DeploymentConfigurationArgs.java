@@ -23,6 +23,10 @@ public final class DeploymentConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="cloudServiceConfiguration")
     private @Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration;
 
+    /**
+     * @return This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
+     * 
+     */
     public Optional<Output<CloudServiceConfigurationArgs>> cloudServiceConfiguration() {
         return Optional.ofNullable(this.cloudServiceConfiguration);
     }
@@ -34,6 +38,10 @@ public final class DeploymentConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="virtualMachineConfiguration")
     private @Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
 
+    /**
+     * @return This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+     * 
+     */
     public Optional<Output<VirtualMachineConfigurationArgs>> virtualMachineConfiguration() {
         return Optional.ofNullable(this.virtualMachineConfiguration);
     }
@@ -63,20 +71,44 @@ public final class DeploymentConfigurationArgs extends com.pulumi.resources.Reso
             $ = new DeploymentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudServiceConfiguration This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudServiceConfiguration(@Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration) {
             $.cloudServiceConfiguration = cloudServiceConfiguration;
             return this;
         }
 
+        /**
+         * @param cloudServiceConfiguration This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudServiceConfiguration(CloudServiceConfigurationArgs cloudServiceConfiguration) {
             return cloudServiceConfiguration(Output.of(cloudServiceConfiguration));
         }
 
+        /**
+         * @param virtualMachineConfiguration This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineConfiguration(@Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
             $.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
         }
 
+        /**
+         * @param virtualMachineConfiguration This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineConfiguration(VirtualMachineConfigurationArgs virtualMachineConfiguration) {
             return virtualMachineConfiguration(Output.of(virtualMachineConfiguration));
         }

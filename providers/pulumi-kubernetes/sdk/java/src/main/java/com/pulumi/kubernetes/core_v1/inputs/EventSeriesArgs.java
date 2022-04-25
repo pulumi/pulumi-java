@@ -27,6 +27,10 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Number of occurrences in this series up to the last heartbeat time
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastObservedTime")
     private @Nullable Output<String> lastObservedTime;
 
+    /**
+     * @return Time of the last occurrence observed
+     * 
+     */
     public Optional<Output<String>> lastObservedTime() {
         return Optional.ofNullable(this.lastObservedTime);
     }
@@ -49,6 +57,10 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -79,29 +91,65 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventSeriesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Number of occurrences in this series up to the last heartbeat time
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Number of occurrences in this series up to the last heartbeat time
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param lastObservedTime Time of the last occurrence observed
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastObservedTime(@Nullable Output<String> lastObservedTime) {
             $.lastObservedTime = lastObservedTime;
             return this;
         }
 
+        /**
+         * @param lastObservedTime Time of the last occurrence observed
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastObservedTime(String lastObservedTime) {
             return lastObservedTime(Output.of(lastObservedTime));
         }
 
+        /**
+         * @param state State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

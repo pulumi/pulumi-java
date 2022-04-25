@@ -25,6 +25,10 @@ public final class PeeringServiceSkuResponse extends com.pulumi.resources.Invoke
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the peering service SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class PeeringServiceSkuResponse extends com.pulumi.resources.Invoke
             $ = new PeeringServiceSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the peering service SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

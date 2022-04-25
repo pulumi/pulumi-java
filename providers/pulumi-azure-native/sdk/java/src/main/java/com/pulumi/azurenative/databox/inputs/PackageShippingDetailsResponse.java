@@ -23,6 +23,10 @@ public final class PackageShippingDetailsResponse extends com.pulumi.resources.I
     @Import(name="carrierName", required=true)
     private String carrierName;
 
+    /**
+     * @return Name of the carrier.
+     * 
+     */
     public String carrierName() {
         return this.carrierName;
     }
@@ -34,6 +38,10 @@ public final class PackageShippingDetailsResponse extends com.pulumi.resources.I
     @Import(name="trackingId", required=true)
     private String trackingId;
 
+    /**
+     * @return Tracking Id of shipment.
+     * 
+     */
     public String trackingId() {
         return this.trackingId;
     }
@@ -45,6 +53,10 @@ public final class PackageShippingDetailsResponse extends com.pulumi.resources.I
     @Import(name="trackingUrl", required=true)
     private String trackingUrl;
 
+    /**
+     * @return Url where shipment can be tracked.
+     * 
+     */
     public String trackingUrl() {
         return this.trackingUrl;
     }
@@ -75,16 +87,34 @@ public final class PackageShippingDetailsResponse extends com.pulumi.resources.I
             $ = new PackageShippingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierName Name of the carrier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierName(String carrierName) {
             $.carrierName = carrierName;
             return this;
         }
 
+        /**
+         * @param trackingId Tracking Id of shipment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingId(String trackingId) {
             $.trackingId = trackingId;
             return this;
         }
 
+        /**
+         * @param trackingUrl Url where shipment can be tracked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingUrl(String trackingUrl) {
             $.trackingUrl = trackingUrl;
             return this;

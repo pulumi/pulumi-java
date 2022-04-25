@@ -24,6 +24,10 @@ public final class ShardResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numShards", required=true)
     private Integer numShards;
 
+    /**
+     * @return The total number of shards.
+     * 
+     */
     public Integer numShards() {
         return this.numShards;
     }
@@ -35,6 +39,10 @@ public final class ShardResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shardIndex", required=true)
     private Integer shardIndex;
 
+    /**
+     * @return The index of the shard among all the shards.
+     * 
+     */
     public Integer shardIndex() {
         return this.shardIndex;
     }
@@ -46,6 +54,10 @@ public final class ShardResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="testTargetsForShard", required=true)
     private TestTargetsForShardResponse testTargetsForShard;
 
+    /**
+     * @return Test targets for each shard.
+     * 
+     */
     public TestTargetsForShardResponse testTargetsForShard() {
         return this.testTargetsForShard;
     }
@@ -76,16 +88,34 @@ public final class ShardResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ShardResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numShards The total number of shards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numShards(Integer numShards) {
             $.numShards = numShards;
             return this;
         }
 
+        /**
+         * @param shardIndex The index of the shard among all the shards.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardIndex(Integer shardIndex) {
             $.shardIndex = shardIndex;
             return this;
         }
 
+        /**
+         * @param testTargetsForShard Test targets for each shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTargetsForShard(TestTargetsForShardResponse testTargetsForShard) {
             $.testTargetsForShard = testTargetsForShard;
             return this;

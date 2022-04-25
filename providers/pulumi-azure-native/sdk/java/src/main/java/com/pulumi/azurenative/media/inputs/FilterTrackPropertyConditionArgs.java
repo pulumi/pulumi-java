@@ -27,6 +27,10 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
     @Import(name="operation", required=true)
     private Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
 
+    /**
+     * @return The track property condition operation.
+     * 
+     */
     public Output<Either<String,FilterTrackPropertyCompareOperation>> operation() {
         return this.operation;
     }
@@ -38,6 +42,10 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
     @Import(name="property", required=true)
     private Output<Either<String,FilterTrackPropertyType>> property;
 
+    /**
+     * @return The track property type.
+     * 
+     */
     public Output<Either<String,FilterTrackPropertyType>> property() {
         return this.property;
     }
@@ -49,6 +57,10 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The track property value.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -79,45 +91,105 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
             $ = new FilterTrackPropertyConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operation The track property condition operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(Output<Either<String,FilterTrackPropertyCompareOperation>> operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param operation The track property condition operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(Either<String,FilterTrackPropertyCompareOperation> operation) {
             return operation(Output.of(operation));
         }
 
+        /**
+         * @param operation The track property condition operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             return operation(Either.ofLeft(operation));
         }
 
+        /**
+         * @param operation The track property condition operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(FilterTrackPropertyCompareOperation operation) {
             return operation(Either.ofRight(operation));
         }
 
+        /**
+         * @param property The track property type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(Output<Either<String,FilterTrackPropertyType>> property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param property The track property type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(Either<String,FilterTrackPropertyType> property) {
             return property(Output.of(property));
         }
 
+        /**
+         * @param property The track property type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(String property) {
             return property(Either.ofLeft(property));
         }
 
+        /**
+         * @param property The track property type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(FilterTrackPropertyType property) {
             return property(Either.ofRight(property));
         }
 
+        /**
+         * @param value The track property value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The track property value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

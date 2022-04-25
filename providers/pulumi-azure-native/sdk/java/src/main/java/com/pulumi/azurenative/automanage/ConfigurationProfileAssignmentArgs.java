@@ -23,6 +23,10 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
     @Import(name="configurationProfileAssignmentName")
     private @Nullable Output<String> configurationProfileAssignmentName;
 
+    /**
+     * @return Name of the configuration profile assignment. Only default is supported.
+     * 
+     */
     public Optional<Output<String>> configurationProfileAssignmentName() {
         return Optional.ofNullable(this.configurationProfileAssignmentName);
     }
@@ -34,6 +38,10 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
     @Import(name="properties")
     private @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the configuration profile assignment.
+     * 
+     */
     public Optional<Output<ConfigurationProfileAssignmentPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
     @Import(name="vmName", required=true)
     private Output<String> vmName;
 
+    /**
+     * @return The name of the virtual machine.
+     * 
+     */
     public Output<String> vmName() {
         return this.vmName;
     }
@@ -87,38 +103,86 @@ public final class ConfigurationProfileAssignmentArgs extends com.pulumi.resourc
             $ = new ConfigurationProfileAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationProfileAssignmentName Name of the configuration profile assignment. Only default is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfileAssignmentName(@Nullable Output<String> configurationProfileAssignmentName) {
             $.configurationProfileAssignmentName = configurationProfileAssignmentName;
             return this;
         }
 
+        /**
+         * @param configurationProfileAssignmentName Name of the configuration profile assignment. Only default is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProfileAssignmentName(String configurationProfileAssignmentName) {
             return configurationProfileAssignmentName(Output.of(configurationProfileAssignmentName));
         }
 
+        /**
+         * @param properties Properties of the configuration profile assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the configuration profile assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ConfigurationProfileAssignmentPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param vmName The name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmName(Output<String> vmName) {
             $.vmName = vmName;
             return this;
         }
 
+        /**
+         * @param vmName The name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmName(String vmName) {
             return vmName(Output.of(vmName));
         }

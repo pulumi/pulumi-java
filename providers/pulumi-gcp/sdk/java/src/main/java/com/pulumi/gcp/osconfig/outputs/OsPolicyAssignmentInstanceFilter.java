@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OsPolicyAssignmentInstanceFilter {
     /**
-     * Target all VMs in the project. If true, no other criteria is permitted.
+     * @return Target all VMs in the project. If true, no other criteria is permitted.
      * 
      */
     private final @Nullable Boolean all;
     /**
-     * List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
+     * @return List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
      * 
      */
     private final @Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels;
     /**
-     * List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
+     * @return List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
      * 
      */
     private final @Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels;
     /**
-     * List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
+     * @return List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
      * 
      */
     private final @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories;
@@ -49,30 +49,30 @@ public final class OsPolicyAssignmentInstanceFilter {
     }
 
     /**
-     * Target all VMs in the project. If true, no other criteria is permitted.
+     * @return Target all VMs in the project. If true, no other criteria is permitted.
      * 
-    */
+     */
     public Optional<Boolean> all() {
         return Optional.ofNullable(this.all);
     }
     /**
-     * List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
+     * @return List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
      * 
-    */
+     */
     public List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels() {
         return this.exclusionLabels == null ? List.of() : this.exclusionLabels;
     }
     /**
-     * List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
+     * @return List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
      * 
-    */
+     */
     public List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels() {
         return this.inclusionLabels == null ? List.of() : this.inclusionLabels;
     }
     /**
-     * List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
+     * @return List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
      * 
-    */
+     */
     public List<OsPolicyAssignmentInstanceFilterInventory> inventories() {
         return this.inventories == null ? List.of() : this.inventories;
     }

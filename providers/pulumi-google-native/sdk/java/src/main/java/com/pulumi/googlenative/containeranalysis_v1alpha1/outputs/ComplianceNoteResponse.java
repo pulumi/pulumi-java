@@ -13,37 +13,37 @@ import java.util.Objects;
 @CustomType
 public final class ComplianceNoteResponse {
     /**
-     * Right now we only have one compliance type, but we may add additional types in the future.
+     * @return Right now we only have one compliance type, but we may add additional types in the future.
      * 
      */
     private final CisBenchmarkResponse cisBenchmark;
     /**
-     * A description about this compliance check.
+     * @return A description about this compliance check.
      * 
      */
     private final String description;
     /**
-     * A rationale for the existence of this compliance check.
+     * @return A rationale for the existence of this compliance check.
      * 
      */
     private final String rationale;
     /**
-     * A description of remediation steps if the compliance check fails.
+     * @return A description of remediation steps if the compliance check fails.
      * 
      */
     private final String remediation;
     /**
-     * Serialized scan instructions with a predefined format.
+     * @return Serialized scan instructions with a predefined format.
      * 
      */
     private final String scanInstructions;
     /**
-     * The title that identifies this compliance check.
+     * @return The title that identifies this compliance check.
      * 
      */
     private final String title;
     /**
-     * The OS and config versions the benchmark applies to.
+     * @return The OS and config versions the benchmark applies to.
      * 
      */
     private final List<ComplianceVersionResponse> version;
@@ -67,51 +67,51 @@ public final class ComplianceNoteResponse {
     }
 
     /**
-     * Right now we only have one compliance type, but we may add additional types in the future.
+     * @return Right now we only have one compliance type, but we may add additional types in the future.
      * 
-    */
+     */
     public CisBenchmarkResponse cisBenchmark() {
         return this.cisBenchmark;
     }
     /**
-     * A description about this compliance check.
+     * @return A description about this compliance check.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * A rationale for the existence of this compliance check.
+     * @return A rationale for the existence of this compliance check.
      * 
-    */
+     */
     public String rationale() {
         return this.rationale;
     }
     /**
-     * A description of remediation steps if the compliance check fails.
+     * @return A description of remediation steps if the compliance check fails.
      * 
-    */
+     */
     public String remediation() {
         return this.remediation;
     }
     /**
-     * Serialized scan instructions with a predefined format.
+     * @return Serialized scan instructions with a predefined format.
      * 
-    */
+     */
     public String scanInstructions() {
         return this.scanInstructions;
     }
     /**
-     * The title that identifies this compliance check.
+     * @return The title that identifies this compliance check.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * The OS and config versions the benchmark applies to.
+     * @return The OS and config versions the benchmark applies to.
      * 
-    */
+     */
     public List<ComplianceVersionResponse> version() {
         return this.version;
     }

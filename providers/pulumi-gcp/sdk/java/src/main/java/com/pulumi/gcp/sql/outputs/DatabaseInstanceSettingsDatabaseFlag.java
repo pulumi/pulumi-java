@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DatabaseInstanceSettingsDatabaseFlag {
     /**
-     * A name for this whitelist entry.
+     * @return A name for this whitelist entry.
      * 
      */
     private final String name;
     /**
-     * A CIDR notation IPv4 or IPv6 address that is allowed to
+     * @return A CIDR notation IPv4 or IPv6 address that is allowed to
      * access this instance. Must be set even if other two attributes are not for
      * the whitelist to become active.
      * 
@@ -31,18 +31,18 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
     }
 
     /**
-     * A name for this whitelist entry.
+     * @return A name for this whitelist entry.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A CIDR notation IPv4 or IPv6 address that is allowed to
+     * @return A CIDR notation IPv4 or IPv6 address that is allowed to
      * access this instance. Must be set even if other two attributes are not for
      * the whitelist to become active.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

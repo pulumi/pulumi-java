@@ -28,6 +28,10 @@ public final class ToolOutputReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="creationTime")
     private @Nullable Output<TimestampArgs> creationTime;
 
+    /**
+     * @return The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     public Optional<Output<TimestampArgs>> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -39,6 +43,10 @@ public final class ToolOutputReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="output")
     private @Nullable Output<FileReferenceArgs> output;
 
+    /**
+     * @return A FileReference to an output file. - In response: always set - In create/update request: always set
+     * 
+     */
     public Optional<Output<FileReferenceArgs>> output() {
         return Optional.ofNullable(this.output);
     }
@@ -50,6 +58,10 @@ public final class ToolOutputReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="testCase")
     private @Nullable Output<TestCaseReferenceArgs> testCase;
 
+    /**
+     * @return The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
+     * 
+     */
     public Optional<Output<TestCaseReferenceArgs>> testCase() {
         return Optional.ofNullable(this.testCase);
     }
@@ -80,29 +92,65 @@ public final class ToolOutputReferenceArgs extends com.pulumi.resources.Resource
             $ = new ToolOutputReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param creationTime The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(TimestampArgs creationTime) {
             return creationTime(Output.of(creationTime));
         }
 
+        /**
+         * @param output A FileReference to an output file. - In response: always set - In create/update request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(@Nullable Output<FileReferenceArgs> output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param output A FileReference to an output file. - In response: always set - In create/update request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(FileReferenceArgs output) {
             return output(Output.of(output));
         }
 
+        /**
+         * @param testCase The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testCase(@Nullable Output<TestCaseReferenceArgs> testCase) {
             $.testCase = testCase;
             return this;
         }
 
+        /**
+         * @param testCase The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testCase(TestCaseReferenceArgs testCase) {
             return testCase(Output.of(testCase));
         }

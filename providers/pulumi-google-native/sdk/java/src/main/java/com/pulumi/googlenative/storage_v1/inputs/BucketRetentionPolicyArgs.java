@@ -27,6 +27,10 @@ public final class BucketRetentionPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="effectiveTime")
     private @Nullable Output<String> effectiveTime;
 
+    /**
+     * @return Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
+     * 
+     */
     public Optional<Output<String>> effectiveTime() {
         return Optional.ofNullable(this.effectiveTime);
     }
@@ -38,6 +42,10 @@ public final class BucketRetentionPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="isLocked")
     private @Nullable Output<Boolean> isLocked;
 
+    /**
+     * @return Once locked, an object retention policy cannot be modified.
+     * 
+     */
     public Optional<Output<Boolean>> isLocked() {
         return Optional.ofNullable(this.isLocked);
     }
@@ -49,6 +57,10 @@ public final class BucketRetentionPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="retentionPeriod")
     private @Nullable Output<String> retentionPeriod;
 
+    /**
+     * @return The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
+     * 
+     */
     public Optional<Output<String>> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
@@ -79,29 +91,65 @@ public final class BucketRetentionPolicyArgs extends com.pulumi.resources.Resour
             $ = new BucketRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param effectiveTime Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveTime(@Nullable Output<String> effectiveTime) {
             $.effectiveTime = effectiveTime;
             return this;
         }
 
+        /**
+         * @param effectiveTime Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveTime(String effectiveTime) {
             return effectiveTime(Output.of(effectiveTime));
         }
 
+        /**
+         * @param isLocked Once locked, an object retention policy cannot be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLocked(@Nullable Output<Boolean> isLocked) {
             $.isLocked = isLocked;
             return this;
         }
 
+        /**
+         * @param isLocked Once locked, an object retention policy cannot be modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLocked(Boolean isLocked) {
             return isLocked(Output.of(isLocked));
         }
 
+        /**
+         * @param retentionPeriod The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(@Nullable Output<String> retentionPeriod) {
             $.retentionPeriod = retentionPeriod;
             return this;
         }
 
+        /**
+         * @param retentionPeriod The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(String retentionPeriod) {
             return retentionPeriod(Output.of(retentionPeriod));
         }

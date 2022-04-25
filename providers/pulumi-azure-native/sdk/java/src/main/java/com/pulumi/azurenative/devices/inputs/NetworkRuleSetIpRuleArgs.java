@@ -29,6 +29,10 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="action")
     private @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
+    /**
+     * @return IP Filter Action
+     * 
+     */
     public Optional<Output<Either<String,NetworkRuleIPAction>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -40,6 +44,10 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="filterName", required=true)
     private Output<String> filterName;
 
+    /**
+     * @return Name of the IP filter rule.
+     * 
+     */
     public Output<String> filterName() {
         return this.filterName;
     }
@@ -51,6 +59,10 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="ipMask", required=true)
     private Output<String> ipMask;
 
+    /**
+     * @return A string that contains the IP address range in CIDR notation for the rule.
+     * 
+     */
     public Output<String> ipMask() {
         return this.ipMask;
     }
@@ -81,37 +93,85 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
             $ = new NetworkRuleSetIpRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<String,NetworkRuleIPAction>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,NetworkRuleIPAction> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(NetworkRuleIPAction action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param filterName Name of the IP filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(Output<String> filterName) {
             $.filterName = filterName;
             return this;
         }
 
+        /**
+         * @param filterName Name of the IP filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(String filterName) {
             return filterName(Output.of(filterName));
         }
 
+        /**
+         * @param ipMask A string that contains the IP address range in CIDR notation for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(Output<String> ipMask) {
             $.ipMask = ipMask;
             return this;
         }
 
+        /**
+         * @param ipMask A string that contains the IP address range in CIDR notation for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(String ipMask) {
             return ipMask(Output.of(ipMask));
         }

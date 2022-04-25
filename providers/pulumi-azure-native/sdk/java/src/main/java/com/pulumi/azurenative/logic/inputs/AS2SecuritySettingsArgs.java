@@ -27,6 +27,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForInboundDecodedMessages", required=true)
     private Output<Boolean> enableNRRForInboundDecodedMessages;
 
+    /**
+     * @return The value indicating whether to enable NRR for inbound decoded messages.
+     * 
+     */
     public Output<Boolean> enableNRRForInboundDecodedMessages() {
         return this.enableNRRForInboundDecodedMessages;
     }
@@ -38,6 +42,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForInboundEncodedMessages", required=true)
     private Output<Boolean> enableNRRForInboundEncodedMessages;
 
+    /**
+     * @return The value indicating whether to enable NRR for inbound encoded messages.
+     * 
+     */
     public Output<Boolean> enableNRRForInboundEncodedMessages() {
         return this.enableNRRForInboundEncodedMessages;
     }
@@ -49,6 +57,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForInboundMDN", required=true)
     private Output<Boolean> enableNRRForInboundMDN;
 
+    /**
+     * @return The value indicating whether to enable NRR for inbound MDN.
+     * 
+     */
     public Output<Boolean> enableNRRForInboundMDN() {
         return this.enableNRRForInboundMDN;
     }
@@ -60,6 +72,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForOutboundDecodedMessages", required=true)
     private Output<Boolean> enableNRRForOutboundDecodedMessages;
 
+    /**
+     * @return The value indicating whether to enable NRR for outbound decoded messages.
+     * 
+     */
     public Output<Boolean> enableNRRForOutboundDecodedMessages() {
         return this.enableNRRForOutboundDecodedMessages;
     }
@@ -71,6 +87,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForOutboundEncodedMessages", required=true)
     private Output<Boolean> enableNRRForOutboundEncodedMessages;
 
+    /**
+     * @return The value indicating whether to enable NRR for outbound encoded messages.
+     * 
+     */
     public Output<Boolean> enableNRRForOutboundEncodedMessages() {
         return this.enableNRRForOutboundEncodedMessages;
     }
@@ -82,6 +102,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="enableNRRForOutboundMDN", required=true)
     private Output<Boolean> enableNRRForOutboundMDN;
 
+    /**
+     * @return The value indicating whether to enable NRR for outbound MDN.
+     * 
+     */
     public Output<Boolean> enableNRRForOutboundMDN() {
         return this.enableNRRForOutboundMDN;
     }
@@ -93,6 +117,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="encryptionCertificateName")
     private @Nullable Output<String> encryptionCertificateName;
 
+    /**
+     * @return The name of the encryption certificate.
+     * 
+     */
     public Optional<Output<String>> encryptionCertificateName() {
         return Optional.ofNullable(this.encryptionCertificateName);
     }
@@ -104,6 +132,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="overrideGroupSigningCertificate", required=true)
     private Output<Boolean> overrideGroupSigningCertificate;
 
+    /**
+     * @return The value indicating whether to send or request a MDN.
+     * 
+     */
     public Output<Boolean> overrideGroupSigningCertificate() {
         return this.overrideGroupSigningCertificate;
     }
@@ -115,6 +147,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="sha2AlgorithmFormat")
     private @Nullable Output<String> sha2AlgorithmFormat;
 
+    /**
+     * @return The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
+     * 
+     */
     public Optional<Output<String>> sha2AlgorithmFormat() {
         return Optional.ofNullable(this.sha2AlgorithmFormat);
     }
@@ -126,6 +162,10 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
     @Import(name="signingCertificateName")
     private @Nullable Output<String> signingCertificateName;
 
+    /**
+     * @return The name of the signing certificate.
+     * 
+     */
     public Optional<Output<String>> signingCertificateName() {
         return Optional.ofNullable(this.signingCertificateName);
     }
@@ -163,92 +203,212 @@ public final class AS2SecuritySettingsArgs extends com.pulumi.resources.Resource
             $ = new AS2SecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableNRRForInboundDecodedMessages The value indicating whether to enable NRR for inbound decoded messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForInboundDecodedMessages(Output<Boolean> enableNRRForInboundDecodedMessages) {
             $.enableNRRForInboundDecodedMessages = enableNRRForInboundDecodedMessages;
             return this;
         }
 
+        /**
+         * @param enableNRRForInboundDecodedMessages The value indicating whether to enable NRR for inbound decoded messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForInboundDecodedMessages(Boolean enableNRRForInboundDecodedMessages) {
             return enableNRRForInboundDecodedMessages(Output.of(enableNRRForInboundDecodedMessages));
         }
 
+        /**
+         * @param enableNRRForInboundEncodedMessages The value indicating whether to enable NRR for inbound encoded messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForInboundEncodedMessages(Output<Boolean> enableNRRForInboundEncodedMessages) {
             $.enableNRRForInboundEncodedMessages = enableNRRForInboundEncodedMessages;
             return this;
         }
 
+        /**
+         * @param enableNRRForInboundEncodedMessages The value indicating whether to enable NRR for inbound encoded messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
             return enableNRRForInboundEncodedMessages(Output.of(enableNRRForInboundEncodedMessages));
         }
 
+        /**
+         * @param enableNRRForInboundMDN The value indicating whether to enable NRR for inbound MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForInboundMDN(Output<Boolean> enableNRRForInboundMDN) {
             $.enableNRRForInboundMDN = enableNRRForInboundMDN;
             return this;
         }
 
+        /**
+         * @param enableNRRForInboundMDN The value indicating whether to enable NRR for inbound MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
             return enableNRRForInboundMDN(Output.of(enableNRRForInboundMDN));
         }
 
+        /**
+         * @param enableNRRForOutboundDecodedMessages The value indicating whether to enable NRR for outbound decoded messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForOutboundDecodedMessages(Output<Boolean> enableNRRForOutboundDecodedMessages) {
             $.enableNRRForOutboundDecodedMessages = enableNRRForOutboundDecodedMessages;
             return this;
         }
 
+        /**
+         * @param enableNRRForOutboundDecodedMessages The value indicating whether to enable NRR for outbound decoded messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
             return enableNRRForOutboundDecodedMessages(Output.of(enableNRRForOutboundDecodedMessages));
         }
 
+        /**
+         * @param enableNRRForOutboundEncodedMessages The value indicating whether to enable NRR for outbound encoded messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForOutboundEncodedMessages(Output<Boolean> enableNRRForOutboundEncodedMessages) {
             $.enableNRRForOutboundEncodedMessages = enableNRRForOutboundEncodedMessages;
             return this;
         }
 
+        /**
+         * @param enableNRRForOutboundEncodedMessages The value indicating whether to enable NRR for outbound encoded messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
             return enableNRRForOutboundEncodedMessages(Output.of(enableNRRForOutboundEncodedMessages));
         }
 
+        /**
+         * @param enableNRRForOutboundMDN The value indicating whether to enable NRR for outbound MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForOutboundMDN(Output<Boolean> enableNRRForOutboundMDN) {
             $.enableNRRForOutboundMDN = enableNRRForOutboundMDN;
             return this;
         }
 
+        /**
+         * @param enableNRRForOutboundMDN The value indicating whether to enable NRR for outbound MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
             return enableNRRForOutboundMDN(Output.of(enableNRRForOutboundMDN));
         }
 
+        /**
+         * @param encryptionCertificateName The name of the encryption certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionCertificateName(@Nullable Output<String> encryptionCertificateName) {
             $.encryptionCertificateName = encryptionCertificateName;
             return this;
         }
 
+        /**
+         * @param encryptionCertificateName The name of the encryption certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionCertificateName(String encryptionCertificateName) {
             return encryptionCertificateName(Output.of(encryptionCertificateName));
         }
 
+        /**
+         * @param overrideGroupSigningCertificate The value indicating whether to send or request a MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideGroupSigningCertificate(Output<Boolean> overrideGroupSigningCertificate) {
             $.overrideGroupSigningCertificate = overrideGroupSigningCertificate;
             return this;
         }
 
+        /**
+         * @param overrideGroupSigningCertificate The value indicating whether to send or request a MDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
             return overrideGroupSigningCertificate(Output.of(overrideGroupSigningCertificate));
         }
 
+        /**
+         * @param sha2AlgorithmFormat The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha2AlgorithmFormat(@Nullable Output<String> sha2AlgorithmFormat) {
             $.sha2AlgorithmFormat = sha2AlgorithmFormat;
             return this;
         }
 
+        /**
+         * @param sha2AlgorithmFormat The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha2AlgorithmFormat(String sha2AlgorithmFormat) {
             return sha2AlgorithmFormat(Output.of(sha2AlgorithmFormat));
         }
 
+        /**
+         * @param signingCertificateName The name of the signing certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingCertificateName(@Nullable Output<String> signingCertificateName) {
             $.signingCertificateName = signingCertificateName;
             return this;
         }
 
+        /**
+         * @param signingCertificateName The name of the signing certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingCertificateName(String signingCertificateName) {
             return signingCertificateName(Output.of(signingCertificateName));
         }

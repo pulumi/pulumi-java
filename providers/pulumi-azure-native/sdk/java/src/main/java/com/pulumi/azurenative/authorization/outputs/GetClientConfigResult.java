@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetClientConfigResult {
     /**
-     * Azure Client ID (Application Object ID).
+     * @return Azure Client ID (Application Object ID).
      * 
      */
     private final String clientId;
     /**
-     * Azure Object ID of the current user or service principal.
+     * @return Azure Object ID of the current user or service principal.
      * 
      */
     private final String objectId;
     /**
-     * Azure Subscription ID
+     * @return Azure Subscription ID
      * 
      */
     private final String subscriptionId;
     /**
-     * Azure Tenant ID
+     * @return Azure Tenant ID
      * 
      */
     private final String tenantId;
@@ -43,30 +43,30 @@ public final class GetClientConfigResult {
     }
 
     /**
-     * Azure Client ID (Application Object ID).
+     * @return Azure Client ID (Application Object ID).
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Azure Object ID of the current user or service principal.
+     * @return Azure Object ID of the current user or service principal.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * Azure Subscription ID
+     * @return Azure Subscription ID
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
-     * Azure Tenant ID
+     * @return Azure Tenant ID
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

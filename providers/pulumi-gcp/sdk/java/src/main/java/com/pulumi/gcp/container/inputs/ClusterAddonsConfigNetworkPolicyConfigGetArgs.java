@@ -21,6 +21,11 @@ public final class ClusterAddonsConfigNetworkPolicyConfigGetArgs extends com.pul
     @Import(name="disabled", required=true)
     private Output<Boolean> disabled;
 
+    /**
+     * @return The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     public Output<Boolean> disabled() {
         return this.disabled;
     }
@@ -49,11 +54,25 @@ public final class ClusterAddonsConfigNetworkPolicyConfigGetArgs extends com.pul
             $ = new ClusterAddonsConfigNetworkPolicyConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled The status of the Istio addon, which makes it easy to set up Istio for services in a
+         * cluster. It is disabled by default. Set `disabled = false` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled The status of the Istio addon, which makes it easy to set up Istio for services in a
+         * cluster. It is disabled by default. Set `disabled = false` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }

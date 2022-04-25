@@ -34,6 +34,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="authenticationType")
     private @Nullable Object authenticationType;
 
+    /**
+     * @return Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -56,6 +64,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -67,6 +79,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -78,6 +94,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -89,6 +109,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -100,6 +124,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password for Windows authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -112,6 +140,11 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;Hdfs&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -123,6 +156,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="url", required=true)
     private Object url;
 
+    /**
+     * @return The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
+     * 
+     */
     public Object url() {
         return this.url;
     }
@@ -134,6 +171,10 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="userName")
     private @Nullable Object userName;
 
+    /**
+     * @return User name for Windows authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -171,63 +212,142 @@ public final class HdfsLinkedServiceResponse extends com.pulumi.resources.Invoke
             $ = new HdfsLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable Object authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password Password for Windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for Windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for Windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Hdfs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param url The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param userName User name for Windows authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Object userName) {
             $.userName = userName;
             return this;

@@ -23,6 +23,10 @@ public final class MetadataFilterLabelMatchResponse extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class MetadataFilterLabelMatchResponse extends com.pulumi.resources
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the label must match the specified value. value can have a maximum length of 1024 characters.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class MetadataFilterLabelMatchResponse extends com.pulumi.resources
             $ = new MetadataFilterLabelMatchResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The value of the label must match the specified value. value can have a maximum length of 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -27,6 +27,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="digest")
     private @Nullable Output<Map<String,String>> digest;
 
+    /**
+     * @return &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+     * 
+     */
     public Optional<Output<Map<String,String>>> digest() {
         return Optional.ofNullable(this.digest);
     }
@@ -38,6 +42,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return name is the name of the Subject used here
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,20 +75,44 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digest &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(@Nullable Output<Map<String,String>> digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param digest &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(Map<String,String> digest) {
             return digest(Output.of(digest));
         }
 
+        /**
+         * @param name name is the name of the Subject used here
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name is the name of the Subject used here
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

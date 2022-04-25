@@ -23,6 +23,10 @@ public final class AutomaticResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customerManagedEncryption", required=true)
     private CustomerManagedEncryptionResponse customerManagedEncryption;
 
+    /**
+     * @return Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * 
+     */
     public CustomerManagedEncryptionResponse customerManagedEncryption() {
         return this.customerManagedEncryption;
     }
@@ -51,6 +55,12 @@ public final class AutomaticResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AutomaticResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerManagedEncryption Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
             $.customerManagedEncryption = customerManagedEncryption;
             return this;

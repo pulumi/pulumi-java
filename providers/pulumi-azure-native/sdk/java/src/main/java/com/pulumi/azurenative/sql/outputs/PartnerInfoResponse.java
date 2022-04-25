@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class PartnerInfoResponse {
     /**
-     * Resource identifier of the partner server.
+     * @return Resource identifier of the partner server.
      * 
      */
     private final String id;
     /**
-     * Geo location of the partner server.
+     * @return Geo location of the partner server.
      * 
      */
     private final String location;
     /**
-     * Replication role of the partner server.
+     * @return Replication role of the partner server.
      * 
      */
     private final String replicationRole;
@@ -36,23 +36,23 @@ public final class PartnerInfoResponse {
     }
 
     /**
-     * Resource identifier of the partner server.
+     * @return Resource identifier of the partner server.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Geo location of the partner server.
+     * @return Geo location of the partner server.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Replication role of the partner server.
+     * @return Replication role of the partner server.
      * 
-    */
+     */
     public String replicationRole() {
         return this.replicationRole;
     }

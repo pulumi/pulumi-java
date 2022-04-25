@@ -26,6 +26,10 @@ public final class PtrRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ptrdname")
     private @Nullable Output<String> ptrdname;
 
+    /**
+     * @return The PTR target domain name for this PTR record.
+     * 
+     */
     public Optional<Output<String>> ptrdname() {
         return Optional.ofNullable(this.ptrdname);
     }
@@ -54,11 +58,23 @@ public final class PtrRecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PtrRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ptrdname The PTR target domain name for this PTR record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ptrdname(@Nullable Output<String> ptrdname) {
             $.ptrdname = ptrdname;
             return this;
         }
 
+        /**
+         * @param ptrdname The PTR target domain name for this PTR record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ptrdname(String ptrdname) {
             return ptrdname(Output.of(ptrdname));
         }

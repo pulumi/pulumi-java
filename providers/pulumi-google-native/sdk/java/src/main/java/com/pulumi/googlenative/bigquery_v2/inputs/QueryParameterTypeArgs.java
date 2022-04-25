@@ -24,6 +24,10 @@ public final class QueryParameterTypeArgs extends com.pulumi.resources.ResourceA
     @Import(name="arrayType")
     private @Nullable Output<QueryParameterTypeArgs> arrayType;
 
+    /**
+     * @return [Optional] The type of the array&#39;s elements, if this is an array.
+     * 
+     */
     public Optional<Output<QueryParameterTypeArgs>> arrayType() {
         return Optional.ofNullable(this.arrayType);
     }
@@ -35,6 +39,10 @@ public final class QueryParameterTypeArgs extends com.pulumi.resources.ResourceA
     @Import(name="structTypes")
     private @Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
 
+    /**
+     * @return [Optional] The types of the fields of this struct, in order, if this is a struct.
+     * 
+     */
     public Optional<Output<List<QueryParameterTypeStructTypesItemArgs>>> structTypes() {
         return Optional.ofNullable(this.structTypes);
     }
@@ -46,6 +54,10 @@ public final class QueryParameterTypeArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return [Required] The top level type of this field.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -76,33 +88,75 @@ public final class QueryParameterTypeArgs extends com.pulumi.resources.ResourceA
             $ = new QueryParameterTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayType [Optional] The type of the array&#39;s elements, if this is an array.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayType(@Nullable Output<QueryParameterTypeArgs> arrayType) {
             $.arrayType = arrayType;
             return this;
         }
 
+        /**
+         * @param arrayType [Optional] The type of the array&#39;s elements, if this is an array.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayType(QueryParameterTypeArgs arrayType) {
             return arrayType(Output.of(arrayType));
         }
 
+        /**
+         * @param structTypes [Optional] The types of the fields of this struct, in order, if this is a struct.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structTypes(@Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes) {
             $.structTypes = structTypes;
             return this;
         }
 
+        /**
+         * @param structTypes [Optional] The types of the fields of this struct, in order, if this is a struct.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structTypes(List<QueryParameterTypeStructTypesItemArgs> structTypes) {
             return structTypes(Output.of(structTypes));
         }
 
+        /**
+         * @param structTypes [Optional] The types of the fields of this struct, in order, if this is a struct.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structTypes(QueryParameterTypeStructTypesItemArgs... structTypes) {
             return structTypes(List.of(structTypes));
         }
 
+        /**
+         * @param type [Required] The top level type of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type [Required] The top level type of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -11,62 +11,62 @@ import java.util.Objects;
 @CustomType
 public final class VpnClientConnectionHealthDetailResponse {
     /**
-     * The egress bytes per second.
+     * @return The egress bytes per second.
      * 
      */
     private final Double egressBytesTransferred;
     /**
-     * The egress packets per second.
+     * @return The egress packets per second.
      * 
      */
     private final Double egressPacketsTransferred;
     /**
-     * The ingress bytes per second.
+     * @return The ingress bytes per second.
      * 
      */
     private final Double ingressBytesTransferred;
     /**
-     * The ingress packets per second.
+     * @return The ingress packets per second.
      * 
      */
     private final Double ingressPacketsTransferred;
     /**
-     * The max band width.
+     * @return The max band width.
      * 
      */
     private final Double maxBandwidth;
     /**
-     * The max packets transferred per second.
+     * @return The max packets transferred per second.
      * 
      */
     private final Double maxPacketsPerSecond;
     /**
-     * The assigned private Ip of a connected vpn client.
+     * @return The assigned private Ip of a connected vpn client.
      * 
      */
     private final String privateIpAddress;
     /**
-     * The public Ip of a connected vpn client.
+     * @return The public Ip of a connected vpn client.
      * 
      */
     private final String publicIpAddress;
     /**
-     * The duration time of a connected vpn client.
+     * @return The duration time of a connected vpn client.
      * 
      */
     private final Double vpnConnectionDuration;
     /**
-     * The vpn client Id.
+     * @return The vpn client Id.
      * 
      */
     private final String vpnConnectionId;
     /**
-     * The start time of a connected vpn client.
+     * @return The start time of a connected vpn client.
      * 
      */
     private final String vpnConnectionTime;
     /**
-     * The user name of a connected vpn client.
+     * @return The user name of a connected vpn client.
      * 
      */
     private final String vpnUserName;
@@ -100,86 +100,86 @@ public final class VpnClientConnectionHealthDetailResponse {
     }
 
     /**
-     * The egress bytes per second.
+     * @return The egress bytes per second.
      * 
-    */
+     */
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
-     * The egress packets per second.
+     * @return The egress packets per second.
      * 
-    */
+     */
     public Double egressPacketsTransferred() {
         return this.egressPacketsTransferred;
     }
     /**
-     * The ingress bytes per second.
+     * @return The ingress bytes per second.
      * 
-    */
+     */
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
-     * The ingress packets per second.
+     * @return The ingress packets per second.
      * 
-    */
+     */
     public Double ingressPacketsTransferred() {
         return this.ingressPacketsTransferred;
     }
     /**
-     * The max band width.
+     * @return The max band width.
      * 
-    */
+     */
     public Double maxBandwidth() {
         return this.maxBandwidth;
     }
     /**
-     * The max packets transferred per second.
+     * @return The max packets transferred per second.
      * 
-    */
+     */
     public Double maxPacketsPerSecond() {
         return this.maxPacketsPerSecond;
     }
     /**
-     * The assigned private Ip of a connected vpn client.
+     * @return The assigned private Ip of a connected vpn client.
      * 
-    */
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
-     * The public Ip of a connected vpn client.
+     * @return The public Ip of a connected vpn client.
      * 
-    */
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
     /**
-     * The duration time of a connected vpn client.
+     * @return The duration time of a connected vpn client.
      * 
-    */
+     */
     public Double vpnConnectionDuration() {
         return this.vpnConnectionDuration;
     }
     /**
-     * The vpn client Id.
+     * @return The vpn client Id.
      * 
-    */
+     */
     public String vpnConnectionId() {
         return this.vpnConnectionId;
     }
     /**
-     * The start time of a connected vpn client.
+     * @return The start time of a connected vpn client.
      * 
-    */
+     */
     public String vpnConnectionTime() {
         return this.vpnConnectionTime;
     }
     /**
-     * The user name of a connected vpn client.
+     * @return The user name of a connected vpn client.
      * 
-    */
+     */
     public String vpnUserName() {
         return this.vpnUserName;
     }

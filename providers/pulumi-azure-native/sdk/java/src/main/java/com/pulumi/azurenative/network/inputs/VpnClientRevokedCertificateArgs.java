@@ -26,6 +26,10 @@ public final class VpnClientRevokedCertificateArgs extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class VpnClientRevokedCertificateArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class VpnClientRevokedCertificateArgs extends com.pulumi.resources.
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return The revoked VPN client certificate thumbprint.
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -78,29 +90,65 @@ public final class VpnClientRevokedCertificateArgs extends com.pulumi.resources.
             $ = new VpnClientRevokedCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param thumbprint The revoked VPN client certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint The revoked VPN client certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

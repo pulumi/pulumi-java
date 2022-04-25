@@ -34,6 +34,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="clientId")
     private @Nullable Object clientId;
 
+    /**
+     * @return The client ID associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -56,6 +64,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="clientSecret")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
+    /**
+     * @return The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -67,6 +79,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -78,6 +94,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="connectionProperties")
     private @Nullable Object connectionProperties;
 
+    /**
+     * @return Properties used to connect to Salesforce Marketing Cloud. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * 
+     */
     public Optional<Object> connectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
@@ -89,6 +109,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -100,6 +124,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -111,6 +139,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -123,6 +155,11 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;SalesforceMarketingCloud&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -134,6 +171,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="useEncryptedEndpoints")
     private @Nullable Object useEncryptedEndpoints;
 
+    /**
+     * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> useEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
@@ -145,6 +186,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="useHostVerification")
     private @Nullable Object useHostVerification;
 
+    /**
+     * @return Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> useHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
@@ -156,6 +201,10 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
     @Import(name="usePeerVerification")
     private @Nullable Object usePeerVerification;
 
+    /**
+     * @return Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> usePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
@@ -195,73 +244,164 @@ public final class SalesforceMarketingCloudLinkedServiceResponse extends com.pul
             $ = new SalesforceMarketingCloudLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param clientId The client ID associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Object clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(AzureKeyVaultSecretReferenceResponse clientSecret) {
             return clientSecret(Either.ofLeft(clientSecret));
         }
 
+        /**
+         * @param clientSecret The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(SecureStringResponse clientSecret) {
             return clientSecret(Either.ofRight(clientSecret));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectionProperties Properties used to connect to Salesforce Marketing Cloud. It is mutually exclusive with any other properties in the linked service. Type: object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProperties(@Nullable Object connectionProperties) {
             $.connectionProperties = connectionProperties;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;SalesforceMarketingCloud&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param useEncryptedEndpoints Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
+        /**
+         * @param useHostVerification Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHostVerification(@Nullable Object useHostVerification) {
             $.useHostVerification = useHostVerification;
             return this;
         }
 
+        /**
+         * @param usePeerVerification Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             $.usePeerVerification = usePeerVerification;
             return this;

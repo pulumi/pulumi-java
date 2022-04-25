@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerPropertiesResponse {
     /**
-     * The trigger based on base image dependencies.
+     * @return The trigger based on base image dependencies.
      * 
      */
     private final @Nullable BaseImageTriggerResponse baseImageTrigger;
     /**
-     * The collection of triggers based on source code repository.
+     * @return The collection of triggers based on source code repository.
      * 
      */
     private final @Nullable List<SourceTriggerResponse> sourceTriggers;
     /**
-     * The collection of timer triggers.
+     * @return The collection of timer triggers.
      * 
      */
     private final @Nullable List<TimerTriggerResponse> timerTriggers;
@@ -41,23 +41,23 @@ public final class TriggerPropertiesResponse {
     }
 
     /**
-     * The trigger based on base image dependencies.
+     * @return The trigger based on base image dependencies.
      * 
-    */
+     */
     public Optional<BaseImageTriggerResponse> baseImageTrigger() {
         return Optional.ofNullable(this.baseImageTrigger);
     }
     /**
-     * The collection of triggers based on source code repository.
+     * @return The collection of triggers based on source code repository.
      * 
-    */
+     */
     public List<SourceTriggerResponse> sourceTriggers() {
         return this.sourceTriggers == null ? List.of() : this.sourceTriggers;
     }
     /**
-     * The collection of timer triggers.
+     * @return The collection of timer triggers.
      * 
-    */
+     */
     public List<TimerTriggerResponse> timerTriggers() {
         return this.timerTriggers == null ? List.of() : this.timerTriggers;
     }

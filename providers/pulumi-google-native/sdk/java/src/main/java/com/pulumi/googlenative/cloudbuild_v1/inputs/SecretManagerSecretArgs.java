@@ -26,6 +26,10 @@ public final class SecretManagerSecretArgs extends com.pulumi.resources.Resource
     @Import(name="env")
     private @Nullable Output<String> env;
 
+    /**
+     * @return Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
+     * 
+     */
     public Optional<Output<String>> env() {
         return Optional.ofNullable(this.env);
     }
@@ -37,6 +41,10 @@ public final class SecretManagerSecretArgs extends com.pulumi.resources.Resource
     @Import(name="versionName")
     private @Nullable Output<String> versionName;
 
+    /**
+     * @return Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * 
+     */
     public Optional<Output<String>> versionName() {
         return Optional.ofNullable(this.versionName);
     }
@@ -66,20 +74,44 @@ public final class SecretManagerSecretArgs extends com.pulumi.resources.Resource
             $ = new SecretManagerSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param env Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(@Nullable Output<String> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(String env) {
             return env(Output.of(env));
         }
 
+        /**
+         * @param versionName Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(@Nullable Output<String> versionName) {
             $.versionName = versionName;
             return this;
         }
 
+        /**
+         * @param versionName Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             return versionName(Output.of(versionName));
         }

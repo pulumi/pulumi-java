@@ -24,6 +24,10 @@ public final class StorageAccountPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="accessKey", required=true)
     private Output<String> accessKey;
 
+    /**
+     * @return The access key to the storage account.
+     * 
+     */
     public Output<String> accessKey() {
         return this.accessKey;
     }
@@ -35,6 +39,10 @@ public final class StorageAccountPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="storageAccountId", required=true)
     private Output<String> storageAccountId;
 
+    /**
+     * @return The fully qualified arm Id of the storage account.
+     * 
+     */
     public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
@@ -64,20 +72,44 @@ public final class StorageAccountPropertiesArgs extends com.pulumi.resources.Res
             $ = new StorageAccountPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey The access key to the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(Output<String> accessKey) {
             $.accessKey = accessKey;
             return this;
         }
 
+        /**
+         * @param accessKey The access key to the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey(String accessKey) {
             return accessKey(Output.of(accessKey));
         }
 
+        /**
+         * @param storageAccountId The fully qualified arm Id of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountId The fully qualified arm Id of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             return storageAccountId(Output.of(storageAccountId));
         }

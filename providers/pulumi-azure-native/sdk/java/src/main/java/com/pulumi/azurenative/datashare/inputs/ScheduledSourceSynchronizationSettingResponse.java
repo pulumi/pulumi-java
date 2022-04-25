@@ -27,6 +27,11 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Kind of synchronization setting on share.
+     * Expected value is &#39;ScheduleBased&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -38,6 +43,10 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
     @Import(name="recurrenceInterval")
     private @Nullable String recurrenceInterval;
 
+    /**
+     * @return Recurrence Interval
+     * 
+     */
     public Optional<String> recurrenceInterval() {
         return Optional.ofNullable(this.recurrenceInterval);
     }
@@ -49,6 +58,10 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
     @Import(name="synchronizationTime")
     private @Nullable String synchronizationTime;
 
+    /**
+     * @return Synchronization time
+     * 
+     */
     public Optional<String> synchronizationTime() {
         return Optional.ofNullable(this.synchronizationTime);
     }
@@ -79,16 +92,35 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
             $ = new ScheduledSourceSynchronizationSettingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Kind of synchronization setting on share.
+         * Expected value is &#39;ScheduleBased&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(@Nullable String recurrenceInterval) {
             $.recurrenceInterval = recurrenceInterval;
             return this;
         }
 
+        /**
+         * @param synchronizationTime Synchronization time
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationTime(@Nullable String synchronizationTime) {
             $.synchronizationTime = synchronizationTime;
             return this;

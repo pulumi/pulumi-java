@@ -22,6 +22,10 @@ public final class InstanceAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="environment")
     private @Nullable Output<String> environment;
 
+    /**
+     * @return ID of the attached environment.
+     * 
+     */
     public Optional<Output<String>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -66,11 +70,23 @@ public final class InstanceAttachmentArgs extends com.pulumi.resources.ResourceA
             $ = new InstanceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environment ID of the attached environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment ID of the attached environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }

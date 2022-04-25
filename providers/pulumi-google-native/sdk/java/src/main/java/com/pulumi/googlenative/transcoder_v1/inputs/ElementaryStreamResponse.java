@@ -26,6 +26,10 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
     @Import(name="audioStream", required=true)
     private AudioStreamResponse audioStream;
 
+    /**
+     * @return Encoding of an audio stream.
+     * 
+     */
     public AudioStreamResponse audioStream() {
         return this.audioStream;
     }
@@ -37,6 +41,10 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A unique key for this elementary stream.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -48,6 +56,10 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
     @Import(name="textStream", required=true)
     private TextStreamResponse textStream;
 
+    /**
+     * @return Encoding of a text stream. For example, closed captions or subtitles.
+     * 
+     */
     public TextStreamResponse textStream() {
         return this.textStream;
     }
@@ -59,6 +71,10 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
     @Import(name="videoStream", required=true)
     private VideoStreamResponse videoStream;
 
+    /**
+     * @return Encoding of a video stream.
+     * 
+     */
     public VideoStreamResponse videoStream() {
         return this.videoStream;
     }
@@ -90,21 +106,45 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
             $ = new ElementaryStreamResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioStream Encoding of an audio stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioStream(AudioStreamResponse audioStream) {
             $.audioStream = audioStream;
             return this;
         }
 
+        /**
+         * @param key A unique key for this elementary stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param textStream Encoding of a text stream. For example, closed captions or subtitles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textStream(TextStreamResponse textStream) {
             $.textStream = textStream;
             return this;
         }
 
+        /**
+         * @param videoStream Encoding of a video stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoStream(VideoStreamResponse videoStream) {
             $.videoStream = videoStream;
             return this;

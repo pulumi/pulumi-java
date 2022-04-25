@@ -19,6 +19,10 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
     @Import(name="sqlManagedInstanceName", required=true)
     private String sqlManagedInstanceName;
 
+    /**
+     * @return Name of SQL Managed Instance
+     * 
+     */
     public String sqlManagedInstanceName() {
         return this.sqlManagedInstanceName;
     }
@@ -59,11 +67,23 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
             $ = new GetSqlManagedInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sqlManagedInstanceName Name of SQL Managed Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlManagedInstanceName(String sqlManagedInstanceName) {
             $.sqlManagedInstanceName = sqlManagedInstanceName;
             return this;

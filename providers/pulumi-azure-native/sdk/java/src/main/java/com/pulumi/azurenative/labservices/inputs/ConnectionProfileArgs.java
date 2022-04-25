@@ -27,6 +27,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clientRdpAccess")
     private @Nullable Output<ConnectionType> clientRdpAccess;
 
+    /**
+     * @return The enabled access level for Client Access over RDP.
+     * 
+     */
     public Optional<Output<ConnectionType>> clientRdpAccess() {
         return Optional.ofNullable(this.clientRdpAccess);
     }
@@ -38,6 +42,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clientSshAccess")
     private @Nullable Output<ConnectionType> clientSshAccess;
 
+    /**
+     * @return The enabled access level for Client Access over SSH.
+     * 
+     */
     public Optional<Output<ConnectionType>> clientSshAccess() {
         return Optional.ofNullable(this.clientSshAccess);
     }
@@ -49,6 +57,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webRdpAccess")
     private @Nullable Output<ConnectionType> webRdpAccess;
 
+    /**
+     * @return The enabled access level for Web Access over RDP.
+     * 
+     */
     public Optional<Output<ConnectionType>> webRdpAccess() {
         return Optional.ofNullable(this.webRdpAccess);
     }
@@ -60,6 +72,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webSshAccess")
     private @Nullable Output<ConnectionType> webSshAccess;
 
+    /**
+     * @return The enabled access level for Web Access over SSH.
+     * 
+     */
     public Optional<Output<ConnectionType>> webSshAccess() {
         return Optional.ofNullable(this.webSshAccess);
     }
@@ -91,38 +107,86 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             $ = new ConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientRdpAccess The enabled access level for Client Access over RDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientRdpAccess(@Nullable Output<ConnectionType> clientRdpAccess) {
             $.clientRdpAccess = clientRdpAccess;
             return this;
         }
 
+        /**
+         * @param clientRdpAccess The enabled access level for Client Access over RDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientRdpAccess(ConnectionType clientRdpAccess) {
             return clientRdpAccess(Output.of(clientRdpAccess));
         }
 
+        /**
+         * @param clientSshAccess The enabled access level for Client Access over SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSshAccess(@Nullable Output<ConnectionType> clientSshAccess) {
             $.clientSshAccess = clientSshAccess;
             return this;
         }
 
+        /**
+         * @param clientSshAccess The enabled access level for Client Access over SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSshAccess(ConnectionType clientSshAccess) {
             return clientSshAccess(Output.of(clientSshAccess));
         }
 
+        /**
+         * @param webRdpAccess The enabled access level for Web Access over RDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webRdpAccess(@Nullable Output<ConnectionType> webRdpAccess) {
             $.webRdpAccess = webRdpAccess;
             return this;
         }
 
+        /**
+         * @param webRdpAccess The enabled access level for Web Access over RDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webRdpAccess(ConnectionType webRdpAccess) {
             return webRdpAccess(Output.of(webRdpAccess));
         }
 
+        /**
+         * @param webSshAccess The enabled access level for Web Access over SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webSshAccess(@Nullable Output<ConnectionType> webSshAccess) {
             $.webSshAccess = webSshAccess;
             return this;
         }
 
+        /**
+         * @param webSshAccess The enabled access level for Web Access over SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webSshAccess(ConnectionType webSshAccess) {
             return webSshAccess(Output.of(webSshAccess));
         }

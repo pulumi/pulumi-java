@@ -29,6 +29,10 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resource")
     private @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
+    /**
+     * @return Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
+     * 
+     */
     public Optional<Output<TypedLocalObjectReferenceArgs>> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -40,6 +44,10 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return Specifies the name of the referenced service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -51,6 +59,10 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="servicePort", required=true)
     private Output<Either<Integer,String>> servicePort;
 
+    /**
+     * @return Specifies the port of the referenced service.
+     * 
+     */
     public Output<Either<Integer,String>> servicePort() {
         return this.servicePort;
     }
@@ -81,37 +93,85 @@ public final class IngressBackendArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IngressBackendArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resource Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(@Nullable Output<TypedLocalObjectReferenceArgs> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(TypedLocalObjectReferenceArgs resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param serviceName Specifies the name of the referenced service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Specifies the name of the referenced service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param servicePort Specifies the port of the referenced service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePort(Output<Either<Integer,String>> servicePort) {
             $.servicePort = servicePort;
             return this;
         }
 
+        /**
+         * @param servicePort Specifies the port of the referenced service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePort(Either<Integer,String> servicePort) {
             return servicePort(Output.of(servicePort));
         }
 
+        /**
+         * @param servicePort Specifies the port of the referenced service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePort(Integer servicePort) {
             return servicePort(Either.ofLeft(servicePort));
         }
 
+        /**
+         * @param servicePort Specifies the port of the referenced service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePort(String servicePort) {
             return servicePort(Either.ofRight(servicePort));
         }

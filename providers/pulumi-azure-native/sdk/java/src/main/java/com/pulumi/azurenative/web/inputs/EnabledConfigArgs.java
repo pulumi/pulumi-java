@@ -26,6 +26,10 @@ public final class EnabledConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class EnabledConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnabledConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled True if configuration is enabled, false if it is disabled and null if configuration is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled True if configuration is enabled, false if it is disabled and null if configuration is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

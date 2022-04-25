@@ -23,6 +23,10 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="configuration")
     private @Nullable Output<String> configuration;
 
+    /**
+     * @return The configuration data for the extension, in this account and region.
+     * 
+     */
     public Optional<Output<String>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -34,6 +38,10 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="configurationAlias")
     private @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
 
+    /**
+     * @return An alias by which to refer to this extension configuration data.
+     * 
+     */
     public Optional<Output<HookTypeConfigConfigurationAlias>> configurationAlias() {
         return Optional.ofNullable(this.configurationAlias);
     }
@@ -45,6 +53,10 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="typeArn")
     private @Nullable Output<String> typeArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the type version.
+     * 
+     */
     public Optional<Output<String>> typeArn() {
         return Optional.ofNullable(this.typeArn);
     }
@@ -58,6 +70,12 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="typeName")
     private @Nullable Output<String> typeName;
 
+    /**
+     * @return The name of the type being registered.
+     * 
+     * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+     * 
+     */
     public Optional<Output<String>> typeName() {
         return Optional.ofNullable(this.typeName);
     }
@@ -89,38 +107,90 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new HookTypeConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration The configuration data for the extension, in this account and region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<String> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration The configuration data for the extension, in this account and region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(String configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param configurationAlias An alias by which to refer to this extension configuration data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAlias(@Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias) {
             $.configurationAlias = configurationAlias;
             return this;
         }
 
+        /**
+         * @param configurationAlias An alias by which to refer to this extension configuration data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAlias(HookTypeConfigConfigurationAlias configurationAlias) {
             return configurationAlias(Output.of(configurationAlias));
         }
 
+        /**
+         * @param typeArn The Amazon Resource Name (ARN) of the type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeArn(@Nullable Output<String> typeArn) {
             $.typeArn = typeArn;
             return this;
         }
 
+        /**
+         * @param typeArn The Amazon Resource Name (ARN) of the type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeArn(String typeArn) {
             return typeArn(Output.of(typeArn));
         }
 
+        /**
+         * @param typeName The name of the type being registered.
+         * 
+         * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(@Nullable Output<String> typeName) {
             $.typeName = typeName;
             return this;
         }
 
+        /**
+         * @param typeName The name of the type being registered.
+         * 
+         * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(String typeName) {
             return typeName(Output.of(typeName));
         }

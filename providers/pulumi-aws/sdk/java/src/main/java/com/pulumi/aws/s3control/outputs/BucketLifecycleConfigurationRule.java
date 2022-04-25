@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketLifecycleConfigurationRule {
     /**
-     * Configuration block containing settings for abort incomplete multipart upload.
+     * @return Configuration block containing settings for abort incomplete multipart upload.
      * 
      */
     private final @Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
     /**
-     * Configuration block containing settings for expiration of objects.
+     * @return Configuration block containing settings for expiration of objects.
      * 
      */
     private final @Nullable BucketLifecycleConfigurationRuleExpiration expiration;
     /**
-     * Configuration block containing settings for filtering.
+     * @return Configuration block containing settings for filtering.
      * 
      */
     private final @Nullable BucketLifecycleConfigurationRuleFilter filter;
     /**
-     * Unique identifier for the rule.
+     * @return Unique identifier for the rule.
      * 
      */
     private final String id;
     /**
-     * Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
+     * @return Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
      * 
      */
     private final @Nullable String status;
@@ -55,37 +55,37 @@ public final class BucketLifecycleConfigurationRule {
     }
 
     /**
-     * Configuration block containing settings for abort incomplete multipart upload.
+     * @return Configuration block containing settings for abort incomplete multipart upload.
      * 
-    */
+     */
     public Optional<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload> abortIncompleteMultipartUpload() {
         return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
     /**
-     * Configuration block containing settings for expiration of objects.
+     * @return Configuration block containing settings for expiration of objects.
      * 
-    */
+     */
     public Optional<BucketLifecycleConfigurationRuleExpiration> expiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
-     * Configuration block containing settings for filtering.
+     * @return Configuration block containing settings for filtering.
      * 
-    */
+     */
     public Optional<BucketLifecycleConfigurationRuleFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * Unique identifier for the rule.
+     * @return Unique identifier for the rule.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
+     * @return Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

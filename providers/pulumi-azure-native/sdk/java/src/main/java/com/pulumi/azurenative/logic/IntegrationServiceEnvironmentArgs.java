@@ -26,6 +26,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return Managed service identity properties.
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -37,6 +41,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
     @Import(name="integrationServiceEnvironmentName")
     private @Nullable Output<String> integrationServiceEnvironmentName;
 
+    /**
+     * @return The integration service environment name.
+     * 
+     */
     public Optional<Output<String>> integrationServiceEnvironmentName() {
         return Optional.ofNullable(this.integrationServiceEnvironmentName);
     }
@@ -48,6 +56,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -59,6 +71,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
     @Import(name="properties")
     private @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
 
+    /**
+     * @return The integration service environment properties.
+     * 
+     */
     public Optional<Output<IntegrationServiceEnvironmentPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -70,6 +86,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
     @Import(name="resourceGroup", required=true)
     private Output<String> resourceGroup;
 
+    /**
+     * @return The resource group.
+     * 
+     */
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
@@ -81,6 +101,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
     @Import(name="sku")
     private @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
 
+    /**
+     * @return The sku.
+     * 
+     */
     public Optional<Output<IntegrationServiceEnvironmentSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -92,6 +116,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -126,65 +154,149 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
             $ = new IntegrationServiceEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity Managed service identity properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Managed service identity properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param integrationServiceEnvironmentName The integration service environment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentName(@Nullable Output<String> integrationServiceEnvironmentName) {
             $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
 
+        /**
+         * @param integrationServiceEnvironmentName The integration service environment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
             return integrationServiceEnvironmentName(Output.of(integrationServiceEnvironmentName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The integration service environment properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The integration service environment properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(IntegrationServiceEnvironmentPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroup The resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup The resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param sku The sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(IntegrationServiceEnvironmentSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

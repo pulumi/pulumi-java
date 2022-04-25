@@ -28,6 +28,10 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="appId", required=true)
     private String appId;
 
+    /**
+     * @return Facebook application id
+     * 
+     */
     public String appId() {
         return this.appId;
     }
@@ -39,6 +43,10 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="appSecret")
     private @Nullable String appSecret;
 
+    /**
+     * @return Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<String> appSecret() {
         return Optional.ofNullable(this.appSecret);
     }
@@ -50,6 +58,10 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="callbackUrl", required=true)
     private String callbackUrl;
 
+    /**
+     * @return Callback Url
+     * 
+     */
     public String callbackUrl() {
         return this.callbackUrl;
     }
@@ -61,6 +73,10 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -72,6 +88,10 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="pages")
     private @Nullable List<FacebookPageResponse> pages;
 
+    /**
+     * @return The list of Facebook pages
+     * 
+     */
     public Optional<List<FacebookPageResponse>> pages() {
         return Optional.ofNullable(this.pages);
     }
@@ -83,6 +103,10 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="verifyToken", required=true)
     private String verifyToken;
 
+    /**
+     * @return Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public String verifyToken() {
         return this.verifyToken;
     }
@@ -116,35 +140,77 @@ public final class FacebookChannelPropertiesResponse extends com.pulumi.resource
             $ = new FacebookChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId Facebook application id
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appSecret Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSecret(@Nullable String appSecret) {
             $.appSecret = appSecret;
             return this;
         }
 
+        /**
+         * @param callbackUrl Callback Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUrl(String callbackUrl) {
             $.callbackUrl = callbackUrl;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param pages The list of Facebook pages
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(@Nullable List<FacebookPageResponse> pages) {
             $.pages = pages;
             return this;
         }
 
+        /**
+         * @param pages The list of Facebook pages
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(FacebookPageResponse... pages) {
             return pages(List.of(pages));
         }
 
+        /**
+         * @param verifyToken Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verifyToken(String verifyToken) {
             $.verifyToken = verifyToken;
             return this;

@@ -26,6 +26,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isAutoInflateEnabled")
     private @Nullable Output<Boolean> isAutoInflateEnabled;
 
+    /**
+     * @return Value that indicates whether AutoInflate is enabled for eventhub namespace.
+     * 
+     */
     public Optional<Output<Boolean>> isAutoInflateEnabled() {
         return Optional.ofNullable(this.isAutoInflateEnabled);
     }
@@ -37,6 +41,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kafkaEnabled")
     private @Nullable Output<Boolean> kafkaEnabled;
 
+    /**
+     * @return Value that indicates whether Kafka is enabled for eventhub namespace.
+     * 
+     */
     public Optional<Output<Boolean>> kafkaEnabled() {
         return Optional.ofNullable(this.kafkaEnabled);
     }
@@ -48,6 +56,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -59,6 +71,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximumThroughputUnits")
     private @Nullable Output<Integer> maximumThroughputUnits;
 
+    /**
+     * @return Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
+     * 
+     */
     public Optional<Output<Integer>> maximumThroughputUnits() {
         return Optional.ofNullable(this.maximumThroughputUnits);
     }
@@ -70,6 +86,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName")
     private @Nullable Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Optional<Output<String>> namespaceName() {
         return Optional.ofNullable(this.namespaceName);
     }
@@ -81,6 +101,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Properties of sku resource
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -103,6 +131,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -138,74 +170,170 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isAutoInflateEnabled Value that indicates whether AutoInflate is enabled for eventhub namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAutoInflateEnabled(@Nullable Output<Boolean> isAutoInflateEnabled) {
             $.isAutoInflateEnabled = isAutoInflateEnabled;
             return this;
         }
 
+        /**
+         * @param isAutoInflateEnabled Value that indicates whether AutoInflate is enabled for eventhub namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAutoInflateEnabled(Boolean isAutoInflateEnabled) {
             return isAutoInflateEnabled(Output.of(isAutoInflateEnabled));
         }
 
+        /**
+         * @param kafkaEnabled Value that indicates whether Kafka is enabled for eventhub namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaEnabled(@Nullable Output<Boolean> kafkaEnabled) {
             $.kafkaEnabled = kafkaEnabled;
             return this;
         }
 
+        /**
+         * @param kafkaEnabled Value that indicates whether Kafka is enabled for eventhub namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaEnabled(Boolean kafkaEnabled) {
             return kafkaEnabled(Output.of(kafkaEnabled));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maximumThroughputUnits Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumThroughputUnits(@Nullable Output<Integer> maximumThroughputUnits) {
             $.maximumThroughputUnits = maximumThroughputUnits;
             return this;
         }
 
+        /**
+         * @param maximumThroughputUnits Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumThroughputUnits(Integer maximumThroughputUnits) {
             return maximumThroughputUnits(Output.of(maximumThroughputUnits));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(@Nullable Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Properties of sku resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Properties of sku resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

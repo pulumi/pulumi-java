@@ -16,67 +16,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetvNetPeeringResult {
     /**
-     * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+     * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
      */
     private final @Nullable Boolean allowForwardedTraffic;
     /**
-     * If gateway links can be used in remote virtual networking to link to this virtual network.
+     * @return If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
      */
     private final @Nullable Boolean allowGatewayTransit;
     /**
-     * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+     * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
      */
     private final @Nullable Boolean allowVirtualNetworkAccess;
     /**
-     * The reference to the databricks virtual network address space.
+     * @return The reference to the databricks virtual network address space.
      * 
      */
     private final @Nullable AddressSpaceResponse databricksAddressSpace;
     /**
-     *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+     * @return  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
      */
     private final @Nullable VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork databricksVirtualNetwork;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Name of the virtual network peering resource
+     * @return Name of the virtual network peering resource
      * 
      */
     private final String name;
     /**
-     * The status of the virtual network peering.
+     * @return The status of the virtual network peering.
      * 
      */
     private final String peeringState;
     /**
-     * The provisioning state of the virtual network peering resource.
+     * @return The provisioning state of the virtual network peering resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The reference to the remote virtual network address space.
+     * @return The reference to the remote virtual network address space.
      * 
      */
     private final @Nullable AddressSpaceResponse remoteAddressSpace;
     /**
-     *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+     * @return  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
      */
     private final VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork;
     /**
-     * type of the virtual network peering resource
+     * @return type of the virtual network peering resource
      * 
      */
     private final String type;
     /**
-     * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+     * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
      */
     private final @Nullable Boolean useRemoteGateways;
@@ -112,93 +112,93 @@ public final class GetvNetPeeringResult {
     }
 
     /**
-     * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+     * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
-    */
+     */
     public Optional<Boolean> allowForwardedTraffic() {
         return Optional.ofNullable(this.allowForwardedTraffic);
     }
     /**
-     * If gateway links can be used in remote virtual networking to link to this virtual network.
+     * @return If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
-    */
+     */
     public Optional<Boolean> allowGatewayTransit() {
         return Optional.ofNullable(this.allowGatewayTransit);
     }
     /**
-     * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+     * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
-    */
+     */
     public Optional<Boolean> allowVirtualNetworkAccess() {
         return Optional.ofNullable(this.allowVirtualNetworkAccess);
     }
     /**
-     * The reference to the databricks virtual network address space.
+     * @return The reference to the databricks virtual network address space.
      * 
-    */
+     */
     public Optional<AddressSpaceResponse> databricksAddressSpace() {
         return Optional.ofNullable(this.databricksAddressSpace);
     }
     /**
-     *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+     * @return  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
-    */
+     */
     public Optional<VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork> databricksVirtualNetwork() {
         return Optional.ofNullable(this.databricksVirtualNetwork);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the virtual network peering resource
+     * @return Name of the virtual network peering resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The status of the virtual network peering.
+     * @return The status of the virtual network peering.
      * 
-    */
+     */
     public String peeringState() {
         return this.peeringState;
     }
     /**
-     * The provisioning state of the virtual network peering resource.
+     * @return The provisioning state of the virtual network peering resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The reference to the remote virtual network address space.
+     * @return The reference to the remote virtual network address space.
      * 
-    */
+     */
     public Optional<AddressSpaceResponse> remoteAddressSpace() {
         return Optional.ofNullable(this.remoteAddressSpace);
     }
     /**
-     *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+     * @return  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
-    */
+     */
     public VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork() {
         return this.remoteVirtualNetwork;
     }
     /**
-     * type of the virtual network peering resource
+     * @return type of the virtual network peering resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+     * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
-    */
+     */
     public Optional<Boolean> useRemoteGateways() {
         return Optional.ofNullable(this.useRemoteGateways);
     }

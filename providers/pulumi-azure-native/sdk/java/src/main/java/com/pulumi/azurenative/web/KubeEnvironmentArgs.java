@@ -36,6 +36,12 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="appLogsConfiguration")
     private @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration;
 
+    /**
+     * @return Cluster configuration which enables the log daemon to export
+     * app logs to a destination. Currently only &#34;log-analytics&#34; is
+     * supported
+     * 
+     */
     public Optional<Output<AppLogsConfigurationArgs>> appLogsConfiguration() {
         return Optional.ofNullable(this.appLogsConfiguration);
     }
@@ -49,6 +55,12 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="arcConfiguration")
     private @Nullable Output<ArcConfigurationArgs> arcConfiguration;
 
+    /**
+     * @return Cluster configuration which determines the ARC cluster
+     * components types. Eg: Choosing between BuildService kind,
+     * FrontEnd Service ArtifactsStorageType etc.
+     * 
+     */
     public Optional<Output<ArcConfigurationArgs>> arcConfiguration() {
         return Optional.ofNullable(this.arcConfiguration);
     }
@@ -60,6 +72,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return Extended Location.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -71,6 +87,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="internalLoadBalancerEnabled")
     private @Nullable Output<Boolean> internalLoadBalancerEnabled;
 
+    /**
+     * @return Only visible within Vnet/Subnet
+     * 
+     */
     public Optional<Output<Boolean>> internalLoadBalancerEnabled() {
         return Optional.ofNullable(this.internalLoadBalancerEnabled);
     }
@@ -82,6 +102,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -93,6 +117,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -104,6 +132,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Kubernetes Environment.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -115,6 +147,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -126,6 +162,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="staticIp")
     private @Nullable Output<String> staticIp;
 
+    /**
+     * @return Static IP of the KubeEnvironment
+     * 
+     */
     public Optional<Output<String>> staticIp() {
         return Optional.ofNullable(this.staticIp);
     }
@@ -137,6 +177,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -184,92 +228,220 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
             return aksResourceID(Output.of(aksResourceID));
         }
 
+        /**
+         * @param appLogsConfiguration Cluster configuration which enables the log daemon to export
+         * app logs to a destination. Currently only &#34;log-analytics&#34; is
+         * supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder appLogsConfiguration(@Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration) {
             $.appLogsConfiguration = appLogsConfiguration;
             return this;
         }
 
+        /**
+         * @param appLogsConfiguration Cluster configuration which enables the log daemon to export
+         * app logs to a destination. Currently only &#34;log-analytics&#34; is
+         * supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder appLogsConfiguration(AppLogsConfigurationArgs appLogsConfiguration) {
             return appLogsConfiguration(Output.of(appLogsConfiguration));
         }
 
+        /**
+         * @param arcConfiguration Cluster configuration which determines the ARC cluster
+         * components types. Eg: Choosing between BuildService kind,
+         * FrontEnd Service ArtifactsStorageType etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arcConfiguration(@Nullable Output<ArcConfigurationArgs> arcConfiguration) {
             $.arcConfiguration = arcConfiguration;
             return this;
         }
 
+        /**
+         * @param arcConfiguration Cluster configuration which determines the ARC cluster
+         * components types. Eg: Choosing between BuildService kind,
+         * FrontEnd Service ArtifactsStorageType etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arcConfiguration(ArcConfigurationArgs arcConfiguration) {
             return arcConfiguration(Output.of(arcConfiguration));
         }
 
+        /**
+         * @param extendedLocation Extended Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation Extended Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param internalLoadBalancerEnabled Only visible within Vnet/Subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalLoadBalancerEnabled(@Nullable Output<Boolean> internalLoadBalancerEnabled) {
             $.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
             return this;
         }
 
+        /**
+         * @param internalLoadBalancerEnabled Only visible within Vnet/Subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalLoadBalancerEnabled(Boolean internalLoadBalancerEnabled) {
             return internalLoadBalancerEnabled(Output.of(internalLoadBalancerEnabled));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the Kubernetes Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Kubernetes Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param staticIp Static IP of the KubeEnvironment
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticIp(@Nullable Output<String> staticIp) {
             $.staticIp = staticIp;
             return this;
         }
 
+        /**
+         * @param staticIp Static IP of the KubeEnvironment
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticIp(String staticIp) {
             return staticIp(Output.of(staticIp));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

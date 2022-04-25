@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BatchPoolIdentityResponse {
     /**
-     * The type of identity used for the Batch Pool.
+     * @return The type of identity used for the Batch Pool.
      * 
      */
     private final String type;
     /**
-     * The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
@@ -32,16 +32,16 @@ public final class BatchPoolIdentityResponse {
     }
 
     /**
-     * The type of identity used for the Batch Pool.
+     * @return The type of identity used for the Batch Pool.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
-    */
+     */
     public Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

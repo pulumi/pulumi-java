@@ -23,6 +23,10 @@ public final class TaskSchedule extends com.pulumi.resources.InvokeArgs {
     @Import(name="scheduleExpression", required=true)
     private String scheduleExpression;
 
+    /**
+     * @return A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
+     * 
+     */
     public String scheduleExpression() {
         return this.scheduleExpression;
     }
@@ -51,6 +55,12 @@ public final class TaskSchedule extends com.pulumi.resources.InvokeArgs {
             $ = new TaskSchedule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduleExpression A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(String scheduleExpression) {
             $.scheduleExpression = scheduleExpression;
             return this;

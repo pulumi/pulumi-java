@@ -23,6 +23,10 @@ public final class IPAMIpamOperatingRegion extends com.pulumi.resources.InvokeAr
     @Import(name="regionName", required=true)
     private String regionName;
 
+    /**
+     * @return The name of the region.
+     * 
+     */
     public String regionName() {
         return this.regionName;
     }
@@ -51,6 +55,12 @@ public final class IPAMIpamOperatingRegion extends com.pulumi.resources.InvokeAr
             $ = new IPAMIpamOperatingRegion(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regionName The name of the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionName(String regionName) {
             $.regionName = regionName;
             return this;

@@ -20,6 +20,10 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends com.pulu
     @Import(name="allowConfigBasedIssuance", required=true)
     private Output<Boolean> allowConfigBasedIssuance;
 
+    /**
+     * @return When true, allows callers to create Certificates by specifying a CertificateConfig.
+     * 
+     */
     public Output<Boolean> allowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
@@ -31,6 +35,10 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends com.pulu
     @Import(name="allowCsrBasedIssuance", required=true)
     private Output<Boolean> allowCsrBasedIssuance;
 
+    /**
+     * @return When true, allows callers to create Certificates by specifying a CSR.
+     * 
+     */
     public Output<Boolean> allowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }
@@ -60,20 +68,44 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends com.pulu
             $ = new CaPoolIssuancePolicyAllowedIssuanceModesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowConfigBasedIssuance When true, allows callers to create Certificates by specifying a CertificateConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowConfigBasedIssuance(Output<Boolean> allowConfigBasedIssuance) {
             $.allowConfigBasedIssuance = allowConfigBasedIssuance;
             return this;
         }
 
+        /**
+         * @param allowConfigBasedIssuance When true, allows callers to create Certificates by specifying a CertificateConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
             return allowConfigBasedIssuance(Output.of(allowConfigBasedIssuance));
         }
 
+        /**
+         * @param allowCsrBasedIssuance When true, allows callers to create Certificates by specifying a CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCsrBasedIssuance(Output<Boolean> allowCsrBasedIssuance) {
             $.allowCsrBasedIssuance = allowCsrBasedIssuance;
             return this;
         }
 
+        /**
+         * @param allowCsrBasedIssuance When true, allows callers to create Certificates by specifying a CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
             return allowCsrBasedIssuance(Output.of(allowCsrBasedIssuance));
         }

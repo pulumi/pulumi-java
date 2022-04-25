@@ -11,48 +11,48 @@ import java.util.Objects;
 @CustomType
 public final class GetKustoClusterDataSetResult {
     /**
-     * Unique id for identifying a data set resource
+     * @return Unique id for identifying a data set resource
      * 
      */
     private final String dataSetId;
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
      */
     private final String id;
     /**
-     * Kind of data set.
+     * @return Kind of data set.
      * Expected value is &#39;KustoCluster&#39;.
      * 
      */
     private final String kind;
     /**
-     * Resource id of the kusto cluster.
+     * @return Resource id of the kusto cluster.
      * 
      */
     private final String kustoClusterResourceId;
     /**
-     * Location of the kusto cluster.
+     * @return Location of the kusto cluster.
      * 
      */
     private final String location;
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the kusto cluster data set.
+     * @return Provisioning state of the kusto cluster data set.
      * 
      */
     private final String provisioningState;
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
      */
     private final String type;
@@ -80,66 +80,66 @@ public final class GetKustoClusterDataSetResult {
     }
 
     /**
-     * Unique id for identifying a data set resource
+     * @return Unique id for identifying a data set resource
      * 
-    */
+     */
     public String dataSetId() {
         return this.dataSetId;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of data set.
+     * @return Kind of data set.
      * Expected value is &#39;KustoCluster&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource id of the kusto cluster.
+     * @return Resource id of the kusto cluster.
      * 
-    */
+     */
     public String kustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
     /**
-     * Location of the kusto cluster.
+     * @return Location of the kusto cluster.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the kusto cluster data set.
+     * @return Provisioning state of the kusto cluster data set.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -30,6 +30,10 @@ public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -41,6 +45,10 @@ public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spec")
     private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
+    /**
+     * @return Basic information about the Organization Policy.
+     * 
+     */
     public Optional<Output<GoogleCloudOrgpolicyV2PolicySpecArgs>> spec() {
         return Optional.ofNullable(this.spec);
     }
@@ -80,20 +88,44 @@ public final class FolderPolicyArgs extends com.pulumi.resources.ResourceArgs {
             return folderId(Output.of(folderId));
         }
 
+        /**
+         * @param name Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param spec Basic information about the Organization Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec Basic information about the Organization Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
             return spec(Output.of(spec));
         }

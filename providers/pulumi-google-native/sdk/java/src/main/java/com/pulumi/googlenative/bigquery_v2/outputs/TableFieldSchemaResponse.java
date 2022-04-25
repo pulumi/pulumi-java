@@ -13,53 +13,53 @@ import java.util.Objects;
 @CustomType
 public final class TableFieldSchemaResponse {
     /**
-     * [Optional] The categories attached to this field, used for field-level access control.
+     * @return [Optional] The categories attached to this field, used for field-level access control.
      * 
      */
     private final TableFieldSchemaCategoriesResponse categories;
     /**
-     * Optional. Collation specification of the field. It only can be set on string type field.
+     * @return Optional. Collation specification of the field. It only can be set on string type field.
      * 
      */
     private final String collationSpec;
     /**
-     * [Optional] The field description. The maximum length is 1,024 characters.
+     * @return [Optional] The field description. The maximum length is 1,024 characters.
      * 
      */
     private final String description;
     /**
-     * [Optional] Describes the nested schema fields if the type property is set to RECORD.
+     * @return [Optional] Describes the nested schema fields if the type property is set to RECORD.
      * 
      */
     private final List<TableFieldSchemaResponse> fields;
     /**
-     * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = &#34;STRING&#34;, then max_length represents the maximum UTF-8 length of strings in this field. If type = &#34;BYTES&#34;, then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ &#34;STRING&#34; and ≠ &#34;BYTES&#34;.
+     * @return [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = &#34;STRING&#34;, then max_length represents the maximum UTF-8 length of strings in this field. If type = &#34;BYTES&#34;, then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ &#34;STRING&#34; and ≠ &#34;BYTES&#34;.
      * 
      */
     private final String maxLength;
     /**
-     * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.
+     * @return [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.
      * 
      */
     private final String mode;
     /**
-     * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.
+     * @return [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.
      * 
      */
     private final String name;
     private final TableFieldSchemaPolicyTagsResponse policyTags;
     /**
-     * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ &#34;NUMERIC&#34; and ≠ &#34;BIGNUMERIC&#34;. If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = &#34;NUMERIC&#34;: 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = &#34;BIGNUMERIC&#34;: 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = &#34;NUMERIC&#34;: 1 ≤ precision ≤ 29. - If type = &#34;BIGNUMERIC&#34;: 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.
+     * @return [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ &#34;NUMERIC&#34; and ≠ &#34;BIGNUMERIC&#34;. If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = &#34;NUMERIC&#34;: 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = &#34;BIGNUMERIC&#34;: 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = &#34;NUMERIC&#34;: 1 ≤ precision ≤ 29. - If type = &#34;BIGNUMERIC&#34;: 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.
      * 
      */
     private final String precision;
     /**
-     * [Optional] See documentation for precision.
+     * @return [Optional] See documentation for precision.
      * 
      */
     private final String scale;
     /**
-     * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).
+     * @return [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).
      * 
      */
     private final String type;
@@ -91,51 +91,51 @@ public final class TableFieldSchemaResponse {
     }
 
     /**
-     * [Optional] The categories attached to this field, used for field-level access control.
+     * @return [Optional] The categories attached to this field, used for field-level access control.
      * 
-    */
+     */
     public TableFieldSchemaCategoriesResponse categories() {
         return this.categories;
     }
     /**
-     * Optional. Collation specification of the field. It only can be set on string type field.
+     * @return Optional. Collation specification of the field. It only can be set on string type field.
      * 
-    */
+     */
     public String collationSpec() {
         return this.collationSpec;
     }
     /**
-     * [Optional] The field description. The maximum length is 1,024 characters.
+     * @return [Optional] The field description. The maximum length is 1,024 characters.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * [Optional] Describes the nested schema fields if the type property is set to RECORD.
+     * @return [Optional] Describes the nested schema fields if the type property is set to RECORD.
      * 
-    */
+     */
     public List<TableFieldSchemaResponse> fields() {
         return this.fields;
     }
     /**
-     * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = &#34;STRING&#34;, then max_length represents the maximum UTF-8 length of strings in this field. If type = &#34;BYTES&#34;, then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ &#34;STRING&#34; and ≠ &#34;BYTES&#34;.
+     * @return [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = &#34;STRING&#34;, then max_length represents the maximum UTF-8 length of strings in this field. If type = &#34;BYTES&#34;, then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ &#34;STRING&#34; and ≠ &#34;BYTES&#34;.
      * 
-    */
+     */
     public String maxLength() {
         return this.maxLength;
     }
     /**
-     * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.
+     * @return [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.
+     * @return [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -143,23 +143,23 @@ public final class TableFieldSchemaResponse {
         return this.policyTags;
     }
     /**
-     * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ &#34;NUMERIC&#34; and ≠ &#34;BIGNUMERIC&#34;. If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = &#34;NUMERIC&#34;: 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = &#34;BIGNUMERIC&#34;: 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = &#34;NUMERIC&#34;: 1 ≤ precision ≤ 29. - If type = &#34;BIGNUMERIC&#34;: 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.
+     * @return [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ &#34;NUMERIC&#34; and ≠ &#34;BIGNUMERIC&#34;. If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = &#34;NUMERIC&#34;: 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = &#34;BIGNUMERIC&#34;: 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = &#34;NUMERIC&#34;: 1 ≤ precision ≤ 29. - If type = &#34;BIGNUMERIC&#34;: 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.
      * 
-    */
+     */
     public String precision() {
         return this.precision;
     }
     /**
-     * [Optional] See documentation for precision.
+     * @return [Optional] See documentation for precision.
      * 
-    */
+     */
     public String scale() {
         return this.scale;
     }
     /**
-     * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).
+     * @return [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

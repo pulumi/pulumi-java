@@ -20,6 +20,10 @@ public final class ClusterClusterTelemetryGetArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -48,11 +52,23 @@ public final class ClusterClusterTelemetryGetArgs extends com.pulumi.resources.R
             $ = new ClusterClusterTelemetryGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

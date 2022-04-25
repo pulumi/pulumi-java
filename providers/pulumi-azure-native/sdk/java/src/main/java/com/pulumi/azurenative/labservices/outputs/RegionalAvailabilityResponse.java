@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionalAvailabilityResponse {
     /**
-     * Corresponding region
+     * @return Corresponding region
      * 
      */
     private final @Nullable String region;
     /**
-     * List of all the size information for the region
+     * @return List of all the size information for the region
      * 
      */
     private final @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
@@ -33,16 +33,16 @@ public final class RegionalAvailabilityResponse {
     }
 
     /**
-     * Corresponding region
+     * @return Corresponding region
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * List of all the size information for the region
+     * @return List of all the size information for the region
      * 
-    */
+     */
     public List<SizeAvailabilityResponse> sizeAvailabilities() {
         return this.sizeAvailabilities == null ? List.of() : this.sizeAvailabilities;
     }

@@ -24,6 +24,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<SkuName> name;
 
+    /**
+     * @return The name of the HealthBot SKU
+     * 
+     */
     public Output<SkuName> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the HealthBot SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<SkuName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the HealthBot SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Output.of(name));
         }

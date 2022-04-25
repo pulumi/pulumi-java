@@ -20,6 +20,10 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsArgs extends com.pulumi.
     @Import(name="ruleOrder", required=true)
     private Output<String> ruleOrder;
 
+    /**
+     * @return Indicates how to manage the order of the rule evaluation for the rule group. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
+     * 
+     */
     public Output<String> ruleOrder() {
         return this.ruleOrder;
     }
@@ -48,11 +52,23 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsArgs extends com.pulumi.
             $ = new RuleGroupRuleGroupStatefulRuleOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleOrder Indicates how to manage the order of the rule evaluation for the rule group. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleOrder(Output<String> ruleOrder) {
             $.ruleOrder = ruleOrder;
             return this;
         }
 
+        /**
+         * @param ruleOrder Indicates how to manage the order of the rule evaluation for the rule group. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleOrder(String ruleOrder) {
             return ruleOrder(Output.of(ruleOrder));
         }

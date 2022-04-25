@@ -28,6 +28,10 @@ public final class ScanRunErrorTraceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="code")
     private @Nullable Output<ScanRunErrorTraceCode> code;
 
+    /**
+     * @return Indicates the error reason code.
+     * 
+     */
     public Optional<Output<ScanRunErrorTraceCode>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -39,6 +43,10 @@ public final class ScanRunErrorTraceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mostCommonHttpErrorCode")
     private @Nullable Output<Integer> mostCommonHttpErrorCode;
 
+    /**
+     * @return If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
+     * 
+     */
     public Optional<Output<Integer>> mostCommonHttpErrorCode() {
         return Optional.ofNullable(this.mostCommonHttpErrorCode);
     }
@@ -50,6 +58,10 @@ public final class ScanRunErrorTraceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scanConfigError")
     private @Nullable Output<ScanConfigErrorArgs> scanConfigError;
 
+    /**
+     * @return If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
+     * 
+     */
     public Optional<Output<ScanConfigErrorArgs>> scanConfigError() {
         return Optional.ofNullable(this.scanConfigError);
     }
@@ -80,29 +92,65 @@ public final class ScanRunErrorTraceArgs extends com.pulumi.resources.ResourceAr
             $ = new ScanRunErrorTraceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Indicates the error reason code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<ScanRunErrorTraceCode> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Indicates the error reason code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(ScanRunErrorTraceCode code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param mostCommonHttpErrorCode If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostCommonHttpErrorCode(@Nullable Output<Integer> mostCommonHttpErrorCode) {
             $.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
             return this;
         }
 
+        /**
+         * @param mostCommonHttpErrorCode If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostCommonHttpErrorCode(Integer mostCommonHttpErrorCode) {
             return mostCommonHttpErrorCode(Output.of(mostCommonHttpErrorCode));
         }
 
+        /**
+         * @param scanConfigError If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scanConfigError(@Nullable Output<ScanConfigErrorArgs> scanConfigError) {
             $.scanConfigError = scanConfigError;
             return this;
         }
 
+        /**
+         * @param scanConfigError If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scanConfigError(ScanConfigErrorArgs scanConfigError) {
             return scanConfigError(Output.of(scanConfigError));
         }

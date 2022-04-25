@@ -21,98 +21,98 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccountResult {
     /**
-     * Cloud connectors.
+     * @return Cloud connectors.
      * External cloud identifier used as part of scanning configuration.
      * 
      */
     private final @Nullable CloudConnectorsResponse cloudConnectors;
     /**
-     * Gets the time at which the entity was created.
+     * @return Gets the time at which the entity was created.
      * 
      */
     private final String createdAt;
     /**
-     * Gets the creator of the entity.
+     * @return Gets the creator of the entity.
      * 
      */
     private final String createdBy;
     /**
-     * Gets the creators of the entity&#39;s object id.
+     * @return Gets the creators of the entity&#39;s object id.
      * 
      */
     private final String createdByObjectId;
     /**
-     * The URIs that are the public endpoints of the account.
+     * @return The URIs that are the public endpoints of the account.
      * 
      */
     private final AccountPropertiesResponseEndpoints endpoints;
     /**
-     * Gets or sets the friendly name.
+     * @return Gets or sets the friendly name.
      * 
      */
     private final String friendlyName;
     /**
-     * Gets or sets the identifier.
+     * @return Gets or sets the identifier.
      * 
      */
     private final String id;
     /**
-     * Identity Info on the tracked resource
+     * @return Identity Info on the tracked resource
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * Gets or sets the location.
+     * @return Gets or sets the location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Gets or sets the managed resource group name
+     * @return Gets or sets the managed resource group name
      * 
      */
     private final @Nullable String managedResourceGroupName;
     /**
-     * Gets the resource identifiers of the managed resources.
+     * @return Gets the resource identifiers of the managed resources.
      * 
      */
     private final AccountPropertiesResponseManagedResources managedResources;
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
      */
     private final String name;
     /**
-     * Gets the private endpoint connections information.
+     * @return Gets the private endpoint connections information.
      * 
      */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * Gets or sets the state of the provisioning.
+     * @return Gets or sets the state of the provisioning.
      * 
      */
     private final String provisioningState;
     /**
-     * Gets or sets the public network access.
+     * @return Gets or sets the public network access.
      * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
-     * Gets or sets the Sku.
+     * @return Gets or sets the Sku.
      * 
      */
     private final AccountResponseSku sku;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final AccountPropertiesResponseSystemData systemData;
     /**
-     * Tags on the azure resource.
+     * @return Tags on the azure resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets or sets the type.
+     * @return Gets or sets the type.
      * 
      */
     private final String type;
@@ -160,136 +160,136 @@ public final class GetAccountResult {
     }
 
     /**
-     * Cloud connectors.
+     * @return Cloud connectors.
      * External cloud identifier used as part of scanning configuration.
      * 
-    */
+     */
     public Optional<CloudConnectorsResponse> cloudConnectors() {
         return Optional.ofNullable(this.cloudConnectors);
     }
     /**
-     * Gets the time at which the entity was created.
+     * @return Gets the time at which the entity was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Gets the creator of the entity.
+     * @return Gets the creator of the entity.
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * Gets the creators of the entity&#39;s object id.
+     * @return Gets the creators of the entity&#39;s object id.
      * 
-    */
+     */
     public String createdByObjectId() {
         return this.createdByObjectId;
     }
     /**
-     * The URIs that are the public endpoints of the account.
+     * @return The URIs that are the public endpoints of the account.
      * 
-    */
+     */
     public AccountPropertiesResponseEndpoints endpoints() {
         return this.endpoints;
     }
     /**
-     * Gets or sets the friendly name.
+     * @return Gets or sets the friendly name.
      * 
-    */
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
     /**
-     * Gets or sets the identifier.
+     * @return Gets or sets the identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity Info on the tracked resource
+     * @return Identity Info on the tracked resource
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Gets or sets the location.
+     * @return Gets or sets the location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Gets or sets the managed resource group name
+     * @return Gets or sets the managed resource group name
      * 
-    */
+     */
     public Optional<String> managedResourceGroupName() {
         return Optional.ofNullable(this.managedResourceGroupName);
     }
     /**
-     * Gets the resource identifiers of the managed resources.
+     * @return Gets the resource identifiers of the managed resources.
      * 
-    */
+     */
     public AccountPropertiesResponseManagedResources managedResources() {
         return this.managedResources;
     }
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the private endpoint connections information.
+     * @return Gets the private endpoint connections information.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Gets or sets the state of the provisioning.
+     * @return Gets or sets the state of the provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Gets or sets the public network access.
+     * @return Gets or sets the public network access.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * Gets or sets the Sku.
+     * @return Gets or sets the Sku.
      * 
-    */
+     */
     public AccountResponseSku sku() {
         return this.sku;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public AccountPropertiesResponseSystemData systemData() {
         return this.systemData;
     }
     /**
-     * Tags on the azure resource.
+     * @return Tags on the azure resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets or sets the type.
+     * @return Gets or sets the type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DocumentAttachmentsSource {
     /**
-     * The key of a key-value pair that identifies the location of an attachment to a document.
+     * @return The key of a key-value pair that identifies the location of an attachment to a document.
      * 
      */
     private final @Nullable DocumentAttachmentsSourceKey key;
     /**
-     * The name of the document attachment file.
+     * @return The name of the document attachment file.
      * 
      */
     private final @Nullable String name;
     /**
-     * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
+     * @return The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
      * 
      */
     private final @Nullable List<String> values;
@@ -40,23 +40,23 @@ public final class DocumentAttachmentsSource {
     }
 
     /**
-     * The key of a key-value pair that identifies the location of an attachment to a document.
+     * @return The key of a key-value pair that identifies the location of an attachment to a document.
      * 
-    */
+     */
     public Optional<DocumentAttachmentsSourceKey> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * The name of the document attachment file.
+     * @return The name of the document attachment file.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
+     * @return The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

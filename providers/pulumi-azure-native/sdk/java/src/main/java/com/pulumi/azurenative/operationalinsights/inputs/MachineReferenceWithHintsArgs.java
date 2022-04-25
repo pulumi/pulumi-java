@@ -25,6 +25,10 @@ public final class MachineReferenceWithHintsArgs extends com.pulumi.resources.Re
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Resource URI.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -37,6 +41,11 @@ public final class MachineReferenceWithHintsArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Specifies the sub-class of the reference.
+     * Expected value is &#39;ref:machinewithhints&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -66,20 +75,46 @@ public final class MachineReferenceWithHintsArgs extends com.pulumi.resources.Re
             $ = new MachineReferenceWithHintsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param kind Specifies the sub-class of the reference.
+         * Expected value is &#39;ref:machinewithhints&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Specifies the sub-class of the reference.
+         * Expected value is &#39;ref:machinewithhints&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

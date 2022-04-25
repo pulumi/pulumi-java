@@ -23,6 +23,10 @@ public final class EdifactMessageIdentifierResponse extends com.pulumi.resources
     @Import(name="messageId", required=true)
     private String messageId;
 
+    /**
+     * @return The message id on which this envelope settings has to be applied.
+     * 
+     */
     public String messageId() {
         return this.messageId;
     }
@@ -51,6 +55,12 @@ public final class EdifactMessageIdentifierResponse extends com.pulumi.resources
             $ = new EdifactMessageIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageId The message id on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             $.messageId = messageId;
             return this;

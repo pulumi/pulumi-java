@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiManagementServiceIdentityResponse {
     /**
-     * The principal id of the identity.
+     * @return The principal id of the identity.
      * 
      */
     private final String principalId;
     /**
-     * The client tenant id of the identity.
+     * @return The client tenant id of the identity.
      * 
      */
     private final String tenantId;
     /**
-     * The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+     * @return The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
      * 
      */
     private final String type;
     /**
-     * The list of user identities associated with the resource. The user identity
+     * @return The list of user identities associated with the resource. The user identity
      * dictionary key references will be ARM resource ids in the form:
      * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
@@ -49,33 +49,33 @@ public final class ApiManagementServiceIdentityResponse {
     }
 
     /**
-     * The principal id of the identity.
+     * @return The principal id of the identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The client tenant id of the identity.
+     * @return The client tenant id of the identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+     * @return The type of identity used for the resource. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of user identities associated with the resource. The user identity
+     * @return The list of user identities associated with the resource. The user identity
      * dictionary key references will be ARM resource ids in the form:
      * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
-    */
+     */
     public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

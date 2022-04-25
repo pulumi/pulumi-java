@@ -19,6 +19,10 @@ public final class GetResolverRuleAssociationArgs extends com.pulumi.resources.I
     @Import(name="resolverRuleAssociationId", required=true)
     private String resolverRuleAssociationId;
 
+    /**
+     * @return Primary Identifier for Resolver Rule Association
+     * 
+     */
     public String resolverRuleAssociationId() {
         return this.resolverRuleAssociationId;
     }
@@ -47,6 +51,12 @@ public final class GetResolverRuleAssociationArgs extends com.pulumi.resources.I
             $ = new GetResolverRuleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resolverRuleAssociationId Primary Identifier for Resolver Rule Association
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverRuleAssociationId(String resolverRuleAssociationId) {
             $.resolverRuleAssociationId = resolverRuleAssociationId;
             return this;

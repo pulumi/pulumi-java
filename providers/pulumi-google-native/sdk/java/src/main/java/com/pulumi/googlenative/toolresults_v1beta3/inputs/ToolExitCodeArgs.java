@@ -26,6 +26,10 @@ public final class ToolExitCodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="number")
     private @Nullable Output<Integer> number;
 
+    /**
+     * @return Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
+     * 
+     */
     public Optional<Output<Integer>> number() {
         return Optional.ofNullable(this.number);
     }
@@ -54,11 +58,23 @@ public final class ToolExitCodeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ToolExitCodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param number Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(@Nullable Output<Integer> number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param number Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Integer number) {
             return number(Output.of(number));
         }

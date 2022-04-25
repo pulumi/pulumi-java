@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch {
     /**
-     * The values sent must match the specified values exactly.
+     * @return The values sent must match the specified values exactly.
      * 
      */
     private final List<String> exacts;
@@ -22,9 +22,9 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
     }
 
     /**
-     * The values sent must match the specified values exactly.
+     * @return The values sent must match the specified values exactly.
      * 
-    */
+     */
     public List<String> exacts() {
         return this.exacts;
     }

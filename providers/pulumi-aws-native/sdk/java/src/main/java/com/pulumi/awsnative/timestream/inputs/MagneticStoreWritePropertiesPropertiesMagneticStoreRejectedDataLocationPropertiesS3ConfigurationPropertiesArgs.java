@@ -26,6 +26,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return The bucket name used to store the data.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -37,6 +41,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="encryptionOption", required=true)
     private Output<String> encryptionOption;
 
+    /**
+     * @return Either SSE_KMS or SSE_S3.
+     * 
+     */
     public Output<String> encryptionOption() {
         return this.encryptionOption;
     }
@@ -48,6 +56,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return Must be provided if SSE_KMS is specified as the encryption option
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -59,6 +71,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="objectKeyPrefix")
     private @Nullable Output<String> objectKeyPrefix;
 
+    /**
+     * @return String used to prefix all data in the bucket.
+     * 
+     */
     public Optional<Output<String>> objectKeyPrefix() {
         return Optional.ofNullable(this.objectKeyPrefix);
     }
@@ -90,38 +106,86 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
             $ = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The bucket name used to store the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The bucket name used to store the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param encryptionOption Either SSE_KMS or SSE_S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionOption(Output<String> encryptionOption) {
             $.encryptionOption = encryptionOption;
             return this;
         }
 
+        /**
+         * @param encryptionOption Either SSE_KMS or SSE_S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionOption(String encryptionOption) {
             return encryptionOption(Output.of(encryptionOption));
         }
 
+        /**
+         * @param kmsKeyId Must be provided if SSE_KMS is specified as the encryption option
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId Must be provided if SSE_KMS is specified as the encryption option
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param objectKeyPrefix String used to prefix all data in the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
             $.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
 
+        /**
+         * @param objectKeyPrefix String used to prefix all data in the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectKeyPrefix(String objectKeyPrefix) {
             return objectKeyPrefix(Output.of(objectKeyPrefix));
         }

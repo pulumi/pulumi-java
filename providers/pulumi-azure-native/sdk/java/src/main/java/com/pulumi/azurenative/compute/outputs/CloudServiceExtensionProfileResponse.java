@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CloudServiceExtensionProfileResponse {
     /**
-     * List of extensions for the cloud service.
+     * @return List of extensions for the cloud service.
      * 
      */
     private final @Nullable List<ExtensionResponse> extensions;
@@ -23,9 +23,9 @@ public final class CloudServiceExtensionProfileResponse {
     }
 
     /**
-     * List of extensions for the cloud service.
+     * @return List of extensions for the cloud service.
      * 
-    */
+     */
     public List<ExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }

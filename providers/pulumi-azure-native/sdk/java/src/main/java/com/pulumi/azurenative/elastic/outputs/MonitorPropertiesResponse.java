@@ -14,23 +14,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MonitorPropertiesResponse {
     /**
-     * Elastic cloud properties.
+     * @return Elastic cloud properties.
      * 
      */
     private final @Nullable ElasticPropertiesResponse elasticProperties;
     private final String liftrResourceCategory;
     /**
-     * The priority of the resource.
+     * @return The priority of the resource.
      * 
      */
     private final Integer liftrResourcePreference;
     /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
      * 
      */
     private final @Nullable String monitoringStatus;
     /**
-     * Provisioning state of the monitor resource.
+     * @return Provisioning state of the monitor resource.
      * 
      */
     private final @Nullable String provisioningState;
@@ -50,9 +50,9 @@ public final class MonitorPropertiesResponse {
     }
 
     /**
-     * Elastic cloud properties.
+     * @return Elastic cloud properties.
      * 
-    */
+     */
     public Optional<ElasticPropertiesResponse> elasticProperties() {
         return Optional.ofNullable(this.elasticProperties);
     }
@@ -60,23 +60,23 @@ public final class MonitorPropertiesResponse {
         return this.liftrResourceCategory;
     }
     /**
-     * The priority of the resource.
+     * @return The priority of the resource.
      * 
-    */
+     */
     public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
     /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
     /**
-     * Provisioning state of the monitor resource.
+     * @return Provisioning state of the monitor resource.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

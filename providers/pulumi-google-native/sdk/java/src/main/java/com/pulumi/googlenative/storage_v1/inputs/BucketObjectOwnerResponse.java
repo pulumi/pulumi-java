@@ -23,6 +23,10 @@ public final class BucketObjectOwnerResponse extends com.pulumi.resources.Invoke
     @Import(name="entity", required=true)
     private String entity;
 
+    /**
+     * @return The entity, in the form user-userId.
+     * 
+     */
     public String entity() {
         return this.entity;
     }
@@ -34,6 +38,10 @@ public final class BucketObjectOwnerResponse extends com.pulumi.resources.Invoke
     @Import(name="entityId", required=true)
     private String entityId;
 
+    /**
+     * @return The ID for the entity.
+     * 
+     */
     public String entityId() {
         return this.entityId;
     }
@@ -63,11 +71,23 @@ public final class BucketObjectOwnerResponse extends com.pulumi.resources.Invoke
             $ = new BucketObjectOwnerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entity The entity, in the form user-userId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entity(String entity) {
             $.entity = entity;
             return this;
         }
 
+        /**
+         * @param entityId The ID for the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityId(String entityId) {
             $.entityId = entityId;
             return this;

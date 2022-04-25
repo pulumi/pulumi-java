@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
     @Import(name="postbackData", required=true)
     private String postbackData;
 
+    /**
+     * @return Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
+     * 
+     */
     public String postbackData() {
         return this.postbackData;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return Suggested reply text.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param postbackData Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postbackData(String postbackData) {
             $.postbackData = postbackData;
             return this;
         }
 
+        /**
+         * @param text Suggested reply text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

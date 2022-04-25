@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse {
     /**
-     * Column heading.
+     * @return Column heading.
      * 
      */
     private final String header;
     /**
-     * Optional. Defines text alignment for all cells in this column.
+     * @return Optional. Defines text alignment for all cells in this column.
      * 
      */
     private final String horizontalAlignment;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
     }
 
     /**
-     * Column heading.
+     * @return Column heading.
      * 
-    */
+     */
     public String header() {
         return this.header;
     }
     /**
-     * Optional. Defines text alignment for all cells in this column.
+     * @return Optional. Defines text alignment for all cells in this column.
      * 
-    */
+     */
     public String horizontalAlignment() {
         return this.horizontalAlignment;
     }

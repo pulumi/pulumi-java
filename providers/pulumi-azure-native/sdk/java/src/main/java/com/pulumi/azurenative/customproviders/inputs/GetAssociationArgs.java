@@ -19,6 +19,10 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="associationName", required=true)
     private String associationName;
 
+    /**
+     * @return The name of the association.
+     * 
+     */
     public String associationName() {
         return this.associationName;
     }
@@ -30,6 +34,10 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope of the association.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationName The name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(String associationName) {
             $.associationName = associationName;
             return this;
         }
 
+        /**
+         * @param scope The scope of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

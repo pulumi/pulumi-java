@@ -26,6 +26,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Offer Id
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="planId")
     private @Nullable Output<String> planId;
 
+    /**
+     * @return Offer Plan Id
+     * 
+     */
     public Optional<Output<String>> planId() {
         return Optional.ofNullable(this.planId);
     }
@@ -48,6 +56,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="planName")
     private @Nullable Output<String> planName;
 
+    /**
+     * @return Offer Plan Name
+     * 
+     */
     public Optional<Output<String>> planName() {
         return Optional.ofNullable(this.planName);
     }
@@ -59,6 +71,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="publisherId")
     private @Nullable Output<String> publisherId;
 
+    /**
+     * @return Publisher Id
+     * 
+     */
     public Optional<Output<String>> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
@@ -70,6 +86,10 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="termUnit")
     private @Nullable Output<String> termUnit;
 
+    /**
+     * @return Offer Plan Term unit
+     * 
+     */
     public Optional<Output<String>> termUnit() {
         return Optional.ofNullable(this.termUnit);
     }
@@ -102,47 +122,107 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
             $ = new OrganizationResourcePropertiesOfferDetailArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Offer Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Offer Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param planId Offer Plan Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(@Nullable Output<String> planId) {
             $.planId = planId;
             return this;
         }
 
+        /**
+         * @param planId Offer Plan Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(String planId) {
             return planId(Output.of(planId));
         }
 
+        /**
+         * @param planName Offer Plan Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder planName(@Nullable Output<String> planName) {
             $.planName = planName;
             return this;
         }
 
+        /**
+         * @param planName Offer Plan Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder planName(String planName) {
             return planName(Output.of(planName));
         }
 
+        /**
+         * @param publisherId Publisher Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherId(@Nullable Output<String> publisherId) {
             $.publisherId = publisherId;
             return this;
         }
 
+        /**
+         * @param publisherId Publisher Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherId(String publisherId) {
             return publisherId(Output.of(publisherId));
         }
 
+        /**
+         * @param termUnit Offer Plan Term unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder termUnit(@Nullable Output<String> termUnit) {
             $.termUnit = termUnit;
             return this;
         }
 
+        /**
+         * @param termUnit Offer Plan Term unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder termUnit(String termUnit) {
             return termUnit(Output.of(termUnit));
         }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse {
     /**
-     * Specifies the size of the disk in base-2 GB.
+     * @return Specifies the size of the disk in base-2 GB.
      * 
      */
     private final String diskSizeGb;
     /**
-     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+     * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
      */
     private final String interface_;
@@ -29,16 +29,16 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     }
 
     /**
-     * Specifies the size of the disk in base-2 GB.
+     * @return Specifies the size of the disk in base-2 GB.
      * 
-    */
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
-     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+     * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
-    */
+     */
     public String interface_() {
         return this.interface_;
     }

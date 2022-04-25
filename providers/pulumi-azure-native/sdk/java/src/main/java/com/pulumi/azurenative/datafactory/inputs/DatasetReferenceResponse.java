@@ -27,6 +27,10 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters")
     private @Nullable Map<String,Object> parameters;
 
+    /**
+     * @return Arguments for dataset.
+     * 
+     */
     public Optional<Map<String,Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -38,6 +42,10 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="referenceName", required=true)
     private String referenceName;
 
+    /**
+     * @return Reference dataset name.
+     * 
+     */
     public String referenceName() {
         return this.referenceName;
     }
@@ -49,6 +57,10 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Dataset reference type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -79,16 +91,34 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
             $ = new DatasetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Arguments for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param referenceName Reference dataset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param type Dataset reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

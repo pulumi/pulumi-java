@@ -25,6 +25,10 @@ public final class DataIntegrityValidationResultResponse extends com.pulumi.reso
     @Import(name="failedObjects", required=true)
     private Map<String,String> failedObjects;
 
+    /**
+     * @return List of failed table names of source and target pair
+     * 
+     */
     public Map<String,String> failedObjects() {
         return this.failedObjects;
     }
@@ -36,6 +40,10 @@ public final class DataIntegrityValidationResultResponse extends com.pulumi.reso
     @Import(name="validationErrors", required=true)
     private ValidationErrorResponse validationErrors;
 
+    /**
+     * @return List of errors that happened while performing data integrity validation
+     * 
+     */
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
@@ -65,11 +73,23 @@ public final class DataIntegrityValidationResultResponse extends com.pulumi.reso
             $ = new DataIntegrityValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failedObjects List of failed table names of source and target pair
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedObjects(Map<String,String> failedObjects) {
             $.failedObjects = failedObjects;
             return this;
         }
 
+        /**
+         * @param validationErrors List of errors that happened while performing data integrity validation
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
             $.validationErrors = validationErrors;
             return this;

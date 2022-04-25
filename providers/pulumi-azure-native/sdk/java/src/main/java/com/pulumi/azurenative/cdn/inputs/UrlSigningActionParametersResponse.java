@@ -27,6 +27,10 @@ public final class UrlSigningActionParametersResponse extends com.pulumi.resourc
     @Import(name="algorithm")
     private @Nullable String algorithm;
 
+    /**
+     * @return Algorithm to use for URL signing
+     * 
+     */
     public Optional<String> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -45,6 +49,10 @@ public final class UrlSigningActionParametersResponse extends com.pulumi.resourc
     @Import(name="parameterNameOverride")
     private @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
 
+    /**
+     * @return Defines which query string parameters in the url to be considered for expires, key id etc.
+     * 
+     */
     public Optional<List<UrlSigningParamIdentifierResponse>> parameterNameOverride() {
         return Optional.ofNullable(this.parameterNameOverride);
     }
@@ -75,6 +83,12 @@ public final class UrlSigningActionParametersResponse extends com.pulumi.resourc
             $ = new UrlSigningActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm Algorithm to use for URL signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(@Nullable String algorithm) {
             $.algorithm = algorithm;
             return this;
@@ -85,11 +99,23 @@ public final class UrlSigningActionParametersResponse extends com.pulumi.resourc
             return this;
         }
 
+        /**
+         * @param parameterNameOverride Defines which query string parameters in the url to be considered for expires, key id etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterNameOverride(@Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
             $.parameterNameOverride = parameterNameOverride;
             return this;
         }
 
+        /**
+         * @param parameterNameOverride Defines which query string parameters in the url to be considered for expires, key id etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterNameOverride(UrlSigningParamIdentifierResponse... parameterNameOverride) {
             return parameterNameOverride(List.of(parameterNameOverride));
         }

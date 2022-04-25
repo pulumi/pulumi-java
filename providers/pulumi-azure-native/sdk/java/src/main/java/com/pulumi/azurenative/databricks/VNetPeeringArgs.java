@@ -26,6 +26,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowForwardedTraffic")
     private @Nullable Output<Boolean> allowForwardedTraffic;
 
+    /**
+     * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+     * 
+     */
     public Optional<Output<Boolean>> allowForwardedTraffic() {
         return Optional.ofNullable(this.allowForwardedTraffic);
     }
@@ -37,6 +41,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowGatewayTransit")
     private @Nullable Output<Boolean> allowGatewayTransit;
 
+    /**
+     * @return If gateway links can be used in remote virtual networking to link to this virtual network.
+     * 
+     */
     public Optional<Output<Boolean>> allowGatewayTransit() {
         return Optional.ofNullable(this.allowGatewayTransit);
     }
@@ -48,6 +56,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowVirtualNetworkAccess")
     private @Nullable Output<Boolean> allowVirtualNetworkAccess;
 
+    /**
+     * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+     * 
+     */
     public Optional<Output<Boolean>> allowVirtualNetworkAccess() {
         return Optional.ofNullable(this.allowVirtualNetworkAccess);
     }
@@ -59,6 +71,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databricksAddressSpace")
     private @Nullable Output<AddressSpaceArgs> databricksAddressSpace;
 
+    /**
+     * @return The reference to the databricks virtual network address space.
+     * 
+     */
     public Optional<Output<AddressSpaceArgs>> databricksAddressSpace() {
         return Optional.ofNullable(this.databricksAddressSpace);
     }
@@ -70,6 +86,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databricksVirtualNetwork")
     private @Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
 
+    /**
+     * @return  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+     * 
+     */
     public Optional<Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs>> databricksVirtualNetwork() {
         return Optional.ofNullable(this.databricksVirtualNetwork);
     }
@@ -81,6 +101,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringName")
     private @Nullable Output<String> peeringName;
 
+    /**
+     * @return The name of the workspace vNet peering.
+     * 
+     */
     public Optional<Output<String>> peeringName() {
         return Optional.ofNullable(this.peeringName);
     }
@@ -92,6 +116,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="remoteAddressSpace")
     private @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
 
+    /**
+     * @return The reference to the remote virtual network address space.
+     * 
+     */
     public Optional<Output<AddressSpaceArgs>> remoteAddressSpace() {
         return Optional.ofNullable(this.remoteAddressSpace);
     }
@@ -103,6 +131,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="remoteVirtualNetwork", required=true)
     private Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
 
+    /**
+     * @return  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+     * 
+     */
     public Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork() {
         return this.remoteVirtualNetwork;
     }
@@ -114,6 +146,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -125,6 +161,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useRemoteGateways")
     private @Nullable Output<Boolean> useRemoteGateways;
 
+    /**
+     * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+     * 
+     */
     public Optional<Output<Boolean>> useRemoteGateways() {
         return Optional.ofNullable(this.useRemoteGateways);
     }
@@ -136,6 +176,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -174,101 +218,233 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VNetPeeringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowForwardedTraffic Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowForwardedTraffic(@Nullable Output<Boolean> allowForwardedTraffic) {
             $.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
 
+        /**
+         * @param allowForwardedTraffic Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowForwardedTraffic(Boolean allowForwardedTraffic) {
             return allowForwardedTraffic(Output.of(allowForwardedTraffic));
         }
 
+        /**
+         * @param allowGatewayTransit If gateway links can be used in remote virtual networking to link to this virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowGatewayTransit(@Nullable Output<Boolean> allowGatewayTransit) {
             $.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
 
+        /**
+         * @param allowGatewayTransit If gateway links can be used in remote virtual networking to link to this virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowGatewayTransit(Boolean allowGatewayTransit) {
             return allowGatewayTransit(Output.of(allowGatewayTransit));
         }
 
+        /**
+         * @param allowVirtualNetworkAccess Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVirtualNetworkAccess(@Nullable Output<Boolean> allowVirtualNetworkAccess) {
             $.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
 
+        /**
+         * @param allowVirtualNetworkAccess Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVirtualNetworkAccess(Boolean allowVirtualNetworkAccess) {
             return allowVirtualNetworkAccess(Output.of(allowVirtualNetworkAccess));
         }
 
+        /**
+         * @param databricksAddressSpace The reference to the databricks virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databricksAddressSpace(@Nullable Output<AddressSpaceArgs> databricksAddressSpace) {
             $.databricksAddressSpace = databricksAddressSpace;
             return this;
         }
 
+        /**
+         * @param databricksAddressSpace The reference to the databricks virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databricksAddressSpace(AddressSpaceArgs databricksAddressSpace) {
             return databricksAddressSpace(Output.of(databricksAddressSpace));
         }
 
+        /**
+         * @param databricksVirtualNetwork  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databricksVirtualNetwork(@Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork) {
             $.databricksVirtualNetwork = databricksVirtualNetwork;
             return this;
         }
 
+        /**
+         * @param databricksVirtualNetwork  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databricksVirtualNetwork(VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs databricksVirtualNetwork) {
             return databricksVirtualNetwork(Output.of(databricksVirtualNetwork));
         }
 
+        /**
+         * @param peeringName The name of the workspace vNet peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(@Nullable Output<String> peeringName) {
             $.peeringName = peeringName;
             return this;
         }
 
+        /**
+         * @param peeringName The name of the workspace vNet peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(String peeringName) {
             return peeringName(Output.of(peeringName));
         }
 
+        /**
+         * @param remoteAddressSpace The reference to the remote virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteAddressSpace(@Nullable Output<AddressSpaceArgs> remoteAddressSpace) {
             $.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
 
+        /**
+         * @param remoteAddressSpace The reference to the remote virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteAddressSpace(AddressSpaceArgs remoteAddressSpace) {
             return remoteAddressSpace(Output.of(remoteAddressSpace));
         }
 
+        /**
+         * @param remoteVirtualNetwork  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVirtualNetwork(Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork) {
             $.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
 
+        /**
+         * @param remoteVirtualNetwork  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVirtualNetwork(VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs remoteVirtualNetwork) {
             return remoteVirtualNetwork(Output.of(remoteVirtualNetwork));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param useRemoteGateways If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useRemoteGateways(@Nullable Output<Boolean> useRemoteGateways) {
             $.useRemoteGateways = useRemoteGateways;
             return this;
         }
 
+        /**
+         * @param useRemoteGateways If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useRemoteGateways(Boolean useRemoteGateways) {
             return useRemoteGateways(Output.of(useRemoteGateways));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

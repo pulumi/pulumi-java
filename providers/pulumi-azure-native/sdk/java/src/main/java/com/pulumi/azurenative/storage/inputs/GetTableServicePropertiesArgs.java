@@ -19,6 +19,10 @@ public final class GetTableServicePropertiesArgs extends com.pulumi.resources.In
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetTableServicePropertiesArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetTableServicePropertiesArgs extends com.pulumi.resources.In
     @Import(name="tableServiceName", required=true)
     private String tableServiceName;
 
+    /**
+     * @return The name of the Table Service within the specified storage account. Table Service Name must be &#39;default&#39;
+     * 
+     */
     public String tableServiceName() {
         return this.tableServiceName;
     }
@@ -71,16 +83,34 @@ public final class GetTableServicePropertiesArgs extends com.pulumi.resources.In
             $ = new GetTableServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param tableServiceName The name of the Table Service within the specified storage account. Table Service Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableServiceName(String tableServiceName) {
             $.tableServiceName = tableServiceName;
             return this;

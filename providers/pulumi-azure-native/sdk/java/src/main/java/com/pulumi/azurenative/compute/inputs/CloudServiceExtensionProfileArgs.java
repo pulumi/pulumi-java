@@ -27,6 +27,10 @@ public final class CloudServiceExtensionProfileArgs extends com.pulumi.resources
     @Import(name="extensions")
     private @Nullable Output<List<ExtensionArgs>> extensions;
 
+    /**
+     * @return List of extensions for the cloud service.
+     * 
+     */
     public Optional<Output<List<ExtensionArgs>>> extensions() {
         return Optional.ofNullable(this.extensions);
     }
@@ -55,15 +59,33 @@ public final class CloudServiceExtensionProfileArgs extends com.pulumi.resources
             $ = new CloudServiceExtensionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensions List of extensions for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(@Nullable Output<List<ExtensionArgs>> extensions) {
             $.extensions = extensions;
             return this;
         }
 
+        /**
+         * @param extensions List of extensions for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(List<ExtensionArgs> extensions) {
             return extensions(Output.of(extensions));
         }
 
+        /**
+         * @param extensions List of extensions for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(ExtensionArgs... extensions) {
             return extensions(List.of(extensions));
         }

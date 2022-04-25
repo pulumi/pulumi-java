@@ -25,6 +25,10 @@ public final class InstanceAutoSnapshotAddOn extends com.pulumi.resources.Invoke
     @Import(name="snapshotTimeOfDay")
     private @Nullable String snapshotTimeOfDay;
 
+    /**
+     * @return The daily time when an automatic snapshot will be created.
+     * 
+     */
     public Optional<String> snapshotTimeOfDay() {
         return Optional.ofNullable(this.snapshotTimeOfDay);
     }
@@ -53,6 +57,12 @@ public final class InstanceAutoSnapshotAddOn extends com.pulumi.resources.Invoke
             $ = new InstanceAutoSnapshotAddOn(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
             $.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;

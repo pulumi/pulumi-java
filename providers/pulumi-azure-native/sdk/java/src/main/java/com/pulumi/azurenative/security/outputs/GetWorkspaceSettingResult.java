@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetWorkspaceSettingResult {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
+     * @return All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
      * 
      */
     private final String scope;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * The full Azure ID of the workspace to save the data in
+     * @return The full Azure ID of the workspace to save the data in
      * 
      */
     private final String workspaceId;
@@ -50,37 +50,37 @@ public final class GetWorkspaceSettingResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
+     * @return All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The full Azure ID of the workspace to save the data in
+     * @return The full Azure ID of the workspace to save the data in
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }

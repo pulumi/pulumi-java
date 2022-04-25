@@ -23,6 +23,10 @@ public final class ManagedCertificateResponse extends com.pulumi.resources.Invok
     @Import(name="lastRenewalTime", required=true)
     private String lastRenewalTime;
 
+    /**
+     * @return Time at which the certificate was last renewed. The renewal process is fully managed. Certificate renewal will automatically occur before the certificate expires. Renewal errors can be tracked via ManagementStatus.
+     * 
+     */
     public String lastRenewalTime() {
         return this.lastRenewalTime;
     }
@@ -34,6 +38,10 @@ public final class ManagedCertificateResponse extends com.pulumi.resources.Invok
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -63,11 +71,23 @@ public final class ManagedCertificateResponse extends com.pulumi.resources.Invok
             $ = new ManagedCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastRenewalTime Time at which the certificate was last renewed. The renewal process is fully managed. Certificate renewal will automatically occur before the certificate expires. Renewal errors can be tracked via ManagementStatus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRenewalTime(String lastRenewalTime) {
             $.lastRenewalTime = lastRenewalTime;
             return this;
         }
 
+        /**
+         * @param status Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

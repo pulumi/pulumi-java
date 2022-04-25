@@ -26,6 +26,10 @@ public final class AuthenticationSettingsContractResponse extends com.pulumi.res
     @Import(name="oAuth2")
     private @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
 
+    /**
+     * @return OAuth2 Authentication settings
+     * 
+     */
     public Optional<OAuth2AuthenticationSettingsContractResponse> oAuth2() {
         return Optional.ofNullable(this.oAuth2);
     }
@@ -37,6 +41,10 @@ public final class AuthenticationSettingsContractResponse extends com.pulumi.res
     @Import(name="openid")
     private @Nullable OpenIdAuthenticationSettingsContractResponse openid;
 
+    /**
+     * @return OpenID Connect Authentication Settings
+     * 
+     */
     public Optional<OpenIdAuthenticationSettingsContractResponse> openid() {
         return Optional.ofNullable(this.openid);
     }
@@ -66,11 +74,23 @@ public final class AuthenticationSettingsContractResponse extends com.pulumi.res
             $ = new AuthenticationSettingsContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oAuth2 OAuth2 Authentication settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder oAuth2(@Nullable OAuth2AuthenticationSettingsContractResponse oAuth2) {
             $.oAuth2 = oAuth2;
             return this;
         }
 
+        /**
+         * @param openid OpenID Connect Authentication Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder openid(@Nullable OpenIdAuthenticationSettingsContractResponse openid) {
             $.openid = openid;
             return this;

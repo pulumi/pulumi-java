@@ -28,6 +28,11 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
     @Import(name="additionalExtensions")
     private @Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions;
 
+    /**
+     * @return Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>>> additionalExtensions() {
         return Optional.ofNullable(this.additionalExtensions);
     }
@@ -40,6 +45,11 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
     @Import(name="aiaOcspServers")
     private @Nullable Output<List<String>> aiaOcspServers;
 
+    /**
+     * @return Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+     * &#34;Authority Information Access&#34; extension in the certificate.
+     * 
+     */
     public Optional<Output<List<String>>> aiaOcspServers() {
         return Optional.ofNullable(this.aiaOcspServers);
     }
@@ -52,6 +62,11 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
     @Import(name="caOptions", required=true)
     private Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions;
 
+    /**
+     * @return Describes values that are relevant in a CA certificate.
+     * Structure is documented below.
+     * 
+     */
     public Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions() {
         return this.caOptions;
     }
@@ -64,6 +79,11 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
     @Import(name="keyUsage", required=true)
     private Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage;
 
+    /**
+     * @return Indicates the intended use for keys that correspond to a certificate.
+     * Structure is documented below.
+     * 
+     */
     public Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage() {
         return this.keyUsage;
     }
@@ -76,6 +96,11 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
     @Import(name="policyIds")
     private @Nullable Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds;
 
+    /**
+     * @return Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>>> policyIds() {
         return Optional.ofNullable(this.policyIds);
     }
@@ -108,59 +133,150 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
             $ = new AuthorityConfigX509ConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalExtensions Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(@Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions) {
             $.additionalExtensions = additionalExtensions;
             return this;
         }
 
+        /**
+         * @param additionalExtensions Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs> additionalExtensions) {
             return additionalExtensions(Output.of(additionalExtensions));
         }
 
+        /**
+         * @param additionalExtensions Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalExtensions(AuthorityConfigX509ConfigAdditionalExtensionGetArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
 
+        /**
+         * @param aiaOcspServers Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+         * &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             $.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
+        /**
+         * @param aiaOcspServers Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+         * &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(List<String> aiaOcspServers) {
             return aiaOcspServers(Output.of(aiaOcspServers));
         }
 
+        /**
+         * @param aiaOcspServers Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+         * &#34;Authority Information Access&#34; extension in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
 
+        /**
+         * @param caOptions Describes values that are relevant in a CA certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caOptions(Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions) {
             $.caOptions = caOptions;
             return this;
         }
 
+        /**
+         * @param caOptions Describes values that are relevant in a CA certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caOptions(AuthorityConfigX509ConfigCaOptionsGetArgs caOptions) {
             return caOptions(Output.of(caOptions));
         }
 
+        /**
+         * @param keyUsage Indicates the intended use for keys that correspond to a certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage) {
             $.keyUsage = keyUsage;
             return this;
         }
 
+        /**
+         * @param keyUsage Indicates the intended use for keys that correspond to a certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(AuthorityConfigX509ConfigKeyUsageGetArgs keyUsage) {
             return keyUsage(Output.of(keyUsage));
         }
 
+        /**
+         * @param policyIds Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(@Nullable Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds) {
             $.policyIds = policyIds;
             return this;
         }
 
+        /**
+         * @param policyIds Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(List<AuthorityConfigX509ConfigPolicyIdGetArgs> policyIds) {
             return policyIds(Output.of(policyIds));
         }
 
+        /**
+         * @param policyIds Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyIds(AuthorityConfigX509ConfigPolicyIdGetArgs... policyIds) {
             return policyIds(List.of(policyIds));
         }

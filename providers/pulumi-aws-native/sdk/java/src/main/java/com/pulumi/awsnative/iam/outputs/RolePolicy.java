@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class RolePolicy {
     /**
-     * The policy document.
+     * @return The policy document.
      * 
      */
     private final String policyDocument;
     /**
-     * The friendly name (not ARN) identifying the policy.
+     * @return The friendly name (not ARN) identifying the policy.
      * 
      */
     private final String policyName;
@@ -29,16 +29,16 @@ public final class RolePolicy {
     }
 
     /**
-     * The policy document.
+     * @return The policy document.
      * 
-    */
+     */
     public String policyDocument() {
         return this.policyDocument;
     }
     /**
-     * The friendly name (not ARN) identifying the policy.
+     * @return The friendly name (not ARN) identifying the policy.
      * 
-    */
+     */
     public String policyName() {
         return this.policyName;
     }

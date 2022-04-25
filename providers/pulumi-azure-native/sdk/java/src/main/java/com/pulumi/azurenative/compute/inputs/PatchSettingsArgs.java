@@ -30,6 +30,10 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assessmentMode")
     private @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
 
+    /**
+     * @return Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine.&lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+     * 
+     */
     public Optional<Output<Either<String,WindowsPatchAssessmentMode>>> assessmentMode() {
         return Optional.ofNullable(this.assessmentMode);
     }
@@ -41,6 +45,10 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableHotpatching")
     private @Nullable Output<Boolean> enableHotpatching;
 
+    /**
+     * @return Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the &#39;provisionVMAgent&#39; must be set to true and &#39;patchMode&#39; must be set to &#39;AutomaticByPlatform&#39;.
+     * 
+     */
     public Optional<Output<Boolean>> enableHotpatching() {
         return Optional.ofNullable(this.enableHotpatching);
     }
@@ -52,6 +60,10 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="patchMode")
     private @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode;
 
+    /**
+     * @return Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false&lt;br /&gt;&lt;br /&gt; **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true
+     * 
+     */
     public Optional<Output<Either<String,WindowsVMGuestPatchMode>>> patchMode() {
         return Optional.ofNullable(this.patchMode);
     }
@@ -82,45 +94,105 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PatchSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine.&lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(@Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode) {
             $.assessmentMode = assessmentMode;
             return this;
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine.&lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(Either<String,WindowsPatchAssessmentMode> assessmentMode) {
             return assessmentMode(Output.of(assessmentMode));
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine.&lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(String assessmentMode) {
             return assessmentMode(Either.ofLeft(assessmentMode));
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine.&lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(WindowsPatchAssessmentMode assessmentMode) {
             return assessmentMode(Either.ofRight(assessmentMode));
         }
 
+        /**
+         * @param enableHotpatching Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the &#39;provisionVMAgent&#39; must be set to true and &#39;patchMode&#39; must be set to &#39;AutomaticByPlatform&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHotpatching(@Nullable Output<Boolean> enableHotpatching) {
             $.enableHotpatching = enableHotpatching;
             return this;
         }
 
+        /**
+         * @param enableHotpatching Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the &#39;provisionVMAgent&#39; must be set to true and &#39;patchMode&#39; must be set to &#39;AutomaticByPlatform&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHotpatching(Boolean enableHotpatching) {
             return enableHotpatching(Output.of(enableHotpatching));
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false&lt;br /&gt;&lt;br /&gt; **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(@Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode) {
             $.patchMode = patchMode;
             return this;
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false&lt;br /&gt;&lt;br /&gt; **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(Either<String,WindowsVMGuestPatchMode> patchMode) {
             return patchMode(Output.of(patchMode));
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false&lt;br /&gt;&lt;br /&gt; **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(String patchMode) {
             return patchMode(Either.ofLeft(patchMode));
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false&lt;br /&gt;&lt;br /&gt; **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(WindowsVMGuestPatchMode patchMode) {
             return patchMode(Either.ofRight(patchMode));
         }

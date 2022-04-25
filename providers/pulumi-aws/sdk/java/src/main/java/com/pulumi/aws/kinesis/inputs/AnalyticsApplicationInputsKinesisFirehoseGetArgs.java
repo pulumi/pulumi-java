@@ -20,6 +20,10 @@ public final class AnalyticsApplicationInputsKinesisFirehoseGetArgs extends com.
     @Import(name="resourceArn", required=true)
     private Output<String> resourceArn;
 
+    /**
+     * @return The ARN of the Kinesis Firehose delivery stream.
+     * 
+     */
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
@@ -31,6 +35,10 @@ public final class AnalyticsApplicationInputsKinesisFirehoseGetArgs extends com.
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the IAM Role used to access the stream.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -60,20 +68,44 @@ public final class AnalyticsApplicationInputsKinesisFirehoseGetArgs extends com.
             $ = new AnalyticsApplicationInputsKinesisFirehoseGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceArn The ARN of the Kinesis Firehose delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(Output<String> resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
+        /**
+         * @param resourceArn The ARN of the Kinesis Firehose delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             return resourceArn(Output.of(resourceArn));
         }
 
+        /**
+         * @param roleArn The ARN of the IAM Role used to access the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the IAM Role used to access the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

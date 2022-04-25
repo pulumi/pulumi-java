@@ -77,6 +77,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ExperimentTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<ExperimentTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -187,15 +191,33 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
             return samplingRate(Output.of(samplingRate));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ExperimentTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ExperimentTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ExperimentTagArgs... tags) {
             return tags(List.of(tags));
         }

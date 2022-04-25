@@ -29,6 +29,13 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appEngineHttpTarget")
     private @Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
 
+    /**
+     * @return App Engine HTTP target.
+     * If the job providers a App Engine HTTP target the cron will
+     * send a request to the service instance
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobAppEngineHttpTargetArgs>> appEngineHttpTarget() {
         return Optional.ofNullable(this.appEngineHttpTarget);
     }
@@ -47,6 +54,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attemptDeadline")
     private @Nullable Output<String> attemptDeadline;
 
+    /**
+     * @return The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+     * cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+     * execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+     * The allowed duration for this deadline is:
+     * * For HTTP targets, between 15 seconds and 30 minutes.
+     * * For App Engine HTTP targets, between 15 seconds and 24 hours.
+     * * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
+     *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
+     * 
+     */
     public Optional<Output<String>> attemptDeadline() {
         return Optional.ofNullable(this.attemptDeadline);
     }
@@ -59,6 +77,11 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description for the job.
+     * This string must not contain more than 500 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -73,6 +96,13 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpTarget")
     private @Nullable Output<JobHttpTargetArgs> httpTarget;
 
+    /**
+     * @return HTTP target.
+     * If the job providers a http_target the cron will
+     * send a request to the targeted url
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobHttpTargetArgs>> httpTarget() {
         return Optional.ofNullable(this.httpTarget);
     }
@@ -84,6 +114,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the job.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -96,6 +130,11 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -110,6 +149,13 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pubsubTarget")
     private @Nullable Output<JobPubsubTargetArgs> pubsubTarget;
 
+    /**
+     * @return Pub/Sub target
+     * If the job providers a Pub/Sub target the cron will publish
+     * a message to the provided topic
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobPubsubTargetArgs>> pubsubTarget() {
         return Optional.ofNullable(this.pubsubTarget);
     }
@@ -121,6 +167,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -135,6 +185,13 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryConfig")
     private @Nullable Output<JobRetryConfigArgs> retryConfig;
 
+    /**
+     * @return By default, if a job does not complete successfully,
+     * meaning that an acknowledgement is not received from the handler,
+     * then it will be retried with exponential backoff according to the settings
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobRetryConfigArgs>> retryConfig() {
         return Optional.ofNullable(this.retryConfig);
     }
@@ -146,6 +203,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return Describes the schedule on which the job will be executed.
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -158,6 +219,11 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return Specifies the time zone to be used in interpreting schedule.
+     * The value of this field must be a time zone name from the tz database.
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -196,101 +262,277 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appEngineHttpTarget App Engine HTTP target.
+         * If the job providers a App Engine HTTP target the cron will
+         * send a request to the service instance
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineHttpTarget(@Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget) {
             $.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
 
+        /**
+         * @param appEngineHttpTarget App Engine HTTP target.
+         * If the job providers a App Engine HTTP target the cron will
+         * send a request to the service instance
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineHttpTarget(JobAppEngineHttpTargetArgs appEngineHttpTarget) {
             return appEngineHttpTarget(Output.of(appEngineHttpTarget));
         }
 
+        /**
+         * @param attemptDeadline The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+         * cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+         * execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+         * The allowed duration for this deadline is:
+         * * For HTTP targets, between 15 seconds and 30 minutes.
+         * * For App Engine HTTP targets, between 15 seconds and 24 hours.
+         * * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
+         *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder attemptDeadline(@Nullable Output<String> attemptDeadline) {
             $.attemptDeadline = attemptDeadline;
             return this;
         }
 
+        /**
+         * @param attemptDeadline The deadline for job attempts. If the request handler does not respond by this deadline then the request is
+         * cancelled and the attempt is marked as a DEADLINE_EXCEEDED failure. The failed attempt can be viewed in
+         * execution logs. Cloud Scheduler will retry the job according to the RetryConfig.
+         * The allowed duration for this deadline is:
+         * * For HTTP targets, between 15 seconds and 30 minutes.
+         * * For App Engine HTTP targets, between 15 seconds and 24 hours.
+         * * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
+         *   A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder attemptDeadline(String attemptDeadline) {
             return attemptDeadline(Output.of(attemptDeadline));
         }
 
+        /**
+         * @param description A human-readable description for the job.
+         * This string must not contain more than 500 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description for the job.
+         * This string must not contain more than 500 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param httpTarget HTTP target.
+         * If the job providers a http_target the cron will
+         * send a request to the targeted url
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTarget(@Nullable Output<JobHttpTargetArgs> httpTarget) {
             $.httpTarget = httpTarget;
             return this;
         }
 
+        /**
+         * @param httpTarget HTTP target.
+         * If the job providers a http_target the cron will
+         * send a request to the targeted url
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTarget(JobHttpTargetArgs httpTarget) {
             return httpTarget(Output.of(httpTarget));
         }
 
+        /**
+         * @param name The name of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param pubsubTarget Pub/Sub target
+         * If the job providers a Pub/Sub target the cron will publish
+         * a message to the provided topic
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTarget(@Nullable Output<JobPubsubTargetArgs> pubsubTarget) {
             $.pubsubTarget = pubsubTarget;
             return this;
         }
 
+        /**
+         * @param pubsubTarget Pub/Sub target
+         * If the job providers a Pub/Sub target the cron will publish
+         * a message to the provided topic
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTarget(JobPubsubTargetArgs pubsubTarget) {
             return pubsubTarget(Output.of(pubsubTarget));
         }
 
+        /**
+         * @param region Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param retryConfig By default, if a job does not complete successfully,
+         * meaning that an acknowledgement is not received from the handler,
+         * then it will be retried with exponential backoff according to the settings
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryConfig(@Nullable Output<JobRetryConfigArgs> retryConfig) {
             $.retryConfig = retryConfig;
             return this;
         }
 
+        /**
+         * @param retryConfig By default, if a job does not complete successfully,
+         * meaning that an acknowledgement is not received from the handler,
+         * then it will be retried with exponential backoff according to the settings
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryConfig(JobRetryConfigArgs retryConfig) {
             return retryConfig(Output.of(retryConfig));
         }
 
+        /**
+         * @param schedule Describes the schedule on which the job will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Describes the schedule on which the job will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param timeZone Specifies the time zone to be used in interpreting schedule.
+         * The value of this field must be a time zone name from the tz database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone Specifies the time zone to be used in interpreting schedule.
+         * The value of this field must be a time zone name from the tz database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

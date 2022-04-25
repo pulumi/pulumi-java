@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse {
     /**
-     * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+     * @return The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
      * 
      */
     private final String parameterId;
     /**
-     * The text for this part.
+     * @return The text for this part.
      * 
      */
     private final String text;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
     }
 
     /**
-     * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+     * @return The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
      * 
-    */
+     */
     public String parameterId() {
         return this.parameterId;
     }
     /**
-     * The text for this part.
+     * @return The text for this part.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

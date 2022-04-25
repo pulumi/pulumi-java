@@ -17,13 +17,13 @@ public final class RouterStatusResult {
     private final List<RouterStatusBestRoute> bestRoutes;
     private final List<RouterStatusBestRoutesForRouter> bestRoutesForRouters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * The network name or resource link to the parent
+     * @return The network name or resource link to the parent
      * network of this subnetwork.
      * 
      */
@@ -56,9 +56,9 @@ public final class RouterStatusResult {
         return this.bestRoutesForRouters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -66,10 +66,10 @@ public final class RouterStatusResult {
         return this.name;
     }
     /**
-     * The network name or resource link to the parent
+     * @return The network name or resource link to the parent
      * network of this subnetwork.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }

@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
     @Import(name="endUserSuggestionConfig", required=true)
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
 
+    /**
+     * @return Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig() {
         return this.endUserSuggestionConfig;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
     @Import(name="humanAgentSuggestionConfig", required=true)
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
 
+    /**
+     * @return Configuration for agent assistance of human agent participant.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
     @Import(name="messageAnalysisConfig", required=true)
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
 
+    /**
+     * @return Configuration for message analysis.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig() {
         return this.messageAnalysisConfig;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
     @Import(name="notificationConfig", required=true)
     private GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
 
+    /**
+     * @return Pub/Sub topic on which to publish new agent assistant events.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig() {
         return this.notificationConfig;
     }
@@ -89,21 +105,45 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
             $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endUserSuggestionConfig Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endUserSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig) {
             $.endUserSuggestionConfig = endUserSuggestionConfig;
             return this;
         }
 
+        /**
+         * @param humanAgentSuggestionConfig Configuration for agent assistance of human agent participant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanAgentSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig) {
             $.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
             return this;
         }
 
+        /**
+         * @param messageAnalysisConfig Configuration for message analysis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageAnalysisConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig) {
             $.messageAnalysisConfig = messageAnalysisConfig;
             return this;
         }
 
+        /**
+         * @param notificationConfig Pub/Sub topic on which to publish new agent assistant events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;

@@ -26,6 +26,10 @@ public final class CreateManagementGroupDetailsArgs extends com.pulumi.resources
     @Import(name="parent")
     private @Nullable Output<CreateParentGroupInfoArgs> parent;
 
+    /**
+     * @return (Optional) The ID of the parent management group used during creation.
+     * 
+     */
     public Optional<Output<CreateParentGroupInfoArgs>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -54,11 +58,23 @@ public final class CreateManagementGroupDetailsArgs extends com.pulumi.resources
             $ = new CreateManagementGroupDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parent (Optional) The ID of the parent management group used during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<CreateParentGroupInfoArgs> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent (Optional) The ID of the parent management group used during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(CreateParentGroupInfoArgs parent) {
             return parent(Output.of(parent));
         }

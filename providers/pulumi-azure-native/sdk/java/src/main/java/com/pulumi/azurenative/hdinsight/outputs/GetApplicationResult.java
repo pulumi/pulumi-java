@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApplicationResult {
     /**
-     * The ETag for the application
+     * @return The ETag for the application
      * 
      */
     private final @Nullable String etag;
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The properties of the application.
+     * @return The properties of the application.
      * 
      */
     private final ApplicationPropertiesResponse properties;
     /**
-     * The tags for the application.
+     * @return The tags for the application.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -61,44 +61,44 @@ public final class GetApplicationResult {
     }
 
     /**
-     * The ETag for the application
+     * @return The ETag for the application
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The properties of the application.
+     * @return The properties of the application.
      * 
-    */
+     */
     public ApplicationPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The tags for the application.
+     * @return The tags for the application.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

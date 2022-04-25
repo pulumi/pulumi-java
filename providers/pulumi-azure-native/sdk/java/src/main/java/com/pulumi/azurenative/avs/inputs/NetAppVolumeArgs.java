@@ -26,6 +26,10 @@ public final class NetAppVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nfsFilePath")
     private @Nullable Output<String> nfsFilePath;
 
+    /**
+     * @return File path through which the NFS volume is exposed by the provider
+     * 
+     */
     public Optional<Output<String>> nfsFilePath() {
         return Optional.ofNullable(this.nfsFilePath);
     }
@@ -37,6 +41,10 @@ public final class NetAppVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nfsProviderIp")
     private @Nullable Output<String> nfsProviderIp;
 
+    /**
+     * @return IP address of the NFS provider
+     * 
+     */
     public Optional<Output<String>> nfsProviderIp() {
         return Optional.ofNullable(this.nfsProviderIp);
     }
@@ -66,20 +74,44 @@ public final class NetAppVolumeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetAppVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nfsFilePath File path through which the NFS volume is exposed by the provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsFilePath(@Nullable Output<String> nfsFilePath) {
             $.nfsFilePath = nfsFilePath;
             return this;
         }
 
+        /**
+         * @param nfsFilePath File path through which the NFS volume is exposed by the provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsFilePath(String nfsFilePath) {
             return nfsFilePath(Output.of(nfsFilePath));
         }
 
+        /**
+         * @param nfsProviderIp IP address of the NFS provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsProviderIp(@Nullable Output<String> nfsProviderIp) {
             $.nfsProviderIp = nfsProviderIp;
             return this;
         }
 
+        /**
+         * @param nfsProviderIp IP address of the NFS provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsProviderIp(String nfsProviderIp) {
             return nfsProviderIp(Output.of(nfsProviderIp));
         }

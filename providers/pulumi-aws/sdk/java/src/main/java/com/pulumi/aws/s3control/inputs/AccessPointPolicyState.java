@@ -23,6 +23,10 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
     @Import(name="accessPointArn")
     private @Nullable Output<String> accessPointArn;
 
+    /**
+     * @return The ARN of the access point that you want to associate with the specified policy.
+     * 
+     */
     public Optional<Output<String>> accessPointArn() {
         return Optional.ofNullable(this.accessPointArn);
     }
@@ -34,6 +38,10 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
     @Import(name="hasPublicAccessPolicy")
     private @Nullable Output<Boolean> hasPublicAccessPolicy;
 
+    /**
+     * @return Indicates whether this access point currently has a policy that allows public access.
+     * 
+     */
     public Optional<Output<Boolean>> hasPublicAccessPolicy() {
         return Optional.ofNullable(this.hasPublicAccessPolicy);
     }
@@ -45,6 +53,10 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return The policy that you want to apply to the specified access point.
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -75,29 +87,65 @@ public final class AccessPointPolicyState extends com.pulumi.resources.ResourceA
             $ = new AccessPointPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPointArn The ARN of the access point that you want to associate with the specified policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPointArn(@Nullable Output<String> accessPointArn) {
             $.accessPointArn = accessPointArn;
             return this;
         }
 
+        /**
+         * @param accessPointArn The ARN of the access point that you want to associate with the specified policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPointArn(String accessPointArn) {
             return accessPointArn(Output.of(accessPointArn));
         }
 
+        /**
+         * @param hasPublicAccessPolicy Indicates whether this access point currently has a policy that allows public access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
             $.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
 
+        /**
+         * @param hasPublicAccessPolicy Indicates whether this access point currently has a policy that allows public access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasPublicAccessPolicy(Boolean hasPublicAccessPolicy) {
             return hasPublicAccessPolicy(Output.of(hasPublicAccessPolicy));
         }
 
+        /**
+         * @param policy The policy that you want to apply to the specified access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The policy that you want to apply to the specified access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

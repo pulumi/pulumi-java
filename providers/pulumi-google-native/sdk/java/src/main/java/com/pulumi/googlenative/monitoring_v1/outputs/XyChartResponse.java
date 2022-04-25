@@ -15,37 +15,37 @@ import java.util.Objects;
 @CustomType
 public final class XyChartResponse {
     /**
-     * Display options for the chart.
+     * @return Display options for the chart.
      * 
      */
     private final ChartOptionsResponse chartOptions;
     /**
-     * The data displayed in this chart.
+     * @return The data displayed in this chart.
      * 
      */
     private final List<DataSetResponse> dataSets;
     /**
-     * Threshold lines drawn horizontally across the chart.
+     * @return Threshold lines drawn horizontally across the chart.
      * 
      */
     private final List<ThresholdResponse> thresholds;
     /**
-     * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+     * @return The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
      * 
      */
     private final String timeshiftDuration;
     /**
-     * The properties applied to the X axis.
+     * @return The properties applied to the X axis.
      * 
      */
     private final AxisResponse xAxis;
     /**
-     * The properties applied to the Y2 axis.
+     * @return The properties applied to the Y2 axis.
      * 
      */
     private final AxisResponse y2Axis;
     /**
-     * The properties applied to the Y axis.
+     * @return The properties applied to the Y axis.
      * 
      */
     private final AxisResponse yAxis;
@@ -69,51 +69,51 @@ public final class XyChartResponse {
     }
 
     /**
-     * Display options for the chart.
+     * @return Display options for the chart.
      * 
-    */
+     */
     public ChartOptionsResponse chartOptions() {
         return this.chartOptions;
     }
     /**
-     * The data displayed in this chart.
+     * @return The data displayed in this chart.
      * 
-    */
+     */
     public List<DataSetResponse> dataSets() {
         return this.dataSets;
     }
     /**
-     * Threshold lines drawn horizontally across the chart.
+     * @return Threshold lines drawn horizontally across the chart.
      * 
-    */
+     */
     public List<ThresholdResponse> thresholds() {
         return this.thresholds;
     }
     /**
-     * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+     * @return The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
      * 
-    */
+     */
     public String timeshiftDuration() {
         return this.timeshiftDuration;
     }
     /**
-     * The properties applied to the X axis.
+     * @return The properties applied to the X axis.
      * 
-    */
+     */
     public AxisResponse xAxis() {
         return this.xAxis;
     }
     /**
-     * The properties applied to the Y2 axis.
+     * @return The properties applied to the Y2 axis.
      * 
-    */
+     */
     public AxisResponse y2Axis() {
         return this.y2Axis;
     }
     /**
-     * The properties applied to the Y axis.
+     * @return The properties applied to the Y axis.
      * 
-    */
+     */
     public AxisResponse yAxis() {
         return this.yAxis;
     }

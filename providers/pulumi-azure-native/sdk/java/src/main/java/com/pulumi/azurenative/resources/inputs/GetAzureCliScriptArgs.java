@@ -19,6 +19,10 @@ public final class GetAzureCliScriptArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetAzureCliScriptArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="scriptName", required=true)
     private String scriptName;
 
+    /**
+     * @return Name of the deployment script.
+     * 
+     */
     public String scriptName() {
         return this.scriptName;
     }
@@ -59,11 +67,23 @@ public final class GetAzureCliScriptArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetAzureCliScriptArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param scriptName Name of the deployment script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptName(String scriptName) {
             $.scriptName = scriptName;
             return this;

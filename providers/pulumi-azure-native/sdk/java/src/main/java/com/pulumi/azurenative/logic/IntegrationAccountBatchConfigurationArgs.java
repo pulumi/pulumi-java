@@ -24,6 +24,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends com.pulumi.r
     @Import(name="batchConfigurationName")
     private @Nullable Output<String> batchConfigurationName;
 
+    /**
+     * @return The batch configuration name.
+     * 
+     */
     public Optional<Output<String>> batchConfigurationName() {
         return Optional.ofNullable(this.batchConfigurationName);
     }
@@ -35,6 +39,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends com.pulumi.r
     @Import(name="integrationAccountName", required=true)
     private Output<String> integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -46,6 +54,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends com.pulumi.r
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends com.pulumi.r
     @Import(name="properties", required=true)
     private Output<BatchConfigurationPropertiesArgs> properties;
 
+    /**
+     * @return The batch configuration properties.
+     * 
+     */
     public Output<BatchConfigurationPropertiesArgs> properties() {
         return this.properties;
     }
@@ -68,6 +84,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends com.pulumi.r
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class IntegrationAccountBatchConfigurationArgs extends com.pulumi.r
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,56 +136,128 @@ public final class IntegrationAccountBatchConfigurationArgs extends com.pulumi.r
             $ = new IntegrationAccountBatchConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param batchConfigurationName The batch configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchConfigurationName(@Nullable Output<String> batchConfigurationName) {
             $.batchConfigurationName = batchConfigurationName;
             return this;
         }
 
+        /**
+         * @param batchConfigurationName The batch configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchConfigurationName(String batchConfigurationName) {
             return batchConfigurationName(Output.of(batchConfigurationName));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             return integrationAccountName(Output.of(integrationAccountName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The batch configuration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<BatchConfigurationPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The batch configuration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(BatchConfigurationPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

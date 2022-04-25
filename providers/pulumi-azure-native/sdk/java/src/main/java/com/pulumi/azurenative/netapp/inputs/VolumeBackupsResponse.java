@@ -27,6 +27,10 @@ public final class VolumeBackupsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="backupsCount")
     private @Nullable Integer backupsCount;
 
+    /**
+     * @return Total count of backups for volume
+     * 
+     */
     public Optional<Integer> backupsCount() {
         return Optional.ofNullable(this.backupsCount);
     }
@@ -38,6 +42,10 @@ public final class VolumeBackupsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="policyEnabled")
     private @Nullable Boolean policyEnabled;
 
+    /**
+     * @return Policy enabled
+     * 
+     */
     public Optional<Boolean> policyEnabled() {
         return Optional.ofNullable(this.policyEnabled);
     }
@@ -49,6 +57,10 @@ public final class VolumeBackupsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="volumeName")
     private @Nullable String volumeName;
 
+    /**
+     * @return Volume name
+     * 
+     */
     public Optional<String> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }
@@ -79,16 +91,34 @@ public final class VolumeBackupsResponse extends com.pulumi.resources.InvokeArgs
             $ = new VolumeBackupsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupsCount Total count of backups for volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupsCount(@Nullable Integer backupsCount) {
             $.backupsCount = backupsCount;
             return this;
         }
 
+        /**
+         * @param policyEnabled Policy enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyEnabled(@Nullable Boolean policyEnabled) {
             $.policyEnabled = policyEnabled;
             return this;
         }
 
+        /**
+         * @param volumeName Volume name
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(@Nullable String volumeName) {
             $.volumeName = volumeName;
             return this;

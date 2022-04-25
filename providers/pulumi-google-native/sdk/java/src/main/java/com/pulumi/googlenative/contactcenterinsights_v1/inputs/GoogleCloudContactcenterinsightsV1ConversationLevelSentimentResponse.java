@@ -24,6 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
     @Import(name="channelTag", required=true)
     private Integer channelTag;
 
+    /**
+     * @return The channel of the audio that the data applies to.
+     * 
+     */
     public Integer channelTag() {
         return this.channelTag;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
     @Import(name="sentimentData", required=true)
     private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
+    /**
+     * @return Data specifying sentiment.
+     * 
+     */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData() {
         return this.sentimentData;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
             $ = new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelTag The channel of the audio that the data applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelTag(Integer channelTag) {
             $.channelTag = channelTag;
             return this;
         }
 
+        /**
+         * @param sentimentData Data specifying sentiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
             $.sentimentData = sentimentData;
             return this;

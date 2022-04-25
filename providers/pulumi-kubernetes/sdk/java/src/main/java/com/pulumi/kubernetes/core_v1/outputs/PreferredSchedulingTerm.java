@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class PreferredSchedulingTerm {
     /**
-     * A node selector term, associated with the corresponding weight.
+     * @return A node selector term, associated with the corresponding weight.
      * 
      */
     private final NodeSelectorTerm preference;
     /**
-     * Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
+     * @return Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
      * 
      */
     private final Integer weight;
@@ -30,16 +30,16 @@ public final class PreferredSchedulingTerm {
     }
 
     /**
-     * A node selector term, associated with the corresponding weight.
+     * @return A node selector term, associated with the corresponding weight.
      * 
-    */
+     */
     public NodeSelectorTerm preference() {
         return this.preference;
     }
     /**
-     * Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
+     * @return Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
      * 
-    */
+     */
     public Integer weight() {
         return this.weight;
     }

@@ -26,6 +26,10 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends com.pulumi.re
     @Import(name="diskSignature")
     private @Nullable Output<String> diskSignature;
 
+    /**
+     * @return The guest signature of disk to be excluded from replication.
+     * 
+     */
     public Optional<Output<String>> diskSignature() {
         return Optional.ofNullable(this.diskSignature);
     }
@@ -54,11 +58,23 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends com.pulumi.re
             $ = new InMageDiskSignatureExclusionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSignature The guest signature of disk to be excluded from replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSignature(@Nullable Output<String> diskSignature) {
             $.diskSignature = diskSignature;
             return this;
         }
 
+        /**
+         * @param diskSignature The guest signature of disk to be excluded from replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSignature(String diskSignature) {
             return diskSignature(Output.of(diskSignature));
         }

@@ -25,6 +25,10 @@ public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The supported Azure location where the managed HSM Pool should be created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the managed HSM Pool
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resource
     @Import(name="privateEndpointConnectionName")
     private @Nullable Output<String> privateEndpointConnectionName;
 
+    /**
+     * @return Name of the private endpoint connection associated with the managed hsm pool.
+     * 
+     */
     public Optional<Output<String>> privateEndpointConnectionName() {
         return Optional.ofNullable(this.privateEndpointConnectionName);
     }
@@ -58,6 +70,10 @@ public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resource
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return Approval state of the private link connection.
+     * 
+     */
     public Optional<Output<MHSMPrivateLinkServiceConnectionStateArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -69,6 +85,10 @@ public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the managed HSM pool.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resource
     @Import(name="sku")
     private @Nullable Output<ManagedHsmSkuArgs> sku;
 
+    /**
+     * @return SKU details
+     * 
+     */
     public Optional<Output<ManagedHsmSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -91,6 +115,10 @@ public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,65 +153,149 @@ public final class MHSMPrivateEndpointConnectionArgs extends com.pulumi.resource
             $ = new MHSMPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The supported Azure location where the managed HSM Pool should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The supported Azure location where the managed HSM Pool should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateEndpointConnectionName Name of the private endpoint connection associated with the managed hsm pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName Name of the private endpoint connection associated with the managed hsm pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Approval state of the private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Approval state of the private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(MHSMPrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku SKU details
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ManagedHsmSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU details
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ManagedHsmSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

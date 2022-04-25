@@ -19,6 +19,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceName", required=true)
     private String instanceName;
 
+    /**
+     * @return Instance name.
+     * 
+     */
     public String instanceName() {
         return this.instanceName;
     }
@@ -41,6 +49,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param instanceName Instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

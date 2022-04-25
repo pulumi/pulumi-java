@@ -28,6 +28,10 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="disablePasswordAuthentication")
     private @Nullable Output<Boolean> disablePasswordAuthentication;
 
+    /**
+     * @return Specifies whether password authentication should be disabled.
+     * 
+     */
     public Optional<Output<Boolean>> disablePasswordAuthentication() {
         return Optional.ofNullable(this.disablePasswordAuthentication);
     }
@@ -39,6 +43,10 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="patchSettings")
     private @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
 
+    /**
+     * @return [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+     * 
+     */
     public Optional<Output<LinuxPatchSettingsArgs>> patchSettings() {
         return Optional.ofNullable(this.patchSettings);
     }
@@ -50,6 +58,10 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="provisionVMAgent")
     private @Nullable Output<Boolean> provisionVMAgent;
 
+    /**
+     * @return Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+     * 
+     */
     public Optional<Output<Boolean>> provisionVMAgent() {
         return Optional.ofNullable(this.provisionVMAgent);
     }
@@ -61,6 +73,10 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="ssh")
     private @Nullable Output<SshConfigurationArgs> ssh;
 
+    /**
+     * @return Specifies the ssh key configuration for a Linux OS.
+     * 
+     */
     public Optional<Output<SshConfigurationArgs>> ssh() {
         return Optional.ofNullable(this.ssh);
     }
@@ -92,38 +108,86 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
             $ = new LinuxConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disablePasswordAuthentication Specifies whether password authentication should be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePasswordAuthentication(@Nullable Output<Boolean> disablePasswordAuthentication) {
             $.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
 
+        /**
+         * @param disablePasswordAuthentication Specifies whether password authentication should be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePasswordAuthentication(Boolean disablePasswordAuthentication) {
             return disablePasswordAuthentication(Output.of(disablePasswordAuthentication));
         }
 
+        /**
+         * @param patchSettings [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchSettings(@Nullable Output<LinuxPatchSettingsArgs> patchSettings) {
             $.patchSettings = patchSettings;
             return this;
         }
 
+        /**
+         * @param patchSettings [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchSettings(LinuxPatchSettingsArgs patchSettings) {
             return patchSettings(Output.of(patchSettings));
         }
 
+        /**
+         * @param provisionVMAgent Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionVMAgent(@Nullable Output<Boolean> provisionVMAgent) {
             $.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
+        /**
+         * @param provisionVMAgent Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionVMAgent(Boolean provisionVMAgent) {
             return provisionVMAgent(Output.of(provisionVMAgent));
         }
 
+        /**
+         * @param ssh Specifies the ssh key configuration for a Linux OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(@Nullable Output<SshConfigurationArgs> ssh) {
             $.ssh = ssh;
             return this;
         }
 
+        /**
+         * @param ssh Specifies the ssh key configuration for a Linux OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(SshConfigurationArgs ssh) {
             return ssh(Output.of(ssh));
         }

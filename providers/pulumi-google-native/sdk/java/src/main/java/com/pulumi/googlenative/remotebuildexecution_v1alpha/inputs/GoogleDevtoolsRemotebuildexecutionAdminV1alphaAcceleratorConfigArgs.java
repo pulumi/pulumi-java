@@ -26,6 +26,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     @Import(name="acceleratorCount")
     private @Nullable Output<String> acceleratorCount;
 
+    /**
+     * @return The number of guest accelerator cards exposed to each VM.
+     * 
+     */
     public Optional<Output<String>> acceleratorCount() {
         return Optional.ofNullable(this.acceleratorCount);
     }
@@ -37,6 +41,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     @Import(name="acceleratorType")
     private @Nullable Output<String> acceleratorType;
 
+    /**
+     * @return The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
+     * 
+     */
     public Optional<Output<String>> acceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }
@@ -66,20 +74,44 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
             $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of guest accelerator cards exposed to each VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(@Nullable Output<String> acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorCount The number of guest accelerator cards exposed to each VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(String acceleratorCount) {
             return acceleratorCount(Output.of(acceleratorCount));
         }
 
+        /**
+         * @param acceleratorType The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }

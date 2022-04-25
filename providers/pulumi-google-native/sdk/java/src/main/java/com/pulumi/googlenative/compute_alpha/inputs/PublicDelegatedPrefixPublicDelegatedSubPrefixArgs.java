@@ -27,6 +27,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
     @Import(name="delegateeProject")
     private @Nullable Output<String> delegateeProject;
 
+    /**
+     * @return Name of the project scoping this PublicDelegatedSubPrefix.
+     * 
+     */
     public Optional<Output<String>> delegateeProject() {
         return Optional.ofNullable(this.delegateeProject);
     }
@@ -38,6 +42,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
     @Import(name="ipCidrRange")
     private @Nullable Output<String> ipCidrRange;
 
+    /**
+     * @return The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+     * 
+     */
     public Optional<Output<String>> ipCidrRange() {
         return Optional.ofNullable(this.ipCidrRange);
     }
@@ -60,6 +72,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
     @Import(name="isAddress")
     private @Nullable Output<Boolean> isAddress;
 
+    /**
+     * @return Whether the sub prefix is delegated to create Address resources in the delegatee project.
+     * 
+     */
     public Optional<Output<Boolean>> isAddress() {
         return Optional.ofNullable(this.isAddress);
     }
@@ -71,6 +87,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the sub public delegated prefix.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,47 +123,107 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
             $ = new PublicDelegatedPrefixPublicDelegatedSubPrefixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delegateeProject Name of the project scoping this PublicDelegatedSubPrefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegateeProject(@Nullable Output<String> delegateeProject) {
             $.delegateeProject = delegateeProject;
             return this;
         }
 
+        /**
+         * @param delegateeProject Name of the project scoping this PublicDelegatedSubPrefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegateeProject(String delegateeProject) {
             return delegateeProject(Output.of(delegateeProject));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ipCidrRange The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param ipCidrRange The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             return ipCidrRange(Output.of(ipCidrRange));
         }
 
+        /**
+         * @param isAddress Whether the sub prefix is delegated to create Address resources in the delegatee project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAddress(@Nullable Output<Boolean> isAddress) {
             $.isAddress = isAddress;
             return this;
         }
 
+        /**
+         * @param isAddress Whether the sub prefix is delegated to create Address resources in the delegatee project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAddress(Boolean isAddress) {
             return isAddress(Output.of(isAddress));
         }
 
+        /**
+         * @param name The name of the sub public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the sub public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

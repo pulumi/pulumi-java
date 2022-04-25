@@ -21,6 +21,10 @@ public final class ExcludedPathResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -49,6 +53,12 @@ public final class ExcludedPathResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ExcludedPathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;

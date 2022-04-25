@@ -26,6 +26,10 @@ public final class OidcTokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="audience")
     private @Nullable Output<String> audience;
 
+    /**
+     * @return Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
+     * 
+     */
     public Optional<Output<String>> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -37,6 +41,10 @@ public final class OidcTokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
     private @Nullable Output<String> serviceAccountEmail;
 
+    /**
+     * @return [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
+     * 
+     */
     public Optional<Output<String>> serviceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
@@ -66,20 +74,44 @@ public final class OidcTokenArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OidcTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable Output<String> audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param audience Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             return audience(Output.of(audience));
         }
 
+        /**
+         * @param serviceAccountEmail [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             return serviceAccountEmail(Output.of(serviceAccountEmail));
         }

@@ -35,6 +35,10 @@ public final class ServiceSourceConfiguration extends com.pulumi.resources.Invok
     @Import(name="autoDeploymentsEnabled")
     private @Nullable Boolean autoDeploymentsEnabled;
 
+    /**
+     * @return Auto Deployment enabled
+     * 
+     */
     public Optional<Boolean> autoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);
     }
@@ -85,6 +89,12 @@ public final class ServiceSourceConfiguration extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param autoDeploymentsEnabled Auto Deployment enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             $.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;

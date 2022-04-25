@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class BucketReplicationConfiguration {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
+     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
      * 
      */
     private final String role;
     /**
-     * A container for one or more replication rules.
+     * @return A container for one or more replication rules.
      * 
      */
     private final List<BucketReplicationRule> rules;
@@ -31,16 +31,16 @@ public final class BucketReplicationConfiguration {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
+     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * A container for one or more replication rules.
+     * @return A container for one or more replication rules.
      * 
-    */
+     */
     public List<BucketReplicationRule> rules() {
         return this.rules;
     }

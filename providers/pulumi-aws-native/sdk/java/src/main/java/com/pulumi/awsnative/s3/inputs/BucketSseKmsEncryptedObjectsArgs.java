@@ -24,6 +24,10 @@ public final class BucketSseKmsEncryptedObjectsArgs extends com.pulumi.resources
     @Import(name="status", required=true)
     private Output<BucketSseKmsEncryptedObjectsStatus> status;
 
+    /**
+     * @return Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.
+     * 
+     */
     public Output<BucketSseKmsEncryptedObjectsStatus> status() {
         return this.status;
     }
@@ -52,11 +56,23 @@ public final class BucketSseKmsEncryptedObjectsArgs extends com.pulumi.resources
             $ = new BucketSseKmsEncryptedObjectsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<BucketSseKmsEncryptedObjectsStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
             return status(Output.of(status));
         }

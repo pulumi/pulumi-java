@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
     /**
-     * The image type to use for this node. Note that changing the image type
+     * @return The image type to use for this node. Note that changing the image type
      * will delete and recreate all nodes in the node pool.
      * 
      */
     private final @Nullable String imageType;
     /**
-     * Minimum CPU platform to be used by this instance.
+     * @return Minimum CPU platform to be used by this instance.
      * The instance may be scheduled on the specified or newer CPU platform. Applicable
      * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
      * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
@@ -28,14 +28,14 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      */
     private final @Nullable String minCpuPlatform;
     /**
-     * The set of Google API scopes to be made available
+     * @return The set of Google API scopes to be made available
      * on all of the node VMs under the &#34;default&#34; service account.
      * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
      */
     private final @Nullable List<String> oauthScopes;
     /**
-     * The service account to be used by the Node VMs.
+     * @return The service account to be used by the Node VMs.
      * If not specified, the &#34;default&#34; service account is used.
      * 
      */
@@ -54,38 +54,38 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
     }
 
     /**
-     * The image type to use for this node. Note that changing the image type
+     * @return The image type to use for this node. Note that changing the image type
      * will delete and recreate all nodes in the node pool.
      * 
-    */
+     */
     public Optional<String> imageType() {
         return Optional.ofNullable(this.imageType);
     }
     /**
-     * Minimum CPU platform to be used by this instance.
+     * @return Minimum CPU platform to be used by this instance.
      * The instance may be scheduled on the specified or newer CPU platform. Applicable
      * values are the friendly names of CPU platforms, such as `Intel Haswell`. See the
      * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
      * for more information.
      * 
-    */
+     */
     public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
     /**
-     * The set of Google API scopes to be made available
+     * @return The set of Google API scopes to be made available
      * on all of the node VMs under the &#34;default&#34; service account.
      * Use the &#34;https://www.googleapis.com/auth/cloud-platform&#34; scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
-    */
+     */
     public List<String> oauthScopes() {
         return this.oauthScopes == null ? List.of() : this.oauthScopes;
     }
     /**
-     * The service account to be used by the Node VMs.
+     * @return The service account to be used by the Node VMs.
      * If not specified, the &#34;default&#34; service account is used.
      * 
-    */
+     */
     public Optional<String> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }

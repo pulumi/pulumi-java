@@ -26,6 +26,10 @@ public final class EndpointPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the endpoint.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class EndpointPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return Port used by the container.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -66,11 +74,23 @@ public final class EndpointPropertiesResponse extends com.pulumi.resources.Invok
             $ = new EndpointPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param port Port used by the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;

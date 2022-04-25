@@ -26,6 +26,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="destAddressGroups", required=true)
     private List<String> destAddressGroups;
 
+    /**
+     * @return Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.
+     * 
+     */
     public List<String> destAddressGroups() {
         return this.destAddressGroups;
     }
@@ -37,6 +41,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="destFqdns", required=true)
     private List<String> destFqdns;
 
+    /**
+     * @return Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 1000.
+     * 
+     */
     public List<String> destFqdns() {
         return this.destFqdns;
     }
@@ -48,6 +56,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="destIpRanges", required=true)
     private List<String> destIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+     * 
+     */
     public List<String> destIpRanges() {
         return this.destIpRanges;
     }
@@ -59,6 +71,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="destRegionCodes", required=true)
     private List<String> destRegionCodes;
 
+    /**
+     * @return Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+     * 
+     */
     public List<String> destRegionCodes() {
         return this.destRegionCodes;
     }
@@ -70,6 +86,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="layer4Configs", required=true)
     private List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
 
+    /**
+     * @return Pairs of IP protocols and ports that the rule should match.
+     * 
+     */
     public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
     }
@@ -81,6 +101,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="srcAddressGroups", required=true)
     private List<String> srcAddressGroups;
 
+    /**
+     * @return Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.
+     * 
+     */
     public List<String> srcAddressGroups() {
         return this.srcAddressGroups;
     }
@@ -92,6 +116,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="srcFqdns", required=true)
     private List<String> srcFqdns;
 
+    /**
+     * @return Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 1000.
+     * 
+     */
     public List<String> srcFqdns() {
         return this.srcFqdns;
     }
@@ -103,6 +131,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="srcIpRanges", required=true)
     private List<String> srcIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+     * 
+     */
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
@@ -114,6 +146,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="srcRegionCodes", required=true)
     private List<String> srcRegionCodes;
 
+    /**
+     * @return Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+     * 
+     */
     public List<String> srcRegionCodes() {
         return this.srcRegionCodes;
     }
@@ -125,6 +161,10 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
     @Import(name="srcSecureTags", required=true)
     private List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 
+    /**
+     * @return List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
     public List<FirewallPolicyRuleSecureTagResponse> srcSecureTags() {
         return this.srcSecureTags;
     }
@@ -162,92 +202,212 @@ public final class FirewallPolicyRuleMatcherResponse extends com.pulumi.resource
             $ = new FirewallPolicyRuleMatcherResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destAddressGroups Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destAddressGroups(List<String> destAddressGroups) {
             $.destAddressGroups = destAddressGroups;
             return this;
         }
 
+        /**
+         * @param destAddressGroups Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destAddressGroups(String... destAddressGroups) {
             return destAddressGroups(List.of(destAddressGroups));
         }
 
+        /**
+         * @param destFqdns Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destFqdns(List<String> destFqdns) {
             $.destFqdns = destFqdns;
             return this;
         }
 
+        /**
+         * @param destFqdns Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destFqdns(String... destFqdns) {
             return destFqdns(List.of(destFqdns));
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(List<String> destIpRanges) {
             $.destIpRanges = destIpRanges;
             return this;
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
 
+        /**
+         * @param destRegionCodes Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destRegionCodes(List<String> destRegionCodes) {
             $.destRegionCodes = destRegionCodes;
             return this;
         }
 
+        /**
+         * @param destRegionCodes Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destRegionCodes(String... destRegionCodes) {
             return destRegionCodes(List.of(destRegionCodes));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
             $.layer4Configs = layer4Configs;
             return this;
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(FirewallPolicyRuleMatcherLayer4ConfigResponse... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
 
+        /**
+         * @param srcAddressGroups Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcAddressGroups(List<String> srcAddressGroups) {
             $.srcAddressGroups = srcAddressGroups;
             return this;
         }
 
+        /**
+         * @param srcAddressGroups Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcAddressGroups(String... srcAddressGroups) {
             return srcAddressGroups(List.of(srcAddressGroups));
         }
 
+        /**
+         * @param srcFqdns Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcFqdns(List<String> srcFqdns) {
             $.srcFqdns = srcFqdns;
             return this;
         }
 
+        /**
+         * @param srcFqdns Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcFqdns(String... srcFqdns) {
             return srcFqdns(List.of(srcFqdns));
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(List<String> srcIpRanges) {
             $.srcIpRanges = srcIpRanges;
             return this;
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }
 
+        /**
+         * @param srcRegionCodes Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcRegionCodes(List<String> srcRegionCodes) {
             $.srcRegionCodes = srcRegionCodes;
             return this;
         }
 
+        /**
+         * @param srcRegionCodes Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcRegionCodes(String... srcRegionCodes) {
             return srcRegionCodes(List.of(srcRegionCodes));
         }
 
+        /**
+         * @param srcSecureTags List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcSecureTags(List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
             $.srcSecureTags = srcSecureTags;
             return this;
         }
 
+        /**
+         * @param srcSecureTags List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcSecureTags(FirewallPolicyRuleSecureTagResponse... srcSecureTags) {
             return srcSecureTags(List.of(srcSecureTags));
         }

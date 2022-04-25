@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class ProgressMetricsResponse {
     /**
-     * The completed datapoint count.
+     * @return The completed datapoint count.
      * 
      */
     private final Double completedDatapointCount;
     /**
-     * The time of last successful incremental dataset refresh in UTC.
+     * @return The time of last successful incremental dataset refresh in UTC.
      * 
      */
     private final String incrementalDatasetLastRefreshTime;
     /**
-     * The skipped datapoint count.
+     * @return The skipped datapoint count.
      * 
      */
     private final Double skippedDatapointCount;
     /**
-     * The total datapoint count.
+     * @return The total datapoint count.
      * 
      */
     private final Double totalDatapointCount;
@@ -44,30 +44,30 @@ public final class ProgressMetricsResponse {
     }
 
     /**
-     * The completed datapoint count.
+     * @return The completed datapoint count.
      * 
-    */
+     */
     public Double completedDatapointCount() {
         return this.completedDatapointCount;
     }
     /**
-     * The time of last successful incremental dataset refresh in UTC.
+     * @return The time of last successful incremental dataset refresh in UTC.
      * 
-    */
+     */
     public String incrementalDatasetLastRefreshTime() {
         return this.incrementalDatasetLastRefreshTime;
     }
     /**
-     * The skipped datapoint count.
+     * @return The skipped datapoint count.
      * 
-    */
+     */
     public Double skippedDatapointCount() {
         return this.skippedDatapointCount;
     }
     /**
-     * The total datapoint count.
+     * @return The total datapoint count.
      * 
-    */
+     */
     public Double totalDatapointCount() {
         return this.totalDatapointCount;
     }

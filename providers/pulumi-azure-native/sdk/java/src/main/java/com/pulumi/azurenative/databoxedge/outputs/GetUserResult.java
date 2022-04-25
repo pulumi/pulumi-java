@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetUserResult {
     /**
-     * The password details.
+     * @return The password details.
      * 
      */
     private final @Nullable AsymmetricEncryptedSecretResponse encryptedPassword;
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * List of shares that the user has rights on. This field should not be specified during user creation.
+     * @return List of shares that the user has rights on. This field should not be specified during user creation.
      * 
      */
     private final List<ShareAccessRightResponse> shareAccessRights;
     /**
-     * User in DataBoxEdge Resource
+     * @return User in DataBoxEdge Resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
     /**
-     * Type of the user.
+     * @return Type of the user.
      * 
      */
     private final String userType;
@@ -70,51 +70,51 @@ public final class GetUserResult {
     }
 
     /**
-     * The password details.
+     * @return The password details.
      * 
-    */
+     */
     public Optional<AsymmetricEncryptedSecretResponse> encryptedPassword() {
         return Optional.ofNullable(this.encryptedPassword);
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of shares that the user has rights on. This field should not be specified during user creation.
+     * @return List of shares that the user has rights on. This field should not be specified during user creation.
      * 
-    */
+     */
     public List<ShareAccessRightResponse> shareAccessRights() {
         return this.shareAccessRights;
     }
     /**
-     * User in DataBoxEdge Resource
+     * @return User in DataBoxEdge Resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Type of the user.
+     * @return Type of the user.
      * 
-    */
+     */
     public String userType() {
         return this.userType;
     }

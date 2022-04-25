@@ -15,43 +15,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFileEventTriggerResult {
     /**
-     * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+     * @return A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
      * 
      */
     private final @Nullable String customContextTag;
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * Trigger Kind.
+     * @return Trigger Kind.
      * Expected value is &#39;FileEvent&#39;.
      * 
      */
     private final String kind;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * Role sink info.
+     * @return Role sink info.
      * 
      */
     private final RoleSinkInfoResponse sinkInfo;
     /**
-     * File event source details.
+     * @return File event source details.
      * 
      */
     private final FileSourceInfoResponse sourceInfo;
     /**
-     * Trigger in DataBoxEdge Resource
+     * @return Trigger in DataBoxEdge Resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
@@ -77,59 +77,59 @@ public final class GetFileEventTriggerResult {
     }
 
     /**
-     * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+     * @return A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
      * 
-    */
+     */
     public Optional<String> customContextTag() {
         return Optional.ofNullable(this.customContextTag);
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Trigger Kind.
+     * @return Trigger Kind.
      * Expected value is &#39;FileEvent&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Role sink info.
+     * @return Role sink info.
      * 
-    */
+     */
     public RoleSinkInfoResponse sinkInfo() {
         return this.sinkInfo;
     }
     /**
-     * File event source details.
+     * @return File event source details.
      * 
-    */
+     */
     public FileSourceInfoResponse sourceInfo() {
         return this.sourceInfo;
     }
     /**
-     * Trigger in DataBoxEdge Resource
+     * @return Trigger in DataBoxEdge Resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

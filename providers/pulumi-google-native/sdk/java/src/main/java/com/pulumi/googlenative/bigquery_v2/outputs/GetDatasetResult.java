@@ -17,88 +17,88 @@ import java.util.Objects;
 @CustomType
 public final class GetDatasetResult {
     /**
-     * [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+     * @return [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
      * 
      */
     private final List<DatasetAccessItemResponse> access;
     /**
-     * The time when this dataset was created, in milliseconds since the epoch.
+     * @return The time when this dataset was created, in milliseconds since the epoch.
      * 
      */
     private final String creationTime;
     /**
-     * [Required] A reference that identifies the dataset.
+     * @return [Required] A reference that identifies the dataset.
      * 
      */
     private final DatasetReferenceResponse datasetReference;
     /**
-     * The default collation of the dataset.
+     * @return The default collation of the dataset.
      * 
      */
     private final String defaultCollation;
     private final EncryptionConfigurationResponse defaultEncryptionConfiguration;
     /**
-     * [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
+     * @return [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
      * 
      */
     private final String defaultPartitionExpirationMs;
     /**
-     * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table&#39;s expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
+     * @return [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table&#39;s expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
      * 
      */
     private final String defaultTableExpirationMs;
     /**
-     * [Optional] A user-friendly description of the dataset.
+     * @return [Optional] A user-friendly description of the dataset.
      * 
      */
     private final String description;
     /**
-     * A hash of the resource.
+     * @return A hash of the resource.
      * 
      */
     private final String etag;
     /**
-     * [Optional] A descriptive name for the dataset.
+     * @return [Optional] A descriptive name for the dataset.
      * 
      */
     private final String friendlyName;
     /**
-     * [Optional] Indicates if table names are case insensitive in the dataset.
+     * @return [Optional] Indicates if table names are case insensitive in the dataset.
      * 
      */
     private final Boolean isCaseInsensitive;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String kind;
     /**
-     * The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
+     * @return The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
+     * @return The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
      * 
      */
     private final String lastModifiedTime;
     /**
-     * The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
+     * @return The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
      * 
      */
     private final String location;
     /**
-     * Reserved for future use.
+     * @return Reserved for future use.
      * 
      */
     private final Boolean satisfiesPZS;
     /**
-     * A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.
+     * @return A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.
      * 
      */
     private final String selfLink;
     /**
-     * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+     * @return [Optional]The tags associated with this dataset. Tag keys are globally unique.
      * 
      */
     private final List<DatasetTagsItemResponse> tags;
@@ -144,30 +144,30 @@ public final class GetDatasetResult {
     }
 
     /**
-     * [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+     * @return [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
      * 
-    */
+     */
     public List<DatasetAccessItemResponse> access() {
         return this.access;
     }
     /**
-     * The time when this dataset was created, in milliseconds since the epoch.
+     * @return The time when this dataset was created, in milliseconds since the epoch.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * [Required] A reference that identifies the dataset.
+     * @return [Required] A reference that identifies the dataset.
      * 
-    */
+     */
     public DatasetReferenceResponse datasetReference() {
         return this.datasetReference;
     }
     /**
-     * The default collation of the dataset.
+     * @return The default collation of the dataset.
      * 
-    */
+     */
     public String defaultCollation() {
         return this.defaultCollation;
     }
@@ -175,93 +175,93 @@ public final class GetDatasetResult {
         return this.defaultEncryptionConfiguration;
     }
     /**
-     * [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
+     * @return [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
      * 
-    */
+     */
     public String defaultPartitionExpirationMs() {
         return this.defaultPartitionExpirationMs;
     }
     /**
-     * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table&#39;s expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
+     * @return [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table&#39;s expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
      * 
-    */
+     */
     public String defaultTableExpirationMs() {
         return this.defaultTableExpirationMs;
     }
     /**
-     * [Optional] A user-friendly description of the dataset.
+     * @return [Optional] A user-friendly description of the dataset.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * A hash of the resource.
+     * @return A hash of the resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * [Optional] A descriptive name for the dataset.
+     * @return [Optional] A descriptive name for the dataset.
      * 
-    */
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
     /**
-     * [Optional] Indicates if table names are case insensitive in the dataset.
+     * @return [Optional] Indicates if table names are case insensitive in the dataset.
      * 
-    */
+     */
     public Boolean isCaseInsensitive() {
         return this.isCaseInsensitive;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
+     * @return The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
+     * @return The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
+     * @return The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Reserved for future use.
+     * @return Reserved for future use.
      * 
-    */
+     */
     public Boolean satisfiesPZS() {
         return this.satisfiesPZS;
     }
     /**
-     * A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.
+     * @return A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * [Optional]The tags associated with this dataset. Tag keys are globally unique.
+     * @return [Optional]The tags associated with this dataset. Tag keys are globally unique.
      * 
-    */
+     */
     public List<DatasetTagsItemResponse> tags() {
         return this.tags;
     }

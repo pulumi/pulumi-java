@@ -27,6 +27,10 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
     @Import(name="artifactTags")
     private @Nullable Map<String,String> artifactTags;
 
+    /**
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * 
+     */
     public Optional<Map<String,String>> artifactTags() {
         return Optional.ofNullable(this.artifactTags);
     }
@@ -38,6 +42,10 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
     @Import(name="imageId", required=true)
     private String imageId;
 
+    /**
+     * @return Resource Id of the Managed Disk Image
+     * 
+     */
     public String imageId() {
         return this.imageId;
     }
@@ -49,6 +57,10 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Azure location for the image, should match if image already exists
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -60,6 +72,10 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
     @Import(name="runOutputName", required=true)
     private String runOutputName;
 
+    /**
+     * @return The name to be used for the associated RunOutput.
+     * 
+     */
     public String runOutputName() {
         return this.runOutputName;
     }
@@ -72,6 +88,11 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of distribution.
+     * Expected value is &#39;ManagedImage&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -104,26 +125,57 @@ public final class ImageTemplateManagedImageDistributorResponse extends com.pulu
             $ = new ImageTemplateManagedImageDistributorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactTags Tags that will be applied to the artifact once it has been created/updated by the distributor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             $.artifactTags = artifactTags;
             return this;
         }
 
+        /**
+         * @param imageId Resource Id of the Managed Disk Image
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(String imageId) {
             $.imageId = imageId;
             return this;
         }
 
+        /**
+         * @param location Azure location for the image, should match if image already exists
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param runOutputName The name to be used for the associated RunOutput.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOutputName(String runOutputName) {
             $.runOutputName = runOutputName;
             return this;
         }
 
+        /**
+         * @param type Type of distribution.
+         * Expected value is &#39;ManagedImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

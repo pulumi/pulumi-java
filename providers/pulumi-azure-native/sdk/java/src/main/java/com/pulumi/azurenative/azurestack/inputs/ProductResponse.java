@@ -31,6 +31,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="billingPartNumber")
     private @Nullable String billingPartNumber;
 
+    /**
+     * @return The part number used for billing purposes.
+     * 
+     */
     public Optional<String> billingPartNumber() {
         return Optional.ofNullable(this.billingPartNumber);
     }
@@ -42,6 +46,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="compatibility")
     private @Nullable CompatibilityResponse compatibility;
 
+    /**
+     * @return Product compatibility with current device.
+     * 
+     */
     public Optional<CompatibilityResponse> compatibility() {
         return Optional.ofNullable(this.compatibility);
     }
@@ -53,6 +61,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the product.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name of the product.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -75,6 +91,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag")
     private @Nullable String etag;
 
+    /**
+     * @return The entity tag used for optimistic concurrency when modifying the resource.
+     * 
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -86,6 +106,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="galleryItemIdentity")
     private @Nullable String galleryItemIdentity;
 
+    /**
+     * @return The identifier of the gallery item corresponding to the product.
+     * 
+     */
     public Optional<String> galleryItemIdentity() {
         return Optional.ofNullable(this.galleryItemIdentity);
     }
@@ -97,6 +121,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iconUris")
     private @Nullable IconUrisResponse iconUris;
 
+    /**
+     * @return Additional links available for this product.
+     * 
+     */
     public Optional<IconUrisResponse> iconUris() {
         return Optional.ofNullable(this.iconUris);
     }
@@ -108,6 +136,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return ID of the resource.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -119,6 +151,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="legalTerms")
     private @Nullable String legalTerms;
 
+    /**
+     * @return The legal terms.
+     * 
+     */
     public Optional<String> legalTerms() {
         return Optional.ofNullable(this.legalTerms);
     }
@@ -130,6 +166,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="links")
     private @Nullable List<ProductLinkResponse> links;
 
+    /**
+     * @return Additional links available for this product.
+     * 
+     */
     public Optional<List<ProductLinkResponse>> links() {
         return Optional.ofNullable(this.links);
     }
@@ -141,6 +181,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -152,6 +196,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="offer")
     private @Nullable String offer;
 
+    /**
+     * @return The offer representing the product.
+     * 
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -163,6 +211,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="offerVersion")
     private @Nullable String offerVersion;
 
+    /**
+     * @return The version of the product offer.
+     * 
+     */
     public Optional<String> offerVersion() {
         return Optional.ofNullable(this.offerVersion);
     }
@@ -174,6 +226,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="payloadLength")
     private @Nullable Double payloadLength;
 
+    /**
+     * @return The length of product content.
+     * 
+     */
     public Optional<Double> payloadLength() {
         return Optional.ofNullable(this.payloadLength);
     }
@@ -185,6 +241,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="privacyPolicy")
     private @Nullable String privacyPolicy;
 
+    /**
+     * @return The privacy policy.
+     * 
+     */
     public Optional<String> privacyPolicy() {
         return Optional.ofNullable(this.privacyPolicy);
     }
@@ -196,6 +256,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="productKind")
     private @Nullable String productKind;
 
+    /**
+     * @return The kind of the product (virtualMachine or virtualMachineExtension)
+     * 
+     */
     public Optional<String> productKind() {
         return Optional.ofNullable(this.productKind);
     }
@@ -207,6 +271,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="productProperties")
     private @Nullable ProductPropertiesResponse productProperties;
 
+    /**
+     * @return Additional properties for the product.
+     * 
+     */
     public Optional<ProductPropertiesResponse> productProperties() {
         return Optional.ofNullable(this.productProperties);
     }
@@ -218,6 +286,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publisherDisplayName")
     private @Nullable String publisherDisplayName;
 
+    /**
+     * @return The user-friendly name of the product publisher.
+     * 
+     */
     public Optional<String> publisherDisplayName() {
         return Optional.ofNullable(this.publisherDisplayName);
     }
@@ -229,6 +301,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publisherIdentifier")
     private @Nullable String publisherIdentifier;
 
+    /**
+     * @return Publisher identifier.
+     * 
+     */
     public Optional<String> publisherIdentifier() {
         return Optional.ofNullable(this.publisherIdentifier);
     }
@@ -240,6 +316,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sku")
     private @Nullable String sku;
 
+    /**
+     * @return The product SKU.
+     * 
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -251,6 +331,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of Resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -262,6 +346,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmExtensionType")
     private @Nullable String vmExtensionType;
 
+    /**
+     * @return The type of the Virtual Machine Extension.
+     * 
+     */
     public Optional<String> vmExtensionType() {
         return Optional.ofNullable(this.vmExtensionType);
     }
@@ -311,115 +399,253 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ProductResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingPartNumber The part number used for billing purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingPartNumber(@Nullable String billingPartNumber) {
             $.billingPartNumber = billingPartNumber;
             return this;
         }
 
+        /**
+         * @param compatibility Product compatibility with current device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibility(@Nullable CompatibilityResponse compatibility) {
             $.compatibility = compatibility;
             return this;
         }
 
+        /**
+         * @param description The description of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param etag The entity tag used for optimistic concurrency when modifying the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param galleryItemIdentity The identifier of the gallery item corresponding to the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryItemIdentity(@Nullable String galleryItemIdentity) {
             $.galleryItemIdentity = galleryItemIdentity;
             return this;
         }
 
+        /**
+         * @param iconUris Additional links available for this product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconUris(@Nullable IconUrisResponse iconUris) {
             $.iconUris = iconUris;
             return this;
         }
 
+        /**
+         * @param id ID of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param legalTerms The legal terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legalTerms(@Nullable String legalTerms) {
             $.legalTerms = legalTerms;
             return this;
         }
 
+        /**
+         * @param links Additional links available for this product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(@Nullable List<ProductLinkResponse> links) {
             $.links = links;
             return this;
         }
 
+        /**
+         * @param links Additional links available for this product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(ProductLinkResponse... links) {
             return links(List.of(links));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param offer The offer representing the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable String offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param offerVersion The version of the product offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offerVersion(@Nullable String offerVersion) {
             $.offerVersion = offerVersion;
             return this;
         }
 
+        /**
+         * @param payloadLength The length of product content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadLength(@Nullable Double payloadLength) {
             $.payloadLength = payloadLength;
             return this;
         }
 
+        /**
+         * @param privacyPolicy The privacy policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacyPolicy(@Nullable String privacyPolicy) {
             $.privacyPolicy = privacyPolicy;
             return this;
         }
 
+        /**
+         * @param productKind The kind of the product (virtualMachine or virtualMachineExtension)
+         * 
+         * @return builder
+         * 
+         */
         public Builder productKind(@Nullable String productKind) {
             $.productKind = productKind;
             return this;
         }
 
+        /**
+         * @param productProperties Additional properties for the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productProperties(@Nullable ProductPropertiesResponse productProperties) {
             $.productProperties = productProperties;
             return this;
         }
 
+        /**
+         * @param publisherDisplayName The user-friendly name of the product publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherDisplayName(@Nullable String publisherDisplayName) {
             $.publisherDisplayName = publisherDisplayName;
             return this;
         }
 
+        /**
+         * @param publisherIdentifier Publisher identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherIdentifier(@Nullable String publisherIdentifier) {
             $.publisherIdentifier = publisherIdentifier;
             return this;
         }
 
+        /**
+         * @param sku The product SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable String sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param type Type of Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param vmExtensionType The type of the Virtual Machine Extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmExtensionType(@Nullable String vmExtensionType) {
             $.vmExtensionType = vmExtensionType;
             return this;

@@ -25,6 +25,10 @@ public final class IosDeviceListArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosDevices", required=true)
     private Output<List<IosDeviceArgs>> iosDevices;
 
+    /**
+     * @return A list of iOS devices.
+     * 
+     */
     public Output<List<IosDeviceArgs>> iosDevices() {
         return this.iosDevices;
     }
@@ -53,15 +57,33 @@ public final class IosDeviceListArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosDeviceListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iosDevices A list of iOS devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDevices(Output<List<IosDeviceArgs>> iosDevices) {
             $.iosDevices = iosDevices;
             return this;
         }
 
+        /**
+         * @param iosDevices A list of iOS devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDevices(List<IosDeviceArgs> iosDevices) {
             return iosDevices(Output.of(iosDevices));
         }
 
+        /**
+         * @param iosDevices A list of iOS devices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosDevices(IosDeviceArgs... iosDevices) {
             return iosDevices(List.of(iosDevices));
         }

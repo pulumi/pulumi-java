@@ -24,6 +24,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The Azure Resource Manager ID of the storage account resource.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The storage account key.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -64,20 +72,44 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The Azure Resource Manager ID of the storage account resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The Azure Resource Manager ID of the storage account resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param key The storage account key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The storage account key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

@@ -26,6 +26,10 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends com.pu
     @Import(name="issue")
     private @Nullable String issue;
 
+    /**
+     * @return An alert that machines within a group can have
+     * 
+     */
     public Optional<String> issue() {
         return Optional.ofNullable(this.issue);
     }
@@ -37,6 +41,10 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends com.pu
     @Import(name="numberOfVms")
     private @Nullable Double numberOfVms;
 
+    /**
+     * @return The number of machines in the group that have this alert
+     * 
+     */
     public Optional<Double> numberOfVms() {
         return Optional.ofNullable(this.numberOfVms);
     }
@@ -66,11 +74,23 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends com.pu
             $ = new AdaptiveApplicationControlIssueSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issue An alert that machines within a group can have
+         * 
+         * @return builder
+         * 
+         */
         public Builder issue(@Nullable String issue) {
             $.issue = issue;
             return this;
         }
 
+        /**
+         * @param numberOfVms The number of machines in the group that have this alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfVms(@Nullable Double numberOfVms) {
             $.numberOfVms = numberOfVms;
             return this;

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
     /**
-     * The related categories for the function.
+     * @return The related categories for the function.
      * 
      */
     private final @Nullable List<String> categories;
     /**
-     * The related resource types for the function.
+     * @return The related resource types for the function.
      * 
      */
     private final @Nullable List<String> resourceTypes;
     /**
-     * The related Log Analytics solutions for the function.
+     * @return The related Log Analytics solutions for the function.
      * 
      */
     private final @Nullable List<String> solutions;
@@ -38,23 +38,23 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
     }
 
     /**
-     * The related categories for the function.
+     * @return The related categories for the function.
      * 
-    */
+     */
     public List<String> categories() {
         return this.categories == null ? List.of() : this.categories;
     }
     /**
-     * The related resource types for the function.
+     * @return The related resource types for the function.
      * 
-    */
+     */
     public List<String> resourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
     /**
-     * The related Log Analytics solutions for the function.
+     * @return The related Log Analytics solutions for the function.
      * 
-    */
+     */
     public List<String> solutions() {
         return this.solutions == null ? List.of() : this.solutions;
     }

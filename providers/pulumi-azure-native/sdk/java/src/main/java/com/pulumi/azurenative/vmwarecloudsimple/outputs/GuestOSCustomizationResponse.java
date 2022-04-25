@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestOSCustomizationResponse {
     /**
-     * List of dns servers to use
+     * @return List of dns servers to use
      * 
      */
     private final @Nullable List<String> dnsServers;
     /**
-     * Virtual Machine hostname
+     * @return Virtual Machine hostname
      * 
      */
     private final @Nullable String hostName;
     /**
-     * Password for login
+     * @return Password for login
      * 
      */
     private final @Nullable String password;
     /**
-     * id of customization policy
+     * @return id of customization policy
      * 
      */
     private final @Nullable String policyId;
     /**
-     * Username for login
+     * @return Username for login
      * 
      */
     private final @Nullable String username;
@@ -53,37 +53,37 @@ public final class GuestOSCustomizationResponse {
     }
 
     /**
-     * List of dns servers to use
+     * @return List of dns servers to use
      * 
-    */
+     */
     public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
-     * Virtual Machine hostname
+     * @return Virtual Machine hostname
      * 
-    */
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * Password for login
+     * @return Password for login
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * id of customization policy
+     * @return id of customization policy
      * 
-    */
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
-     * Username for login
+     * @return Username for login
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

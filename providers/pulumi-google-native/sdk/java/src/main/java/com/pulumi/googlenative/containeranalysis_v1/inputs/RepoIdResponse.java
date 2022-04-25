@@ -24,6 +24,10 @@ public final class RepoIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectRepoId", required=true)
     private ProjectRepoIdResponse projectRepoId;
 
+    /**
+     * @return A combination of a project ID and a repo name.
+     * 
+     */
     public ProjectRepoIdResponse projectRepoId() {
         return this.projectRepoId;
     }
@@ -35,6 +39,10 @@ public final class RepoIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uid", required=true)
     private String uid;
 
+    /**
+     * @return A server-assigned, globally unique identifier.
+     * 
+     */
     public String uid() {
         return this.uid;
     }
@@ -64,11 +72,23 @@ public final class RepoIdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RepoIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectRepoId A combination of a project ID and a repo name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectRepoId(ProjectRepoIdResponse projectRepoId) {
             $.projectRepoId = projectRepoId;
             return this;
         }
 
+        /**
+         * @param uid A server-assigned, globally unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             $.uid = uid;
             return this;

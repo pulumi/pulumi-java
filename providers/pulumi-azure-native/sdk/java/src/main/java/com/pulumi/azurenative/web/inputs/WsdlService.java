@@ -26,6 +26,10 @@ public final class WsdlService extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointQualifiedNames")
     private @Nullable List<String> endpointQualifiedNames;
 
+    /**
+     * @return List of the endpoints&#39; qualified names
+     * 
+     */
     public Optional<List<String>> endpointQualifiedNames() {
         return Optional.ofNullable(this.endpointQualifiedNames);
     }
@@ -37,6 +41,10 @@ public final class WsdlService extends com.pulumi.resources.InvokeArgs {
     @Import(name="qualifiedName", required=true)
     private String qualifiedName;
 
+    /**
+     * @return The service&#39;s qualified name
+     * 
+     */
     public String qualifiedName() {
         return this.qualifiedName;
     }
@@ -66,15 +74,33 @@ public final class WsdlService extends com.pulumi.resources.InvokeArgs {
             $ = new WsdlService(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointQualifiedNames List of the endpoints&#39; qualified names
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
             $.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
 
+        /**
+         * @param endpointQualifiedNames List of the endpoints&#39; qualified names
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointQualifiedNames(String... endpointQualifiedNames) {
             return endpointQualifiedNames(List.of(endpointQualifiedNames));
         }
 
+        /**
+         * @param qualifiedName The service&#39;s qualified name
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifiedName(String qualifiedName) {
             $.qualifiedName = qualifiedName;
             return this;

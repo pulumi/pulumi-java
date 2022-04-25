@@ -27,6 +27,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instancePoolName")
     private @Nullable Output<String> instancePoolName;
 
+    /**
+     * @return The name of the instance pool to be created or updated.
+     * 
+     */
     public Optional<Output<String>> instancePoolName() {
         return Optional.ofNullable(this.instancePoolName);
     }
@@ -38,6 +42,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseType", required=true)
     private Output<Either<String,InstancePoolLicenseType>> licenseType;
 
+    /**
+     * @return The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
+     * 
+     */
     public Output<Either<String,InstancePoolLicenseType>> licenseType() {
         return this.licenseType;
     }
@@ -49,6 +57,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -60,6 +72,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,6 +87,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The name and tier of the SKU.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -82,6 +102,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return Resource ID of the subnet to place this instance pool in.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -93,6 +117,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,6 +132,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vCores", required=true)
     private Output<Integer> vCores;
 
+    /**
+     * @return Count of vCores belonging to this instance pool.
+     * 
+     */
     public Output<Integer> vCores() {
         return this.vCores;
     }
@@ -139,82 +171,190 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstancePoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instancePoolName The name of the instance pool to be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancePoolName(@Nullable Output<String> instancePoolName) {
             $.instancePoolName = instancePoolName;
             return this;
         }
 
+        /**
+         * @param instancePoolName The name of the instance pool to be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancePoolName(String instancePoolName) {
             return instancePoolName(Output.of(instancePoolName));
         }
 
+        /**
+         * @param licenseType The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(Output<Either<String,InstancePoolLicenseType>> licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param licenseType The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(Either<String,InstancePoolLicenseType> licenseType) {
             return licenseType(Output.of(licenseType));
         }
 
+        /**
+         * @param licenseType The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(String licenseType) {
             return licenseType(Either.ofLeft(licenseType));
         }
 
+        /**
+         * @param licenseType The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(InstancePoolLicenseType licenseType) {
             return licenseType(Either.ofRight(licenseType));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The name and tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The name and tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param subnetId Resource ID of the subnet to place this instance pool in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId Resource ID of the subnet to place this instance pool in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vCores Count of vCores belonging to this instance pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCores(Output<Integer> vCores) {
             $.vCores = vCores;
             return this;
         }
 
+        /**
+         * @param vCores Count of vCores belonging to this instance pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCores(Integer vCores) {
             return vCores(Output.of(vCores));
         }

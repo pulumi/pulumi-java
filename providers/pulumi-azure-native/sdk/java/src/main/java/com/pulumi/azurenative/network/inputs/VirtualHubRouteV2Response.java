@@ -26,6 +26,10 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
     @Import(name="destinationType")
     private @Nullable String destinationType;
 
+    /**
+     * @return The type of destinations.
+     * 
+     */
     public Optional<String> destinationType() {
         return Optional.ofNullable(this.destinationType);
     }
@@ -37,6 +41,10 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
     @Import(name="destinations")
     private @Nullable List<String> destinations;
 
+    /**
+     * @return List of all destinations.
+     * 
+     */
     public Optional<List<String>> destinations() {
         return Optional.ofNullable(this.destinations);
     }
@@ -48,6 +56,10 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
     @Import(name="nextHopType")
     private @Nullable String nextHopType;
 
+    /**
+     * @return The type of next hops.
+     * 
+     */
     public Optional<String> nextHopType() {
         return Optional.ofNullable(this.nextHopType);
     }
@@ -59,6 +71,10 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
     @Import(name="nextHops")
     private @Nullable List<String> nextHops;
 
+    /**
+     * @return NextHops ip address.
+     * 
+     */
     public Optional<List<String>> nextHops() {
         return Optional.ofNullable(this.nextHops);
     }
@@ -90,30 +106,66 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
             $ = new VirtualHubRouteV2Response(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationType The type of destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationType(@Nullable String destinationType) {
             $.destinationType = destinationType;
             return this;
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(@Nullable List<String> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of all destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param nextHopType The type of next hops.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(@Nullable String nextHopType) {
             $.nextHopType = nextHopType;
             return this;
         }
 
+        /**
+         * @param nextHops NextHops ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHops(@Nullable List<String> nextHops) {
             $.nextHops = nextHops;
             return this;
         }
 
+        /**
+         * @param nextHops NextHops ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHops(String... nextHops) {
             return nextHops(List.of(nextHops));
         }

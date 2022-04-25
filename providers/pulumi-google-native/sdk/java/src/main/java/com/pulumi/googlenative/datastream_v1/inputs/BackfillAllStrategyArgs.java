@@ -27,6 +27,10 @@ public final class BackfillAllStrategyArgs extends com.pulumi.resources.Resource
     @Import(name="mysqlExcludedObjects")
     private @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
 
+    /**
+     * @return MySQL data source objects to avoid backfilling.
+     * 
+     */
     public Optional<Output<MysqlRdbmsArgs>> mysqlExcludedObjects() {
         return Optional.ofNullable(this.mysqlExcludedObjects);
     }
@@ -38,6 +42,10 @@ public final class BackfillAllStrategyArgs extends com.pulumi.resources.Resource
     @Import(name="oracleExcludedObjects")
     private @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
 
+    /**
+     * @return Oracle data source objects to avoid backfilling.
+     * 
+     */
     public Optional<Output<OracleRdbmsArgs>> oracleExcludedObjects() {
         return Optional.ofNullable(this.oracleExcludedObjects);
     }
@@ -67,20 +75,44 @@ public final class BackfillAllStrategyArgs extends com.pulumi.resources.Resource
             $ = new BackfillAllStrategyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mysqlExcludedObjects MySQL data source objects to avoid backfilling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlExcludedObjects(@Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects) {
             $.mysqlExcludedObjects = mysqlExcludedObjects;
             return this;
         }
 
+        /**
+         * @param mysqlExcludedObjects MySQL data source objects to avoid backfilling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlExcludedObjects(MysqlRdbmsArgs mysqlExcludedObjects) {
             return mysqlExcludedObjects(Output.of(mysqlExcludedObjects));
         }
 
+        /**
+         * @param oracleExcludedObjects Oracle data source objects to avoid backfilling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleExcludedObjects(@Nullable Output<OracleRdbmsArgs> oracleExcludedObjects) {
             $.oracleExcludedObjects = oracleExcludedObjects;
             return this;
         }
 
+        /**
+         * @param oracleExcludedObjects Oracle data source objects to avoid backfilling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleExcludedObjects(OracleRdbmsArgs oracleExcludedObjects) {
             return oracleExcludedObjects(Output.of(oracleExcludedObjects));
         }

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatacatalogV1BusinessContextResponse {
     /**
-     * Contact people for the entry.
+     * @return Contact people for the entry.
      * 
      */
     private final GoogleCloudDatacatalogV1ContactsResponse contacts;
     /**
-     * Entry overview fields for rich text descriptions of entries.
+     * @return Entry overview fields for rich text descriptions of entries.
      * 
      */
     private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
@@ -30,16 +30,16 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
     }
 
     /**
-     * Contact people for the entry.
+     * @return Contact people for the entry.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1ContactsResponse contacts() {
         return this.contacts;
     }
     /**
-     * Entry overview fields for rich text descriptions of entries.
+     * @return Entry overview fields for rich text descriptions of entries.
      * 
-    */
+     */
     public GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview() {
         return this.entryOverview;
     }

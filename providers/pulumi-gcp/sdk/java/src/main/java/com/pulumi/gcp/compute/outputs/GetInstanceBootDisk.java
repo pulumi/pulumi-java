@@ -13,12 +13,12 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceBootDisk {
     /**
-     * Whether the disk will be auto-deleted when the instance is deleted.
+     * @return Whether the disk will be auto-deleted when the instance is deleted.
      * 
      */
     private final Boolean autoDelete;
     /**
-     * Name with which the attached disk is accessible
+     * @return Name with which the attached disk is accessible
      * under `/dev/disk/by-id/`
      * 
      */
@@ -26,19 +26,19 @@ public final class GetInstanceBootDisk {
     private final String diskEncryptionKeyRaw;
     private final String diskEncryptionKeySha256;
     /**
-     * Parameters with which a disk was created alongside the instance.
+     * @return Parameters with which a disk was created alongside the instance.
      * Structure is documented below.
      * 
      */
     private final List<GetInstanceBootDiskInitializeParam> initializeParams;
     private final String kmsKeySelfLink;
     /**
-     * Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
+     * @return Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
      * 
      */
     private final String mode;
     /**
-     * The name or self_link of the disk attached to this instance.
+     * @return The name or self_link of the disk attached to this instance.
      * 
      */
     private final String source;
@@ -64,17 +64,17 @@ public final class GetInstanceBootDisk {
     }
 
     /**
-     * Whether the disk will be auto-deleted when the instance is deleted.
+     * @return Whether the disk will be auto-deleted when the instance is deleted.
      * 
-    */
+     */
     public Boolean autoDelete() {
         return this.autoDelete;
     }
     /**
-     * Name with which the attached disk is accessible
+     * @return Name with which the attached disk is accessible
      * under `/dev/disk/by-id/`
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -85,10 +85,10 @@ public final class GetInstanceBootDisk {
         return this.diskEncryptionKeySha256;
     }
     /**
-     * Parameters with which a disk was created alongside the instance.
+     * @return Parameters with which a disk was created alongside the instance.
      * Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceBootDiskInitializeParam> initializeParams() {
         return this.initializeParams;
     }
@@ -96,16 +96,16 @@ public final class GetInstanceBootDisk {
         return this.kmsKeySelfLink;
     }
     /**
-     * Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
+     * @return Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * The name or self_link of the disk attached to this instance.
+     * @return The name or self_link of the disk attached to this instance.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }

@@ -28,6 +28,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="identity")
     private @Nullable Output<EncryptionPropertiesIdentityArgs> identity;
 
+    /**
+     * @return User identity used for CMK.
+     * 
+     */
     public Optional<Output<EncryptionPropertiesIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -39,6 +43,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="keySource")
     private @Nullable Output<EncryptionKeySourceType> keySource;
 
+    /**
+     * @return Encryption Key Source
+     * 
+     */
     public Optional<Output<EncryptionKeySourceType>> keySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -50,6 +58,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVaultProperties")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return Key vault properties.
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -80,29 +92,65 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new EncryptionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity User identity used for CMK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<EncryptionPropertiesIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity User identity used for CMK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(EncryptionPropertiesIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param keySource Encryption Key Source
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(@Nullable Output<EncryptionKeySourceType> keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keySource Encryption Key Source
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(EncryptionKeySourceType keySource) {
             return keySource(Output.of(keySource));
         }
 
+        /**
+         * @param keyVaultProperties Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }

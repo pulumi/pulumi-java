@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AllowedCSIDriver {
     /**
-     * Name is the registered name of the CSI driver
+     * @return Name is the registered name of the CSI driver
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class AllowedCSIDriver {
     }
 
     /**
-     * Name is the registered name of the CSI driver
+     * @return Name is the registered name of the CSI driver
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

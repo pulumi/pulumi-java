@@ -26,6 +26,10 @@ public final class VolumePropertiesResponseExportPolicy extends com.pulumi.resou
     @Import(name="rules")
     private @Nullable List<ExportPolicyRuleResponse> rules;
 
+    /**
+     * @return Export policy rule
+     * 
+     */
     public Optional<List<ExportPolicyRuleResponse>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -54,11 +58,23 @@ public final class VolumePropertiesResponseExportPolicy extends com.pulumi.resou
             $ = new VolumePropertiesResponseExportPolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules Export policy rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<ExportPolicyRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Export policy rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ExportPolicyRuleResponse... rules) {
             return rules(List.of(rules));
         }

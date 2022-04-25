@@ -23,6 +23,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdAt", required=true)
     private String createdAt;
 
+    /**
+     * @return The timestamp of resource creation (UTC)
+     * 
+     */
     public String createdAt() {
         return this.createdAt;
     }
@@ -34,6 +38,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdBy", required=true)
     private String createdBy;
 
+    /**
+     * @return A string identifier for the identity that created the resource
+     * 
+     */
     public String createdBy() {
         return this.createdBy;
     }
@@ -45,6 +53,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdByType", required=true)
     private String createdByType;
 
+    /**
+     * @return The type of identity that created the resource: user, application, managedIdentity
+     * 
+     */
     public String createdByType() {
         return this.createdByType;
     }
@@ -56,6 +68,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedAt", required=true)
     private String lastModifiedAt;
 
+    /**
+     * @return The timestamp of resource last modification (UTC)
+     * 
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
@@ -67,6 +83,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedBy", required=true)
     private String lastModifiedBy;
 
+    /**
+     * @return A string identifier for the identity that last modified the resource
+     * 
+     */
     public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -78,6 +98,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedByType", required=true)
     private String lastModifiedByType;
 
+    /**
+     * @return The type of identity that last modified the resource: user, application, managedIdentity
+     * 
+     */
     public String lastModifiedByType() {
         return this.lastModifiedByType;
     }
@@ -111,31 +135,67 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SystemDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdBy A string identifier for the identity that created the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(String createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource: user, application, managedIdentity
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(String createdByType) {
             $.createdByType = createdByType;
             return this;
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(String lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy A string identifier for the identity that last modified the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(String lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource: user, application, managedIdentity
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(String lastModifiedByType) {
             $.lastModifiedByType = lastModifiedByType;
             return this;

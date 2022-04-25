@@ -27,6 +27,10 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScale")
     private @Nullable Output<AutoScaleSettingsArgs> autoScale;
 
+    /**
+     * @return This property and fixedScale are mutually exclusive and one of the properties must be specified.
+     * 
+     */
     public Optional<Output<AutoScaleSettingsArgs>> autoScale() {
         return Optional.ofNullable(this.autoScale);
     }
@@ -38,6 +42,10 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedScale")
     private @Nullable Output<FixedScaleSettingsArgs> fixedScale;
 
+    /**
+     * @return This property and autoScale are mutually exclusive and one of the properties must be specified.
+     * 
+     */
     public Optional<Output<FixedScaleSettingsArgs>> fixedScale() {
         return Optional.ofNullable(this.fixedScale);
     }
@@ -67,20 +75,44 @@ public final class ScaleSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScale This property and fixedScale are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScale(@Nullable Output<AutoScaleSettingsArgs> autoScale) {
             $.autoScale = autoScale;
             return this;
         }
 
+        /**
+         * @param autoScale This property and fixedScale are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScale(AutoScaleSettingsArgs autoScale) {
             return autoScale(Output.of(autoScale));
         }
 
+        /**
+         * @param fixedScale This property and autoScale are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedScale(@Nullable Output<FixedScaleSettingsArgs> fixedScale) {
             $.fixedScale = fixedScale;
             return this;
         }
 
+        /**
+         * @param fixedScale This property and autoScale are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedScale(FixedScaleSettingsArgs fixedScale) {
             return fixedScale(Output.of(fixedScale));
         }

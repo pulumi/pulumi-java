@@ -24,6 +24,10 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="v1Name", required=true)
     private String v1Name;
 
+    /**
+     * @return The layer ID of the final layer in the Docker image&#39;s v1 representation.
+     * 
+     */
     public String v1Name() {
         return this.v1Name;
     }
@@ -35,6 +39,10 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="v2Blob", required=true)
     private List<String> v2Blob;
 
+    /**
+     * @return The ordered list of v2 blobs that represent a given image.
+     * 
+     */
     public List<String> v2Blob() {
         return this.v2Blob;
     }
@@ -46,6 +54,10 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="v2Name", required=true)
     private String v2Name;
 
+    /**
+     * @return The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept.
+     * 
+     */
     public String v2Name() {
         return this.v2Name;
     }
@@ -76,20 +88,44 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FingerprintResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param v1Name The layer ID of the final layer in the Docker image&#39;s v1 representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v1Name(String v1Name) {
             $.v1Name = v1Name;
             return this;
         }
 
+        /**
+         * @param v2Blob The ordered list of v2 blobs that represent a given image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v2Blob(List<String> v2Blob) {
             $.v2Blob = v2Blob;
             return this;
         }
 
+        /**
+         * @param v2Blob The ordered list of v2 blobs that represent a given image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v2Blob(String... v2Blob) {
             return v2Blob(List.of(v2Blob));
         }
 
+        /**
+         * @param v2Name The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v2Name(String v2Name) {
             $.v2Name = v2Name;
             return this;

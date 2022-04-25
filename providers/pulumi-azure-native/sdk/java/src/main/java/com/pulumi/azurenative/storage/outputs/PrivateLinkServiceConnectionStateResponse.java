@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateLinkServiceConnectionStateResponse {
     /**
-     * A message indicating if changes on the service provider require any updates on the consumer.
+     * @return A message indicating if changes on the service provider require any updates on the consumer.
      * 
      */
     private final @Nullable String actionRequired;
     /**
-     * The reason for approval/rejection of the connection.
+     * @return The reason for approval/rejection of the connection.
      * 
      */
     private final @Nullable String description;
     /**
-     * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+     * @return Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
      * 
      */
     private final @Nullable String status;
@@ -38,23 +38,23 @@ public final class PrivateLinkServiceConnectionStateResponse {
     }
 
     /**
-     * A message indicating if changes on the service provider require any updates on the consumer.
+     * @return A message indicating if changes on the service provider require any updates on the consumer.
      * 
-    */
+     */
     public Optional<String> actionRequired() {
         return Optional.ofNullable(this.actionRequired);
     }
     /**
-     * The reason for approval/rejection of the connection.
+     * @return The reason for approval/rejection of the connection.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+     * @return Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

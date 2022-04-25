@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GetQueueAuthorizationRuleResult {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The rights associated with the rule.
+     * @return The rights associated with the rule.
      * 
      */
     private final List<String> rights;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -44,30 +44,30 @@ public final class GetQueueAuthorizationRuleResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The rights associated with the rule.
+     * @return The rights associated with the rule.
      * 
-    */
+     */
     public List<String> rights() {
         return this.rights;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

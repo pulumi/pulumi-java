@@ -22,6 +22,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alternateId")
     private @Nullable Output<String> alternateId;
 
+    /**
+     * @return The alternate ID of the Asset.
+     * 
+     */
     public Optional<Output<String>> alternateId() {
         return Optional.ofNullable(this.alternateId);
     }
@@ -44,6 +52,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetName")
     private @Nullable Output<String> assetName;
 
+    /**
+     * @return The Asset name.
+     * 
+     */
     public Optional<Output<String>> assetName() {
         return Optional.ofNullable(this.assetName);
     }
@@ -55,6 +67,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="container")
     private @Nullable Output<String> container;
 
+    /**
+     * @return The name of the asset blob container.
+     * 
+     */
     public Optional<Output<String>> container() {
         return Optional.ofNullable(this.container);
     }
@@ -66,6 +82,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The Asset description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -77,6 +97,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,6 +112,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountName")
     private @Nullable Output<String> storageAccountName;
 
+    /**
+     * @return The name of the storage account.
+     * 
+     */
     public Optional<Output<String>> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
@@ -122,65 +150,149 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param alternateId The alternate ID of the Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateId(@Nullable Output<String> alternateId) {
             $.alternateId = alternateId;
             return this;
         }
 
+        /**
+         * @param alternateId The alternate ID of the Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateId(String alternateId) {
             return alternateId(Output.of(alternateId));
         }
 
+        /**
+         * @param assetName The Asset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(@Nullable Output<String> assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param assetName The Asset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             return assetName(Output.of(assetName));
         }
 
+        /**
+         * @param container The name of the asset blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable Output<String> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container The name of the asset blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param description The Asset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The Asset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccountName The name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }

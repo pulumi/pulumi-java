@@ -26,6 +26,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
     @Import(name="children")
     private @Nullable List<ManagementGroupChildInfoResponse> children;
 
+    /**
+     * @return The list of children.
+     * 
+     */
     public Optional<List<ManagementGroupChildInfoResponse>> children() {
         return Optional.ofNullable(this.children);
     }
@@ -37,6 +41,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The friendly name of the child resource.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +56,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -59,6 +71,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the child entity.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups)
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -102,30 +122,66 @@ public final class ManagementGroupChildInfoResponse extends com.pulumi.resources
             $ = new ManagementGroupChildInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param children The list of children.
+         * 
+         * @return builder
+         * 
+         */
         public Builder children(@Nullable List<ManagementGroupChildInfoResponse> children) {
             $.children = children;
             return this;
         }
 
+        /**
+         * @param children The list of children.
+         * 
+         * @return builder
+         * 
+         */
         public Builder children(ManagementGroupChildInfoResponse... children) {
             return children(List.of(children));
         }
 
+        /**
+         * @param displayName The friendly name of the child resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param id The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the child entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

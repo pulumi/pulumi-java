@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class TargetCostAllocationResourceResponse {
     /**
-     * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+     * @return If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
      * 
      */
     private final String name;
     /**
-     * Method of cost allocation for the rule
+     * @return Method of cost allocation for the rule
      * 
      */
     private final String policyType;
     /**
-     * Type of resources contained in this cost allocation rule
+     * @return Type of resources contained in this cost allocation rule
      * 
      */
     private final String resourceType;
     /**
-     * Target resources for cost allocation. This list cannot contain more than 25 values.
+     * @return Target resources for cost allocation. This list cannot contain more than 25 values.
      * 
      */
     private final List<CostAllocationProportionResponse> values;
@@ -45,30 +45,30 @@ public final class TargetCostAllocationResourceResponse {
     }
 
     /**
-     * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
+     * @return If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Method of cost allocation for the rule
+     * @return Method of cost allocation for the rule
      * 
-    */
+     */
     public String policyType() {
         return this.policyType;
     }
     /**
-     * Type of resources contained in this cost allocation rule
+     * @return Type of resources contained in this cost allocation rule
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Target resources for cost allocation. This list cannot contain more than 25 values.
+     * @return Target resources for cost allocation. This list cannot contain more than 25 values.
      * 
-    */
+     */
     public List<CostAllocationProportionResponse> values() {
         return this.values;
     }

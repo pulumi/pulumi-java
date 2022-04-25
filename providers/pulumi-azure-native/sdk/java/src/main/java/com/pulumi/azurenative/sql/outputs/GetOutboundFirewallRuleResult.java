@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetOutboundFirewallRuleResult {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The state of the outbound rule.
+     * @return The state of the outbound rule.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -43,30 +43,30 @@ public final class GetOutboundFirewallRuleResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the outbound rule.
+     * @return The state of the outbound rule.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

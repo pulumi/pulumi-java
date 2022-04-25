@@ -23,6 +23,10 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateId", required=true)
     private String certificateId;
 
+    /**
+     * @return ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify SslManagementType.MANUAL on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+     * 
+     */
     public String certificateId() {
         return this.certificateId;
     }
@@ -34,6 +38,10 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pendingManagedCertificateId", required=true)
     private String pendingManagedCertificateId;
 
+    /**
+     * @return ID of the managed AuthorizedCertificate resource currently being provisioned, if applicable. Until the new managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the provisioning process completes, the certificate_id field will reflect the new managed certificate and this field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the certificate_id field with an UpdateDomainMappingRequest.
+     * 
+     */
     public String pendingManagedCertificateId() {
         return this.pendingManagedCertificateId;
     }
@@ -45,6 +53,10 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sslManagementType", required=true)
     private String sslManagementType;
 
+    /**
+     * @return SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.
+     * 
+     */
     public String sslManagementType() {
         return this.sslManagementType;
     }
@@ -75,16 +87,34 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SslSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify SslManagementType.MANUAL on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param pendingManagedCertificateId ID of the managed AuthorizedCertificate resource currently being provisioned, if applicable. Until the new managed certificate has been successfully provisioned, the previous SSL state will be preserved. Once the provisioning process completes, the certificate_id field will reflect the new managed certificate and this field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the certificate_id field with an UpdateDomainMappingRequest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pendingManagedCertificateId(String pendingManagedCertificateId) {
             $.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
 
+        /**
+         * @param sslManagementType SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslManagementType(String sslManagementType) {
             $.sslManagementType = sslManagementType;
             return this;

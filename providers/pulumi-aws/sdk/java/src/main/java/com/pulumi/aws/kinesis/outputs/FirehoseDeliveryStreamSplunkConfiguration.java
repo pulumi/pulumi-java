@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirehoseDeliveryStreamSplunkConfiguration {
     /**
-     * The CloudWatch Logging Options for the delivery stream. More details are given below.
+     * @return The CloudWatch Logging Options for the delivery stream. More details are given below.
      * 
      */
     private final @Nullable FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions;
     /**
-     * The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
+     * @return The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
      * 
      */
     private final @Nullable Integer hecAcknowledgmentTimeout;
     /**
-     * The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
+     * @return The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
      * 
      */
     private final String hecEndpoint;
     /**
-     * The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
+     * @return The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
      * 
      */
     private final @Nullable String hecEndpointType;
     /**
-     * The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
+     * @return The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
      * 
      */
     private final String hecToken;
     /**
-     * The data processing configuration.  More details are given below.
+     * @return The data processing configuration.  More details are given below.
      * 
      */
     private final @Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration processingConfiguration;
     /**
-     * After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+     * @return After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
      * 
      */
     private final @Nullable Integer retryDuration;
     /**
-     * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+     * @return Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
      * 
      */
     private final @Nullable String s3BackupMode;
@@ -76,58 +76,58 @@ public final class FirehoseDeliveryStreamSplunkConfiguration {
     }
 
     /**
-     * The CloudWatch Logging Options for the delivery stream. More details are given below.
+     * @return The CloudWatch Logging Options for the delivery stream. More details are given below.
      * 
-    */
+     */
     public Optional<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions> cloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
     /**
-     * The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
+     * @return The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
      * 
-    */
+     */
     public Optional<Integer> hecAcknowledgmentTimeout() {
         return Optional.ofNullable(this.hecAcknowledgmentTimeout);
     }
     /**
-     * The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
+     * @return The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
      * 
-    */
+     */
     public String hecEndpoint() {
         return this.hecEndpoint;
     }
     /**
-     * The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
+     * @return The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
      * 
-    */
+     */
     public Optional<String> hecEndpointType() {
         return Optional.ofNullable(this.hecEndpointType);
     }
     /**
-     * The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
+     * @return The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
      * 
-    */
+     */
     public String hecToken() {
         return this.hecToken;
     }
     /**
-     * The data processing configuration.  More details are given below.
+     * @return The data processing configuration.  More details are given below.
      * 
-    */
+     */
     public Optional<FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
     /**
-     * After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+     * @return After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
      * 
-    */
+     */
     public Optional<Integer> retryDuration() {
         return Optional.ofNullable(this.retryDuration);
     }
     /**
-     * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+     * @return Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
      * 
-    */
+     */
     public Optional<String> s3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }

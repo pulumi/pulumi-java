@@ -23,6 +23,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description for the cluster.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
+    /**
+     * @return Version number of the Redis engine used by the cluster.
+     * 
+     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -45,6 +53,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="maintenanceWindow")
     private @Nullable Output<String> maintenanceWindow;
 
+    /**
+     * @return The weekly time range during which maintenance on the cluster is performed.
+     * 
+     */
     public Optional<Output<String>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -56,6 +68,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the cluster.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,6 +83,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="nodeType")
     private @Nullable Output<String> nodeType;
 
+    /**
+     * @return Compute and memory capacity of the nodes in the cluster.
+     * 
+     */
     public Optional<Output<String>> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
@@ -78,6 +98,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="numShards")
     private @Nullable Output<Integer> numShards;
 
+    /**
+     * @return Number of shards in the cluster.
+     * 
+     */
     public Optional<Output<Integer>> numShards() {
         return Optional.ofNullable(this.numShards);
     }
@@ -89,6 +113,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="parameterGroupName")
     private @Nullable Output<String> parameterGroupName;
 
+    /**
+     * @return Name of the parameter group associated with the cluster.
+     * 
+     */
     public Optional<Output<String>> parameterGroupName() {
         return Optional.ofNullable(this.parameterGroupName);
     }
@@ -100,6 +128,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port number on which the cluster accepts connections.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -111,6 +143,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="snapshotRetentionLimit")
     private @Nullable Output<Integer> snapshotRetentionLimit;
 
+    /**
+     * @return Number of days for which MemoryDB retains automatic snapshots before deleting them.
+     * 
+     */
     public Optional<Output<Integer>> snapshotRetentionLimit() {
         return Optional.ofNullable(this.snapshotRetentionLimit);
     }
@@ -122,6 +158,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="snapshotWindow")
     private @Nullable Output<String> snapshotWindow;
 
+    /**
+     * @return The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of the shard.
+     * 
+     */
     public Optional<Output<String>> snapshotWindow() {
         return Optional.ofNullable(this.snapshotWindow);
     }
@@ -133,6 +173,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="subnetGroupName")
     private @Nullable Output<String> subnetGroupName;
 
+    /**
+     * @return Name of the subnet group used by the cluster.
+     * 
+     */
     public Optional<Output<String>> subnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
@@ -144,6 +188,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="topicArn")
     private @Nullable Output<String> topicArn;
 
+    /**
+     * @return ARN of the SNS topic to which cluster notifications are sent.
+     * 
+     */
     public Optional<Output<String>> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
@@ -155,6 +203,10 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The VPC in which the cluster exists.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -195,119 +247,275 @@ public final class SnapshotClusterConfigurationGetArgs extends com.pulumi.resour
             $ = new SnapshotClusterConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param engineVersion Version number of the Redis engine used by the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion Version number of the Redis engine used by the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param maintenanceWindow The weekly time range during which maintenance on the cluster is performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow The weekly time range during which maintenance on the cluster is performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(String maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param name Name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeType Compute and memory capacity of the nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(@Nullable Output<String> nodeType) {
             $.nodeType = nodeType;
             return this;
         }
 
+        /**
+         * @param nodeType Compute and memory capacity of the nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeType(String nodeType) {
             return nodeType(Output.of(nodeType));
         }
 
+        /**
+         * @param numShards Number of shards in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numShards(@Nullable Output<Integer> numShards) {
             $.numShards = numShards;
             return this;
         }
 
+        /**
+         * @param numShards Number of shards in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numShards(Integer numShards) {
             return numShards(Output.of(numShards));
         }
 
+        /**
+         * @param parameterGroupName Name of the parameter group associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             $.parameterGroupName = parameterGroupName;
             return this;
         }
 
+        /**
+         * @param parameterGroupName Name of the parameter group associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterGroupName(String parameterGroupName) {
             return parameterGroupName(Output.of(parameterGroupName));
         }
 
+        /**
+         * @param port Port number on which the cluster accepts connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port number on which the cluster accepts connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param snapshotRetentionLimit Number of days for which MemoryDB retains automatic snapshots before deleting them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
             $.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
 
+        /**
+         * @param snapshotRetentionLimit Number of days for which MemoryDB retains automatic snapshots before deleting them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
             return snapshotRetentionLimit(Output.of(snapshotRetentionLimit));
         }
 
+        /**
+         * @param snapshotWindow The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of the shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
             $.snapshotWindow = snapshotWindow;
             return this;
         }
 
+        /**
+         * @param snapshotWindow The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of the shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotWindow(String snapshotWindow) {
             return snapshotWindow(Output.of(snapshotWindow));
         }
 
+        /**
+         * @param subnetGroupName Name of the subnet group used by the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             $.subnetGroupName = subnetGroupName;
             return this;
         }
 
+        /**
+         * @param subnetGroupName Name of the subnet group used by the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(String subnetGroupName) {
             return subnetGroupName(Output.of(subnetGroupName));
         }
 
+        /**
+         * @param topicArn ARN of the SNS topic to which cluster notifications are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(@Nullable Output<String> topicArn) {
             $.topicArn = topicArn;
             return this;
         }
 
+        /**
+         * @param topicArn ARN of the SNS topic to which cluster notifications are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(String topicArn) {
             return topicArn(Output.of(topicArn));
         }
 
+        /**
+         * @param vpcId The VPC in which the cluster exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The VPC in which the cluster exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

@@ -23,6 +23,10 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="serviceAccountEmail", required=true)
     private String serviceAccountEmail;
 
+    /**
+     * @return Service account that will make the push request.
+     * 
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -34,6 +38,10 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -45,6 +53,10 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="subscription", required=true)
     private String subscription;
 
+    /**
+     * @return Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
+     * 
+     */
     public String subscription() {
         return this.subscription;
     }
@@ -56,6 +68,10 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="topic", required=true)
     private String topic;
 
+    /**
+     * @return The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
+     * 
+     */
     public String topic() {
         return this.topic;
     }
@@ -87,21 +103,45 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PubsubConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serviceAccountEmail Service account that will make the push request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param state Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param subscription Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(String subscription) {
             $.subscription = subscription;
             return this;
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             $.topic = topic;
             return this;

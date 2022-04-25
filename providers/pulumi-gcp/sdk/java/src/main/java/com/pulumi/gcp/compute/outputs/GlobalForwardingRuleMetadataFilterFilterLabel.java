@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class GlobalForwardingRuleMetadataFilterFilterLabel {
     /**
-     * Name of the metadata label. The length must be between
+     * @return Name of the metadata label. The length must be between
      * 1 and 1024 characters, inclusive.
      * 
      */
     private final String name;
     /**
-     * The value that the label must match. The value has a maximum
+     * @return The value that the label must match. The value has a maximum
      * length of 1024 characters.
      * 
      */
@@ -31,18 +31,18 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
     }
 
     /**
-     * Name of the metadata label. The length must be between
+     * @return Name of the metadata label. The length must be between
      * 1 and 1024 characters, inclusive.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value that the label must match. The value has a maximum
+     * @return The value that the label must match. The value has a maximum
      * length of 1024 characters.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

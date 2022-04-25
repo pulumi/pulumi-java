@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class CloudSqlCredentialResponse {
     /**
-     * The password for the credential.
+     * @return The password for the credential.
      * 
      */
     private final String password;
     /**
-     * The username for the credential.
+     * @return The username for the credential.
      * 
      */
     private final String username;
@@ -29,16 +29,16 @@ public final class CloudSqlCredentialResponse {
     }
 
     /**
-     * The password for the credential.
+     * @return The password for the credential.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The username for the credential.
+     * @return The username for the credential.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

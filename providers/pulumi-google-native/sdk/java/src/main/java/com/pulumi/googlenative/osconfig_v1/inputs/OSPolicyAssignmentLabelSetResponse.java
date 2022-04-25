@@ -24,6 +24,10 @@ public final class OSPolicyAssignmentLabelSetResponse extends com.pulumi.resourc
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -52,6 +56,12 @@ public final class OSPolicyAssignmentLabelSetResponse extends com.pulumi.resourc
             $ = new OSPolicyAssignmentLabelSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;

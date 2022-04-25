@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GetUserPoolsResult {
     /**
-     * The set of cognito user pool Amazon Resource Names (ARNs).
+     * @return The set of cognito user pool Amazon Resource Names (ARNs).
      * 
      */
     private final List<String> arns;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The set of cognito user pool ids.
+     * @return The set of cognito user pool ids.
      * 
      */
     private final List<String> ids;
@@ -40,23 +40,23 @@ public final class GetUserPoolsResult {
     }
 
     /**
-     * The set of cognito user pool Amazon Resource Names (ARNs).
+     * @return The set of cognito user pool Amazon Resource Names (ARNs).
      * 
-    */
+     */
     public List<String> arns() {
         return this.arns;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The set of cognito user pool ids.
+     * @return The set of cognito user pool ids.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

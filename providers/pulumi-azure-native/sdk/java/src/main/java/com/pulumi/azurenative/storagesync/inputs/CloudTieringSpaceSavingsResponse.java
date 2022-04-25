@@ -25,6 +25,10 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
     @Import(name="cachedSizeBytes", required=true)
     private Double cachedSizeBytes;
 
+    /**
+     * @return Cached content size on the server
+     * 
+     */
     public Double cachedSizeBytes() {
         return this.cachedSizeBytes;
     }
@@ -36,6 +40,10 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
     @Import(name="lastUpdatedTimestamp", required=true)
     private String lastUpdatedTimestamp;
 
+    /**
+     * @return Last updated timestamp
+     * 
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
@@ -47,6 +55,10 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
     @Import(name="spaceSavingsBytes", required=true)
     private Double spaceSavingsBytes;
 
+    /**
+     * @return Count of bytes saved on the server
+     * 
+     */
     public Double spaceSavingsBytes() {
         return this.spaceSavingsBytes;
     }
@@ -58,6 +70,10 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
     @Import(name="spaceSavingsPercent", required=true)
     private Integer spaceSavingsPercent;
 
+    /**
+     * @return Percentage of cached size over total size
+     * 
+     */
     public Integer spaceSavingsPercent() {
         return this.spaceSavingsPercent;
     }
@@ -69,6 +85,10 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
     @Import(name="totalSizeCloudBytes", required=true)
     private Double totalSizeCloudBytes;
 
+    /**
+     * @return Total size of content in the azure file share
+     * 
+     */
     public Double totalSizeCloudBytes() {
         return this.totalSizeCloudBytes;
     }
@@ -80,6 +100,10 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
     @Import(name="volumeSizeBytes", required=true)
     private Double volumeSizeBytes;
 
+    /**
+     * @return Volume size
+     * 
+     */
     public Double volumeSizeBytes() {
         return this.volumeSizeBytes;
     }
@@ -113,31 +137,67 @@ public final class CloudTieringSpaceSavingsResponse extends com.pulumi.resources
             $ = new CloudTieringSpaceSavingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cachedSizeBytes Cached content size on the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachedSizeBytes(Double cachedSizeBytes) {
             $.cachedSizeBytes = cachedSizeBytes;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTimestamp Last updated timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
 
+        /**
+         * @param spaceSavingsBytes Count of bytes saved on the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder spaceSavingsBytes(Double spaceSavingsBytes) {
             $.spaceSavingsBytes = spaceSavingsBytes;
             return this;
         }
 
+        /**
+         * @param spaceSavingsPercent Percentage of cached size over total size
+         * 
+         * @return builder
+         * 
+         */
         public Builder spaceSavingsPercent(Integer spaceSavingsPercent) {
             $.spaceSavingsPercent = spaceSavingsPercent;
             return this;
         }
 
+        /**
+         * @param totalSizeCloudBytes Total size of content in the azure file share
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalSizeCloudBytes(Double totalSizeCloudBytes) {
             $.totalSizeCloudBytes = totalSizeCloudBytes;
             return this;
         }
 
+        /**
+         * @param volumeSizeBytes Volume size
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSizeBytes(Double volumeSizeBytes) {
             $.volumeSizeBytes = volumeSizeBytes;
             return this;

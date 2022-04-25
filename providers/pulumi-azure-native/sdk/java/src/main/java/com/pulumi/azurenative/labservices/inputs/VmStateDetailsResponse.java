@@ -23,6 +23,10 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastKnownPowerState", required=true)
     private String lastKnownPowerState;
 
+    /**
+     * @return Last known compute power state captured in DTL
+     * 
+     */
     public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
@@ -34,6 +38,10 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="powerState", required=true)
     private String powerState;
 
+    /**
+     * @return The power state of the reference virtual machine.
+     * 
+     */
     public String powerState() {
         return this.powerState;
     }
@@ -45,6 +53,10 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rdpAuthority", required=true)
     private String rdpAuthority;
 
+    /**
+     * @return The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+     * 
+     */
     public String rdpAuthority() {
         return this.rdpAuthority;
     }
@@ -56,6 +68,10 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sshAuthority", required=true)
     private String sshAuthority;
 
+    /**
+     * @return The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+     * 
+     */
     public String sshAuthority() {
         return this.sshAuthority;
     }
@@ -87,21 +103,45 @@ public final class VmStateDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new VmStateDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastKnownPowerState Last known compute power state captured in DTL
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastKnownPowerState(String lastKnownPowerState) {
             $.lastKnownPowerState = lastKnownPowerState;
             return this;
         }
 
+        /**
+         * @param powerState The power state of the reference virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerState(String powerState) {
             $.powerState = powerState;
             return this;
         }
 
+        /**
+         * @param rdpAuthority The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdpAuthority(String rdpAuthority) {
             $.rdpAuthority = rdpAuthority;
             return this;
         }
 
+        /**
+         * @param sshAuthority The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshAuthority(String sshAuthority) {
             $.sshAuthority = sshAuthority;
             return this;

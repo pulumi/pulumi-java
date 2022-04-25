@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class MachineExtensionInstanceViewResponseStatus {
     /**
-     * The status code.
+     * @return The status code.
      * 
      */
     private final String code;
     /**
-     * The short localizable label for the status.
+     * @return The short localizable label for the status.
      * 
      */
     private final String displayStatus;
     /**
-     * The level code.
+     * @return The level code.
      * 
      */
     private final String level;
     /**
-     * The detailed status message, including for alerts and error messages.
+     * @return The detailed status message, including for alerts and error messages.
      * 
      */
     private final String message;
     /**
-     * The time of the status.
+     * @return The time of the status.
      * 
      */
     private final String time;
@@ -50,37 +50,37 @@ public final class MachineExtensionInstanceViewResponseStatus {
     }
 
     /**
-     * The status code.
+     * @return The status code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * The short localizable label for the status.
+     * @return The short localizable label for the status.
      * 
-    */
+     */
     public String displayStatus() {
         return this.displayStatus;
     }
     /**
-     * The level code.
+     * @return The level code.
      * 
-    */
+     */
     public String level() {
         return this.level;
     }
     /**
-     * The detailed status message, including for alerts and error messages.
+     * @return The detailed status message, including for alerts and error messages.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The time of the status.
+     * @return The time of the status.
      * 
-    */
+     */
     public String time() {
         return this.time;
     }

@@ -27,6 +27,10 @@ public final class BucketCustomPlacementConfigArgs extends com.pulumi.resources.
     @Import(name="dataLocations")
     private @Nullable Output<List<String>> dataLocations;
 
+    /**
+     * @return The list of regional locations in which data is placed.
+     * 
+     */
     public Optional<Output<List<String>>> dataLocations() {
         return Optional.ofNullable(this.dataLocations);
     }
@@ -55,15 +59,33 @@ public final class BucketCustomPlacementConfigArgs extends com.pulumi.resources.
             $ = new BucketCustomPlacementConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataLocations The list of regional locations in which data is placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocations(@Nullable Output<List<String>> dataLocations) {
             $.dataLocations = dataLocations;
             return this;
         }
 
+        /**
+         * @param dataLocations The list of regional locations in which data is placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocations(List<String> dataLocations) {
             return dataLocations(Output.of(dataLocations));
         }
 
+        /**
+         * @param dataLocations The list of regional locations in which data is placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocations(String... dataLocations) {
             return dataLocations(List.of(dataLocations));
         }

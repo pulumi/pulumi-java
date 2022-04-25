@@ -20,6 +20,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
     @Import(name="rangeEnd", required=true)
     private Output<Integer> rangeEnd;
 
+    /**
+     * @return The end of the range (exclusive).
+     * 
+     */
     public Output<Integer> rangeEnd() {
         return this.rangeEnd;
     }
@@ -31,6 +35,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
     @Import(name="rangeStart", required=true)
     private Output<Integer> rangeStart;
 
+    /**
+     * @return The start of the range (inclusive).
+     * 
+     */
     public Output<Integer> rangeStart() {
         return this.rangeStart;
     }
@@ -60,20 +68,44 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
             $ = new URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rangeEnd The end of the range (exclusive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeEnd(Output<Integer> rangeEnd) {
             $.rangeEnd = rangeEnd;
             return this;
         }
 
+        /**
+         * @param rangeEnd The end of the range (exclusive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeEnd(Integer rangeEnd) {
             return rangeEnd(Output.of(rangeEnd));
         }
 
+        /**
+         * @param rangeStart The start of the range (inclusive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeStart(Output<Integer> rangeStart) {
             $.rangeStart = rangeStart;
             return this;
         }
 
+        /**
+         * @param rangeStart The start of the range (inclusive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeStart(Integer rangeStart) {
             return rangeStart(Output.of(rangeStart));
         }

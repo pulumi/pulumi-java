@@ -28,6 +28,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessUrls")
     private @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
 
+    /**
+     * @return URLs for accessing content published by this CA, such as the CA certificate and CRLs.
+     * 
+     */
     public Optional<Output<List<AuthorityAccessUrlGetArgs>>> accessUrls() {
         return Optional.ofNullable(this.accessUrls);
     }
@@ -39,6 +43,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityId")
     private @Nullable Output<String> certificateAuthorityId;
 
+    /**
+     * @return The user provided Resource ID for this Certificate Authority.
+     * 
+     */
     public Optional<Output<String>> certificateAuthorityId() {
         return Optional.ofNullable(this.certificateAuthorityId);
     }
@@ -51,6 +59,11 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<AuthorityConfigGetArgs> config;
 
+    /**
+     * @return The config used to create a self-signed X.509 certificate or CSR.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AuthorityConfigGetArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -63,6 +76,11 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+     * resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -78,6 +96,14 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcsBucket")
     private @Nullable Output<String> gcsBucket;
 
+    /**
+     * @return The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
+     * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
+     * (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
+     * my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
+     * created.
+     * 
+     */
     public Optional<Output<String>> gcsBucket() {
         return Optional.ofNullable(this.gcsBucket);
     }
@@ -90,6 +116,11 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ignoreActiveCertificatesOnDeletion")
     private @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
+    /**
+     * @return This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+     * Use with care. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreActiveCertificatesOnDeletion() {
         return Optional.ofNullable(this.ignoreActiveCertificatesOnDeletion);
     }
@@ -104,6 +135,13 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySpec")
     private @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
 
+    /**
+     * @return Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
+     * is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
+     * certificate. Otherwise, it is used to sign a CSR.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AuthorityKeySpecGetArgs>> keySpec() {
         return Optional.ofNullable(this.keySpec);
     }
@@ -117,6 +155,12 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels with user-defined metadata.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+     * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -130,6 +174,12 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifetime")
     private @Nullable Output<String> lifetime;
 
+    /**
+     * @return The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> lifetime() {
         return Optional.ofNullable(this.lifetime);
     }
@@ -142,6 +192,11 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the CertificateAuthority. A full list of valid locations can be found by
+     * running `gcloud privateca locations list`.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -153,6 +208,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name for this CertificateAuthority in the format projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -166,6 +225,12 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pemCaCertificates")
     private @Nullable Output<List<String>> pemCaCertificates;
 
+    /**
+     * @return This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such
+     * that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
+     * current CertificateAuthority&#39;s certificate.
+     * 
+     */
     public Optional<Output<List<String>>> pemCaCertificates() {
         return Optional.ofNullable(this.pemCaCertificates);
     }
@@ -177,6 +242,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pool")
     private @Nullable Output<String> pool;
 
+    /**
+     * @return The name of the CaPool this Certificate Authority belongs to.
+     * 
+     */
     public Optional<Output<String>> pool() {
         return Optional.ofNullable(this.pool);
     }
@@ -189,6 +258,11 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -200,6 +274,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The State for this CertificateAuthority.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -216,6 +294,15 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The Type of this CertificateAuthority.
+     * &gt; **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+     * be manually activated (via Cloud Console of `gcloud`) before they can
+     * issue certificates.
+     * Default value is `SELF_SIGNED`.
+     * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -228,6 +315,11 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+     * resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -272,163 +364,429 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorityState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessUrls URLs for accessing content published by this CA, such as the CA certificate and CRLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessUrls(@Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls) {
             $.accessUrls = accessUrls;
             return this;
         }
 
+        /**
+         * @param accessUrls URLs for accessing content published by this CA, such as the CA certificate and CRLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessUrls(List<AuthorityAccessUrlGetArgs> accessUrls) {
             return accessUrls(Output.of(accessUrls));
         }
 
+        /**
+         * @param accessUrls URLs for accessing content published by this CA, such as the CA certificate and CRLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessUrls(AuthorityAccessUrlGetArgs... accessUrls) {
             return accessUrls(List.of(accessUrls));
         }
 
+        /**
+         * @param certificateAuthorityId The user provided Resource ID for this Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityId(@Nullable Output<String> certificateAuthorityId) {
             $.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityId The user provided Resource ID for this Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityId(String certificateAuthorityId) {
             return certificateAuthorityId(Output.of(certificateAuthorityId));
         }
 
+        /**
+         * @param config The config used to create a self-signed X.509 certificate or CSR.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<AuthorityConfigGetArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The config used to create a self-signed X.509 certificate or CSR.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(AuthorityConfigGetArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param createTime The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param gcsBucket The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
+         * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
+         * (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
+         * my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
+         * created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsBucket(@Nullable Output<String> gcsBucket) {
             $.gcsBucket = gcsBucket;
             return this;
         }
 
+        /**
+         * @param gcsBucket The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
+         * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
+         * (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
+         * my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
+         * created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsBucket(String gcsBucket) {
             return gcsBucket(Output.of(gcsBucket));
         }
 
+        /**
+         * @param ignoreActiveCertificatesOnDeletion This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+         * Use with care. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreActiveCertificatesOnDeletion(@Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion) {
             $.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
             return this;
         }
 
+        /**
+         * @param ignoreActiveCertificatesOnDeletion This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+         * Use with care. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreActiveCertificatesOnDeletion(Boolean ignoreActiveCertificatesOnDeletion) {
             return ignoreActiveCertificatesOnDeletion(Output.of(ignoreActiveCertificatesOnDeletion));
         }
 
+        /**
+         * @param keySpec Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
+         * is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
+         * certificate. Otherwise, it is used to sign a CSR.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySpec(@Nullable Output<AuthorityKeySpecGetArgs> keySpec) {
             $.keySpec = keySpec;
             return this;
         }
 
+        /**
+         * @param keySpec Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
+         * is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
+         * certificate. Otherwise, it is used to sign a CSR.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySpec(AuthorityKeySpecGetArgs keySpec) {
             return keySpec(Output.of(keySpec));
         }
 
+        /**
+         * @param labels Labels with user-defined metadata.
+         * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+         * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels with user-defined metadata.
+         * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+         * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lifetime The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+         * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+         * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(@Nullable Output<String> lifetime) {
             $.lifetime = lifetime;
             return this;
         }
 
+        /**
+         * @param lifetime The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+         * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+         * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(String lifetime) {
             return lifetime(Output.of(lifetime));
         }
 
+        /**
+         * @param location Location of the CertificateAuthority. A full list of valid locations can be found by
+         * running `gcloud privateca locations list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the CertificateAuthority. A full list of valid locations can be found by
+         * running `gcloud privateca locations list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name for this CertificateAuthority in the format projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name for this CertificateAuthority in the format projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pemCaCertificates This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such
+         * that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
+         * current CertificateAuthority&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemCaCertificates(@Nullable Output<List<String>> pemCaCertificates) {
             $.pemCaCertificates = pemCaCertificates;
             return this;
         }
 
+        /**
+         * @param pemCaCertificates This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such
+         * that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
+         * current CertificateAuthority&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemCaCertificates(List<String> pemCaCertificates) {
             return pemCaCertificates(Output.of(pemCaCertificates));
         }
 
+        /**
+         * @param pemCaCertificates This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such
+         * that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
+         * current CertificateAuthority&#39;s certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemCaCertificates(String... pemCaCertificates) {
             return pemCaCertificates(List.of(pemCaCertificates));
         }
 
+        /**
+         * @param pool The name of the CaPool this Certificate Authority belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pool(@Nullable Output<String> pool) {
             $.pool = pool;
             return this;
         }
 
+        /**
+         * @param pool The name of the CaPool this Certificate Authority belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pool(String pool) {
             return pool(Output.of(pool));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param state The State for this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The State for this CertificateAuthority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param type The Type of this CertificateAuthority.
+         * &gt; **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+         * be manually activated (via Cloud Console of `gcloud`) before they can
+         * issue certificates.
+         * Default value is `SELF_SIGNED`.
+         * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The Type of this CertificateAuthority.
+         * &gt; **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+         * be manually activated (via Cloud Console of `gcloud`) before they can
+         * issue certificates.
+         * Default value is `SELF_SIGNED`.
+         * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param updateTime The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

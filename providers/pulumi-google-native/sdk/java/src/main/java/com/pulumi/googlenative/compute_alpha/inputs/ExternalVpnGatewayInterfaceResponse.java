@@ -23,6 +23,10 @@ public final class ExternalVpnGatewayInterfaceResponse extends com.pulumi.resour
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider&#39;s VPN gateway, it cannot be an IP address from Google Compute Engine.
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -51,6 +55,12 @@ public final class ExternalVpnGatewayInterfaceResponse extends com.pulumi.resour
             $ = new ExternalVpnGatewayInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider&#39;s VPN gateway, it cannot be an IP address from Google Compute Engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;

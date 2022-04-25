@@ -19,6 +19,10 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -30,6 +34,10 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
     @Import(name="virtualNetworkRuleName", required=true)
     private String virtualNetworkRuleName;
 
+    /**
+     * @return The Virtual Network Rule name.
+     * 
+     */
     public String virtualNetworkRuleName() {
         return this.virtualNetworkRuleName;
     }
@@ -71,16 +83,34 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
             $ = new GetNamespaceVirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRuleName The Virtual Network Rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
             $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;

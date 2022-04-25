@@ -23,6 +23,10 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<JobConfigArgs> config;
 
+    /**
+     * @return The configuration for this template.
+     * 
+     */
     public Optional<Output<JobConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -48,6 +52,10 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,11 +95,23 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration for this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<JobConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The configuration for this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(JobConfigArgs config) {
             return config(Output.of(config));
         }
@@ -114,11 +134,23 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

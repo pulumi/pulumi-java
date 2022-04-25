@@ -26,6 +26,10 @@ public final class ParentPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The resource ID of the parent to which the connected registry will be associated.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class ParentPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="syncProperties", required=true)
     private SyncPropertiesResponse syncProperties;
 
+    /**
+     * @return The sync properties of the connected registry with its parent.
+     * 
+     */
     public SyncPropertiesResponse syncProperties() {
         return this.syncProperties;
     }
@@ -66,11 +74,23 @@ public final class ParentPropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new ParentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource ID of the parent to which the connected registry will be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param syncProperties The sync properties of the connected registry with its parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncProperties(SyncPropertiesResponse syncProperties) {
             $.syncProperties = syncProperties;
             return this;

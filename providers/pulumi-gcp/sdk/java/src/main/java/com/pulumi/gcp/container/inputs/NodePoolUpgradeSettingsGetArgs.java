@@ -22,6 +22,12 @@ public final class NodePoolUpgradeSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="maxSurge", required=true)
     private Output<Integer> maxSurge;
 
+    /**
+     * @return The number of additional nodes that can be added to the node pool during
+     * an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
+     * Can be set to 0 or greater.
+     * 
+     */
     public Output<Integer> maxSurge() {
         return this.maxSurge;
     }
@@ -35,6 +41,12 @@ public final class NodePoolUpgradeSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="maxUnavailable", required=true)
     private Output<Integer> maxUnavailable;
 
+    /**
+     * @return The number of nodes that can be simultaneously unavailable during
+     * an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
+     * parallel. Can be set to 0 or greater.
+     * 
+     */
     public Output<Integer> maxUnavailable() {
         return this.maxUnavailable;
     }
@@ -64,20 +76,52 @@ public final class NodePoolUpgradeSettingsGetArgs extends com.pulumi.resources.R
             $ = new NodePoolUpgradeSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxSurge The number of additional nodes that can be added to the node pool during
+         * an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
+         * Can be set to 0 or greater.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(Output<Integer> maxSurge) {
             $.maxSurge = maxSurge;
             return this;
         }
 
+        /**
+         * @param maxSurge The number of additional nodes that can be added to the node pool during
+         * an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
+         * Can be set to 0 or greater.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(Integer maxSurge) {
             return maxSurge(Output.of(maxSurge));
         }
 
+        /**
+         * @param maxUnavailable The number of nodes that can be simultaneously unavailable during
+         * an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
+         * parallel. Can be set to 0 or greater.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(Output<Integer> maxUnavailable) {
             $.maxUnavailable = maxUnavailable;
             return this;
         }
 
+        /**
+         * @param maxUnavailable The number of nodes that can be simultaneously unavailable during
+         * an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
+         * parallel. Can be set to 0 or greater.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(Integer maxUnavailable) {
             return maxUnavailable(Output.of(maxUnavailable));
         }

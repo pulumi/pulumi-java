@@ -19,6 +19,10 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
     @Import(name="metadataName", required=true)
     private String metadataName;
 
+    /**
+     * @return Name of the HybridIdentityMetadata.
+     * 
+     */
     public String metadataName() {
         return this.metadataName;
     }
@@ -30,6 +34,10 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
     @Import(name="virtualMachineName", required=true)
     private String virtualMachineName;
 
+    /**
+     * @return Name of the vm.
+     * 
+     */
     public String virtualMachineName() {
         return this.virtualMachineName;
     }
@@ -71,16 +83,34 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
             $ = new GetHybridIdentityMetadatumArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadataName Name of the HybridIdentityMetadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataName(String metadataName) {
             $.metadataName = metadataName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualMachineName Name of the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineName(String virtualMachineName) {
             $.virtualMachineName = virtualMachineName;
             return this;

@@ -19,6 +19,10 @@ public final class GetVirtualServiceSpecProviderVirtualRouter extends com.pulumi
     @Import(name="virtualRouterName", required=true)
     private String virtualRouterName;
 
+    /**
+     * @return The name of the virtual router that is acting as a service provider.
+     * 
+     */
     public String virtualRouterName() {
         return this.virtualRouterName;
     }
@@ -47,6 +51,12 @@ public final class GetVirtualServiceSpecProviderVirtualRouter extends com.pulumi
             $ = new GetVirtualServiceSpecProviderVirtualRouter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualRouterName The name of the virtual router that is acting as a service provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterName(String virtualRouterName) {
             $.virtualRouterName = virtualRouterName;
             return this;

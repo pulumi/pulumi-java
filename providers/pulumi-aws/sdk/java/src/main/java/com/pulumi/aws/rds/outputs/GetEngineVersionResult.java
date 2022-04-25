@@ -13,81 +13,81 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEngineVersionResult {
     /**
-     * The default character set for new instances of this engine version.
+     * @return The default character set for new instances of this engine version.
      * 
      */
     private final String defaultCharacterSet;
     private final String engine;
     /**
-     * The description of the database engine.
+     * @return The description of the database engine.
      * 
      */
     private final String engineDescription;
     /**
-     * Set of log types that the database engine has available for export to CloudWatch Logs.
+     * @return Set of log types that the database engine has available for export to CloudWatch Logs.
      * 
      */
     private final List<String> exportableLogTypes;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String parameterGroupFamily;
     private final @Nullable List<String> preferredVersions;
     /**
-     * The status of the DB engine version, either available or deprecated.
+     * @return The status of the DB engine version, either available or deprecated.
      * 
      */
     private final String status;
     /**
-     * Set of the character sets supported by this engine.
+     * @return Set of the character sets supported by this engine.
      * 
      */
     private final List<String> supportedCharacterSets;
     /**
-     * Set of features supported by the DB engine.
+     * @return Set of features supported by the DB engine.
      * 
      */
     private final List<String> supportedFeatureNames;
     /**
-     * Set of the supported DB engine modes.
+     * @return Set of the supported DB engine modes.
      * 
      */
     private final List<String> supportedModes;
     /**
-     * Set of the time zones supported by this engine.
+     * @return Set of the time zones supported by this engine.
      * 
      */
     private final List<String> supportedTimezones;
     /**
-     * Indicates whether you can use Aurora global databases with a specific DB engine version.
+     * @return Indicates whether you can use Aurora global databases with a specific DB engine version.
      * 
      */
     private final Boolean supportsGlobalDatabases;
     /**
-     * Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
+     * @return Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
      * 
      */
     private final Boolean supportsLogExportsToCloudwatch;
     /**
-     * Indicates whether you can use Aurora parallel query with a specific DB engine version.
+     * @return Indicates whether you can use Aurora parallel query with a specific DB engine version.
      * 
      */
     private final Boolean supportsParallelQuery;
     /**
-     * Indicates whether the database engine version supports read replicas.
+     * @return Indicates whether the database engine version supports read replicas.
      * 
      */
     private final Boolean supportsReadReplica;
     /**
-     * Set of engine versions that this database engine version can be upgraded to.
+     * @return Set of engine versions that this database engine version can be upgraded to.
      * 
      */
     private final List<String> validUpgradeTargets;
     private final String version;
     /**
-     * The description of the database engine version.
+     * @return The description of the database engine version.
      * 
      */
     private final String versionDescription;
@@ -135,9 +135,9 @@ public final class GetEngineVersionResult {
     }
 
     /**
-     * The default character set for new instances of this engine version.
+     * @return The default character set for new instances of this engine version.
      * 
-    */
+     */
     public String defaultCharacterSet() {
         return this.defaultCharacterSet;
     }
@@ -145,23 +145,23 @@ public final class GetEngineVersionResult {
         return this.engine;
     }
     /**
-     * The description of the database engine.
+     * @return The description of the database engine.
      * 
-    */
+     */
     public String engineDescription() {
         return this.engineDescription;
     }
     /**
-     * Set of log types that the database engine has available for export to CloudWatch Logs.
+     * @return Set of log types that the database engine has available for export to CloudWatch Logs.
      * 
-    */
+     */
     public List<String> exportableLogTypes() {
         return this.exportableLogTypes;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -172,72 +172,72 @@ public final class GetEngineVersionResult {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
     }
     /**
-     * The status of the DB engine version, either available or deprecated.
+     * @return The status of the DB engine version, either available or deprecated.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Set of the character sets supported by this engine.
+     * @return Set of the character sets supported by this engine.
      * 
-    */
+     */
     public List<String> supportedCharacterSets() {
         return this.supportedCharacterSets;
     }
     /**
-     * Set of features supported by the DB engine.
+     * @return Set of features supported by the DB engine.
      * 
-    */
+     */
     public List<String> supportedFeatureNames() {
         return this.supportedFeatureNames;
     }
     /**
-     * Set of the supported DB engine modes.
+     * @return Set of the supported DB engine modes.
      * 
-    */
+     */
     public List<String> supportedModes() {
         return this.supportedModes;
     }
     /**
-     * Set of the time zones supported by this engine.
+     * @return Set of the time zones supported by this engine.
      * 
-    */
+     */
     public List<String> supportedTimezones() {
         return this.supportedTimezones;
     }
     /**
-     * Indicates whether you can use Aurora global databases with a specific DB engine version.
+     * @return Indicates whether you can use Aurora global databases with a specific DB engine version.
      * 
-    */
+     */
     public Boolean supportsGlobalDatabases() {
         return this.supportsGlobalDatabases;
     }
     /**
-     * Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
+     * @return Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
      * 
-    */
+     */
     public Boolean supportsLogExportsToCloudwatch() {
         return this.supportsLogExportsToCloudwatch;
     }
     /**
-     * Indicates whether you can use Aurora parallel query with a specific DB engine version.
+     * @return Indicates whether you can use Aurora parallel query with a specific DB engine version.
      * 
-    */
+     */
     public Boolean supportsParallelQuery() {
         return this.supportsParallelQuery;
     }
     /**
-     * Indicates whether the database engine version supports read replicas.
+     * @return Indicates whether the database engine version supports read replicas.
      * 
-    */
+     */
     public Boolean supportsReadReplica() {
         return this.supportsReadReplica;
     }
     /**
-     * Set of engine versions that this database engine version can be upgraded to.
+     * @return Set of engine versions that this database engine version can be upgraded to.
      * 
-    */
+     */
     public List<String> validUpgradeTargets() {
         return this.validUpgradeTargets;
     }
@@ -245,9 +245,9 @@ public final class GetEngineVersionResult {
         return this.version;
     }
     /**
-     * The description of the database engine version.
+     * @return The description of the database engine version.
      * 
-    */
+     */
     public String versionDescription() {
         return this.versionDescription;
     }

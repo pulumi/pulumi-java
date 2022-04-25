@@ -19,6 +19,10 @@ public final class GetDelegatedServicesArgs extends com.pulumi.resources.InvokeA
     @Import(name="accountId", required=true)
     private String accountId;
 
+    /**
+     * @return The account ID number of a delegated administrator account in the organization.
+     * 
+     */
     public String accountId() {
         return this.accountId;
     }
@@ -47,6 +51,12 @@ public final class GetDelegatedServicesArgs extends com.pulumi.resources.InvokeA
             $ = new GetDelegatedServicesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The account ID number of a delegated administrator account in the organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             $.accountId = accountId;
             return this;

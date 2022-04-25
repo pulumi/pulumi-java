@@ -25,6 +25,10 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="allowNullHeader", required=true)
     private Boolean allowNullHeader;
 
+    /**
+     * @return Determines whether messages with no header are allowed.
+     * 
+     */
     public Boolean allowNullHeader() {
         return this.allowNullHeader;
     }
@@ -36,6 +40,10 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="schema", required=true)
     private SchemaPackageResponse schema;
 
+    /**
+     * @return Schemas used to parse messages in this store, if schematized parsing is desired.
+     * 
+     */
     public SchemaPackageResponse schema() {
         return this.schema;
     }
@@ -47,6 +55,10 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="segmentTerminator", required=true)
     private String segmentTerminator;
 
+    /**
+     * @return Byte(s) to use as the segment terminator. If this is unset, &#39;\r&#39; is used as segment terminator, matching the HL7 version 2 specification.
+     * 
+     */
     public String segmentTerminator() {
         return this.segmentTerminator;
     }
@@ -58,6 +70,10 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -89,21 +105,45 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ParserConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowNullHeader Determines whether messages with no header are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNullHeader(Boolean allowNullHeader) {
             $.allowNullHeader = allowNullHeader;
             return this;
         }
 
+        /**
+         * @param schema Schemas used to parse messages in this store, if schematized parsing is desired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(SchemaPackageResponse schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param segmentTerminator Byte(s) to use as the segment terminator. If this is unset, &#39;\r&#39; is used as segment terminator, matching the HL7 version 2 specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(String segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param version Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

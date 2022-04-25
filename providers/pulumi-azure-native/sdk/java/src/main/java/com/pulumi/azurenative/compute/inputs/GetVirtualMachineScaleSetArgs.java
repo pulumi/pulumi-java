@@ -21,6 +21,10 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation. &#39;UserData&#39; retrieves the UserData property of the VM scale set that was provided by the user during the VM scale set Create/Update operation
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
     @Import(name="vmScaleSetName", required=true)
     private String vmScaleSetName;
 
+    /**
+     * @return The name of the VM scale set.
+     * 
+     */
     public String vmScaleSetName() {
         return this.vmScaleSetName;
     }
@@ -73,16 +85,34 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
             $ = new GetVirtualMachineScaleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation. &#39;UserData&#39; retrieves the UserData property of the VM scale set that was provided by the user during the VM scale set Create/Update operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vmScaleSetName The name of the VM scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmScaleSetName(String vmScaleSetName) {
             $.vmScaleSetName = vmScaleSetName;
             return this;

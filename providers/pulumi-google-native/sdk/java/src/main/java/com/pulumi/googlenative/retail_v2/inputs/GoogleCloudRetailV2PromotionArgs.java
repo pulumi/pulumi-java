@@ -26,6 +26,10 @@ public final class GoogleCloudRetailV2PromotionArgs extends com.pulumi.resources
     @Import(name="promotionId")
     private @Nullable Output<String> promotionId;
 
+    /**
+     * @return ID of the promotion. For example, &#34;free gift&#34;. The value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).
+     * 
+     */
     public Optional<Output<String>> promotionId() {
         return Optional.ofNullable(this.promotionId);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudRetailV2PromotionArgs extends com.pulumi.resources
             $ = new GoogleCloudRetailV2PromotionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param promotionId ID of the promotion. For example, &#34;free gift&#34;. The value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionId(@Nullable Output<String> promotionId) {
             $.promotionId = promotionId;
             return this;
         }
 
+        /**
+         * @param promotionId ID of the promotion. For example, &#34;free gift&#34;. The value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionId(String promotionId) {
             return promotionId(Output.of(promotionId));
         }

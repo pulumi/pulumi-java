@@ -19,6 +19,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationId", required=true)
     private String applicationId;
 
+    /**
+     * @return The ID of the application.
+     * 
+     */
     public String applicationId() {
         return this.applicationId;
     }
@@ -47,6 +51,12 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The ID of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             $.applicationId = applicationId;
             return this;

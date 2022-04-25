@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlertPolicyConditionConditionThresholdAggregation {
     /**
-     * The alignment period for per-time
+     * @return The alignment period for per-time
      * series alignment. If present,
      * alignmentPeriod must be at least
      * 60 seconds. After per-time series
@@ -31,7 +31,7 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
      */
     private final @Nullable String alignmentPeriod;
     /**
-     * The approach to be used to combine
+     * @return The approach to be used to combine
      * time series. Not all reducer
      * functions may be applied to all
      * time series, depending on the
@@ -53,7 +53,7 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
      */
     private final @Nullable String crossSeriesReducer;
     /**
-     * The set of fields to preserve when
+     * @return The set of fields to preserve when
      * crossSeriesReducer is specified.
      * The groupByFields determine how
      * the time series are partitioned
@@ -82,7 +82,7 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
      */
     private final @Nullable List<String> groupByFields;
     /**
-     * The approach to be used to align
+     * @return The approach to be used to align
      * individual time series. Not all
      * alignment functions may be applied
      * to all time series, depending on
@@ -117,7 +117,7 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
     }
 
     /**
-     * The alignment period for per-time
+     * @return The alignment period for per-time
      * series alignment. If present,
      * alignmentPeriod must be at least
      * 60 seconds. After per-time series
@@ -132,12 +132,12 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
      * this field must be defined;
      * otherwise an error is returned.
      * 
-    */
+     */
     public Optional<String> alignmentPeriod() {
         return Optional.ofNullable(this.alignmentPeriod);
     }
     /**
-     * The approach to be used to combine
+     * @return The approach to be used to combine
      * time series. Not all reducer
      * functions may be applied to all
      * time series, depending on the
@@ -156,12 +156,12 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
      * returned.
      * Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
      * 
-    */
+     */
     public Optional<String> crossSeriesReducer() {
         return Optional.ofNullable(this.crossSeriesReducer);
     }
     /**
-     * The set of fields to preserve when
+     * @return The set of fields to preserve when
      * crossSeriesReducer is specified.
      * The groupByFields determine how
      * the time series are partitioned
@@ -187,12 +187,12 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
      * is not defined, this field is
      * ignored.
      * 
-    */
+     */
     public List<String> groupByFields() {
         return this.groupByFields == null ? List.of() : this.groupByFields;
     }
     /**
-     * The approach to be used to align
+     * @return The approach to be used to align
      * individual time series. Not all
      * alignment functions may be applied
      * to all time series, depending on
@@ -211,7 +211,7 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
      * returned.
      * Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
      * 
-    */
+     */
     public Optional<String> perSeriesAligner() {
         return Optional.ofNullable(this.perSeriesAligner);
     }

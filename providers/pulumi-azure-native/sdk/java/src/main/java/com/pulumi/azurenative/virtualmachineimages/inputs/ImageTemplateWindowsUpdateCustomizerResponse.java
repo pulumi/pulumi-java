@@ -28,6 +28,10 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
     @Import(name="filters")
     private @Nullable List<String> filters;
 
+    /**
+     * @return Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+     * 
+     */
     public Optional<List<String>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -39,6 +43,10 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Friendly Name to provide context on what this customization step does
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
     @Import(name="searchCriteria")
     private @Nullable String searchCriteria;
 
+    /**
+     * @return Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
+     * 
+     */
     public Optional<String> searchCriteria() {
         return Optional.ofNullable(this.searchCriteria);
     }
@@ -62,6 +74,11 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsUpdate&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -73,6 +90,10 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
     @Import(name="updateLimit")
     private @Nullable Integer updateLimit;
 
+    /**
+     * @return Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+     * 
+     */
     public Optional<Integer> updateLimit() {
         return Optional.ofNullable(this.updateLimit);
     }
@@ -105,30 +126,67 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends com.pulu
             $ = new ImageTemplateWindowsUpdateCustomizerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<String> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(String... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param name Friendly Name to provide context on what this customization step does
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param searchCriteria Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchCriteria(@Nullable String searchCriteria) {
             $.searchCriteria = searchCriteria;
             return this;
         }
 
+        /**
+         * @param type The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;WindowsUpdate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param updateLimit Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateLimit(@Nullable Integer updateLimit) {
             $.updateLimit = updateLimit;
             return this;

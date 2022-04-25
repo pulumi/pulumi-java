@@ -29,6 +29,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="autodetect", required=true)
     private Boolean autodetect;
 
+    /**
+     * @return Try to detect schema and format options automatically. Any option specified explicitly will be honored.
+     * 
+     */
     public Boolean autodetect() {
         return this.autodetect;
     }
@@ -40,6 +44,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="avroOptions", required=true)
     private AvroOptionsResponse avroOptions;
 
+    /**
+     * @return Additional properties to set if sourceFormat is set to Avro.
+     * 
+     */
     public AvroOptionsResponse avroOptions() {
         return this.avroOptions;
     }
@@ -51,6 +59,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="bigtableOptions", required=true)
     private BigtableOptionsResponse bigtableOptions;
 
+    /**
+     * @return [Optional] Additional options if sourceFormat is set to BIGTABLE.
+     * 
+     */
     public BigtableOptionsResponse bigtableOptions() {
         return this.bigtableOptions;
     }
@@ -62,6 +74,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="compression", required=true)
     private String compression;
 
+    /**
+     * @return [Optional] The compression type of the data source. Possible values include GZIP and NONE. The default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.
+     * 
+     */
     public String compression() {
         return this.compression;
     }
@@ -73,6 +89,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="connectionId", required=true)
     private String connectionId;
 
+    /**
+     * @return [Optional, Trusted Tester] Connection for external data source.
+     * 
+     */
     public String connectionId() {
         return this.connectionId;
     }
@@ -84,6 +104,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="csvOptions", required=true)
     private CsvOptionsResponse csvOptions;
 
+    /**
+     * @return Additional properties to set if sourceFormat is set to CSV.
+     * 
+     */
     public CsvOptionsResponse csvOptions() {
         return this.csvOptions;
     }
@@ -95,6 +119,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="decimalTargetTypes", required=true)
     private List<String> decimalTargetTypes;
 
+    /**
+     * @return [Optional] Defines the list of possible SQL data types to which the source decimal values are converted. This list and the precision and the scale parameters of the decimal field determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the specified list and if it supports the precision and the scale. STRING supports all precision and scale values. If none of the listed types supports the precision and the scale, the type supporting the widest range in the specified list is picked, and if a value exceeds the supported range when reading the data, an error will be thrown. Example: Suppose the value of this field is [&#34;NUMERIC&#34;, &#34;BIGNUMERIC&#34;]. If (precision,scale) is: (38,9) -&gt; NUMERIC; (39,9) -&gt; BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -&gt; BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); (76,38) -&gt; BIGNUMERIC; (77,38) -&gt; BIGNUMERIC (error if value exeeds supported range). This field cannot contain duplicate types. The order of the types in this field is ignored. For example, [&#34;BIGNUMERIC&#34;, &#34;NUMERIC&#34;] is the same as [&#34;NUMERIC&#34;, &#34;BIGNUMERIC&#34;] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to [&#34;NUMERIC&#34;, &#34;STRING&#34;] for ORC and [&#34;NUMERIC&#34;] for the other file formats.
+     * 
+     */
     public List<String> decimalTargetTypes() {
         return this.decimalTargetTypes;
     }
@@ -106,6 +134,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="googleSheetsOptions", required=true)
     private GoogleSheetsOptionsResponse googleSheetsOptions;
 
+    /**
+     * @return [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
+     * 
+     */
     public GoogleSheetsOptionsResponse googleSheetsOptions() {
         return this.googleSheetsOptions;
     }
@@ -117,6 +149,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="hivePartitioningOptions", required=true)
     private HivePartitioningOptionsResponse hivePartitioningOptions;
 
+    /**
+     * @return [Optional] Options to configure hive partitioning support.
+     * 
+     */
     public HivePartitioningOptionsResponse hivePartitioningOptions() {
         return this.hivePartitioningOptions;
     }
@@ -128,6 +164,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="ignoreUnknownValues", required=true)
     private Boolean ignoreUnknownValues;
 
+    /**
+     * @return [Optional] Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing columns JSON: Named values that don&#39;t match any column names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is ignored. Avro: This setting is ignored.
+     * 
+     */
     public Boolean ignoreUnknownValues() {
         return this.ignoreUnknownValues;
     }
@@ -139,6 +179,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="maxBadRecords", required=true)
     private Integer maxBadRecords;
 
+    /**
+     * @return [Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the number of bad records exceeds this value, an invalid error is returned in the job result. This is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.
+     * 
+     */
     public Integer maxBadRecords() {
         return this.maxBadRecords;
     }
@@ -150,6 +194,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="parquetOptions", required=true)
     private ParquetOptionsResponse parquetOptions;
 
+    /**
+     * @return Additional properties to set if sourceFormat is set to Parquet.
+     * 
+     */
     public ParquetOptionsResponse parquetOptions() {
         return this.parquetOptions;
     }
@@ -161,6 +209,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="schema", required=true)
     private TableSchemaResponse schema;
 
+    /**
+     * @return [Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.
+     * 
+     */
     public TableSchemaResponse schema() {
         return this.schema;
     }
@@ -172,6 +224,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="sourceFormat", required=true)
     private String sourceFormat;
 
+    /**
+     * @return [Required] The data format. For CSV files, specify &#34;CSV&#34;. For Google sheets, specify &#34;GOOGLE_SHEETS&#34;. For newline-delimited JSON, specify &#34;NEWLINE_DELIMITED_JSON&#34;. For Avro files, specify &#34;AVRO&#34;. For Google Cloud Datastore backups, specify &#34;DATASTORE_BACKUP&#34;. [Beta] For Google Cloud Bigtable, specify &#34;BIGTABLE&#34;.
+     * 
+     */
     public String sourceFormat() {
         return this.sourceFormat;
     }
@@ -183,6 +239,10 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
     @Import(name="sourceUris", required=true)
     private List<String> sourceUris;
 
+    /**
+     * @return [Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups, exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
+     * 
+     */
     public List<String> sourceUris() {
         return this.sourceUris;
     }
@@ -225,85 +285,187 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
             $ = new ExternalDataConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autodetect Try to detect schema and format options automatically. Any option specified explicitly will be honored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autodetect(Boolean autodetect) {
             $.autodetect = autodetect;
             return this;
         }
 
+        /**
+         * @param avroOptions Additional properties to set if sourceFormat is set to Avro.
+         * 
+         * @return builder
+         * 
+         */
         public Builder avroOptions(AvroOptionsResponse avroOptions) {
             $.avroOptions = avroOptions;
             return this;
         }
 
+        /**
+         * @param bigtableOptions [Optional] Additional options if sourceFormat is set to BIGTABLE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigtableOptions(BigtableOptionsResponse bigtableOptions) {
             $.bigtableOptions = bigtableOptions;
             return this;
         }
 
+        /**
+         * @param compression [Optional] The compression type of the data source. Possible values include GZIP and NONE. The default value is NONE. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(String compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param connectionId [Optional, Trusted Tester] Connection for external data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param csvOptions Additional properties to set if sourceFormat is set to CSV.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvOptions(CsvOptionsResponse csvOptions) {
             $.csvOptions = csvOptions;
             return this;
         }
 
+        /**
+         * @param decimalTargetTypes [Optional] Defines the list of possible SQL data types to which the source decimal values are converted. This list and the precision and the scale parameters of the decimal field determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the specified list and if it supports the precision and the scale. STRING supports all precision and scale values. If none of the listed types supports the precision and the scale, the type supporting the widest range in the specified list is picked, and if a value exceeds the supported range when reading the data, an error will be thrown. Example: Suppose the value of this field is [&#34;NUMERIC&#34;, &#34;BIGNUMERIC&#34;]. If (precision,scale) is: (38,9) -&gt; NUMERIC; (39,9) -&gt; BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -&gt; BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); (76,38) -&gt; BIGNUMERIC; (77,38) -&gt; BIGNUMERIC (error if value exeeds supported range). This field cannot contain duplicate types. The order of the types in this field is ignored. For example, [&#34;BIGNUMERIC&#34;, &#34;NUMERIC&#34;] is the same as [&#34;NUMERIC&#34;, &#34;BIGNUMERIC&#34;] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to [&#34;NUMERIC&#34;, &#34;STRING&#34;] for ORC and [&#34;NUMERIC&#34;] for the other file formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalTargetTypes(List<String> decimalTargetTypes) {
             $.decimalTargetTypes = decimalTargetTypes;
             return this;
         }
 
+        /**
+         * @param decimalTargetTypes [Optional] Defines the list of possible SQL data types to which the source decimal values are converted. This list and the precision and the scale parameters of the decimal field determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the specified list and if it supports the precision and the scale. STRING supports all precision and scale values. If none of the listed types supports the precision and the scale, the type supporting the widest range in the specified list is picked, and if a value exceeds the supported range when reading the data, an error will be thrown. Example: Suppose the value of this field is [&#34;NUMERIC&#34;, &#34;BIGNUMERIC&#34;]. If (precision,scale) is: (38,9) -&gt; NUMERIC; (39,9) -&gt; BIGNUMERIC (NUMERIC cannot hold 30 integer digits); (38,10) -&gt; BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); (76,38) -&gt; BIGNUMERIC; (77,38) -&gt; BIGNUMERIC (error if value exeeds supported range). This field cannot contain duplicate types. The order of the types in this field is ignored. For example, [&#34;BIGNUMERIC&#34;, &#34;NUMERIC&#34;] is the same as [&#34;NUMERIC&#34;, &#34;BIGNUMERIC&#34;] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to [&#34;NUMERIC&#34;, &#34;STRING&#34;] for ORC and [&#34;NUMERIC&#34;] for the other file formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalTargetTypes(String... decimalTargetTypes) {
             return decimalTargetTypes(List.of(decimalTargetTypes));
         }
 
+        /**
+         * @param googleSheetsOptions [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleSheetsOptions(GoogleSheetsOptionsResponse googleSheetsOptions) {
             $.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
 
+        /**
+         * @param hivePartitioningOptions [Optional] Options to configure hive partitioning support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
             $.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
 
+        /**
+         * @param ignoreUnknownValues [Optional] Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. The sourceFormat property determines what BigQuery treats as an extra value: CSV: Trailing columns JSON: Named values that don&#39;t match any column names Google Cloud Bigtable: This setting is ignored. Google Cloud Datastore backups: This setting is ignored. Avro: This setting is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
             $.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
+        /**
+         * @param maxBadRecords [Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the number of bad records exceeds this value, an invalid error is returned in the job result. This is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all records are valid. This setting is ignored for Google Cloud Bigtable, Google Cloud Datastore backups and Avro formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBadRecords(Integer maxBadRecords) {
             $.maxBadRecords = maxBadRecords;
             return this;
         }
 
+        /**
+         * @param parquetOptions Additional properties to set if sourceFormat is set to Parquet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parquetOptions(ParquetOptionsResponse parquetOptions) {
             $.parquetOptions = parquetOptions;
             return this;
         }
 
+        /**
+         * @param schema [Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(TableSchemaResponse schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param sourceFormat [Required] The data format. For CSV files, specify &#34;CSV&#34;. For Google sheets, specify &#34;GOOGLE_SHEETS&#34;. For newline-delimited JSON, specify &#34;NEWLINE_DELIMITED_JSON&#34;. For Avro files, specify &#34;AVRO&#34;. For Google Cloud Datastore backups, specify &#34;DATASTORE_BACKUP&#34;. [Beta] For Google Cloud Bigtable, specify &#34;BIGTABLE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFormat(String sourceFormat) {
             $.sourceFormat = sourceFormat;
             return this;
         }
 
+        /**
+         * @param sourceUris [Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups, exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUris(List<String> sourceUris) {
             $.sourceUris = sourceUris;
             return this;
         }
 
+        /**
+         * @param sourceUris [Required] The fully-qualified URIs that point to your data in Google Cloud. For Google Cloud Storage URIs: Each URI can contain one &#39;*&#39; wildcard character and it must come after the &#39;bucket&#39; name. Size limits related to load jobs apply to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table. For Google Cloud Datastore backups, exactly one URI can be specified. Also, the &#39;*&#39; wildcard character is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUris(String... sourceUris) {
             return sourceUris(List.of(sourceUris));
         }

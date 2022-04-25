@@ -30,6 +30,10 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the data collector.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return ID of the data collector. Must begin with `dc_`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +67,10 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<DataCollectorType> type;
 
+    /**
+     * @return Immutable. The type of data this data collector will collect.
+     * 
+     */
     public Optional<Output<DataCollectorType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -100,20 +112,44 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
             return dataCollectorId(Output.of(dataCollectorId));
         }
 
+        /**
+         * @param description A description of the data collector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the data collector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name ID of the data collector. Must begin with `dc_`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name ID of the data collector. Must begin with `dc_`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -127,11 +163,23 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param type Immutable. The type of data this data collector will collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<DataCollectorType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Immutable. The type of data this data collector will collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DataCollectorType type) {
             return type(Output.of(type));
         }

@@ -25,6 +25,10 @@ public final class DefaultKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return Label can be used to specify Content Key when creating a Streaming Locator
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -36,6 +40,10 @@ public final class DefaultKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyName")
     private @Nullable String policyName;
 
+    /**
+     * @return Policy used by Default Key
+     * 
+     */
     public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -65,11 +73,23 @@ public final class DefaultKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DefaultKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label Label can be used to specify Content Key when creating a Streaming Locator
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param policyName Policy used by Default Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable String policyName) {
             $.policyName = policyName;
             return this;

@@ -26,6 +26,10 @@ public final class BootDiagnosticsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Whether boot diagnostics should be enabled on the Virtual Machine.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class BootDiagnosticsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="storageUri")
     private @Nullable String storageUri;
 
+    /**
+     * @return Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
+     * 
+     */
     public Optional<String> storageUri() {
         return Optional.ofNullable(this.storageUri);
     }
@@ -66,11 +74,23 @@ public final class BootDiagnosticsResponse extends com.pulumi.resources.InvokeAr
             $ = new BootDiagnosticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether boot diagnostics should be enabled on the Virtual Machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param storageUri Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageUri(@Nullable String storageUri) {
             $.storageUri = storageUri;
             return this;

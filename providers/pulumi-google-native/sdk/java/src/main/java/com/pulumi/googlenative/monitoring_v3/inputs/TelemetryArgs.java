@@ -26,6 +26,10 @@ public final class TelemetryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -54,11 +58,23 @@ public final class TelemetryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TelemetryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceName The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

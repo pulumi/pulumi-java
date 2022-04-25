@@ -27,6 +27,10 @@ public final class HttpFaultAbortArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="httpStatus")
     private @Nullable Output<Integer> httpStatus;
 
+    /**
+     * @return The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently not supported by Traffic Director.
+     * 
+     */
     public Optional<Output<Integer>> httpStatus() {
         return Optional.ofNullable(this.httpStatus);
     }
@@ -38,6 +42,10 @@ public final class HttpFaultAbortArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="percentage")
     private @Nullable Output<Double> percentage;
 
+    /**
+     * @return The percentage of traffic for connections, operations, or requests that is aborted as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+     * 
+     */
     public Optional<Output<Double>> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -67,20 +75,44 @@ public final class HttpFaultAbortArgs extends com.pulumi.resources.ResourceArgs 
             $ = new HttpFaultAbortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpStatus The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently not supported by Traffic Director.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpStatus(@Nullable Output<Integer> httpStatus) {
             $.httpStatus = httpStatus;
             return this;
         }
 
+        /**
+         * @param httpStatus The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently not supported by Traffic Director.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpStatus(Integer httpStatus) {
             return httpStatus(Output.of(httpStatus));
         }
 
+        /**
+         * @param percentage The percentage of traffic for connections, operations, or requests that is aborted as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable Output<Double> percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param percentage The percentage of traffic for connections, operations, or requests that is aborted as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             return percentage(Output.of(percentage));
         }

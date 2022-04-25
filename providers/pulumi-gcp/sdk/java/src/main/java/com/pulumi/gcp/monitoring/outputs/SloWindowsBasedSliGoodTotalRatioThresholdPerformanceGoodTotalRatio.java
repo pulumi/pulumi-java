@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio {
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * quantifying bad service provided, either demanded service that
      * was not provided or demanded service that was of inadequate
      * quality. Exactly two of
@@ -24,7 +24,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      */
     private final @Nullable String badServiceFilter;
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * quantifying good service provided. Exactly two of
      * good, bad, or total service filter must be defined (where
      * good + bad = total is assumed)
@@ -34,7 +34,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      */
     private final @Nullable String goodServiceFilter;
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * quantifying total demanded service. Exactly two of
      * good, bad, or total service filter must be defined (where
      * good + bad = total is assumed)
@@ -55,7 +55,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
     }
 
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * quantifying bad service provided, either demanded service that
      * was not provided or demanded service that was of inadequate
      * quality. Exactly two of
@@ -64,31 +64,31 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * Must have ValueType = DOUBLE or ValueType = INT64 and
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-    */
+     */
     public Optional<String> badServiceFilter() {
         return Optional.ofNullable(this.badServiceFilter);
     }
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * quantifying good service provided. Exactly two of
      * good, bad, or total service filter must be defined (where
      * good + bad = total is assumed)
      * Must have ValueType = DOUBLE or ValueType = INT64 and
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-    */
+     */
     public Optional<String> goodServiceFilter() {
         return Optional.ofNullable(this.goodServiceFilter);
     }
     /**
-     * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
      * quantifying total demanded service. Exactly two of
      * good, bad, or total service filter must be defined (where
      * good + bad = total is assumed)
      * Must have ValueType = DOUBLE or ValueType = INT64 and
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-    */
+     */
     public Optional<String> totalServiceFilter() {
         return Optional.ofNullable(this.totalServiceFilter);
     }

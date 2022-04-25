@@ -26,6 +26,10 @@ public final class DataStoreInfoBaseArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataStoreType", required=true)
     private Output<Either<String,DataStoreTypes>> dataStoreType;
 
+    /**
+     * @return type of datastore; Operational/Vault/Archive
+     * 
+     */
     public Output<Either<String,DataStoreTypes>> dataStoreType() {
         return this.dataStoreType;
     }
@@ -37,6 +41,10 @@ public final class DataStoreInfoBaseArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return Type of Datasource object, used to initialize the right inherited type
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -66,28 +74,64 @@ public final class DataStoreInfoBaseArgs extends com.pulumi.resources.ResourceAr
             $ = new DataStoreInfoBaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(Output<Either<String,DataStoreTypes>> dataStoreType) {
             $.dataStoreType = dataStoreType;
             return this;
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(Either<String,DataStoreTypes> dataStoreType) {
             return dataStoreType(Output.of(dataStoreType));
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(String dataStoreType) {
             return dataStoreType(Either.ofLeft(dataStoreType));
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(DataStoreTypes dataStoreType) {
             return dataStoreType(Either.ofRight(dataStoreType));
         }
 
+        /**
+         * @param objectType Type of Datasource object, used to initialize the right inherited type
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType Type of Datasource object, used to initialize the right inherited type
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }

@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
     @Import(name="caseContent", required=true)
     private List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
 
+    /**
+     * @return A list of case content.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent() {
         return this.caseContent;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
     @Import(name="condition", required=true)
     private String condition;
 
+    /**
+     * @return The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * 
+     */
     public String condition() {
         return this.condition;
     }
@@ -65,15 +73,33 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
             $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caseContent A list of case content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseContent(List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent) {
             $.caseContent = caseContent;
             return this;
         }
 
+        /**
+         * @param caseContent A list of case content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caseContent(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse... caseContent) {
             return caseContent(List.of(caseContent));
         }
 
+        /**
+         * @param condition The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             $.condition = condition;
             return this;

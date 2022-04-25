@@ -26,6 +26,10 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessKey1", required=true)
     private String accessKey1;
 
+    /**
+     * @return EventGrid secondary accesskey. Will be obfuscated during read.
+     * 
+     */
     public String accessKey1() {
         return this.accessKey1;
     }
@@ -37,6 +41,10 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessKey2")
     private @Nullable String accessKey2;
 
+    /**
+     * @return EventGrid secondary accesskey. Will be obfuscated during read.
+     * 
+     */
     public Optional<String> accessKey2() {
         return Optional.ofNullable(this.accessKey2);
     }
@@ -48,6 +56,10 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return Specifies the authentication type being used for connecting to the endpoint.
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -59,6 +71,10 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime", required=true)
     private String createdTime;
 
+    /**
+     * @return Time when the Endpoint was added to DigitalTwinsInstance.
+     * 
+     */
     public String createdTime() {
         return this.createdTime;
     }
@@ -70,6 +86,10 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deadLetterSecret")
     private @Nullable String deadLetterSecret;
 
+    /**
+     * @return Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     * 
+     */
     public Optional<String> deadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
@@ -81,6 +101,10 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deadLetterUri")
     private @Nullable String deadLetterUri;
 
+    /**
+     * @return Dead letter storage URL for identity-based authentication.
+     * 
+     */
     public Optional<String> deadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
@@ -93,6 +117,11 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointType", required=true)
     private String endpointType;
 
+    /**
+     * @return The type of Digital Twins endpoint
+     * Expected value is &#39;EventGrid&#39;.
+     * 
+     */
     public String endpointType() {
         return this.endpointType;
     }
@@ -104,6 +133,10 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -115,6 +148,10 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="topicEndpoint", required=true)
     private String topicEndpoint;
 
+    /**
+     * @return EventGrid Topic Endpoint
+     * 
+     */
     public String topicEndpoint() {
         return this.topicEndpoint;
     }
@@ -151,46 +188,101 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EventGridResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKey1 EventGrid secondary accesskey. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey1(String accessKey1) {
             $.accessKey1 = accessKey1;
             return this;
         }
 
+        /**
+         * @param accessKey2 EventGrid secondary accesskey. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKey2(@Nullable String accessKey2) {
             $.accessKey2 = accessKey2;
             return this;
         }
 
+        /**
+         * @param authenticationType Specifies the authentication type being used for connecting to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param createdTime Time when the Endpoint was added to DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param deadLetterSecret Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             $.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
+        /**
+         * @param deadLetterUri Dead letter storage URL for identity-based authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
             $.deadLetterUri = deadLetterUri;
             return this;
         }
 
+        /**
+         * @param endpointType The type of Digital Twins endpoint
+         * Expected value is &#39;EventGrid&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param topicEndpoint EventGrid Topic Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicEndpoint(String topicEndpoint) {
             $.topicEndpoint = topicEndpoint;
             return this;

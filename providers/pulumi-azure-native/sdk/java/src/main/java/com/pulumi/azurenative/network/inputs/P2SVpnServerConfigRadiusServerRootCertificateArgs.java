@@ -26,6 +26,10 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends com
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -37,6 +41,10 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends com
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends com
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends com
     @Import(name="publicCertData", required=true)
     private Output<String> publicCertData;
 
+    /**
+     * @return The certificate public data.
+     * 
+     */
     public Output<String> publicCertData() {
         return this.publicCertData;
     }
@@ -90,38 +106,86 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends com
             $ = new P2SVpnServerConfigRadiusServerRootCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param publicCertData The certificate public data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertData(Output<String> publicCertData) {
             $.publicCertData = publicCertData;
             return this;
         }
 
+        /**
+         * @param publicCertData The certificate public data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertData(String publicCertData) {
             return publicCertData(Output.of(publicCertData));
         }

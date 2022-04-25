@@ -31,6 +31,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="caching")
     private @Nullable String caching;
 
+    /**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -42,6 +46,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="createOption", required=true)
     private String createOption;
 
+    /**
+     * @return Specifies how the virtual machines in the scale set should be created.&lt;br&gt;&lt;br&gt; The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     * 
+     */
     public String createOption() {
         return this.createOption;
     }
@@ -53,6 +61,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="diffDiskSettings")
     private @Nullable DiffDiskSettingsResponse diffDiskSettings;
 
+    /**
+     * @return Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
+     * 
+     */
     public Optional<DiffDiskSettingsResponse> diffDiskSettings() {
         return Optional.ofNullable(this.diffDiskSettings);
     }
@@ -64,6 +76,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -75,6 +91,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="image")
     private @Nullable VirtualHardDiskResponse image;
 
+    /**
+     * @return Specifies information about the unmanaged user image to base the scale set on.
+     * 
+     */
     public Optional<VirtualHardDiskResponse> image() {
         return Optional.ofNullable(this.image);
     }
@@ -86,6 +106,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="managedDisk")
     private @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
 
+    /**
+     * @return The managed disk parameters.
+     * 
+     */
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
@@ -97,6 +121,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -108,6 +136,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -119,6 +151,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="vhdContainers")
     private @Nullable List<String> vhdContainers;
 
+    /**
+     * @return Specifies the container urls that are used to store operating system disks for the scale set.
+     * 
+     */
     public Optional<List<String>> vhdContainers() {
         return Optional.ofNullable(this.vhdContainers);
     }
@@ -130,6 +166,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="writeAcceleratorEnabled")
     private @Nullable Boolean writeAcceleratorEnabled;
 
+    /**
+     * @return Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * 
+     */
     public Optional<Boolean> writeAcceleratorEnabled() {
         return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
@@ -167,55 +207,121 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
             $ = new VirtualMachineScaleSetOSDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caching Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(@Nullable String caching) {
             $.caching = caching;
             return this;
         }
 
+        /**
+         * @param createOption Specifies how the virtual machines in the scale set should be created.&lt;br&gt;&lt;br&gt; The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(String createOption) {
             $.createOption = createOption;
             return this;
         }
 
+        /**
+         * @param diffDiskSettings Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
             $.diffDiskSettings = diffDiskSettings;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param image Specifies information about the unmanaged user image to base the scale set on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable VirtualHardDiskResponse image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param managedDisk The managed disk parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
             $.managedDisk = managedDisk;
             return this;
         }
 
+        /**
+         * @param name The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param osType This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param vhdContainers Specifies the container urls that are used to store operating system disks for the scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdContainers(@Nullable List<String> vhdContainers) {
             $.vhdContainers = vhdContainers;
             return this;
         }
 
+        /**
+         * @param vhdContainers Specifies the container urls that are used to store operating system disks for the scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdContainers(String... vhdContainers) {
             return vhdContainers(List.of(vhdContainers));
         }
 
+        /**
+         * @param writeAcceleratorEnabled Specifies whether writeAccelerator should be enabled or disabled on the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;

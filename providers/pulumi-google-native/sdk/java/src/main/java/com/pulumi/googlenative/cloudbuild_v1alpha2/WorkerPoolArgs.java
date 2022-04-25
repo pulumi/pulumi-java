@@ -24,6 +24,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
     private @Nullable Output<NetworkConfigArgs> networkConfig;
 
+    /**
+     * @return Network configuration for the `WorkerPool`.
+     * 
+     */
     public Optional<Output<NetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -42,6 +46,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region", required=true)
     private Output<String> region;
 
+    /**
+     * @return Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
@@ -53,6 +61,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
     private @Nullable Output<WorkerConfigArgs> workerConfig;
 
+    /**
+     * @return Worker configuration for the `WorkerPool`.
+     * 
+     */
     public Optional<Output<WorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -92,11 +104,23 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkConfig Network configuration for the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig Network configuration for the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
@@ -110,20 +134,44 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Immutable. The region where the `WorkerPool` runs. Only &#34;us-central1&#34; is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param workerConfig Worker configuration for the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Worker configuration for the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(WorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }

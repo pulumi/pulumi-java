@@ -28,6 +28,10 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudAudit")
     private @Nullable Output<CloudAuditOptionsArgs> cloudAudit;
 
+    /**
+     * @return Cloud audit options.
+     * 
+     */
     public Optional<Output<CloudAuditOptionsArgs>> cloudAudit() {
         return Optional.ofNullable(this.cloudAudit);
     }
@@ -39,6 +43,10 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="counter")
     private @Nullable Output<CounterOptionsArgs> counter;
 
+    /**
+     * @return Counter options.
+     * 
+     */
     public Optional<Output<CounterOptionsArgs>> counter() {
         return Optional.ofNullable(this.counter);
     }
@@ -50,6 +58,10 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataAccess")
     private @Nullable Output<DataAccessOptionsArgs> dataAccess;
 
+    /**
+     * @return Data access options.
+     * 
+     */
     public Optional<Output<DataAccessOptionsArgs>> dataAccess() {
         return Optional.ofNullable(this.dataAccess);
     }
@@ -80,29 +92,65 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudAudit Cloud audit options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudAudit(@Nullable Output<CloudAuditOptionsArgs> cloudAudit) {
             $.cloudAudit = cloudAudit;
             return this;
         }
 
+        /**
+         * @param cloudAudit Cloud audit options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudAudit(CloudAuditOptionsArgs cloudAudit) {
             return cloudAudit(Output.of(cloudAudit));
         }
 
+        /**
+         * @param counter Counter options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counter(@Nullable Output<CounterOptionsArgs> counter) {
             $.counter = counter;
             return this;
         }
 
+        /**
+         * @param counter Counter options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counter(CounterOptionsArgs counter) {
             return counter(Output.of(counter));
         }
 
+        /**
+         * @param dataAccess Data access options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccess(@Nullable Output<DataAccessOptionsArgs> dataAccess) {
             $.dataAccess = dataAccess;
             return this;
         }
 
+        /**
+         * @param dataAccess Data access options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccess(DataAccessOptionsArgs dataAccess) {
             return dataAccess(Output.of(dataAccess));
         }

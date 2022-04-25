@@ -26,6 +26,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostedGateway")
     private @Nullable Output<SubResourceArgs> hostedGateway;
 
+    /**
+     * @return The Gateway on which VirtualRouter is hosted.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> hostedGateway() {
         return Optional.ofNullable(this.hostedGateway);
     }
@@ -37,6 +41,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostedSubnet")
     private @Nullable Output<SubResourceArgs> hostedSubnet;
 
+    /**
+     * @return The Subnet on which VirtualRouter is hosted.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> hostedSubnet() {
         return Optional.ofNullable(this.hostedSubnet);
     }
@@ -48,6 +56,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -59,6 +71,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -70,6 +86,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualRouterAsn")
     private @Nullable Output<Double> virtualRouterAsn;
 
+    /**
+     * @return VirtualRouter ASN.
+     * 
+     */
     public Optional<Output<Double>> virtualRouterAsn() {
         return Optional.ofNullable(this.virtualRouterAsn);
     }
@@ -103,6 +131,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualRouterIps")
     private @Nullable Output<List<String>> virtualRouterIps;
 
+    /**
+     * @return VirtualRouter IPs.
+     * 
+     */
     public Optional<Output<List<String>>> virtualRouterIps() {
         return Optional.ofNullable(this.virtualRouterIps);
     }
@@ -114,6 +146,10 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualRouterName")
     private @Nullable Output<String> virtualRouterName;
 
+    /**
+     * @return The name of the Virtual Router.
+     * 
+     */
     public Optional<Output<String>> virtualRouterName() {
         return Optional.ofNullable(this.virtualRouterName);
     }
@@ -150,87 +186,201 @@ public final class VirtualRouterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VirtualRouterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostedGateway The Gateway on which VirtualRouter is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedGateway(@Nullable Output<SubResourceArgs> hostedGateway) {
             $.hostedGateway = hostedGateway;
             return this;
         }
 
+        /**
+         * @param hostedGateway The Gateway on which VirtualRouter is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedGateway(SubResourceArgs hostedGateway) {
             return hostedGateway(Output.of(hostedGateway));
         }
 
+        /**
+         * @param hostedSubnet The Subnet on which VirtualRouter is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedSubnet(@Nullable Output<SubResourceArgs> hostedSubnet) {
             $.hostedSubnet = hostedSubnet;
             return this;
         }
 
+        /**
+         * @param hostedSubnet The Subnet on which VirtualRouter is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedSubnet(SubResourceArgs hostedSubnet) {
             return hostedSubnet(Output.of(hostedSubnet));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualRouterAsn VirtualRouter ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterAsn(@Nullable Output<Double> virtualRouterAsn) {
             $.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
 
+        /**
+         * @param virtualRouterAsn VirtualRouter ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterAsn(Double virtualRouterAsn) {
             return virtualRouterAsn(Output.of(virtualRouterAsn));
         }
 
+        /**
+         * @param virtualRouterIps VirtualRouter IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterIps(@Nullable Output<List<String>> virtualRouterIps) {
             $.virtualRouterIps = virtualRouterIps;
             return this;
         }
 
+        /**
+         * @param virtualRouterIps VirtualRouter IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterIps(List<String> virtualRouterIps) {
             return virtualRouterIps(Output.of(virtualRouterIps));
         }
 
+        /**
+         * @param virtualRouterIps VirtualRouter IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterIps(String... virtualRouterIps) {
             return virtualRouterIps(List.of(virtualRouterIps));
         }
 
+        /**
+         * @param virtualRouterName The name of the Virtual Router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterName(@Nullable Output<String> virtualRouterName) {
             $.virtualRouterName = virtualRouterName;
             return this;
         }
 
+        /**
+         * @param virtualRouterName The name of the Virtual Router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterName(String virtualRouterName) {
             return virtualRouterName(Output.of(virtualRouterName));
         }

@@ -26,6 +26,10 @@ public final class AccessPolicyIamRoleArgs extends com.pulumi.resources.Resource
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the IAM role.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -54,11 +58,23 @@ public final class AccessPolicyIamRoleArgs extends com.pulumi.resources.Resource
             $ = new AccessPolicyIamRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the IAM role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }

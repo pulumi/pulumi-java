@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GalleryImageVersionPublishingProfileResponse {
     /**
-     * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
+     * @return The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
     private final @Nullable String endOfLifeDate;
     /**
-     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
+     * @return If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
      * 
      */
     private final @Nullable Boolean excludeFromLatest;
     /**
-     * The timestamp for when the gallery image version is published.
+     * @return The timestamp for when the gallery image version is published.
      * 
      */
     private final String publishedDate;
     /**
-     * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
+     * @return The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
      * 
      */
     private final @Nullable Integer replicaCount;
     /**
-     * Specifies the storage account type to be used to store the image. This property is not updatable.
+     * @return Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
      */
     private final @Nullable String storageAccountType;
     /**
-     * The target regions where the Image Version is going to be replicated to. This property is updatable.
+     * @return The target regions where the Image Version is going to be replicated to. This property is updatable.
      * 
      */
     private final @Nullable List<TargetRegionResponse> targetRegions;
@@ -63,44 +63,44 @@ public final class GalleryImageVersionPublishingProfileResponse {
     }
 
     /**
-     * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
+     * @return The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
      * 
-    */
+     */
     public Optional<String> endOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
-     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
+     * @return If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
      * 
-    */
+     */
     public Optional<Boolean> excludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
     /**
-     * The timestamp for when the gallery image version is published.
+     * @return The timestamp for when the gallery image version is published.
      * 
-    */
+     */
     public String publishedDate() {
         return this.publishedDate;
     }
     /**
-     * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
+     * @return The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
      * 
-    */
+     */
     public Optional<Integer> replicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
     /**
-     * Specifies the storage account type to be used to store the image. This property is not updatable.
+     * @return Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
-    */
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
-     * The target regions where the Image Version is going to be replicated to. This property is updatable.
+     * @return The target regions where the Image Version is going to be replicated to. This property is updatable.
      * 
-    */
+     */
     public List<TargetRegionResponse> targetRegions() {
         return this.targetRegions == null ? List.of() : this.targetRegions;
     }

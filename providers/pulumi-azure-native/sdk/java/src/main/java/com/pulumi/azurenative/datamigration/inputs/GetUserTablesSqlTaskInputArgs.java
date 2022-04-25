@@ -26,6 +26,10 @@ public final class GetUserTablesSqlTaskInputArgs extends com.pulumi.resources.Re
     @Import(name="connectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> connectionInfo;
 
+    /**
+     * @return Connection information for SQL Server
+     * 
+     */
     public Output<SqlConnectionInfoArgs> connectionInfo() {
         return this.connectionInfo;
     }
@@ -37,6 +41,10 @@ public final class GetUserTablesSqlTaskInputArgs extends com.pulumi.resources.Re
     @Import(name="selectedDatabases", required=true)
     private Output<List<String>> selectedDatabases;
 
+    /**
+     * @return List of database names to collect tables for
+     * 
+     */
     public Output<List<String>> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -66,24 +74,54 @@ public final class GetUserTablesSqlTaskInputArgs extends com.pulumi.resources.Re
             $ = new GetUserTablesSqlTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionInfo Connection information for SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(Output<SqlConnectionInfoArgs> connectionInfo) {
             $.connectionInfo = connectionInfo;
             return this;
         }
 
+        /**
+         * @param connectionInfo Connection information for SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
             return connectionInfo(Output.of(connectionInfo));
         }
 
+        /**
+         * @param selectedDatabases List of database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(Output<List<String>> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases List of database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<String> selectedDatabases) {
             return selectedDatabases(Output.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedDatabases List of database names to collect tables for
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(String... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }

@@ -26,6 +26,10 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
     @Import(name="enableDataIntegrityValidation")
     private @Nullable Output<Boolean> enableDataIntegrityValidation;
 
+    /**
+     * @return Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
+     * 
+     */
     public Optional<Output<Boolean>> enableDataIntegrityValidation() {
         return Optional.ofNullable(this.enableDataIntegrityValidation);
     }
@@ -37,6 +41,10 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
     @Import(name="enableQueryAnalysisValidation")
     private @Nullable Output<Boolean> enableQueryAnalysisValidation;
 
+    /**
+     * @return Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
+     * 
+     */
     public Optional<Output<Boolean>> enableQueryAnalysisValidation() {
         return Optional.ofNullable(this.enableQueryAnalysisValidation);
     }
@@ -48,6 +56,10 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
     @Import(name="enableSchemaValidation")
     private @Nullable Output<Boolean> enableSchemaValidation;
 
+    /**
+     * @return Allows to compare the schema information between source and target.
+     * 
+     */
     public Optional<Output<Boolean>> enableSchemaValidation() {
         return Optional.ofNullable(this.enableSchemaValidation);
     }
@@ -78,29 +90,65 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
             $ = new MigrationValidationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableDataIntegrityValidation Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDataIntegrityValidation(@Nullable Output<Boolean> enableDataIntegrityValidation) {
             $.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
 
+        /**
+         * @param enableDataIntegrityValidation Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDataIntegrityValidation(Boolean enableDataIntegrityValidation) {
             return enableDataIntegrityValidation(Output.of(enableDataIntegrityValidation));
         }
 
+        /**
+         * @param enableQueryAnalysisValidation Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableQueryAnalysisValidation(@Nullable Output<Boolean> enableQueryAnalysisValidation) {
             $.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
 
+        /**
+         * @param enableQueryAnalysisValidation Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableQueryAnalysisValidation(Boolean enableQueryAnalysisValidation) {
             return enableQueryAnalysisValidation(Output.of(enableQueryAnalysisValidation));
         }
 
+        /**
+         * @param enableSchemaValidation Allows to compare the schema information between source and target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSchemaValidation(@Nullable Output<Boolean> enableSchemaValidation) {
             $.enableSchemaValidation = enableSchemaValidation;
             return this;
         }
 
+        /**
+         * @param enableSchemaValidation Allows to compare the schema information between source and target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSchemaValidation(Boolean enableSchemaValidation) {
             return enableSchemaValidation(Output.of(enableSchemaValidation));
         }

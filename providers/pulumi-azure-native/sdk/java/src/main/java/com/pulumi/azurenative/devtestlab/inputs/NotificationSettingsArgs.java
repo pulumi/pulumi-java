@@ -30,6 +30,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="emailRecipient")
     private @Nullable Output<String> emailRecipient;
 
+    /**
+     * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     * 
+     */
     public Optional<Output<String>> emailRecipient() {
         return Optional.ofNullable(this.emailRecipient);
     }
@@ -41,6 +45,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="notificationLocale")
     private @Nullable Output<String> notificationLocale;
 
+    /**
+     * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
+     * 
+     */
     public Optional<Output<String>> notificationLocale() {
         return Optional.ofNullable(this.notificationLocale);
     }
@@ -52,6 +60,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="status")
     private @Nullable Output<Either<String,EnableStatus>> status;
 
+    /**
+     * @return If notifications are enabled for this schedule (i.e. Enabled, Disabled).
+     * 
+     */
     public Optional<Output<Either<String,EnableStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -63,6 +75,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="timeInMinutes")
     private @Nullable Output<Integer> timeInMinutes;
 
+    /**
+     * @return Time in minutes before event at which notification will be sent.
+     * 
+     */
     public Optional<Output<Integer>> timeInMinutes() {
         return Optional.ofNullable(this.timeInMinutes);
     }
@@ -74,6 +90,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="webhookUrl")
     private @Nullable Output<String> webhookUrl;
 
+    /**
+     * @return The webhook URL to which the notification will be sent.
+     * 
+     */
     public Optional<Output<String>> webhookUrl() {
         return Optional.ofNullable(this.webhookUrl);
     }
@@ -106,55 +126,127 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
             $ = new NotificationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailRecipient The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailRecipient(@Nullable Output<String> emailRecipient) {
             $.emailRecipient = emailRecipient;
             return this;
         }
 
+        /**
+         * @param emailRecipient The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailRecipient(String emailRecipient) {
             return emailRecipient(Output.of(emailRecipient));
         }
 
+        /**
+         * @param notificationLocale The locale to use when sending a notification (fallback for unsupported languages is EN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
             $.notificationLocale = notificationLocale;
             return this;
         }
 
+        /**
+         * @param notificationLocale The locale to use when sending a notification (fallback for unsupported languages is EN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationLocale(String notificationLocale) {
             return notificationLocale(Output.of(notificationLocale));
         }
 
+        /**
+         * @param status If notifications are enabled for this schedule (i.e. Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,EnableStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status If notifications are enabled for this schedule (i.e. Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,EnableStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status If notifications are enabled for this schedule (i.e. Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status If notifications are enabled for this schedule (i.e. Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(EnableStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param timeInMinutes Time in minutes before event at which notification will be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInMinutes(@Nullable Output<Integer> timeInMinutes) {
             $.timeInMinutes = timeInMinutes;
             return this;
         }
 
+        /**
+         * @param timeInMinutes Time in minutes before event at which notification will be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInMinutes(Integer timeInMinutes) {
             return timeInMinutes(Output.of(timeInMinutes));
         }
 
+        /**
+         * @param webhookUrl The webhook URL to which the notification will be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookUrl(@Nullable Output<String> webhookUrl) {
             $.webhookUrl = webhookUrl;
             return this;
         }
 
+        /**
+         * @param webhookUrl The webhook URL to which the notification will be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookUrl(String webhookUrl) {
             return webhookUrl(Output.of(webhookUrl));
         }

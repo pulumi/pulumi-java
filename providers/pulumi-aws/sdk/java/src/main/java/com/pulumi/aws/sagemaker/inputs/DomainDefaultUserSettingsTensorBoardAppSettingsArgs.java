@@ -22,6 +22,10 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsArgs extends c
     @Import(name="defaultResourceSpec")
     private @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
+    /**
+     * @return The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+     * 
+     */
     public Optional<Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs>> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
@@ -50,11 +54,23 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsArgs extends c
             $ = new DomainDefaultUserSettingsTensorBoardAppSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResourceSpec(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
             $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
+        /**
+         * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResourceSpec(DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
             return defaultResourceSpec(Output.of(defaultResourceSpec));
         }

@@ -16,12 +16,12 @@ import javax.annotation.Nullable;
 public final class GetAnalyzerResult {
     private final @Nullable List<AnalyzerArchiveRule> archiveRules;
     /**
-     * Amazon Resource Name (ARN) of the analyzer
+     * @return Amazon Resource Name (ARN) of the analyzer
      * 
      */
     private final @Nullable String arn;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<AnalyzerTag> tags;
@@ -40,16 +40,16 @@ public final class GetAnalyzerResult {
         return this.archiveRules == null ? List.of() : this.archiveRules;
     }
     /**
-     * Amazon Resource Name (ARN) of the analyzer
+     * @return Amazon Resource Name (ARN) of the analyzer
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<AnalyzerTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

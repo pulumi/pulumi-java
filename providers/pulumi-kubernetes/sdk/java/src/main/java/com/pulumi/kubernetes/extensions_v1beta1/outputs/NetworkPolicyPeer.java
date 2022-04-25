@@ -13,19 +13,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkPolicyPeer {
     /**
-     * IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
+     * @return IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
      * 
      */
     private final @Nullable IPBlock ipBlock;
     /**
-     * Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
+     * @return Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
      * 
      * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
      * 
      */
     private final @Nullable LabelSelector namespaceSelector;
     /**
-     * This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
+     * @return This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
      * 
      * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy&#39;s own Namespace.
      * 
@@ -43,27 +43,27 @@ public final class NetworkPolicyPeer {
     }
 
     /**
-     * IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
+     * @return IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
      * 
-    */
+     */
     public Optional<IPBlock> ipBlock() {
         return Optional.ofNullable(this.ipBlock);
     }
     /**
-     * Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
+     * @return Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
      * 
      * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
      * 
-    */
+     */
     public Optional<LabelSelector> namespaceSelector() {
         return Optional.ofNullable(this.namespaceSelector);
     }
     /**
-     * This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
+     * @return This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
      * 
      * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy&#39;s own Namespace.
      * 
-    */
+     */
     public Optional<LabelSelector> podSelector() {
         return Optional.ofNullable(this.podSelector);
     }

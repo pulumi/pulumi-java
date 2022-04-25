@@ -19,6 +19,10 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
     @Import(name="reportName", required=true)
     private String reportName;
 
+    /**
+     * @return Report Name.
+     * 
+     */
     public String reportName() {
         return this.reportName;
     }
@@ -30,6 +34,10 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Azure Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetReportByResourceGroupNameArgs extends com.pulumi.resources
             $ = new GetReportByResourceGroupNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportName(String reportName) {
             $.reportName = reportName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -25,6 +25,10 @@ public final class SslCertificateManagedSslCertificateResponse extends com.pulum
     @Import(name="domainStatus", required=true)
     private Map<String,String> domainStatus;
 
+    /**
+     * @return [Output only] Detailed statuses of the domains specified for managed certificate resource.
+     * 
+     */
     public Map<String,String> domainStatus() {
         return this.domainStatus;
     }
@@ -36,6 +40,10 @@ public final class SslCertificateManagedSslCertificateResponse extends com.pulum
     @Import(name="domains", required=true)
     private List<String> domains;
 
+    /**
+     * @return The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
+     * 
+     */
     public List<String> domains() {
         return this.domains;
     }
@@ -47,6 +55,10 @@ public final class SslCertificateManagedSslCertificateResponse extends com.pulum
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return [Output only] Status of the managed certificate resource.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -77,20 +89,44 @@ public final class SslCertificateManagedSslCertificateResponse extends com.pulum
             $ = new SslCertificateManagedSslCertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainStatus [Output only] Detailed statuses of the domains specified for managed certificate resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainStatus(Map<String,String> domainStatus) {
             $.domainStatus = domainStatus;
             return this;
         }
 
+        /**
+         * @param domains The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(List<String> domains) {
             $.domains = domains;
             return this;
         }
 
+        /**
+         * @param domains The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }
 
+        /**
+         * @param status [Output only] Status of the managed certificate resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

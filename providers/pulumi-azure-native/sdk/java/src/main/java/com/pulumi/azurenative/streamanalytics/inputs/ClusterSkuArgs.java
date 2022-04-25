@@ -29,6 +29,10 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<Either<String,ClusterSkuName>> name;
 
+    /**
+     * @return Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
+     * 
+     */
     public Optional<Output<Either<String,ClusterSkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,28 +77,64 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,ClusterSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,ClusterSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(ClusterSkuName name) {
             return name(Either.ofRight(name));
         }

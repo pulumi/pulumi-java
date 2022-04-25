@@ -19,6 +19,10 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends com.pulumi.re
     @Import(name="assessmentMetadataName", required=true)
     private String assessmentMetadataName;
 
+    /**
+     * @return The Assessment Key - Unique key for the assessment type
+     * 
+     */
     public String assessmentMetadataName() {
         return this.assessmentMetadataName;
     }
@@ -47,6 +51,12 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends com.pulumi.re
             $ = new GetAssessmentMetadataInSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentMetadataName The Assessment Key - Unique key for the assessment type
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMetadataName(String assessmentMetadataName) {
             $.assessmentMetadataName = assessmentMetadataName;
             return this;

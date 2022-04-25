@@ -25,6 +25,10 @@ public final class ServiceInstanceConfiguration extends com.pulumi.resources.Inv
     @Import(name="cpu")
     private @Nullable String cpu;
 
+    /**
+     * @return CPU
+     * 
+     */
     public Optional<String> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -36,6 +40,10 @@ public final class ServiceInstanceConfiguration extends com.pulumi.resources.Inv
     @Import(name="instanceRoleArn")
     private @Nullable String instanceRoleArn;
 
+    /**
+     * @return Instance Role Arn
+     * 
+     */
     public Optional<String> instanceRoleArn() {
         return Optional.ofNullable(this.instanceRoleArn);
     }
@@ -47,6 +55,10 @@ public final class ServiceInstanceConfiguration extends com.pulumi.resources.Inv
     @Import(name="memory")
     private @Nullable String memory;
 
+    /**
+     * @return Memory
+     * 
+     */
     public Optional<String> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -77,16 +89,34 @@ public final class ServiceInstanceConfiguration extends com.pulumi.resources.Inv
             $ = new ServiceInstanceConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu CPU
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable String cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param instanceRoleArn Instance Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             $.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
+        /**
+         * @param memory Memory
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable String memory) {
             $.memory = memory;
             return this;

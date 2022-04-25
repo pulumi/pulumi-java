@@ -36,6 +36,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="advancedMachineFeatures")
     private @Nullable Output<InstanceTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures;
 
+    /**
+     * @return Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
+     * 
+     */
     public Optional<Output<InstanceTemplateAdvancedMachineFeaturesGetArgs>> advancedMachineFeatures() {
         return Optional.ofNullable(this.advancedMachineFeatures);
     }
@@ -48,6 +52,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="canIpForward")
     private @Nullable Output<Boolean> canIpForward;
 
+    /**
+     * @return Whether to allow sending and receiving of
+     * packets with non-matching source or destination IPs. This defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> canIpForward() {
         return Optional.ofNullable(this.canIpForward);
     }
@@ -59,6 +68,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="confidentialInstanceConfig")
     private @Nullable Output<InstanceTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig;
 
+    /**
+     * @return Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+     * 
+     */
     public Optional<Output<InstanceTemplateConfidentialInstanceConfigGetArgs>> confidentialInstanceConfig() {
         return Optional.ofNullable(this.confidentialInstanceConfig);
     }
@@ -70,6 +83,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A brief description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -83,6 +100,12 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="disks")
     private @Nullable Output<List<InstanceTemplateDiskGetArgs>> disks;
 
+    /**
+     * @return Disks to attach to instances created from this template.
+     * This can be specified multiple times for multiple disks. Structure is
+     * documented below.
+     * 
+     */
     public Optional<Output<List<InstanceTemplateDiskGetArgs>>> disks() {
         return Optional.ofNullable(this.disks);
     }
@@ -95,6 +118,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="enableDisplay")
     private @Nullable Output<Boolean> enableDisplay;
 
+    /**
+     * @return ) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+     * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+     * 
+     */
     public Optional<Output<Boolean>> enableDisplay() {
         return Optional.ofNullable(this.enableDisplay);
     }
@@ -106,6 +134,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="guestAccelerators")
     private @Nullable Output<List<InstanceTemplateGuestAcceleratorGetArgs>> guestAccelerators;
 
+    /**
+     * @return List of the type and count of accelerator cards attached to the instance. Structure documented below.
+     * 
+     */
     public Optional<Output<List<InstanceTemplateGuestAcceleratorGetArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
@@ -118,6 +150,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="instanceDescription")
     private @Nullable Output<String> instanceDescription;
 
+    /**
+     * @return A brief description to use for instances
+     * created from this template.
+     * 
+     */
     public Optional<Output<String>> instanceDescription() {
         return Optional.ofNullable(this.instanceDescription);
     }
@@ -130,6 +167,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of ket/value label pairs to assign to disk created from
+     * this template
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -141,6 +183,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return The machine type to create.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -153,6 +199,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="metadata")
     private @Nullable Output<Map<String,Object>> metadata;
 
+    /**
+     * @return Metadata key/value pairs to make available from
+     * within instances created from this template.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -164,6 +215,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="metadataFingerprint")
     private @Nullable Output<String> metadataFingerprint;
 
+    /**
+     * @return The unique fingerprint of the metadata.
+     * 
+     */
     public Optional<Output<String>> metadataFingerprint() {
         return Optional.ofNullable(this.metadataFingerprint);
     }
@@ -178,6 +233,13 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="metadataStartupScript")
     private @Nullable Output<String> metadataStartupScript;
 
+    /**
+     * @return An alternative to using the
+     * startup-script metadata key, mostly to match the compute_instance resource.
+     * This replaces the startup-script metadata key on the created instance and
+     * thus the two mechanisms are not allowed to be used simultaneously.
+     * 
+     */
     public Optional<Output<String>> metadataStartupScript() {
         return Optional.ofNullable(this.metadataStartupScript);
     }
@@ -190,6 +252,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+     * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -202,6 +269,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the instance template. If you leave
+     * this blank, the provider will auto-generate a unique name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -214,6 +286,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified
+     * prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -227,6 +304,12 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="networkInterfaces")
     private @Nullable Output<List<InstanceTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
+    /**
+     * @return Networks to attach to instances created from
+     * this template. This can be specified multiple times for multiple networks.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<InstanceTemplateNetworkInterfaceGetArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -243,6 +326,15 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="networkPerformanceConfig")
     private @Nullable Output<InstanceTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig;
 
+    /**
+     * @return Configures network performance settings for the instance created from the
+     * template. Structure is documented below. **Note**: `machine_type`
+     * must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+     * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+     * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+     * in order for this setting to take effect.
+     * 
+     */
     public Optional<Output<InstanceTemplateNetworkPerformanceConfigGetArgs>> networkPerformanceConfig() {
         return Optional.ofNullable(this.networkPerformanceConfig);
     }
@@ -255,6 +347,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -271,6 +368,15 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return An instance template is a global resource that is not
+     * bound to a zone or a region. However, you can still specify some regional
+     * resources in an instance template, which restricts the template to the
+     * region where that resource resides. For example, a custom `subnetwork`
+     * resource is tied to a specific region. Defaults to the region of the
+     * Provider if no value is given.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -283,6 +389,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="reservationAffinity")
     private @Nullable Output<InstanceTemplateReservationAffinityGetArgs> reservationAffinity;
 
+    /**
+     * @return Specifies the reservations that this instance can consume from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<InstanceTemplateReservationAffinityGetArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
@@ -295,6 +406,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="scheduling")
     private @Nullable Output<InstanceTemplateSchedulingGetArgs> scheduling;
 
+    /**
+     * @return The scheduling strategy to use. More details about
+     * this configuration option are detailed below.
+     * 
+     */
     public Optional<Output<InstanceTemplateSchedulingGetArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
@@ -306,6 +422,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -317,6 +437,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="serviceAccount")
     private @Nullable Output<InstanceTemplateServiceAccountGetArgs> serviceAccount;
 
+    /**
+     * @return Service account to attach to the instance. Structure is documented below.
+     * 
+     */
     public Optional<Output<InstanceTemplateServiceAccountGetArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -329,6 +453,11 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="shieldedInstanceConfig")
     private @Nullable Output<InstanceTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
+    /**
+     * @return Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+     * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+     * 
+     */
     public Optional<Output<InstanceTemplateShieldedInstanceConfigGetArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -340,6 +469,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Tags to attach to the instance.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -351,6 +484,10 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
     @Import(name="tagsFingerprint")
     private @Nullable Output<String> tagsFingerprint;
 
+    /**
+     * @return The unique fingerprint of the tags.
+     * 
+     */
     public Optional<Output<String>> tagsFingerprint() {
         return Optional.ofNullable(this.tagsFingerprint);
     }
@@ -405,261 +542,671 @@ public final class InstanceTemplateState extends com.pulumi.resources.ResourceAr
             $ = new InstanceTemplateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedMachineFeatures Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(@Nullable Output<InstanceTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
+        /**
+         * @param advancedMachineFeatures Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(InstanceTemplateAdvancedMachineFeaturesGetArgs advancedMachineFeatures) {
             return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
 
+        /**
+         * @param canIpForward Whether to allow sending and receiving of
+         * packets with non-matching source or destination IPs. This defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param canIpForward Whether to allow sending and receiving of
+         * packets with non-matching source or destination IPs. This defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             return canIpForward(Output.of(canIpForward));
         }
 
+        /**
+         * @param confidentialInstanceConfig Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(@Nullable Output<InstanceTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig) {
             $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
+        /**
+         * @param confidentialInstanceConfig Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(InstanceTemplateConfidentialInstanceConfigGetArgs confidentialInstanceConfig) {
             return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
 
+        /**
+         * @param description A brief description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A brief description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disks Disks to attach to instances created from this template.
+         * This can be specified multiple times for multiple disks. Structure is
+         * documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(@Nullable Output<List<InstanceTemplateDiskGetArgs>> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks Disks to attach to instances created from this template.
+         * This can be specified multiple times for multiple disks. Structure is
+         * documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<InstanceTemplateDiskGetArgs> disks) {
             return disks(Output.of(disks));
         }
 
+        /**
+         * @param disks Disks to attach to instances created from this template.
+         * This can be specified multiple times for multiple disks. Structure is
+         * documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(InstanceTemplateDiskGetArgs... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param enableDisplay ) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+         * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
             $.enableDisplay = enableDisplay;
             return this;
         }
 
+        /**
+         * @param enableDisplay ) Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+         * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(Boolean enableDisplay) {
             return enableDisplay(Output.of(enableDisplay));
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(@Nullable Output<List<InstanceTemplateGuestAcceleratorGetArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<InstanceTemplateGuestAcceleratorGetArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(InstanceTemplateGuestAcceleratorGetArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param instanceDescription A brief description to use for instances
+         * created from this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDescription(@Nullable Output<String> instanceDescription) {
             $.instanceDescription = instanceDescription;
             return this;
         }
 
+        /**
+         * @param instanceDescription A brief description to use for instances
+         * created from this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDescription(String instanceDescription) {
             return instanceDescription(Output.of(instanceDescription));
         }
 
+        /**
+         * @param labels A set of ket/value label pairs to assign to disk created from
+         * this template
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of ket/value label pairs to assign to disk created from
+         * this template
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param machineType The machine type to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType The machine type to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param metadata Metadata key/value pairs to make available from
+         * within instances created from this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata key/value pairs to make available from
+         * within instances created from this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,Object> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param metadataFingerprint The unique fingerprint of the metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFingerprint(@Nullable Output<String> metadataFingerprint) {
             $.metadataFingerprint = metadataFingerprint;
             return this;
         }
 
+        /**
+         * @param metadataFingerprint The unique fingerprint of the metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFingerprint(String metadataFingerprint) {
             return metadataFingerprint(Output.of(metadataFingerprint));
         }
 
+        /**
+         * @param metadataStartupScript An alternative to using the
+         * startup-script metadata key, mostly to match the compute_instance resource.
+         * This replaces the startup-script metadata key on the created instance and
+         * thus the two mechanisms are not allowed to be used simultaneously.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataStartupScript(@Nullable Output<String> metadataStartupScript) {
             $.metadataStartupScript = metadataStartupScript;
             return this;
         }
 
+        /**
+         * @param metadataStartupScript An alternative to using the
+         * startup-script metadata key, mostly to match the compute_instance resource.
+         * This replaces the startup-script metadata key on the created instance and
+         * thus the two mechanisms are not allowed to be used simultaneously.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataStartupScript(String metadataStartupScript) {
             return metadataStartupScript(Output.of(metadataStartupScript));
         }
 
+        /**
+         * @param minCpuPlatform Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+         * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
+         * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }
 
+        /**
+         * @param name The name of the instance template. If you leave
+         * this blank, the provider will auto-generate a unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the instance template. If you leave
+         * this blank, the provider will auto-generate a unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified
+         * prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified
+         * prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param networkInterfaces Networks to attach to instances created from
+         * this template. This can be specified multiple times for multiple networks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<InstanceTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Networks to attach to instances created from
+         * this template. This can be specified multiple times for multiple networks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<InstanceTemplateNetworkInterfaceGetArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces Networks to attach to instances created from
+         * this template. This can be specified multiple times for multiple networks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(InstanceTemplateNetworkInterfaceGetArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param networkPerformanceConfig Configures network performance settings for the instance created from the
+         * template. Structure is documented below. **Note**: `machine_type`
+         * must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+         * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+         * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+         * in order for this setting to take effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(@Nullable Output<InstanceTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig) {
             $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
+        /**
+         * @param networkPerformanceConfig Configures network performance settings for the instance created from the
+         * template. Structure is documented below. **Note**: `machine_type`
+         * must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+         * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+         * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+         * in order for this setting to take effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(InstanceTemplateNetworkPerformanceConfigGetArgs networkPerformanceConfig) {
             return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region An instance template is a global resource that is not
+         * bound to a zone or a region. However, you can still specify some regional
+         * resources in an instance template, which restricts the template to the
+         * region where that resource resides. For example, a custom `subnetwork`
+         * resource is tied to a specific region. Defaults to the region of the
+         * Provider if no value is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region An instance template is a global resource that is not
+         * bound to a zone or a region. However, you can still specify some regional
+         * resources in an instance template, which restricts the template to the
+         * region where that resource resides. For example, a custom `subnetwork`
+         * resource is tied to a specific region. Defaults to the region of the
+         * Provider if no value is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that this instance can consume from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(@Nullable Output<InstanceTemplateReservationAffinityGetArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that this instance can consume from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(InstanceTemplateReservationAffinityGetArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
+        /**
+         * @param scheduling The scheduling strategy to use. More details about
+         * this configuration option are detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(@Nullable Output<InstanceTemplateSchedulingGetArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param scheduling The scheduling strategy to use. More details about
+         * this configuration option are detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(InstanceTemplateSchedulingGetArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param serviceAccount Service account to attach to the instance. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<InstanceTemplateServiceAccountGetArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Service account to attach to the instance. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(InstanceTemplateServiceAccountGetArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param shieldedInstanceConfig Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+         * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(@Nullable Output<InstanceTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+         * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(InstanceTemplateShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 
+        /**
+         * @param tags Tags to attach to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to attach to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags to attach to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param tagsFingerprint The unique fingerprint of the tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsFingerprint(@Nullable Output<String> tagsFingerprint) {
             $.tagsFingerprint = tagsFingerprint;
             return this;
         }
 
+        /**
+         * @param tagsFingerprint The unique fingerprint of the tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsFingerprint(String tagsFingerprint) {
             return tagsFingerprint(Output.of(tagsFingerprint));
         }

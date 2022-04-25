@@ -23,6 +23,10 @@ public final class MeshIstioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="meshUid", required=true)
     private String meshUid;
 
+    /**
+     * @return Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
+     * 
+     */
     public String meshUid() {
         return this.meshUid;
     }
@@ -34,6 +38,10 @@ public final class MeshIstioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -45,6 +53,10 @@ public final class MeshIstioResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceNamespace", required=true)
     private String serviceNamespace;
 
+    /**
+     * @return The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * 
+     */
     public String serviceNamespace() {
         return this.serviceNamespace;
     }
@@ -75,16 +87,34 @@ public final class MeshIstioResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MeshIstioResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param meshUid Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshUid(String meshUid) {
             $.meshUid = meshUid;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceNamespace The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(String serviceNamespace) {
             $.serviceNamespace = serviceNamespace;
             return this;

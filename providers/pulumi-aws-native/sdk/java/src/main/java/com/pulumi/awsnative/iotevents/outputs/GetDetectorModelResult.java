@@ -17,22 +17,22 @@ import javax.annotation.Nullable;
 public final class GetDetectorModelResult {
     private final @Nullable DetectorModelDefinition detectorModelDefinition;
     /**
-     * A brief description of the detector model.
+     * @return A brief description of the detector model.
      * 
      */
     private final @Nullable String detectorModelDescription;
     /**
-     * Information about the order in which events are evaluated and how actions are executed.
+     * @return Information about the order in which events are evaluated and how actions are executed.
      * 
      */
     private final @Nullable DetectorModelEvaluationMethod evaluationMethod;
     /**
-     * The ARN of the role that grants permission to AWS IoT Events to perform its operations.
+     * @return The ARN of the role that grants permission to AWS IoT Events to perform its operations.
      * 
      */
     private final @Nullable String roleArn;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
@@ -57,32 +57,32 @@ public final class GetDetectorModelResult {
         return Optional.ofNullable(this.detectorModelDefinition);
     }
     /**
-     * A brief description of the detector model.
+     * @return A brief description of the detector model.
      * 
-    */
+     */
     public Optional<String> detectorModelDescription() {
         return Optional.ofNullable(this.detectorModelDescription);
     }
     /**
-     * Information about the order in which events are evaluated and how actions are executed.
+     * @return Information about the order in which events are evaluated and how actions are executed.
      * 
-    */
+     */
     public Optional<DetectorModelEvaluationMethod> evaluationMethod() {
         return Optional.ofNullable(this.evaluationMethod);
     }
     /**
-     * The ARN of the role that grants permission to AWS IoT Events to perform its operations.
+     * @return The ARN of the role that grants permission to AWS IoT Events to perform its operations.
      * 
-    */
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
-    */
+     */
     public List<DetectorModelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -22,6 +22,10 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends com.pulumi.r
     @Import(name="redirectSiteKey")
     private @Nullable Output<String> redirectSiteKey;
 
+    /**
+     * @return An optional field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.
+     * 
+     */
     public Optional<Output<String>> redirectSiteKey() {
         return Optional.ofNullable(this.redirectSiteKey);
     }
@@ -50,11 +54,23 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends com.pulumi.r
             $ = new SecurityPolicyRecaptchaOptionsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param redirectSiteKey An optional field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectSiteKey(@Nullable Output<String> redirectSiteKey) {
             $.redirectSiteKey = redirectSiteKey;
             return this;
         }
 
+        /**
+         * @param redirectSiteKey An optional field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectSiteKey(String redirectSiteKey) {
             return redirectSiteKey(Output.of(redirectSiteKey));
         }

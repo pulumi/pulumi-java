@@ -31,6 +31,11 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="computeType", required=true)
     private String computeType;
 
+    /**
+     * @return The compute environment type for the service.
+     * Expected value is &#39;Custom&#39;.
+     * 
+     */
     public String computeType() {
         return this.computeType;
     }
@@ -42,6 +47,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="deploymentType")
     private @Nullable String deploymentType;
 
+    /**
+     * @return The deployment type for the service.
+     * 
+     */
     public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
@@ -53,6 +62,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +77,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="error", required=true)
     private ServiceResponseBaseResponseError error;
 
+    /**
+     * @return The error details.
+     * 
+     */
     public ServiceResponseBaseResponseError error() {
         return this.error;
     }
@@ -75,6 +92,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="isDefault")
     private @Nullable Boolean isDefault;
 
+    /**
+     * @return Is this the default variant.
+     * 
+     */
     public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
@@ -86,6 +107,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="kvTags")
     private @Nullable Map<String,String> kvTags;
 
+    /**
+     * @return The service tag dictionary. Tags are mutable.
+     * 
+     */
     public Optional<Map<String,String>> kvTags() {
         return Optional.ofNullable(this.kvTags);
     }
@@ -97,6 +122,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The service property dictionary. Properties are immutable.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -108,6 +137,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the service.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -119,6 +152,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="trafficPercentile")
     private @Nullable Double trafficPercentile;
 
+    /**
+     * @return The amount of traffic variant receives.
+     * 
+     */
     public Optional<Double> trafficPercentile() {
         return Optional.ofNullable(this.trafficPercentile);
     }
@@ -130,6 +167,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the variant.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -167,51 +208,112 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
             $ = new AKSVariantResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * Expected value is &#39;Custom&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param deploymentType The deployment type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentType(@Nullable String deploymentType) {
             $.deploymentType = deploymentType;
             return this;
         }
 
+        /**
+         * @param description The service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param error The error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ServiceResponseBaseResponseError error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param isDefault Is this the default variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(@Nullable Boolean isDefault) {
             $.isDefault = isDefault;
             return this;
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
             $.kvTags = kvTags;
             return this;
         }
 
+        /**
+         * @param properties The service property dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param state The current state of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param trafficPercentile The amount of traffic variant receives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             $.trafficPercentile = trafficPercentile;
             return this;
         }
 
+        /**
+         * @param type The type of the variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

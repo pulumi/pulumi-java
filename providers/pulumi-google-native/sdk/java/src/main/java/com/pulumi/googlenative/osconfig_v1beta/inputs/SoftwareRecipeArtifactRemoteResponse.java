@@ -23,6 +23,10 @@ public final class SoftwareRecipeArtifactRemoteResponse extends com.pulumi.resou
     @Import(name="checksum", required=true)
     private String checksum;
 
+    /**
+     * @return Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any of the steps.
+     * 
+     */
     public String checksum() {
         return this.checksum;
     }
@@ -34,6 +38,10 @@ public final class SoftwareRecipeArtifactRemoteResponse extends com.pulumi.resou
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -63,11 +71,23 @@ public final class SoftwareRecipeArtifactRemoteResponse extends com.pulumi.resou
             $ = new SoftwareRecipeArtifactRemoteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checksum Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any of the steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(String checksum) {
             $.checksum = checksum;
             return this;
         }
 
+        /**
+         * @param uri URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

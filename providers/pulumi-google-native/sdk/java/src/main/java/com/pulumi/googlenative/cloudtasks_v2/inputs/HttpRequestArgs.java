@@ -30,6 +30,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a task with an incompatible HttpMethod.
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -41,6 +45,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="headers")
     private @Nullable Output<Map<String,String>> headers;
 
+    /**
+     * @return HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. These headers represent a subset of the headers that will accompany the task&#39;s HTTP request. Some HTTP request headers will be ignored or replaced. A partial list of headers that will be ignored or replaced is: * Host: This will be computed by Cloud Tasks and derived from HttpRequest.url. * Content-Length: This will be computed by Cloud Tasks. * User-Agent: This will be set to `&#34;Google-Cloud-Tasks&#34;`. * `X-Google-*`: Google use only. * `X-AppEngine-*`: Google use only. `Content-Type` won&#39;t be set by Cloud Tasks. You can explicitly set `Content-Type` to a media type when the task is created. For example, `Content-Type` can be set to `&#34;application/octet-stream&#34;` or `&#34;application/json&#34;`. Headers which can have multiple values (according to RFC2616) can be specified using comma-separated values. The size of the headers must be less than 80KB.
+     * 
+     */
     public Optional<Output<Map<String,String>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -52,6 +60,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod")
     private @Nullable Output<HttpRequestHttpMethod> httpMethod;
 
+    /**
+     * @return The HTTP method to use for the request. The default is POST.
+     * 
+     */
     public Optional<Output<HttpRequestHttpMethod>> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -63,6 +75,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oauthToken")
     private @Nullable Output<OAuthTokenArgs> oauthToken;
 
+    /**
+     * @return If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.
+     * 
+     */
     public Optional<Output<OAuthTokenArgs>> oauthToken() {
         return Optional.ofNullable(this.oauthToken);
     }
@@ -74,6 +90,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oidcToken")
     private @Nullable Output<OidcTokenArgs> oidcToken;
 
+    /**
+     * @return If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
+     * 
+     */
     public Optional<Output<OidcTokenArgs>> oidcToken() {
         return Optional.ofNullable(this.oidcToken);
     }
@@ -85,6 +105,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The full url path that the request will be sent to. This string must begin with either &#34;http://&#34; or &#34;https://&#34;. Some examples are: `http://acme.com` and `https://acme.com/sales:8080`. Cloud Tasks will encode some characters for safety and compatibility. The maximum allowed URL length is 2083 characters after encoding. The `Location` header response from a redirect response [`300` - `399`] may be followed. The redirect is not counted as a separate attempt.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -118,56 +142,128 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a task with an incompatible HttpMethod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a task with an incompatible HttpMethod.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param headers HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. These headers represent a subset of the headers that will accompany the task&#39;s HTTP request. Some HTTP request headers will be ignored or replaced. A partial list of headers that will be ignored or replaced is: * Host: This will be computed by Cloud Tasks and derived from HttpRequest.url. * Content-Length: This will be computed by Cloud Tasks. * User-Agent: This will be set to `&#34;Google-Cloud-Tasks&#34;`. * `X-Google-*`: Google use only. * `X-AppEngine-*`: Google use only. `Content-Type` won&#39;t be set by Cloud Tasks. You can explicitly set `Content-Type` to a media type when the task is created. For example, `Content-Type` can be set to `&#34;application/octet-stream&#34;` or `&#34;application/json&#34;`. Headers which can have multiple values (according to RFC2616) can be specified using comma-separated values. The size of the headers must be less than 80KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers HTTP request headers. This map contains the header field names and values. Headers can be set when the task is created. These headers represent a subset of the headers that will accompany the task&#39;s HTTP request. Some HTTP request headers will be ignored or replaced. A partial list of headers that will be ignored or replaced is: * Host: This will be computed by Cloud Tasks and derived from HttpRequest.url. * Content-Length: This will be computed by Cloud Tasks. * User-Agent: This will be set to `&#34;Google-Cloud-Tasks&#34;`. * `X-Google-*`: Google use only. * `X-AppEngine-*`: Google use only. `Content-Type` won&#39;t be set by Cloud Tasks. You can explicitly set `Content-Type` to a media type when the task is created. For example, `Content-Type` can be set to `&#34;application/octet-stream&#34;` or `&#34;application/json&#34;`. Headers which can have multiple values (according to RFC2616) can be specified using comma-separated values. The size of the headers must be less than 80KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Map<String,String> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param httpMethod The HTTP method to use for the request. The default is POST.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(@Nullable Output<HttpRequestHttpMethod> httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param httpMethod The HTTP method to use for the request. The default is POST.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(HttpRequestHttpMethod httpMethod) {
             return httpMethod(Output.of(httpMethod));
         }
 
+        /**
+         * @param oauthToken If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthToken(@Nullable Output<OAuthTokenArgs> oauthToken) {
             $.oauthToken = oauthToken;
             return this;
         }
 
+        /**
+         * @param oauthToken If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthToken(OAuthTokenArgs oauthToken) {
             return oauthToken(Output.of(oauthToken));
         }
 
+        /**
+         * @param oidcToken If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcToken(@Nullable Output<OidcTokenArgs> oidcToken) {
             $.oidcToken = oidcToken;
             return this;
         }
 
+        /**
+         * @param oidcToken If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcToken(OidcTokenArgs oidcToken) {
             return oidcToken(Output.of(oidcToken));
         }
 
+        /**
+         * @param url The full url path that the request will be sent to. This string must begin with either &#34;http://&#34; or &#34;https://&#34;. Some examples are: `http://acme.com` and `https://acme.com/sales:8080`. Cloud Tasks will encode some characters for safety and compatibility. The maximum allowed URL length is 2083 characters after encoding. The `Location` header response from a redirect response [`300` - `399`] may be followed. The redirect is not counted as a separate attempt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The full url path that the request will be sent to. This string must begin with either &#34;http://&#34; or &#34;https://&#34;. Some examples are: `http://acme.com` and `https://acme.com/sales:8080`. Cloud Tasks will encode some characters for safety and compatibility. The maximum allowed URL length is 2083 characters after encoding. The `Location` header response from a redirect response [`300` - `399`] may be followed. The redirect is not counted as a separate attempt.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

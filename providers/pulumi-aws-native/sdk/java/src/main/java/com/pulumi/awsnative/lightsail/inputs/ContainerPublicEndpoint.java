@@ -27,6 +27,10 @@ public final class ContainerPublicEndpoint extends com.pulumi.resources.InvokeAr
     @Import(name="containerName")
     private @Nullable String containerName;
 
+    /**
+     * @return The name of the container for the endpoint.
+     * 
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -38,6 +42,10 @@ public final class ContainerPublicEndpoint extends com.pulumi.resources.InvokeAr
     @Import(name="containerPort")
     private @Nullable Integer containerPort;
 
+    /**
+     * @return The port of the container to which traffic is forwarded to.
+     * 
+     */
     public Optional<Integer> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
@@ -49,6 +57,10 @@ public final class ContainerPublicEndpoint extends com.pulumi.resources.InvokeAr
     @Import(name="healthCheckConfig")
     private @Nullable ContainerHealthCheckConfig healthCheckConfig;
 
+    /**
+     * @return An object that describes the health check configuration of the container.
+     * 
+     */
     public Optional<ContainerHealthCheckConfig> healthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }
@@ -79,16 +91,34 @@ public final class ContainerPublicEndpoint extends com.pulumi.resources.InvokeAr
             $ = new ContainerPublicEndpoint(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName The name of the container for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerPort The port of the container to which traffic is forwarded to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(@Nullable Integer containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param healthCheckConfig An object that describes the health check configuration of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfig(@Nullable ContainerHealthCheckConfig healthCheckConfig) {
             $.healthCheckConfig = healthCheckConfig;
             return this;

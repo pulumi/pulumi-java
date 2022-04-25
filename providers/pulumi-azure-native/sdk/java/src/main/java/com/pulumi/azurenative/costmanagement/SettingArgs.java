@@ -24,6 +24,10 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cache")
     private @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
 
+    /**
+     * @return Array of scopes with additional details used by Cost Management in the Azure portal.
+     * 
+     */
     public Optional<Output<List<SettingsPropertiesCacheArgs>>> cache() {
         return Optional.ofNullable(this.cache);
     }
@@ -35,6 +39,10 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -46,6 +54,10 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="settingName")
     private @Nullable Output<String> settingName;
 
+    /**
+     * @return Name of the setting. Allowed values: myscope
+     * 
+     */
     public Optional<Output<String>> settingName() {
         return Optional.ofNullable(this.settingName);
     }
@@ -57,6 +69,10 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startOn")
     private @Nullable Output<String> startOn;
 
+    /**
+     * @return Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
+     * 
+     */
     public Optional<Output<String>> startOn() {
         return Optional.ofNullable(this.startOn);
     }
@@ -88,42 +104,96 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cache Array of scopes with additional details used by Cost Management in the Azure portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cache(@Nullable Output<List<SettingsPropertiesCacheArgs>> cache) {
             $.cache = cache;
             return this;
         }
 
+        /**
+         * @param cache Array of scopes with additional details used by Cost Management in the Azure portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cache(List<SettingsPropertiesCacheArgs> cache) {
             return cache(Output.of(cache));
         }
 
+        /**
+         * @param cache Array of scopes with additional details used by Cost Management in the Azure portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cache(SettingsPropertiesCacheArgs... cache) {
             return cache(List.of(cache));
         }
 
+        /**
+         * @param scope Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param settingName Name of the setting. Allowed values: myscope
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingName(@Nullable Output<String> settingName) {
             $.settingName = settingName;
             return this;
         }
 
+        /**
+         * @param settingName Name of the setting. Allowed values: myscope
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingName(String settingName) {
             return settingName(Output.of(settingName));
         }
 
+        /**
+         * @param startOn Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startOn(@Nullable Output<String> startOn) {
             $.startOn = startOn;
             return this;
         }
 
+        /**
+         * @param startOn Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startOn(String startOn) {
             return startOn(Output.of(startOn));
         }

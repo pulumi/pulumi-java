@@ -25,6 +25,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return Name of an Mixed Reality Account.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -36,6 +40,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return The identity associated with this account
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -47,6 +55,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
     private @Nullable Output<SkuArgs> kind;
 
+    /**
+     * @return The kind of account, if supported
+     * 
+     */
     public Optional<Output<SkuArgs>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -58,6 +70,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -69,6 +85,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="plan")
     private @Nullable Output<IdentityArgs> plan;
 
+    /**
+     * @return The plan associated with this account
+     * 
+     */
     public Optional<Output<IdentityArgs>> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -80,6 +100,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The sku associated with this account
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -102,6 +130,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="storageAccountName")
     private @Nullable Output<String> storageAccountName;
 
+    /**
+     * @return The name of the storage account associated with this accountId
+     * 
+     */
     public Optional<Output<String>> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
@@ -113,6 +145,10 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -149,83 +185,191 @@ public final class RemoteRenderingAccountArgs extends com.pulumi.resources.Resou
             $ = new RemoteRenderingAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Name of an Mixed Reality Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Name of an Mixed Reality Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param identity The identity associated with this account
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity associated with this account
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind The kind of account, if supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<SkuArgs> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of account, if supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(SkuArgs kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param plan The plan associated with this account
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable Output<IdentityArgs> plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param plan The plan associated with this account
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(IdentityArgs plan) {
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The sku associated with this account
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku associated with this account
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param storageAccountName The name of the storage account associated with this accountId
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The name of the storage account associated with this accountId
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

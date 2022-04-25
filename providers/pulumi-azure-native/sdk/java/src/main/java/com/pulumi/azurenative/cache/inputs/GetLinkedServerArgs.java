@@ -19,6 +19,10 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedServerName", required=true)
     private String linkedServerName;
 
+    /**
+     * @return The name of the linked server.
+     * 
+     */
     public String linkedServerName() {
         return this.linkedServerName;
     }
@@ -30,6 +34,10 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the redis cache.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLinkedServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedServerName The name of the linked server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServerName(String linkedServerName) {
             $.linkedServerName = linkedServerName;
             return this;
         }
 
+        /**
+         * @param name The name of the redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

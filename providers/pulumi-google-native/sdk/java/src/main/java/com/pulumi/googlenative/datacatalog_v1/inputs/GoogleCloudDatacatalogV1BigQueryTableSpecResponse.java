@@ -25,6 +25,10 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends com
     @Import(name="tableSourceType", required=true)
     private String tableSourceType;
 
+    /**
+     * @return The table source type.
+     * 
+     */
     public String tableSourceType() {
         return this.tableSourceType;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends com
     @Import(name="tableSpec", required=true)
     private GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
 
+    /**
+     * @return Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.
+     * 
+     */
     public GoogleCloudDatacatalogV1TableSpecResponse tableSpec() {
         return this.tableSpec;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends com
     @Import(name="viewSpec", required=true)
     private GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
 
+    /**
+     * @return Table view specification. Populated only if the `table_source_type` is `BIGQUERY_VIEW`.
+     * 
+     */
     public GoogleCloudDatacatalogV1ViewSpecResponse viewSpec() {
         return this.viewSpec;
     }
@@ -77,16 +89,34 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends com
             $ = new GoogleCloudDatacatalogV1BigQueryTableSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tableSourceType The table source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableSourceType(String tableSourceType) {
             $.tableSourceType = tableSourceType;
             return this;
         }
 
+        /**
+         * @param tableSpec Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableSpec(GoogleCloudDatacatalogV1TableSpecResponse tableSpec) {
             $.tableSpec = tableSpec;
             return this;
         }
 
+        /**
+         * @param viewSpec Table view specification. Populated only if the `table_source_type` is `BIGQUERY_VIEW`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder viewSpec(GoogleCloudDatacatalogV1ViewSpecResponse viewSpec) {
             $.viewSpec = viewSpec;
             return this;

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureStaticWebAppsResponse {
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The configuration settings of the Azure Static Web Apps registration.
+     * @return The configuration settings of the Azure Static Web Apps registration.
      * 
      */
     private final @Nullable AzureStaticWebAppsRegistrationResponse registration;
@@ -32,16 +32,16 @@ public final class AzureStaticWebAppsResponse {
     }
 
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The configuration settings of the Azure Static Web Apps registration.
+     * @return The configuration settings of the Azure Static Web Apps registration.
      * 
-    */
+     */
     public Optional<AzureStaticWebAppsRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }

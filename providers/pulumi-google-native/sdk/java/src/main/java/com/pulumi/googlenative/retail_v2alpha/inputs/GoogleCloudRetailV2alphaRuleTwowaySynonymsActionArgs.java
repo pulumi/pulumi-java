@@ -27,6 +27,10 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
     @Import(name="synonyms")
     private @Nullable Output<List<String>> synonyms;
 
+    /**
+     * @return Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+     * 
+     */
     public Optional<Output<List<String>>> synonyms() {
         return Optional.ofNullable(this.synonyms);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
             $ = new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param synonyms Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
             $.synonyms = synonyms;
             return this;
         }
 
+        /**
+         * @param synonyms Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(List<String> synonyms) {
             return synonyms(Output.of(synonyms));
         }
 
+        /**
+         * @param synonyms Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }

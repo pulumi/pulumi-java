@@ -21,6 +21,10 @@ public final class AssetModelExpressionVariableArgs extends com.pulumi.resources
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The friendly name of the variable to be used in the expression.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class AssetModelExpressionVariableArgs extends com.pulumi.resources
     @Import(name="value", required=true)
     private Output<AssetModelVariableValueArgs> value;
 
+    /**
+     * @return The variable that identifies an asset property from which to use values.
+     * 
+     */
     public Output<AssetModelVariableValueArgs> value() {
         return this.value;
     }
@@ -61,20 +69,44 @@ public final class AssetModelExpressionVariableArgs extends com.pulumi.resources
             $ = new AssetModelExpressionVariableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The friendly name of the variable to be used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The friendly name of the variable to be used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value The variable that identifies an asset property from which to use values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<AssetModelVariableValueArgs> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The variable that identifies an asset property from which to use values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(AssetModelVariableValueArgs value) {
             return value(Output.of(value));
         }

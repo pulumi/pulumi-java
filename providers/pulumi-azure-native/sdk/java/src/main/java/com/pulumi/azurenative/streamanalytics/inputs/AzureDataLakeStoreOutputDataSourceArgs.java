@@ -27,6 +27,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -38,6 +42,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="dateFormat")
     private @Nullable Output<String> dateFormat;
 
+    /**
+     * @return The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
+     * 
+     */
     public Optional<Output<String>> dateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
@@ -49,6 +57,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="filePathPrefix")
     private @Nullable Output<String> filePathPrefix;
 
+    /**
+     * @return The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> filePathPrefix() {
         return Optional.ofNullable(this.filePathPrefix);
     }
@@ -60,6 +72,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="refreshToken")
     private @Nullable Output<String> refreshToken;
 
+    /**
+     * @return A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -71,6 +87,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -82,6 +102,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="timeFormat")
     private @Nullable Output<String> timeFormat;
 
+    /**
+     * @return The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
+     * 
+     */
     public Optional<Output<String>> timeFormat() {
         return Optional.ofNullable(this.timeFormat);
     }
@@ -93,6 +117,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="tokenUserDisplayName")
     private @Nullable Output<String> tokenUserDisplayName;
 
+    /**
+     * @return The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * 
+     */
     public Optional<Output<String>> tokenUserDisplayName() {
         return Optional.ofNullable(this.tokenUserDisplayName);
     }
@@ -104,6 +132,10 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="tokenUserPrincipalName")
     private @Nullable Output<String> tokenUserPrincipalName;
 
+    /**
+     * @return The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * 
+     */
     public Optional<Output<String>> tokenUserPrincipalName() {
         return Optional.ofNullable(this.tokenUserPrincipalName);
     }
@@ -116,6 +148,11 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Microsoft.DataLake/Accounts&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -152,83 +189,193 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends com.pulumi.res
             $ = new AzureDataLakeStoreOutputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dateFormat The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(@Nullable Output<String> dateFormat) {
             $.dateFormat = dateFormat;
             return this;
         }
 
+        /**
+         * @param dateFormat The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(String dateFormat) {
             return dateFormat(Output.of(dateFormat));
         }
 
+        /**
+         * @param filePathPrefix The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePathPrefix(@Nullable Output<String> filePathPrefix) {
             $.filePathPrefix = filePathPrefix;
             return this;
         }
 
+        /**
+         * @param filePathPrefix The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePathPrefix(String filePathPrefix) {
             return filePathPrefix(Output.of(filePathPrefix));
         }
 
+        /**
+         * @param refreshToken A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
         }
 
+        /**
+         * @param refreshToken A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(String refreshToken) {
             return refreshToken(Output.of(refreshToken));
         }
 
+        /**
+         * @param tenantId The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param timeFormat The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFormat(@Nullable Output<String> timeFormat) {
             $.timeFormat = timeFormat;
             return this;
         }
 
+        /**
+         * @param timeFormat The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFormat(String timeFormat) {
             return timeFormat(Output.of(timeFormat));
         }
 
+        /**
+         * @param tokenUserDisplayName The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
             $.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
 
+        /**
+         * @param tokenUserDisplayName The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUserDisplayName(String tokenUserDisplayName) {
             return tokenUserDisplayName(Output.of(tokenUserDisplayName));
         }
 
+        /**
+         * @param tokenUserPrincipalName The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
             $.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
 
+        /**
+         * @param tokenUserPrincipalName The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUserPrincipalName(String tokenUserPrincipalName) {
             return tokenUserPrincipalName(Output.of(tokenUserPrincipalName));
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.DataLake/Accounts&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.DataLake/Accounts&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

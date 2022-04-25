@@ -21,6 +21,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Specifies the id of private endpoint.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +53,12 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
             $ = new PrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Specifies the id of private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

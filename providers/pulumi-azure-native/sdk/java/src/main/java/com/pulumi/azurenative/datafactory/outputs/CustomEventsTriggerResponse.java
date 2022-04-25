@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomEventsTriggerResponse {
     /**
-     * List of tags that can be used for describing the trigger.
+     * @return List of tags that can be used for describing the trigger.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * Trigger description.
+     * @return Trigger description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The list of event types that cause this trigger to fire.
+     * @return The list of event types that cause this trigger to fire.
      * 
      */
     private final List<Object> events;
     /**
-     * Pipelines that need to be started.
+     * @return Pipelines that need to be started.
      * 
      */
     private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
     /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
      */
     private final String runtimeState;
     /**
-     * The ARM resource ID of the Azure Event Grid Topic.
+     * @return The ARM resource ID of the Azure Event Grid Topic.
      * 
      */
     private final String scope;
     /**
-     * The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+     * @return The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
      * 
      */
     private final @Nullable String subjectBeginsWith;
     /**
-     * The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+     * @return The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
      * 
      */
     private final @Nullable String subjectEndsWith;
     /**
-     * Trigger type.
+     * @return Trigger type.
      * Expected value is &#39;CustomEventsTrigger&#39;.
      * 
      */
@@ -84,66 +84,66 @@ public final class CustomEventsTriggerResponse {
     }
 
     /**
-     * List of tags that can be used for describing the trigger.
+     * @return List of tags that can be used for describing the trigger.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Trigger description.
+     * @return Trigger description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The list of event types that cause this trigger to fire.
+     * @return The list of event types that cause this trigger to fire.
      * 
-    */
+     */
     public List<Object> events() {
         return this.events;
     }
     /**
-     * Pipelines that need to be started.
+     * @return Pipelines that need to be started.
      * 
-    */
+     */
     public List<TriggerPipelineReferenceResponse> pipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
     /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-    */
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
     /**
-     * The ARM resource ID of the Azure Event Grid Topic.
+     * @return The ARM resource ID of the Azure Event Grid Topic.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+     * @return The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
      * 
-    */
+     */
     public Optional<String> subjectBeginsWith() {
         return Optional.ofNullable(this.subjectBeginsWith);
     }
     /**
-     * The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+     * @return The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
      * 
-    */
+     */
     public Optional<String> subjectEndsWith() {
         return Optional.ofNullable(this.subjectEndsWith);
     }
     /**
-     * Trigger type.
+     * @return Trigger type.
      * Expected value is &#39;CustomEventsTrigger&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

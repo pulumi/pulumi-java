@@ -26,6 +26,10 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="content")
     private @Nullable String content;
 
+    /**
+     * @return The WSDL content
+     * 
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
@@ -37,6 +41,10 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="importMethod")
     private @Nullable String importMethod;
 
+    /**
+     * @return The WSDL import method
+     * 
+     */
     public Optional<String> importMethod() {
         return Optional.ofNullable(this.importMethod);
     }
@@ -48,6 +56,10 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="service")
     private @Nullable WsdlServiceResponse service;
 
+    /**
+     * @return The service with name and endpoint names
+     * 
+     */
     public Optional<WsdlServiceResponse> service() {
         return Optional.ofNullable(this.service);
     }
@@ -59,6 +71,10 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The WSDL URL
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -90,21 +106,45 @@ public final class WsdlDefinitionResponse extends com.pulumi.resources.InvokeArg
             $ = new WsdlDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The WSDL content
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param importMethod The WSDL import method
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(@Nullable String importMethod) {
             $.importMethod = importMethod;
             return this;
         }
 
+        /**
+         * @param service The service with name and endpoint names
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable WsdlServiceResponse service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param url The WSDL URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

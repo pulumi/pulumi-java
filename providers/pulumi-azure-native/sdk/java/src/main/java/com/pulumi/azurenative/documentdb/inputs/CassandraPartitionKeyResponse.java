@@ -25,6 +25,10 @@ public final class CassandraPartitionKeyResponse extends com.pulumi.resources.In
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the Cosmos DB Cassandra table partition key
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class CassandraPartitionKeyResponse extends com.pulumi.resources.In
             $ = new CassandraPartitionKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the Cosmos DB Cassandra table partition key
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -25,6 +25,10 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetName")
     private @Nullable Output<String> resourceSetName;
 
+    /**
+     * @return The name of the resource set to create.
+     * 
+     */
     public Optional<Output<String>> resourceSetName() {
         return Optional.ofNullable(this.resourceSetName);
     }
@@ -38,6 +42,12 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetType", required=true)
     private Output<String> resourceSetType;
 
+    /**
+     * @return The resource type of the resources in the resource set. Enter one of the following values for resource type:
+     * 
+     * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+     * 
+     */
     public Output<String> resourceSetType() {
         return this.resourceSetType;
     }
@@ -49,6 +59,10 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resources", required=true)
     private Output<List<ResourceSetResourceArgs>> resources;
 
+    /**
+     * @return A list of resource objects in the resource set.
+     * 
+     */
     public Output<List<ResourceSetResourceArgs>> resources() {
         return this.resources;
     }
@@ -60,6 +74,10 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ResourceSetTagArgs>> tags;
 
+    /**
+     * @return A tag to associate with the parameters for a resource set.
+     * 
+     */
     public Optional<Output<List<ResourceSetTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,46 +109,110 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceSetName The name of the resource set to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
             $.resourceSetName = resourceSetName;
             return this;
         }
 
+        /**
+         * @param resourceSetName The name of the resource set to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(String resourceSetName) {
             return resourceSetName(Output.of(resourceSetName));
         }
 
+        /**
+         * @param resourceSetType The resource type of the resources in the resource set. Enter one of the following values for resource type:
+         * 
+         * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetType(Output<String> resourceSetType) {
             $.resourceSetType = resourceSetType;
             return this;
         }
 
+        /**
+         * @param resourceSetType The resource type of the resources in the resource set. Enter one of the following values for resource type:
+         * 
+         * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetType(String resourceSetType) {
             return resourceSetType(Output.of(resourceSetType));
         }
 
+        /**
+         * @param resources A list of resource objects in the resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(Output<List<ResourceSetResourceArgs>> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources A list of resource objects in the resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<ResourceSetResourceArgs> resources) {
             return resources(Output.of(resources));
         }
 
+        /**
+         * @param resources A list of resource objects in the resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(ResourceSetResourceArgs... resources) {
             return resources(List.of(resources));
         }
 
+        /**
+         * @param tags A tag to associate with the parameters for a resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ResourceSetTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A tag to associate with the parameters for a resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ResourceSetTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A tag to associate with the parameters for a resource set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ResourceSetTagArgs... tags) {
             return tags(List.of(tags));
         }

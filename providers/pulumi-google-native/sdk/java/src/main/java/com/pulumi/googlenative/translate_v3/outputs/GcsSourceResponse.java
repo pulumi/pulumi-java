@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GcsSourceResponse {
     /**
-     * Source data URI. For example, `gs://my_bucket/my_object`.
+     * @return Source data URI. For example, `gs://my_bucket/my_object`.
      * 
      */
     private final String inputUri;
@@ -21,9 +21,9 @@ public final class GcsSourceResponse {
     }
 
     /**
-     * Source data URI. For example, `gs://my_bucket/my_object`.
+     * @return Source data URI. For example, `gs://my_bucket/my_object`.
      * 
-    */
+     */
     public String inputUri() {
         return this.inputUri;
     }

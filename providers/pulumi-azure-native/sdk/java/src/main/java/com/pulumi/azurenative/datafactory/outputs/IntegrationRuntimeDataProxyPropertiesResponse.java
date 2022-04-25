@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IntegrationRuntimeDataProxyPropertiesResponse {
     /**
-     * The self-hosted integration runtime reference.
+     * @return The self-hosted integration runtime reference.
      * 
      */
     private final @Nullable EntityReferenceResponse connectVia;
     /**
-     * The path to contain the staged data in the Blob storage.
+     * @return The path to contain the staged data in the Blob storage.
      * 
      */
     private final @Nullable String path;
     /**
-     * The staging linked service reference.
+     * @return The staging linked service reference.
      * 
      */
     private final @Nullable EntityReferenceResponse stagingLinkedService;
@@ -39,23 +39,23 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse {
     }
 
     /**
-     * The self-hosted integration runtime reference.
+     * @return The self-hosted integration runtime reference.
      * 
-    */
+     */
     public Optional<EntityReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The path to contain the staged data in the Blob storage.
+     * @return The path to contain the staged data in the Blob storage.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * The staging linked service reference.
+     * @return The staging linked service reference.
      * 
-    */
+     */
     public Optional<EntityReferenceResponse> stagingLinkedService() {
         return Optional.ofNullable(this.stagingLinkedService);
     }

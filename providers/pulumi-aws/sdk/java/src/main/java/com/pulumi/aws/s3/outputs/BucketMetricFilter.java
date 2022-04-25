@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketMetricFilter {
     /**
-     * Object prefix for filtering (singular).
+     * @return Object prefix for filtering (singular).
      * 
      */
     private final @Nullable String prefix;
     /**
-     * Object tags for filtering (up to 10).
+     * @return Object tags for filtering (up to 10).
      * 
      */
     private final @Nullable Map<String,String> tags;
@@ -32,16 +32,16 @@ public final class BucketMetricFilter {
     }
 
     /**
-     * Object prefix for filtering (singular).
+     * @return Object prefix for filtering (singular).
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * Object tags for filtering (up to 10).
+     * @return Object tags for filtering (up to 10).
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

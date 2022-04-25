@@ -20,6 +20,10 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
     @Import(name="healthCheck", required=true)
     private String healthCheck;
 
+    /**
+     * @return The URL for the health check that signals autohealing.
+     * 
+     */
     public String healthCheck() {
         return this.healthCheck;
     }
@@ -31,6 +35,10 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
     @Import(name="initialDelaySec", required=true)
     private Integer initialDelaySec;
 
+    /**
+     * @return The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].
+     * 
+     */
     public Integer initialDelaySec() {
         return this.initialDelaySec;
     }
@@ -60,11 +68,23 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
             $ = new InstanceGroupManagerAutoHealingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthCheck The URL for the health check that signals autohealing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(String healthCheck) {
             $.healthCheck = healthCheck;
             return this;
         }
 
+        /**
+         * @param initialDelaySec The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySec(Integer initialDelaySec) {
             $.initialDelaySec = initialDelaySec;
             return this;

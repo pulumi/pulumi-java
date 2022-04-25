@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class PackageOccurrenceResponse {
     /**
-     * All of the places within the filesystem versions of this package have been found.
+     * @return All of the places within the filesystem versions of this package have been found.
      * 
      */
     private final List<LocationResponse> location;
     /**
-     * The name of the installed package.
+     * @return The name of the installed package.
      * 
      */
     private final String name;
@@ -31,16 +31,16 @@ public final class PackageOccurrenceResponse {
     }
 
     /**
-     * All of the places within the filesystem versions of this package have been found.
+     * @return All of the places within the filesystem versions of this package have been found.
      * 
-    */
+     */
     public List<LocationResponse> location() {
         return this.location;
     }
     /**
-     * The name of the installed package.
+     * @return The name of the installed package.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

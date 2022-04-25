@@ -24,6 +24,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A unique key for this input. Must be specified when using advanced mapping and edit lists.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -35,6 +39,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preprocessingConfig", required=true)
     private PreprocessingConfigResponse preprocessingConfig;
 
+    /**
+     * @return Preprocessing configurations.
+     * 
+     */
     public PreprocessingConfigResponse preprocessingConfig() {
         return this.preprocessingConfig;
     }
@@ -46,6 +54,10 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -76,16 +88,34 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
             $ = new InputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A unique key for this input. Must be specified when using advanced mapping and edit lists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param preprocessingConfig Preprocessing configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preprocessingConfig(PreprocessingConfigResponse preprocessingConfig) {
             $.preprocessingConfig = preprocessingConfig;
             return this;
         }
 
+        /**
+         * @param uri URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

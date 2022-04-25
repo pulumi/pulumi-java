@@ -23,6 +23,10 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
     private @Nullable Output<String> forceUpdateTag;
 
+    /**
+     * @return How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
+     * 
+     */
     public Optional<Output<String>> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
@@ -34,6 +38,10 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineRunName")
     private @Nullable Output<String> pipelineRunName;
 
+    /**
+     * @return The name of the pipeline run.
+     * 
+     */
     public Optional<Output<String>> pipelineRunName() {
         return Optional.ofNullable(this.pipelineRunName);
     }
@@ -45,6 +53,10 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -56,6 +68,10 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="request")
     private @Nullable Output<PipelineRunRequestArgs> request;
 
+    /**
+     * @return The request parameters for a pipeline run.
+     * 
+     */
     public Optional<Output<PipelineRunRequestArgs>> request() {
         return Optional.ofNullable(this.request);
     }
@@ -67,6 +83,10 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PipelineRunArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forceUpdateTag How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             $.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
+        /**
+         * @param forceUpdateTag How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(String forceUpdateTag) {
             return forceUpdateTag(Output.of(forceUpdateTag));
         }
 
+        /**
+         * @param pipelineRunName The name of the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineRunName(@Nullable Output<String> pipelineRunName) {
             $.pipelineRunName = pipelineRunName;
             return this;
         }
 
+        /**
+         * @param pipelineRunName The name of the pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineRunName(String pipelineRunName) {
             return pipelineRunName(Output.of(pipelineRunName));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param request The request parameters for a pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(@Nullable Output<PipelineRunRequestArgs> request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param request The request parameters for a pipeline run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(PipelineRunRequestArgs request) {
             return request(Output.of(request));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2PartitionIdResponse extends com.pulumi.reso
     @Import(name="namespaceId", required=true)
     private String namespaceId;
 
+    /**
+     * @return If not empty, the ID of the namespace to which the entities belong.
+     * 
+     */
     public String namespaceId() {
         return this.namespaceId;
     }
@@ -34,6 +38,10 @@ public final class GooglePrivacyDlpV2PartitionIdResponse extends com.pulumi.reso
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The ID of the project to which the entities belong.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -63,11 +71,23 @@ public final class GooglePrivacyDlpV2PartitionIdResponse extends com.pulumi.reso
             $ = new GooglePrivacyDlpV2PartitionIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceId If not empty, the ID of the namespace to which the entities belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceId(String namespaceId) {
             $.namespaceId = namespaceId;
             return this;
         }
 
+        /**
+         * @param project The ID of the project to which the entities belong.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

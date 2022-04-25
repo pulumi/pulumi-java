@@ -30,6 +30,10 @@ public final class CustomResourceDefinitionArgs extends com.pulumi.resources.Res
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -41,6 +45,10 @@ public final class CustomResourceDefinitionArgs extends com.pulumi.resources.Res
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -59,6 +67,10 @@ public final class CustomResourceDefinitionArgs extends com.pulumi.resources.Res
     @Import(name="spec", required=true)
     private Output<CustomResourceDefinitionSpecArgs> spec;
 
+    /**
+     * @return spec describes how the user wants the resources to appear
+     * 
+     */
     public Output<CustomResourceDefinitionSpecArgs> spec() {
         return this.spec;
     }
@@ -70,6 +82,10 @@ public final class CustomResourceDefinitionArgs extends com.pulumi.resources.Res
     @Import(name="status")
     private @Nullable Output<CustomResourceDefinitionStatusArgs> status;
 
+    /**
+     * @return status indicates the actual state of the CustomResourceDefinition
+     * 
+     */
     public Optional<Output<CustomResourceDefinitionStatusArgs>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -102,20 +118,44 @@ public final class CustomResourceDefinitionArgs extends com.pulumi.resources.Res
             $ = new CustomResourceDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
@@ -129,20 +169,44 @@ public final class CustomResourceDefinitionArgs extends com.pulumi.resources.Res
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param spec spec describes how the user wants the resources to appear
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(Output<CustomResourceDefinitionSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec spec describes how the user wants the resources to appear
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(CustomResourceDefinitionSpecArgs spec) {
             return spec(Output.of(spec));
         }
 
+        /**
+         * @param status status indicates the actual state of the CustomResourceDefinition
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<CustomResourceDefinitionStatusArgs> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status status indicates the actual state of the CustomResourceDefinition
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(CustomResourceDefinitionStatusArgs status) {
             return status(Output.of(status));
         }

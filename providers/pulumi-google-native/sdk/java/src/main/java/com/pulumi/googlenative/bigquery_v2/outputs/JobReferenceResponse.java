@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class JobReferenceResponse {
     /**
-     * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     * @return [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
      * 
      */
     private final String jobId;
     /**
-     * The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+     * @return The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
      * 
      */
     private final String location;
     /**
-     * [Required] The ID of the project containing this job.
+     * @return [Required] The ID of the project containing this job.
      * 
      */
     private final String project;
@@ -36,23 +36,23 @@ public final class JobReferenceResponse {
     }
 
     /**
-     * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     * @return [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
      * 
-    */
+     */
     public String jobId() {
         return this.jobId;
     }
     /**
-     * The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+     * @return The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * [Required] The ID of the project containing this job.
+     * @return [Required] The ID of the project containing this job.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

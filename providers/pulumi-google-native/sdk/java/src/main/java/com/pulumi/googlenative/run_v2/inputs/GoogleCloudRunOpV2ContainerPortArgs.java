@@ -27,6 +27,10 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends com.pulumi.resour
     @Import(name="containerPort")
     private @Nullable Output<Integer> containerPort;
 
+    /**
+     * @return Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
+     * 
+     */
     public Optional<Output<Integer>> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends com.pulumi.resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends com.pulumi.resour
             $ = new GoogleCloudRunOpV2ContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerPort Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param containerPort Port number the container listens on. This must be a valid TCP port number, 0 &lt; container_port &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             return containerPort(Output.of(containerPort));
         }
 
+        /**
+         * @param name If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name If specified, used to specify which protocol to use. Allowed values are &#34;http1&#34; and &#34;h2c&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -27,6 +27,10 @@ public final class ReplicaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerManagedEncryption")
     private @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
+    /**
+     * @return Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * 
+     */
     public Optional<Output<CustomerManagedEncryptionArgs>> customerManagedEncryption() {
         return Optional.ofNullable(this.customerManagedEncryption);
     }
@@ -38,6 +42,10 @@ public final class ReplicaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -67,20 +75,44 @@ public final class ReplicaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReplicaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerManagedEncryption Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryption(@Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption) {
             $.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
+        /**
+         * @param customerManagedEncryption Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryption(CustomerManagedEncryptionArgs customerManagedEncryption) {
             return customerManagedEncryption(Output.of(customerManagedEncryption));
         }
 
+        /**
+         * @param location The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

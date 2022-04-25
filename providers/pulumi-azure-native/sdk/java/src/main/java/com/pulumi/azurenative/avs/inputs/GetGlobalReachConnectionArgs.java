@@ -19,6 +19,10 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
     @Import(name="globalReachConnectionName", required=true)
     private String globalReachConnectionName;
 
+    /**
+     * @return Name of the global reach connection in the private cloud
+     * 
+     */
     public String globalReachConnectionName() {
         return this.globalReachConnectionName;
     }
@@ -30,6 +34,10 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
     @Import(name="privateCloudName", required=true)
     private String privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
@@ -41,6 +49,10 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetGlobalReachConnectionArgs extends com.pulumi.resources.Inv
             $ = new GetGlobalReachConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalReachConnectionName Name of the global reach connection in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReachConnectionName(String globalReachConnectionName) {
             $.globalReachConnectionName = globalReachConnectionName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

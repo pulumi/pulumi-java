@@ -28,6 +28,10 @@ public final class GoogleCloudRetailV2alphaConditionArgs extends com.pulumi.reso
     @Import(name="activeTimeRange")
     private @Nullable Output<List<GoogleCloudRetailV2alphaConditionTimeRangeArgs>> activeTimeRange;
 
+    /**
+     * @return Range of time(s) specifying when Condition is active. Condition true if any time range matches.
+     * 
+     */
     public Optional<Output<List<GoogleCloudRetailV2alphaConditionTimeRangeArgs>>> activeTimeRange() {
         return Optional.ofNullable(this.activeTimeRange);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudRetailV2alphaConditionArgs extends com.pulumi.reso
     @Import(name="queryTerms")
     private @Nullable Output<List<GoogleCloudRetailV2alphaConditionQueryTermArgs>> queryTerms;
 
+    /**
+     * @return A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
+     * 
+     */
     public Optional<Output<List<GoogleCloudRetailV2alphaConditionQueryTermArgs>>> queryTerms() {
         return Optional.ofNullable(this.queryTerms);
     }
@@ -68,28 +76,64 @@ public final class GoogleCloudRetailV2alphaConditionArgs extends com.pulumi.reso
             $ = new GoogleCloudRetailV2alphaConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeTimeRange Range of time(s) specifying when Condition is active. Condition true if any time range matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTimeRange(@Nullable Output<List<GoogleCloudRetailV2alphaConditionTimeRangeArgs>> activeTimeRange) {
             $.activeTimeRange = activeTimeRange;
             return this;
         }
 
+        /**
+         * @param activeTimeRange Range of time(s) specifying when Condition is active. Condition true if any time range matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTimeRange(List<GoogleCloudRetailV2alphaConditionTimeRangeArgs> activeTimeRange) {
             return activeTimeRange(Output.of(activeTimeRange));
         }
 
+        /**
+         * @param activeTimeRange Range of time(s) specifying when Condition is active. Condition true if any time range matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTimeRange(GoogleCloudRetailV2alphaConditionTimeRangeArgs... activeTimeRange) {
             return activeTimeRange(List.of(activeTimeRange));
         }
 
+        /**
+         * @param queryTerms A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(@Nullable Output<List<GoogleCloudRetailV2alphaConditionQueryTermArgs>> queryTerms) {
             $.queryTerms = queryTerms;
             return this;
         }
 
+        /**
+         * @param queryTerms A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(List<GoogleCloudRetailV2alphaConditionQueryTermArgs> queryTerms) {
             return queryTerms(Output.of(queryTerms));
         }
 
+        /**
+         * @param queryTerms A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(GoogleCloudRetailV2alphaConditionQueryTermArgs... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }

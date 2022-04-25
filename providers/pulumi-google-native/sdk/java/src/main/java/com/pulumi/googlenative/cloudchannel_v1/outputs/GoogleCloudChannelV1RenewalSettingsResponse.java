@@ -12,22 +12,22 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudChannelV1RenewalSettingsResponse {
     /**
-     * If false, the plan will be completed at the end date.
+     * @return If false, the plan will be completed at the end date.
      * 
      */
     private final Boolean enableRenewal;
     /**
-     * Describes how frequently the reseller will be billed, such as once per month.
+     * @return Describes how frequently the reseller will be billed, such as once per month.
      * 
      */
     private final GoogleCloudChannelV1PeriodResponse paymentCycle;
     /**
-     * Describes how a reseller will be billed.
+     * @return Describes how a reseller will be billed.
      * 
      */
     private final String paymentPlan;
     /**
-     * If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
+     * @return If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
      * 
      */
     private final Boolean resizeUnitCount;
@@ -45,30 +45,30 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
     }
 
     /**
-     * If false, the plan will be completed at the end date.
+     * @return If false, the plan will be completed at the end date.
      * 
-    */
+     */
     public Boolean enableRenewal() {
         return this.enableRenewal;
     }
     /**
-     * Describes how frequently the reseller will be billed, such as once per month.
+     * @return Describes how frequently the reseller will be billed, such as once per month.
      * 
-    */
+     */
     public GoogleCloudChannelV1PeriodResponse paymentCycle() {
         return this.paymentCycle;
     }
     /**
-     * Describes how a reseller will be billed.
+     * @return Describes how a reseller will be billed.
      * 
-    */
+     */
     public String paymentPlan() {
         return this.paymentPlan;
     }
     /**
-     * If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
+     * @return If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
      * 
-    */
+     */
     public Boolean resizeUnitCount() {
         return this.resizeUnitCount;
     }

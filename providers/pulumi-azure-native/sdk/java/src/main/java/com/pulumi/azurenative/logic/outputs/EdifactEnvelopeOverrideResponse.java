@@ -12,77 +12,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdifactEnvelopeOverrideResponse {
     /**
-     * The application password.
+     * @return The application password.
      * 
      */
     private final @Nullable String applicationPassword;
     /**
-     * The association assigned code.
+     * @return The association assigned code.
      * 
      */
     private final @Nullable String associationAssignedCode;
     /**
-     * The controlling agency code.
+     * @return The controlling agency code.
      * 
      */
     private final @Nullable String controllingAgencyCode;
     /**
-     * The functional group id.
+     * @return The functional group id.
      * 
      */
     private final @Nullable String functionalGroupId;
     /**
-     * The group header message release.
+     * @return The group header message release.
      * 
      */
     private final @Nullable String groupHeaderMessageRelease;
     /**
-     * The group header message version.
+     * @return The group header message version.
      * 
      */
     private final @Nullable String groupHeaderMessageVersion;
     /**
-     * The message association assigned code.
+     * @return The message association assigned code.
      * 
      */
     private final @Nullable String messageAssociationAssignedCode;
     /**
-     * The message id on which this envelope settings has to be applied.
+     * @return The message id on which this envelope settings has to be applied.
      * 
      */
     private final @Nullable String messageId;
     /**
-     * The message release version on which this envelope settings has to be applied.
+     * @return The message release version on which this envelope settings has to be applied.
      * 
      */
     private final @Nullable String messageRelease;
     /**
-     * The message version on which this envelope settings has to be applied.
+     * @return The message version on which this envelope settings has to be applied.
      * 
      */
     private final @Nullable String messageVersion;
     /**
-     * The receiver application id.
+     * @return The receiver application id.
      * 
      */
     private final @Nullable String receiverApplicationId;
     /**
-     * The receiver application qualifier.
+     * @return The receiver application qualifier.
      * 
      */
     private final @Nullable String receiverApplicationQualifier;
     /**
-     * The sender application id.
+     * @return The sender application id.
      * 
      */
     private final @Nullable String senderApplicationId;
     /**
-     * The sender application qualifier.
+     * @return The sender application qualifier.
      * 
      */
     private final @Nullable String senderApplicationQualifier;
     /**
-     * The target namespace on which this envelope settings has to be applied.
+     * @return The target namespace on which this envelope settings has to be applied.
      * 
      */
     private final @Nullable String targetNamespace;
@@ -122,107 +122,107 @@ public final class EdifactEnvelopeOverrideResponse {
     }
 
     /**
-     * The application password.
+     * @return The application password.
      * 
-    */
+     */
     public Optional<String> applicationPassword() {
         return Optional.ofNullable(this.applicationPassword);
     }
     /**
-     * The association assigned code.
+     * @return The association assigned code.
      * 
-    */
+     */
     public Optional<String> associationAssignedCode() {
         return Optional.ofNullable(this.associationAssignedCode);
     }
     /**
-     * The controlling agency code.
+     * @return The controlling agency code.
      * 
-    */
+     */
     public Optional<String> controllingAgencyCode() {
         return Optional.ofNullable(this.controllingAgencyCode);
     }
     /**
-     * The functional group id.
+     * @return The functional group id.
      * 
-    */
+     */
     public Optional<String> functionalGroupId() {
         return Optional.ofNullable(this.functionalGroupId);
     }
     /**
-     * The group header message release.
+     * @return The group header message release.
      * 
-    */
+     */
     public Optional<String> groupHeaderMessageRelease() {
         return Optional.ofNullable(this.groupHeaderMessageRelease);
     }
     /**
-     * The group header message version.
+     * @return The group header message version.
      * 
-    */
+     */
     public Optional<String> groupHeaderMessageVersion() {
         return Optional.ofNullable(this.groupHeaderMessageVersion);
     }
     /**
-     * The message association assigned code.
+     * @return The message association assigned code.
      * 
-    */
+     */
     public Optional<String> messageAssociationAssignedCode() {
         return Optional.ofNullable(this.messageAssociationAssignedCode);
     }
     /**
-     * The message id on which this envelope settings has to be applied.
+     * @return The message id on which this envelope settings has to be applied.
      * 
-    */
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
-     * The message release version on which this envelope settings has to be applied.
+     * @return The message release version on which this envelope settings has to be applied.
      * 
-    */
+     */
     public Optional<String> messageRelease() {
         return Optional.ofNullable(this.messageRelease);
     }
     /**
-     * The message version on which this envelope settings has to be applied.
+     * @return The message version on which this envelope settings has to be applied.
      * 
-    */
+     */
     public Optional<String> messageVersion() {
         return Optional.ofNullable(this.messageVersion);
     }
     /**
-     * The receiver application id.
+     * @return The receiver application id.
      * 
-    */
+     */
     public Optional<String> receiverApplicationId() {
         return Optional.ofNullable(this.receiverApplicationId);
     }
     /**
-     * The receiver application qualifier.
+     * @return The receiver application qualifier.
      * 
-    */
+     */
     public Optional<String> receiverApplicationQualifier() {
         return Optional.ofNullable(this.receiverApplicationQualifier);
     }
     /**
-     * The sender application id.
+     * @return The sender application id.
      * 
-    */
+     */
     public Optional<String> senderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
     /**
-     * The sender application qualifier.
+     * @return The sender application qualifier.
      * 
-    */
+     */
     public Optional<String> senderApplicationQualifier() {
         return Optional.ofNullable(this.senderApplicationQualifier);
     }
     /**
-     * The target namespace on which this envelope settings has to be applied.
+     * @return The target namespace on which this envelope settings has to be applied.
      * 
-    */
+     */
     public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }

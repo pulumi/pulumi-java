@@ -26,6 +26,10 @@ public final class MetricAlertActionResponse extends com.pulumi.resources.Invoke
     @Import(name="actionGroupId")
     private @Nullable String actionGroupId;
 
+    /**
+     * @return the id of the action group to use.
+     * 
+     */
     public Optional<String> actionGroupId() {
         return Optional.ofNullable(this.actionGroupId);
     }
@@ -37,6 +41,10 @@ public final class MetricAlertActionResponse extends com.pulumi.resources.Invoke
     @Import(name="webHookProperties")
     private @Nullable Map<String,String> webHookProperties;
 
+    /**
+     * @return This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+     * 
+     */
     public Optional<Map<String,String>> webHookProperties() {
         return Optional.ofNullable(this.webHookProperties);
     }
@@ -66,11 +74,23 @@ public final class MetricAlertActionResponse extends com.pulumi.resources.Invoke
             $ = new MetricAlertActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroupId the id of the action group to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(@Nullable String actionGroupId) {
             $.actionGroupId = actionGroupId;
             return this;
         }
 
+        /**
+         * @param webHookProperties This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             $.webHookProperties = webHookProperties;
             return this;

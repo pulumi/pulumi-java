@@ -25,6 +25,10 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="monthDay", required=true)
     private Output<Integer> monthDay;
 
+    /**
+     * @return One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
+     * 
+     */
     public Output<Integer> monthDay() {
         return this.monthDay;
     }
@@ -36,6 +40,10 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="weekDayOfMonth", required=true)
     private Output<WeekDayOfMonthArgs> weekDayOfMonth;
 
+    /**
+     * @return Week day in a month.
+     * 
+     */
     public Output<WeekDayOfMonthArgs> weekDayOfMonth() {
         return this.weekDayOfMonth;
     }
@@ -65,20 +73,44 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
             $ = new MonthlyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monthDay One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDay(Output<Integer> monthDay) {
             $.monthDay = monthDay;
             return this;
         }
 
+        /**
+         * @param monthDay One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34; will not run in February, April, June, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDay(Integer monthDay) {
             return monthDay(Output.of(monthDay));
         }
 
+        /**
+         * @param weekDayOfMonth Week day in a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDayOfMonth(Output<WeekDayOfMonthArgs> weekDayOfMonth) {
             $.weekDayOfMonth = weekDayOfMonth;
             return this;
         }
 
+        /**
+         * @param weekDayOfMonth Week day in a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDayOfMonth(WeekDayOfMonthArgs weekDayOfMonth) {
             return weekDayOfMonth(Output.of(weekDayOfMonth));
         }

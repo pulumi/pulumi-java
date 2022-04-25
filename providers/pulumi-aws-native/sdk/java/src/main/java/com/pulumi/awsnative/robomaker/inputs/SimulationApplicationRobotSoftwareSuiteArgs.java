@@ -27,6 +27,10 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends com.pulum
     @Import(name="name", required=true)
     private Output<SimulationApplicationRobotSoftwareSuiteName> name;
 
+    /**
+     * @return The name of the robot software suite.
+     * 
+     */
     public Output<SimulationApplicationRobotSoftwareSuiteName> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends com.pulum
     @Import(name="version")
     private @Nullable Output<SimulationApplicationRobotSoftwareSuiteVersion> version;
 
+    /**
+     * @return The version of the robot software suite.
+     * 
+     */
     public Optional<Output<SimulationApplicationRobotSoftwareSuiteVersion>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -67,20 +75,44 @@ public final class SimulationApplicationRobotSoftwareSuiteArgs extends com.pulum
             $ = new SimulationApplicationRobotSoftwareSuiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<SimulationApplicationRobotSoftwareSuiteName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SimulationApplicationRobotSoftwareSuiteName name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param version The version of the robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<SimulationApplicationRobotSoftwareSuiteVersion> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the robot software suite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(SimulationApplicationRobotSoftwareSuiteVersion version) {
             return version(Output.of(version));
         }

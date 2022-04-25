@@ -27,6 +27,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointName", required=true)
     private Output<String> endpointName;
 
+    /**
+     * @return Name of the endpoint under the profile which is unique globally.
+     * 
+     */
     public Output<String> endpointName() {
         return this.endpointName;
     }
@@ -38,6 +42,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthProbeSettings")
     private @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
+    /**
+     * @return Health probe settings to the origin that is used to determine the health of the origin.
+     * 
+     */
     public Optional<Output<HealthProbeParametersArgs>> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
@@ -49,6 +57,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originGroupName")
     private @Nullable Output<String> originGroupName;
 
+    /**
+     * @return Name of the origin group which is unique within the endpoint.
+     * 
+     */
     public Optional<Output<String>> originGroupName() {
         return Optional.ofNullable(this.originGroupName);
     }
@@ -60,6 +72,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="origins", required=true)
     private Output<List<ResourceReferenceArgs>> origins;
 
+    /**
+     * @return The source of the content being delivered via CDN within given origin group.
+     * 
+     */
     public Output<List<ResourceReferenceArgs>> origins() {
         return this.origins;
     }
@@ -71,6 +87,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -82,6 +102,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseBasedOriginErrorDetectionSettings")
     private @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
+    /**
+     * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * 
+     */
     public Optional<Output<ResponseBasedOriginErrorDetectionParametersArgs>> responseBasedOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
@@ -104,6 +132,10 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
     private @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
+    /**
+     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * 
+     */
     public Optional<Output<Integer>> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
@@ -139,78 +171,180 @@ public final class OriginGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OriginGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName Name of the endpoint under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointName Name of the endpoint under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param healthProbeSettings Health probe settings to the origin that is used to determine the health of the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(@Nullable Output<HealthProbeParametersArgs> healthProbeSettings) {
             $.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
+        /**
+         * @param healthProbeSettings Health probe settings to the origin that is used to determine the health of the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(HealthProbeParametersArgs healthProbeSettings) {
             return healthProbeSettings(Output.of(healthProbeSettings));
         }
 
+        /**
+         * @param originGroupName Name of the origin group which is unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroupName(@Nullable Output<String> originGroupName) {
             $.originGroupName = originGroupName;
             return this;
         }
 
+        /**
+         * @param originGroupName Name of the origin group which is unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroupName(String originGroupName) {
             return originGroupName(Output.of(originGroupName));
         }
 
+        /**
+         * @param origins The source of the content being delivered via CDN within given origin group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(Output<List<ResourceReferenceArgs>> origins) {
             $.origins = origins;
             return this;
         }
 
+        /**
+         * @param origins The source of the content being delivered via CDN within given origin group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(List<ResourceReferenceArgs> origins) {
             return origins(Output.of(origins));
         }
 
+        /**
+         * @param origins The source of the content being delivered via CDN within given origin group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(ResourceReferenceArgs... origins) {
             return origins(List.of(origins));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param responseBasedOriginErrorDetectionSettings The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings) {
             $.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
 
+        /**
+         * @param responseBasedOriginErrorDetectionSettings The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBasedOriginErrorDetectionSettings(ResponseBasedOriginErrorDetectionParametersArgs responseBasedOriginErrorDetectionSettings) {
             return responseBasedOriginErrorDetectionSettings(Output.of(responseBasedOriginErrorDetectionSettings));
         }
 
+        /**
+         * @param trafficRestorationTimeToHealedOrNewEndpointsInMinutes Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             $.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
 
+        /**
+         * @param trafficRestorationTimeToHealedOrNewEndpointsInMinutes Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             return trafficRestorationTimeToHealedOrNewEndpointsInMinutes(Output.of(trafficRestorationTimeToHealedOrNewEndpointsInMinutes));
         }

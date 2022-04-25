@@ -25,6 +25,11 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessLevels")
     private @Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels;
 
+    /**
+     * @return The desired Access Levels that should replace all existing Access Levels in the Access Policy.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<AccessLevelsAccessLevelGetArgs>>> accessLevels() {
         return Optional.ofNullable(this.accessLevels);
     }
@@ -37,6 +42,11 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The AccessPolicy this AccessLevel lives in.
+     * Format: accessPolicies/{policy_id}
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -66,24 +76,59 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
             $ = new AccessLevelsState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLevels The desired Access Levels that should replace all existing Access Levels in the Access Policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(@Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels) {
             $.accessLevels = accessLevels;
             return this;
         }
 
+        /**
+         * @param accessLevels The desired Access Levels that should replace all existing Access Levels in the Access Policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(List<AccessLevelsAccessLevelGetArgs> accessLevels) {
             return accessLevels(Output.of(accessLevels));
         }
 
+        /**
+         * @param accessLevels The desired Access Levels that should replace all existing Access Levels in the Access Policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLevels(AccessLevelsAccessLevelGetArgs... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
 
+        /**
+         * @param parent The AccessPolicy this AccessLevel lives in.
+         * Format: accessPolicies/{policy_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The AccessPolicy this AccessLevel lives in.
+         * Format: accessPolicies/{policy_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

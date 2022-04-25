@@ -14,33 +14,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JitNetworkAccessRequestPortResponse {
     /**
-     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
      */
     private final @Nullable String allowedSourceAddressPrefix;
     /**
-     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
      */
     private final @Nullable List<String> allowedSourceAddressPrefixes;
     /**
-     * The date &amp; time at which the request ends in UTC
+     * @return The date &amp; time at which the request ends in UTC
      * 
      */
     private final String endTimeUtc;
     /**
-     * The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
+     * @return The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
      * 
      */
     private final @Nullable Integer mappedPort;
     private final Integer number;
     /**
-     * The status of the port
+     * @return The status of the port
      * 
      */
     private final String status;
     /**
-     * A description of why the `status` has its value
+     * @return A description of why the `status` has its value
      * 
      */
     private final String statusReason;
@@ -64,30 +64,30 @@ public final class JitNetworkAccessRequestPortResponse {
     }
 
     /**
-     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
-    */
+     */
     public Optional<String> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
     /**
-     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
-    */
+     */
     public List<String> allowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
     /**
-     * The date &amp; time at which the request ends in UTC
+     * @return The date &amp; time at which the request ends in UTC
      * 
-    */
+     */
     public String endTimeUtc() {
         return this.endTimeUtc;
     }
     /**
-     * The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
+     * @return The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
      * 
-    */
+     */
     public Optional<Integer> mappedPort() {
         return Optional.ofNullable(this.mappedPort);
     }
@@ -95,16 +95,16 @@ public final class JitNetworkAccessRequestPortResponse {
         return this.number;
     }
     /**
-     * The status of the port
+     * @return The status of the port
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * A description of why the `status` has its value
+     * @return A description of why the `status` has its value
      * 
-    */
+     */
     public String statusReason() {
         return this.statusReason;
     }

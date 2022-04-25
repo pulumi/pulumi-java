@@ -25,6 +25,10 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="clusterId")
     private @Nullable String clusterId;
 
+    /**
+     * @return Gets or sets the ARM Id of the cluster resource on which this virtual machine will deploy.
+     * 
+     */
     public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -36,6 +40,10 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="datastoreId")
     private @Nullable String datastoreId;
 
+    /**
+     * @return Gets or sets the ARM Id of the datastore resource on which the data for the virtual machine will be kept.
+     * 
+     */
     public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
@@ -47,6 +55,10 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="hostId")
     private @Nullable String hostId;
 
+    /**
+     * @return Gets or sets the ARM Id of the host resource on which this virtual machine will deploy.
+     * 
+     */
     public Optional<String> hostId() {
         return Optional.ofNullable(this.hostId);
     }
@@ -58,6 +70,10 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="resourcePoolId")
     private @Nullable String resourcePoolId;
 
+    /**
+     * @return Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will deploy.
+     * 
+     */
     public Optional<String> resourcePoolId() {
         return Optional.ofNullable(this.resourcePoolId);
     }
@@ -89,21 +105,45 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
             $ = new PlacementProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId Gets or sets the ARM Id of the cluster resource on which this virtual machine will deploy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable String clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param datastoreId Gets or sets the ARM Id of the datastore resource on which the data for the virtual machine will be kept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(@Nullable String datastoreId) {
             $.datastoreId = datastoreId;
             return this;
         }
 
+        /**
+         * @param hostId Gets or sets the ARM Id of the host resource on which this virtual machine will deploy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostId(@Nullable String hostId) {
             $.hostId = hostId;
             return this;
         }
 
+        /**
+         * @param resourcePoolId Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will deploy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePoolId(@Nullable String resourcePoolId) {
             $.resourcePoolId = resourcePoolId;
             return this;

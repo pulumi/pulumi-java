@@ -27,81 +27,81 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSystemTopicEventSubscriptionResult {
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     private final @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination;
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     private final @Nullable DeadLetterWithResourceIdentityResponse deadLetterWithResourceIdentity;
     /**
-     * Information about the destination where events have to be delivered for the event subscription.
+     * @return Information about the destination where events have to be delivered for the event subscription.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     private final @Nullable DeliveryWithResourceIdentityResponse deliveryWithResourceIdentity;
     /**
-     * Information about the destination where events have to be delivered for the event subscription.
+     * @return Information about the destination where events have to be delivered for the event subscription.
      * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
     private final @Nullable Object destination;
     /**
-     * The event delivery schema for the event subscription.
+     * @return The event delivery schema for the event subscription.
      * 
      */
     private final @Nullable String eventDeliverySchema;
     /**
-     * Expiration time of the event subscription.
+     * @return Expiration time of the event subscription.
      * 
      */
     private final @Nullable String expirationTimeUtc;
     /**
-     * Information about the filter for the event subscription.
+     * @return Information about the filter for the event subscription.
      * 
      */
     private final @Nullable EventSubscriptionFilterResponse filter;
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * List of user defined labels.
+     * @return List of user defined labels.
      * 
      */
     private final @Nullable List<String> labels;
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the event subscription.
+     * @return Provisioning state of the event subscription.
      * 
      */
     private final String provisioningState;
     /**
-     * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+     * @return The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
      */
     private final @Nullable RetryPolicyResponse retryPolicy;
     /**
-     * The system metadata relating to Event Subscription resource.
+     * @return The system metadata relating to Event Subscription resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Name of the topic of the event subscription.
+     * @return Name of the topic of the event subscription.
      * 
      */
     private final String topic;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -141,111 +141,111 @@ public final class GetSystemTopicEventSubscriptionResult {
     }
 
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
-    */
+     */
     public Optional<StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
     /**
-     * The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
+     * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its&#39; destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
-    */
+     */
     public Optional<DeadLetterWithResourceIdentityResponse> deadLetterWithResourceIdentity() {
         return Optional.ofNullable(this.deadLetterWithResourceIdentity);
     }
     /**
-     * Information about the destination where events have to be delivered for the event subscription.
+     * @return Information about the destination where events have to be delivered for the event subscription.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
-    */
+     */
     public Optional<DeliveryWithResourceIdentityResponse> deliveryWithResourceIdentity() {
         return Optional.ofNullable(this.deliveryWithResourceIdentity);
     }
     /**
-     * Information about the destination where events have to be delivered for the event subscription.
+     * @return Information about the destination where events have to be delivered for the event subscription.
      * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
-    */
+     */
     public Optional<Object> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
-     * The event delivery schema for the event subscription.
+     * @return The event delivery schema for the event subscription.
      * 
-    */
+     */
     public Optional<String> eventDeliverySchema() {
         return Optional.ofNullable(this.eventDeliverySchema);
     }
     /**
-     * Expiration time of the event subscription.
+     * @return Expiration time of the event subscription.
      * 
-    */
+     */
     public Optional<String> expirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
     /**
-     * Information about the filter for the event subscription.
+     * @return Information about the filter for the event subscription.
      * 
-    */
+     */
     public Optional<EventSubscriptionFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of user defined labels.
+     * @return List of user defined labels.
      * 
-    */
+     */
     public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the event subscription.
+     * @return Provisioning state of the event subscription.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+     * @return The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
-    */
+     */
     public Optional<RetryPolicyResponse> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
-     * The system metadata relating to Event Subscription resource.
+     * @return The system metadata relating to Event Subscription resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Name of the topic of the event subscription.
+     * @return Name of the topic of the event subscription.
      * 
-    */
+     */
     public String topic() {
         return this.topic;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

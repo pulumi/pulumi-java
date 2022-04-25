@@ -23,6 +23,10 @@ public final class FeatureStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The high-level, machine-readable status of this Feature.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class FeatureStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A human-readable description of the current status.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -45,6 +53,10 @@ public final class FeatureStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The time this status and any related Feature-specific details were updated.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -75,16 +87,34 @@ public final class FeatureStateResponse extends com.pulumi.resources.InvokeArgs 
             $ = new FeatureStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The high-level, machine-readable status of this Feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param description A human-readable description of the current status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param updateTime The time this status and any related Feature-specific details were updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

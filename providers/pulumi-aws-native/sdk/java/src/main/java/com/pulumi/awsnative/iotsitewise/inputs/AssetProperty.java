@@ -26,6 +26,10 @@ public final class AssetProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="alias")
     private @Nullable String alias;
 
+    /**
+     * @return The property alias that identifies the property.
+     * 
+     */
     public Optional<String> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -37,6 +41,10 @@ public final class AssetProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="logicalId", required=true)
     private String logicalId;
 
+    /**
+     * @return Customer provided ID for property.
+     * 
+     */
     public String logicalId() {
         return this.logicalId;
     }
@@ -48,6 +56,10 @@ public final class AssetProperty extends com.pulumi.resources.InvokeArgs {
     @Import(name="notificationState")
     private @Nullable AssetPropertyNotificationState notificationState;
 
+    /**
+     * @return The MQTT notification state (ENABLED or DISABLED) for this asset property.
+     * 
+     */
     public Optional<AssetPropertyNotificationState> notificationState() {
         return Optional.ofNullable(this.notificationState);
     }
@@ -78,16 +90,34 @@ public final class AssetProperty extends com.pulumi.resources.InvokeArgs {
             $ = new AssetProperty(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The property alias that identifies the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable String alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param logicalId Customer provided ID for property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(String logicalId) {
             $.logicalId = logicalId;
             return this;
         }
 
+        /**
+         * @param notificationState The MQTT notification state (ENABLED or DISABLED) for this asset property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationState(@Nullable AssetPropertyNotificationState notificationState) {
             $.notificationState = notificationState;
             return this;

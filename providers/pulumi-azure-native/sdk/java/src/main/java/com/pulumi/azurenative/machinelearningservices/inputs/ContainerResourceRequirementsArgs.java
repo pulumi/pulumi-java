@@ -28,6 +28,11 @@ public final class ContainerResourceRequirementsArgs extends com.pulumi.resource
     @Import(name="cpu")
     private @Nullable Output<Double> cpu;
 
+    /**
+     * @return The minimum amount of CPU cores to be used by the container. More info:
+     * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+     * 
+     */
     public Optional<Output<Double>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -40,6 +45,11 @@ public final class ContainerResourceRequirementsArgs extends com.pulumi.resource
     @Import(name="cpuLimit")
     private @Nullable Output<Double> cpuLimit;
 
+    /**
+     * @return The maximum amount of CPU cores allowed to be used by the container. More info:
+     * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+     * 
+     */
     public Optional<Output<Double>> cpuLimit() {
         return Optional.ofNullable(this.cpuLimit);
     }
@@ -51,6 +61,10 @@ public final class ContainerResourceRequirementsArgs extends com.pulumi.resource
     @Import(name="fpga")
     private @Nullable Output<Integer> fpga;
 
+    /**
+     * @return The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+     * 
+     */
     public Optional<Output<Integer>> fpga() {
         return Optional.ofNullable(this.fpga);
     }
@@ -62,6 +76,10 @@ public final class ContainerResourceRequirementsArgs extends com.pulumi.resource
     @Import(name="gpu")
     private @Nullable Output<Integer> gpu;
 
+    /**
+     * @return The number of GPU cores in the container.
+     * 
+     */
     public Optional<Output<Integer>> gpu() {
         return Optional.ofNullable(this.gpu);
     }
@@ -74,6 +92,11 @@ public final class ContainerResourceRequirementsArgs extends com.pulumi.resource
     @Import(name="memoryInGB")
     private @Nullable Output<Double> memoryInGB;
 
+    /**
+     * @return The minimum amount of memory (in GB) to be used by the container. More info:
+     * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+     * 
+     */
     public Optional<Output<Double>> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
@@ -86,6 +109,11 @@ public final class ContainerResourceRequirementsArgs extends com.pulumi.resource
     @Import(name="memoryInGBLimit")
     private @Nullable Output<Double> memoryInGBLimit;
 
+    /**
+     * @return The maximum amount of memory (in GB) allowed to be used by the container. More info:
+     * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+     * 
+     */
     public Optional<Output<Double>> memoryInGBLimit() {
         return Optional.ofNullable(this.memoryInGBLimit);
     }
@@ -119,56 +147,136 @@ public final class ContainerResourceRequirementsArgs extends com.pulumi.resource
             $ = new ContainerResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu The minimum amount of CPU cores to be used by the container. More info:
+         * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu The minimum amount of CPU cores to be used by the container. More info:
+         * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param cpuLimit The maximum amount of CPU cores allowed to be used by the container. More info:
+         * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuLimit(@Nullable Output<Double> cpuLimit) {
             $.cpuLimit = cpuLimit;
             return this;
         }
 
+        /**
+         * @param cpuLimit The maximum amount of CPU cores allowed to be used by the container. More info:
+         * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuLimit(Double cpuLimit) {
             return cpuLimit(Output.of(cpuLimit));
         }
 
+        /**
+         * @param fpga The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fpga(@Nullable Output<Integer> fpga) {
             $.fpga = fpga;
             return this;
         }
 
+        /**
+         * @param fpga The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fpga(Integer fpga) {
             return fpga(Output.of(fpga));
         }
 
+        /**
+         * @param gpu The number of GPU cores in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(@Nullable Output<Integer> gpu) {
             $.gpu = gpu;
             return this;
         }
 
+        /**
+         * @param gpu The number of GPU cores in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(Integer gpu) {
             return gpu(Output.of(gpu));
         }
 
+        /**
+         * @param memoryInGB The minimum amount of memory (in GB) to be used by the container. More info:
+         * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;
         }
 
+        /**
+         * @param memoryInGB The minimum amount of memory (in GB) to be used by the container. More info:
+         * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Double memoryInGB) {
             return memoryInGB(Output.of(memoryInGB));
         }
 
+        /**
+         * @param memoryInGBLimit The maximum amount of memory (in GB) allowed to be used by the container. More info:
+         * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGBLimit(@Nullable Output<Double> memoryInGBLimit) {
             $.memoryInGBLimit = memoryInGBLimit;
             return this;
         }
 
+        /**
+         * @param memoryInGBLimit The maximum amount of memory (in GB) allowed to be used by the container. More info:
+         * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGBLimit(Double memoryInGBLimit) {
             return memoryInGBLimit(Output.of(memoryInGBLimit));
         }

@@ -24,6 +24,10 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends com.pulum
     @Import(name="timeBasedCanary")
     private @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> timeBasedCanary;
 
+    /**
+     * @return The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+     * 
+     */
     public Optional<Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs>> timeBasedCanary() {
         return Optional.ofNullable(this.timeBasedCanary);
     }
@@ -35,6 +39,10 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends com.pulum
     @Import(name="timeBasedLinear")
     private @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> timeBasedLinear;
 
+    /**
+     * @return The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+     * 
+     */
     public Optional<Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs>> timeBasedLinear() {
         return Optional.ofNullable(this.timeBasedLinear);
     }
@@ -46,6 +54,10 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends com.pulum
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -76,29 +88,65 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends com.pulum
             $ = new DeploymentConfigTrafficRoutingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param timeBasedCanary The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeBasedCanary(@Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> timeBasedCanary) {
             $.timeBasedCanary = timeBasedCanary;
             return this;
         }
 
+        /**
+         * @param timeBasedCanary The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeBasedCanary(DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs timeBasedCanary) {
             return timeBasedCanary(Output.of(timeBasedCanary));
         }
 
+        /**
+         * @param timeBasedLinear The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeBasedLinear(@Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> timeBasedLinear) {
             $.timeBasedLinear = timeBasedLinear;
             return this;
         }
 
+        /**
+         * @param timeBasedLinear The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeBasedLinear(DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs timeBasedLinear) {
             return timeBasedLinear(Output.of(timeBasedLinear));
         }
 
+        /**
+         * @param type Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

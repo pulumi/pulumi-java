@@ -23,6 +23,10 @@ public final class IosAppInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the app. Required
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class IosAppInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IosAppInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the app. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

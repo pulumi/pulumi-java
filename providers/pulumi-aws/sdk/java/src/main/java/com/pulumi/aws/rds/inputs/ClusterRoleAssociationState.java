@@ -22,6 +22,10 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
     @Import(name="dbClusterIdentifier")
     private @Nullable Output<String> dbClusterIdentifier;
 
+    /**
+     * @return DB Cluster Identifier to associate with the IAM Role.
+     * 
+     */
     public Optional<Output<String>> dbClusterIdentifier() {
         return Optional.ofNullable(this.dbClusterIdentifier);
     }
@@ -33,6 +37,10 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
     @Import(name="featureName")
     private @Nullable Output<String> featureName;
 
+    /**
+     * @return Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
+     * 
+     */
     public Optional<Output<String>> featureName() {
         return Optional.ofNullable(this.featureName);
     }
@@ -44,6 +52,10 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role to associate with the DB Cluster.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -74,29 +86,65 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
             $ = new ClusterRoleAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dbClusterIdentifier DB Cluster Identifier to associate with the IAM Role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
             $.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
+        /**
+         * @param dbClusterIdentifier DB Cluster Identifier to associate with the IAM Role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             return dbClusterIdentifier(Output.of(dbClusterIdentifier));
         }
 
+        /**
+         * @param featureName Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureName(@Nullable Output<String> featureName) {
             $.featureName = featureName;
             return this;
         }
 
+        /**
+         * @param featureName Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureName(String featureName) {
             return featureName(Output.of(featureName));
         }
 
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to associate with the DB Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to associate with the DB Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

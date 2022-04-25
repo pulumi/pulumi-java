@@ -19,6 +19,10 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -30,6 +34,10 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
     @Import(name="roleName", required=true)
     private String roleName;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public String roleName() {
         return this.roleName;
     }
@@ -71,16 +83,34 @@ public final class GetMonitoringConfigArgs extends com.pulumi.resources.InvokeAr
             $ = new GetMonitoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             $.roleName = roleName;
             return this;

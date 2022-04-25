@@ -12,28 +12,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class A2AProtectionContainerMappingDetailsResponse {
     /**
-     * A value indicating whether the auto update is enabled.
+     * @return A value indicating whether the auto update is enabled.
      * 
      */
     private final @Nullable String agentAutoUpdateStatus;
     /**
-     * The automation account arm id.
+     * @return The automation account arm id.
      * 
      */
     private final @Nullable String automationAccountArmId;
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;A2A&#39;.
      * 
      */
     private final String instanceType;
     /**
-     * The job schedule arm name.
+     * @return The job schedule arm name.
      * 
      */
     private final @Nullable String jobScheduleName;
     /**
-     * The schedule arm name.
+     * @return The schedule arm name.
      * 
      */
     private final @Nullable String scheduleName;
@@ -53,38 +53,38 @@ public final class A2AProtectionContainerMappingDetailsResponse {
     }
 
     /**
-     * A value indicating whether the auto update is enabled.
+     * @return A value indicating whether the auto update is enabled.
      * 
-    */
+     */
     public Optional<String> agentAutoUpdateStatus() {
         return Optional.ofNullable(this.agentAutoUpdateStatus);
     }
     /**
-     * The automation account arm id.
+     * @return The automation account arm id.
      * 
-    */
+     */
     public Optional<String> automationAccountArmId() {
         return Optional.ofNullable(this.automationAccountArmId);
     }
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;A2A&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The job schedule arm name.
+     * @return The job schedule arm name.
      * 
-    */
+     */
     public Optional<String> jobScheduleName() {
         return Optional.ofNullable(this.jobScheduleName);
     }
     /**
-     * The schedule arm name.
+     * @return The schedule arm name.
      * 
-    */
+     */
     public Optional<String> scheduleName() {
         return Optional.ofNullable(this.scheduleName);
     }

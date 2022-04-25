@@ -23,6 +23,10 @@ public final class LabelDescriptorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A human-readable description for the label.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -34,6 +38,10 @@ public final class LabelDescriptorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The label key.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -45,6 +53,10 @@ public final class LabelDescriptorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="valueType", required=true)
     private String valueType;
 
+    /**
+     * @return The type of data that can be assigned to the label.
+     * 
+     */
     public String valueType() {
         return this.valueType;
     }
@@ -75,16 +87,34 @@ public final class LabelDescriptorResponse extends com.pulumi.resources.InvokeAr
             $ = new LabelDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description for the label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param key The label key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param valueType The type of data that can be assigned to the label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueType(String valueType) {
             $.valueType = valueType;
             return this;

@@ -22,6 +22,11 @@ public final class GetAppEngineServiceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="moduleId", required=true)
     private String moduleId;
 
+    /**
+     * @return The ID of the App Engine module underlying this
+     * service. Corresponds to the moduleId resource label in the [gae_app](https://cloud.google.com/monitoring/api/resources#tag_gae_app) monitored resource, or the service/module name.
+     * 
+     */
     public String moduleId() {
         return this.moduleId;
     }
@@ -34,6 +39,11 @@ public final class GetAppEngineServiceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -63,11 +73,25 @@ public final class GetAppEngineServiceArgs extends com.pulumi.resources.InvokeAr
             $ = new GetAppEngineServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param moduleId The ID of the App Engine module underlying this
+         * service. Corresponds to the moduleId resource label in the [gae_app](https://cloud.google.com/monitoring/api/resources#tag_gae_app) monitored resource, or the service/module name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moduleId(String moduleId) {
             $.moduleId = moduleId;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

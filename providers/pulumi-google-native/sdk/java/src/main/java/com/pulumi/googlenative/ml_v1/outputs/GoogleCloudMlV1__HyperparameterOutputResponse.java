@@ -15,52 +15,52 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudMlV1__HyperparameterOutputResponse {
     /**
-     * All recorded object metrics for this trial. This field is not currently populated.
+     * @return All recorded object metrics for this trial. This field is not currently populated.
      * 
      */
     private final List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
     /**
-     * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+     * @return Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
      * 
      */
     private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
     /**
-     * End time for the trial.
+     * @return End time for the trial.
      * 
      */
     private final String endTime;
     /**
-     * The final objective metric seen for this trial.
+     * @return The final objective metric seen for this trial.
      * 
      */
     private final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
     /**
-     * The hyperparameters given to this trial.
+     * @return The hyperparameters given to this trial.
      * 
      */
     private final Map<String,String> hyperparameters;
     /**
-     * True if the trial is stopped early.
+     * @return True if the trial is stopped early.
      * 
      */
     private final Boolean isTrialStoppedEarly;
     /**
-     * Start time for the trial.
+     * @return Start time for the trial.
      * 
      */
     private final String startTime;
     /**
-     * The detailed state of the trial.
+     * @return The detailed state of the trial.
      * 
      */
     private final String state;
     /**
-     * The trial id for these results.
+     * @return The trial id for these results.
      * 
      */
     private final String trialId;
     /**
-     * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
+     * @return URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
      * 
      */
     private final Map<String,String> webAccessUris;
@@ -90,72 +90,72 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
     }
 
     /**
-     * All recorded object metrics for this trial. This field is not currently populated.
+     * @return All recorded object metrics for this trial. This field is not currently populated.
      * 
-    */
+     */
     public List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics() {
         return this.allMetrics;
     }
     /**
-     * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+     * @return Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
      * 
-    */
+     */
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
     }
     /**
-     * End time for the trial.
+     * @return End time for the trial.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The final objective metric seen for this trial.
+     * @return The final objective metric seen for this trial.
      * 
-    */
+     */
     public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric() {
         return this.finalMetric;
     }
     /**
-     * The hyperparameters given to this trial.
+     * @return The hyperparameters given to this trial.
      * 
-    */
+     */
     public Map<String,String> hyperparameters() {
         return this.hyperparameters;
     }
     /**
-     * True if the trial is stopped early.
+     * @return True if the trial is stopped early.
      * 
-    */
+     */
     public Boolean isTrialStoppedEarly() {
         return this.isTrialStoppedEarly;
     }
     /**
-     * Start time for the trial.
+     * @return Start time for the trial.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The detailed state of the trial.
+     * @return The detailed state of the trial.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The trial id for these results.
+     * @return The trial id for these results.
      * 
-    */
+     */
     public String trialId() {
         return this.trialId;
     }
     /**
-     * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
+     * @return URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job&#39;s training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node&#39;s interactive shell.
      * 
-    */
+     */
     public Map<String,String> webAccessUris() {
         return this.webAccessUris;
     }

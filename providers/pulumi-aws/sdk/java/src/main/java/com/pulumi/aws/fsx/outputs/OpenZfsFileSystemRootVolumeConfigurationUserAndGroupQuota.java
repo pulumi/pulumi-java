@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota {
     /**
-     * - The ID of the user or group. Valid values between `0` and `2147483647`
+     * @return - The ID of the user or group. Valid values between `0` and `2147483647`
      * 
      */
     private final Integer id;
     /**
-     * - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
+     * @return - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
      * 
      */
     private final Integer storageCapacityQuotaGib;
@@ -33,16 +33,16 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota {
     }
 
     /**
-     * - The ID of the user or group. Valid values between `0` and `2147483647`
+     * @return - The ID of the user or group. Valid values between `0` and `2147483647`
      * 
-    */
+     */
     public Integer id() {
         return this.id;
     }
     /**
-     * - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
+     * @return - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
      * 
-    */
+     */
     public Integer storageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }

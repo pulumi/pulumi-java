@@ -23,6 +23,10 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse extends com.pulumi.
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse extends com.pulumi.
             $ = new GoogleCloudMlV1__EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;

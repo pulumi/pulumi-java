@@ -28,6 +28,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="connectionState")
     private @Nullable ConnectionStatePropertiesResponse connectionState;
 
+    /**
+     * @return The managed private endpoint connection state
+     * 
+     */
     public Optional<ConnectionStatePropertiesResponse> connectionState() {
         return Optional.ofNullable(this.connectionState);
     }
@@ -39,6 +43,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="fqdns")
     private @Nullable List<String> fqdns;
 
+    /**
+     * @return Fully qualified domain names
+     * 
+     */
     public Optional<List<String>> fqdns() {
         return Optional.ofNullable(this.fqdns);
     }
@@ -50,6 +58,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="groupId")
     private @Nullable String groupId;
 
+    /**
+     * @return The groupId to which the managed private endpoint is created
+     * 
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -61,6 +73,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="isReserved", required=true)
     private Boolean isReserved;
 
+    /**
+     * @return Denotes whether the managed private endpoint is reserved
+     * 
+     */
     public Boolean isReserved() {
         return this.isReserved;
     }
@@ -72,6 +88,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="privateLinkResourceId")
     private @Nullable String privateLinkResourceId;
 
+    /**
+     * @return The ARM resource ID of the resource to which the managed private endpoint is created
+     * 
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -83,6 +103,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The managed private endpoint provisioning state
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -116,35 +140,77 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
             $ = new ManagedPrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionState The managed private endpoint connection state
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionState(@Nullable ConnectionStatePropertiesResponse connectionState) {
             $.connectionState = connectionState;
             return this;
         }
 
+        /**
+         * @param fqdns Fully qualified domain names
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(@Nullable List<String> fqdns) {
             $.fqdns = fqdns;
             return this;
         }
 
+        /**
+         * @param fqdns Fully qualified domain names
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
 
+        /**
+         * @param groupId The groupId to which the managed private endpoint is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param isReserved Denotes whether the managed private endpoint is reserved
+         * 
+         * @return builder
+         * 
+         */
         public Builder isReserved(Boolean isReserved) {
             $.isReserved = isReserved;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The ARM resource ID of the resource to which the managed private endpoint is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param provisioningState The managed private endpoint provisioning state
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

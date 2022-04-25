@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvironmentSuperuserParameters {
     /**
-     * Email address
+     * @return Email address
      * 
      */
     private final @Nullable String emailAddress;
     /**
-     * First name
+     * @return First name
      * 
      */
     private final @Nullable String firstName;
     /**
-     * Last name
+     * @return Last name
      * 
      */
     private final @Nullable String lastName;
@@ -38,23 +38,23 @@ public final class EnvironmentSuperuserParameters {
     }
 
     /**
-     * Email address
+     * @return Email address
      * 
-    */
+     */
     public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
     /**
-     * First name
+     * @return First name
      * 
-    */
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
-     * Last name
+     * @return Last name
      * 
-    */
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }

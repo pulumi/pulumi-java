@@ -22,6 +22,10 @@ public final class ServiceDeploymentControllerGetArgs extends com.pulumi.resourc
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -50,11 +54,23 @@ public final class ServiceDeploymentControllerGetArgs extends com.pulumi.resourc
             $ = new ServiceDeploymentControllerGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

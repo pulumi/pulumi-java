@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GetServerTrustGroupResult {
     /**
-     * Group members information for the server trust group.
+     * @return Group members information for the server trust group.
      * 
      */
     private final List<ServerInfoResponse> groupMembers;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Trust scope of the server trust group.
+     * @return Trust scope of the server trust group.
      * 
      */
     private final List<String> trustScopes;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -52,37 +52,37 @@ public final class GetServerTrustGroupResult {
     }
 
     /**
-     * Group members information for the server trust group.
+     * @return Group members information for the server trust group.
      * 
-    */
+     */
     public List<ServerInfoResponse> groupMembers() {
         return this.groupMembers;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Trust scope of the server trust group.
+     * @return Trust scope of the server trust group.
      * 
-    */
+     */
     public List<String> trustScopes() {
         return this.trustScopes;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -18,47 +18,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlowletResponse {
     /**
-     * List of tags that can be used for describing the data flow.
+     * @return List of tags that can be used for describing the data flow.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The description of the data flow.
+     * @return The description of the data flow.
      * 
      */
     private final @Nullable String description;
     /**
-     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
      */
     private final @Nullable DataFlowResponseFolder folder;
     /**
-     * Flowlet script.
+     * @return Flowlet script.
      * 
      */
     private final @Nullable String script;
     /**
-     * Flowlet script lines.
+     * @return Flowlet script lines.
      * 
      */
     private final @Nullable List<String> scriptLines;
     /**
-     * List of sinks in Flowlet.
+     * @return List of sinks in Flowlet.
      * 
      */
     private final @Nullable List<DataFlowSinkResponse> sinks;
     /**
-     * List of sources in Flowlet.
+     * @return List of sources in Flowlet.
      * 
      */
     private final @Nullable List<DataFlowSourceResponse> sources;
     /**
-     * List of transformations in Flowlet.
+     * @return List of transformations in Flowlet.
      * 
      */
     private final @Nullable List<TransformationResponse> transformations;
     /**
-     * Type of data flow.
+     * @return Type of data flow.
      * Expected value is &#39;Flowlet&#39;.
      * 
      */
@@ -87,66 +87,66 @@ public final class FlowletResponse {
     }
 
     /**
-     * List of tags that can be used for describing the data flow.
+     * @return List of tags that can be used for describing the data flow.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The description of the data flow.
+     * @return The description of the data flow.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     * @return The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
-    */
+     */
     public Optional<DataFlowResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
-     * Flowlet script.
+     * @return Flowlet script.
      * 
-    */
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
     /**
-     * Flowlet script lines.
+     * @return Flowlet script lines.
      * 
-    */
+     */
     public List<String> scriptLines() {
         return this.scriptLines == null ? List.of() : this.scriptLines;
     }
     /**
-     * List of sinks in Flowlet.
+     * @return List of sinks in Flowlet.
      * 
-    */
+     */
     public List<DataFlowSinkResponse> sinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }
     /**
-     * List of sources in Flowlet.
+     * @return List of sources in Flowlet.
      * 
-    */
+     */
     public List<DataFlowSourceResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
-     * List of transformations in Flowlet.
+     * @return List of transformations in Flowlet.
      * 
-    */
+     */
     public List<TransformationResponse> transformations() {
         return this.transformations == null ? List.of() : this.transformations;
     }
     /**
-     * Type of data flow.
+     * @return Type of data flow.
      * Expected value is &#39;Flowlet&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

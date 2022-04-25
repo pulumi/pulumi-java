@@ -19,6 +19,10 @@ public final class GetReportPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="reportPlanArn", required=true)
     private String reportPlanArn;
 
+    /**
+     * @return An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
+     * 
+     */
     public String reportPlanArn() {
         return this.reportPlanArn;
     }
@@ -47,6 +51,12 @@ public final class GetReportPlanArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetReportPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reportPlanArn An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportPlanArn(String reportPlanArn) {
             $.reportPlanArn = reportPlanArn;
             return this;

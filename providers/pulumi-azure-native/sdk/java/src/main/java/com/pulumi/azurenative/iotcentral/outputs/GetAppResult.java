@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAppResult {
     /**
-     * The ID of the application.
+     * @return The ID of the application.
      * 
      */
     private final String applicationId;
     /**
-     * The display name of the application.
+     * @return The display name of the application.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The ARM resource identifier.
+     * @return The ARM resource identifier.
      * 
      */
     private final String id;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final String location;
     /**
-     * The ARM resource name.
+     * @return The ARM resource name.
      * 
      */
     private final String name;
     /**
-     * A valid instance SKU.
+     * @return A valid instance SKU.
      * 
      */
     private final AppSkuInfoResponse sku;
     /**
-     * The subdomain of the application.
+     * @return The subdomain of the application.
      * 
      */
     private final @Nullable String subdomain;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
+     * @return The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
      */
     private final @Nullable String template;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -89,72 +89,72 @@ public final class GetAppResult {
     }
 
     /**
-     * The ID of the application.
+     * @return The ID of the application.
      * 
-    */
+     */
     public String applicationId() {
         return this.applicationId;
     }
     /**
-     * The display name of the application.
+     * @return The display name of the application.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The ARM resource identifier.
+     * @return The ARM resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The ARM resource name.
+     * @return The ARM resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A valid instance SKU.
+     * @return A valid instance SKU.
      * 
-    */
+     */
     public AppSkuInfoResponse sku() {
         return this.sku;
     }
     /**
-     * The subdomain of the application.
+     * @return The subdomain of the application.
      * 
-    */
+     */
     public Optional<String> subdomain() {
         return Optional.ofNullable(this.subdomain);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
+     * @return The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
-    */
+     */
     public Optional<String> template() {
         return Optional.ofNullable(this.template);
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

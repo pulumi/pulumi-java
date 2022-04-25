@@ -27,6 +27,10 @@ public final class APIServiceStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="conditions")
     private @Nullable Output<List<APIServiceConditionArgs>> conditions;
 
+    /**
+     * @return Current service state of apiService.
+     * 
+     */
     public Optional<Output<List<APIServiceConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -55,15 +59,33 @@ public final class APIServiceStatusArgs extends com.pulumi.resources.ResourceArg
             $ = new APIServiceStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Current service state of apiService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<APIServiceConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Current service state of apiService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<APIServiceConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Current service state of apiService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(APIServiceConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }

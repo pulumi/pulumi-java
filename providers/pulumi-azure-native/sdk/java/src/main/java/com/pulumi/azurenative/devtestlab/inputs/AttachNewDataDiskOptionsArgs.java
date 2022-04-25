@@ -29,6 +29,10 @@ public final class AttachNewDataDiskOptionsArgs extends com.pulumi.resources.Res
     @Import(name="diskName")
     private @Nullable Output<String> diskName;
 
+    /**
+     * @return The name of the disk to be attached.
+     * 
+     */
     public Optional<Output<String>> diskName() {
         return Optional.ofNullable(this.diskName);
     }
@@ -40,6 +44,10 @@ public final class AttachNewDataDiskOptionsArgs extends com.pulumi.resources.Res
     @Import(name="diskSizeGiB")
     private @Nullable Output<Integer> diskSizeGiB;
 
+    /**
+     * @return Size of the disk to be attached in Gibibytes.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
@@ -51,6 +59,10 @@ public final class AttachNewDataDiskOptionsArgs extends com.pulumi.resources.Res
     @Import(name="diskType")
     private @Nullable Output<Either<String,StorageType>> diskType;
 
+    /**
+     * @return The storage type for the disk (i.e. Standard, Premium).
+     * 
+     */
     public Optional<Output<Either<String,StorageType>>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -81,37 +93,85 @@ public final class AttachNewDataDiskOptionsArgs extends com.pulumi.resources.Res
             $ = new AttachNewDataDiskOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskName The name of the disk to be attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(@Nullable Output<String> diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskName The name of the disk to be attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             return diskName(Output.of(diskName));
         }
 
+        /**
+         * @param diskSizeGiB Size of the disk to be attached in Gibibytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGiB(@Nullable Output<Integer> diskSizeGiB) {
             $.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
+        /**
+         * @param diskSizeGiB Size of the disk to be attached in Gibibytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGiB(Integer diskSizeGiB) {
             return diskSizeGiB(Output.of(diskSizeGiB));
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<Either<String,StorageType>> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(Either<String,StorageType> diskType) {
             return diskType(Output.of(diskType));
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Either.ofLeft(diskType));
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(StorageType diskType) {
             return diskType(Either.ofRight(diskType));
         }

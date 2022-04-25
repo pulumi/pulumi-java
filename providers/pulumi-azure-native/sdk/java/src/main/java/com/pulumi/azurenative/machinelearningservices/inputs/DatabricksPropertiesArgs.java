@@ -22,6 +22,10 @@ public final class DatabricksPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="databricksAccessToken")
     private @Nullable Output<String> databricksAccessToken;
 
+    /**
+     * @return Databricks access token
+     * 
+     */
     public Optional<Output<String>> databricksAccessToken() {
         return Optional.ofNullable(this.databricksAccessToken);
     }
@@ -33,6 +37,10 @@ public final class DatabricksPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="workspaceUrl")
     private @Nullable Output<String> workspaceUrl;
 
+    /**
+     * @return Workspace Url
+     * 
+     */
     public Optional<Output<String>> workspaceUrl() {
         return Optional.ofNullable(this.workspaceUrl);
     }
@@ -62,20 +70,44 @@ public final class DatabricksPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new DatabricksPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databricksAccessToken Databricks access token
+         * 
+         * @return builder
+         * 
+         */
         public Builder databricksAccessToken(@Nullable Output<String> databricksAccessToken) {
             $.databricksAccessToken = databricksAccessToken;
             return this;
         }
 
+        /**
+         * @param databricksAccessToken Databricks access token
+         * 
+         * @return builder
+         * 
+         */
         public Builder databricksAccessToken(String databricksAccessToken) {
             return databricksAccessToken(Output.of(databricksAccessToken));
         }
 
+        /**
+         * @param workspaceUrl Workspace Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceUrl(@Nullable Output<String> workspaceUrl) {
             $.workspaceUrl = workspaceUrl;
             return this;
         }
 
+        /**
+         * @param workspaceUrl Workspace Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceUrl(String workspaceUrl) {
             return workspaceUrl(Output.of(workspaceUrl));
         }

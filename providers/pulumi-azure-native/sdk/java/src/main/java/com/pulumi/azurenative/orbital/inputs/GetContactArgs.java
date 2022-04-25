@@ -19,6 +19,10 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="contactName", required=true)
     private String contactName;
 
+    /**
+     * @return Contact Name
+     * 
+     */
     public String contactName() {
         return this.contactName;
     }
@@ -30,6 +34,10 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="spacecraftName", required=true)
     private String spacecraftName;
 
+    /**
+     * @return Spacecraft ID
+     * 
+     */
     public String spacecraftName() {
         return this.spacecraftName;
     }
@@ -71,16 +83,34 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactName Contact Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactName(String contactName) {
             $.contactName = contactName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder spacecraftName(String spacecraftName) {
             $.spacecraftName = spacecraftName;
             return this;

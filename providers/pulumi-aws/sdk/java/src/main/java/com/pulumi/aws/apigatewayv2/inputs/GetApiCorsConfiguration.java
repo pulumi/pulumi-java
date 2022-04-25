@@ -22,6 +22,10 @@ public final class GetApiCorsConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="allowCredentials", required=true)
     private Boolean allowCredentials;
 
+    /**
+     * @return Whether credentials are included in the CORS request.
+     * 
+     */
     public Boolean allowCredentials() {
         return this.allowCredentials;
     }
@@ -33,6 +37,10 @@ public final class GetApiCorsConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="allowHeaders", required=true)
     private List<String> allowHeaders;
 
+    /**
+     * @return The set of allowed HTTP headers.
+     * 
+     */
     public List<String> allowHeaders() {
         return this.allowHeaders;
     }
@@ -44,6 +52,10 @@ public final class GetApiCorsConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="allowMethods", required=true)
     private List<String> allowMethods;
 
+    /**
+     * @return The set of allowed HTTP methods.
+     * 
+     */
     public List<String> allowMethods() {
         return this.allowMethods;
     }
@@ -55,6 +67,10 @@ public final class GetApiCorsConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="allowOrigins", required=true)
     private List<String> allowOrigins;
 
+    /**
+     * @return The set of allowed origins.
+     * 
+     */
     public List<String> allowOrigins() {
         return this.allowOrigins;
     }
@@ -66,6 +82,10 @@ public final class GetApiCorsConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="exposeHeaders", required=true)
     private List<String> exposeHeaders;
 
+    /**
+     * @return The set of exposed HTTP headers.
+     * 
+     */
     public List<String> exposeHeaders() {
         return this.exposeHeaders;
     }
@@ -77,6 +97,10 @@ public final class GetApiCorsConfiguration extends com.pulumi.resources.InvokeAr
     @Import(name="maxAge", required=true)
     private Integer maxAge;
 
+    /**
+     * @return The number of seconds that the browser should cache preflight request results.
+     * 
+     */
     public Integer maxAge() {
         return this.maxAge;
     }
@@ -110,47 +134,107 @@ public final class GetApiCorsConfiguration extends com.pulumi.resources.InvokeAr
             $ = new GetApiCorsConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCredentials Whether credentials are included in the CORS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(Boolean allowCredentials) {
             $.allowCredentials = allowCredentials;
             return this;
         }
 
+        /**
+         * @param allowHeaders The set of allowed HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHeaders(List<String> allowHeaders) {
             $.allowHeaders = allowHeaders;
             return this;
         }
 
+        /**
+         * @param allowHeaders The set of allowed HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowHeaders(String... allowHeaders) {
             return allowHeaders(List.of(allowHeaders));
         }
 
+        /**
+         * @param allowMethods The set of allowed HTTP methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMethods(List<String> allowMethods) {
             $.allowMethods = allowMethods;
             return this;
         }
 
+        /**
+         * @param allowMethods The set of allowed HTTP methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMethods(String... allowMethods) {
             return allowMethods(List.of(allowMethods));
         }
 
+        /**
+         * @param allowOrigins The set of allowed origins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOrigins(List<String> allowOrigins) {
             $.allowOrigins = allowOrigins;
             return this;
         }
 
+        /**
+         * @param allowOrigins The set of allowed origins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOrigins(String... allowOrigins) {
             return allowOrigins(List.of(allowOrigins));
         }
 
+        /**
+         * @param exposeHeaders The set of exposed HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeHeaders(List<String> exposeHeaders) {
             $.exposeHeaders = exposeHeaders;
             return this;
         }
 
+        /**
+         * @param exposeHeaders The set of exposed HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposeHeaders(String... exposeHeaders) {
             return exposeHeaders(List.of(exposeHeaders));
         }
 
+        /**
+         * @param maxAge The number of seconds that the browser should cache preflight request results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(Integer maxAge) {
             $.maxAge = maxAge;
             return this;

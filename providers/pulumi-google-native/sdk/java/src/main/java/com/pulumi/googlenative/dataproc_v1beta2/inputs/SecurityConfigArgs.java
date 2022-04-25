@@ -26,6 +26,10 @@ public final class SecurityConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kerberosConfig")
     private @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
+    /**
+     * @return Optional. Kerberos related configuration.
+     * 
+     */
     public Optional<Output<KerberosConfigArgs>> kerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }
@@ -54,11 +58,23 @@ public final class SecurityConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SecurityConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kerberosConfig Optional. Kerberos related configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
             $.kerberosConfig = kerberosConfig;
             return this;
         }
 
+        /**
+         * @param kerberosConfig Optional. Kerberos related configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(KerberosConfigArgs kerberosConfig) {
             return kerberosConfig(Output.of(kerberosConfig));
         }

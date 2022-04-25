@@ -26,6 +26,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
     private @Nullable Output<String> bundleId;
 
+    /**
+     * @return Bundle ID of the app.
+     * 
+     */
     public Optional<Output<String>> bundleId() {
         return Optional.ofNullable(this.bundleId);
     }
@@ -37,6 +41,10 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="xcodeVersion")
     private @Nullable Output<String> xcodeVersion;
 
+    /**
+     * @return Xcode version that the test was run with.
+     * 
+     */
     public Optional<Output<String>> xcodeVersion() {
         return Optional.ofNullable(this.xcodeVersion);
     }
@@ -66,20 +74,44 @@ public final class IosXcTestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosXcTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleId Bundle ID of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(@Nullable Output<String> bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param bundleId Bundle ID of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             return bundleId(Output.of(bundleId));
         }
 
+        /**
+         * @param xcodeVersion Xcode version that the test was run with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
             $.xcodeVersion = xcodeVersion;
             return this;
         }
 
+        /**
+         * @param xcodeVersion Xcode version that the test was run with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xcodeVersion(String xcodeVersion) {
             return xcodeVersion(Output.of(xcodeVersion));
         }

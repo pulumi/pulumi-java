@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EncryptionDetailsResponse {
     /**
-     * The key encryption key certificate expiry date.
+     * @return The key encryption key certificate expiry date.
      * 
      */
     private final @Nullable String kekCertExpiryDate;
     /**
-     * The key encryption key certificate thumbprint.
+     * @return The key encryption key certificate thumbprint.
      * 
      */
     private final @Nullable String kekCertThumbprint;
     /**
-     * The key encryption key state for the Vmm.
+     * @return The key encryption key state for the Vmm.
      * 
      */
     private final @Nullable String kekState;
@@ -38,23 +38,23 @@ public final class EncryptionDetailsResponse {
     }
 
     /**
-     * The key encryption key certificate expiry date.
+     * @return The key encryption key certificate expiry date.
      * 
-    */
+     */
     public Optional<String> kekCertExpiryDate() {
         return Optional.ofNullable(this.kekCertExpiryDate);
     }
     /**
-     * The key encryption key certificate thumbprint.
+     * @return The key encryption key certificate thumbprint.
      * 
-    */
+     */
     public Optional<String> kekCertThumbprint() {
         return Optional.ofNullable(this.kekCertThumbprint);
     }
     /**
-     * The key encryption key state for the Vmm.
+     * @return The key encryption key state for the Vmm.
      * 
-    */
+     */
     public Optional<String> kekState() {
         return Optional.ofNullable(this.kekState);
     }

@@ -27,6 +27,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Kinesis stream.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionPeriodHours")
     private @Nullable Output<Integer> retentionPeriodHours;
 
+    /**
+     * @return The number of hours for the data records that are stored in shards to remain accessible.
+     * 
+     */
     public Optional<Output<Integer>> retentionPeriodHours() {
         return Optional.ofNullable(this.retentionPeriodHours);
     }
@@ -49,6 +57,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shardCount")
     private @Nullable Output<Integer> shardCount;
 
+    /**
+     * @return The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
+     * 
+     */
     public Optional<Output<Integer>> shardCount() {
         return Optional.ofNullable(this.shardCount);
     }
@@ -60,6 +72,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamEncryption")
     private @Nullable Output<StreamEncryptionArgs> streamEncryption;
 
+    /**
+     * @return When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
+     * 
+     */
     public Optional<Output<StreamEncryptionArgs>> streamEncryption() {
         return Optional.ofNullable(this.streamEncryption);
     }
@@ -71,6 +87,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamModeDetails")
     private @Nullable Output<StreamModeDetailsArgs> streamModeDetails;
 
+    /**
+     * @return The mode in which the stream is running.
+     * 
+     */
     public Optional<Output<StreamModeDetailsArgs>> streamModeDetails() {
         return Optional.ofNullable(this.streamModeDetails);
     }
@@ -82,6 +102,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<StreamTagArgs>> tags;
 
+    /**
+     * @return An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
+     * 
+     */
     public Optional<Output<List<StreamTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,60 +139,138 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StreamArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Kinesis stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Kinesis stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param retentionPeriodHours The number of hours for the data records that are stored in shards to remain accessible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriodHours(@Nullable Output<Integer> retentionPeriodHours) {
             $.retentionPeriodHours = retentionPeriodHours;
             return this;
         }
 
+        /**
+         * @param retentionPeriodHours The number of hours for the data records that are stored in shards to remain accessible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriodHours(Integer retentionPeriodHours) {
             return retentionPeriodHours(Output.of(retentionPeriodHours));
         }
 
+        /**
+         * @param shardCount The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
             $.shardCount = shardCount;
             return this;
         }
 
+        /**
+         * @param shardCount The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardCount(Integer shardCount) {
             return shardCount(Output.of(shardCount));
         }
 
+        /**
+         * @param streamEncryption When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamEncryption(@Nullable Output<StreamEncryptionArgs> streamEncryption) {
             $.streamEncryption = streamEncryption;
             return this;
         }
 
+        /**
+         * @param streamEncryption When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamEncryption(StreamEncryptionArgs streamEncryption) {
             return streamEncryption(Output.of(streamEncryption));
         }
 
+        /**
+         * @param streamModeDetails The mode in which the stream is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamModeDetails(@Nullable Output<StreamModeDetailsArgs> streamModeDetails) {
             $.streamModeDetails = streamModeDetails;
             return this;
         }
 
+        /**
+         * @param streamModeDetails The mode in which the stream is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamModeDetails(StreamModeDetailsArgs streamModeDetails) {
             return streamModeDetails(Output.of(streamModeDetails));
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<StreamTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(StreamTagArgs... tags) {
             return tags(List.of(tags));
         }

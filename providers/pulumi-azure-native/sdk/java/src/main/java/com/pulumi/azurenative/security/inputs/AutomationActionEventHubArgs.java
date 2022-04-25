@@ -28,6 +28,11 @@ public final class AutomationActionEventHubArgs extends com.pulumi.resources.Res
     @Import(name="actionType", required=true)
     private Output<String> actionType;
 
+    /**
+     * @return The type of the action that will be triggered by the Automation
+     * Expected value is &#39;EventHub&#39;.
+     * 
+     */
     public Output<String> actionType() {
         return this.actionType;
     }
@@ -39,6 +44,10 @@ public final class AutomationActionEventHubArgs extends com.pulumi.resources.Res
     @Import(name="connectionString")
     private @Nullable Output<String> connectionString;
 
+    /**
+     * @return The target Event Hub connection string (it will not be included in any response).
+     * 
+     */
     public Optional<Output<String>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -50,6 +59,10 @@ public final class AutomationActionEventHubArgs extends com.pulumi.resources.Res
     @Import(name="eventHubResourceId")
     private @Nullable Output<String> eventHubResourceId;
 
+    /**
+     * @return The target Event Hub Azure Resource ID.
+     * 
+     */
     public Optional<Output<String>> eventHubResourceId() {
         return Optional.ofNullable(this.eventHubResourceId);
     }
@@ -80,29 +93,67 @@ public final class AutomationActionEventHubArgs extends com.pulumi.resources.Res
             $ = new AutomationActionEventHubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType The type of the action that will be triggered by the Automation
+         * Expected value is &#39;EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(Output<String> actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param actionType The type of the action that will be triggered by the Automation
+         * Expected value is &#39;EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             return actionType(Output.of(actionType));
         }
 
+        /**
+         * @param connectionString The target Event Hub connection string (it will not be included in any response).
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString The target Event Hub connection string (it will not be included in any response).
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param eventHubResourceId The target Event Hub Azure Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubResourceId(@Nullable Output<String> eventHubResourceId) {
             $.eventHubResourceId = eventHubResourceId;
             return this;
         }
 
+        /**
+         * @param eventHubResourceId The target Event Hub Azure Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubResourceId(String eventHubResourceId) {
             return eventHubResourceId(Output.of(eventHubResourceId));
         }

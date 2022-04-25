@@ -24,6 +24,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The AWS account ID for the account.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -35,6 +39,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="administratorAccountId")
     private @Nullable Output<String> administratorAccountId;
 
+    /**
+     * @return The AWS account ID for the administrator account.
+     * 
+     */
     public Optional<Output<String>> administratorAccountId() {
         return Optional.ofNullable(this.administratorAccountId);
     }
@@ -46,6 +54,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the account.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -57,6 +69,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return The email address for the account.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -68,6 +84,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invitationDisableEmailNotification")
     private @Nullable Output<String> invitationDisableEmailNotification;
 
+    /**
+     * @return Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
+     * 
+     */
     public Optional<Output<String>> invitationDisableEmailNotification() {
         return Optional.ofNullable(this.invitationDisableEmailNotification);
     }
@@ -79,6 +99,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invitationMessage")
     private @Nullable Output<String> invitationMessage;
 
+    /**
+     * @return A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
+     * 
+     */
     public Optional<Output<String>> invitationMessage() {
         return Optional.ofNullable(this.invitationMessage);
     }
@@ -90,6 +114,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invite")
     private @Nullable Output<Boolean> invite;
 
+    /**
+     * @return Send an invitation to a member
+     * 
+     */
     public Optional<Output<Boolean>> invite() {
         return Optional.ofNullable(this.invite);
     }
@@ -101,6 +129,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invitedAt")
     private @Nullable Output<String> invitedAt;
 
+    /**
+     * @return The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn&#39;t been sent to the account.
+     * 
+     */
     public Optional<Output<String>> invitedAt() {
         return Optional.ofNullable(this.invitedAt);
     }
@@ -119,6 +151,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="relationshipStatus")
     private @Nullable Output<String> relationshipStatus;
 
+    /**
+     * @return The current status of the relationship between the account and the administrator account.
+     * 
+     */
     public Optional<Output<String>> relationshipStatus() {
         return Optional.ofNullable(this.relationshipStatus);
     }
@@ -130,6 +166,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -141,6 +181,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of key-value pairs that specifies the tags to associate with the account in Amazon Macie.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -159,6 +203,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updatedAt")
     private @Nullable Output<String> updatedAt;
 
+    /**
+     * @return The date and time, in UTC and extended RFC 3339 format, of the most recent change to the status of the relationship between the account and the administrator account.
+     * 
+     */
     public Optional<Output<String>> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -200,74 +248,170 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
             $ = new MemberState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The AWS account ID for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The AWS account ID for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param administratorAccountId The AWS account ID for the administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccountId(@Nullable Output<String> administratorAccountId) {
             $.administratorAccountId = administratorAccountId;
             return this;
         }
 
+        /**
+         * @param administratorAccountId The AWS account ID for the administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccountId(String administratorAccountId) {
             return administratorAccountId(Output.of(administratorAccountId));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param email The email address for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The email address for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param invitationDisableEmailNotification Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationDisableEmailNotification(@Nullable Output<String> invitationDisableEmailNotification) {
             $.invitationDisableEmailNotification = invitationDisableEmailNotification;
             return this;
         }
 
+        /**
+         * @param invitationDisableEmailNotification Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationDisableEmailNotification(String invitationDisableEmailNotification) {
             return invitationDisableEmailNotification(Output.of(invitationDisableEmailNotification));
         }
 
+        /**
+         * @param invitationMessage A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
             $.invitationMessage = invitationMessage;
             return this;
         }
 
+        /**
+         * @param invitationMessage A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationMessage(String invitationMessage) {
             return invitationMessage(Output.of(invitationMessage));
         }
 
+        /**
+         * @param invite Send an invitation to a member
+         * 
+         * @return builder
+         * 
+         */
         public Builder invite(@Nullable Output<Boolean> invite) {
             $.invite = invite;
             return this;
         }
 
+        /**
+         * @param invite Send an invitation to a member
+         * 
+         * @return builder
+         * 
+         */
         public Builder invite(Boolean invite) {
             return invite(Output.of(invite));
         }
 
+        /**
+         * @param invitedAt The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn&#39;t been sent to the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitedAt(@Nullable Output<String> invitedAt) {
             $.invitedAt = invitedAt;
             return this;
         }
 
+        /**
+         * @param invitedAt The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn&#39;t been sent to the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitedAt(String invitedAt) {
             return invitedAt(Output.of(invitedAt));
         }
@@ -281,29 +425,65 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
             return masterAccountId(Output.of(masterAccountId));
         }
 
+        /**
+         * @param relationshipStatus The current status of the relationship between the account and the administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipStatus(@Nullable Output<String> relationshipStatus) {
             $.relationshipStatus = relationshipStatus;
             return this;
         }
 
+        /**
+         * @param relationshipStatus The current status of the relationship between the account and the administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipStatus(String relationshipStatus) {
             return relationshipStatus(Output.of(relationshipStatus));
         }
 
+        /**
+         * @param status Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags A map of key-value pairs that specifies the tags to associate with the account in Amazon Macie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of key-value pairs that specifies the tags to associate with the account in Amazon Macie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
@@ -317,11 +497,23 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param updatedAt The date and time, in UTC and extended RFC 3339 format, of the most recent change to the status of the relationship between the account and the administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
             $.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * @param updatedAt The date and time, in UTC and extended RFC 3339 format, of the most recent change to the status of the relationship between the account and the administrator account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedAt(String updatedAt) {
             return updatedAt(Output.of(updatedAt));
         }

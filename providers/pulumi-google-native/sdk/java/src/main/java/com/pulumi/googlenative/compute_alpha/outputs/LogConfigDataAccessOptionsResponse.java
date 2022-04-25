@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class LogConfigDataAccessOptionsResponse {
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
      */
     private final String logMode;
@@ -21,9 +21,9 @@ public final class LogConfigDataAccessOptionsResponse {
     }
 
     /**
-     * This is deprecated and has no effect. Do not use.
+     * @return This is deprecated and has no effect. Do not use.
      * 
-    */
+     */
     public String logMode() {
         return this.logMode;
     }

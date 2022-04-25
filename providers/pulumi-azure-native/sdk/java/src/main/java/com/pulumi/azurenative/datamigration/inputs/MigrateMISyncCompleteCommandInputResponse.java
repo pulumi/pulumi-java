@@ -23,6 +23,10 @@ public final class MigrateMISyncCompleteCommandInputResponse extends com.pulumi.
     @Import(name="sourceDatabaseName", required=true)
     private String sourceDatabaseName;
 
+    /**
+     * @return Name of managed instance database
+     * 
+     */
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
@@ -51,6 +55,12 @@ public final class MigrateMISyncCompleteCommandInputResponse extends com.pulumi.
             $ = new MigrateMISyncCompleteCommandInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceDatabaseName Name of managed instance database
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             $.sourceDatabaseName = sourceDatabaseName;
             return this;

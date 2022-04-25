@@ -24,6 +24,11 @@ public final class CxEntityTypeEntityGetArgs extends com.pulumi.resources.Resour
     @Import(name="synonyms")
     private @Nullable Output<List<String>> synonyms;
 
+    /**
+     * @return A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
+     * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
+     * 
+     */
     public Optional<Output<List<String>>> synonyms() {
         return Optional.ofNullable(this.synonyms);
     }
@@ -35,6 +40,10 @@ public final class CxEntityTypeEntityGetArgs extends com.pulumi.resources.Resour
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The word or phrase to be excluded.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -64,24 +73,57 @@ public final class CxEntityTypeEntityGetArgs extends com.pulumi.resources.Resour
             $ = new CxEntityTypeEntityGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param synonyms A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
+         * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
             $.synonyms = synonyms;
             return this;
         }
 
+        /**
+         * @param synonyms A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
+         * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(List<String> synonyms) {
             return synonyms(Output.of(synonyms));
         }
 
+        /**
+         * @param synonyms A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
+         * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }
 
+        /**
+         * @param value The word or phrase to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The word or phrase to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

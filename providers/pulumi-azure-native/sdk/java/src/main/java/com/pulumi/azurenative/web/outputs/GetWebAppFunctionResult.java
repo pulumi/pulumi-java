@@ -15,87 +15,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebAppFunctionResult {
     /**
-     * Config information.
+     * @return Config information.
      * 
      */
     private final @Nullable Object config;
     /**
-     * Config URI.
+     * @return Config URI.
      * 
      */
     private final @Nullable String configHref;
     /**
-     * File list.
+     * @return File list.
      * 
      */
     private final @Nullable Map<String,String> files;
     /**
-     * Function App ID.
+     * @return Function App ID.
      * 
      */
     private final @Nullable String functionAppId;
     /**
-     * Function URI.
+     * @return Function URI.
      * 
      */
     private final @Nullable String href;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * The invocation URL
+     * @return The invocation URL
      * 
      */
     private final @Nullable String invokeUrlTemplate;
     /**
-     * Gets or sets a value indicating whether the function is disabled
+     * @return Gets or sets a value indicating whether the function is disabled
      * 
      */
     private final @Nullable Boolean isDisabled;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * The function language
+     * @return The function language
      * 
      */
     private final @Nullable String language;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Script URI.
+     * @return Script URI.
      * 
      */
     private final @Nullable String scriptHref;
     /**
-     * Script root path URI.
+     * @return Script root path URI.
      * 
      */
     private final @Nullable String scriptRootPathHref;
     /**
-     * Secrets file URI.
+     * @return Secrets file URI.
      * 
      */
     private final @Nullable String secretsFileHref;
     /**
-     * Test data used when testing via the Azure Portal.
+     * @return Test data used when testing via the Azure Portal.
      * 
      */
     private final @Nullable String testData;
     /**
-     * Test data URI.
+     * @return Test data URI.
      * 
      */
     private final @Nullable String testDataHref;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -139,121 +139,121 @@ public final class GetWebAppFunctionResult {
     }
 
     /**
-     * Config information.
+     * @return Config information.
      * 
-    */
+     */
     public Optional<Object> config() {
         return Optional.ofNullable(this.config);
     }
     /**
-     * Config URI.
+     * @return Config URI.
      * 
-    */
+     */
     public Optional<String> configHref() {
         return Optional.ofNullable(this.configHref);
     }
     /**
-     * File list.
+     * @return File list.
      * 
-    */
+     */
     public Map<String,String> files() {
         return this.files == null ? Map.of() : this.files;
     }
     /**
-     * Function App ID.
+     * @return Function App ID.
      * 
-    */
+     */
     public Optional<String> functionAppId() {
         return Optional.ofNullable(this.functionAppId);
     }
     /**
-     * Function URI.
+     * @return Function URI.
      * 
-    */
+     */
     public Optional<String> href() {
         return Optional.ofNullable(this.href);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The invocation URL
+     * @return The invocation URL
      * 
-    */
+     */
     public Optional<String> invokeUrlTemplate() {
         return Optional.ofNullable(this.invokeUrlTemplate);
     }
     /**
-     * Gets or sets a value indicating whether the function is disabled
+     * @return Gets or sets a value indicating whether the function is disabled
      * 
-    */
+     */
     public Optional<Boolean> isDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The function language
+     * @return The function language
      * 
-    */
+     */
     public Optional<String> language() {
         return Optional.ofNullable(this.language);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Script URI.
+     * @return Script URI.
      * 
-    */
+     */
     public Optional<String> scriptHref() {
         return Optional.ofNullable(this.scriptHref);
     }
     /**
-     * Script root path URI.
+     * @return Script root path URI.
      * 
-    */
+     */
     public Optional<String> scriptRootPathHref() {
         return Optional.ofNullable(this.scriptRootPathHref);
     }
     /**
-     * Secrets file URI.
+     * @return Secrets file URI.
      * 
-    */
+     */
     public Optional<String> secretsFileHref() {
         return Optional.ofNullable(this.secretsFileHref);
     }
     /**
-     * Test data used when testing via the Azure Portal.
+     * @return Test data used when testing via the Azure Portal.
      * 
-    */
+     */
     public Optional<String> testData() {
         return Optional.ofNullable(this.testData);
     }
     /**
-     * Test data URI.
+     * @return Test data URI.
      * 
-    */
+     */
     public Optional<String> testDataHref() {
         return Optional.ofNullable(this.testDataHref);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

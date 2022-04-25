@@ -25,6 +25,10 @@ public final class PrivateLinkScopedResourceResponse extends com.pulumi.resource
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The full resource Id of the private link scope resource.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -36,6 +40,10 @@ public final class PrivateLinkScopedResourceResponse extends com.pulumi.resource
     @Import(name="scopeId")
     private @Nullable String scopeId;
 
+    /**
+     * @return The private link scope unique Identifier.
+     * 
+     */
     public Optional<String> scopeId() {
         return Optional.ofNullable(this.scopeId);
     }
@@ -65,11 +73,23 @@ public final class PrivateLinkScopedResourceResponse extends com.pulumi.resource
             $ = new PrivateLinkScopedResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId The full resource Id of the private link scope resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param scopeId The private link scope unique Identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeId(@Nullable String scopeId) {
             $.scopeId = scopeId;
             return this;

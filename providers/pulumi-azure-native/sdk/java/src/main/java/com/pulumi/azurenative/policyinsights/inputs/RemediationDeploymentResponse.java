@@ -24,6 +24,10 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="createdOn", required=true)
     private String createdOn;
 
+    /**
+     * @return The time at which the remediation was created.
+     * 
+     */
     public String createdOn() {
         return this.createdOn;
     }
@@ -35,6 +39,10 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="deploymentId", required=true)
     private String deploymentId;
 
+    /**
+     * @return Resource ID of the template deployment that will remediate the resource.
+     * 
+     */
     public String deploymentId() {
         return this.deploymentId;
     }
@@ -46,6 +54,10 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="error", required=true)
     private ErrorDefinitionResponse error;
 
+    /**
+     * @return Error encountered while remediated the resource.
+     * 
+     */
     public ErrorDefinitionResponse error() {
         return this.error;
     }
@@ -57,6 +69,10 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="lastUpdatedOn", required=true)
     private String lastUpdatedOn;
 
+    /**
+     * @return The time at which the remediation deployment was last updated.
+     * 
+     */
     public String lastUpdatedOn() {
         return this.lastUpdatedOn;
     }
@@ -68,6 +84,10 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="remediatedResourceId", required=true)
     private String remediatedResourceId;
 
+    /**
+     * @return Resource ID of the resource that is being remediated by the deployment.
+     * 
+     */
     public String remediatedResourceId() {
         return this.remediatedResourceId;
     }
@@ -79,6 +99,10 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="resourceLocation", required=true)
     private String resourceLocation;
 
+    /**
+     * @return Location of the resource that is being remediated.
+     * 
+     */
     public String resourceLocation() {
         return this.resourceLocation;
     }
@@ -90,6 +114,10 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the remediation deployment.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -124,36 +152,78 @@ public final class RemediationDeploymentResponse extends com.pulumi.resources.In
             $ = new RemediationDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdOn The time at which the remediation was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdOn(String createdOn) {
             $.createdOn = createdOn;
             return this;
         }
 
+        /**
+         * @param deploymentId Resource ID of the template deployment that will remediate the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(String deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param error Error encountered while remediated the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ErrorDefinitionResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param lastUpdatedOn The time at which the remediation deployment was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedOn(String lastUpdatedOn) {
             $.lastUpdatedOn = lastUpdatedOn;
             return this;
         }
 
+        /**
+         * @param remediatedResourceId Resource ID of the resource that is being remediated by the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediatedResourceId(String remediatedResourceId) {
             $.remediatedResourceId = remediatedResourceId;
             return this;
         }
 
+        /**
+         * @param resourceLocation Location of the resource that is being remediated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLocation(String resourceLocation) {
             $.resourceLocation = resourceLocation;
             return this;
         }
 
+        /**
+         * @param status Status of the remediation deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

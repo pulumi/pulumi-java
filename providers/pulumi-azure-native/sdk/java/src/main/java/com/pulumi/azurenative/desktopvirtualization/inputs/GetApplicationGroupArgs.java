@@ -19,6 +19,10 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="applicationGroupName", required=true)
     private String applicationGroupName;
 
+    /**
+     * @return The name of the application group
+     * 
+     */
     public String applicationGroupName() {
         return this.applicationGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
             $ = new GetApplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationGroupName The name of the application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupName(String applicationGroupName) {
             $.applicationGroupName = applicationGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

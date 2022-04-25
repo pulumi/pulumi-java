@@ -26,6 +26,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
     @Import(name="apiBuildCommand")
     private @Nullable String apiBuildCommand;
 
+    /**
+     * @return A custom command to run during deployment of the Azure Functions API application.
+     * 
+     */
     public Optional<String> apiBuildCommand() {
         return Optional.ofNullable(this.apiBuildCommand);
     }
@@ -37,6 +41,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
     @Import(name="apiLocation")
     private @Nullable String apiLocation;
 
+    /**
+     * @return The path to the api code within the repository.
+     * 
+     */
     public Optional<String> apiLocation() {
         return Optional.ofNullable(this.apiLocation);
     }
@@ -48,6 +56,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
     @Import(name="appArtifactLocation")
     private @Nullable String appArtifactLocation;
 
+    /**
+     * @return Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
+     * 
+     */
     public Optional<String> appArtifactLocation() {
         return Optional.ofNullable(this.appArtifactLocation);
     }
@@ -59,6 +71,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
     @Import(name="appBuildCommand")
     private @Nullable String appBuildCommand;
 
+    /**
+     * @return A custom command to run during deployment of the static content application.
+     * 
+     */
     public Optional<String> appBuildCommand() {
         return Optional.ofNullable(this.appBuildCommand);
     }
@@ -70,6 +86,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
     @Import(name="appLocation")
     private @Nullable String appLocation;
 
+    /**
+     * @return The path to the app code within the repository.
+     * 
+     */
     public Optional<String> appLocation() {
         return Optional.ofNullable(this.appLocation);
     }
@@ -81,6 +101,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
     @Import(name="githubActionSecretNameOverride")
     private @Nullable String githubActionSecretNameOverride;
 
+    /**
+     * @return Github Action secret name override.
+     * 
+     */
     public Optional<String> githubActionSecretNameOverride() {
         return Optional.ofNullable(this.githubActionSecretNameOverride);
     }
@@ -92,6 +116,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
     @Import(name="outputLocation")
     private @Nullable String outputLocation;
 
+    /**
+     * @return The output path of the app after building.
+     * 
+     */
     public Optional<String> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
@@ -103,6 +131,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
     @Import(name="skipGithubActionWorkflowGeneration")
     private @Nullable Boolean skipGithubActionWorkflowGeneration;
 
+    /**
+     * @return Skip Github Action workflow generation.
+     * 
+     */
     public Optional<Boolean> skipGithubActionWorkflowGeneration() {
         return Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
     }
@@ -138,41 +170,89 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
             $ = new StaticSiteBuildPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiBuildCommand A custom command to run during deployment of the Azure Functions API application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiBuildCommand(@Nullable String apiBuildCommand) {
             $.apiBuildCommand = apiBuildCommand;
             return this;
         }
 
+        /**
+         * @param apiLocation The path to the api code within the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiLocation(@Nullable String apiLocation) {
             $.apiLocation = apiLocation;
             return this;
         }
 
+        /**
+         * @param appArtifactLocation Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
+         * 
+         * @return builder
+         * 
+         */
         public Builder appArtifactLocation(@Nullable String appArtifactLocation) {
             $.appArtifactLocation = appArtifactLocation;
             return this;
         }
 
+        /**
+         * @param appBuildCommand A custom command to run during deployment of the static content application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBuildCommand(@Nullable String appBuildCommand) {
             $.appBuildCommand = appBuildCommand;
             return this;
         }
 
+        /**
+         * @param appLocation The path to the app code within the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appLocation(@Nullable String appLocation) {
             $.appLocation = appLocation;
             return this;
         }
 
+        /**
+         * @param githubActionSecretNameOverride Github Action secret name override.
+         * 
+         * @return builder
+         * 
+         */
         public Builder githubActionSecretNameOverride(@Nullable String githubActionSecretNameOverride) {
             $.githubActionSecretNameOverride = githubActionSecretNameOverride;
             return this;
         }
 
+        /**
+         * @param outputLocation The output path of the app after building.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputLocation(@Nullable String outputLocation) {
             $.outputLocation = outputLocation;
             return this;
         }
 
+        /**
+         * @param skipGithubActionWorkflowGeneration Skip Github Action workflow generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipGithubActionWorkflowGeneration(@Nullable Boolean skipGithubActionWorkflowGeneration) {
             $.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;

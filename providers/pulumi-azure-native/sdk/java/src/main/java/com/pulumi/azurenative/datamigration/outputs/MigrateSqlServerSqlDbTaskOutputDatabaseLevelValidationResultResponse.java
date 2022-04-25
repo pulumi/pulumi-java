@@ -13,58 +13,58 @@ import java.util.Objects;
 @CustomType
 public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse {
     /**
-     * Provides data integrity validation result between the source and target tables that are migrated.
+     * @return Provides data integrity validation result between the source and target tables that are migrated.
      * 
      */
     private final DataIntegrityValidationResultResponse dataIntegrityValidationResult;
     /**
-     * Validation end time
+     * @return Validation end time
      * 
      */
     private final String endedOn;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Migration Identifier
+     * @return Migration Identifier
      * 
      */
     private final String migrationId;
     /**
-     * Results of some of the query execution result between source and target database
+     * @return Results of some of the query execution result between source and target database
      * 
      */
     private final QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationDatabaseLevelValidationOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Provides schema comparison result between source and target database
+     * @return Provides schema comparison result between source and target database
      * 
      */
     private final SchemaComparisonValidationResultResponse schemaValidationResult;
     /**
-     * Name of the source database
+     * @return Name of the source database
      * 
      */
     private final String sourceDatabaseName;
     /**
-     * Validation start time
+     * @return Validation start time
      * 
      */
     private final String startedOn;
     /**
-     * Current status of validation at the database level
+     * @return Current status of validation at the database level
      * 
      */
     private final String status;
     /**
-     * Name of the target database
+     * @return Name of the target database
      * 
      */
     private final String targetDatabaseName;
@@ -96,80 +96,80 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     }
 
     /**
-     * Provides data integrity validation result between the source and target tables that are migrated.
+     * @return Provides data integrity validation result between the source and target tables that are migrated.
      * 
-    */
+     */
     public DataIntegrityValidationResultResponse dataIntegrityValidationResult() {
         return this.dataIntegrityValidationResult;
     }
     /**
-     * Validation end time
+     * @return Validation end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Migration Identifier
+     * @return Migration Identifier
      * 
-    */
+     */
     public String migrationId() {
         return this.migrationId;
     }
     /**
-     * Results of some of the query execution result between source and target database
+     * @return Results of some of the query execution result between source and target database
      * 
-    */
+     */
     public QueryAnalysisValidationResultResponse queryAnalysisValidationResult() {
         return this.queryAnalysisValidationResult;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationDatabaseLevelValidationOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Provides schema comparison result between source and target database
+     * @return Provides schema comparison result between source and target database
      * 
-    */
+     */
     public SchemaComparisonValidationResultResponse schemaValidationResult() {
         return this.schemaValidationResult;
     }
     /**
-     * Name of the source database
+     * @return Name of the source database
      * 
-    */
+     */
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
     /**
-     * Validation start time
+     * @return Validation start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current status of validation at the database level
+     * @return Current status of validation at the database level
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Name of the target database
+     * @return Name of the target database
      * 
-    */
+     */
     public String targetDatabaseName() {
         return this.targetDatabaseName;
     }

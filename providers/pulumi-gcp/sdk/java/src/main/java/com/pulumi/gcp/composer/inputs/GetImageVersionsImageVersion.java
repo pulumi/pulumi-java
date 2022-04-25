@@ -20,6 +20,10 @@ public final class GetImageVersionsImageVersion extends com.pulumi.resources.Inv
     @Import(name="imageVersionId", required=true)
     private String imageVersionId;
 
+    /**
+     * @return The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
+     * 
+     */
     public String imageVersionId() {
         return this.imageVersionId;
     }
@@ -31,6 +35,10 @@ public final class GetImageVersionsImageVersion extends com.pulumi.resources.Inv
     @Import(name="supportedPythonVersions", required=true)
     private List<String> supportedPythonVersions;
 
+    /**
+     * @return Supported python versions for this image version
+     * 
+     */
     public List<String> supportedPythonVersions() {
         return this.supportedPythonVersions;
     }
@@ -60,16 +68,34 @@ public final class GetImageVersionsImageVersion extends com.pulumi.resources.Inv
             $ = new GetImageVersionsImageVersion(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageVersionId The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersionId(String imageVersionId) {
             $.imageVersionId = imageVersionId;
             return this;
         }
 
+        /**
+         * @param supportedPythonVersions Supported python versions for this image version
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedPythonVersions(List<String> supportedPythonVersions) {
             $.supportedPythonVersions = supportedPythonVersions;
             return this;
         }
 
+        /**
+         * @param supportedPythonVersions Supported python versions for this image version
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedPythonVersions(String... supportedPythonVersions) {
             return supportedPythonVersions(List.of(supportedPythonVersions));
         }

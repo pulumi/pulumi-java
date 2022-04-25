@@ -26,6 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
     @Import(name="iouThreshold")
     private @Nullable Output<Double> iouThreshold;
 
+    /**
+     * @return Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.
+     * 
+     */
     public Optional<Output<Double>> iouThreshold() {
         return Optional.ofNullable(this.iouThreshold);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
             $ = new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iouThreshold Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iouThreshold(@Nullable Output<Double> iouThreshold) {
             $.iouThreshold = iouThreshold;
             return this;
         }
 
+        /**
+         * @param iouThreshold Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iouThreshold(Double iouThreshold) {
             return iouThreshold(Output.of(iouThreshold));
         }

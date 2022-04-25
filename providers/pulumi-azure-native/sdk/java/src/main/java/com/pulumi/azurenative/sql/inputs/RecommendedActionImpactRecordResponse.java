@@ -24,6 +24,10 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="absoluteValue", required=true)
     private Double absoluteValue;
 
+    /**
+     * @return Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
+     * 
+     */
     public Double absoluteValue() {
         return this.absoluteValue;
     }
@@ -35,6 +39,10 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="changeValueAbsolute", required=true)
     private Double changeValueAbsolute;
 
+    /**
+     * @return Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
+     * 
+     */
     public Double changeValueAbsolute() {
         return this.changeValueAbsolute;
     }
@@ -46,6 +54,10 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="changeValueRelative", required=true)
     private Double changeValueRelative;
 
+    /**
+     * @return Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
+     * 
+     */
     public Double changeValueRelative() {
         return this.changeValueRelative;
     }
@@ -57,6 +69,10 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="dimensionName", required=true)
     private String dimensionName;
 
+    /**
+     * @return Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+     * 
+     */
     public String dimensionName() {
         return this.dimensionName;
     }
@@ -68,6 +84,10 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="unit", required=true)
     private String unit;
 
+    /**
+     * @return Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+     * 
+     */
     public String unit() {
         return this.unit;
     }
@@ -100,26 +120,56 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
             $ = new RecommendedActionImpactRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param absoluteValue Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
+         * 
+         * @return builder
+         * 
+         */
         public Builder absoluteValue(Double absoluteValue) {
             $.absoluteValue = absoluteValue;
             return this;
         }
 
+        /**
+         * @param changeValueAbsolute Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeValueAbsolute(Double changeValueAbsolute) {
             $.changeValueAbsolute = changeValueAbsolute;
             return this;
         }
 
+        /**
+         * @param changeValueRelative Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeValueRelative(Double changeValueRelative) {
             $.changeValueRelative = changeValueRelative;
             return this;
         }
 
+        /**
+         * @param dimensionName Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionName(String dimensionName) {
             $.dimensionName = dimensionName;
             return this;
         }
 
+        /**
+         * @param unit Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             $.unit = unit;
             return this;

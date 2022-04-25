@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecretObjectResponse {
     /**
-     * The type of the secret object which determines how the value of the secret object has to be
+     * @return The type of the secret object which determines how the value of the secret object has to be
      * interpreted.
      * 
      */
     private final @Nullable String type;
     /**
-     * The value of the secret. The format of this value will be determined
+     * @return The value of the secret. The format of this value will be determined
      * based on the type of the secret object. If the type is Opaque, the value will be
      * used as is without any modification.
      * 
@@ -34,19 +34,19 @@ public final class SecretObjectResponse {
     }
 
     /**
-     * The type of the secret object which determines how the value of the secret object has to be
+     * @return The type of the secret object which determines how the value of the secret object has to be
      * interpreted.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The value of the secret. The format of this value will be determined
+     * @return The value of the secret. The format of this value will be determined
      * based on the type of the secret object. If the type is Opaque, the value will be
      * used as is without any modification.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

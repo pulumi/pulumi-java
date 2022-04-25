@@ -24,6 +24,10 @@ public final class GoogleCloudDatacatalogV1SchemaResponse extends com.pulumi.res
     @Import(name="columns", required=true)
     private List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns;
 
+    /**
+     * @return The unified GoogleSQL-like schema of columns. The overall maximum number of columns and nested columns is 10,000. The maximum nested depth is 15 levels.
+     * 
+     */
     public List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns() {
         return this.columns;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDatacatalogV1SchemaResponse extends com.pulumi.res
             $ = new GoogleCloudDatacatalogV1SchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns The unified GoogleSQL-like schema of columns. The overall maximum number of columns and nested columns is 10,000. The maximum nested depth is 15 levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns The unified GoogleSQL-like schema of columns. The overall maximum number of columns and nested columns is 10,000. The maximum nested depth is 15 levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(GoogleCloudDatacatalogV1ColumnSchemaResponse... columns) {
             return columns(List.of(columns));
         }

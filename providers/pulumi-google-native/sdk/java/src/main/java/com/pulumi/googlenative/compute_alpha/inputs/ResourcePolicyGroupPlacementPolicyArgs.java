@@ -30,6 +30,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="availabilityDomainCount")
     private @Nullable Output<Integer> availabilityDomainCount;
 
+    /**
+     * @return The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+     * 
+     */
     public Optional<Output<Integer>> availabilityDomainCount() {
         return Optional.ofNullable(this.availabilityDomainCount);
     }
@@ -41,6 +45,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="collocation")
     private @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
 
+    /**
+     * @return Specifies network collocation
+     * 
+     */
     public Optional<Output<ResourcePolicyGroupPlacementPolicyCollocation>> collocation() {
         return Optional.ofNullable(this.collocation);
     }
@@ -52,6 +60,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="locality")
     private @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
 
+    /**
+     * @return Specifies network locality
+     * 
+     */
     public Optional<Output<ResourcePolicyGroupPlacementPolicyLocality>> locality() {
         return Optional.ofNullable(this.locality);
     }
@@ -63,6 +75,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="scope")
     private @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
 
+    /**
+     * @return Scope specifies the availability domain to which the VMs should be spread.
+     * 
+     */
     public Optional<Output<ResourcePolicyGroupPlacementPolicyScope>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -74,6 +90,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="style")
     private @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
 
+    /**
+     * @return Specifies instances to hosts placement relationship
+     * 
+     */
     public Optional<Output<ResourcePolicyGroupPlacementPolicyStyle>> style() {
         return Optional.ofNullable(this.style);
     }
@@ -85,6 +105,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
     @Import(name="vmCount")
     private @Nullable Output<Integer> vmCount;
 
+    /**
+     * @return Number of vms in this placement group
+     * 
+     */
     public Optional<Output<Integer>> vmCount() {
         return Optional.ofNullable(this.vmCount);
     }
@@ -118,56 +142,128 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
             $ = new ResourcePolicyGroupPlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityDomainCount The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityDomainCount(@Nullable Output<Integer> availabilityDomainCount) {
             $.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
 
+        /**
+         * @param availabilityDomainCount The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityDomainCount(Integer availabilityDomainCount) {
             return availabilityDomainCount(Output.of(availabilityDomainCount));
         }
 
+        /**
+         * @param collocation Specifies network collocation
+         * 
+         * @return builder
+         * 
+         */
         public Builder collocation(@Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation) {
             $.collocation = collocation;
             return this;
         }
 
+        /**
+         * @param collocation Specifies network collocation
+         * 
+         * @return builder
+         * 
+         */
         public Builder collocation(ResourcePolicyGroupPlacementPolicyCollocation collocation) {
             return collocation(Output.of(collocation));
         }
 
+        /**
+         * @param locality Specifies network locality
+         * 
+         * @return builder
+         * 
+         */
         public Builder locality(@Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality) {
             $.locality = locality;
             return this;
         }
 
+        /**
+         * @param locality Specifies network locality
+         * 
+         * @return builder
+         * 
+         */
         public Builder locality(ResourcePolicyGroupPlacementPolicyLocality locality) {
             return locality(Output.of(locality));
         }
 
+        /**
+         * @param scope Scope specifies the availability domain to which the VMs should be spread.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope specifies the availability domain to which the VMs should be spread.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(ResourcePolicyGroupPlacementPolicyScope scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param style Specifies instances to hosts placement relationship
+         * 
+         * @return builder
+         * 
+         */
         public Builder style(@Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style) {
             $.style = style;
             return this;
         }
 
+        /**
+         * @param style Specifies instances to hosts placement relationship
+         * 
+         * @return builder
+         * 
+         */
         public Builder style(ResourcePolicyGroupPlacementPolicyStyle style) {
             return style(Output.of(style));
         }
 
+        /**
+         * @param vmCount Number of vms in this placement group
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmCount(@Nullable Output<Integer> vmCount) {
             $.vmCount = vmCount;
             return this;
         }
 
+        /**
+         * @param vmCount Number of vms in this placement group
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmCount(Integer vmCount) {
             return vmCount(Output.of(vmCount));
         }

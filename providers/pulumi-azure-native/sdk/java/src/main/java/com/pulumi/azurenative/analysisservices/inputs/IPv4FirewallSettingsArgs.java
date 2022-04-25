@@ -28,6 +28,10 @@ public final class IPv4FirewallSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="enablePowerBIService")
     private @Nullable Output<Boolean> enablePowerBIService;
 
+    /**
+     * @return The indicator of enabling PBI service.
+     * 
+     */
     public Optional<Output<Boolean>> enablePowerBIService() {
         return Optional.ofNullable(this.enablePowerBIService);
     }
@@ -39,6 +43,10 @@ public final class IPv4FirewallSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="firewallRules")
     private @Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules;
 
+    /**
+     * @return An array of firewall rules.
+     * 
+     */
     public Optional<Output<List<IPv4FirewallRuleArgs>>> firewallRules() {
         return Optional.ofNullable(this.firewallRules);
     }
@@ -68,24 +76,54 @@ public final class IPv4FirewallSettingsArgs extends com.pulumi.resources.Resourc
             $ = new IPv4FirewallSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enablePowerBIService The indicator of enabling PBI service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePowerBIService(@Nullable Output<Boolean> enablePowerBIService) {
             $.enablePowerBIService = enablePowerBIService;
             return this;
         }
 
+        /**
+         * @param enablePowerBIService The indicator of enabling PBI service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePowerBIService(Boolean enablePowerBIService) {
             return enablePowerBIService(Output.of(enablePowerBIService));
         }
 
+        /**
+         * @param firewallRules An array of firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(@Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules) {
             $.firewallRules = firewallRules;
             return this;
         }
 
+        /**
+         * @param firewallRules An array of firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(List<IPv4FirewallRuleArgs> firewallRules) {
             return firewallRules(Output.of(firewallRules));
         }
 
+        /**
+         * @param firewallRules An array of firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(IPv4FirewallRuleArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }

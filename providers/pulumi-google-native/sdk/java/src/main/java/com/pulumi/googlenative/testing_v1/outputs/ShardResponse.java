@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ShardResponse {
     /**
-     * The total number of shards.
+     * @return The total number of shards.
      * 
      */
     private final Integer numShards;
     /**
-     * The index of the shard among all the shards.
+     * @return The index of the shard among all the shards.
      * 
      */
     private final Integer shardIndex;
     /**
-     * Test targets for each shard.
+     * @return Test targets for each shard.
      * 
      */
     private final TestTargetsForShardResponse testTargetsForShard;
@@ -37,23 +37,23 @@ public final class ShardResponse {
     }
 
     /**
-     * The total number of shards.
+     * @return The total number of shards.
      * 
-    */
+     */
     public Integer numShards() {
         return this.numShards;
     }
     /**
-     * The index of the shard among all the shards.
+     * @return The index of the shard among all the shards.
      * 
-    */
+     */
     public Integer shardIndex() {
         return this.shardIndex;
     }
     /**
-     * Test targets for each shard.
+     * @return Test targets for each shard.
      * 
-    */
+     */
     public TestTargetsForShardResponse testTargetsForShard() {
         return this.testTargetsForShard;
     }

@@ -20,6 +20,10 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether node to node encryption is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -31,6 +35,10 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
     @Import(name="identityPoolId", required=true)
     private String identityPoolId;
 
+    /**
+     * @return The Cognito Identity pool used by the domain.
+     * 
+     */
     public String identityPoolId() {
         return this.identityPoolId;
     }
@@ -42,6 +50,10 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
     @Import(name="roleArn", required=true)
     private String roleArn;
 
+    /**
+     * @return The IAM Role with the AmazonESCognitoAccess policy attached.
+     * 
+     */
     public String roleArn() {
         return this.roleArn;
     }
@@ -53,6 +65,10 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
     @Import(name="userPoolId", required=true)
     private String userPoolId;
 
+    /**
+     * @return The Cognito User pool used by the domain.
+     * 
+     */
     public String userPoolId() {
         return this.userPoolId;
     }
@@ -84,21 +100,45 @@ public final class GetDomainCognitoOption extends com.pulumi.resources.InvokeArg
             $ = new GetDomainCognitoOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether node to node encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param identityPoolId The Cognito Identity pool used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityPoolId(String identityPoolId) {
             $.identityPoolId = identityPoolId;
             return this;
         }
 
+        /**
+         * @param roleArn The IAM Role with the AmazonESCognitoAccess policy attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param userPoolId The Cognito User pool used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(String userPoolId) {
             $.userPoolId = userPoolId;
             return this;

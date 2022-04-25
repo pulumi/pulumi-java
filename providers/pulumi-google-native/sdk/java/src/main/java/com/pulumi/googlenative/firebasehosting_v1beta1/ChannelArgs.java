@@ -31,6 +31,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
     private @Nullable Output<String> expireTime;
 
+    /**
+     * @return The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
+     * 
+     */
     public Optional<Output<String>> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
@@ -42,6 +46,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Text labels used for extra metadata and/or filtering.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -53,6 +61,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +83,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retainedReleaseCount")
     private @Nullable Output<Integer> retainedReleaseCount;
 
+    /**
+     * @return The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+     * 
+     */
     public Optional<Output<Integer>> retainedReleaseCount() {
         return Optional.ofNullable(this.retainedReleaseCount);
     }
@@ -89,6 +105,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
     private @Nullable Output<String> ttl;
 
+    /**
+     * @return Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+     * 
+     */
     public Optional<Output<String>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -133,29 +153,65 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
             return channelId(Output.of(channelId));
         }
 
+        /**
+         * @param expireTime The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(@Nullable Output<String> expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param expireTime The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             return expireTime(Output.of(expireTime));
         }
 
+        /**
+         * @param labels Text labels used for extra metadata and/or filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Text labels used for extra metadata and/or filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -169,11 +225,23 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param retainedReleaseCount The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainedReleaseCount(@Nullable Output<Integer> retainedReleaseCount) {
             $.retainedReleaseCount = retainedReleaseCount;
             return this;
         }
 
+        /**
+         * @param retainedReleaseCount The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainedReleaseCount(Integer retainedReleaseCount) {
             return retainedReleaseCount(Output.of(retainedReleaseCount));
         }
@@ -187,11 +255,23 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
             return siteId(Output.of(siteId));
         }
 
+        /**
+         * @param ttl Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<String> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(String ttl) {
             return ttl(Output.of(ttl));
         }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetHostedZoneResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The region of the hosted zone.
+     * @return The region of the hosted zone.
      * 
      */
     private final @Nullable String region;
@@ -31,16 +31,16 @@ public final class GetHostedZoneResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The region of the hosted zone.
+     * @return The region of the hosted zone.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }

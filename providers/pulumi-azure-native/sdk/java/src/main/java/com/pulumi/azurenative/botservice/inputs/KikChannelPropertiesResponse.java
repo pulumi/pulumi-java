@@ -26,6 +26,10 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="apiKey")
     private @Nullable String apiKey;
 
+    /**
+     * @return Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<String> apiKey() {
         return Optional.ofNullable(this.apiKey);
     }
@@ -37,6 +41,10 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -48,6 +56,10 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="isValidated")
     private @Nullable Boolean isValidated;
 
+    /**
+     * @return Whether this channel is validated for the bot
+     * 
+     */
     public Optional<Boolean> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
@@ -59,6 +71,10 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The Kik user name
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -90,21 +106,45 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
             $ = new KikChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiKey Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(@Nullable String apiKey) {
             $.apiKey = apiKey;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(@Nullable Boolean isValidated) {
             $.isValidated = isValidated;
             return this;
         }
 
+        /**
+         * @param userName The Kik user name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

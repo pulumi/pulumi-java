@@ -32,6 +32,11 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="autoHealingPolicies")
     private @Nullable Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies;
 
+    /**
+     * @return The autohealing policies for this managed instance
+     * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
+     * 
+     */
     public Optional<Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs>> autoHealingPolicies() {
         return Optional.ofNullable(this.autoHealingPolicies);
     }
@@ -48,6 +53,15 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="baseInstanceName")
     private @Nullable Output<String> baseInstanceName;
 
+    /**
+     * @return The base instance name to use for
+     * instances in this group. The value must be a valid
+     * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt) name. Supported characters
+     * are lowercase letters, numbers, and hyphens (-). Instances are named by
+     * appending a hyphen and a random four-character string to the base instance
+     * name.
+     * 
+     */
     public Optional<Output<String>> baseInstanceName() {
         return Optional.ofNullable(this.baseInstanceName);
     }
@@ -60,6 +74,11 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional textual description of the instance
+     * group manager.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +90,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="distributionPolicyTargetShape")
     private @Nullable Output<String> distributionPolicyTargetShape;
 
+    /**
+     * @return The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
+     * 
+     */
     public Optional<Output<String>> distributionPolicyTargetShape() {
         return Optional.ofNullable(this.distributionPolicyTargetShape);
     }
@@ -83,6 +106,11 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="distributionPolicyZones")
     private @Nullable Output<List<String>> distributionPolicyZones;
 
+    /**
+     * @return The distribution policy for this managed instance
+     * group. You can specify one or more values. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups#selectingzones).
+     * 
+     */
     public Optional<Output<List<String>>> distributionPolicyZones() {
         return Optional.ofNullable(this.distributionPolicyZones);
     }
@@ -94,6 +122,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
+    /**
+     * @return The fingerprint of the instance group manager.
+     * 
+     */
     public Optional<Output<String>> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
@@ -105,6 +137,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="instanceGroup")
     private @Nullable Output<String> instanceGroup;
 
+    /**
+     * @return The full URL of the instance group created by the manager.
+     * 
+     */
     public Optional<Output<String>> instanceGroup() {
         return Optional.ofNullable(this.instanceGroup);
     }
@@ -116,6 +152,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return - Version name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -128,6 +168,11 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="namedPorts")
     private @Nullable Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> namedPorts;
 
+    /**
+     * @return The named port configuration. See the section below
+     * for details on configuration.
+     * 
+     */
     public Optional<Output<List<RegionInstanceGroupManagerNamedPortGetArgs>>> namedPorts() {
         return Optional.ofNullable(this.namedPorts);
     }
@@ -140,6 +185,11 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -151,6 +201,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region where the managed instance group resides. If not provided, the provider region is used.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -162,6 +216,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URL of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -173,6 +231,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="statefulDisks")
     private @Nullable Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> statefulDisks;
 
+    /**
+     * @return Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+     * 
+     */
     public Optional<Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>>> statefulDisks() {
         return Optional.ofNullable(this.statefulDisks);
     }
@@ -184,6 +246,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="statuses")
     private @Nullable Output<List<RegionInstanceGroupManagerStatusGetArgs>> statuses;
 
+    /**
+     * @return The status of this managed instance group.
+     * 
+     */
     public Optional<Output<List<RegionInstanceGroupManagerStatusGetArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -197,6 +263,12 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="targetPools")
     private @Nullable Output<List<String>> targetPools;
 
+    /**
+     * @return The full URL of all target pools to which new
+     * instances in the group are added. Updating the target pools attribute does
+     * not affect existing instances.
+     * 
+     */
     public Optional<Output<List<String>>> targetPools() {
         return Optional.ofNullable(this.targetPools);
     }
@@ -208,6 +280,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="targetSize")
     private @Nullable Output<Integer> targetSize;
 
+    /**
+     * @return - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+     * 
+     */
     public Optional<Output<Integer>> targetSize() {
         return Optional.ofNullable(this.targetSize);
     }
@@ -219,6 +295,10 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="updatePolicy")
     private @Nullable Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> updatePolicy;
 
+    /**
+     * @return The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
+     * 
+     */
     public Optional<Output<RegionInstanceGroupManagerUpdatePolicyGetArgs>> updatePolicy() {
         return Optional.ofNullable(this.updatePolicy);
     }
@@ -232,6 +312,12 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="versions")
     private @Nullable Output<List<RegionInstanceGroupManagerVersionGetArgs>> versions;
 
+    /**
+     * @return Application versions managed by this instance group. Each
+     * version deals with a specific instance template, allowing canary release scenarios.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RegionInstanceGroupManagerVersionGetArgs>>> versions() {
         return Optional.ofNullable(this.versions);
     }
@@ -245,6 +331,12 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="waitForInstances")
     private @Nullable Output<Boolean> waitForInstances;
 
+    /**
+     * @return Whether to wait for all instances to be created/updated before
+     * returning. Note that if this is set to true and the operation does not succeed, the provider will
+     * continue trying until it times out.
+     * 
+     */
     public Optional<Output<Boolean>> waitForInstances() {
         return Optional.ofNullable(this.waitForInstances);
     }
@@ -259,6 +351,13 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
     @Import(name="waitForInstancesStatus")
     private @Nullable Output<String> waitForInstancesStatus;
 
+    /**
+     * @return When used with `wait_for_instances` it specifies the status to wait for.
+     * When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+     * set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+     * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
+     * 
+     */
     public Optional<Output<String>> waitForInstancesStatus() {
         return Optional.ofNullable(this.waitForInstancesStatus);
     }
@@ -306,206 +405,526 @@ public final class RegionInstanceGroupManagerState extends com.pulumi.resources.
             $ = new RegionInstanceGroupManagerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoHealingPolicies The autohealing policies for this managed instance
+         * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoHealingPolicies(@Nullable Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies) {
             $.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
 
+        /**
+         * @param autoHealingPolicies The autohealing policies for this managed instance
+         * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoHealingPolicies(RegionInstanceGroupManagerAutoHealingPoliciesGetArgs autoHealingPolicies) {
             return autoHealingPolicies(Output.of(autoHealingPolicies));
         }
 
+        /**
+         * @param baseInstanceName The base instance name to use for
+         * instances in this group. The value must be a valid
+         * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt) name. Supported characters
+         * are lowercase letters, numbers, and hyphens (-). Instances are named by
+         * appending a hyphen and a random four-character string to the base instance
+         * name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseInstanceName(@Nullable Output<String> baseInstanceName) {
             $.baseInstanceName = baseInstanceName;
             return this;
         }
 
+        /**
+         * @param baseInstanceName The base instance name to use for
+         * instances in this group. The value must be a valid
+         * [RFC1035](https://www.ietf.org/rfc/rfc1035.txt) name. Supported characters
+         * are lowercase letters, numbers, and hyphens (-). Instances are named by
+         * appending a hyphen and a random four-character string to the base instance
+         * name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseInstanceName(String baseInstanceName) {
             return baseInstanceName(Output.of(baseInstanceName));
         }
 
+        /**
+         * @param description An optional textual description of the instance
+         * group manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional textual description of the instance
+         * group manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param distributionPolicyTargetShape The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionPolicyTargetShape(@Nullable Output<String> distributionPolicyTargetShape) {
             $.distributionPolicyTargetShape = distributionPolicyTargetShape;
             return this;
         }
 
+        /**
+         * @param distributionPolicyTargetShape The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionPolicyTargetShape(String distributionPolicyTargetShape) {
             return distributionPolicyTargetShape(Output.of(distributionPolicyTargetShape));
         }
 
+        /**
+         * @param distributionPolicyZones The distribution policy for this managed instance
+         * group. You can specify one or more values. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups#selectingzones).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionPolicyZones(@Nullable Output<List<String>> distributionPolicyZones) {
             $.distributionPolicyZones = distributionPolicyZones;
             return this;
         }
 
+        /**
+         * @param distributionPolicyZones The distribution policy for this managed instance
+         * group. You can specify one or more values. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups#selectingzones).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionPolicyZones(List<String> distributionPolicyZones) {
             return distributionPolicyZones(Output.of(distributionPolicyZones));
         }
 
+        /**
+         * @param distributionPolicyZones The distribution policy for this managed instance
+         * group. You can specify one or more values. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups#selectingzones).
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionPolicyZones(String... distributionPolicyZones) {
             return distributionPolicyZones(List.of(distributionPolicyZones));
         }
 
+        /**
+         * @param fingerprint The fingerprint of the instance group manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint The fingerprint of the instance group manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param instanceGroup The full URL of the instance group created by the manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceGroup(@Nullable Output<String> instanceGroup) {
             $.instanceGroup = instanceGroup;
             return this;
         }
 
+        /**
+         * @param instanceGroup The full URL of the instance group created by the manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceGroup(String instanceGroup) {
             return instanceGroup(Output.of(instanceGroup));
         }
 
+        /**
+         * @param name - Version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name - Version name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namedPorts The named port configuration. See the section below
+         * for details on configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(@Nullable Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> namedPorts) {
             $.namedPorts = namedPorts;
             return this;
         }
 
+        /**
+         * @param namedPorts The named port configuration. See the section below
+         * for details on configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(List<RegionInstanceGroupManagerNamedPortGetArgs> namedPorts) {
             return namedPorts(Output.of(namedPorts));
         }
 
+        /**
+         * @param namedPorts The named port configuration. See the section below
+         * for details on configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(RegionInstanceGroupManagerNamedPortGetArgs... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region where the managed instance group resides. If not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region where the managed instance group resides. If not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param selfLink The URL of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URL of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param statefulDisks Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefulDisks(@Nullable Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> statefulDisks) {
             $.statefulDisks = statefulDisks;
             return this;
         }
 
+        /**
+         * @param statefulDisks Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefulDisks(List<RegionInstanceGroupManagerStatefulDiskGetArgs> statefulDisks) {
             return statefulDisks(Output.of(statefulDisks));
         }
 
+        /**
+         * @param statefulDisks Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statefulDisks(RegionInstanceGroupManagerStatefulDiskGetArgs... statefulDisks) {
             return statefulDisks(List.of(statefulDisks));
         }
 
+        /**
+         * @param statuses The status of this managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable Output<List<RegionInstanceGroupManagerStatusGetArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The status of this managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(List<RegionInstanceGroupManagerStatusGetArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
+        /**
+         * @param statuses The status of this managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(RegionInstanceGroupManagerStatusGetArgs... statuses) {
             return statuses(List.of(statuses));
         }
 
+        /**
+         * @param targetPools The full URL of all target pools to which new
+         * instances in the group are added. Updating the target pools attribute does
+         * not affect existing instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPools(@Nullable Output<List<String>> targetPools) {
             $.targetPools = targetPools;
             return this;
         }
 
+        /**
+         * @param targetPools The full URL of all target pools to which new
+         * instances in the group are added. Updating the target pools attribute does
+         * not affect existing instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPools(List<String> targetPools) {
             return targetPools(Output.of(targetPools));
         }
 
+        /**
+         * @param targetPools The full URL of all target pools to which new
+         * instances in the group are added. Updating the target pools attribute does
+         * not affect existing instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPools(String... targetPools) {
             return targetPools(List.of(targetPools));
         }
 
+        /**
+         * @param targetSize - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSize(@Nullable Output<Integer> targetSize) {
             $.targetSize = targetSize;
             return this;
         }
 
+        /**
+         * @param targetSize - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSize(Integer targetSize) {
             return targetSize(Output.of(targetSize));
         }
 
+        /**
+         * @param updatePolicy The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatePolicy(@Nullable Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> updatePolicy) {
             $.updatePolicy = updatePolicy;
             return this;
         }
 
+        /**
+         * @param updatePolicy The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatePolicy(RegionInstanceGroupManagerUpdatePolicyGetArgs updatePolicy) {
             return updatePolicy(Output.of(updatePolicy));
         }
 
+        /**
+         * @param versions Application versions managed by this instance group. Each
+         * version deals with a specific instance template, allowing canary release scenarios.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(@Nullable Output<List<RegionInstanceGroupManagerVersionGetArgs>> versions) {
             $.versions = versions;
             return this;
         }
 
+        /**
+         * @param versions Application versions managed by this instance group. Each
+         * version deals with a specific instance template, allowing canary release scenarios.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(List<RegionInstanceGroupManagerVersionGetArgs> versions) {
             return versions(Output.of(versions));
         }
 
+        /**
+         * @param versions Application versions managed by this instance group. Each
+         * version deals with a specific instance template, allowing canary release scenarios.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(RegionInstanceGroupManagerVersionGetArgs... versions) {
             return versions(List.of(versions));
         }
 
+        /**
+         * @param waitForInstances Whether to wait for all instances to be created/updated before
+         * returning. Note that if this is set to true and the operation does not succeed, the provider will
+         * continue trying until it times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForInstances(@Nullable Output<Boolean> waitForInstances) {
             $.waitForInstances = waitForInstances;
             return this;
         }
 
+        /**
+         * @param waitForInstances Whether to wait for all instances to be created/updated before
+         * returning. Note that if this is set to true and the operation does not succeed, the provider will
+         * continue trying until it times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForInstances(Boolean waitForInstances) {
             return waitForInstances(Output.of(waitForInstances));
         }
 
+        /**
+         * @param waitForInstancesStatus When used with `wait_for_instances` it specifies the status to wait for.
+         * When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+         * set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+         * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForInstancesStatus(@Nullable Output<String> waitForInstancesStatus) {
             $.waitForInstancesStatus = waitForInstancesStatus;
             return this;
         }
 
+        /**
+         * @param waitForInstancesStatus When used with `wait_for_instances` it specifies the status to wait for.
+         * When `STABLE` is specified this resource will wait until the instances are stable before returning. When `UPDATED` is
+         * set, it will wait for the version target to be reached and any per instance configs to be effective as well as all
+         * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForInstancesStatus(String waitForInstancesStatus) {
             return waitForInstancesStatus(Output.of(waitForInstancesStatus));
         }

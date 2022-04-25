@@ -26,6 +26,10 @@ public final class V2AndroidApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="packageName")
     private @Nullable Output<String> packageName;
 
+    /**
+     * @return The package name of the application.
+     * 
+     */
     public Optional<Output<String>> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -37,6 +41,10 @@ public final class V2AndroidApplicationArgs extends com.pulumi.resources.Resourc
     @Import(name="sha1Fingerprint")
     private @Nullable Output<String> sha1Fingerprint;
 
+    /**
+     * @return The SHA1 fingerprint of the application. For example, both sha1 formats are acceptable : DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09 or DA39A3EE5E6B4B0D3255BFEF95601890AFD80709. Output format is the latter.
+     * 
+     */
     public Optional<Output<String>> sha1Fingerprint() {
         return Optional.ofNullable(this.sha1Fingerprint);
     }
@@ -66,20 +74,44 @@ public final class V2AndroidApplicationArgs extends com.pulumi.resources.Resourc
             $ = new V2AndroidApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packageName The package name of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable Output<String> packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packageName The package name of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             return packageName(Output.of(packageName));
         }
 
+        /**
+         * @param sha1Fingerprint The SHA1 fingerprint of the application. For example, both sha1 formats are acceptable : DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09 or DA39A3EE5E6B4B0D3255BFEF95601890AFD80709. Output format is the latter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             $.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
 
+        /**
+         * @param sha1Fingerprint The SHA1 fingerprint of the application. For example, both sha1 formats are acceptable : DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09 or DA39A3EE5E6B4B0D3255BFEF95601890AFD80709. Output format is the latter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             return sha1Fingerprint(Output.of(sha1Fingerprint));
         }

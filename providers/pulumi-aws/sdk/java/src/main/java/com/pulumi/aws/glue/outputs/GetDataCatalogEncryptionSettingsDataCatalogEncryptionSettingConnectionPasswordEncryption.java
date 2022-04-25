@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption {
     /**
-     * A KMS key ARN that is used to encrypt the connection password.
+     * @return A KMS key ARN that is used to encrypt the connection password.
      * 
      */
     private final String awsKmsKeyId;
     /**
-     * When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
+     * @return When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
      * 
      */
     private final Boolean returnConnectionPasswordEncrypted;
@@ -30,16 +30,16 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     }
 
     /**
-     * A KMS key ARN that is used to encrypt the connection password.
+     * @return A KMS key ARN that is used to encrypt the connection password.
      * 
-    */
+     */
     public String awsKmsKeyId() {
         return this.awsKmsKeyId;
     }
     /**
-     * When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
+     * @return When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
      * 
-    */
+     */
     public Boolean returnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;
     }

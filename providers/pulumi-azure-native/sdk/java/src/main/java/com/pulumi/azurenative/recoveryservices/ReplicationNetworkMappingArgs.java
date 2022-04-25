@@ -23,6 +23,10 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
     @Import(name="fabricName", required=true)
     private Output<String> fabricName;
 
+    /**
+     * @return Primary fabric name.
+     * 
+     */
     public Output<String> fabricName() {
         return this.fabricName;
     }
@@ -34,6 +38,10 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
     @Import(name="networkMappingName")
     private @Nullable Output<String> networkMappingName;
 
+    /**
+     * @return Network mapping name.
+     * 
+     */
     public Optional<Output<String>> networkMappingName() {
         return Optional.ofNullable(this.networkMappingName);
     }
@@ -45,6 +53,10 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
     @Import(name="networkName", required=true)
     private Output<String> networkName;
 
+    /**
+     * @return Primary network name.
+     * 
+     */
     public Output<String> networkName() {
         return this.networkName;
     }
@@ -56,6 +68,10 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
     @Import(name="properties")
     private @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
 
+    /**
+     * @return Input properties for creating network mapping.
+     * 
+     */
     public Optional<Output<CreateNetworkMappingInputPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -67,6 +83,10 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -111,56 +135,128 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
             $ = new ReplicationNetworkMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Primary fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param fabricName Primary fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             return fabricName(Output.of(fabricName));
         }
 
+        /**
+         * @param networkMappingName Network mapping name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMappingName(@Nullable Output<String> networkMappingName) {
             $.networkMappingName = networkMappingName;
             return this;
         }
 
+        /**
+         * @param networkMappingName Network mapping name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMappingName(String networkMappingName) {
             return networkMappingName(Output.of(networkMappingName));
         }
 
+        /**
+         * @param networkName Primary network name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkName(Output<String> networkName) {
             $.networkName = networkName;
             return this;
         }
 
+        /**
+         * @param networkName Primary network name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkName(String networkName) {
             return networkName(Output.of(networkName));
         }
 
+        /**
+         * @param properties Input properties for creating network mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Input properties for creating network mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CreateNetworkMappingInputPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

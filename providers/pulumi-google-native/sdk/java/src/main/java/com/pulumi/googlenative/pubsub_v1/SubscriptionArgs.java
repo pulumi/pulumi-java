@@ -29,6 +29,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ackDeadlineSeconds")
     private @Nullable Output<Integer> ackDeadlineSeconds;
 
+    /**
+     * @return The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
+     * 
+     */
     public Optional<Output<Integer>> ackDeadlineSeconds() {
         return Optional.ofNullable(this.ackDeadlineSeconds);
     }
@@ -40,6 +44,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterPolicy")
     private @Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy;
 
+    /**
+     * @return A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions&#39;s parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription.
+     * 
+     */
     public Optional<Output<DeadLetterPolicyArgs>> deadLetterPolicy() {
         return Optional.ofNullable(this.deadLetterPolicy);
     }
@@ -51,6 +59,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detached")
     private @Nullable Output<Boolean> detached;
 
+    /**
+     * @return Indicates whether the subscription is detached from its topic. Detached subscriptions don&#39;t receive messages from their topic and don&#39;t retain any backlog. `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to the endpoint will not be made.
+     * 
+     */
     public Optional<Output<Boolean>> detached() {
         return Optional.ofNullable(this.detached);
     }
@@ -62,6 +74,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableMessageOrdering")
     private @Nullable Output<Boolean> enableMessageOrdering;
 
+    /**
+     * @return If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
+     * 
+     */
     public Optional<Output<Boolean>> enableMessageOrdering() {
         return Optional.ofNullable(this.enableMessageOrdering);
     }
@@ -73,6 +89,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationPolicy")
     private @Nullable Output<ExpirationPolicyArgs> expirationPolicy;
 
+    /**
+     * @return A policy that specifies the conditions for this subscription&#39;s expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If `expiration_policy` is not set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is not set, the subscription never expires.
+     * 
+     */
     public Optional<Output<ExpirationPolicyArgs>> expirationPolicy() {
         return Optional.ofNullable(this.expirationPolicy);
     }
@@ -84,6 +104,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return An expression written in the Pub/Sub [filter language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only `PubsubMessage`s whose `attributes` field matches the filter are delivered on this subscription. If empty, then no messages are filtered out.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -95,6 +119,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return See Creating and managing labels.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -106,6 +134,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionDuration")
     private @Nullable Output<String> messageRetentionDuration;
 
+    /**
+     * @return How long to retain unacknowledged messages in the subscription&#39;s backlog, from the moment a message is published. If `retain_acked_messages` is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a `Seek` can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
+     * 
+     */
     public Optional<Output<String>> messageRetentionDuration() {
         return Optional.ofNullable(this.messageRetentionDuration);
     }
@@ -117,6 +149,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the subscription. It must have the format `&#34;projects/{project}/subscriptions/{subscription}&#34;`. `{subscription}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `&#34;goog&#34;`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -135,6 +171,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pushConfig")
     private @Nullable Output<PushConfigArgs> pushConfig;
 
+    /**
+     * @return If push delivery is used with this subscription, this field is used to configure it. At most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber will pull and ack messages using API methods.
+     * 
+     */
     public Optional<Output<PushConfigArgs>> pushConfig() {
         return Optional.ofNullable(this.pushConfig);
     }
@@ -146,6 +186,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retainAckedMessages")
     private @Nullable Output<Boolean> retainAckedMessages;
 
+    /**
+     * @return Indicates whether to retain acknowledged messages. If true, then messages are not expunged from the subscription&#39;s backlog, even if they are acknowledged, until they fall out of the `message_retention_duration` window. This must be true if you would like to [`Seek` to a timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to replay previously-acknowledged messages.
+     * 
+     */
     public Optional<Output<Boolean>> retainAckedMessages() {
         return Optional.ofNullable(this.retainAckedMessages);
     }
@@ -157,6 +201,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryPolicy")
     private @Nullable Output<RetryPolicyArgs> retryPolicy;
 
+    /**
+     * @return A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message.
+     * 
+     */
     public Optional<Output<RetryPolicyArgs>> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -175,6 +223,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topic", required=true)
     private Output<String> topic;
 
+    /**
+     * @return The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the topic has been deleted.
+     * 
+     */
     public Output<String> topic() {
         return this.topic;
     }
@@ -217,83 +269,191 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ackDeadlineSeconds The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ackDeadlineSeconds(@Nullable Output<Integer> ackDeadlineSeconds) {
             $.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
 
+        /**
+         * @param ackDeadlineSeconds The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ackDeadlineSeconds(Integer ackDeadlineSeconds) {
             return ackDeadlineSeconds(Output.of(ackDeadlineSeconds));
         }
 
+        /**
+         * @param deadLetterPolicy A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions&#39;s parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterPolicy(@Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy) {
             $.deadLetterPolicy = deadLetterPolicy;
             return this;
         }
 
+        /**
+         * @param deadLetterPolicy A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions&#39;s parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterPolicy(DeadLetterPolicyArgs deadLetterPolicy) {
             return deadLetterPolicy(Output.of(deadLetterPolicy));
         }
 
+        /**
+         * @param detached Indicates whether the subscription is detached from its topic. Detached subscriptions don&#39;t receive messages from their topic and don&#39;t retain any backlog. `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to the endpoint will not be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detached(@Nullable Output<Boolean> detached) {
             $.detached = detached;
             return this;
         }
 
+        /**
+         * @param detached Indicates whether the subscription is detached from its topic. Detached subscriptions don&#39;t receive messages from their topic and don&#39;t retain any backlog. `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to the endpoint will not be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detached(Boolean detached) {
             return detached(Output.of(detached));
         }
 
+        /**
+         * @param enableMessageOrdering If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMessageOrdering(@Nullable Output<Boolean> enableMessageOrdering) {
             $.enableMessageOrdering = enableMessageOrdering;
             return this;
         }
 
+        /**
+         * @param enableMessageOrdering If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMessageOrdering(Boolean enableMessageOrdering) {
             return enableMessageOrdering(Output.of(enableMessageOrdering));
         }
 
+        /**
+         * @param expirationPolicy A policy that specifies the conditions for this subscription&#39;s expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If `expiration_policy` is not set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is not set, the subscription never expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationPolicy(@Nullable Output<ExpirationPolicyArgs> expirationPolicy) {
             $.expirationPolicy = expirationPolicy;
             return this;
         }
 
+        /**
+         * @param expirationPolicy A policy that specifies the conditions for this subscription&#39;s expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If `expiration_policy` is not set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is not set, the subscription never expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationPolicy(ExpirationPolicyArgs expirationPolicy) {
             return expirationPolicy(Output.of(expirationPolicy));
         }
 
+        /**
+         * @param filter An expression written in the Pub/Sub [filter language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only `PubsubMessage`s whose `attributes` field matches the filter are delivered on this subscription. If empty, then no messages are filtered out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter An expression written in the Pub/Sub [filter language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only `PubsubMessage`s whose `attributes` field matches the filter are delivered on this subscription. If empty, then no messages are filtered out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param labels See Creating and managing labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels See Creating and managing labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param messageRetentionDuration How long to retain unacknowledged messages in the subscription&#39;s backlog, from the moment a message is published. If `retain_acked_messages` is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a `Seek` can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
             $.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
 
+        /**
+         * @param messageRetentionDuration How long to retain unacknowledged messages in the subscription&#39;s backlog, from the moment a message is published. If `retain_acked_messages` is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a `Seek` can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRetentionDuration(String messageRetentionDuration) {
             return messageRetentionDuration(Output.of(messageRetentionDuration));
         }
 
+        /**
+         * @param name The name of the subscription. It must have the format `&#34;projects/{project}/subscriptions/{subscription}&#34;`. `{subscription}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `&#34;goog&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the subscription. It must have the format `&#34;projects/{project}/subscriptions/{subscription}&#34;`. `{subscription}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `&#34;goog&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -307,29 +467,65 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param pushConfig If push delivery is used with this subscription, this field is used to configure it. At most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber will pull and ack messages using API methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
             $.pushConfig = pushConfig;
             return this;
         }
 
+        /**
+         * @param pushConfig If push delivery is used with this subscription, this field is used to configure it. At most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber will pull and ack messages using API methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushConfig(PushConfigArgs pushConfig) {
             return pushConfig(Output.of(pushConfig));
         }
 
+        /**
+         * @param retainAckedMessages Indicates whether to retain acknowledged messages. If true, then messages are not expunged from the subscription&#39;s backlog, even if they are acknowledged, until they fall out of the `message_retention_duration` window. This must be true if you would like to [`Seek` to a timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to replay previously-acknowledged messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainAckedMessages(@Nullable Output<Boolean> retainAckedMessages) {
             $.retainAckedMessages = retainAckedMessages;
             return this;
         }
 
+        /**
+         * @param retainAckedMessages Indicates whether to retain acknowledged messages. If true, then messages are not expunged from the subscription&#39;s backlog, even if they are acknowledged, until they fall out of the `message_retention_duration` window. This must be true if you would like to [`Seek` to a timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to replay previously-acknowledged messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retainAckedMessages(Boolean retainAckedMessages) {
             return retainAckedMessages(Output.of(retainAckedMessages));
         }
 
+        /**
+         * @param retryPolicy A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
             $.retryPolicy = retryPolicy;
             return this;
         }
 
+        /**
+         * @param retryPolicy A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryPolicy(RetryPolicyArgs retryPolicy) {
             return retryPolicy(Output.of(retryPolicy));
         }
@@ -343,11 +539,23 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the topic has been deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the topic has been deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

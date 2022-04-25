@@ -38,6 +38,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="allowPrivilegeEscalation")
     private @Nullable Output<Boolean> allowPrivilegeEscalation;
 
+    /**
+     * @return allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
+     * 
+     */
     public Optional<Output<Boolean>> allowPrivilegeEscalation() {
         return Optional.ofNullable(this.allowPrivilegeEscalation);
     }
@@ -49,6 +53,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="allowedCSIDrivers")
     private @Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
 
+    /**
+     * @return AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
+     * 
+     */
     public Optional<Output<List<AllowedCSIDriverArgs>>> allowedCSIDrivers() {
         return Optional.ofNullable(this.allowedCSIDrivers);
     }
@@ -60,6 +68,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="allowedCapabilities")
     private @Nullable Output<List<String>> allowedCapabilities;
 
+    /**
+     * @return allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+     * 
+     */
     public Optional<Output<List<String>>> allowedCapabilities() {
         return Optional.ofNullable(this.allowedCapabilities);
     }
@@ -71,6 +83,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="allowedFlexVolumes")
     private @Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
 
+    /**
+     * @return allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
+     * 
+     */
     public Optional<Output<List<AllowedFlexVolumeArgs>>> allowedFlexVolumes() {
         return Optional.ofNullable(this.allowedFlexVolumes);
     }
@@ -82,6 +98,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="allowedHostPaths")
     private @Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths;
 
+    /**
+     * @return allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
+     * 
+     */
     public Optional<Output<List<AllowedHostPathArgs>>> allowedHostPaths() {
         return Optional.ofNullable(this.allowedHostPaths);
     }
@@ -93,6 +113,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="allowedProcMountTypes")
     private @Nullable Output<List<String>> allowedProcMountTypes;
 
+    /**
+     * @return AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
+     * 
+     */
     public Optional<Output<List<String>>> allowedProcMountTypes() {
         return Optional.ofNullable(this.allowedProcMountTypes);
     }
@@ -106,6 +130,12 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="allowedUnsafeSysctls")
     private @Nullable Output<List<String>> allowedUnsafeSysctls;
 
+    /**
+     * @return allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
+     * 
+     * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
+     * 
+     */
     public Optional<Output<List<String>>> allowedUnsafeSysctls() {
         return Optional.ofNullable(this.allowedUnsafeSysctls);
     }
@@ -117,6 +147,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="defaultAddCapabilities")
     private @Nullable Output<List<String>> defaultAddCapabilities;
 
+    /**
+     * @return defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
+     * 
+     */
     public Optional<Output<List<String>>> defaultAddCapabilities() {
         return Optional.ofNullable(this.defaultAddCapabilities);
     }
@@ -128,6 +162,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="defaultAllowPrivilegeEscalation")
     private @Nullable Output<Boolean> defaultAllowPrivilegeEscalation;
 
+    /**
+     * @return defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
+     * 
+     */
     public Optional<Output<Boolean>> defaultAllowPrivilegeEscalation() {
         return Optional.ofNullable(this.defaultAllowPrivilegeEscalation);
     }
@@ -141,6 +179,12 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="forbiddenSysctls")
     private @Nullable Output<List<String>> forbiddenSysctls;
 
+    /**
+     * @return forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+     * 
+     * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
+     * 
+     */
     public Optional<Output<List<String>>> forbiddenSysctls() {
         return Optional.ofNullable(this.forbiddenSysctls);
     }
@@ -152,6 +196,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="fsGroup", required=true)
     private Output<FSGroupStrategyOptionsArgs> fsGroup;
 
+    /**
+     * @return fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
+     * 
+     */
     public Output<FSGroupStrategyOptionsArgs> fsGroup() {
         return this.fsGroup;
     }
@@ -163,6 +211,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="hostIPC")
     private @Nullable Output<Boolean> hostIPC;
 
+    /**
+     * @return hostIPC determines if the policy allows the use of HostIPC in the pod spec.
+     * 
+     */
     public Optional<Output<Boolean>> hostIPC() {
         return Optional.ofNullable(this.hostIPC);
     }
@@ -174,6 +226,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="hostNetwork")
     private @Nullable Output<Boolean> hostNetwork;
 
+    /**
+     * @return hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
+     * 
+     */
     public Optional<Output<Boolean>> hostNetwork() {
         return Optional.ofNullable(this.hostNetwork);
     }
@@ -185,6 +241,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="hostPID")
     private @Nullable Output<Boolean> hostPID;
 
+    /**
+     * @return hostPID determines if the policy allows the use of HostPID in the pod spec.
+     * 
+     */
     public Optional<Output<Boolean>> hostPID() {
         return Optional.ofNullable(this.hostPID);
     }
@@ -196,6 +256,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="hostPorts")
     private @Nullable Output<List<HostPortRangeArgs>> hostPorts;
 
+    /**
+     * @return hostPorts determines which host port ranges are allowed to be exposed.
+     * 
+     */
     public Optional<Output<List<HostPortRangeArgs>>> hostPorts() {
         return Optional.ofNullable(this.hostPorts);
     }
@@ -207,6 +271,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="privileged")
     private @Nullable Output<Boolean> privileged;
 
+    /**
+     * @return privileged determines if a pod can request to be run as privileged.
+     * 
+     */
     public Optional<Output<Boolean>> privileged() {
         return Optional.ofNullable(this.privileged);
     }
@@ -218,6 +286,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="readOnlyRootFilesystem")
     private @Nullable Output<Boolean> readOnlyRootFilesystem;
 
+    /**
+     * @return readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
+     * 
+     */
     public Optional<Output<Boolean>> readOnlyRootFilesystem() {
         return Optional.ofNullable(this.readOnlyRootFilesystem);
     }
@@ -229,6 +301,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="requiredDropCapabilities")
     private @Nullable Output<List<String>> requiredDropCapabilities;
 
+    /**
+     * @return requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
+     * 
+     */
     public Optional<Output<List<String>>> requiredDropCapabilities() {
         return Optional.ofNullable(this.requiredDropCapabilities);
     }
@@ -240,6 +316,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="runAsGroup")
     private @Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup;
 
+    /**
+     * @return RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
+     * 
+     */
     public Optional<Output<RunAsGroupStrategyOptionsArgs>> runAsGroup() {
         return Optional.ofNullable(this.runAsGroup);
     }
@@ -251,6 +331,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="runAsUser", required=true)
     private Output<RunAsUserStrategyOptionsArgs> runAsUser;
 
+    /**
+     * @return runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
+     * 
+     */
     public Output<RunAsUserStrategyOptionsArgs> runAsUser() {
         return this.runAsUser;
     }
@@ -262,6 +346,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="runtimeClass")
     private @Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass;
 
+    /**
+     * @return runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
+     * 
+     */
     public Optional<Output<RuntimeClassStrategyOptionsArgs>> runtimeClass() {
         return Optional.ofNullable(this.runtimeClass);
     }
@@ -273,6 +361,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="seLinux", required=true)
     private Output<SELinuxStrategyOptionsArgs> seLinux;
 
+    /**
+     * @return seLinux is the strategy that will dictate the allowable labels that may be set.
+     * 
+     */
     public Output<SELinuxStrategyOptionsArgs> seLinux() {
         return this.seLinux;
     }
@@ -284,6 +376,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="supplementalGroups", required=true)
     private Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
 
+    /**
+     * @return supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
+     * 
+     */
     public Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups() {
         return this.supplementalGroups;
     }
@@ -295,6 +391,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
     @Import(name="volumes")
     private @Nullable Output<List<String>> volumes;
 
+    /**
+     * @return volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
+     * 
+     */
     public Optional<Output<List<String>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -346,262 +446,628 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
             $ = new PodSecurityPolicySpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPrivilegeEscalation allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPrivilegeEscalation(@Nullable Output<Boolean> allowPrivilegeEscalation) {
             $.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
 
+        /**
+         * @param allowPrivilegeEscalation allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPrivilegeEscalation(Boolean allowPrivilegeEscalation) {
             return allowPrivilegeEscalation(Output.of(allowPrivilegeEscalation));
         }
 
+        /**
+         * @param allowedCSIDrivers AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCSIDrivers(@Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers) {
             $.allowedCSIDrivers = allowedCSIDrivers;
             return this;
         }
 
+        /**
+         * @param allowedCSIDrivers AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCSIDrivers(List<AllowedCSIDriverArgs> allowedCSIDrivers) {
             return allowedCSIDrivers(Output.of(allowedCSIDrivers));
         }
 
+        /**
+         * @param allowedCSIDrivers AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCSIDrivers(AllowedCSIDriverArgs... allowedCSIDrivers) {
             return allowedCSIDrivers(List.of(allowedCSIDrivers));
         }
 
+        /**
+         * @param allowedCapabilities allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCapabilities(@Nullable Output<List<String>> allowedCapabilities) {
             $.allowedCapabilities = allowedCapabilities;
             return this;
         }
 
+        /**
+         * @param allowedCapabilities allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCapabilities(List<String> allowedCapabilities) {
             return allowedCapabilities(Output.of(allowedCapabilities));
         }
 
+        /**
+         * @param allowedCapabilities allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author&#39;s discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedCapabilities(String... allowedCapabilities) {
             return allowedCapabilities(List.of(allowedCapabilities));
         }
 
+        /**
+         * @param allowedFlexVolumes allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedFlexVolumes(@Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes) {
             $.allowedFlexVolumes = allowedFlexVolumes;
             return this;
         }
 
+        /**
+         * @param allowedFlexVolumes allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedFlexVolumes(List<AllowedFlexVolumeArgs> allowedFlexVolumes) {
             return allowedFlexVolumes(Output.of(allowedFlexVolumes));
         }
 
+        /**
+         * @param allowedFlexVolumes allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the &#34;volumes&#34; field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedFlexVolumes(AllowedFlexVolumeArgs... allowedFlexVolumes) {
             return allowedFlexVolumes(List.of(allowedFlexVolumes));
         }
 
+        /**
+         * @param allowedHostPaths allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHostPaths(@Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths) {
             $.allowedHostPaths = allowedHostPaths;
             return this;
         }
 
+        /**
+         * @param allowedHostPaths allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHostPaths(List<AllowedHostPathArgs> allowedHostPaths) {
             return allowedHostPaths(Output.of(allowedHostPaths));
         }
 
+        /**
+         * @param allowedHostPaths allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHostPaths(AllowedHostPathArgs... allowedHostPaths) {
             return allowedHostPaths(List.of(allowedHostPaths));
         }
 
+        /**
+         * @param allowedProcMountTypes AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedProcMountTypes(@Nullable Output<List<String>> allowedProcMountTypes) {
             $.allowedProcMountTypes = allowedProcMountTypes;
             return this;
         }
 
+        /**
+         * @param allowedProcMountTypes AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedProcMountTypes(List<String> allowedProcMountTypes) {
             return allowedProcMountTypes(Output.of(allowedProcMountTypes));
         }
 
+        /**
+         * @param allowedProcMountTypes AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedProcMountTypes(String... allowedProcMountTypes) {
             return allowedProcMountTypes(List.of(allowedProcMountTypes));
         }
 
+        /**
+         * @param allowedUnsafeSysctls allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
+         * 
+         * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedUnsafeSysctls(@Nullable Output<List<String>> allowedUnsafeSysctls) {
             $.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
 
+        /**
+         * @param allowedUnsafeSysctls allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
+         * 
+         * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedUnsafeSysctls(List<String> allowedUnsafeSysctls) {
             return allowedUnsafeSysctls(Output.of(allowedUnsafeSysctls));
         }
 
+        /**
+         * @param allowedUnsafeSysctls allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
+         * 
+         * Examples: e.g. &#34;foo/*&#34; allows &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; allows &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
             return allowedUnsafeSysctls(List.of(allowedUnsafeSysctls));
         }
 
+        /**
+         * @param defaultAddCapabilities defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAddCapabilities(@Nullable Output<List<String>> defaultAddCapabilities) {
             $.defaultAddCapabilities = defaultAddCapabilities;
             return this;
         }
 
+        /**
+         * @param defaultAddCapabilities defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAddCapabilities(List<String> defaultAddCapabilities) {
             return defaultAddCapabilities(Output.of(defaultAddCapabilities));
         }
 
+        /**
+         * @param defaultAddCapabilities defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAddCapabilities(String... defaultAddCapabilities) {
             return defaultAddCapabilities(List.of(defaultAddCapabilities));
         }
 
+        /**
+         * @param defaultAllowPrivilegeEscalation defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAllowPrivilegeEscalation(@Nullable Output<Boolean> defaultAllowPrivilegeEscalation) {
             $.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
             return this;
         }
 
+        /**
+         * @param defaultAllowPrivilegeEscalation defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAllowPrivilegeEscalation(Boolean defaultAllowPrivilegeEscalation) {
             return defaultAllowPrivilegeEscalation(Output.of(defaultAllowPrivilegeEscalation));
         }
 
+        /**
+         * @param forbiddenSysctls forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+         * 
+         * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forbiddenSysctls(@Nullable Output<List<String>> forbiddenSysctls) {
             $.forbiddenSysctls = forbiddenSysctls;
             return this;
         }
 
+        /**
+         * @param forbiddenSysctls forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+         * 
+         * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forbiddenSysctls(List<String> forbiddenSysctls) {
             return forbiddenSysctls(Output.of(forbiddenSysctls));
         }
 
+        /**
+         * @param forbiddenSysctls forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in &#34;*&#34; in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
+         * 
+         * Examples: e.g. &#34;foo/*&#34; forbids &#34;foo/bar&#34;, &#34;foo/baz&#34;, etc. e.g. &#34;foo.*&#34; forbids &#34;foo.bar&#34;, &#34;foo.baz&#34;, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forbiddenSysctls(String... forbiddenSysctls) {
             return forbiddenSysctls(List.of(forbiddenSysctls));
         }
 
+        /**
+         * @param fsGroup fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsGroup(Output<FSGroupStrategyOptionsArgs> fsGroup) {
             $.fsGroup = fsGroup;
             return this;
         }
 
+        /**
+         * @param fsGroup fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsGroup(FSGroupStrategyOptionsArgs fsGroup) {
             return fsGroup(Output.of(fsGroup));
         }
 
+        /**
+         * @param hostIPC hostIPC determines if the policy allows the use of HostIPC in the pod spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostIPC(@Nullable Output<Boolean> hostIPC) {
             $.hostIPC = hostIPC;
             return this;
         }
 
+        /**
+         * @param hostIPC hostIPC determines if the policy allows the use of HostIPC in the pod spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostIPC(Boolean hostIPC) {
             return hostIPC(Output.of(hostIPC));
         }
 
+        /**
+         * @param hostNetwork hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
             $.hostNetwork = hostNetwork;
             return this;
         }
 
+        /**
+         * @param hostNetwork hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNetwork(Boolean hostNetwork) {
             return hostNetwork(Output.of(hostNetwork));
         }
 
+        /**
+         * @param hostPID hostPID determines if the policy allows the use of HostPID in the pod spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPID(@Nullable Output<Boolean> hostPID) {
             $.hostPID = hostPID;
             return this;
         }
 
+        /**
+         * @param hostPID hostPID determines if the policy allows the use of HostPID in the pod spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPID(Boolean hostPID) {
             return hostPID(Output.of(hostPID));
         }
 
+        /**
+         * @param hostPorts hostPorts determines which host port ranges are allowed to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPorts(@Nullable Output<List<HostPortRangeArgs>> hostPorts) {
             $.hostPorts = hostPorts;
             return this;
         }
 
+        /**
+         * @param hostPorts hostPorts determines which host port ranges are allowed to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPorts(List<HostPortRangeArgs> hostPorts) {
             return hostPorts(Output.of(hostPorts));
         }
 
+        /**
+         * @param hostPorts hostPorts determines which host port ranges are allowed to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPorts(HostPortRangeArgs... hostPorts) {
             return hostPorts(List.of(hostPorts));
         }
 
+        /**
+         * @param privileged privileged determines if a pod can request to be run as privileged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privileged(@Nullable Output<Boolean> privileged) {
             $.privileged = privileged;
             return this;
         }
 
+        /**
+         * @param privileged privileged determines if a pod can request to be run as privileged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privileged(Boolean privileged) {
             return privileged(Output.of(privileged));
         }
 
+        /**
+         * @param readOnlyRootFilesystem readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyRootFilesystem(@Nullable Output<Boolean> readOnlyRootFilesystem) {
             $.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
 
+        /**
+         * @param readOnlyRootFilesystem readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
             return readOnlyRootFilesystem(Output.of(readOnlyRootFilesystem));
         }
 
+        /**
+         * @param requiredDropCapabilities requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredDropCapabilities(@Nullable Output<List<String>> requiredDropCapabilities) {
             $.requiredDropCapabilities = requiredDropCapabilities;
             return this;
         }
 
+        /**
+         * @param requiredDropCapabilities requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredDropCapabilities(List<String> requiredDropCapabilities) {
             return requiredDropCapabilities(Output.of(requiredDropCapabilities));
         }
 
+        /**
+         * @param requiredDropCapabilities requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredDropCapabilities(String... requiredDropCapabilities) {
             return requiredDropCapabilities(List.of(requiredDropCapabilities));
         }
 
+        /**
+         * @param runAsGroup RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsGroup(@Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup) {
             $.runAsGroup = runAsGroup;
             return this;
         }
 
+        /**
+         * @param runAsGroup RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod&#39;s RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsGroup(RunAsGroupStrategyOptionsArgs runAsGroup) {
             return runAsGroup(Output.of(runAsGroup));
         }
 
+        /**
+         * @param runAsUser runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsUser(Output<RunAsUserStrategyOptionsArgs> runAsUser) {
             $.runAsUser = runAsUser;
             return this;
         }
 
+        /**
+         * @param runAsUser runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsUser(RunAsUserStrategyOptionsArgs runAsUser) {
             return runAsUser(Output.of(runAsUser));
         }
 
+        /**
+         * @param runtimeClass runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeClass(@Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass) {
             $.runtimeClass = runtimeClass;
             return this;
         }
 
+        /**
+         * @param runtimeClass runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod&#39;s runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeClass(RuntimeClassStrategyOptionsArgs runtimeClass) {
             return runtimeClass(Output.of(runtimeClass));
         }
 
+        /**
+         * @param seLinux seLinux is the strategy that will dictate the allowable labels that may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seLinux(Output<SELinuxStrategyOptionsArgs> seLinux) {
             $.seLinux = seLinux;
             return this;
         }
 
+        /**
+         * @param seLinux seLinux is the strategy that will dictate the allowable labels that may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seLinux(SELinuxStrategyOptionsArgs seLinux) {
             return seLinux(Output.of(seLinux));
         }
 
+        /**
+         * @param supplementalGroups supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supplementalGroups(Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups) {
             $.supplementalGroups = supplementalGroups;
             return this;
         }
 
+        /**
+         * @param supplementalGroups supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supplementalGroups(SupplementalGroupsStrategyOptionsArgs supplementalGroups) {
             return supplementalGroups(Output.of(supplementalGroups));
         }
 
+        /**
+         * @param volumes volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<String>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<String> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use &#39;*&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(String... volumes) {
             return volumes(List.of(volumes));
         }

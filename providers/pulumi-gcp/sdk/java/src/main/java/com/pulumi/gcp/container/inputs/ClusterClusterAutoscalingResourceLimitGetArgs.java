@@ -23,6 +23,10 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends com.pul
     @Import(name="maximum")
     private @Nullable Output<Integer> maximum;
 
+    /**
+     * @return Maximum amount of the resource in the cluster.
+     * 
+     */
     public Optional<Output<Integer>> maximum() {
         return Optional.ofNullable(this.maximum);
     }
@@ -34,6 +38,10 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends com.pul
     @Import(name="minimum")
     private @Nullable Output<Integer> minimum;
 
+    /**
+     * @return Minimum amount of the resource in the cluster.
+     * 
+     */
     public Optional<Output<Integer>> minimum() {
         return Optional.ofNullable(this.minimum);
     }
@@ -47,6 +55,12 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends com.pul
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The type of the resource. For example, `cpu` and
+     * `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+     * for a list of types.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -77,29 +91,69 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends com.pul
             $ = new ClusterClusterAutoscalingResourceLimitGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maximum Maximum amount of the resource in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(@Nullable Output<Integer> maximum) {
             $.maximum = maximum;
             return this;
         }
 
+        /**
+         * @param maximum Maximum amount of the resource in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(Integer maximum) {
             return maximum(Output.of(maximum));
         }
 
+        /**
+         * @param minimum Minimum amount of the resource in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(@Nullable Output<Integer> minimum) {
             $.minimum = minimum;
             return this;
         }
 
+        /**
+         * @param minimum Minimum amount of the resource in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(Integer minimum) {
             return minimum(Output.of(minimum));
         }
 
+        /**
+         * @param resourceType The type of the resource. For example, `cpu` and
+         * `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+         * for a list of types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The type of the resource. For example, `cpu` and
+         * `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
+         * for a list of types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

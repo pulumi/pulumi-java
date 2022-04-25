@@ -25,6 +25,11 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
     @Import(name="accessConfigs", required=true)
     private List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs;
 
+    /**
+     * @return Access configurations, i.e. IPs via which this
+     * instance can be accessed via the Internet. Structure documented below.
+     * 
+     */
     public List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs;
     }
@@ -36,6 +41,10 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
     @Import(name="aliasIpRanges", required=true)
     private List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges;
 
+    /**
+     * @return An array of alias IP ranges for this network interface. Structure documented below.
+     * 
+     */
     public List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges;
     }
@@ -61,6 +70,10 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the instance. One of `name` or `self_link` must be provided.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -72,6 +85,10 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return The name or self_link of the network attached to this interface.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -83,6 +100,10 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
     @Import(name="networkIp", required=true)
     private String networkIp;
 
+    /**
+     * @return The private IP address assigned to the instance.
+     * 
+     */
     public String networkIp() {
         return this.networkIp;
     }
@@ -115,6 +136,10 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
     @Import(name="subnetwork", required=true)
     private String subnetwork;
 
+    /**
+     * @return The name or self_link of the subnetwork attached to this interface.
+     * 
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
@@ -126,6 +151,10 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
     @Import(name="subnetworkProject", required=true)
     private String subnetworkProject;
 
+    /**
+     * @return The project in which the subnetwork belongs.
+     * 
+     */
     public String subnetworkProject() {
         return this.subnetworkProject;
     }
@@ -165,20 +194,46 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
             $ = new GetInstanceNetworkInterface(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessConfigs Access configurations, i.e. IPs via which this
+         * instance can be accessed via the Internet. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfigs(List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs) {
             $.accessConfigs = accessConfigs;
             return this;
         }
 
+        /**
+         * @param accessConfigs Access configurations, i.e. IPs via which this
+         * instance can be accessed via the Internet. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessConfigs(GetInstanceNetworkInterfaceAccessConfig... accessConfigs) {
             return accessConfigs(List.of(accessConfigs));
         }
 
+        /**
+         * @param aliasIpRanges An array of alias IP ranges for this network interface. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasIpRanges(List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges) {
             $.aliasIpRanges = aliasIpRanges;
             return this;
         }
 
+        /**
+         * @param aliasIpRanges An array of alias IP ranges for this network interface. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasIpRanges(GetInstanceNetworkInterfaceAliasIpRange... aliasIpRanges) {
             return aliasIpRanges(List.of(aliasIpRanges));
         }
@@ -197,16 +252,34 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
             return this;
         }
 
+        /**
+         * @param name The name of the instance. One of `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param network The name or self_link of the network attached to this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param networkIp The private IP address assigned to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkIp(String networkIp) {
             $.networkIp = networkIp;
             return this;
@@ -227,11 +300,23 @@ public final class GetInstanceNetworkInterface extends com.pulumi.resources.Invo
             return this;
         }
 
+        /**
+         * @param subnetwork The name or self_link of the subnetwork attached to this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetworkProject The project in which the subnetwork belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkProject(String subnetworkProject) {
             $.subnetworkProject = subnetworkProject;
             return this;

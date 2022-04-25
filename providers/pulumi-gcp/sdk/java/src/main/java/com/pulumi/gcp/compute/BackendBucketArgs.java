@@ -25,6 +25,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return Cloud Storage bucket name.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -37,6 +41,11 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cdnPolicy")
     private @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
 
+    /**
+     * @return Cloud CDN configuration for this Backend Bucket.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BackendBucketCdnPolicyArgs>> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
@@ -48,6 +57,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customResponseHeaders")
     private @Nullable Output<List<String>> customResponseHeaders;
 
+    /**
+     * @return Headers that the HTTP/S load balancer should add to proxied responses.
+     * 
+     */
     public Optional<Output<List<String>>> customResponseHeaders() {
         return Optional.ofNullable(this.customResponseHeaders);
     }
@@ -60,6 +73,11 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional textual description of the resource; provided by the
+     * client when the resource is created.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +89,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableCdn")
     private @Nullable Output<Boolean> enableCdn;
 
+    /**
+     * @return If true, enable Cloud CDN for this BackendBucket.
+     * 
+     */
     public Optional<Output<Boolean>> enableCdn() {
         return Optional.ofNullable(this.enableCdn);
     }
@@ -88,6 +110,16 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035.  Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z?` which means
+     * the first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the
+     * last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -100,6 +132,11 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -134,69 +171,177 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackendBucketArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName Cloud Storage bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName Cloud Storage bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param cdnPolicy Cloud CDN configuration for this Backend Bucket.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy) {
             $.cdnPolicy = cdnPolicy;
             return this;
         }
 
+        /**
+         * @param cdnPolicy Cloud CDN configuration for this Backend Bucket.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnPolicy(BackendBucketCdnPolicyArgs cdnPolicy) {
             return cdnPolicy(Output.of(cdnPolicy));
         }
 
+        /**
+         * @param customResponseHeaders Headers that the HTTP/S load balancer should add to proxied responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
             $.customResponseHeaders = customResponseHeaders;
             return this;
         }
 
+        /**
+         * @param customResponseHeaders Headers that the HTTP/S load balancer should add to proxied responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(List<String> customResponseHeaders) {
             return customResponseHeaders(Output.of(customResponseHeaders));
         }
 
+        /**
+         * @param customResponseHeaders Headers that the HTTP/S load balancer should add to proxied responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(String... customResponseHeaders) {
             return customResponseHeaders(List.of(customResponseHeaders));
         }
 
+        /**
+         * @param description An optional textual description of the resource; provided by the
+         * client when the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional textual description of the resource; provided by the
+         * client when the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableCdn If true, enable Cloud CDN for this BackendBucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
             $.enableCdn = enableCdn;
             return this;
         }
 
+        /**
+         * @param enableCdn If true, enable Cloud CDN for this BackendBucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCdn(Boolean enableCdn) {
             return enableCdn(Output.of(enableCdn));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035.  Specifically, the name must be 1-63 characters long and
+         * match the regular expression `a-z?` which means
+         * the first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the
+         * last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035.  Specifically, the name must be 1-63 characters long and
+         * match the regular expression `a-z?` which means
+         * the first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the
+         * last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

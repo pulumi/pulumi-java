@@ -30,6 +30,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="backupManagementType")
     private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
+    /**
+     * @return Type of backup management for the backed up item.
+     * 
+     */
     public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -41,6 +45,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly name of the VM represented by this backup item.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -52,6 +60,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="itemId")
     private @Nullable Output<String> itemId;
 
+    /**
+     * @return ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+     * 
+     */
     public Optional<Output<String>> itemId() {
         return Optional.ofNullable(this.itemId);
     }
@@ -63,6 +75,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return ID of the backup policy with which this item is backed up.
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -75,6 +91,11 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="protectionIntentItemType", required=true)
     private Output<String> protectionIntentItemType;
 
+    /**
+     * @return backup protectionIntent type.
+     * Expected value is &#39;AzureResourceItem&#39;.
+     * 
+     */
     public Output<String> protectionIntentItemType() {
         return this.protectionIntentItemType;
     }
@@ -86,6 +107,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="protectionState")
     private @Nullable Output<Either<String,ProtectionStatus>> protectionState;
 
+    /**
+     * @return Backup state of this backup item.
+     * 
+     */
     public Optional<Output<Either<String,ProtectionStatus>>> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
@@ -97,6 +122,10 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="sourceResourceId")
     private @Nullable Output<String> sourceResourceId;
 
+    /**
+     * @return ARM ID of the resource to be backed up.
+     * 
+     */
     public Optional<Output<String>> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -131,81 +160,191 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
             $ = new AzureResourceProtectionIntentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             return backupManagementType(Either.ofLeft(backupManagementType));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(BackupManagementType backupManagementType) {
             return backupManagementType(Either.ofRight(backupManagementType));
         }
 
+        /**
+         * @param friendlyName Friendly name of the VM represented by this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the VM represented by this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param itemId ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemId(@Nullable Output<String> itemId) {
             $.itemId = itemId;
             return this;
         }
 
+        /**
+         * @param itemId ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemId(String itemId) {
             return itemId(Output.of(itemId));
         }
 
+        /**
+         * @param policyId ID of the backup policy with which this item is backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId ID of the backup policy with which this item is backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param protectionIntentItemType backup protectionIntent type.
+         * Expected value is &#39;AzureResourceItem&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionIntentItemType(Output<String> protectionIntentItemType) {
             $.protectionIntentItemType = protectionIntentItemType;
             return this;
         }
 
+        /**
+         * @param protectionIntentItemType backup protectionIntent type.
+         * Expected value is &#39;AzureResourceItem&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionIntentItemType(String protectionIntentItemType) {
             return protectionIntentItemType(Output.of(protectionIntentItemType));
         }
 
+        /**
+         * @param protectionState Backup state of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(@Nullable Output<Either<String,ProtectionStatus>> protectionState) {
             $.protectionState = protectionState;
             return this;
         }
 
+        /**
+         * @param protectionState Backup state of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(Either<String,ProtectionStatus> protectionState) {
             return protectionState(Output.of(protectionState));
         }
 
+        /**
+         * @param protectionState Backup state of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(String protectionState) {
             return protectionState(Either.ofLeft(protectionState));
         }
 
+        /**
+         * @param protectionState Backup state of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(ProtectionStatus protectionState) {
             return protectionState(Either.ofRight(protectionState));
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the resource to be backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the resource to be backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(String sourceResourceId) {
             return sourceResourceId(Output.of(sourceResourceId));
         }

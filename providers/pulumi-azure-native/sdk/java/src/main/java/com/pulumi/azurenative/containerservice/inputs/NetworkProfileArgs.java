@@ -27,6 +27,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="peerVnetId")
     private @Nullable Output<String> peerVnetId;
 
+    /**
+     * @return CIDR of the Vnet to peer.
+     * 
+     */
     public Optional<Output<String>> peerVnetId() {
         return Optional.ofNullable(this.peerVnetId);
     }
@@ -38,6 +42,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vnetCidr")
     private @Nullable Output<String> vnetCidr;
 
+    /**
+     * @return CIDR for the OpenShift Vnet.
+     * 
+     */
     public Optional<Output<String>> vnetCidr() {
         return Optional.ofNullable(this.vnetCidr);
     }
@@ -49,6 +57,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vnetId")
     private @Nullable Output<String> vnetId;
 
+    /**
+     * @return ID of the Vnet created for OSA cluster.
+     * 
+     */
     public Optional<Output<String>> vnetId() {
         return Optional.ofNullable(this.vnetId);
     }
@@ -79,29 +91,65 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peerVnetId CIDR of the Vnet to peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerVnetId(@Nullable Output<String> peerVnetId) {
             $.peerVnetId = peerVnetId;
             return this;
         }
 
+        /**
+         * @param peerVnetId CIDR of the Vnet to peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerVnetId(String peerVnetId) {
             return peerVnetId(Output.of(peerVnetId));
         }
 
+        /**
+         * @param vnetCidr CIDR for the OpenShift Vnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetCidr(@Nullable Output<String> vnetCidr) {
             $.vnetCidr = vnetCidr;
             return this;
         }
 
+        /**
+         * @param vnetCidr CIDR for the OpenShift Vnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetCidr(String vnetCidr) {
             return vnetCidr(Output.of(vnetCidr));
         }
 
+        /**
+         * @param vnetId ID of the Vnet created for OSA cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetId(@Nullable Output<String> vnetId) {
             $.vnetId = vnetId;
             return this;
         }
 
+        /**
+         * @param vnetId ID of the Vnet created for OSA cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetId(String vnetId) {
             return vnetId(Output.of(vnetId));
         }

@@ -27,6 +27,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
     @Import(name="failoverGroupName")
     private @Nullable Output<String> failoverGroupName;
 
+    /**
+     * @return The name of the failover group.
+     * 
+     */
     public Optional<Output<String>> failoverGroupName() {
         return Optional.ofNullable(this.failoverGroupName);
     }
@@ -38,6 +42,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
     @Import(name="locationName", required=true)
     private Output<String> locationName;
 
+    /**
+     * @return The name of the region where the resource is located.
+     * 
+     */
     public Output<String> locationName() {
         return this.locationName;
     }
@@ -49,6 +57,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
     @Import(name="managedInstancePairs", required=true)
     private Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
 
+    /**
+     * @return List of managed instance pairs in the failover group.
+     * 
+     */
     public Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs() {
         return this.managedInstancePairs;
     }
@@ -60,6 +72,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
     @Import(name="partnerRegions", required=true)
     private Output<List<PartnerRegionInfoArgs>> partnerRegions;
 
+    /**
+     * @return Partner region information for the failover group.
+     * 
+     */
     public Output<List<PartnerRegionInfoArgs>> partnerRegions() {
         return this.partnerRegions;
     }
@@ -71,6 +87,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
     @Import(name="readOnlyEndpoint")
     private @Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
+    /**
+     * @return Read-only endpoint of the failover group instance.
+     * 
+     */
     public Optional<Output<InstanceFailoverGroupReadOnlyEndpointArgs>> readOnlyEndpoint() {
         return Optional.ofNullable(this.readOnlyEndpoint);
     }
@@ -82,6 +102,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
     @Import(name="readWriteEndpoint", required=true)
     private Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
+    /**
+     * @return Read-write endpoint of the failover group instance.
+     * 
+     */
     public Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
@@ -93,6 +117,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -127,73 +155,169 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
             $ = new InstanceFailoverGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverGroupName The name of the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverGroupName(@Nullable Output<String> failoverGroupName) {
             $.failoverGroupName = failoverGroupName;
             return this;
         }
 
+        /**
+         * @param failoverGroupName The name of the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverGroupName(String failoverGroupName) {
             return failoverGroupName(Output.of(failoverGroupName));
         }
 
+        /**
+         * @param locationName The name of the region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(Output<String> locationName) {
             $.locationName = locationName;
             return this;
         }
 
+        /**
+         * @param locationName The name of the region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(String locationName) {
             return locationName(Output.of(locationName));
         }
 
+        /**
+         * @param managedInstancePairs List of managed instance pairs in the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstancePairs(Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs) {
             $.managedInstancePairs = managedInstancePairs;
             return this;
         }
 
+        /**
+         * @param managedInstancePairs List of managed instance pairs in the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstancePairs(List<ManagedInstancePairInfoArgs> managedInstancePairs) {
             return managedInstancePairs(Output.of(managedInstancePairs));
         }
 
+        /**
+         * @param managedInstancePairs List of managed instance pairs in the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstancePairs(ManagedInstancePairInfoArgs... managedInstancePairs) {
             return managedInstancePairs(List.of(managedInstancePairs));
         }
 
+        /**
+         * @param partnerRegions Partner region information for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerRegions(Output<List<PartnerRegionInfoArgs>> partnerRegions) {
             $.partnerRegions = partnerRegions;
             return this;
         }
 
+        /**
+         * @param partnerRegions Partner region information for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerRegions(List<PartnerRegionInfoArgs> partnerRegions) {
             return partnerRegions(Output.of(partnerRegions));
         }
 
+        /**
+         * @param partnerRegions Partner region information for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerRegions(PartnerRegionInfoArgs... partnerRegions) {
             return partnerRegions(List.of(partnerRegions));
         }
 
+        /**
+         * @param readOnlyEndpoint Read-only endpoint of the failover group instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyEndpoint(@Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
             $.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
 
+        /**
+         * @param readOnlyEndpoint Read-only endpoint of the failover group instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyEndpoint(InstanceFailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
             return readOnlyEndpoint(Output.of(readOnlyEndpoint));
         }
 
+        /**
+         * @param readWriteEndpoint Read-write endpoint of the failover group instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readWriteEndpoint(Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
             $.readWriteEndpoint = readWriteEndpoint;
             return this;
         }
 
+        /**
+         * @param readWriteEndpoint Read-write endpoint of the failover group instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readWriteEndpoint(InstanceFailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
             return readWriteEndpoint(Output.of(readWriteEndpoint));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

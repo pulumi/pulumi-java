@@ -27,6 +27,10 @@ public final class SkuCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="default")
     private @Nullable Output<Integer> default_;
 
+    /**
+     * @return Default number of workers for this App Service plan SKU.
+     * 
+     */
     public Optional<Output<Integer>> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -38,6 +42,10 @@ public final class SkuCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticMaximum")
     private @Nullable Output<Integer> elasticMaximum;
 
+    /**
+     * @return Maximum number of Elastic workers for this App Service plan SKU.
+     * 
+     */
     public Optional<Output<Integer>> elasticMaximum() {
         return Optional.ofNullable(this.elasticMaximum);
     }
@@ -49,6 +57,10 @@ public final class SkuCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maximum")
     private @Nullable Output<Integer> maximum;
 
+    /**
+     * @return Maximum number of workers for this App Service plan SKU.
+     * 
+     */
     public Optional<Output<Integer>> maximum() {
         return Optional.ofNullable(this.maximum);
     }
@@ -60,6 +72,10 @@ public final class SkuCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimum")
     private @Nullable Output<Integer> minimum;
 
+    /**
+     * @return Minimum number of workers for this App Service plan SKU.
+     * 
+     */
     public Optional<Output<Integer>> minimum() {
         return Optional.ofNullable(this.minimum);
     }
@@ -71,6 +87,10 @@ public final class SkuCapacityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scaleType")
     private @Nullable Output<String> scaleType;
 
+    /**
+     * @return Available scale configurations for an App Service plan.
+     * 
+     */
     public Optional<Output<String>> scaleType() {
         return Optional.ofNullable(this.scaleType);
     }
@@ -103,47 +123,107 @@ public final class SkuCapacityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuCapacityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ Default number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable Output<Integer> default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param default_ Default number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(Integer default_) {
             return default_(Output.of(default_));
         }
 
+        /**
+         * @param elasticMaximum Maximum number of Elastic workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticMaximum(@Nullable Output<Integer> elasticMaximum) {
             $.elasticMaximum = elasticMaximum;
             return this;
         }
 
+        /**
+         * @param elasticMaximum Maximum number of Elastic workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticMaximum(Integer elasticMaximum) {
             return elasticMaximum(Output.of(elasticMaximum));
         }
 
+        /**
+         * @param maximum Maximum number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(@Nullable Output<Integer> maximum) {
             $.maximum = maximum;
             return this;
         }
 
+        /**
+         * @param maximum Maximum number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximum(Integer maximum) {
             return maximum(Output.of(maximum));
         }
 
+        /**
+         * @param minimum Minimum number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(@Nullable Output<Integer> minimum) {
             $.minimum = minimum;
             return this;
         }
 
+        /**
+         * @param minimum Minimum number of workers for this App Service plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimum(Integer minimum) {
             return minimum(Output.of(minimum));
         }
 
+        /**
+         * @param scaleType Available scale configurations for an App Service plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(@Nullable Output<String> scaleType) {
             $.scaleType = scaleType;
             return this;
         }
 
+        /**
+         * @param scaleType Available scale configurations for an App Service plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleType(String scaleType) {
             return scaleType(Output.of(scaleType));
         }

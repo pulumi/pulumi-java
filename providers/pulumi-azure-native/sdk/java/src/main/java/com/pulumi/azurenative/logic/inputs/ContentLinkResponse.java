@@ -28,6 +28,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentHash", required=true)
     private ContentHashResponse contentHash;
 
+    /**
+     * @return The content hash.
+     * 
+     */
     public ContentHashResponse contentHash() {
         return this.contentHash;
     }
@@ -39,6 +43,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentSize", required=true)
     private Double contentSize;
 
+    /**
+     * @return The content size.
+     * 
+     */
     public Double contentSize() {
         return this.contentSize;
     }
@@ -50,6 +58,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="contentVersion", required=true)
     private String contentVersion;
 
+    /**
+     * @return The content version.
+     * 
+     */
     public String contentVersion() {
         return this.contentVersion;
     }
@@ -61,6 +73,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
     private Object metadata;
 
+    /**
+     * @return The metadata.
+     * 
+     */
     public Object metadata() {
         return this.metadata;
     }
@@ -72,6 +88,10 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return The content link URI.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -104,26 +124,56 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContentLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentHash The content hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(ContentHashResponse contentHash) {
             $.contentHash = contentHash;
             return this;
         }
 
+        /**
+         * @param contentSize The content size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentSize(Double contentSize) {
             $.contentSize = contentSize;
             return this;
         }
 
+        /**
+         * @param contentVersion The content version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentVersion(String contentVersion) {
             $.contentVersion = contentVersion;
             return this;
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param uri The content link URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

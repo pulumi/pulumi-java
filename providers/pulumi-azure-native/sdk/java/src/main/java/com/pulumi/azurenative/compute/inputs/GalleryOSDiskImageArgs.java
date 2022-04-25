@@ -27,6 +27,10 @@ public final class GalleryOSDiskImageArgs extends com.pulumi.resources.ResourceA
     @Import(name="hostCaching")
     private @Nullable Output<HostCaching> hostCaching;
 
+    /**
+     * @return The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+     * 
+     */
     public Optional<Output<HostCaching>> hostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
@@ -38,6 +42,10 @@ public final class GalleryOSDiskImageArgs extends com.pulumi.resources.ResourceA
     @Import(name="source")
     private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
+    /**
+     * @return The gallery artifact version source.
+     * 
+     */
     public Optional<Output<GalleryArtifactVersionSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -67,20 +75,44 @@ public final class GalleryOSDiskImageArgs extends com.pulumi.resources.ResourceA
             $ = new GalleryOSDiskImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostCaching The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(@Nullable Output<HostCaching> hostCaching) {
             $.hostCaching = hostCaching;
             return this;
         }
 
+        /**
+         * @param hostCaching The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(HostCaching hostCaching) {
             return hostCaching(Output.of(hostCaching));
         }
 
+        /**
+         * @param source The gallery artifact version source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The gallery artifact version source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(GalleryArtifactVersionSourceArgs source) {
             return source(Output.of(source));
         }

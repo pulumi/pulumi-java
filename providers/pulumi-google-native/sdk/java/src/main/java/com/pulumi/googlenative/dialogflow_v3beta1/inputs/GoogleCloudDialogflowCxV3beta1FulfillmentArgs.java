@@ -31,6 +31,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
     @Import(name="conditionalCases")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> conditionalCases;
 
+    /**
+     * @return Conditional cases for this fulfillment.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>>> conditionalCases() {
         return Optional.ofNullable(this.conditionalCases);
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
     @Import(name="messages")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> messages;
 
+    /**
+     * @return The list of rich message responses to present to the user.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>>> messages() {
         return Optional.ofNullable(this.messages);
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
     @Import(name="returnPartialResponses")
     private @Nullable Output<Boolean> returnPartialResponses;
 
+    /**
+     * @return Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+     * 
+     */
     public Optional<Output<Boolean>> returnPartialResponses() {
         return Optional.ofNullable(this.returnPartialResponses);
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
     @Import(name="setParameterActions")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> setParameterActions;
 
+    /**
+     * @return Set parameter values before executing the webhook.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>>> setParameterActions() {
         return Optional.ofNullable(this.setParameterActions);
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
     @Import(name="webhook")
     private @Nullable Output<String> webhook;
 
+    /**
+     * @return The webhook to call. Format: `projects//locations//agents//webhooks/`.
+     * 
+     */
     public Optional<Output<String>> webhook() {
         return Optional.ofNullable(this.webhook);
     }
@@ -119,68 +143,158 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
             $ = new GoogleCloudDialogflowCxV3beta1FulfillmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditionalCases Conditional cases for this fulfillment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionalCases(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> conditionalCases) {
             $.conditionalCases = conditionalCases;
             return this;
         }
 
+        /**
+         * @param conditionalCases Conditional cases for this fulfillment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionalCases(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> conditionalCases) {
             return conditionalCases(Output.of(conditionalCases));
         }
 
+        /**
+         * @param conditionalCases Conditional cases for this fulfillment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditionalCases(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs... conditionalCases) {
             return conditionalCases(List.of(conditionalCases));
         }
 
+        /**
+         * @param messages The list of rich message responses to present to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> messages) {
             $.messages = messages;
             return this;
         }
 
+        /**
+         * @param messages The list of rich message responses to present to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> messages) {
             return messages(Output.of(messages));
         }
 
+        /**
+         * @param messages The list of rich message responses to present to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(GoogleCloudDialogflowCxV3beta1ResponseMessageArgs... messages) {
             return messages(List.of(messages));
         }
 
+        /**
+         * @param returnPartialResponses Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnPartialResponses(@Nullable Output<Boolean> returnPartialResponses) {
             $.returnPartialResponses = returnPartialResponses;
             return this;
         }
 
+        /**
+         * @param returnPartialResponses Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnPartialResponses(Boolean returnPartialResponses) {
             return returnPartialResponses(Output.of(returnPartialResponses));
         }
 
+        /**
+         * @param setParameterActions Set parameter values before executing the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setParameterActions(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> setParameterActions) {
             $.setParameterActions = setParameterActions;
             return this;
         }
 
+        /**
+         * @param setParameterActions Set parameter values before executing the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setParameterActions(List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs> setParameterActions) {
             return setParameterActions(Output.of(setParameterActions));
         }
 
+        /**
+         * @param setParameterActions Set parameter values before executing the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setParameterActions(GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs... setParameterActions) {
             return setParameterActions(List.of(setParameterActions));
         }
 
+        /**
+         * @param tag The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }
 
+        /**
+         * @param webhook The webhook to call. Format: `projects//locations//agents//webhooks/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhook(@Nullable Output<String> webhook) {
             $.webhook = webhook;
             return this;
         }
 
+        /**
+         * @param webhook The webhook to call. Format: `projects//locations//agents//webhooks/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhook(String webhook) {
             return webhook(Output.of(webhook));
         }

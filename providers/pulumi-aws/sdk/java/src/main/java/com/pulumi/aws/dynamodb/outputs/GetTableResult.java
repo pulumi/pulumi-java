@@ -26,7 +26,7 @@ public final class GetTableResult {
     private final List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes;
     private final String hashKey;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -108,9 +108,9 @@ public final class GetTableResult {
         return this.hashKey;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

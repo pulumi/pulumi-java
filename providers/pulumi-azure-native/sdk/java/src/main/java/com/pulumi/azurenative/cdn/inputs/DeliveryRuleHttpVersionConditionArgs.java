@@ -27,6 +27,11 @@ public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the condition for the delivery rule.
+     * Expected value is &#39;HttpVersion&#39;.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +43,10 @@ public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resou
     @Import(name="parameters", required=true)
     private Output<HttpVersionMatchConditionParametersArgs> parameters;
 
+    /**
+     * @return Defines the parameters for the condition.
+     * 
+     */
     public Output<HttpVersionMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
@@ -67,20 +76,46 @@ public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resou
             $ = new DeliveryRuleHttpVersionConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the condition for the delivery rule.
+         * Expected value is &#39;HttpVersion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the condition for the delivery rule.
+         * Expected value is &#39;HttpVersion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Defines the parameters for the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<HttpVersionMatchConditionParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(HttpVersionMatchConditionParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }

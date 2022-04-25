@@ -30,6 +30,10 @@ public final class ConnectionMonitorEndpointFilterArgs extends com.pulumi.resour
     @Import(name="items")
     private @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items;
 
+    /**
+     * @return List of items in the filter.
+     * 
+     */
     public Optional<Output<List<ConnectionMonitorEndpointFilterItemArgs>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -41,6 +45,10 @@ public final class ConnectionMonitorEndpointFilterArgs extends com.pulumi.resour
     @Import(name="type")
     private @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type;
 
+    /**
+     * @return The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+     * 
+     */
     public Optional<Output<Either<String,ConnectionMonitorEndpointFilterType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -70,32 +78,74 @@ public final class ConnectionMonitorEndpointFilterArgs extends com.pulumi.resour
             $ = new ConnectionMonitorEndpointFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items List of items in the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items List of items in the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<ConnectionMonitorEndpointFilterItemArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items List of items in the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(ConnectionMonitorEndpointFilterItemArgs... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param type The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ConnectionMonitorEndpointFilterType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ConnectionMonitorEndpointFilterType type) {
             return type(Either.ofRight(type));
         }

@@ -25,6 +25,10 @@ public final class ManagementGroupPathElementResponse extends com.pulumi.resourc
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The friendly name of the group.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class ManagementGroupPathElementResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the group.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class ManagementGroupPathElementResponse extends com.pulumi.resourc
             $ = new ManagementGroupPathElementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The friendly name of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param name The name of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

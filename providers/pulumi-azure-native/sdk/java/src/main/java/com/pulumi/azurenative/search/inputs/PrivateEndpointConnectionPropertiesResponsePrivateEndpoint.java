@@ -25,6 +25,10 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateEndpoint ex
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The resource id of the private endpoint resource from Microsoft.Network provider.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateEndpoint ex
             $ = new PrivateEndpointConnectionPropertiesResponsePrivateEndpoint(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource id of the private endpoint resource from Microsoft.Network provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

@@ -21,6 +21,10 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesGetAr
     @Import(name="propertyGroups", required=true)
     private Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups;
 
+    /**
+     * @return Describes the execution property groups.
+     * 
+     */
     public Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups() {
         return this.propertyGroups;
     }
@@ -49,15 +53,33 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesGetAr
             $ = new ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param propertyGroups Describes the execution property groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyGroups(Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs>> propertyGroups) {
             $.propertyGroups = propertyGroups;
             return this;
         }
 
+        /**
+         * @param propertyGroups Describes the execution property groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs> propertyGroups) {
             return propertyGroups(Output.of(propertyGroups));
         }
 
+        /**
+         * @param propertyGroups Describes the execution property groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyGroups(ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupGetArgs... propertyGroups) {
             return propertyGroups(List.of(propertyGroups));
         }

@@ -42,6 +42,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -53,6 +57,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="apiProperties")
     private @Nullable Output<ApiPropertiesArgs> apiProperties;
 
+    /**
+     * @return API specific properties. Currently, supported only for MongoDB API.
+     * 
+     */
     public Optional<Output<ApiPropertiesArgs>> apiProperties() {
         return Optional.ofNullable(this.apiProperties);
     }
@@ -64,6 +72,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="backupPolicy")
     private @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
 
+    /**
+     * @return The object representing the policy for taking backups on an account.
+     * 
+     */
     public Optional<Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>>> backupPolicy() {
         return Optional.ofNullable(this.backupPolicy);
     }
@@ -75,6 +87,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="capabilities")
     private @Nullable Output<List<CapabilityArgs>> capabilities;
 
+    /**
+     * @return List of Cosmos DB capabilities for the account
+     * 
+     */
     public Optional<Output<List<CapabilityArgs>>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -86,6 +102,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="connectorOffer")
     private @Nullable Output<Either<String,ConnectorOffer>> connectorOffer;
 
+    /**
+     * @return The cassandra connector offer type for the Cosmos DB database C* account.
+     * 
+     */
     public Optional<Output<Either<String,ConnectorOffer>>> connectorOffer() {
         return Optional.ofNullable(this.connectorOffer);
     }
@@ -97,6 +117,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="consistencyPolicy")
     private @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy;
 
+    /**
+     * @return The consistency policy for the Cosmos DB account.
+     * 
+     */
     public Optional<Output<ConsistencyPolicyArgs>> consistencyPolicy() {
         return Optional.ofNullable(this.consistencyPolicy);
     }
@@ -108,6 +132,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="cors")
     private @Nullable Output<List<CorsPolicyArgs>> cors;
 
+    /**
+     * @return The CORS policy for the Cosmos DB database account.
+     * 
+     */
     public Optional<Output<List<CorsPolicyArgs>>> cors() {
         return Optional.ofNullable(this.cors);
     }
@@ -119,6 +147,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="databaseAccountOfferType", required=true)
     private Output<DatabaseAccountOfferType> databaseAccountOfferType;
 
+    /**
+     * @return The offer type for the database
+     * 
+     */
     public Output<DatabaseAccountOfferType> databaseAccountOfferType() {
         return this.databaseAccountOfferType;
     }
@@ -130,6 +162,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultIdentity")
     private @Nullable Output<String> defaultIdentity;
 
+    /**
+     * @return The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be &#34;FirstPartyIdentity&#34;, &#34;SystemAssignedIdentity&#34; and more.
+     * 
+     */
     public Optional<Output<String>> defaultIdentity() {
         return Optional.ofNullable(this.defaultIdentity);
     }
@@ -141,6 +177,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="disableKeyBasedMetadataWriteAccess")
     private @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess;
 
+    /**
+     * @return Disable write operations on metadata resources (databases, containers, throughput) via account keys
+     * 
+     */
     public Optional<Output<Boolean>> disableKeyBasedMetadataWriteAccess() {
         return Optional.ofNullable(this.disableKeyBasedMetadataWriteAccess);
     }
@@ -152,6 +192,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableAnalyticalStorage")
     private @Nullable Output<Boolean> enableAnalyticalStorage;
 
+    /**
+     * @return Flag to indicate whether to enable storage analytics.
+     * 
+     */
     public Optional<Output<Boolean>> enableAnalyticalStorage() {
         return Optional.ofNullable(this.enableAnalyticalStorage);
     }
@@ -163,6 +207,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableAutomaticFailover")
     private @Nullable Output<Boolean> enableAutomaticFailover;
 
+    /**
+     * @return Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutomaticFailover() {
         return Optional.ofNullable(this.enableAutomaticFailover);
     }
@@ -174,6 +222,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableCassandraConnector")
     private @Nullable Output<Boolean> enableCassandraConnector;
 
+    /**
+     * @return Enables the cassandra connector on the Cosmos DB C* account
+     * 
+     */
     public Optional<Output<Boolean>> enableCassandraConnector() {
         return Optional.ofNullable(this.enableCassandraConnector);
     }
@@ -185,6 +237,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableFreeTier")
     private @Nullable Output<Boolean> enableFreeTier;
 
+    /**
+     * @return Flag to indicate whether Free Tier is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableFreeTier() {
         return Optional.ofNullable(this.enableFreeTier);
     }
@@ -196,6 +252,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableMultipleWriteLocations")
     private @Nullable Output<Boolean> enableMultipleWriteLocations;
 
+    /**
+     * @return Enables the account to write in multiple locations
+     * 
+     */
     public Optional<Output<Boolean>> enableMultipleWriteLocations() {
         return Optional.ofNullable(this.enableMultipleWriteLocations);
     }
@@ -207,6 +267,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return Identity for the resource.
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -218,6 +282,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ipRules")
     private @Nullable Output<List<IpAddressOrRangeArgs>> ipRules;
 
+    /**
+     * @return List of IpRules.
+     * 
+     */
     public Optional<Output<List<IpAddressOrRangeArgs>>> ipRules() {
         return Optional.ofNullable(this.ipRules);
     }
@@ -229,6 +297,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isVirtualNetworkFilterEnabled")
     private @Nullable Output<Boolean> isVirtualNetworkFilterEnabled;
 
+    /**
+     * @return Flag to indicate whether to enable/disable Virtual Network ACL rules.
+     * 
+     */
     public Optional<Output<Boolean>> isVirtualNetworkFilterEnabled() {
         return Optional.ofNullable(this.isVirtualNetworkFilterEnabled);
     }
@@ -240,6 +312,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="keyVaultKeyUri")
     private @Nullable Output<String> keyVaultKeyUri;
 
+    /**
+     * @return The URI of the key vault
+     * 
+     */
     public Optional<Output<String>> keyVaultKeyUri() {
         return Optional.ofNullable(this.keyVaultKeyUri);
     }
@@ -251,6 +327,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
     private @Nullable Output<Either<String,DatabaseAccountKind>> kind;
 
+    /**
+     * @return Indicates the type of database account. This can only be set at database account creation.
+     * 
+     */
     public Optional<Output<Either<String,DatabaseAccountKind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -262,6 +342,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource group to which the resource belongs.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -273,6 +357,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="locations", required=true)
     private Output<List<LocationArgs>> locations;
 
+    /**
+     * @return An array that contains the georeplication locations enabled for the Cosmos DB account.
+     * 
+     */
     public Output<List<LocationArgs>> locations() {
         return this.locations;
     }
@@ -284,6 +372,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkAclBypass")
     private @Nullable Output<NetworkAclBypass> networkAclBypass;
 
+    /**
+     * @return Indicates what services are allowed to bypass firewall checks.
+     * 
+     */
     public Optional<Output<NetworkAclBypass>> networkAclBypass() {
         return Optional.ofNullable(this.networkAclBypass);
     }
@@ -295,6 +387,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkAclBypassResourceIds")
     private @Nullable Output<List<String>> networkAclBypassResourceIds;
 
+    /**
+     * @return An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
+     * 
+     */
     public Optional<Output<List<String>>> networkAclBypassResourceIds() {
         return Optional.ofNullable(this.networkAclBypassResourceIds);
     }
@@ -306,6 +402,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return Whether requests from Public Network are allowed
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -317,6 +417,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -328,6 +432,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with &#34;defaultExperience&#34;: &#34;Cassandra&#34;. Current &#34;defaultExperience&#34; values also include &#34;Table&#34;, &#34;Graph&#34;, &#34;DocumentDB&#34;, and &#34;MongoDB&#34;.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -339,6 +447,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="virtualNetworkRules")
     private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
+    /**
+     * @return List of Virtual Network ACL rules configured for the Cosmos DB account.
+     * 
+     */
     public Optional<Output<List<VirtualNetworkRuleArgs>>> virtualNetworkRules() {
         return Optional.ofNullable(this.virtualNetworkRules);
     }
@@ -394,310 +506,730 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
             $ = new DatabaseAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param apiProperties API specific properties. Currently, supported only for MongoDB API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProperties(@Nullable Output<ApiPropertiesArgs> apiProperties) {
             $.apiProperties = apiProperties;
             return this;
         }
 
+        /**
+         * @param apiProperties API specific properties. Currently, supported only for MongoDB API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProperties(ApiPropertiesArgs apiProperties) {
             return apiProperties(Output.of(apiProperties));
         }
 
+        /**
+         * @param backupPolicy The object representing the policy for taking backups on an account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicy(@Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy) {
             $.backupPolicy = backupPolicy;
             return this;
         }
 
+        /**
+         * @param backupPolicy The object representing the policy for taking backups on an account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicy(Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs> backupPolicy) {
             return backupPolicy(Output.of(backupPolicy));
         }
 
+        /**
+         * @param backupPolicy The object representing the policy for taking backups on an account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicy(ContinuousModeBackupPolicyArgs backupPolicy) {
             return backupPolicy(Either.ofLeft(backupPolicy));
         }
 
+        /**
+         * @param backupPolicy The object representing the policy for taking backups on an account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupPolicy(PeriodicModeBackupPolicyArgs backupPolicy) {
             return backupPolicy(Either.ofRight(backupPolicy));
         }
 
+        /**
+         * @param capabilities List of Cosmos DB capabilities for the account
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable Output<List<CapabilityArgs>> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities List of Cosmos DB capabilities for the account
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(List<CapabilityArgs> capabilities) {
             return capabilities(Output.of(capabilities));
         }
 
+        /**
+         * @param capabilities List of Cosmos DB capabilities for the account
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(CapabilityArgs... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param connectorOffer The cassandra connector offer type for the Cosmos DB database C* account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOffer(@Nullable Output<Either<String,ConnectorOffer>> connectorOffer) {
             $.connectorOffer = connectorOffer;
             return this;
         }
 
+        /**
+         * @param connectorOffer The cassandra connector offer type for the Cosmos DB database C* account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOffer(Either<String,ConnectorOffer> connectorOffer) {
             return connectorOffer(Output.of(connectorOffer));
         }
 
+        /**
+         * @param connectorOffer The cassandra connector offer type for the Cosmos DB database C* account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOffer(String connectorOffer) {
             return connectorOffer(Either.ofLeft(connectorOffer));
         }
 
+        /**
+         * @param connectorOffer The cassandra connector offer type for the Cosmos DB database C* account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOffer(ConnectorOffer connectorOffer) {
             return connectorOffer(Either.ofRight(connectorOffer));
         }
 
+        /**
+         * @param consistencyPolicy The consistency policy for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consistencyPolicy(@Nullable Output<ConsistencyPolicyArgs> consistencyPolicy) {
             $.consistencyPolicy = consistencyPolicy;
             return this;
         }
 
+        /**
+         * @param consistencyPolicy The consistency policy for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consistencyPolicy(ConsistencyPolicyArgs consistencyPolicy) {
             return consistencyPolicy(Output.of(consistencyPolicy));
         }
 
+        /**
+         * @param cors The CORS policy for the Cosmos DB database account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(@Nullable Output<List<CorsPolicyArgs>> cors) {
             $.cors = cors;
             return this;
         }
 
+        /**
+         * @param cors The CORS policy for the Cosmos DB database account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(List<CorsPolicyArgs> cors) {
             return cors(Output.of(cors));
         }
 
+        /**
+         * @param cors The CORS policy for the Cosmos DB database account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(CorsPolicyArgs... cors) {
             return cors(List.of(cors));
         }
 
+        /**
+         * @param databaseAccountOfferType The offer type for the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseAccountOfferType(Output<DatabaseAccountOfferType> databaseAccountOfferType) {
             $.databaseAccountOfferType = databaseAccountOfferType;
             return this;
         }
 
+        /**
+         * @param databaseAccountOfferType The offer type for the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseAccountOfferType(DatabaseAccountOfferType databaseAccountOfferType) {
             return databaseAccountOfferType(Output.of(databaseAccountOfferType));
         }
 
+        /**
+         * @param defaultIdentity The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be &#34;FirstPartyIdentity&#34;, &#34;SystemAssignedIdentity&#34; and more.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultIdentity(@Nullable Output<String> defaultIdentity) {
             $.defaultIdentity = defaultIdentity;
             return this;
         }
 
+        /**
+         * @param defaultIdentity The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be &#34;FirstPartyIdentity&#34;, &#34;SystemAssignedIdentity&#34; and more.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultIdentity(String defaultIdentity) {
             return defaultIdentity(Output.of(defaultIdentity));
         }
 
+        /**
+         * @param disableKeyBasedMetadataWriteAccess Disable write operations on metadata resources (databases, containers, throughput) via account keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableKeyBasedMetadataWriteAccess(@Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess) {
             $.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
             return this;
         }
 
+        /**
+         * @param disableKeyBasedMetadataWriteAccess Disable write operations on metadata resources (databases, containers, throughput) via account keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableKeyBasedMetadataWriteAccess(Boolean disableKeyBasedMetadataWriteAccess) {
             return disableKeyBasedMetadataWriteAccess(Output.of(disableKeyBasedMetadataWriteAccess));
         }
 
+        /**
+         * @param enableAnalyticalStorage Flag to indicate whether to enable storage analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAnalyticalStorage(@Nullable Output<Boolean> enableAnalyticalStorage) {
             $.enableAnalyticalStorage = enableAnalyticalStorage;
             return this;
         }
 
+        /**
+         * @param enableAnalyticalStorage Flag to indicate whether to enable storage analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAnalyticalStorage(Boolean enableAnalyticalStorage) {
             return enableAnalyticalStorage(Output.of(enableAnalyticalStorage));
         }
 
+        /**
+         * @param enableAutomaticFailover Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticFailover(@Nullable Output<Boolean> enableAutomaticFailover) {
             $.enableAutomaticFailover = enableAutomaticFailover;
             return this;
         }
 
+        /**
+         * @param enableAutomaticFailover Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticFailover(Boolean enableAutomaticFailover) {
             return enableAutomaticFailover(Output.of(enableAutomaticFailover));
         }
 
+        /**
+         * @param enableCassandraConnector Enables the cassandra connector on the Cosmos DB C* account
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCassandraConnector(@Nullable Output<Boolean> enableCassandraConnector) {
             $.enableCassandraConnector = enableCassandraConnector;
             return this;
         }
 
+        /**
+         * @param enableCassandraConnector Enables the cassandra connector on the Cosmos DB C* account
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCassandraConnector(Boolean enableCassandraConnector) {
             return enableCassandraConnector(Output.of(enableCassandraConnector));
         }
 
+        /**
+         * @param enableFreeTier Flag to indicate whether Free Tier is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFreeTier(@Nullable Output<Boolean> enableFreeTier) {
             $.enableFreeTier = enableFreeTier;
             return this;
         }
 
+        /**
+         * @param enableFreeTier Flag to indicate whether Free Tier is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFreeTier(Boolean enableFreeTier) {
             return enableFreeTier(Output.of(enableFreeTier));
         }
 
+        /**
+         * @param enableMultipleWriteLocations Enables the account to write in multiple locations
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMultipleWriteLocations(@Nullable Output<Boolean> enableMultipleWriteLocations) {
             $.enableMultipleWriteLocations = enableMultipleWriteLocations;
             return this;
         }
 
+        /**
+         * @param enableMultipleWriteLocations Enables the account to write in multiple locations
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMultipleWriteLocations(Boolean enableMultipleWriteLocations) {
             return enableMultipleWriteLocations(Output.of(enableMultipleWriteLocations));
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param ipRules List of IpRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(@Nullable Output<List<IpAddressOrRangeArgs>> ipRules) {
             $.ipRules = ipRules;
             return this;
         }
 
+        /**
+         * @param ipRules List of IpRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(List<IpAddressOrRangeArgs> ipRules) {
             return ipRules(Output.of(ipRules));
         }
 
+        /**
+         * @param ipRules List of IpRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(IpAddressOrRangeArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }
 
+        /**
+         * @param isVirtualNetworkFilterEnabled Flag to indicate whether to enable/disable Virtual Network ACL rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isVirtualNetworkFilterEnabled(@Nullable Output<Boolean> isVirtualNetworkFilterEnabled) {
             $.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
             return this;
         }
 
+        /**
+         * @param isVirtualNetworkFilterEnabled Flag to indicate whether to enable/disable Virtual Network ACL rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isVirtualNetworkFilterEnabled(Boolean isVirtualNetworkFilterEnabled) {
             return isVirtualNetworkFilterEnabled(Output.of(isVirtualNetworkFilterEnabled));
         }
 
+        /**
+         * @param keyVaultKeyUri The URI of the key vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultKeyUri(@Nullable Output<String> keyVaultKeyUri) {
             $.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
 
+        /**
+         * @param keyVaultKeyUri The URI of the key vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultKeyUri(String keyVaultKeyUri) {
             return keyVaultKeyUri(Output.of(keyVaultKeyUri));
         }
 
+        /**
+         * @param kind Indicates the type of database account. This can only be set at database account creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,DatabaseAccountKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Indicates the type of database account. This can only be set at database account creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,DatabaseAccountKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Indicates the type of database account. This can only be set at database account creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Indicates the type of database account. This can only be set at database account creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(DatabaseAccountKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location The location of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param locations An array that contains the georeplication locations enabled for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(Output<List<LocationArgs>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations An array that contains the georeplication locations enabled for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<LocationArgs> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations An array that contains the georeplication locations enabled for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(LocationArgs... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param networkAclBypass Indicates what services are allowed to bypass firewall checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclBypass(@Nullable Output<NetworkAclBypass> networkAclBypass) {
             $.networkAclBypass = networkAclBypass;
             return this;
         }
 
+        /**
+         * @param networkAclBypass Indicates what services are allowed to bypass firewall checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclBypass(NetworkAclBypass networkAclBypass) {
             return networkAclBypass(Output.of(networkAclBypass));
         }
 
+        /**
+         * @param networkAclBypassResourceIds An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclBypassResourceIds(@Nullable Output<List<String>> networkAclBypassResourceIds) {
             $.networkAclBypassResourceIds = networkAclBypassResourceIds;
             return this;
         }
 
+        /**
+         * @param networkAclBypassResourceIds An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclBypassResourceIds(List<String> networkAclBypassResourceIds) {
             return networkAclBypassResourceIds(Output.of(networkAclBypassResourceIds));
         }
 
+        /**
+         * @param networkAclBypassResourceIds An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclBypassResourceIds(String... networkAclBypassResourceIds) {
             return networkAclBypassResourceIds(List.of(networkAclBypassResourceIds));
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with &#34;defaultExperience&#34;: &#34;Cassandra&#34;. Current &#34;defaultExperience&#34; values also include &#34;Table&#34;, &#34;Graph&#34;, &#34;DocumentDB&#34;, and &#34;MongoDB&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with &#34;defaultExperience&#34;: &#34;Cassandra&#34;. Current &#34;defaultExperience&#34; values also include &#34;Table&#34;, &#34;Graph&#34;, &#34;DocumentDB&#34;, and &#34;MongoDB&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualNetworkRules List of Virtual Network ACL rules configured for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(@Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
             $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRules List of Virtual Network ACL rules configured for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(List<VirtualNetworkRuleArgs> virtualNetworkRules) {
             return virtualNetworkRules(Output.of(virtualNetworkRules));
         }
 
+        /**
+         * @param virtualNetworkRules List of Virtual Network ACL rules configured for the Cosmos DB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(VirtualNetworkRuleArgs... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
         }

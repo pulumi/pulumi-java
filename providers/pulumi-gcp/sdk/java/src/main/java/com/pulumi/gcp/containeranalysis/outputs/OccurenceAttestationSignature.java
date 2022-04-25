@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OccurenceAttestationSignature {
     /**
-     * The identifier for the public key that verifies this
+     * @return The identifier for the public key that verifies this
      * signature. MUST be an RFC3986 conformant
      * URI. * When possible, the key id should be an
      * immutable reference, such as a cryptographic digest.
@@ -26,7 +26,7 @@ public final class OccurenceAttestationSignature {
      */
     private final String publicKeyId;
     /**
-     * The content of the signature, an opaque bytestring.
+     * @return The content of the signature, an opaque bytestring.
      * The payload that this signature verifies MUST be
      * unambiguously provided with the Signature during
      * verification. A wrapper message might provide the
@@ -46,7 +46,7 @@ public final class OccurenceAttestationSignature {
     }
 
     /**
-     * The identifier for the public key that verifies this
+     * @return The identifier for the public key that verifies this
      * signature. MUST be an RFC3986 conformant
      * URI. * When possible, the key id should be an
      * immutable reference, such as a cryptographic digest.
@@ -57,12 +57,12 @@ public final class OccurenceAttestationSignature {
      * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
      * * &#34;ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU&#34;
      * 
-    */
+     */
     public String publicKeyId() {
         return this.publicKeyId;
     }
     /**
-     * The content of the signature, an opaque bytestring.
+     * @return The content of the signature, an opaque bytestring.
      * The payload that this signature verifies MUST be
      * unambiguously provided with the Signature during
      * verification. A wrapper message might provide the
@@ -70,7 +70,7 @@ public final class OccurenceAttestationSignature {
      * have a canonical serialization that can always be
      * unambiguously computed to derive the payload.
      * 
-    */
+     */
     public Optional<String> signature() {
         return Optional.ofNullable(this.signature);
     }

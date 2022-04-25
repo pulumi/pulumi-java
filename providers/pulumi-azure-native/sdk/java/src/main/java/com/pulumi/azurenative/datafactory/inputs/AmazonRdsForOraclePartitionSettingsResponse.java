@@ -26,6 +26,10 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
     @Import(name="partitionColumnName")
     private @Nullable Object partitionColumnName;
 
+    /**
+     * @return The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
@@ -37,6 +41,10 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
     @Import(name="partitionLowerBound")
     private @Nullable Object partitionLowerBound;
 
+    /**
+     * @return The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
@@ -48,6 +56,10 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
     @Import(name="partitionNames")
     private @Nullable List<Object> partitionNames;
 
+    /**
+     * @return Names of the physical partitions of AmazonRdsForOracle table.
+     * 
+     */
     public Optional<List<Object>> partitionNames() {
         return Optional.ofNullable(this.partitionNames);
     }
@@ -59,6 +71,10 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
     @Import(name="partitionUpperBound")
     private @Nullable Object partitionUpperBound;
 
+    /**
+     * @return The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }
@@ -90,25 +106,55 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
             $ = new AmazonRdsForOraclePartitionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partitionColumnName The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             $.partitionColumnName = partitionColumnName;
             return this;
         }
 
+        /**
+         * @param partitionLowerBound The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             $.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
+        /**
+         * @param partitionNames Names of the physical partitions of AmazonRdsForOracle table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionNames(@Nullable List<Object> partitionNames) {
             $.partitionNames = partitionNames;
             return this;
         }
 
+        /**
+         * @param partitionNames Names of the physical partitions of AmazonRdsForOracle table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionNames(Object... partitionNames) {
             return partitionNames(List.of(partitionNames));
         }
 
+        /**
+         * @param partitionUpperBound The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             $.partitionUpperBound = partitionUpperBound;
             return this;

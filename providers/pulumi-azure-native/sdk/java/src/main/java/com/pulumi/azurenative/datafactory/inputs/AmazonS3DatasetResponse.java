@@ -38,6 +38,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the Dataset.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -49,6 +53,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="bucketName", required=true)
     private Object bucketName;
 
+    /**
+     * @return The name of the Amazon S3 bucket. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object bucketName() {
         return this.bucketName;
     }
@@ -60,6 +68,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="compression")
     private @Nullable DatasetCompressionResponse compression;
 
+    /**
+     * @return The data compression method used for the Amazon S3 object.
+     * 
+     */
     public Optional<DatasetCompressionResponse> compression() {
         return Optional.ofNullable(this.compression);
     }
@@ -71,6 +83,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Dataset description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -82,6 +98,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="folder")
     private @Nullable DatasetResponseFolder folder;
 
+    /**
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -93,6 +113,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="format")
     private @Nullable Object format;
 
+    /**
+     * @return The format of files.
+     * 
+     */
     public Optional<Object> format() {
         return Optional.ofNullable(this.format);
     }
@@ -104,6 +128,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="key")
     private @Nullable Object key;
 
+    /**
+     * @return The key of the Amazon S3 object. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> key() {
         return Optional.ofNullable(this.key);
     }
@@ -115,6 +143,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -126,6 +158,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="modifiedDatetimeEnd")
     private @Nullable Object modifiedDatetimeEnd;
 
+    /**
+     * @return The end of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
@@ -137,6 +173,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="modifiedDatetimeStart")
     private @Nullable Object modifiedDatetimeStart;
 
+    /**
+     * @return The start of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> modifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
@@ -148,6 +188,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for dataset.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -159,6 +203,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="prefix")
     private @Nullable Object prefix;
 
+    /**
+     * @return The prefix filter for the S3 object name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -170,6 +218,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="schema")
     private @Nullable Object schema;
 
+    /**
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -181,6 +233,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="structure")
     private @Nullable Object structure;
 
+    /**
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
@@ -193,6 +249,11 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset.
+     * Expected value is &#39;AmazonS3Object&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -204,6 +265,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
     @Import(name="version")
     private @Nullable Object version;
 
+    /**
+     * @return The version for the S3 object. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> version() {
         return Optional.ofNullable(this.version);
     }
@@ -247,85 +312,188 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
             $ = new AmazonS3DatasetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param bucketName The name of the Amazon S3 bucket. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Object bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param compression The data compression method used for the Amazon S3 object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(@Nullable DatasetCompressionResponse compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param description Dataset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param folder The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param format The format of files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Object format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param key The key of the Amazon S3 object. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Object key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param modifiedDatetimeEnd The end of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             $.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
 
+        /**
+         * @param modifiedDatetimeStart The start of S3 object&#39;s modified datetime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             $.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param prefix The prefix filter for the S3 object name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Object prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param schema Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Object schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param structure Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(@Nullable Object structure) {
             $.structure = structure;
             return this;
         }
 
+        /**
+         * @param type Type of dataset.
+         * Expected value is &#39;AmazonS3Object&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version The version for the S3 object. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Object version) {
             $.version = version;
             return this;

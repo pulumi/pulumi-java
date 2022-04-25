@@ -18,108 +18,108 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAppServiceEnvironmentResult {
     /**
-     * Custom settings for changing the behavior of the App Service Environment.
+     * @return Custom settings for changing the behavior of the App Service Environment.
      * 
      */
     private final @Nullable List<NameValuePairResponse> clusterSettings;
     /**
-     * Dedicated Host Count
+     * @return Dedicated Host Count
      * 
      */
     private final Integer dedicatedHostCount;
     /**
-     * DNS suffix of the App Service Environment.
+     * @return DNS suffix of the App Service Environment.
      * 
      */
     private final @Nullable String dnsSuffix;
     /**
-     * Scale factor for front-ends.
+     * @return Scale factor for front-ends.
      * 
      */
     private final @Nullable Integer frontEndScaleFactor;
     /**
-     * Flag that displays whether an ASE has linux workers or not
+     * @return Flag that displays whether an ASE has linux workers or not
      * 
      */
     private final Boolean hasLinuxWorkers;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+     * @return Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
      * 
      */
     private final @Nullable String internalLoadBalancingMode;
     /**
-     * Number of IP SSL addresses reserved for the App Service Environment.
+     * @return Number of IP SSL addresses reserved for the App Service Environment.
      * 
      */
     private final @Nullable Integer ipsslAddressCount;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
      */
     private final String location;
     /**
-     * Maximum number of VMs in the App Service Environment.
+     * @return Maximum number of VMs in the App Service Environment.
      * 
      */
     private final Integer maximumNumberOfMachines;
     /**
-     * Number of front-end instances.
+     * @return Number of front-end instances.
      * 
      */
     private final Integer multiRoleCount;
     /**
-     * Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
+     * @return Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
      * 
      */
     private final @Nullable String multiSize;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the App Service Environment.
+     * @return Provisioning state of the App Service Environment.
      * 
      */
     private final String provisioningState;
     /**
-     * Current status of the App Service Environment.
+     * @return Current status of the App Service Environment.
      * 
      */
     private final String status;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the App Service Environment is suspended; otherwise, &lt;code&gt;false&lt;/code&gt;. The environment can be suspended, e.g. when the management endpoint is no longer available
+     * @return &lt;code&gt;true&lt;/code&gt; if the App Service Environment is suspended; otherwise, &lt;code&gt;false&lt;/code&gt;. The environment can be suspended, e.g. when the management endpoint is no longer available
      *  (most likely because NSG blocked the incoming traffic).
      * 
      */
     private final Boolean suspended;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * User added ip ranges to whitelist on ASE db
+     * @return User added ip ranges to whitelist on ASE db
      * 
      */
     private final @Nullable List<String> userWhitelistedIpRanges;
     /**
-     * Description of the Virtual Network.
+     * @return Description of the Virtual Network.
      * 
      */
     private final VirtualNetworkProfileResponse virtualNetwork;
@@ -171,150 +171,150 @@ public final class GetAppServiceEnvironmentResult {
     }
 
     /**
-     * Custom settings for changing the behavior of the App Service Environment.
+     * @return Custom settings for changing the behavior of the App Service Environment.
      * 
-    */
+     */
     public List<NameValuePairResponse> clusterSettings() {
         return this.clusterSettings == null ? List.of() : this.clusterSettings;
     }
     /**
-     * Dedicated Host Count
+     * @return Dedicated Host Count
      * 
-    */
+     */
     public Integer dedicatedHostCount() {
         return this.dedicatedHostCount;
     }
     /**
-     * DNS suffix of the App Service Environment.
+     * @return DNS suffix of the App Service Environment.
      * 
-    */
+     */
     public Optional<String> dnsSuffix() {
         return Optional.ofNullable(this.dnsSuffix);
     }
     /**
-     * Scale factor for front-ends.
+     * @return Scale factor for front-ends.
      * 
-    */
+     */
     public Optional<Integer> frontEndScaleFactor() {
         return Optional.ofNullable(this.frontEndScaleFactor);
     }
     /**
-     * Flag that displays whether an ASE has linux workers or not
+     * @return Flag that displays whether an ASE has linux workers or not
      * 
-    */
+     */
     public Boolean hasLinuxWorkers() {
         return this.hasLinuxWorkers;
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
+     * @return Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
      * 
-    */
+     */
     public Optional<String> internalLoadBalancingMode() {
         return Optional.ofNullable(this.internalLoadBalancingMode);
     }
     /**
-     * Number of IP SSL addresses reserved for the App Service Environment.
+     * @return Number of IP SSL addresses reserved for the App Service Environment.
      * 
-    */
+     */
     public Optional<Integer> ipsslAddressCount() {
         return Optional.ofNullable(this.ipsslAddressCount);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Maximum number of VMs in the App Service Environment.
+     * @return Maximum number of VMs in the App Service Environment.
      * 
-    */
+     */
     public Integer maximumNumberOfMachines() {
         return this.maximumNumberOfMachines;
     }
     /**
-     * Number of front-end instances.
+     * @return Number of front-end instances.
      * 
-    */
+     */
     public Integer multiRoleCount() {
         return this.multiRoleCount;
     }
     /**
-     * Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
+     * @return Front-end VM size, e.g. &#34;Medium&#34;, &#34;Large&#34;.
      * 
-    */
+     */
     public Optional<String> multiSize() {
         return Optional.ofNullable(this.multiSize);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the App Service Environment.
+     * @return Provisioning state of the App Service Environment.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Current status of the App Service Environment.
+     * @return Current status of the App Service Environment.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the App Service Environment is suspended; otherwise, &lt;code&gt;false&lt;/code&gt;. The environment can be suspended, e.g. when the management endpoint is no longer available
+     * @return &lt;code&gt;true&lt;/code&gt; if the App Service Environment is suspended; otherwise, &lt;code&gt;false&lt;/code&gt;. The environment can be suspended, e.g. when the management endpoint is no longer available
      *  (most likely because NSG blocked the incoming traffic).
      * 
-    */
+     */
     public Boolean suspended() {
         return this.suspended;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * User added ip ranges to whitelist on ASE db
+     * @return User added ip ranges to whitelist on ASE db
      * 
-    */
+     */
     public List<String> userWhitelistedIpRanges() {
         return this.userWhitelistedIpRanges == null ? List.of() : this.userWhitelistedIpRanges;
     }
     /**
-     * Description of the Virtual Network.
+     * @return Description of the Virtual Network.
      * 
-    */
+     */
     public VirtualNetworkProfileResponse virtualNetwork() {
         return this.virtualNetwork;
     }

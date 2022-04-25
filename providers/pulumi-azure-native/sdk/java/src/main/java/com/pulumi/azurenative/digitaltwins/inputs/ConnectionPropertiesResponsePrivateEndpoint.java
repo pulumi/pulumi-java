@@ -19,6 +19,10 @@ public final class ConnectionPropertiesResponsePrivateEndpoint extends com.pulum
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class ConnectionPropertiesResponsePrivateEndpoint extends com.pulum
             $ = new ConnectionPropertiesResponsePrivateEndpoint(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

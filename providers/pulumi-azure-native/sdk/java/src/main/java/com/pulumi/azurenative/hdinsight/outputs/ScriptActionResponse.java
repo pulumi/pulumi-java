@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ScriptActionResponse {
     /**
-     * The name of the script action.
+     * @return The name of the script action.
      * 
      */
     private final String name;
     /**
-     * The parameters for the script provided.
+     * @return The parameters for the script provided.
      * 
      */
     private final String parameters;
     /**
-     * The URI to the script.
+     * @return The URI to the script.
      * 
      */
     private final String uri;
@@ -36,23 +36,23 @@ public final class ScriptActionResponse {
     }
 
     /**
-     * The name of the script action.
+     * @return The name of the script action.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parameters for the script provided.
+     * @return The parameters for the script provided.
      * 
-    */
+     */
     public String parameters() {
         return this.parameters;
     }
     /**
-     * The URI to the script.
+     * @return The URI to the script.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

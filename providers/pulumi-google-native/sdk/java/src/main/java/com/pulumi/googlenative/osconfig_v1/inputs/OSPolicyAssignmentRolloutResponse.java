@@ -24,6 +24,10 @@ public final class OSPolicyAssignmentRolloutResponse extends com.pulumi.resource
     @Import(name="disruptionBudget", required=true)
     private FixedOrPercentResponse disruptionBudget;
 
+    /**
+     * @return The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
+     * 
+     */
     public FixedOrPercentResponse disruptionBudget() {
         return this.disruptionBudget;
     }
@@ -35,6 +39,10 @@ public final class OSPolicyAssignmentRolloutResponse extends com.pulumi.resource
     @Import(name="minWaitDuration", required=true)
     private String minWaitDuration;
 
+    /**
+     * @return This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
+     * 
+     */
     public String minWaitDuration() {
         return this.minWaitDuration;
     }
@@ -64,11 +72,23 @@ public final class OSPolicyAssignmentRolloutResponse extends com.pulumi.resource
             $ = new OSPolicyAssignmentRolloutResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disruptionBudget The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disruptionBudget(FixedOrPercentResponse disruptionBudget) {
             $.disruptionBudget = disruptionBudget;
             return this;
         }
 
+        /**
+         * @param minWaitDuration This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minWaitDuration(String minWaitDuration) {
             $.minWaitDuration = minWaitDuration;
             return this;

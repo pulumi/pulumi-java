@@ -14,17 +14,18 @@ import java.util.Objects;
 @CustomType
 public final class BackupPolicyResponse {
     /**
-     * Type of datasource for the backup management
+     * @return Type of datasource for the backup management
      * 
      */
     private final List<String> datasourceTypes;
     /**
+     * @return
      * Expected value is &#39;BackupPolicy&#39;.
      * 
      */
     private final String objectType;
     /**
-     * Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+     * @return Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
      * 
      */
     private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
@@ -40,23 +41,24 @@ public final class BackupPolicyResponse {
     }
 
     /**
-     * Type of datasource for the backup management
+     * @return Type of datasource for the backup management
      * 
-    */
+     */
     public List<String> datasourceTypes() {
         return this.datasourceTypes;
     }
     /**
+     * @return
      * Expected value is &#39;BackupPolicy&#39;.
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }
     /**
-     * Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+     * @return Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
      * 
-    */
+     */
     public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules() {
         return this.policyRules;
     }

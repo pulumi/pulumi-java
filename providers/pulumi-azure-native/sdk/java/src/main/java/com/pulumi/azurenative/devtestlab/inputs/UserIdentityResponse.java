@@ -25,6 +25,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="appId")
     private @Nullable String appId;
 
+    /**
+     * @return Set to the app Id of the client JWT making the request.
+     * 
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -36,6 +40,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -47,6 +55,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="principalId")
     private @Nullable String principalId;
 
+    /**
+     * @return Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
+     * 
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -58,6 +70,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="principalName")
     private @Nullable String principalName;
 
+    /**
+     * @return Set to the principal name / UPN of the client JWT making the request.
+     * 
+     */
     public Optional<String> principalName() {
         return Optional.ofNullable(this.principalName);
     }
@@ -69,6 +85,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Set to the tenant ID of the client JWT making the request.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -101,26 +121,56 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
             $ = new UserIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId Set to the app Id of the client JWT making the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable String appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param objectId Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param principalId Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalName Set to the principal name / UPN of the client JWT making the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalName(@Nullable String principalName) {
             $.principalName = principalName;
             return this;
         }
 
+        /**
+         * @param tenantId Set to the tenant ID of the client JWT making the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

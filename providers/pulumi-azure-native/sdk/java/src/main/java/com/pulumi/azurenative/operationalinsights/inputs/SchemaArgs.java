@@ -28,6 +28,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="columns")
     private @Nullable Output<List<ColumnArgs>> columns;
 
+    /**
+     * @return A list of table custom columns.
+     * 
+     */
     public Optional<Output<List<ColumnArgs>>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -39,6 +43,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Table description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Table display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -61,6 +73,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Table name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,42 +108,96 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns A list of table custom columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns A list of table custom columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<ColumnArgs> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns A list of table custom columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(ColumnArgs... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param description Table description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Table description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Table display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Table display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

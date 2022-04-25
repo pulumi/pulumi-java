@@ -25,6 +25,10 @@ public final class HTTPIngressRuleValueArgs extends com.pulumi.resources.Resourc
     @Import(name="paths", required=true)
     private Output<List<HTTPIngressPathArgs>> paths;
 
+    /**
+     * @return A collection of paths that map requests to backends.
+     * 
+     */
     public Output<List<HTTPIngressPathArgs>> paths() {
         return this.paths;
     }
@@ -53,15 +57,33 @@ public final class HTTPIngressRuleValueArgs extends com.pulumi.resources.Resourc
             $ = new HTTPIngressRuleValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param paths A collection of paths that map requests to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(Output<List<HTTPIngressPathArgs>> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths A collection of paths that map requests to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(List<HTTPIngressPathArgs> paths) {
             return paths(Output.of(paths));
         }
 
+        /**
+         * @param paths A collection of paths that map requests to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(HTTPIngressPathArgs... paths) {
             return paths(List.of(paths));
         }

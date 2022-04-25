@@ -23,6 +23,10 @@ public final class ClientInfoDetailResponse extends com.pulumi.resources.InvokeA
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key of detailed client information.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class ClientInfoDetailResponse extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of detailed client information.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class ClientInfoDetailResponse extends com.pulumi.resources.InvokeA
             $ = new ClientInfoDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key of detailed client information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value of detailed client information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

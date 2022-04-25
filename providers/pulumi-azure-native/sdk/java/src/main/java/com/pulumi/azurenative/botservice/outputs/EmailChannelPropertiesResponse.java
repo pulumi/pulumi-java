@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EmailChannelPropertiesResponse {
     /**
-     * The email address
+     * @return The email address
      * 
      */
     private final String emailAddress;
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final @Nullable String password;
@@ -39,23 +39,23 @@ public final class EmailChannelPropertiesResponse {
     }
 
     /**
-     * The email address
+     * @return The email address
      * 
-    */
+     */
     public String emailAddress() {
         return this.emailAddress;
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }

@@ -27,6 +27,10 @@ public final class CustomActivityReferenceObjectResponse extends com.pulumi.reso
     @Import(name="datasets")
     private @Nullable List<DatasetReferenceResponse> datasets;
 
+    /**
+     * @return Dataset references.
+     * 
+     */
     public Optional<List<DatasetReferenceResponse>> datasets() {
         return Optional.ofNullable(this.datasets);
     }
@@ -38,6 +42,10 @@ public final class CustomActivityReferenceObjectResponse extends com.pulumi.reso
     @Import(name="linkedServices")
     private @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
+    /**
+     * @return Linked service references.
+     * 
+     */
     public Optional<List<LinkedServiceReferenceResponse>> linkedServices() {
         return Optional.ofNullable(this.linkedServices);
     }
@@ -67,20 +75,44 @@ public final class CustomActivityReferenceObjectResponse extends com.pulumi.reso
             $ = new CustomActivityReferenceObjectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasets Dataset references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
             $.datasets = datasets;
             return this;
         }
 
+        /**
+         * @param datasets Dataset references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(DatasetReferenceResponse... datasets) {
             return datasets(List.of(datasets));
         }
 
+        /**
+         * @param linkedServices Linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
             $.linkedServices = linkedServices;
             return this;
         }
 
+        /**
+         * @param linkedServices Linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServices(LinkedServiceReferenceResponse... linkedServices) {
             return linkedServices(List.of(linkedServices));
         }

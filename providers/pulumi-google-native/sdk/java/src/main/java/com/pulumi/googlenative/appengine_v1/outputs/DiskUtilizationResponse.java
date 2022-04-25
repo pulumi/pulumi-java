@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class DiskUtilizationResponse {
     /**
-     * Target bytes read per second.
+     * @return Target bytes read per second.
      * 
      */
     private final Integer targetReadBytesPerSecond;
     /**
-     * Target ops read per seconds.
+     * @return Target ops read per seconds.
      * 
      */
     private final Integer targetReadOpsPerSecond;
     /**
-     * Target bytes written per second.
+     * @return Target bytes written per second.
      * 
      */
     private final Integer targetWriteBytesPerSecond;
     /**
-     * Target ops written per second.
+     * @return Target ops written per second.
      * 
      */
     private final Integer targetWriteOpsPerSecond;
@@ -43,30 +43,30 @@ public final class DiskUtilizationResponse {
     }
 
     /**
-     * Target bytes read per second.
+     * @return Target bytes read per second.
      * 
-    */
+     */
     public Integer targetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond;
     }
     /**
-     * Target ops read per seconds.
+     * @return Target ops read per seconds.
      * 
-    */
+     */
     public Integer targetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond;
     }
     /**
-     * Target bytes written per second.
+     * @return Target bytes written per second.
      * 
-    */
+     */
     public Integer targetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond;
     }
     /**
-     * Target ops written per second.
+     * @return Target ops written per second.
      * 
-    */
+     */
     public Integer targetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond;
     }

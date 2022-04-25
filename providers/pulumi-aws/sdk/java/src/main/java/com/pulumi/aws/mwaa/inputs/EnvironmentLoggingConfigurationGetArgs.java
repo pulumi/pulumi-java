@@ -26,6 +26,10 @@ public final class EnvironmentLoggingConfigurationGetArgs extends com.pulumi.res
     @Import(name="dagProcessingLogs")
     private @Nullable Output<EnvironmentLoggingConfigurationDagProcessingLogsGetArgs> dagProcessingLogs;
 
+    /**
+     * @return (Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
+     * 
+     */
     public Optional<Output<EnvironmentLoggingConfigurationDagProcessingLogsGetArgs>> dagProcessingLogs() {
         return Optional.ofNullable(this.dagProcessingLogs);
     }
@@ -37,6 +41,10 @@ public final class EnvironmentLoggingConfigurationGetArgs extends com.pulumi.res
     @Import(name="schedulerLogs")
     private @Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs> schedulerLogs;
 
+    /**
+     * @return Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
+     * 
+     */
     public Optional<Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs>> schedulerLogs() {
         return Optional.ofNullable(this.schedulerLogs);
     }
@@ -48,6 +56,10 @@ public final class EnvironmentLoggingConfigurationGetArgs extends com.pulumi.res
     @Import(name="taskLogs")
     private @Nullable Output<EnvironmentLoggingConfigurationTaskLogsGetArgs> taskLogs;
 
+    /**
+     * @return Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
+     * 
+     */
     public Optional<Output<EnvironmentLoggingConfigurationTaskLogsGetArgs>> taskLogs() {
         return Optional.ofNullable(this.taskLogs);
     }
@@ -59,6 +71,10 @@ public final class EnvironmentLoggingConfigurationGetArgs extends com.pulumi.res
     @Import(name="webserverLogs")
     private @Nullable Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs> webserverLogs;
 
+    /**
+     * @return Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
+     * 
+     */
     public Optional<Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs>> webserverLogs() {
         return Optional.ofNullable(this.webserverLogs);
     }
@@ -70,6 +86,10 @@ public final class EnvironmentLoggingConfigurationGetArgs extends com.pulumi.res
     @Import(name="workerLogs")
     private @Nullable Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs> workerLogs;
 
+    /**
+     * @return Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
+     * 
+     */
     public Optional<Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs>> workerLogs() {
         return Optional.ofNullable(this.workerLogs);
     }
@@ -102,47 +122,107 @@ public final class EnvironmentLoggingConfigurationGetArgs extends com.pulumi.res
             $ = new EnvironmentLoggingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dagProcessingLogs (Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dagProcessingLogs(@Nullable Output<EnvironmentLoggingConfigurationDagProcessingLogsGetArgs> dagProcessingLogs) {
             $.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
 
+        /**
+         * @param dagProcessingLogs (Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dagProcessingLogs(EnvironmentLoggingConfigurationDagProcessingLogsGetArgs dagProcessingLogs) {
             return dagProcessingLogs(Output.of(dagProcessingLogs));
         }
 
+        /**
+         * @param schedulerLogs Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulerLogs(@Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs> schedulerLogs) {
             $.schedulerLogs = schedulerLogs;
             return this;
         }
 
+        /**
+         * @param schedulerLogs Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulerLogs(EnvironmentLoggingConfigurationSchedulerLogsGetArgs schedulerLogs) {
             return schedulerLogs(Output.of(schedulerLogs));
         }
 
+        /**
+         * @param taskLogs Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskLogs(@Nullable Output<EnvironmentLoggingConfigurationTaskLogsGetArgs> taskLogs) {
             $.taskLogs = taskLogs;
             return this;
         }
 
+        /**
+         * @param taskLogs Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskLogs(EnvironmentLoggingConfigurationTaskLogsGetArgs taskLogs) {
             return taskLogs(Output.of(taskLogs));
         }
 
+        /**
+         * @param webserverLogs Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webserverLogs(@Nullable Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs> webserverLogs) {
             $.webserverLogs = webserverLogs;
             return this;
         }
 
+        /**
+         * @param webserverLogs Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webserverLogs(EnvironmentLoggingConfigurationWebserverLogsGetArgs webserverLogs) {
             return webserverLogs(Output.of(webserverLogs));
         }
 
+        /**
+         * @param workerLogs Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerLogs(@Nullable Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs> workerLogs) {
             $.workerLogs = workerLogs;
             return this;
         }
 
+        /**
+         * @param workerLogs Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerLogs(EnvironmentLoggingConfigurationWorkerLogsGetArgs workerLogs) {
             return workerLogs(Output.of(workerLogs));
         }

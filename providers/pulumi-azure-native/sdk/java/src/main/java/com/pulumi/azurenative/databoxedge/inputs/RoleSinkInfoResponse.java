@@ -23,6 +23,10 @@ public final class RoleSinkInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="roleId", required=true)
     private String roleId;
 
+    /**
+     * @return Compute role ID.
+     * 
+     */
     public String roleId() {
         return this.roleId;
     }
@@ -51,6 +55,12 @@ public final class RoleSinkInfoResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RoleSinkInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roleId Compute role ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleId(String roleId) {
             $.roleId = roleId;
             return this;

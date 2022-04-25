@@ -27,6 +27,10 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalColumns")
     private @Nullable Object additionalColumns;
 
+    /**
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
@@ -38,6 +42,10 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -49,6 +57,10 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -60,6 +72,10 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="query")
     private @Nullable Object query;
 
+    /**
+     * @return A query to retrieve data from source. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> query() {
         return Optional.ofNullable(this.query);
     }
@@ -71,6 +87,10 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryTimeout")
     private @Nullable Object queryTimeout;
 
+    /**
+     * @return Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
@@ -82,6 +102,10 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceRetryCount")
     private @Nullable Object sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -93,6 +117,10 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceRetryWait")
     private @Nullable Object sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -105,6 +133,11 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;JiraSource&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -140,41 +173,90 @@ public final class JiraSourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JiraSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalColumns Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalColumns(@Nullable Object additionalColumns) {
             $.additionalColumns = additionalColumns;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param query A query to retrieve data from source. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Object query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param queryTimeout Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             $.queryTimeout = queryTimeout;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;JiraSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

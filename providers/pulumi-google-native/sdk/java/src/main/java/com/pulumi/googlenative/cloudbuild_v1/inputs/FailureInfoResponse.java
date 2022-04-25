@@ -23,6 +23,10 @@ public final class FailureInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="detail", required=true)
     private String detail;
 
+    /**
+     * @return Explains the failure issue in more detail using hard-coded text.
+     * 
+     */
     public String detail() {
         return this.detail;
     }
@@ -34,6 +38,10 @@ public final class FailureInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The name of the failure.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class FailureInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FailureInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detail Explains the failure issue in more detail using hard-coded text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detail(String detail) {
             $.detail = detail;
             return this;
         }
 
+        /**
+         * @param type The name of the failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

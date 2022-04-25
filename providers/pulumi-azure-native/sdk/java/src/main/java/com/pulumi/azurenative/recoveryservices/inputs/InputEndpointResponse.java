@@ -26,6 +26,10 @@ public final class InputEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endpointName")
     private @Nullable String endpointName;
 
+    /**
+     * @return The input endpoint name.
+     * 
+     */
     public Optional<String> endpointName() {
         return Optional.ofNullable(this.endpointName);
     }
@@ -37,6 +41,10 @@ public final class InputEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="privatePort")
     private @Nullable Integer privatePort;
 
+    /**
+     * @return The input endpoint private port.
+     * 
+     */
     public Optional<Integer> privatePort() {
         return Optional.ofNullable(this.privatePort);
     }
@@ -48,6 +56,10 @@ public final class InputEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The input endpoint protocol.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -59,6 +71,10 @@ public final class InputEndpointResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publicPort")
     private @Nullable Integer publicPort;
 
+    /**
+     * @return The input endpoint public port.
+     * 
+     */
     public Optional<Integer> publicPort() {
         return Optional.ofNullable(this.publicPort);
     }
@@ -90,21 +106,45 @@ public final class InputEndpointResponse extends com.pulumi.resources.InvokeArgs
             $ = new InputEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName The input endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(@Nullable String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param privatePort The input endpoint private port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privatePort(@Nullable Integer privatePort) {
             $.privatePort = privatePort;
             return this;
         }
 
+        /**
+         * @param protocol The input endpoint protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param publicPort The input endpoint public port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPort(@Nullable Integer publicPort) {
             $.publicPort = publicPort;
             return this;

@@ -21,6 +21,10 @@ public final class DatabricksResponseProperties extends com.pulumi.resources.Inv
     @Import(name="databricksAccessToken")
     private @Nullable String databricksAccessToken;
 
+    /**
+     * @return Databricks access token
+     * 
+     */
     public Optional<String> databricksAccessToken() {
         return Optional.ofNullable(this.databricksAccessToken);
     }
@@ -32,6 +36,10 @@ public final class DatabricksResponseProperties extends com.pulumi.resources.Inv
     @Import(name="workspaceUrl")
     private @Nullable String workspaceUrl;
 
+    /**
+     * @return Workspace Url
+     * 
+     */
     public Optional<String> workspaceUrl() {
         return Optional.ofNullable(this.workspaceUrl);
     }
@@ -61,11 +69,23 @@ public final class DatabricksResponseProperties extends com.pulumi.resources.Inv
             $ = new DatabricksResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databricksAccessToken Databricks access token
+         * 
+         * @return builder
+         * 
+         */
         public Builder databricksAccessToken(@Nullable String databricksAccessToken) {
             $.databricksAccessToken = databricksAccessToken;
             return this;
         }
 
+        /**
+         * @param workspaceUrl Workspace Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceUrl(@Nullable String workspaceUrl) {
             $.workspaceUrl = workspaceUrl;
             return this;

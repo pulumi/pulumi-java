@@ -25,6 +25,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computerName")
     private @Nullable String computerName;
 
+    /**
+     * @return Specifies the host OS name of the HANA instance.
+     * 
+     */
     public Optional<String> computerName() {
         return Optional.ofNullable(this.computerName);
     }
@@ -36,6 +40,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osType", required=true)
     private String osType;
 
+    /**
+     * @return This property allows you to specify the type of the OS.
+     * 
+     */
     public String osType() {
         return this.osType;
     }
@@ -47,6 +55,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sshPublicKey")
     private @Nullable String sshPublicKey;
 
+    /**
+     * @return Specifies the SSH public key used to access the operating system.
+     * 
+     */
     public Optional<String> sshPublicKey() {
         return Optional.ofNullable(this.sshPublicKey);
     }
@@ -58,6 +70,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Specifies version of operating system.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -89,21 +105,45 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OSProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computerName Specifies the host OS name of the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(@Nullable String computerName) {
             $.computerName = computerName;
             return this;
         }
 
+        /**
+         * @param osType This property allows you to specify the type of the OS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param sshPublicKey Specifies the SSH public key used to access the operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
             $.sshPublicKey = sshPublicKey;
             return this;
         }
 
+        /**
+         * @param version Specifies version of operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

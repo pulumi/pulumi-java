@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LicenseValidityDateFormat {
     /**
-     * Validity begin date for the license.
+     * @return Validity begin date for the license.
      * 
      */
     private final String begin;
     /**
-     * Validity begin date for the license.
+     * @return Validity begin date for the license.
      * 
      */
     private final String end;
@@ -29,16 +29,16 @@ public final class LicenseValidityDateFormat {
     }
 
     /**
-     * Validity begin date for the license.
+     * @return Validity begin date for the license.
      * 
-    */
+     */
     public String begin() {
         return this.begin;
     }
     /**
-     * Validity begin date for the license.
+     * @return Validity begin date for the license.
      * 
-    */
+     */
     public String end() {
         return this.end;
     }

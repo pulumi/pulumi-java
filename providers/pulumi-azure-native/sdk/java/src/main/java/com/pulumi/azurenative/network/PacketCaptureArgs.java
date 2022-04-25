@@ -28,6 +28,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bytesToCapturePerPacket")
     private @Nullable Output<Double> bytesToCapturePerPacket;
 
+    /**
+     * @return Number of bytes captured per packet, the remaining bytes are truncated.
+     * 
+     */
     public Optional<Output<Double>> bytesToCapturePerPacket() {
         return Optional.ofNullable(this.bytesToCapturePerPacket);
     }
@@ -39,6 +43,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filters")
     private @Nullable Output<List<PacketCaptureFilterArgs>> filters;
 
+    /**
+     * @return A list of packet capture filters.
+     * 
+     */
     public Optional<Output<List<PacketCaptureFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -50,6 +58,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkWatcherName", required=true)
     private Output<String> networkWatcherName;
 
+    /**
+     * @return The name of the network watcher.
+     * 
+     */
     public Output<String> networkWatcherName() {
         return this.networkWatcherName;
     }
@@ -61,6 +73,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packetCaptureName")
     private @Nullable Output<String> packetCaptureName;
 
+    /**
+     * @return The name of the packet capture session.
+     * 
+     */
     public Optional<Output<String>> packetCaptureName() {
         return Optional.ofNullable(this.packetCaptureName);
     }
@@ -72,6 +88,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,6 +103,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageLocation", required=true)
     private Output<PacketCaptureStorageLocationArgs> storageLocation;
 
+    /**
+     * @return The storage location for a packet capture session.
+     * 
+     */
     public Output<PacketCaptureStorageLocationArgs> storageLocation() {
         return this.storageLocation;
     }
@@ -94,6 +118,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="target", required=true)
     private Output<String> target;
 
+    /**
+     * @return The ID of the targeted resource, only VM is currently supported.
+     * 
+     */
     public Output<String> target() {
         return this.target;
     }
@@ -105,6 +133,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeLimitInSeconds")
     private @Nullable Output<Integer> timeLimitInSeconds;
 
+    /**
+     * @return Maximum duration of the capture session in seconds.
+     * 
+     */
     public Optional<Output<Integer>> timeLimitInSeconds() {
         return Optional.ofNullable(this.timeLimitInSeconds);
     }
@@ -116,6 +148,10 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="totalBytesPerSession")
     private @Nullable Output<Double> totalBytesPerSession;
 
+    /**
+     * @return Maximum size of the capture output.
+     * 
+     */
     public Optional<Output<Double>> totalBytesPerSession() {
         return Optional.ofNullable(this.totalBytesPerSession);
     }
@@ -152,87 +188,201 @@ public final class PacketCaptureArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PacketCaptureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bytesToCapturePerPacket Number of bytes captured per packet, the remaining bytes are truncated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesToCapturePerPacket(@Nullable Output<Double> bytesToCapturePerPacket) {
             $.bytesToCapturePerPacket = bytesToCapturePerPacket;
             return this;
         }
 
+        /**
+         * @param bytesToCapturePerPacket Number of bytes captured per packet, the remaining bytes are truncated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesToCapturePerPacket(Double bytesToCapturePerPacket) {
             return bytesToCapturePerPacket(Output.of(bytesToCapturePerPacket));
         }
 
+        /**
+         * @param filters A list of packet capture filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable Output<List<PacketCaptureFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters A list of packet capture filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<PacketCaptureFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param filters A list of packet capture filters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(PacketCaptureFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param networkWatcherName The name of the network watcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkWatcherName(Output<String> networkWatcherName) {
             $.networkWatcherName = networkWatcherName;
             return this;
         }
 
+        /**
+         * @param networkWatcherName The name of the network watcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkWatcherName(String networkWatcherName) {
             return networkWatcherName(Output.of(networkWatcherName));
         }
 
+        /**
+         * @param packetCaptureName The name of the packet capture session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packetCaptureName(@Nullable Output<String> packetCaptureName) {
             $.packetCaptureName = packetCaptureName;
             return this;
         }
 
+        /**
+         * @param packetCaptureName The name of the packet capture session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packetCaptureName(String packetCaptureName) {
             return packetCaptureName(Output.of(packetCaptureName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageLocation The storage location for a packet capture session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocation(Output<PacketCaptureStorageLocationArgs> storageLocation) {
             $.storageLocation = storageLocation;
             return this;
         }
 
+        /**
+         * @param storageLocation The storage location for a packet capture session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocation(PacketCaptureStorageLocationArgs storageLocation) {
             return storageLocation(Output.of(storageLocation));
         }
 
+        /**
+         * @param target The ID of the targeted resource, only VM is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The ID of the targeted resource, only VM is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param timeLimitInSeconds Maximum duration of the capture session in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeLimitInSeconds(@Nullable Output<Integer> timeLimitInSeconds) {
             $.timeLimitInSeconds = timeLimitInSeconds;
             return this;
         }
 
+        /**
+         * @param timeLimitInSeconds Maximum duration of the capture session in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeLimitInSeconds(Integer timeLimitInSeconds) {
             return timeLimitInSeconds(Output.of(timeLimitInSeconds));
         }
 
+        /**
+         * @param totalBytesPerSession Maximum size of the capture output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalBytesPerSession(@Nullable Output<Double> totalBytesPerSession) {
             $.totalBytesPerSession = totalBytesPerSession;
             return this;
         }
 
+        /**
+         * @param totalBytesPerSession Maximum size of the capture output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalBytesPerSession(Double totalBytesPerSession) {
             return totalBytesPerSession(Output.of(totalBytesPerSession));
         }

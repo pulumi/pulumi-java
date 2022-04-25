@@ -18,77 +18,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceResourceDescriptionResponse {
     /**
-     * Auto scaling policies
+     * @return Auto scaling policies
      * 
      */
     private final @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies;
     /**
-     * Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
+     * @return Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
      * 
      */
     private final List<ContainerCodePackagePropertiesResponse> codePackages;
     /**
-     * User readable description of the service.
+     * @return User readable description of the service.
      * 
      */
     private final @Nullable String description;
     /**
-     * Reference to sinks in DiagnosticsDescription.
+     * @return Reference to sinks in DiagnosticsDescription.
      * 
      */
     private final @Nullable DiagnosticsRefResponse diagnostics;
     /**
-     * Describes the health state of an application resource.
+     * @return Describes the health state of an application resource.
      * 
      */
     private final String healthState;
     /**
-     * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final @Nullable String name;
     /**
-     * The names of the private networks that this service needs to be part of.
+     * @return The names of the private networks that this service needs to be part of.
      * 
      */
     private final @Nullable List<NetworkRefResponse> networkRefs;
     /**
-     * The operation system required by the code in service.
+     * @return The operation system required by the code in service.
      * 
      */
     private final String osType;
     /**
-     * State of the resource.
+     * @return State of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The number of replicas of the service to create. Defaults to 1 if not specified.
+     * @return The number of replicas of the service to create. Defaults to 1 if not specified.
      * 
      */
     private final @Nullable Integer replicaCount;
     /**
-     * Status of the service.
+     * @return Status of the service.
      * 
      */
     private final String status;
     /**
-     * Gives additional information about the current status of the service.
+     * @return Gives additional information about the current status of the service.
      * 
      */
     private final String statusDetails;
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
     private final String type;
     /**
-     * When the service&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
+     * @return When the service&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
      * 
      */
     private final String unhealthyEvaluation;
@@ -128,107 +128,107 @@ public final class ServiceResourceDescriptionResponse {
     }
 
     /**
-     * Auto scaling policies
+     * @return Auto scaling policies
      * 
-    */
+     */
     public List<AutoScalingPolicyResponse> autoScalingPolicies() {
         return this.autoScalingPolicies == null ? List.of() : this.autoScalingPolicies;
     }
     /**
-     * Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
+     * @return Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
      * 
-    */
+     */
     public List<ContainerCodePackagePropertiesResponse> codePackages() {
         return this.codePackages;
     }
     /**
-     * User readable description of the service.
+     * @return User readable description of the service.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Reference to sinks in DiagnosticsDescription.
+     * @return Reference to sinks in DiagnosticsDescription.
      * 
-    */
+     */
     public Optional<DiagnosticsRefResponse> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
-     * Describes the health state of an application resource.
+     * @return Describes the health state of an application resource.
      * 
-    */
+     */
     public String healthState() {
         return this.healthState;
     }
     /**
-     * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The names of the private networks that this service needs to be part of.
+     * @return The names of the private networks that this service needs to be part of.
      * 
-    */
+     */
     public List<NetworkRefResponse> networkRefs() {
         return this.networkRefs == null ? List.of() : this.networkRefs;
     }
     /**
-     * The operation system required by the code in service.
+     * @return The operation system required by the code in service.
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }
     /**
-     * State of the resource.
+     * @return State of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The number of replicas of the service to create. Defaults to 1 if not specified.
+     * @return The number of replicas of the service to create. Defaults to 1 if not specified.
      * 
-    */
+     */
     public Optional<Integer> replicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
     /**
-     * Status of the service.
+     * @return Status of the service.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Gives additional information about the current status of the service.
+     * @return Gives additional information about the current status of the service.
      * 
-    */
+     */
     public String statusDetails() {
         return this.statusDetails;
     }
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * When the service&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
+     * @return When the service&#39;s health state is not &#39;Ok&#39;, this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
      * 
-    */
+     */
     public String unhealthyEvaluation() {
         return this.unhealthyEvaluation;
     }

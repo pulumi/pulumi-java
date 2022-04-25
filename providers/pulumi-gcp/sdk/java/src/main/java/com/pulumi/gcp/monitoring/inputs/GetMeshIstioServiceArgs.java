@@ -22,6 +22,11 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="meshUid", required=true)
     private String meshUid;
 
+    /**
+     * @return Identifier for the mesh in which this Istio service is defined.
+     * Corresponds to the meshUid metric label in Istio metrics.
+     * 
+     */
     public String meshUid() {
         return this.meshUid;
     }
@@ -34,6 +39,11 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -46,6 +56,11 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the Istio service underlying this service.
+     * Corresponds to the destination_service_name metric label in Istio metrics.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -58,6 +73,11 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="serviceNamespace", required=true)
     private String serviceNamespace;
 
+    /**
+     * @return The namespace of the Istio service underlying this service.
+     * Corresponds to the destination_service_namespace metric label in Istio metrics.
+     * 
+     */
     public String serviceNamespace() {
         return this.serviceNamespace;
     }
@@ -89,21 +109,49 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
             $ = new GetMeshIstioServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param meshUid Identifier for the mesh in which this Istio service is defined.
+         * Corresponds to the meshUid metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshUid(String meshUid) {
             $.meshUid = meshUid;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Istio service underlying this service.
+         * Corresponds to the destination_service_name metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceNamespace The namespace of the Istio service underlying this service.
+         * Corresponds to the destination_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(String serviceNamespace) {
             $.serviceNamespace = serviceNamespace;
             return this;

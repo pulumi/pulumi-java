@@ -23,6 +23,10 @@ public final class SettingsParameterDescriptionResponse extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The parameter name of fabric setting.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class SettingsParameterDescriptionResponse extends com.pulumi.resou
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The parameter value of fabric setting.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class SettingsParameterDescriptionResponse extends com.pulumi.resou
             $ = new SettingsParameterDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The parameter name of fabric setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The parameter value of fabric setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

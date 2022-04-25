@@ -17,37 +17,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFirewallPolicyRuleCollectionGroupResult {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * Priority of the Firewall Policy Rule Collection Group resource.
+     * @return Priority of the Firewall Policy Rule Collection Group resource.
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * The provisioning state of the firewall policy rule collection group resource.
+     * @return The provisioning state of the firewall policy rule collection group resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Group of Firewall Policy rule collections.
+     * @return Group of Firewall Policy rule collections.
      * 
      */
     private final @Nullable List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>> ruleCollections;
     /**
-     * Rule Group type.
+     * @return Rule Group type.
      * 
      */
     private final String type;
@@ -71,51 +71,51 @@ public final class GetFirewallPolicyRuleCollectionGroupResult {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Priority of the Firewall Policy Rule Collection Group resource.
+     * @return Priority of the Firewall Policy Rule Collection Group resource.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The provisioning state of the firewall policy rule collection group resource.
+     * @return The provisioning state of the firewall policy rule collection group resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Group of Firewall Policy rule collections.
+     * @return Group of Firewall Policy rule collections.
      * 
-    */
+     */
     public List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>> ruleCollections() {
         return this.ruleCollections == null ? List.of() : this.ruleCollections;
     }
     /**
-     * Rule Group type.
+     * @return Rule Group type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

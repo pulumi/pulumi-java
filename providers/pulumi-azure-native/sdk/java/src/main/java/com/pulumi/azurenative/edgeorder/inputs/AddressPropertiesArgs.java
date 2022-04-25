@@ -27,6 +27,10 @@ public final class AddressPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="contactDetails", required=true)
     private Output<ContactDetailsArgs> contactDetails;
 
+    /**
+     * @return Contact details for the address
+     * 
+     */
     public Output<ContactDetailsArgs> contactDetails() {
         return this.contactDetails;
     }
@@ -38,6 +42,10 @@ public final class AddressPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="shippingAddress")
     private @Nullable Output<ShippingAddressArgs> shippingAddress;
 
+    /**
+     * @return Shipping details for the address
+     * 
+     */
     public Optional<Output<ShippingAddressArgs>> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
@@ -67,20 +75,44 @@ public final class AddressPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new AddressPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactDetails Contact details for the address
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactDetails(Output<ContactDetailsArgs> contactDetails) {
             $.contactDetails = contactDetails;
             return this;
         }
 
+        /**
+         * @param contactDetails Contact details for the address
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
             return contactDetails(Output.of(contactDetails));
         }
 
+        /**
+         * @param shippingAddress Shipping details for the address
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
             $.shippingAddress = shippingAddress;
             return this;
         }
 
+        /**
+         * @param shippingAddress Shipping details for the address
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(ShippingAddressArgs shippingAddress) {
             return shippingAddress(Output.of(shippingAddress));
         }

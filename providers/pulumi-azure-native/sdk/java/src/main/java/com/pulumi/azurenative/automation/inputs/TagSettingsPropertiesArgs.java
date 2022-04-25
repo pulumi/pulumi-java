@@ -29,6 +29,10 @@ public final class TagSettingsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="filterOperator")
     private @Nullable Output<TagOperators> filterOperator;
 
+    /**
+     * @return Filter VMs by Any or All specified tags.
+     * 
+     */
     public Optional<Output<TagOperators>> filterOperator() {
         return Optional.ofNullable(this.filterOperator);
     }
@@ -40,6 +44,10 @@ public final class TagSettingsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,List<String>>> tags;
 
+    /**
+     * @return Dictionary of tags with its list of values.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -69,20 +77,44 @@ public final class TagSettingsPropertiesArgs extends com.pulumi.resources.Resour
             $ = new TagSettingsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterOperator Filter VMs by Any or All specified tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterOperator(@Nullable Output<TagOperators> filterOperator) {
             $.filterOperator = filterOperator;
             return this;
         }
 
+        /**
+         * @param filterOperator Filter VMs by Any or All specified tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterOperator(TagOperators filterOperator) {
             return filterOperator(Output.of(filterOperator));
         }
 
+        /**
+         * @param tags Dictionary of tags with its list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,List<String>>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Dictionary of tags with its list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,List<String>> tags) {
             return tags(Output.of(tags));
         }

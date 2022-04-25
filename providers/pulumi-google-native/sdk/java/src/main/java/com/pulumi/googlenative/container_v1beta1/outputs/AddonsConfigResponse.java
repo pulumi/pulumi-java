@@ -21,62 +21,62 @@ import java.util.Objects;
 @CustomType
 public final class AddonsConfigResponse {
     /**
-     * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time.
+     * @return Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time.
      * 
      */
     private final CloudRunConfigResponse cloudRunConfig;
     /**
-     * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
+     * @return Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
      * 
      */
     private final ConfigConnectorConfigResponse configConnectorConfig;
     /**
-     * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+     * @return Configuration for NodeLocalDNS, a dns cache running on cluster nodes
      * 
      */
     private final DnsCacheConfigResponse dnsCacheConfig;
     /**
-     * Configuration for the Compute Engine Persistent Disk CSI driver.
+     * @return Configuration for the Compute Engine Persistent Disk CSI driver.
      * 
      */
     private final GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
     /**
-     * Configuration for the GCP Filestore CSI driver.
+     * @return Configuration for the GCP Filestore CSI driver.
      * 
      */
     private final GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
     /**
-     * Configuration for the Backup for GKE agent addon.
+     * @return Configuration for the Backup for GKE agent addon.
      * 
      */
     private final GkeBackupAgentConfigResponse gkeBackupAgentConfig;
     /**
-     * Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
+     * @return Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
      * 
      */
     private final HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
     /**
-     * Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
+     * @return Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
      * 
      */
     private final HttpLoadBalancingResponse httpLoadBalancing;
     /**
-     * Configuration for Istio, an open platform to connect, manage, and secure microservices.
+     * @return Configuration for Istio, an open platform to connect, manage, and secure microservices.
      * 
      */
     private final IstioConfigResponse istioConfig;
     /**
-     * Configuration for the KALM addon, which manages the lifecycle of k8s applications.
+     * @return Configuration for the KALM addon, which manages the lifecycle of k8s applications.
      * 
      */
     private final KalmConfigResponse kalmConfig;
     /**
-     * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
+     * @return Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * 
      */
     private final KubernetesDashboardResponse kubernetesDashboard;
     /**
-     * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
+     * @return Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
      * 
      */
     private final NetworkPolicyConfigResponse networkPolicyConfig;
@@ -110,86 +110,86 @@ public final class AddonsConfigResponse {
     }
 
     /**
-     * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time.
+     * @return Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time.
      * 
-    */
+     */
     public CloudRunConfigResponse cloudRunConfig() {
         return this.cloudRunConfig;
     }
     /**
-     * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
+     * @return Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
      * 
-    */
+     */
     public ConfigConnectorConfigResponse configConnectorConfig() {
         return this.configConnectorConfig;
     }
     /**
-     * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+     * @return Configuration for NodeLocalDNS, a dns cache running on cluster nodes
      * 
-    */
+     */
     public DnsCacheConfigResponse dnsCacheConfig() {
         return this.dnsCacheConfig;
     }
     /**
-     * Configuration for the Compute Engine Persistent Disk CSI driver.
+     * @return Configuration for the Compute Engine Persistent Disk CSI driver.
      * 
-    */
+     */
     public GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig() {
         return this.gcePersistentDiskCsiDriverConfig;
     }
     /**
-     * Configuration for the GCP Filestore CSI driver.
+     * @return Configuration for the GCP Filestore CSI driver.
      * 
-    */
+     */
     public GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig() {
         return this.gcpFilestoreCsiDriverConfig;
     }
     /**
-     * Configuration for the Backup for GKE agent addon.
+     * @return Configuration for the Backup for GKE agent addon.
      * 
-    */
+     */
     public GkeBackupAgentConfigResponse gkeBackupAgentConfig() {
         return this.gkeBackupAgentConfig;
     }
     /**
-     * Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
+     * @return Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
      * 
-    */
+     */
     public HorizontalPodAutoscalingResponse horizontalPodAutoscaling() {
         return this.horizontalPodAutoscaling;
     }
     /**
-     * Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
+     * @return Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
      * 
-    */
+     */
     public HttpLoadBalancingResponse httpLoadBalancing() {
         return this.httpLoadBalancing;
     }
     /**
-     * Configuration for Istio, an open platform to connect, manage, and secure microservices.
+     * @return Configuration for Istio, an open platform to connect, manage, and secure microservices.
      * 
-    */
+     */
     public IstioConfigResponse istioConfig() {
         return this.istioConfig;
     }
     /**
-     * Configuration for the KALM addon, which manages the lifecycle of k8s applications.
+     * @return Configuration for the KALM addon, which manages the lifecycle of k8s applications.
      * 
-    */
+     */
     public KalmConfigResponse kalmConfig() {
         return this.kalmConfig;
     }
     /**
-     * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
+     * @return Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * 
-    */
+     */
     public KubernetesDashboardResponse kubernetesDashboard() {
         return this.kubernetesDashboard;
     }
     /**
-     * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
+     * @return Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
      * 
-    */
+     */
     public NetworkPolicyConfigResponse networkPolicyConfig() {
         return this.networkPolicyConfig;
     }

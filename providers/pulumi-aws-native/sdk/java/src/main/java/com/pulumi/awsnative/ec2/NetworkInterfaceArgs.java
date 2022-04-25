@@ -28,6 +28,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for the network interface.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="groupSet")
     private @Nullable Output<List<String>> groupSet;
 
+    /**
+     * @return A list of security group IDs associated with this network interface.
+     * 
+     */
     public Optional<Output<List<String>>> groupSet() {
         return Optional.ofNullable(this.groupSet);
     }
@@ -50,6 +58,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="interfaceType")
     private @Nullable Output<String> interfaceType;
 
+    /**
+     * @return Indicates the type of network interface.
+     * 
+     */
     public Optional<Output<String>> interfaceType() {
         return Optional.ofNullable(this.interfaceType);
     }
@@ -61,6 +73,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipv6AddressCount")
     private @Nullable Output<Integer> ipv6AddressCount;
 
+    /**
+     * @return The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
+     * 
+     */
     public Optional<Output<Integer>> ipv6AddressCount() {
         return Optional.ofNullable(this.ipv6AddressCount);
     }
@@ -72,6 +88,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipv6Addresses")
     private @Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses;
 
+    /**
+     * @return One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceInstanceIpv6AddressArgs>>> ipv6Addresses() {
         return Optional.ofNullable(this.ipv6Addresses);
     }
@@ -83,6 +103,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="privateIpAddress")
     private @Nullable Output<String> privateIpAddress;
 
+    /**
+     * @return Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property.
+     * 
+     */
     public Optional<Output<String>> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -94,6 +118,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="privateIpAddresses")
     private @Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses;
 
+    /**
+     * @return Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
+     * 
+     */
     public Optional<Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>>> privateIpAddresses() {
         return Optional.ofNullable(this.privateIpAddresses);
     }
@@ -105,6 +133,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="secondaryPrivateIpAddressCount")
     private @Nullable Output<Integer> secondaryPrivateIpAddressCount;
 
+    /**
+     * @return The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
+     * 
+     */
     public Optional<Output<Integer>> secondaryPrivateIpAddressCount() {
         return Optional.ofNullable(this.secondaryPrivateIpAddressCount);
     }
@@ -116,6 +148,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sourceDestCheck")
     private @Nullable Output<Boolean> sourceDestCheck;
 
+    /**
+     * @return Indicates whether traffic to or from the instance is validated.
+     * 
+     */
     public Optional<Output<Boolean>> sourceDestCheck() {
         return Optional.ofNullable(this.sourceDestCheck);
     }
@@ -127,6 +163,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return The ID of the subnet to associate with the network interface.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -138,6 +178,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<List<NetworkInterfaceTagArgs>> tags;
 
+    /**
+     * @return An arbitrary set of tags (key-value pairs) for this network interface.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -176,117 +220,273 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description for the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param groupSet A list of security group IDs associated with this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupSet(@Nullable Output<List<String>> groupSet) {
             $.groupSet = groupSet;
             return this;
         }
 
+        /**
+         * @param groupSet A list of security group IDs associated with this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupSet(List<String> groupSet) {
             return groupSet(Output.of(groupSet));
         }
 
+        /**
+         * @param groupSet A list of security group IDs associated with this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupSet(String... groupSet) {
             return groupSet(List.of(groupSet));
         }
 
+        /**
+         * @param interfaceType Indicates the type of network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceType(@Nullable Output<String> interfaceType) {
             $.interfaceType = interfaceType;
             return this;
         }
 
+        /**
+         * @param interfaceType Indicates the type of network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceType(String interfaceType) {
             return interfaceType(Output.of(interfaceType));
         }
 
+        /**
+         * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             $.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
+        /**
+         * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don&#39;t specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             return ipv6AddressCount(Output.of(ipv6AddressCount));
         }
 
+        /**
+         * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(@Nullable Output<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses) {
             $.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
+        /**
+         * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(List<NetworkInterfaceInstanceIpv6AddressArgs> ipv6Addresses) {
             return ipv6Addresses(Output.of(ipv6Addresses));
         }
 
+        /**
+         * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you&#39;re specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don&#39;t specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(NetworkInterfaceInstanceIpv6AddressArgs... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
 
+        /**
+         * @param privateIpAddress Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             return privateIpAddress(Output.of(privateIpAddress));
         }
 
+        /**
+         * @param privateIpAddresses Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddresses(@Nullable Output<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses) {
             $.privateIpAddresses = privateIpAddresses;
             return this;
         }
 
+        /**
+         * @param privateIpAddresses Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddresses(List<NetworkInterfacePrivateIpAddressSpecificationArgs> privateIpAddresses) {
             return privateIpAddresses(Output.of(privateIpAddresses));
         }
 
+        /**
+         * @param privateIpAddresses Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddresses(NetworkInterfacePrivateIpAddressSpecificationArgs... privateIpAddresses) {
             return privateIpAddresses(List.of(privateIpAddresses));
         }
 
+        /**
+         * @param secondaryPrivateIpAddressCount The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryPrivateIpAddressCount(@Nullable Output<Integer> secondaryPrivateIpAddressCount) {
             $.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
 
+        /**
+         * @param secondaryPrivateIpAddressCount The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet&#39;s IPv4 CIDR range. You can&#39;t specify this option and specify more than one private IP address using privateIpAddresses
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             return secondaryPrivateIpAddressCount(Output.of(secondaryPrivateIpAddressCount));
         }
 
+        /**
+         * @param sourceDestCheck Indicates whether traffic to or from the instance is validated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDestCheck(@Nullable Output<Boolean> sourceDestCheck) {
             $.sourceDestCheck = sourceDestCheck;
             return this;
         }
 
+        /**
+         * @param sourceDestCheck Indicates whether traffic to or from the instance is validated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDestCheck(Boolean sourceDestCheck) {
             return sourceDestCheck(Output.of(sourceDestCheck));
         }
 
+        /**
+         * @param subnetId The ID of the subnet to associate with the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The ID of the subnet to associate with the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<NetworkInterfaceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<NetworkInterfaceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(NetworkInterfaceTagArgs... tags) {
             return tags(List.of(tags));
         }

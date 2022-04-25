@@ -19,6 +19,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="enterprisePolicyName", required=true)
     private String enterprisePolicyName;
 
+    /**
+     * @return EnterprisePolicy for the Microsoft Azure subscription.
+     * 
+     */
     public String enterprisePolicyName() {
         return this.enterprisePolicyName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="privateEndpointConnectionName", required=true)
     private String privateEndpointConnectionName;
 
+    /**
+     * @return The name of the private endpoint connection.
+     * 
+     */
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
             $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enterprisePolicyName EnterprisePolicy for the Microsoft Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterprisePolicyName(String enterprisePolicyName) {
             $.enterprisePolicyName = enterprisePolicyName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -20,6 +20,10 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
     @Import(name="captureMode", required=true)
     private Output<String> captureMode;
 
+    /**
+     * @return Specifies the data to be captured. Should be one of `Input` or `Output`.
+     * 
+     */
     public Output<String> captureMode() {
         return this.captureMode;
     }
@@ -48,11 +52,23 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
             $ = new EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param captureMode Specifies the data to be captured. Should be one of `Input` or `Output`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder captureMode(Output<String> captureMode) {
             $.captureMode = captureMode;
             return this;
         }
 
+        /**
+         * @param captureMode Specifies the data to be captured. Should be one of `Input` or `Output`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder captureMode(String captureMode) {
             return captureMode(Output.of(captureMode));
         }

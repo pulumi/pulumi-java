@@ -26,6 +26,10 @@ public final class MongoIndexOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="expireAfterSeconds")
     private @Nullable Integer expireAfterSeconds;
 
+    /**
+     * @return Expire after seconds
+     * 
+     */
     public Optional<Integer> expireAfterSeconds() {
         return Optional.ofNullable(this.expireAfterSeconds);
     }
@@ -37,6 +41,10 @@ public final class MongoIndexOptionsResponse extends com.pulumi.resources.Invoke
     @Import(name="unique")
     private @Nullable Boolean unique;
 
+    /**
+     * @return Is unique or not
+     * 
+     */
     public Optional<Boolean> unique() {
         return Optional.ofNullable(this.unique);
     }
@@ -66,11 +74,23 @@ public final class MongoIndexOptionsResponse extends com.pulumi.resources.Invoke
             $ = new MongoIndexOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expireAfterSeconds Expire after seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireAfterSeconds(@Nullable Integer expireAfterSeconds) {
             $.expireAfterSeconds = expireAfterSeconds;
             return this;
         }
 
+        /**
+         * @param unique Is unique or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder unique(@Nullable Boolean unique) {
             $.unique = unique;
             return this;

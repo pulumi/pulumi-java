@@ -21,6 +21,10 @@ public final class DatasetAccessEntryResponse extends com.pulumi.resources.Invok
     @Import(name="dataset", required=true)
     private DatasetReferenceResponse dataset;
 
+    /**
+     * @return [Required] The dataset this entry applies to.
+     * 
+     */
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
@@ -57,6 +61,12 @@ public final class DatasetAccessEntryResponse extends com.pulumi.resources.Invok
             $ = new DatasetAccessEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset [Required] The dataset this entry applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceResponse dataset) {
             $.dataset = dataset;
             return this;

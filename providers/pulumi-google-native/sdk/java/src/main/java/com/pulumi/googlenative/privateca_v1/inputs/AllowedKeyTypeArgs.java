@@ -27,6 +27,10 @@ public final class AllowedKeyTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ellipticCurve")
     private @Nullable Output<EcKeyTypeArgs> ellipticCurve;
 
+    /**
+     * @return Represents an allowed Elliptic Curve key type.
+     * 
+     */
     public Optional<Output<EcKeyTypeArgs>> ellipticCurve() {
         return Optional.ofNullable(this.ellipticCurve);
     }
@@ -38,6 +42,10 @@ public final class AllowedKeyTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rsa")
     private @Nullable Output<RsaKeyTypeArgs> rsa;
 
+    /**
+     * @return Represents an allowed RSA key type.
+     * 
+     */
     public Optional<Output<RsaKeyTypeArgs>> rsa() {
         return Optional.ofNullable(this.rsa);
     }
@@ -67,20 +75,44 @@ public final class AllowedKeyTypeArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AllowedKeyTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ellipticCurve Represents an allowed Elliptic Curve key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ellipticCurve(@Nullable Output<EcKeyTypeArgs> ellipticCurve) {
             $.ellipticCurve = ellipticCurve;
             return this;
         }
 
+        /**
+         * @param ellipticCurve Represents an allowed Elliptic Curve key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ellipticCurve(EcKeyTypeArgs ellipticCurve) {
             return ellipticCurve(Output.of(ellipticCurve));
         }
 
+        /**
+         * @param rsa Represents an allowed RSA key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rsa(@Nullable Output<RsaKeyTypeArgs> rsa) {
             $.rsa = rsa;
             return this;
         }
 
+        /**
+         * @param rsa Represents an allowed RSA key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rsa(RsaKeyTypeArgs rsa) {
             return rsa(Output.of(rsa));
         }

@@ -19,6 +19,10 @@ public final class GetStackSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="stackSetId", required=true)
     private String stackSetId;
 
+    /**
+     * @return The ID of the stack set that you&#39;re creating.
+     * 
+     */
     public String stackSetId() {
         return this.stackSetId;
     }
@@ -47,6 +51,12 @@ public final class GetStackSetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStackSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param stackSetId The ID of the stack set that you&#39;re creating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackSetId(String stackSetId) {
             $.stackSetId = stackSetId;
             return this;

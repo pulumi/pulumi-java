@@ -20,6 +20,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentId", required=true)
     private Output<String> parentId;
 
+    /**
+     * @return The parent resource&#39;s identifier.
+     * 
+     */
     public Output<String> parentId() {
         return this.parentId;
     }
@@ -31,6 +35,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathPart", required=true)
     private Output<String> pathPart;
 
+    /**
+     * @return The last path segment for this resource.
+     * 
+     */
     public Output<String> pathPart() {
         return this.pathPart;
     }
@@ -42,6 +50,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
     private Output<String> restApiId;
 
+    /**
+     * @return The ID of the RestApi resource in which you want to create this resource..
+     * 
+     */
     public Output<String> restApiId() {
         return this.restApiId;
     }
@@ -72,29 +84,65 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parentId The parent resource&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(Output<String> parentId) {
             $.parentId = parentId;
             return this;
         }
 
+        /**
+         * @param parentId The parent resource&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(String parentId) {
             return parentId(Output.of(parentId));
         }
 
+        /**
+         * @param pathPart The last path segment for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPart(Output<String> pathPart) {
             $.pathPart = pathPart;
             return this;
         }
 
+        /**
+         * @param pathPart The last path segment for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPart(String pathPart) {
             return pathPart(Output.of(pathPart));
         }
 
+        /**
+         * @param restApiId The ID of the RestApi resource in which you want to create this resource..
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of the RestApi resource in which you want to create this resource..
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }

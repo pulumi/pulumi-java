@@ -13,32 +13,32 @@ import java.util.Objects;
 @CustomType
 public final class CompensationEntryResponse {
     /**
-     * Compensation amount.
+     * @return Compensation amount.
      * 
      */
     private final MoneyResponse amount;
     /**
-     * Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+     * @return Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
      * 
      */
     private final String description;
     /**
-     * Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+     * @return Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
      * 
      */
     private final Double expectedUnitsPerYear;
     /**
-     * Compensation range.
+     * @return Compensation range.
      * 
      */
     private final CompensationRangeResponse range;
     /**
-     * Compensation type. Default is CompensationType.COMPENSATION_TYPE_UNSPECIFIED.
+     * @return Compensation type. Default is CompensationType.COMPENSATION_TYPE_UNSPECIFIED.
      * 
      */
     private final String type;
     /**
-     * Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+     * @return Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
      * 
      */
     private final String unit;
@@ -60,44 +60,44 @@ public final class CompensationEntryResponse {
     }
 
     /**
-     * Compensation amount.
+     * @return Compensation amount.
      * 
-    */
+     */
     public MoneyResponse amount() {
         return this.amount;
     }
     /**
-     * Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+     * @return Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+     * @return Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
      * 
-    */
+     */
     public Double expectedUnitsPerYear() {
         return this.expectedUnitsPerYear;
     }
     /**
-     * Compensation range.
+     * @return Compensation range.
      * 
-    */
+     */
     public CompensationRangeResponse range() {
         return this.range;
     }
     /**
-     * Compensation type. Default is CompensationType.COMPENSATION_TYPE_UNSPECIFIED.
+     * @return Compensation type. Default is CompensationType.COMPENSATION_TYPE_UNSPECIFIED.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+     * @return Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
      * 
-    */
+     */
     public String unit() {
         return this.unit;
     }

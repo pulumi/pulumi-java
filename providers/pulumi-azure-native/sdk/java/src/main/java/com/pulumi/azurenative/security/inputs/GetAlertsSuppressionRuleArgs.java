@@ -19,6 +19,10 @@ public final class GetAlertsSuppressionRuleArgs extends com.pulumi.resources.Inv
     @Import(name="alertsSuppressionRuleName", required=true)
     private String alertsSuppressionRuleName;
 
+    /**
+     * @return The unique name of the suppression alert rule
+     * 
+     */
     public String alertsSuppressionRuleName() {
         return this.alertsSuppressionRuleName;
     }
@@ -47,6 +51,12 @@ public final class GetAlertsSuppressionRuleArgs extends com.pulumi.resources.Inv
             $ = new GetAlertsSuppressionRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertsSuppressionRuleName The unique name of the suppression alert rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertsSuppressionRuleName(String alertsSuppressionRuleName) {
             $.alertsSuppressionRuleName = alertsSuppressionRuleName;
             return this;

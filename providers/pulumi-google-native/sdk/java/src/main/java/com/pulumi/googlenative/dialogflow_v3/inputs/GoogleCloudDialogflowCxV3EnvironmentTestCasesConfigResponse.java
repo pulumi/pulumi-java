@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
     @Import(name="enableContinuousRun", required=true)
     private Boolean enableContinuousRun;
 
+    /**
+     * @return Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to true, run once a day.
+     * 
+     */
     public Boolean enableContinuousRun() {
         return this.enableContinuousRun;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
     @Import(name="enablePredeploymentRun", required=true)
     private Boolean enablePredeploymentRun;
 
+    /**
+     * @return Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.
+     * 
+     */
     public Boolean enablePredeploymentRun() {
         return this.enablePredeploymentRun;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
     @Import(name="testCases", required=true)
     private List<String> testCases;
 
+    /**
+     * @return A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`
+     * 
+     */
     public List<String> testCases() {
         return this.testCases;
     }
@@ -77,21 +89,45 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
             $ = new GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableContinuousRun Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to true, run once a day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableContinuousRun(Boolean enableContinuousRun) {
             $.enableContinuousRun = enableContinuousRun;
             return this;
         }
 
+        /**
+         * @param enablePredeploymentRun Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePredeploymentRun(Boolean enablePredeploymentRun) {
             $.enablePredeploymentRun = enablePredeploymentRun;
             return this;
         }
 
+        /**
+         * @param testCases A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder testCases(List<String> testCases) {
             $.testCases = testCases;
             return this;
         }
 
+        /**
+         * @param testCases A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder testCases(String... testCases) {
             return testCases(List.of(testCases));
         }

@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3ExperimentResultResponse {
     /**
-     * The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
+     * @return The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
      * 
      */
     private final String lastUpdateTime;
     /**
-     * Version variants and metrics.
+     * @return Version variants and metrics.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
@@ -31,16 +31,16 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse {
     }
 
     /**
-     * The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
+     * @return The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
      * 
-    */
+     */
     public String lastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
-     * Version variants and metrics.
+     * @return Version variants and metrics.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics() {
         return this.versionMetrics;
     }

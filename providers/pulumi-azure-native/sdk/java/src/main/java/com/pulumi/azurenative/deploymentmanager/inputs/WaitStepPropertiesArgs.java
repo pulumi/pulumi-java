@@ -26,6 +26,10 @@ public final class WaitStepPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="attributes", required=true)
     private Output<WaitStepAttributesArgs> attributes;
 
+    /**
+     * @return The Wait attributes
+     * 
+     */
     public Output<WaitStepAttributesArgs> attributes() {
         return this.attributes;
     }
@@ -38,6 +42,11 @@ public final class WaitStepPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="stepType", required=true)
     private Output<String> stepType;
 
+    /**
+     * @return The type of step.
+     * Expected value is &#39;Wait&#39;.
+     * 
+     */
     public Output<String> stepType() {
         return this.stepType;
     }
@@ -67,20 +76,46 @@ public final class WaitStepPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new WaitStepPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The Wait attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Output<WaitStepAttributesArgs> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes The Wait attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(WaitStepAttributesArgs attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param stepType The type of step.
+         * Expected value is &#39;Wait&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepType(Output<String> stepType) {
             $.stepType = stepType;
             return this;
         }
 
+        /**
+         * @param stepType The type of step.
+         * Expected value is &#39;Wait&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepType(String stepType) {
             return stepType(Output.of(stepType));
         }

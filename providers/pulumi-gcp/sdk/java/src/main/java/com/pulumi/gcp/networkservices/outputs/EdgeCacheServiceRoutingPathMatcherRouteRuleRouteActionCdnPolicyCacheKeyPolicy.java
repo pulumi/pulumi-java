@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy {
     /**
-     * If true, requests to different hosts will be cached separately.
+     * @return If true, requests to different hosts will be cached separately.
      * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
      */
     private final @Nullable Boolean excludeHost;
     /**
-     * If true, exclude query string parameters from the cache key
+     * @return If true, exclude query string parameters from the cache key
      * If false (the default), include the query string parameters in
      * the cache key according to includeQueryParameters and
      * excludeQueryParameters. If neither includeQueryParameters nor
@@ -30,18 +30,18 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable Boolean excludeQueryString;
     /**
-     * Names of query string parameters to exclude from cache keys. All other parameters will be included.
+     * @return Names of query string parameters to exclude from cache keys. All other parameters will be included.
      * Either specify includedQueryParameters or excludedQueryParameters, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
      */
     private final @Nullable List<String> excludedQueryParameters;
     /**
-     * If true, http and https requests will be cached separately.
+     * @return If true, http and https requests will be cached separately.
      * 
      */
     private final @Nullable Boolean includeProtocol;
     /**
-     * Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
+     * @return Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
      * - Header names must be valid HTTP RFC 7230 header field values.
      * - Header field names are case insensitive
      * - To include the HTTP method, use &#34;:method&#34;
@@ -50,7 +50,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable List<String> includedHeaderNames;
     /**
-     * Names of query string parameters to include in cache keys. All other parameters will be excluded.
+     * @return Names of query string parameters to include in cache keys. All other parameters will be excluded.
      * Either specify includedQueryParameters or excludedQueryParameters, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
      */
@@ -73,56 +73,56 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     }
 
     /**
-     * If true, requests to different hosts will be cached separately.
+     * @return If true, requests to different hosts will be cached separately.
      * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
-    */
+     */
     public Optional<Boolean> excludeHost() {
         return Optional.ofNullable(this.excludeHost);
     }
     /**
-     * If true, exclude query string parameters from the cache key
+     * @return If true, exclude query string parameters from the cache key
      * If false (the default), include the query string parameters in
      * the cache key according to includeQueryParameters and
      * excludeQueryParameters. If neither includeQueryParameters nor
      * excludeQueryParameters is set, the entire query string will be
      * included.
      * 
-    */
+     */
     public Optional<Boolean> excludeQueryString() {
         return Optional.ofNullable(this.excludeQueryString);
     }
     /**
-     * Names of query string parameters to exclude from cache keys. All other parameters will be included.
+     * @return Names of query string parameters to exclude from cache keys. All other parameters will be included.
      * Either specify includedQueryParameters or excludedQueryParameters, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
-    */
+     */
     public List<String> excludedQueryParameters() {
         return this.excludedQueryParameters == null ? List.of() : this.excludedQueryParameters;
     }
     /**
-     * If true, http and https requests will be cached separately.
+     * @return If true, http and https requests will be cached separately.
      * 
-    */
+     */
     public Optional<Boolean> includeProtocol() {
         return Optional.ofNullable(this.includeProtocol);
     }
     /**
-     * Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
+     * @return Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
      * - Header names must be valid HTTP RFC 7230 header field values.
      * - Header field names are case insensitive
      * - To include the HTTP method, use &#34;:method&#34;
      *   Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
      * 
-    */
+     */
     public List<String> includedHeaderNames() {
         return this.includedHeaderNames == null ? List.of() : this.includedHeaderNames;
     }
     /**
-     * Names of query string parameters to include in cache keys. All other parameters will be excluded.
+     * @return Names of query string parameters to include in cache keys. All other parameters will be excluded.
      * Either specify includedQueryParameters or excludedQueryParameters, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
-    */
+     */
     public List<String> includedQueryParameters() {
         return this.includedQueryParameters == null ? List.of() : this.includedQueryParameters;
     }

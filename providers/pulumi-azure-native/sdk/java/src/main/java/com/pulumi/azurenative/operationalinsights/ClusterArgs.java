@@ -29,6 +29,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingType")
     private @Nullable Output<Either<String,BillingType>> billingType;
 
+    /**
+     * @return The cluster&#39;s billing type.
+     * 
+     */
     public Optional<Output<Either<String,BillingType>>> billingType() {
         return Optional.ofNullable(this.billingType);
     }
@@ -40,6 +44,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return The name of the Log Analytics cluster.
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -51,6 +59,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -62,6 +74,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isAvailabilityZonesEnabled")
     private @Nullable Output<Boolean> isAvailabilityZonesEnabled;
 
+    /**
+     * @return Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
+     * 
+     */
     public Optional<Output<Boolean>> isAvailabilityZonesEnabled() {
         return Optional.ofNullable(this.isAvailabilityZonesEnabled);
     }
@@ -73,6 +89,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isDoubleEncryptionEnabled")
     private @Nullable Output<Boolean> isDoubleEncryptionEnabled;
 
+    /**
+     * @return Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is &#39;true&#39;
+     * 
+     */
     public Optional<Output<Boolean>> isDoubleEncryptionEnabled() {
         return Optional.ofNullable(this.isDoubleEncryptionEnabled);
     }
@@ -84,6 +104,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return The associated key properties.
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -95,6 +119,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -106,6 +134,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -117,6 +149,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<ClusterSkuArgs> sku;
 
+    /**
+     * @return The sku properties.
+     * 
+     */
     public Optional<Output<ClusterSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -128,6 +164,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -165,100 +205,232 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingType The cluster&#39;s billing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingType(@Nullable Output<Either<String,BillingType>> billingType) {
             $.billingType = billingType;
             return this;
         }
 
+        /**
+         * @param billingType The cluster&#39;s billing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingType(Either<String,BillingType> billingType) {
             return billingType(Output.of(billingType));
         }
 
+        /**
+         * @param billingType The cluster&#39;s billing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingType(String billingType) {
             return billingType(Either.ofLeft(billingType));
         }
 
+        /**
+         * @param billingType The cluster&#39;s billing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingType(BillingType billingType) {
             return billingType(Either.ofRight(billingType));
         }
 
+        /**
+         * @param clusterName The name of the Log Analytics cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Log Analytics cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param isAvailabilityZonesEnabled Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAvailabilityZonesEnabled(@Nullable Output<Boolean> isAvailabilityZonesEnabled) {
             $.isAvailabilityZonesEnabled = isAvailabilityZonesEnabled;
             return this;
         }
 
+        /**
+         * @param isAvailabilityZonesEnabled Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAvailabilityZonesEnabled(Boolean isAvailabilityZonesEnabled) {
             return isAvailabilityZonesEnabled(Output.of(isAvailabilityZonesEnabled));
         }
 
+        /**
+         * @param isDoubleEncryptionEnabled Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is &#39;true&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDoubleEncryptionEnabled(@Nullable Output<Boolean> isDoubleEncryptionEnabled) {
             $.isDoubleEncryptionEnabled = isDoubleEncryptionEnabled;
             return this;
         }
 
+        /**
+         * @param isDoubleEncryptionEnabled Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is &#39;true&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDoubleEncryptionEnabled(Boolean isDoubleEncryptionEnabled) {
             return isDoubleEncryptionEnabled(Output.of(isDoubleEncryptionEnabled));
         }
 
+        /**
+         * @param keyVaultProperties The associated key properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties The associated key properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The sku properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ClusterSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ClusterSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

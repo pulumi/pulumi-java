@@ -29,6 +29,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="caBundle")
     private @Nullable Output<String> caBundle;
 
+    /**
+     * @return CABundle is a PEM encoded CA bundle which will be used to validate an API server&#39;s serving certificate. If unspecified, system trust roots on the apiserver are used.
+     * 
+     */
     public Optional<Output<String>> caBundle() {
         return Optional.ofNullable(this.caBundle);
     }
@@ -40,6 +44,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="group")
     private @Nullable Output<String> group;
 
+    /**
+     * @return Group is the API group name this server hosts
+     * 
+     */
     public Optional<Output<String>> group() {
         return Optional.ofNullable(this.group);
     }
@@ -51,6 +59,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="groupPriorityMinimum", required=true)
     private Output<Integer> groupPriorityMinimum;
 
+    /**
+     * @return GroupPriorityMininum is the priority this group should have at least. Higher priority means that the group is preferred by clients over lower priority ones. Note that other versions of this group might specify even higher GroupPriorityMininum values such that the whole group gets a higher priority. The primary sort is based on GroupPriorityMinimum, ordered highest number to lowest (20 before 10). The secondary sort is based on the alphabetical comparison of the name of the object.  (v1.bar before v1.foo) We&#39;d recommend something like: *.k8s.io (except extensions) at 18000 and PaaSes (OpenShift, Deis) are recommended to be in the 2000s
+     * 
+     */
     public Output<Integer> groupPriorityMinimum() {
         return this.groupPriorityMinimum;
     }
@@ -62,6 +74,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="insecureSkipTLSVerify")
     private @Nullable Output<Boolean> insecureSkipTLSVerify;
 
+    /**
+     * @return InsecureSkipTLSVerify disables TLS certificate verification when communicating with this server. This is strongly discouraged.  You should use the CABundle instead.
+     * 
+     */
     public Optional<Output<Boolean>> insecureSkipTLSVerify() {
         return Optional.ofNullable(this.insecureSkipTLSVerify);
     }
@@ -73,6 +89,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service", required=true)
     private Output<ServiceReferenceArgs> service;
 
+    /**
+     * @return Service is a reference to the service for this API server.  It must communicate on port 443 If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.
+     * 
+     */
     public Output<ServiceReferenceArgs> service() {
         return this.service;
     }
@@ -84,6 +104,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version is the API version this server hosts.  For example, &#34;v1&#34;
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -95,6 +119,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="versionPriority", required=true)
     private Output<Integer> versionPriority;
 
+    /**
+     * @return VersionPriority controls the ordering of this API version inside of its group.  Must be greater than zero. The primary sort is based on VersionPriority, ordered highest to lowest (20 before 10). Since it&#39;s inside of a group, the number can be small, probably in the 10s. In case of equal version priorities, the version string will be used to compute the order inside a group. If the version string is &#34;kube-like&#34;, it will sort above non &#34;kube-like&#34; version strings, which are ordered lexicographically. &#34;Kube-like&#34; versions start with a &#34;v&#34;, then are followed by a number (the major version), then optionally the string &#34;alpha&#34; or &#34;beta&#34; and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
+     * 
+     */
     public Output<Integer> versionPriority() {
         return this.versionPriority;
     }
@@ -129,65 +157,149 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
             $ = new APIServiceSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caBundle CABundle is a PEM encoded CA bundle which will be used to validate an API server&#39;s serving certificate. If unspecified, system trust roots on the apiserver are used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caBundle(@Nullable Output<String> caBundle) {
             $.caBundle = caBundle;
             return this;
         }
 
+        /**
+         * @param caBundle CABundle is a PEM encoded CA bundle which will be used to validate an API server&#39;s serving certificate. If unspecified, system trust roots on the apiserver are used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caBundle(String caBundle) {
             return caBundle(Output.of(caBundle));
         }
 
+        /**
+         * @param group Group is the API group name this server hosts
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(@Nullable Output<String> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group Group is the API group name this server hosts
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param groupPriorityMinimum GroupPriorityMininum is the priority this group should have at least. Higher priority means that the group is preferred by clients over lower priority ones. Note that other versions of this group might specify even higher GroupPriorityMininum values such that the whole group gets a higher priority. The primary sort is based on GroupPriorityMinimum, ordered highest number to lowest (20 before 10). The secondary sort is based on the alphabetical comparison of the name of the object.  (v1.bar before v1.foo) We&#39;d recommend something like: *.k8s.io (except extensions) at 18000 and PaaSes (OpenShift, Deis) are recommended to be in the 2000s
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupPriorityMinimum(Output<Integer> groupPriorityMinimum) {
             $.groupPriorityMinimum = groupPriorityMinimum;
             return this;
         }
 
+        /**
+         * @param groupPriorityMinimum GroupPriorityMininum is the priority this group should have at least. Higher priority means that the group is preferred by clients over lower priority ones. Note that other versions of this group might specify even higher GroupPriorityMininum values such that the whole group gets a higher priority. The primary sort is based on GroupPriorityMinimum, ordered highest number to lowest (20 before 10). The secondary sort is based on the alphabetical comparison of the name of the object.  (v1.bar before v1.foo) We&#39;d recommend something like: *.k8s.io (except extensions) at 18000 and PaaSes (OpenShift, Deis) are recommended to be in the 2000s
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupPriorityMinimum(Integer groupPriorityMinimum) {
             return groupPriorityMinimum(Output.of(groupPriorityMinimum));
         }
 
+        /**
+         * @param insecureSkipTLSVerify InsecureSkipTLSVerify disables TLS certificate verification when communicating with this server. This is strongly discouraged.  You should use the CABundle instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insecureSkipTLSVerify(@Nullable Output<Boolean> insecureSkipTLSVerify) {
             $.insecureSkipTLSVerify = insecureSkipTLSVerify;
             return this;
         }
 
+        /**
+         * @param insecureSkipTLSVerify InsecureSkipTLSVerify disables TLS certificate verification when communicating with this server. This is strongly discouraged.  You should use the CABundle instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insecureSkipTLSVerify(Boolean insecureSkipTLSVerify) {
             return insecureSkipTLSVerify(Output.of(insecureSkipTLSVerify));
         }
 
+        /**
+         * @param service Service is a reference to the service for this API server.  It must communicate on port 443 If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<ServiceReferenceArgs> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Service is a reference to the service for this API server.  It must communicate on port 443 If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(ServiceReferenceArgs service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param version Version is the API version this server hosts.  For example, &#34;v1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version is the API version this server hosts.  For example, &#34;v1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param versionPriority VersionPriority controls the ordering of this API version inside of its group.  Must be greater than zero. The primary sort is based on VersionPriority, ordered highest to lowest (20 before 10). Since it&#39;s inside of a group, the number can be small, probably in the 10s. In case of equal version priorities, the version string will be used to compute the order inside a group. If the version string is &#34;kube-like&#34;, it will sort above non &#34;kube-like&#34; version strings, which are ordered lexicographically. &#34;Kube-like&#34; versions start with a &#34;v&#34;, then are followed by a number (the major version), then optionally the string &#34;alpha&#34; or &#34;beta&#34; and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionPriority(Output<Integer> versionPriority) {
             $.versionPriority = versionPriority;
             return this;
         }
 
+        /**
+         * @param versionPriority VersionPriority controls the ordering of this API version inside of its group.  Must be greater than zero. The primary sort is based on VersionPriority, ordered highest to lowest (20 before 10). Since it&#39;s inside of a group, the number can be small, probably in the 10s. In case of equal version priorities, the version string will be used to compute the order inside a group. If the version string is &#34;kube-like&#34;, it will sort above non &#34;kube-like&#34; version strings, which are ordered lexicographically. &#34;Kube-like&#34; versions start with a &#34;v&#34;, then are followed by a number (the major version), then optionally the string &#34;alpha&#34; or &#34;beta&#34; and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionPriority(Integer versionPriority) {
             return versionPriority(Output.of(versionPriority));
         }

@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt {
     /**
-     * Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
+     * @return Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
      * 
      */
     private final String archiveType;
     /**
-     * Required. List of components for this repository. Must contain at least one item.
+     * @return Required. List of components for this repository. Must contain at least one item.
      * 
      */
     private final List<String> components;
     /**
-     * Required. Distribution of this repository.
+     * @return Required. Distribution of this repository.
      * 
      */
     private final String distribution;
     /**
-     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * @return URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
      */
     private final @Nullable String gpgKey;
     /**
-     * Required. URI for this repository.
+     * @return Required. URI for this repository.
      * 
      */
     private final String uri;
@@ -53,37 +53,37 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt 
     }
 
     /**
-     * Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
+     * @return Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
      * 
-    */
+     */
     public String archiveType() {
         return this.archiveType;
     }
     /**
-     * Required. List of components for this repository. Must contain at least one item.
+     * @return Required. List of components for this repository. Must contain at least one item.
      * 
-    */
+     */
     public List<String> components() {
         return this.components;
     }
     /**
-     * Required. Distribution of this repository.
+     * @return Required. Distribution of this repository.
      * 
-    */
+     */
     public String distribution() {
         return this.distribution;
     }
     /**
-     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     * @return URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
-    */
+     */
     public Optional<String> gpgKey() {
         return Optional.ofNullable(this.gpgKey);
     }
     /**
-     * Required. URI for this repository.
+     * @return Required. URI for this repository.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

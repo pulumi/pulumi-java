@@ -25,6 +25,10 @@ public final class SolutionPlanResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class SolutionPlanResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="product")
     private @Nullable String product;
 
+    /**
+     * @return name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
+     * 
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
@@ -47,6 +55,10 @@ public final class SolutionPlanResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="promotionCode")
     private @Nullable String promotionCode;
 
+    /**
+     * @return promotionCode, Not really used now, can you left as empty
+     * 
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -58,6 +70,10 @@ public final class SolutionPlanResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return Publisher name. For gallery solution, it is Microsoft.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -89,21 +105,45 @@ public final class SolutionPlanResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SolutionPlanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param product name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable String product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param promotionCode promotionCode, Not really used now, can you left as empty
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable String promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param publisher Publisher name. For gallery solution, it is Microsoft.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;

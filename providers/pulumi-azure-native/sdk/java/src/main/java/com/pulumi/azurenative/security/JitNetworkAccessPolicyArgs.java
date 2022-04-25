@@ -25,6 +25,10 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="ascLocation", required=true)
     private Output<String> ascLocation;
 
+    /**
+     * @return The location where ASC stores the data of the subscription. can be retrieved from Get locations
+     * 
+     */
     public Output<String> ascLocation() {
         return this.ascLocation;
     }
@@ -36,6 +40,10 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="jitNetworkAccessPolicyName")
     private @Nullable Output<String> jitNetworkAccessPolicyName;
 
+    /**
+     * @return Name of a Just-in-Time access configuration policy.
+     * 
+     */
     public Optional<Output<String>> jitNetworkAccessPolicyName() {
         return Optional.ofNullable(this.jitNetworkAccessPolicyName);
     }
@@ -47,6 +55,10 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of the resource
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -65,6 +77,10 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -76,6 +92,10 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="virtualMachines", required=true)
     private Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
 
+    /**
+     * @return Configurations for Microsoft.Compute/virtualMachines resource type.
+     * 
+     */
     public Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines() {
         return this.virtualMachines;
     }
@@ -109,29 +129,65 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
             $ = new JitNetworkAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ascLocation The location where ASC stores the data of the subscription. can be retrieved from Get locations
+         * 
+         * @return builder
+         * 
+         */
         public Builder ascLocation(Output<String> ascLocation) {
             $.ascLocation = ascLocation;
             return this;
         }
 
+        /**
+         * @param ascLocation The location where ASC stores the data of the subscription. can be retrieved from Get locations
+         * 
+         * @return builder
+         * 
+         */
         public Builder ascLocation(String ascLocation) {
             return ascLocation(Output.of(ascLocation));
         }
 
+        /**
+         * @param jitNetworkAccessPolicyName Name of a Just-in-Time access configuration policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitNetworkAccessPolicyName(@Nullable Output<String> jitNetworkAccessPolicyName) {
             $.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
             return this;
         }
 
+        /**
+         * @param jitNetworkAccessPolicyName Name of a Just-in-Time access configuration policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitNetworkAccessPolicyName(String jitNetworkAccessPolicyName) {
             return jitNetworkAccessPolicyName(Output.of(jitNetworkAccessPolicyName));
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
@@ -149,24 +205,54 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
             return requests(List.of(requests));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param virtualMachines Configurations for Microsoft.Compute/virtualMachines resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachines(Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines) {
             $.virtualMachines = virtualMachines;
             return this;
         }
 
+        /**
+         * @param virtualMachines Configurations for Microsoft.Compute/virtualMachines resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachines(List<JitNetworkAccessPolicyVirtualMachineArgs> virtualMachines) {
             return virtualMachines(Output.of(virtualMachines));
         }
 
+        /**
+         * @param virtualMachines Configurations for Microsoft.Compute/virtualMachines resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachines(JitNetworkAccessPolicyVirtualMachineArgs... virtualMachines) {
             return virtualMachines(List.of(virtualMachines));
         }

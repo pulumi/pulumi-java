@@ -21,6 +21,10 @@ public final class UserPoolAccountRecoverySettingGetArgs extends com.pulumi.reso
     @Import(name="recoveryMechanisms", required=true)
     private Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms;
 
+    /**
+     * @return List of Account Recovery Options of the following structure:
+     * 
+     */
     public Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms() {
         return this.recoveryMechanisms;
     }
@@ -49,15 +53,33 @@ public final class UserPoolAccountRecoverySettingGetArgs extends com.pulumi.reso
             $ = new UserPoolAccountRecoverySettingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recoveryMechanisms List of Account Recovery Options of the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryMechanisms(Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms) {
             $.recoveryMechanisms = recoveryMechanisms;
             return this;
         }
 
+        /**
+         * @param recoveryMechanisms List of Account Recovery Options of the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs> recoveryMechanisms) {
             return recoveryMechanisms(Output.of(recoveryMechanisms));
         }
 
+        /**
+         * @param recoveryMechanisms List of Account Recovery Options of the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryMechanisms(UserPoolAccountRecoverySettingRecoveryMechanismGetArgs... recoveryMechanisms) {
             return recoveryMechanisms(List.of(recoveryMechanisms));
         }

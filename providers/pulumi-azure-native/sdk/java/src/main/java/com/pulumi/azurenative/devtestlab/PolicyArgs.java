@@ -27,6 +27,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the policy.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="evaluatorType")
     private @Nullable Output<Either<String,PolicyEvaluatorType>> evaluatorType;
 
+    /**
+     * @return The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
+     * 
+     */
     public Optional<Output<Either<String,PolicyEvaluatorType>>> evaluatorType() {
         return Optional.ofNullable(this.evaluatorType);
     }
@@ -49,6 +57,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factData")
     private @Nullable Output<String> factData;
 
+    /**
+     * @return The fact data of the policy.
+     * 
+     */
     public Optional<Output<String>> factData() {
         return Optional.ofNullable(this.factData);
     }
@@ -60,6 +72,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factName")
     private @Nullable Output<Either<String,PolicyFactName>> factName;
 
+    /**
+     * @return The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+     * 
+     */
     public Optional<Output<Either<String,PolicyFactName>>> factName() {
         return Optional.ofNullable(this.factName);
     }
@@ -71,6 +87,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -82,6 +102,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -93,6 +117,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policySetName", required=true)
     private Output<String> policySetName;
 
+    /**
+     * @return The name of the policy set.
+     * 
+     */
     public Output<String> policySetName() {
         return this.policySetName;
     }
@@ -115,6 +147,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -126,6 +162,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<Either<String,PolicyStatus>> status;
 
+    /**
+     * @return The status of the policy.
+     * 
+     */
     public Optional<Output<Either<String,PolicyStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -137,6 +177,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -148,6 +192,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="threshold")
     private @Nullable Output<String> threshold;
 
+    /**
+     * @return The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
+     * 
+     */
     public Optional<Output<String>> threshold() {
         return Optional.ofNullable(this.threshold);
     }
@@ -187,134 +235,314 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param evaluatorType The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluatorType(@Nullable Output<Either<String,PolicyEvaluatorType>> evaluatorType) {
             $.evaluatorType = evaluatorType;
             return this;
         }
 
+        /**
+         * @param evaluatorType The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluatorType(Either<String,PolicyEvaluatorType> evaluatorType) {
             return evaluatorType(Output.of(evaluatorType));
         }
 
+        /**
+         * @param evaluatorType The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluatorType(String evaluatorType) {
             return evaluatorType(Either.ofLeft(evaluatorType));
         }
 
+        /**
+         * @param evaluatorType The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluatorType(PolicyEvaluatorType evaluatorType) {
             return evaluatorType(Either.ofRight(evaluatorType));
         }
 
+        /**
+         * @param factData The fact data of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factData(@Nullable Output<String> factData) {
             $.factData = factData;
             return this;
         }
 
+        /**
+         * @param factData The fact data of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factData(String factData) {
             return factData(Output.of(factData));
         }
 
+        /**
+         * @param factName The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factName(@Nullable Output<Either<String,PolicyFactName>> factName) {
             $.factName = factName;
             return this;
         }
 
+        /**
+         * @param factName The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factName(Either<String,PolicyFactName> factName) {
             return factName(Output.of(factName));
         }
 
+        /**
+         * @param factName The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factName(String factName) {
             return factName(Either.ofLeft(factName));
         }
 
+        /**
+         * @param factName The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factName(PolicyFactName factName) {
             return factName(Either.ofRight(factName));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policySetName The name of the policy set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySetName(Output<String> policySetName) {
             $.policySetName = policySetName;
             return this;
         }
 
+        /**
+         * @param policySetName The name of the policy set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySetName(String policySetName) {
             return policySetName(Output.of(policySetName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param status The status of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PolicyStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PolicyStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param threshold The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(@Nullable Output<String> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(String threshold) {
             return threshold(Output.of(threshold));
         }

@@ -27,6 +27,10 @@ public final class ImageRepositoryCredentialArgs extends com.pulumi.resources.Re
     @Import(name="imageRepositoryUrl", required=true)
     private Output<String> imageRepositoryUrl;
 
+    /**
+     * @return Image repository url (e.g.: mcr.microsoft.com).
+     * 
+     */
     public Output<String> imageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
@@ -38,6 +42,10 @@ public final class ImageRepositoryCredentialArgs extends com.pulumi.resources.Re
     @Import(name="password")
     private @Nullable Output<AsymmetricEncryptedSecretArgs> password;
 
+    /**
+     * @return Repository user password.
+     * 
+     */
     public Optional<Output<AsymmetricEncryptedSecretArgs>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -49,6 +57,10 @@ public final class ImageRepositoryCredentialArgs extends com.pulumi.resources.Re
     @Import(name="userName", required=true)
     private Output<String> userName;
 
+    /**
+     * @return Repository user name.
+     * 
+     */
     public Output<String> userName() {
         return this.userName;
     }
@@ -79,29 +91,65 @@ public final class ImageRepositoryCredentialArgs extends com.pulumi.resources.Re
             $ = new ImageRepositoryCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageRepositoryUrl Image repository url (e.g.: mcr.microsoft.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepositoryUrl(Output<String> imageRepositoryUrl) {
             $.imageRepositoryUrl = imageRepositoryUrl;
             return this;
         }
 
+        /**
+         * @param imageRepositoryUrl Image repository url (e.g.: mcr.microsoft.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepositoryUrl(String imageRepositoryUrl) {
             return imageRepositoryUrl(Output.of(imageRepositoryUrl));
         }
 
+        /**
+         * @param password Repository user password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<AsymmetricEncryptedSecretArgs> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Repository user password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AsymmetricEncryptedSecretArgs password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param userName Repository user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName Repository user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

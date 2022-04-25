@@ -24,6 +24,10 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="eventType", required=true)
     private String eventType;
 
+    /**
+     * @return The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*{@literal /}eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is &#39;change&#39;. These parts are lower case.
+     * 
+     */
     public String eventType() {
         return this.eventType;
     }
@@ -35,6 +39,10 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="failurePolicy", required=true)
     private FailurePolicyResponse failurePolicy;
 
+    /**
+     * @return Specifies policy for failed executions.
+     * 
+     */
     public FailurePolicyResponse failurePolicy() {
         return this.failurePolicy;
     }
@@ -46,6 +54,10 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="resource", required=true)
     private String resource;
 
+    /**
+     * @return The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of &#34;google.pubsub.topic.publish&#34; should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized &#34;long&#34; format. See each *service&#39;s* documentation for supported formats.
+     * 
+     */
     public String resource() {
         return this.resource;
     }
@@ -57,6 +69,10 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -88,21 +104,45 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
             $ = new EventTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventType The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*{@literal /}eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is &#39;change&#39;. These parts are lower case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(String eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param failurePolicy Specifies policy for failed executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failurePolicy(FailurePolicyResponse failurePolicy) {
             $.failurePolicy = failurePolicy;
             return this;
         }
 
+        /**
+         * @param resource The resource(s) from which to observe events, for example, `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all services. For example: 1. The authorization model must support it. Google Cloud Functions only allows EventTriggers to be deployed that observe resources in the same project as the `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For example, an `EventTrigger` that has an `event_type` of &#34;google.pubsub.topic.publish&#34; should have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may support short names when creating an `EventTrigger`. These will always be returned in the normalized &#34;long&#34; format. See each *service&#39;s* documentation for supported formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param service The hostname of the service that should be observed. If no string is provided, the default service implementing the API will be used. For example, `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

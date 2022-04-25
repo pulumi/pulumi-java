@@ -26,6 +26,10 @@ public final class CencDrmConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="playReady")
     private @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
+    /**
+     * @return PlayReady configurations
+     * 
+     */
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> playReady() {
         return Optional.ofNullable(this.playReady);
     }
@@ -37,6 +41,10 @@ public final class CencDrmConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="widevine")
     private @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
+    /**
+     * @return Widevine configurations
+     * 
+     */
     public Optional<StreamingPolicyWidevineConfigurationResponse> widevine() {
         return Optional.ofNullable(this.widevine);
     }
@@ -66,11 +74,23 @@ public final class CencDrmConfigurationResponse extends com.pulumi.resources.Inv
             $ = new CencDrmConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param playReady PlayReady configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
             $.playReady = playReady;
             return this;
         }
 
+        /**
+         * @param widevine Widevine configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
             $.widevine = widevine;
             return this;

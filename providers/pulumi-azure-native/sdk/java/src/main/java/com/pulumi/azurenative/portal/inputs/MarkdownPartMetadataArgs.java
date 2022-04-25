@@ -30,6 +30,10 @@ public final class MarkdownPartMetadataArgs extends com.pulumi.resources.Resourc
     @Import(name="inputs")
     private @Nullable Output<List<Object>> inputs;
 
+    /**
+     * @return Input to dashboard part.
+     * 
+     */
     public Optional<Output<List<Object>>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -41,6 +45,10 @@ public final class MarkdownPartMetadataArgs extends com.pulumi.resources.Resourc
     @Import(name="settings")
     private @Nullable Output<MarkdownPartMetadataSettingsArgs> settings;
 
+    /**
+     * @return Markdown part settings.
+     * 
+     */
     public Optional<Output<MarkdownPartMetadataSettingsArgs>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -53,6 +61,11 @@ public final class MarkdownPartMetadataArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of dashboard part.
+     * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -83,33 +96,77 @@ public final class MarkdownPartMetadataArgs extends com.pulumi.resources.Resourc
             $ = new MarkdownPartMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs Input to dashboard part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable Output<List<Object>> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs Input to dashboard part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<Object> inputs) {
             return inputs(Output.of(inputs));
         }
 
+        /**
+         * @param inputs Input to dashboard part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(Object... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param settings Markdown part settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<MarkdownPartMetadataSettingsArgs> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings Markdown part settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(MarkdownPartMetadataSettingsArgs settings) {
             return settings(Output.of(settings));
         }
 
+        /**
+         * @param type The type of dashboard part.
+         * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of dashboard part.
+         * Expected value is &#39;Extension/HubsExtension/PartType/MarkdownPart&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

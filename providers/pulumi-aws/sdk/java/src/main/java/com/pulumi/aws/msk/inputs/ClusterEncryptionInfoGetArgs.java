@@ -23,6 +23,10 @@ public final class ClusterEncryptionInfoGetArgs extends com.pulumi.resources.Res
     @Import(name="encryptionAtRestKmsKeyArn")
     private @Nullable Output<String> encryptionAtRestKmsKeyArn;
 
+    /**
+     * @return You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (&#39;aws/msk&#39; managed service) key will be used for encrypting the data at rest.
+     * 
+     */
     public Optional<Output<String>> encryptionAtRestKmsKeyArn() {
         return Optional.ofNullable(this.encryptionAtRestKmsKeyArn);
     }
@@ -34,6 +38,10 @@ public final class ClusterEncryptionInfoGetArgs extends com.pulumi.resources.Res
     @Import(name="encryptionInTransit")
     private @Nullable Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit;
 
+    /**
+     * @return Configuration block to specify encryption in transit. See below.
+     * 
+     */
     public Optional<Output<ClusterEncryptionInfoEncryptionInTransitGetArgs>> encryptionInTransit() {
         return Optional.ofNullable(this.encryptionInTransit);
     }
@@ -63,20 +71,44 @@ public final class ClusterEncryptionInfoGetArgs extends com.pulumi.resources.Res
             $ = new ClusterEncryptionInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionAtRestKmsKeyArn You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (&#39;aws/msk&#39; managed service) key will be used for encrypting the data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAtRestKmsKeyArn(@Nullable Output<String> encryptionAtRestKmsKeyArn) {
             $.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
             return this;
         }
 
+        /**
+         * @param encryptionAtRestKmsKeyArn You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (&#39;aws/msk&#39; managed service) key will be used for encrypting the data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAtRestKmsKeyArn(String encryptionAtRestKmsKeyArn) {
             return encryptionAtRestKmsKeyArn(Output.of(encryptionAtRestKmsKeyArn));
         }
 
+        /**
+         * @param encryptionInTransit Configuration block to specify encryption in transit. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionInTransit(@Nullable Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit) {
             $.encryptionInTransit = encryptionInTransit;
             return this;
         }
 
+        /**
+         * @param encryptionInTransit Configuration block to specify encryption in transit. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionInTransit(ClusterEncryptionInfoEncryptionInTransitGetArgs encryptionInTransit) {
             return encryptionInTransit(Output.of(encryptionInTransit));
         }

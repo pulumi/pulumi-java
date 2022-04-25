@@ -26,6 +26,10 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
     @Import(name="instanceCount", required=true)
     private Integer instanceCount;
 
+    /**
+     * @return The number of ML compute instances to use in the model monitoring job. For distributed processing jobs, specify a value greater than 1. The default value is 1.
+     * 
+     */
     public Integer instanceCount() {
         return this.instanceCount;
     }
@@ -37,6 +41,10 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return The ML compute instance type for the processing job.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -48,6 +56,10 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
     @Import(name="volumeKmsKeyId")
     private @Nullable String volumeKmsKeyId;
 
+    /**
+     * @return The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+     * 
+     */
     public Optional<String> volumeKmsKeyId() {
         return Optional.ofNullable(this.volumeKmsKeyId);
     }
@@ -59,6 +71,10 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
     @Import(name="volumeSizeInGB", required=true)
     private Integer volumeSizeInGB;
 
+    /**
+     * @return The size of the ML storage volume, in gigabytes, that you want to provision. You must specify sufficient ML storage for your scenario.
+     * 
+     */
     public Integer volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
@@ -90,21 +106,45 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
             $ = new MonitoringScheduleClusterConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceCount The number of ML compute instances to use in the model monitoring job. For distributed processing jobs, specify a value greater than 1. The default value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(Integer instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceType The ML compute instance type for the processing job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param volumeKmsKeyId The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the model monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
             $.volumeKmsKeyId = volumeKmsKeyId;
             return this;
         }
 
+        /**
+         * @param volumeSizeInGB The size of the ML storage volume, in gigabytes, that you want to provision. You must specify sufficient ML storage for your scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             $.volumeSizeInGB = volumeSizeInGB;
             return this;

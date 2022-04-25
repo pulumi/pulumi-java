@@ -22,6 +22,10 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The friendly IAM role name to match.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The tags attached to the role.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The friendly IAM role name to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags The tags attached to the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

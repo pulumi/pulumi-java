@@ -26,6 +26,10 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="autoScale")
     private @Nullable AutoScaleSettingsResponse autoScale;
 
+    /**
+     * @return This property and fixedScale are mutually exclusive and one of the properties must be specified.
+     * 
+     */
     public Optional<AutoScaleSettingsResponse> autoScale() {
         return Optional.ofNullable(this.autoScale);
     }
@@ -37,6 +41,10 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="fixedScale")
     private @Nullable FixedScaleSettingsResponse fixedScale;
 
+    /**
+     * @return This property and autoScale are mutually exclusive and one of the properties must be specified.
+     * 
+     */
     public Optional<FixedScaleSettingsResponse> fixedScale() {
         return Optional.ofNullable(this.fixedScale);
     }
@@ -66,11 +74,23 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
             $ = new ScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScale This property and fixedScale are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScale(@Nullable AutoScaleSettingsResponse autoScale) {
             $.autoScale = autoScale;
             return this;
         }
 
+        /**
+         * @param fixedScale This property and autoScale are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedScale(@Nullable FixedScaleSettingsResponse fixedScale) {
             $.fixedScale = fixedScale;
             return this;

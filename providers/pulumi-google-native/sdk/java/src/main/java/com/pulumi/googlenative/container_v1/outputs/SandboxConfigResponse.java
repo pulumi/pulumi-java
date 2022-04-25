@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SandboxConfigResponse {
     /**
-     * Type of the sandbox to use for the node.
+     * @return Type of the sandbox to use for the node.
      * 
      */
     private final String type;
@@ -21,9 +21,9 @@ public final class SandboxConfigResponse {
     }
 
     /**
-     * Type of the sandbox to use for the node.
+     * @return Type of the sandbox to use for the node.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

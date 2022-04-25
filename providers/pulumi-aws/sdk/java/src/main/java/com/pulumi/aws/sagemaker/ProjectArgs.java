@@ -24,6 +24,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectDescription")
     private @Nullable Output<String> projectDescription;
 
+    /**
+     * @return A description for the project.
+     * 
+     */
     public Optional<Output<String>> projectDescription() {
         return Optional.ofNullable(this.projectDescription);
     }
@@ -35,6 +39,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
     private Output<String> projectName;
 
+    /**
+     * @return The name of the Project.
+     * 
+     */
     public Output<String> projectName() {
         return this.projectName;
     }
@@ -46,6 +54,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceCatalogProvisioningDetails", required=true)
     private Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails;
 
+    /**
+     * @return The product ID and provisioning artifact ID to provision a service catalog. See Service Catalog Provisioning Details below.
+     * 
+     */
     public Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
@@ -57,6 +69,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -100,47 +120,107 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectDescription A description for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectDescription(@Nullable Output<String> projectDescription) {
             $.projectDescription = projectDescription;
             return this;
         }
 
+        /**
+         * @param projectDescription A description for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectDescription(String projectDescription) {
             return projectDescription(Output.of(projectDescription));
         }
 
+        /**
+         * @param projectName The name of the Project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName The name of the Project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param serviceCatalogProvisioningDetails The product ID and provisioning artifact ID to provision a service catalog. See Service Catalog Provisioning Details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCatalogProvisioningDetails(Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails) {
             $.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
             return this;
         }
 
+        /**
+         * @param serviceCatalogProvisioningDetails The product ID and provisioning artifact ID to provision a service catalog. See Service Catalog Provisioning Details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCatalogProvisioningDetails(ProjectServiceCatalogProvisioningDetailsArgs serviceCatalogProvisioningDetails) {
             return serviceCatalogProvisioningDetails(Output.of(serviceCatalogProvisioningDetails));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

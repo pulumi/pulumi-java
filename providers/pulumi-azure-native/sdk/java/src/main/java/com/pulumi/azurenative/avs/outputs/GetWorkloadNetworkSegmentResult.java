@@ -16,52 +16,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkloadNetworkSegmentResult {
     /**
-     * Gateway which to connect segment to.
+     * @return Gateway which to connect segment to.
      * 
      */
     private final @Nullable String connectedGateway;
     /**
-     * Display name of the segment.
+     * @return Display name of the segment.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Port Vif which segment is associated with.
+     * @return Port Vif which segment is associated with.
      * 
      */
     private final List<WorkloadNetworkSegmentPortVifResponse> portVif;
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
      */
     private final String provisioningState;
     /**
-     * NSX revision number.
+     * @return NSX revision number.
      * 
      */
     private final @Nullable Double revision;
     /**
-     * Segment status.
+     * @return Segment status.
      * 
      */
     private final String status;
     /**
-     * Subnet which to connect segment to.
+     * @return Subnet which to connect segment to.
      * 
      */
     private final @Nullable WorkloadNetworkSegmentSubnetResponse subnet;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -91,72 +91,72 @@ public final class GetWorkloadNetworkSegmentResult {
     }
 
     /**
-     * Gateway which to connect segment to.
+     * @return Gateway which to connect segment to.
      * 
-    */
+     */
     public Optional<String> connectedGateway() {
         return Optional.ofNullable(this.connectedGateway);
     }
     /**
-     * Display name of the segment.
+     * @return Display name of the segment.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Port Vif which segment is associated with.
+     * @return Port Vif which segment is associated with.
      * 
-    */
+     */
     public List<WorkloadNetworkSegmentPortVifResponse> portVif() {
         return this.portVif;
     }
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * NSX revision number.
+     * @return NSX revision number.
      * 
-    */
+     */
     public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
-     * Segment status.
+     * @return Segment status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Subnet which to connect segment to.
+     * @return Subnet which to connect segment to.
      * 
-    */
+     */
     public Optional<WorkloadNetworkSegmentSubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

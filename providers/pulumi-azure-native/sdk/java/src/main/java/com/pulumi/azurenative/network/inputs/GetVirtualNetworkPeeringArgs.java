@@ -19,6 +19,10 @@ public final class GetVirtualNetworkPeeringArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkPeeringArgs extends com.pulumi.resources.Inv
     @Import(name="virtualNetworkName", required=true)
     private String virtualNetworkName;
 
+    /**
+     * @return The name of the virtual network.
+     * 
+     */
     public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
@@ -41,6 +49,10 @@ public final class GetVirtualNetworkPeeringArgs extends com.pulumi.resources.Inv
     @Import(name="virtualNetworkPeeringName", required=true)
     private String virtualNetworkPeeringName;
 
+    /**
+     * @return The name of the virtual network peering.
+     * 
+     */
     public String virtualNetworkPeeringName() {
         return this.virtualNetworkPeeringName;
     }
@@ -71,16 +83,34 @@ public final class GetVirtualNetworkPeeringArgs extends com.pulumi.resources.Inv
             $ = new GetVirtualNetworkPeeringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkName(String virtualNetworkName) {
             $.virtualNetworkName = virtualNetworkName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkPeeringName The name of the virtual network peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkPeeringName(String virtualNetworkPeeringName) {
             $.virtualNetworkPeeringName = virtualNetworkPeeringName;
             return this;

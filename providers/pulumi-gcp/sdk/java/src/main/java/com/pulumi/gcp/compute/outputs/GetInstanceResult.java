@@ -29,94 +29,94 @@ public final class GetInstanceResult {
     private final List<GetInstanceAdvancedMachineFeature> advancedMachineFeatures;
     private final Boolean allowStoppingForUpdate;
     /**
-     * List of disks attached to the instance. Structure is documented below.
+     * @return List of disks attached to the instance. Structure is documented below.
      * 
      */
     private final List<GetInstanceAttachedDisk> attachedDisks;
     /**
-     * The boot disk for the instance. Structure is documented below.
+     * @return The boot disk for the instance. Structure is documented below.
      * 
      */
     private final List<GetInstanceBootDisk> bootDisks;
     /**
-     * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+     * @return Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
      * 
      */
     private final Boolean canIpForward;
     private final List<GetInstanceConfidentialInstanceConfig> confidentialInstanceConfigs;
     /**
-     * The CPU platform used by this instance.
+     * @return The CPU platform used by this instance.
      * 
      */
     private final String cpuPlatform;
     private final String currentStatus;
     /**
-     * Whether deletion protection is enabled on this instance.
+     * @return Whether deletion protection is enabled on this instance.
      * 
      */
     private final Boolean deletionProtection;
     /**
-     * A brief description of the resource.
+     * @return A brief description of the resource.
      * 
      */
     private final String description;
     private final String desiredStatus;
     private final Boolean enableDisplay;
     /**
-     * List of the type and count of accelerator cards attached to the instance. Structure is documented below.
+     * @return List of the type and count of accelerator cards attached to the instance. Structure is documented below.
      * 
      */
     private final List<GetInstanceGuestAccelerator> guestAccelerators;
     private final String hostname;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The server-assigned unique identifier of this instance.
+     * @return The server-assigned unique identifier of this instance.
      * 
      */
     private final String instanceId;
     /**
-     * The unique fingerprint of the labels.
+     * @return The unique fingerprint of the labels.
      * 
      */
     private final String labelFingerprint;
     /**
-     * A set of key/value label pairs assigned to the instance.
+     * @return A set of key/value label pairs assigned to the instance.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The machine type to create.
+     * @return The machine type to create.
      * 
      */
     private final String machineType;
     /**
-     * Metadata key/value pairs made available within the instance.
+     * @return Metadata key/value pairs made available within the instance.
      * 
      */
     private final Map<String,String> metadata;
     /**
-     * The unique fingerprint of the metadata.
+     * @return The unique fingerprint of the metadata.
      * 
      */
     private final String metadataFingerprint;
     private final String metadataStartupScript;
     /**
-     * The minimum CPU platform specified for the VM instance.
+     * @return The minimum CPU platform specified for the VM instance.
      * 
      */
     private final String minCpuPlatform;
     private final @Nullable String name;
     /**
-     * The networks attached to the instance. Structure is documented below.
+     * @return The networks attached to the instance. Structure is documented below.
      * 
      */
     private final List<GetInstanceNetworkInterface> networkInterfaces;
     /**
-     * The network performance configuration setting for the instance, if set. Structure is documented below.
+     * @return The network performance configuration setting for the instance, if set. Structure is documented below.
      * 
      */
     private final List<GetInstanceNetworkPerformanceConfig> networkPerformanceConfigs;
@@ -124,37 +124,37 @@ public final class GetInstanceResult {
     private final List<GetInstanceReservationAffinity> reservationAffinities;
     private final List<String> resourcePolicies;
     /**
-     * The scheduling strategy being used by the instance. Structure is documented below
+     * @return The scheduling strategy being used by the instance. Structure is documented below
      * 
      */
     private final List<GetInstanceScheduling> schedulings;
     /**
-     * The scratch disks attached to the instance. Structure is documented below.
+     * @return The scratch disks attached to the instance. Structure is documented below.
      * 
      */
     private final List<GetInstanceScratchDisk> scratchDisks;
     /**
-     * The URI of the created resource.
+     * @return The URI of the created resource.
      * 
      */
     private final @Nullable String selfLink;
     /**
-     * The service account to attach to the instance. Structure is documented below.
+     * @return The service account to attach to the instance. Structure is documented below.
      * 
      */
     private final List<GetInstanceServiceAccount> serviceAccounts;
     /**
-     * The shielded vm config being used by the instance. Structure is documented below.
+     * @return The shielded vm config being used by the instance. Structure is documented below.
      * 
      */
     private final List<GetInstanceShieldedInstanceConfig> shieldedInstanceConfigs;
     /**
-     * The list of tags attached to the instance.
+     * @return The list of tags attached to the instance.
      * 
      */
     private final List<String> tags;
     /**
-     * The unique fingerprint of the tags.
+     * @return The unique fingerprint of the tags.
      * 
      */
     private final String tagsFingerprint;
@@ -245,23 +245,23 @@ public final class GetInstanceResult {
         return this.allowStoppingForUpdate;
     }
     /**
-     * List of disks attached to the instance. Structure is documented below.
+     * @return List of disks attached to the instance. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceAttachedDisk> attachedDisks() {
         return this.attachedDisks;
     }
     /**
-     * The boot disk for the instance. Structure is documented below.
+     * @return The boot disk for the instance. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceBootDisk> bootDisks() {
         return this.bootDisks;
     }
     /**
-     * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
+     * @return Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
      * 
-    */
+     */
     public Boolean canIpForward() {
         return this.canIpForward;
     }
@@ -269,9 +269,9 @@ public final class GetInstanceResult {
         return this.confidentialInstanceConfigs;
     }
     /**
-     * The CPU platform used by this instance.
+     * @return The CPU platform used by this instance.
      * 
-    */
+     */
     public String cpuPlatform() {
         return this.cpuPlatform;
     }
@@ -279,16 +279,16 @@ public final class GetInstanceResult {
         return this.currentStatus;
     }
     /**
-     * Whether deletion protection is enabled on this instance.
+     * @return Whether deletion protection is enabled on this instance.
      * 
-    */
+     */
     public Boolean deletionProtection() {
         return this.deletionProtection;
     }
     /**
-     * A brief description of the resource.
+     * @return A brief description of the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -299,9 +299,9 @@ public final class GetInstanceResult {
         return this.enableDisplay;
     }
     /**
-     * List of the type and count of accelerator cards attached to the instance. Structure is documented below.
+     * @return List of the type and count of accelerator cards attached to the instance. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators;
     }
@@ -309,51 +309,51 @@ public final class GetInstanceResult {
         return this.hostname;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The server-assigned unique identifier of this instance.
+     * @return The server-assigned unique identifier of this instance.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * The unique fingerprint of the labels.
+     * @return The unique fingerprint of the labels.
      * 
-    */
+     */
     public String labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
-     * A set of key/value label pairs assigned to the instance.
+     * @return A set of key/value label pairs assigned to the instance.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The machine type to create.
+     * @return The machine type to create.
      * 
-    */
+     */
     public String machineType() {
         return this.machineType;
     }
     /**
-     * Metadata key/value pairs made available within the instance.
+     * @return Metadata key/value pairs made available within the instance.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * The unique fingerprint of the metadata.
+     * @return The unique fingerprint of the metadata.
      * 
-    */
+     */
     public String metadataFingerprint() {
         return this.metadataFingerprint;
     }
@@ -361,9 +361,9 @@ public final class GetInstanceResult {
         return this.metadataStartupScript;
     }
     /**
-     * The minimum CPU platform specified for the VM instance.
+     * @return The minimum CPU platform specified for the VM instance.
      * 
-    */
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
@@ -371,16 +371,16 @@ public final class GetInstanceResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The networks attached to the instance. Structure is documented below.
+     * @return The networks attached to the instance. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceNetworkInterface> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
-     * The network performance configuration setting for the instance, if set. Structure is documented below.
+     * @return The network performance configuration setting for the instance, if set. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceNetworkPerformanceConfig> networkPerformanceConfigs() {
         return this.networkPerformanceConfigs;
     }
@@ -394,51 +394,51 @@ public final class GetInstanceResult {
         return this.resourcePolicies;
     }
     /**
-     * The scheduling strategy being used by the instance. Structure is documented below
+     * @return The scheduling strategy being used by the instance. Structure is documented below
      * 
-    */
+     */
     public List<GetInstanceScheduling> schedulings() {
         return this.schedulings;
     }
     /**
-     * The scratch disks attached to the instance. Structure is documented below.
+     * @return The scratch disks attached to the instance. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceScratchDisk> scratchDisks() {
         return this.scratchDisks;
     }
     /**
-     * The URI of the created resource.
+     * @return The URI of the created resource.
      * 
-    */
+     */
     public Optional<String> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
     /**
-     * The service account to attach to the instance. Structure is documented below.
+     * @return The service account to attach to the instance. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceServiceAccount> serviceAccounts() {
         return this.serviceAccounts;
     }
     /**
-     * The shielded vm config being used by the instance. Structure is documented below.
+     * @return The shielded vm config being used by the instance. Structure is documented below.
      * 
-    */
+     */
     public List<GetInstanceShieldedInstanceConfig> shieldedInstanceConfigs() {
         return this.shieldedInstanceConfigs;
     }
     /**
-     * The list of tags attached to the instance.
+     * @return The list of tags attached to the instance.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags;
     }
     /**
-     * The unique fingerprint of the tags.
+     * @return The unique fingerprint of the tags.
      * 
-    */
+     */
     public String tagsFingerprint() {
         return this.tagsFingerprint;
     }

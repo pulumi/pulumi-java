@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class HyperVSiteDetailsResponse {
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;HyperVSite&#39;.
      * 
      */
@@ -22,10 +22,10 @@ public final class HyperVSiteDetailsResponse {
     }
 
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;HyperVSite&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse extends com.pulumi
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2CloudStoragePathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

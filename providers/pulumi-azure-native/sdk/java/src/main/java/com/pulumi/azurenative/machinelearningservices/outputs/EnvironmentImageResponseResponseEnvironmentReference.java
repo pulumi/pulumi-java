@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvironmentImageResponseResponseEnvironmentReference {
     /**
-     * Name of the environment.
+     * @return Name of the environment.
      * 
      */
     private final @Nullable String name;
     /**
-     * Version of the environment.
+     * @return Version of the environment.
      * 
      */
     private final @Nullable String version;
@@ -31,16 +31,16 @@ public final class EnvironmentImageResponseResponseEnvironmentReference {
     }
 
     /**
-     * Name of the environment.
+     * @return Name of the environment.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Version of the environment.
+     * @return Version of the environment.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

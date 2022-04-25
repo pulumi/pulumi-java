@@ -20,6 +20,10 @@ public final class TopicRuleS3GetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return The Amazon S3 bucket name.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -31,6 +35,10 @@ public final class TopicRuleS3GetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The object key.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -42,6 +50,10 @@ public final class TopicRuleS3GetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The IAM role ARN that allows access to the CloudWatch alarm.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -72,29 +84,65 @@ public final class TopicRuleS3GetArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TopicRuleS3GetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The Amazon S3 bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName The Amazon S3 bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param key The object key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The object key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param roleArn The IAM role ARN that allows access to the CloudWatch alarm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The IAM role ARN that allows access to the CloudWatch alarm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

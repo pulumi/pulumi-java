@@ -23,6 +23,11 @@ public final class ProjectDefaultNetworkTierState extends com.pulumi.resources.R
     @Import(name="networkTier")
     private @Nullable Output<String> networkTier;
 
+    /**
+     * @return The default network tier to be configured for the project.
+     * This field can take the following values: `PREMIUM` or `STANDARD`.
+     * 
+     */
     public Optional<Output<String>> networkTier() {
         return Optional.ofNullable(this.networkTier);
     }
@@ -35,6 +40,11 @@ public final class ProjectDefaultNetworkTierState extends com.pulumi.resources.R
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -64,20 +74,48 @@ public final class ProjectDefaultNetworkTierState extends com.pulumi.resources.R
             $ = new ProjectDefaultNetworkTierState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkTier The default network tier to be configured for the project.
+         * This field can take the following values: `PREMIUM` or `STANDARD`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(@Nullable Output<String> networkTier) {
             $.networkTier = networkTier;
             return this;
         }
 
+        /**
+         * @param networkTier The default network tier to be configured for the project.
+         * This field can take the following values: `PREMIUM` or `STANDARD`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTier(String networkTier) {
             return networkTier(Output.of(networkTier));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

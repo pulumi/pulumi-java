@@ -13,37 +13,37 @@ import java.util.Objects;
 @CustomType
 public final class UrlMapTestResponse {
     /**
-     * Description of this test case.
+     * @return Description of this test case.
      * 
      */
     private final String description;
     /**
-     * The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer&#39;s redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
+     * @return The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer&#39;s redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
      * 
      */
     private final String expectedOutputUrl;
     /**
-     * For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer&#39;s redirect response. expectedRedirectResponseCode cannot be set when service is set.
+     * @return For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer&#39;s redirect response. expectedRedirectResponseCode cannot be set when service is set.
      * 
      */
     private final Integer expectedRedirectResponseCode;
     /**
-     * HTTP headers for this request. If headers contains a host header, then host must also match the header value.
+     * @return HTTP headers for this request. If headers contains a host header, then host must also match the header value.
      * 
      */
     private final List<UrlMapTestHeaderResponse> headers;
     /**
-     * Host portion of the URL. If headers contains a host header, then host must also match the header value.
+     * @return Host portion of the URL. If headers contains a host header, then host must also match the header value.
      * 
      */
     private final String host;
     /**
-     * Path portion of the URL.
+     * @return Path portion of the URL.
      * 
      */
     private final String path;
     /**
-     * Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
+     * @return Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
      * 
      */
     private final String service;
@@ -67,51 +67,51 @@ public final class UrlMapTestResponse {
     }
 
     /**
-     * Description of this test case.
+     * @return Description of this test case.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer&#39;s redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
+     * @return The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer&#39;s redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
      * 
-    */
+     */
     public String expectedOutputUrl() {
         return this.expectedOutputUrl;
     }
     /**
-     * For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer&#39;s redirect response. expectedRedirectResponseCode cannot be set when service is set.
+     * @return For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer&#39;s redirect response. expectedRedirectResponseCode cannot be set when service is set.
      * 
-    */
+     */
     public Integer expectedRedirectResponseCode() {
         return this.expectedRedirectResponseCode;
     }
     /**
-     * HTTP headers for this request. If headers contains a host header, then host must also match the header value.
+     * @return HTTP headers for this request. If headers contains a host header, then host must also match the header value.
      * 
-    */
+     */
     public List<UrlMapTestHeaderResponse> headers() {
         return this.headers;
     }
     /**
-     * Host portion of the URL. If headers contains a host header, then host must also match the header value.
+     * @return Host portion of the URL. If headers contains a host header, then host must also match the header value.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * Path portion of the URL.
+     * @return Path portion of the URL.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
+     * @return Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

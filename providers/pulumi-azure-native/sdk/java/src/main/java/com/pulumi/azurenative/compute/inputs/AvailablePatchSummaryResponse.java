@@ -26,6 +26,10 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     @Import(name="assessmentActivityId", required=true)
     private String assessmentActivityId;
 
+    /**
+     * @return The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+     * 
+     */
     public String assessmentActivityId() {
         return this.assessmentActivityId;
     }
@@ -37,6 +41,10 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     @Import(name="criticalAndSecurityPatchCount", required=true)
     private Integer criticalAndSecurityPatchCount;
 
+    /**
+     * @return The number of critical or security patches that have been detected as available and not yet installed.
+     * 
+     */
     public Integer criticalAndSecurityPatchCount() {
         return this.criticalAndSecurityPatchCount;
     }
@@ -48,6 +56,10 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     @Import(name="error", required=true)
     private ApiErrorResponse error;
 
+    /**
+     * @return The errors that were encountered during execution of the operation. The details array contains the list of them.
+     * 
+     */
     public ApiErrorResponse error() {
         return this.error;
     }
@@ -59,6 +71,10 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     @Import(name="lastModifiedTime", required=true)
     private String lastModifiedTime;
 
+    /**
+     * @return The UTC timestamp when the operation began.
+     * 
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -70,6 +86,10 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     @Import(name="otherPatchCount", required=true)
     private Integer otherPatchCount;
 
+    /**
+     * @return The number of all available patches excluding critical and security.
+     * 
+     */
     public Integer otherPatchCount() {
         return this.otherPatchCount;
     }
@@ -81,6 +101,10 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     @Import(name="rebootPending", required=true)
     private Boolean rebootPending;
 
+    /**
+     * @return The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred.
+     * 
+     */
     public Boolean rebootPending() {
         return this.rebootPending;
     }
@@ -92,6 +116,10 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The UTC timestamp when the operation began.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -103,6 +131,10 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -138,41 +170,89 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
             $ = new AvailablePatchSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentActivityId The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentActivityId(String assessmentActivityId) {
             $.assessmentActivityId = assessmentActivityId;
             return this;
         }
 
+        /**
+         * @param criticalAndSecurityPatchCount The number of critical or security patches that have been detected as available and not yet installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criticalAndSecurityPatchCount(Integer criticalAndSecurityPatchCount) {
             $.criticalAndSecurityPatchCount = criticalAndSecurityPatchCount;
             return this;
         }
 
+        /**
+         * @param error The errors that were encountered during execution of the operation. The details array contains the list of them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ApiErrorResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime The UTC timestamp when the operation began.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(String lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param otherPatchCount The number of all available patches excluding critical and security.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherPatchCount(Integer otherPatchCount) {
             $.otherPatchCount = otherPatchCount;
             return this;
         }
 
+        /**
+         * @param rebootPending The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootPending(Boolean rebootPending) {
             $.rebootPending = rebootPending;
             return this;
         }
 
+        /**
+         * @param startTime The UTC timestamp when the operation began.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status The overall success or failure status of the operation. It remains &#34;InProgress&#34; until the operation completes. At that point it will become &#34;Unknown&#34;, &#34;Failed&#34;, &#34;Succeeded&#34;, or &#34;CompletedWithWarnings.&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

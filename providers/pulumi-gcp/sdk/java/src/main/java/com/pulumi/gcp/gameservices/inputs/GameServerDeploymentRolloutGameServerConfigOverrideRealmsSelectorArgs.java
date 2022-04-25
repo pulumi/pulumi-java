@@ -23,6 +23,10 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
     @Import(name="realms")
     private @Nullable Output<List<String>> realms;
 
+    /**
+     * @return List of realms to match against.
+     * 
+     */
     public Optional<Output<List<String>>> realms() {
         return Optional.ofNullable(this.realms);
     }
@@ -51,15 +55,33 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
             $ = new GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param realms List of realms to match against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realms(@Nullable Output<List<String>> realms) {
             $.realms = realms;
             return this;
         }
 
+        /**
+         * @param realms List of realms to match against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realms(List<String> realms) {
             return realms(Output.of(realms));
         }
 
+        /**
+         * @param realms List of realms to match against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder realms(String... realms) {
             return realms(List.of(realms));
         }

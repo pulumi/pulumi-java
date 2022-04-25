@@ -20,6 +20,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     @Import(name="predefinedMetricType", required=true)
     private Output<String> predefinedMetricType;
 
+    /**
+     * @return Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+     * 
+     */
     public Output<String> predefinedMetricType() {
         return this.predefinedMetricType;
     }
@@ -31,6 +35,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     @Import(name="resourceLabel", required=true)
     private Output<String> resourceLabel;
 
+    /**
+     * @return A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+     * 
+     */
     public Output<String> resourceLabel() {
         return this.resourceLabel;
     }
@@ -60,20 +68,44 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
             $ = new PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param predefinedMetricType Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedMetricType(Output<String> predefinedMetricType) {
             $.predefinedMetricType = predefinedMetricType;
             return this;
         }
 
+        /**
+         * @param predefinedMetricType Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedMetricType(String predefinedMetricType) {
             return predefinedMetricType(Output.of(predefinedMetricType));
         }
 
+        /**
+         * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabel(Output<String> resourceLabel) {
             $.resourceLabel = resourceLabel;
             return this;
         }
 
+        /**
+         * @param resourceLabel A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLabel(String resourceLabel) {
             return resourceLabel(Output.of(resourceLabel));
         }

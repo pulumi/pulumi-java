@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class MessageCountDetailsResponse {
     /**
-     * Number of active messages in the queue, topic, or subscription.
+     * @return Number of active messages in the queue, topic, or subscription.
      * 
      */
     private final Double activeMessageCount;
     /**
-     * Number of messages that are dead lettered.
+     * @return Number of messages that are dead lettered.
      * 
      */
     private final Double deadLetterMessageCount;
     /**
-     * Number of scheduled messages.
+     * @return Number of scheduled messages.
      * 
      */
     private final Double scheduledMessageCount;
     /**
-     * Number of messages transferred into dead letters.
+     * @return Number of messages transferred into dead letters.
      * 
      */
     private final Double transferDeadLetterMessageCount;
     /**
-     * Number of messages transferred to another queue, topic, or subscription.
+     * @return Number of messages transferred to another queue, topic, or subscription.
      * 
      */
     private final Double transferMessageCount;
@@ -50,37 +50,37 @@ public final class MessageCountDetailsResponse {
     }
 
     /**
-     * Number of active messages in the queue, topic, or subscription.
+     * @return Number of active messages in the queue, topic, or subscription.
      * 
-    */
+     */
     public Double activeMessageCount() {
         return this.activeMessageCount;
     }
     /**
-     * Number of messages that are dead lettered.
+     * @return Number of messages that are dead lettered.
      * 
-    */
+     */
     public Double deadLetterMessageCount() {
         return this.deadLetterMessageCount;
     }
     /**
-     * Number of scheduled messages.
+     * @return Number of scheduled messages.
      * 
-    */
+     */
     public Double scheduledMessageCount() {
         return this.scheduledMessageCount;
     }
     /**
-     * Number of messages transferred into dead letters.
+     * @return Number of messages transferred into dead letters.
      * 
-    */
+     */
     public Double transferDeadLetterMessageCount() {
         return this.transferDeadLetterMessageCount;
     }
     /**
-     * Number of messages transferred to another queue, topic, or subscription.
+     * @return Number of messages transferred to another queue, topic, or subscription.
      * 
-    */
+     */
     public Double transferMessageCount() {
         return this.transferMessageCount;
     }

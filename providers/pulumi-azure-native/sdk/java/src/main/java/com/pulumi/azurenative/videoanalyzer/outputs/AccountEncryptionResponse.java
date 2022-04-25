@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccountEncryptionResponse {
     /**
-     * The Key Vault identity.
+     * @return The Key Vault identity.
      * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
-     * The properties of the key used to encrypt the account.
+     * @return The properties of the key used to encrypt the account.
      * 
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
     /**
-     * The current status of the Key Vault mapping.
+     * @return The current status of the Key Vault mapping.
      * 
      */
     private final String status;
     /**
-     * The type of key used to encrypt the Account Key.
+     * @return The type of key used to encrypt the Account Key.
      * 
      */
     private final String type;
@@ -47,30 +47,30 @@ public final class AccountEncryptionResponse {
     }
 
     /**
-     * The Key Vault identity.
+     * @return The Key Vault identity.
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The properties of the key used to encrypt the account.
+     * @return The properties of the key used to encrypt the account.
      * 
-    */
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
-     * The current status of the Key Vault mapping.
+     * @return The current status of the Key Vault mapping.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The type of key used to encrypt the Account Key.
+     * @return The type of key used to encrypt the Account Key.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

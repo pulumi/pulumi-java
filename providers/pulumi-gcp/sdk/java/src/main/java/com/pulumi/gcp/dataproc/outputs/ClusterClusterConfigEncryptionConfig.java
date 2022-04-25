@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ClusterClusterConfigEncryptionConfig {
     /**
-     * The Cloud KMS key name to use for PD disk encryption for
+     * @return The Cloud KMS key name to use for PD disk encryption for
      * all instances in the cluster.
      * 
      */
@@ -22,10 +22,10 @@ public final class ClusterClusterConfigEncryptionConfig {
     }
 
     /**
-     * The Cloud KMS key name to use for PD disk encryption for
+     * @return The Cloud KMS key name to use for PD disk encryption for
      * all instances in the cluster.
      * 
-    */
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }

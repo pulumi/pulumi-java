@@ -24,6 +24,10 @@ public final class HeaderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="glob", required=true)
     private String glob;
 
+    /**
+     * @return The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+     * 
+     */
     public String glob() {
         return this.glob;
     }
@@ -35,6 +39,10 @@ public final class HeaderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="headers", required=true)
     private Map<String,String> headers;
 
+    /**
+     * @return The additional headers to add to the response.
+     * 
+     */
     public Map<String,String> headers() {
         return this.headers;
     }
@@ -46,6 +54,10 @@ public final class HeaderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="regex", required=true)
     private String regex;
 
+    /**
+     * @return The user-supplied RE2 regular expression to match against the request URL path.
+     * 
+     */
     public String regex() {
         return this.regex;
     }
@@ -76,16 +88,34 @@ public final class HeaderResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HeaderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param glob The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder glob(String glob) {
             $.glob = glob;
             return this;
         }
 
+        /**
+         * @param headers The additional headers to add to the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Map<String,String> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param regex The user-supplied RE2 regular expression to match against the request URL path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(String regex) {
             $.regex = regex;
             return this;

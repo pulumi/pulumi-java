@@ -35,6 +35,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return KRM-style annotations for the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -46,6 +50,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="confidential")
     private @Nullable Output<Boolean> confidential;
 
+    /**
+     * @return Enables Confidential Cloud Run in Revisions created using this template.
+     * 
+     */
     public Optional<Output<Boolean>> confidential() {
         return Optional.ofNullable(this.confidential);
     }
@@ -57,6 +65,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="containerConcurrency")
     private @Nullable Output<Integer> containerConcurrency;
 
+    /**
+     * @return Sets the maximum number of requests that each serving instance can receive.
+     * 
+     */
     public Optional<Output<Integer>> containerConcurrency() {
         return Optional.ofNullable(this.containerConcurrency);
     }
@@ -68,6 +80,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="containers")
     private @Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers;
 
+    /**
+     * @return Holds the single container that defines the unit of execution for this Revision.
+     * 
+     */
     public Optional<Output<List<GoogleCloudRunOpV2ContainerArgs>>> containers() {
         return Optional.ofNullable(this.containers);
     }
@@ -79,6 +95,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="encryptionKey")
     private @Nullable Output<String> encryptionKey;
 
+    /**
+     * @return A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
+     * 
+     */
     public Optional<Output<String>> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
@@ -90,6 +110,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="executionEnvironment")
     private @Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
 
+    /**
+     * @return The sandbox environment to host this Revision.
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment>> executionEnvironment() {
         return Optional.ofNullable(this.executionEnvironment);
     }
@@ -101,6 +125,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return KRM-style labels for the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -112,6 +140,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="revision")
     private @Nullable Output<String> revision;
 
+    /**
+     * @return The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.
+     * 
+     */
     public Optional<Output<String>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -123,6 +155,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="scaling")
     private @Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
 
+    /**
+     * @return Scaling settings for this Revision.
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2RevisionScalingArgs>> scaling() {
         return Optional.ofNullable(this.scaling);
     }
@@ -134,6 +170,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -145,6 +185,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Max allowed time for an instance to respond to a request.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -156,6 +200,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="volumes")
     private @Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
 
+    /**
+     * @return A list of Volumes to make available to containers.
+     * 
+     */
     public Optional<Output<List<GoogleCloudRunOpV2VolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -167,6 +215,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
     @Import(name="vpcAccess")
     private @Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
 
+    /**
+     * @return VPC Access configuration to use for this Revision. For more information, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2VpcAccessArgs>> vpcAccess() {
         return Optional.ofNullable(this.vpcAccess);
     }
@@ -207,127 +259,295 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
             $ = new GoogleCloudRunOpV2RevisionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations KRM-style annotations for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations KRM-style annotations for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param confidential Enables Confidential Cloud Run in Revisions created using this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidential(@Nullable Output<Boolean> confidential) {
             $.confidential = confidential;
             return this;
         }
 
+        /**
+         * @param confidential Enables Confidential Cloud Run in Revisions created using this template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidential(Boolean confidential) {
             return confidential(Output.of(confidential));
         }
 
+        /**
+         * @param containerConcurrency Sets the maximum number of requests that each serving instance can receive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerConcurrency(@Nullable Output<Integer> containerConcurrency) {
             $.containerConcurrency = containerConcurrency;
             return this;
         }
 
+        /**
+         * @param containerConcurrency Sets the maximum number of requests that each serving instance can receive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerConcurrency(Integer containerConcurrency) {
             return containerConcurrency(Output.of(containerConcurrency));
         }
 
+        /**
+         * @param containers Holds the single container that defines the unit of execution for this Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(@Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers Holds the single container that defines the unit of execution for this Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(List<GoogleCloudRunOpV2ContainerArgs> containers) {
             return containers(Output.of(containers));
         }
 
+        /**
+         * @param containers Holds the single container that defines the unit of execution for this Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(GoogleCloudRunOpV2ContainerArgs... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param encryptionKey A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             $.encryptionKey = encryptionKey;
             return this;
         }
 
+        /**
+         * @param encryptionKey A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(String encryptionKey) {
             return encryptionKey(Output.of(encryptionKey));
         }
 
+        /**
+         * @param executionEnvironment The sandbox environment to host this Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionEnvironment(@Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment) {
             $.executionEnvironment = executionEnvironment;
             return this;
         }
 
+        /**
+         * @param executionEnvironment The sandbox environment to host this Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionEnvironment(GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment executionEnvironment) {
             return executionEnvironment(Output.of(executionEnvironment));
         }
 
+        /**
+         * @param labels KRM-style labels for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels KRM-style labels for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param revision The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<String> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(String revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param scaling Scaling settings for this Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaling(@Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling) {
             $.scaling = scaling;
             return this;
         }
 
+        /**
+         * @param scaling Scaling settings for this Revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaling(GoogleCloudRunOpV2RevisionScalingArgs scaling) {
             return scaling(Output.of(scaling));
         }
 
+        /**
+         * @param serviceAccount Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param timeout Max allowed time for an instance to respond to a request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Max allowed time for an instance to respond to a request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param volumes A list of Volumes to make available to containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes A list of Volumes to make available to containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<GoogleCloudRunOpV2VolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes A list of Volumes to make available to containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(GoogleCloudRunOpV2VolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }
 
+        /**
+         * @param vpcAccess VPC Access configuration to use for this Revision. For more information, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcAccess(@Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess) {
             $.vpcAccess = vpcAccess;
             return this;
         }
 
+        /**
+         * @param vpcAccess VPC Access configuration to use for this Revision. For more information, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcAccess(GoogleCloudRunOpV2VpcAccessArgs vpcAccess) {
             return vpcAccess(Output.of(vpcAccess));
         }

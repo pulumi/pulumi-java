@@ -31,6 +31,10 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authMode", required=true)
     private Output<Either<String,EndpointAuthMode>> authMode;
 
+    /**
+     * @return Inference endpoint authentication mode type
+     * 
+     */
     public Output<Either<String,EndpointAuthMode>> authMode() {
         return this.authMode;
     }
@@ -42,6 +46,10 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the inference endpoint.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,6 +62,11 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keys")
     private @Nullable Output<EndpointAuthKeysArgs> keys;
 
+    /**
+     * @return EndpointAuthKeys to set initially on an Endpoint.
+     * This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.
+     * 
+     */
     public Optional<Output<EndpointAuthKeysArgs>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -65,6 +78,10 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -77,6 +94,11 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return ARM resource ID of the compute if it exists.
+     * optional
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -88,6 +110,10 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="traffic")
     private @Nullable Output<Map<String,Integer>> traffic;
 
+    /**
+     * @return Traffic rules on how the traffic will be routed across deployments.
+     * 
+     */
     public Optional<Output<Map<String,Integer>>> traffic() {
         return Optional.ofNullable(this.traffic);
     }
@@ -121,64 +147,152 @@ public final class OnlineEndpointArgs extends com.pulumi.resources.ResourceArgs 
             $ = new OnlineEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authMode Inference endpoint authentication mode type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(Output<Either<String,EndpointAuthMode>> authMode) {
             $.authMode = authMode;
             return this;
         }
 
+        /**
+         * @param authMode Inference endpoint authentication mode type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(Either<String,EndpointAuthMode> authMode) {
             return authMode(Output.of(authMode));
         }
 
+        /**
+         * @param authMode Inference endpoint authentication mode type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(String authMode) {
             return authMode(Either.ofLeft(authMode));
         }
 
+        /**
+         * @param authMode Inference endpoint authentication mode type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(EndpointAuthMode authMode) {
             return authMode(Either.ofRight(authMode));
         }
 
+        /**
+         * @param description Description of the inference endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the inference endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param keys EndpointAuthKeys to set initially on an Endpoint.
+         * This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<EndpointAuthKeysArgs> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys EndpointAuthKeys to set initially on an Endpoint.
+         * This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(EndpointAuthKeysArgs keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param target ARM resource ID of the compute if it exists.
+         * optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target ARM resource ID of the compute if it exists.
+         * optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param traffic Traffic rules on how the traffic will be routed across deployments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(@Nullable Output<Map<String,Integer>> traffic) {
             $.traffic = traffic;
             return this;
         }
 
+        /**
+         * @param traffic Traffic rules on how the traffic will be routed across deployments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(Map<String,Integer> traffic) {
             return traffic(Output.of(traffic));
         }

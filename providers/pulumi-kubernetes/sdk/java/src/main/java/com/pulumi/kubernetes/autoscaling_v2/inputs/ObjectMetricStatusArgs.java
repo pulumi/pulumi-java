@@ -26,6 +26,10 @@ public final class ObjectMetricStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="current", required=true)
     private Output<MetricValueStatusArgs> current;
 
+    /**
+     * @return current contains the current value for the given metric
+     * 
+     */
     public Output<MetricValueStatusArgs> current() {
         return this.current;
     }
@@ -37,6 +41,10 @@ public final class ObjectMetricStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="describedObject", required=true)
     private Output<CrossVersionObjectReferenceArgs> describedObject;
 
+    /**
+     * @return DescribedObject specifies the descriptions of a object,such as kind,name apiVersion
+     * 
+     */
     public Output<CrossVersionObjectReferenceArgs> describedObject() {
         return this.describedObject;
     }
@@ -48,6 +56,10 @@ public final class ObjectMetricStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="metric", required=true)
     private Output<MetricIdentifierArgs> metric;
 
+    /**
+     * @return metric identifies the target metric by name and selector
+     * 
+     */
     public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
@@ -78,29 +90,65 @@ public final class ObjectMetricStatusArgs extends com.pulumi.resources.ResourceA
             $ = new ObjectMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param current current contains the current value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(Output<MetricValueStatusArgs> current) {
             $.current = current;
             return this;
         }
 
+        /**
+         * @param current current contains the current value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(MetricValueStatusArgs current) {
             return current(Output.of(current));
         }
 
+        /**
+         * @param describedObject DescribedObject specifies the descriptions of a object,such as kind,name apiVersion
+         * 
+         * @return builder
+         * 
+         */
         public Builder describedObject(Output<CrossVersionObjectReferenceArgs> describedObject) {
             $.describedObject = describedObject;
             return this;
         }
 
+        /**
+         * @param describedObject DescribedObject specifies the descriptions of a object,such as kind,name apiVersion
+         * 
+         * @return builder
+         * 
+         */
         public Builder describedObject(CrossVersionObjectReferenceArgs describedObject) {
             return describedObject(Output.of(describedObject));
         }
 
+        /**
+         * @param metric metric identifies the target metric by name and selector
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(Output<MetricIdentifierArgs> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric metric identifies the target metric by name and selector
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(MetricIdentifierArgs metric) {
             return metric(Output.of(metric));
         }

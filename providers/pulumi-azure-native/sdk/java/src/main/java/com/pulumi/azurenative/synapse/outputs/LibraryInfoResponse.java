@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LibraryInfoResponse {
     /**
-     * Storage blob container name.
+     * @return Storage blob container name.
      * 
      */
     private final @Nullable String containerName;
     /**
-     * Creator Id of the library/package.
+     * @return Creator Id of the library/package.
      * 
      */
     private final String creatorId;
     /**
-     * Name of the library.
+     * @return Name of the library.
      * 
      */
     private final @Nullable String name;
     /**
-     * Storage blob path of library.
+     * @return Storage blob path of library.
      * 
      */
     private final @Nullable String path;
     /**
-     * Provisioning status of the library/package.
+     * @return Provisioning status of the library/package.
      * 
      */
     private final String provisioningStatus;
     /**
-     * Type of the library.
+     * @return Type of the library.
      * 
      */
     private final @Nullable String type;
     /**
-     * The last update time of the library.
+     * @return The last update time of the library.
      * 
      */
     private final String uploadedTimestamp;
@@ -66,51 +66,51 @@ public final class LibraryInfoResponse {
     }
 
     /**
-     * Storage blob container name.
+     * @return Storage blob container name.
      * 
-    */
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
-     * Creator Id of the library/package.
+     * @return Creator Id of the library/package.
      * 
-    */
+     */
     public String creatorId() {
         return this.creatorId;
     }
     /**
-     * Name of the library.
+     * @return Name of the library.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Storage blob path of library.
+     * @return Storage blob path of library.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Provisioning status of the library/package.
+     * @return Provisioning status of the library/package.
      * 
-    */
+     */
     public String provisioningStatus() {
         return this.provisioningStatus;
     }
     /**
-     * Type of the library.
+     * @return Type of the library.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The last update time of the library.
+     * @return The last update time of the library.
      * 
-    */
+     */
     public String uploadedTimestamp() {
         return this.uploadedTimestamp;
     }

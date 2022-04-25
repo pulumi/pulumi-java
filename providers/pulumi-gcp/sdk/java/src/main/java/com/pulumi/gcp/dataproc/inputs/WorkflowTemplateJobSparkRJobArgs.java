@@ -25,6 +25,10 @@ public final class WorkflowTemplateJobSparkRJobArgs extends com.pulumi.resources
     @Import(name="archiveUris")
     private @Nullable Output<List<String>> archiveUris;
 
+    /**
+     * @return Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     * 
+     */
     public Optional<Output<List<String>>> archiveUris() {
         return Optional.ofNullable(this.archiveUris);
     }
@@ -36,6 +40,10 @@ public final class WorkflowTemplateJobSparkRJobArgs extends com.pulumi.resources
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -47,6 +55,10 @@ public final class WorkflowTemplateJobSparkRJobArgs extends com.pulumi.resources
     @Import(name="fileUris")
     private @Nullable Output<List<String>> fileUris;
 
+    /**
+     * @return Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+     * 
+     */
     public Optional<Output<List<String>>> fileUris() {
         return Optional.ofNullable(this.fileUris);
     }
@@ -58,6 +70,10 @@ public final class WorkflowTemplateJobSparkRJobArgs extends com.pulumi.resources
     @Import(name="loggingConfig")
     private @Nullable Output<WorkflowTemplateJobSparkRJobLoggingConfigArgs> loggingConfig;
 
+    /**
+     * @return Optional. The runtime log config for job execution.
+     * 
+     */
     public Optional<Output<WorkflowTemplateJobSparkRJobLoggingConfigArgs>> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
@@ -69,6 +85,10 @@ public final class WorkflowTemplateJobSparkRJobArgs extends com.pulumi.resources
     @Import(name="mainRFileUri", required=true)
     private Output<String> mainRFileUri;
 
+    /**
+     * @return Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.
+     * 
+     */
     public Output<String> mainRFileUri() {
         return this.mainRFileUri;
     }
@@ -80,6 +100,10 @@ public final class WorkflowTemplateJobSparkRJobArgs extends com.pulumi.resources
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -113,68 +137,158 @@ public final class WorkflowTemplateJobSparkRJobArgs extends com.pulumi.resources
             $ = new WorkflowTemplateJobSparkRJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
             $.archiveUris = archiveUris;
             return this;
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(List<String> archiveUris) {
             return archiveUris(Output.of(archiveUris));
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
             $.fileUris = fileUris;
             return this;
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(List<String> fileUris) {
             return fileUris(Output.of(fileUris));
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
 
+        /**
+         * @param loggingConfig Optional. The runtime log config for job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobSparkRJobLoggingConfigArgs> loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
 
+        /**
+         * @param loggingConfig Optional. The runtime log config for job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(WorkflowTemplateJobSparkRJobLoggingConfigArgs loggingConfig) {
             return loggingConfig(Output.of(loggingConfig));
         }
 
+        /**
+         * @param mainRFileUri Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainRFileUri(Output<String> mainRFileUri) {
             $.mainRFileUri = mainRFileUri;
             return this;
         }
 
+        /**
+         * @param mainRFileUri Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainRFileUri(String mainRFileUri) {
             return mainRFileUri(Output.of(mainRFileUri));
         }
 
+        /**
+         * @param properties Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }

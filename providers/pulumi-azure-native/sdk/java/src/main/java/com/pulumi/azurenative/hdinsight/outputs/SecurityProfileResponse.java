@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityProfileResponse {
     /**
-     * The resource ID of the user&#39;s Azure Active Directory Domain Service.
+     * @return The resource ID of the user&#39;s Azure Active Directory Domain Service.
      * 
      */
     private final @Nullable String aaddsResourceId;
     /**
-     * Optional. The Distinguished Names for cluster user groups
+     * @return Optional. The Distinguished Names for cluster user groups
      * 
      */
     private final @Nullable List<String> clusterUsersGroupDNs;
     /**
-     * The directory type.
+     * @return The directory type.
      * 
      */
     private final @Nullable String directoryType;
     /**
-     * The organization&#39;s active directory domain.
+     * @return The organization&#39;s active directory domain.
      * 
      */
     private final @Nullable String domain;
     /**
-     * The domain admin password.
+     * @return The domain admin password.
      * 
      */
     private final @Nullable String domainUserPassword;
     /**
-     * The domain user account that will have admin privileges on the cluster.
+     * @return The domain user account that will have admin privileges on the cluster.
      * 
      */
     private final @Nullable String domainUsername;
     /**
-     * The LDAPS protocol URLs to communicate with the Active Directory.
+     * @return The LDAPS protocol URLs to communicate with the Active Directory.
      * 
      */
     private final @Nullable List<String> ldapsUrls;
     /**
-     * User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
+     * @return User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
      * 
      */
     private final @Nullable String msiResourceId;
     /**
-     * The organizational unit within the Active Directory to place the cluster and service accounts.
+     * @return The organizational unit within the Active Directory to place the cluster and service accounts.
      * 
      */
     private final @Nullable String organizationalUnitDN;
@@ -81,65 +81,65 @@ public final class SecurityProfileResponse {
     }
 
     /**
-     * The resource ID of the user&#39;s Azure Active Directory Domain Service.
+     * @return The resource ID of the user&#39;s Azure Active Directory Domain Service.
      * 
-    */
+     */
     public Optional<String> aaddsResourceId() {
         return Optional.ofNullable(this.aaddsResourceId);
     }
     /**
-     * Optional. The Distinguished Names for cluster user groups
+     * @return Optional. The Distinguished Names for cluster user groups
      * 
-    */
+     */
     public List<String> clusterUsersGroupDNs() {
         return this.clusterUsersGroupDNs == null ? List.of() : this.clusterUsersGroupDNs;
     }
     /**
-     * The directory type.
+     * @return The directory type.
      * 
-    */
+     */
     public Optional<String> directoryType() {
         return Optional.ofNullable(this.directoryType);
     }
     /**
-     * The organization&#39;s active directory domain.
+     * @return The organization&#39;s active directory domain.
      * 
-    */
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
-     * The domain admin password.
+     * @return The domain admin password.
      * 
-    */
+     */
     public Optional<String> domainUserPassword() {
         return Optional.ofNullable(this.domainUserPassword);
     }
     /**
-     * The domain user account that will have admin privileges on the cluster.
+     * @return The domain user account that will have admin privileges on the cluster.
      * 
-    */
+     */
     public Optional<String> domainUsername() {
         return Optional.ofNullable(this.domainUsername);
     }
     /**
-     * The LDAPS protocol URLs to communicate with the Active Directory.
+     * @return The LDAPS protocol URLs to communicate with the Active Directory.
      * 
-    */
+     */
     public List<String> ldapsUrls() {
         return this.ldapsUrls == null ? List.of() : this.ldapsUrls;
     }
     /**
-     * User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
+     * @return User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
      * 
-    */
+     */
     public Optional<String> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
     /**
-     * The organizational unit within the Active Directory to place the cluster and service accounts.
+     * @return The organizational unit within the Active Directory to place the cluster and service accounts.
      * 
-    */
+     */
     public Optional<String> organizationalUnitDN() {
         return Optional.ofNullable(this.organizationalUnitDN);
     }

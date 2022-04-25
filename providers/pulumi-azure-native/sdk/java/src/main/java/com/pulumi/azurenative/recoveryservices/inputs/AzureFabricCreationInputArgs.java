@@ -28,6 +28,11 @@ public final class AzureFabricCreationInputArgs extends com.pulumi.resources.Res
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return Gets the class type.
+     * Expected value is &#39;Azure&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -39,6 +44,10 @@ public final class AzureFabricCreationInputArgs extends com.pulumi.resources.Res
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -68,20 +77,46 @@ public final class AzureFabricCreationInputArgs extends com.pulumi.resources.Res
             $ = new AzureFabricCreationInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the class type.
+         * Expected value is &#39;Azure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type.
+         * Expected value is &#39;Azure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param location The Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

@@ -14,42 +14,42 @@ import java.util.Objects;
 @CustomType
 public final class GetServerTlsPolicyResult {
     /**
-     *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
+     * @return  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
      * 
      */
     private final Boolean allowOpen;
     /**
-     * The timestamp when the resource was created.
+     * @return The timestamp when the resource was created.
      * 
      */
     private final String createTime;
     /**
-     * Free-text description of the resource.
+     * @return Free-text description of the resource.
      * 
      */
     private final String description;
     /**
-     * Set of label tags associated with the resource.
+     * @return Set of label tags associated with the resource.
      * 
      */
     private final Map<String,String> labels;
     /**
-     *  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
+     * @return  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
      * 
      */
     private final MTLSPolicyResponse mtlsPolicy;
     /**
-     * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+     * @return Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      * 
      */
     private final String name;
     /**
-     *  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
+     * @return  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
      * 
      */
     private final GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate;
     /**
-     * The timestamp when the resource was updated.
+     * @return The timestamp when the resource was updated.
      * 
      */
     private final String updateTime;
@@ -75,58 +75,58 @@ public final class GetServerTlsPolicyResult {
     }
 
     /**
-     *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
+     * @return  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
      * 
-    */
+     */
     public Boolean allowOpen() {
         return this.allowOpen;
     }
     /**
-     * The timestamp when the resource was created.
+     * @return The timestamp when the resource was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Free-text description of the resource.
+     * @return Free-text description of the resource.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Set of label tags associated with the resource.
+     * @return Set of label tags associated with the resource.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     *  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
+     * @return  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
      * 
-    */
+     */
     public MTLSPolicyResponse mtlsPolicy() {
         return this.mtlsPolicy;
     }
     /**
-     * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
+     * @return Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     *  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
+     * @return  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
      * 
-    */
+     */
     public GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate() {
         return this.serverCertificate;
     }
     /**
-     * The timestamp when the resource was updated.
+     * @return The timestamp when the resource was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

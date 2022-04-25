@@ -25,6 +25,10 @@ public final class PreferredSchedulingTermArgs extends com.pulumi.resources.Reso
     @Import(name="preference", required=true)
     private Output<NodeSelectorTermArgs> preference;
 
+    /**
+     * @return A node selector term, associated with the corresponding weight.
+     * 
+     */
     public Output<NodeSelectorTermArgs> preference() {
         return this.preference;
     }
@@ -36,6 +40,10 @@ public final class PreferredSchedulingTermArgs extends com.pulumi.resources.Reso
     @Import(name="weight", required=true)
     private Output<Integer> weight;
 
+    /**
+     * @return Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
+     * 
+     */
     public Output<Integer> weight() {
         return this.weight;
     }
@@ -65,20 +73,44 @@ public final class PreferredSchedulingTermArgs extends com.pulumi.resources.Reso
             $ = new PreferredSchedulingTermArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preference A node selector term, associated with the corresponding weight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preference(Output<NodeSelectorTermArgs> preference) {
             $.preference = preference;
             return this;
         }
 
+        /**
+         * @param preference A node selector term, associated with the corresponding weight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preference(NodeSelectorTermArgs preference) {
             return preference(Output.of(preference));
         }
 
+        /**
+         * @param weight Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

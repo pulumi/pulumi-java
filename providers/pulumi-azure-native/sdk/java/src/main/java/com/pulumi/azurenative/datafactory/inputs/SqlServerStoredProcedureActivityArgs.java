@@ -35,6 +35,10 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -46,6 +50,10 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +65,10 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="linkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -68,6 +80,10 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -79,6 +95,10 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="policy")
     private @Nullable Output<ActivityPolicyArgs> policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<Output<ActivityPolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -90,6 +110,10 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="storedProcedureName", required=true)
     private Output<Object> storedProcedureName;
 
+    /**
+     * @return Stored procedure name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> storedProcedureName() {
         return this.storedProcedureName;
     }
@@ -101,6 +125,10 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="storedProcedureParameters")
     private @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
+    /**
+     * @return Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
+     * 
+     */
     public Optional<Output<Map<String,StoredProcedureParameterArgs>>> storedProcedureParameters() {
         return Optional.ofNullable(this.storedProcedureParameters);
     }
@@ -113,6 +141,11 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;SqlServerStoredProcedure&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -124,6 +157,10 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -160,91 +197,213 @@ public final class SqlServerStoredProcedureActivityArgs extends com.pulumi.resou
             $ = new SqlServerStoredProcedureActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ActivityPolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param storedProcedureName Stored procedure name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedProcedureName(Output<Object> storedProcedureName) {
             $.storedProcedureName = storedProcedureName;
             return this;
         }
 
+        /**
+         * @param storedProcedureName Stored procedure name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedProcedureName(Object storedProcedureName) {
             return storedProcedureName(Output.of(storedProcedureName));
         }
 
+        /**
+         * @param storedProcedureParameters Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedProcedureParameters(@Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
             $.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
 
+        /**
+         * @param storedProcedureParameters Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedProcedureParameters(Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
             return storedProcedureParameters(Output.of(storedProcedureParameters));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;SqlServerStoredProcedure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;SqlServerStoredProcedure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

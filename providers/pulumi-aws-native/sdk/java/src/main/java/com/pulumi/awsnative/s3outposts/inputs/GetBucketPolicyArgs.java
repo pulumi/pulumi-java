@@ -19,6 +19,10 @@ public final class GetBucketPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the specified bucket.
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -47,6 +51,12 @@ public final class GetBucketPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBucketPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The Amazon Resource Name (ARN) of the specified bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;

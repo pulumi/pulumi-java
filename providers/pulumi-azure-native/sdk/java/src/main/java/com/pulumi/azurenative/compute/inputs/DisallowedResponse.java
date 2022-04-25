@@ -26,6 +26,10 @@ public final class DisallowedResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskTypes")
     private @Nullable List<String> diskTypes;
 
+    /**
+     * @return A list of disk types.
+     * 
+     */
     public Optional<List<String>> diskTypes() {
         return Optional.ofNullable(this.diskTypes);
     }
@@ -54,11 +58,23 @@ public final class DisallowedResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DisallowedResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskTypes A list of disk types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskTypes(@Nullable List<String> diskTypes) {
             $.diskTypes = diskTypes;
             return this;
         }
 
+        /**
+         * @param diskTypes A list of disk types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskTypes(String... diskTypes) {
             return diskTypes(List.of(diskTypes));
         }

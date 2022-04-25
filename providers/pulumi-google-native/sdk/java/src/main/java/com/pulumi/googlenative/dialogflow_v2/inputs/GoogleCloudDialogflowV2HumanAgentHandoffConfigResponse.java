@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
     @Import(name="livePersonConfig", required=true)
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
 
+    /**
+     * @return Uses LivePerson (https://www.liveperson.com).
+     * 
+     */
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig() {
         return this.livePersonConfig;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
     @Import(name="salesforceLiveAgentConfig", required=true)
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
+    /**
+     * @return Uses Salesforce Live Agent.
+     * 
+     */
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
             $ = new GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param livePersonConfig Uses LivePerson (https://www.liveperson.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder livePersonConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig) {
             $.livePersonConfig = livePersonConfig;
             return this;
         }
 
+        /**
+         * @param salesforceLiveAgentConfig Uses Salesforce Live Agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder salesforceLiveAgentConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
             $.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
             return this;

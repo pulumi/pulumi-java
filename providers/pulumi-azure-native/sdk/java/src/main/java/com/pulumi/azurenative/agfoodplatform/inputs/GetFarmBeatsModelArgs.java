@@ -19,6 +19,10 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="farmBeatsResourceName", required=true)
     private String farmBeatsResourceName;
 
+    /**
+     * @return FarmBeats resource name.
+     * 
+     */
     public String farmBeatsResourceName() {
         return this.farmBeatsResourceName;
     }
@@ -30,6 +34,10 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetFarmBeatsModelArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetFarmBeatsModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param farmBeatsResourceName FarmBeats resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder farmBeatsResourceName(String farmBeatsResourceName) {
             $.farmBeatsResourceName = farmBeatsResourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -26,6 +26,10 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="logType")
     private @Nullable String logType;
 
+    /**
+     * @return The log type to be used.
+     * 
+     */
     public Optional<String> logType() {
         return Optional.ofNullable(this.logType);
     }
@@ -37,6 +41,10 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="metadata")
     private @Nullable Map<String,String> metadata;
 
+    /**
+     * @return Metadata for log analytics.
+     * 
+     */
     public Optional<Map<String,String>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -48,6 +56,10 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="workspaceId", required=true)
     private String workspaceId;
 
+    /**
+     * @return The workspace id for log analytics
+     * 
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
@@ -59,6 +71,10 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="workspaceKey", required=true)
     private String workspaceKey;
 
+    /**
+     * @return The workspace key for log analytics
+     * 
+     */
     public String workspaceKey() {
         return this.workspaceKey;
     }
@@ -70,6 +86,10 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="workspaceResourceId")
     private @Nullable Map<String,String> workspaceResourceId;
 
+    /**
+     * @return The workspace resource id for log analytics
+     * 
+     */
     public Optional<Map<String,String>> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -102,26 +122,56 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new LogAnalyticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logType The log type to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(@Nullable String logType) {
             $.logType = logType;
             return this;
         }
 
+        /**
+         * @param metadata Metadata for log analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param workspaceId The workspace id for log analytics
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceKey The workspace key for log analytics
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceKey(String workspaceKey) {
             $.workspaceKey = workspaceKey;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId The workspace resource id for log analytics
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;

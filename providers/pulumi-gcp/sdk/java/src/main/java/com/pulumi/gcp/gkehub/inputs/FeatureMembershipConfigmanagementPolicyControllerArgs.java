@@ -24,6 +24,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="auditIntervalSeconds")
     private @Nullable Output<String> auditIntervalSeconds;
 
+    /**
+     * @return Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
+     * 
+     */
     public Optional<Output<String>> auditIntervalSeconds() {
         return Optional.ofNullable(this.auditIntervalSeconds);
     }
@@ -35,6 +39,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -46,6 +54,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="exemptableNamespaces")
     private @Nullable Output<List<String>> exemptableNamespaces;
 
+    /**
+     * @return The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
+     * 
+     */
     public Optional<Output<List<String>>> exemptableNamespaces() {
         return Optional.ofNullable(this.exemptableNamespaces);
     }
@@ -57,6 +69,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="logDeniesEnabled")
     private @Nullable Output<Boolean> logDeniesEnabled;
 
+    /**
+     * @return Logs all denies and dry run failures.
+     * 
+     */
     public Optional<Output<Boolean>> logDeniesEnabled() {
         return Optional.ofNullable(this.logDeniesEnabled);
     }
@@ -68,6 +84,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="referentialRulesEnabled")
     private @Nullable Output<Boolean> referentialRulesEnabled;
 
+    /**
+     * @return Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
+     * 
+     */
     public Optional<Output<Boolean>> referentialRulesEnabled() {
         return Optional.ofNullable(this.referentialRulesEnabled);
     }
@@ -79,6 +99,10 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="templateLibraryInstalled")
     private @Nullable Output<Boolean> templateLibraryInstalled;
 
+    /**
+     * @return Installs the default template library along with Policy Controller.
+     * 
+     */
     public Optional<Output<Boolean>> templateLibraryInstalled() {
         return Optional.ofNullable(this.templateLibraryInstalled);
     }
@@ -112,60 +136,138 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             $ = new FeatureMembershipConfigmanagementPolicyControllerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditIntervalSeconds Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditIntervalSeconds(@Nullable Output<String> auditIntervalSeconds) {
             $.auditIntervalSeconds = auditIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param auditIntervalSeconds Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditIntervalSeconds(String auditIntervalSeconds) {
             return auditIntervalSeconds(Output.of(auditIntervalSeconds));
         }
 
+        /**
+         * @param enabled Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param exemptableNamespaces The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptableNamespaces(@Nullable Output<List<String>> exemptableNamespaces) {
             $.exemptableNamespaces = exemptableNamespaces;
             return this;
         }
 
+        /**
+         * @param exemptableNamespaces The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptableNamespaces(List<String> exemptableNamespaces) {
             return exemptableNamespaces(Output.of(exemptableNamespaces));
         }
 
+        /**
+         * @param exemptableNamespaces The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptableNamespaces(String... exemptableNamespaces) {
             return exemptableNamespaces(List.of(exemptableNamespaces));
         }
 
+        /**
+         * @param logDeniesEnabled Logs all denies and dry run failures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDeniesEnabled(@Nullable Output<Boolean> logDeniesEnabled) {
             $.logDeniesEnabled = logDeniesEnabled;
             return this;
         }
 
+        /**
+         * @param logDeniesEnabled Logs all denies and dry run failures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDeniesEnabled(Boolean logDeniesEnabled) {
             return logDeniesEnabled(Output.of(logDeniesEnabled));
         }
 
+        /**
+         * @param referentialRulesEnabled Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referentialRulesEnabled(@Nullable Output<Boolean> referentialRulesEnabled) {
             $.referentialRulesEnabled = referentialRulesEnabled;
             return this;
         }
 
+        /**
+         * @param referentialRulesEnabled Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referentialRulesEnabled(Boolean referentialRulesEnabled) {
             return referentialRulesEnabled(Output.of(referentialRulesEnabled));
         }
 
+        /**
+         * @param templateLibraryInstalled Installs the default template library along with Policy Controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateLibraryInstalled(@Nullable Output<Boolean> templateLibraryInstalled) {
             $.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }
 
+        /**
+         * @param templateLibraryInstalled Installs the default template library along with Policy Controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateLibraryInstalled(Boolean templateLibraryInstalled) {
             return templateLibraryInstalled(Output.of(templateLibraryInstalled));
         }

@@ -12,28 +12,28 @@ import java.util.Objects;
 @CustomType
 public final class GetVaultResult {
     /**
-     * The ARN of the vault.
+     * @return The ARN of the vault.
      * 
      */
     private final String arn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The server-side encryption key that is used to protect your backups.
+     * @return The server-side encryption key that is used to protect your backups.
      * 
      */
     private final String kmsKeyArn;
     private final String name;
     /**
-     * The number of recovery points that are stored in a backup vault.
+     * @return The number of recovery points that are stored in a backup vault.
      * 
      */
     private final Integer recoveryPoints;
     /**
-     * Metadata that you can assign to help organize the resources that you create.
+     * @return Metadata that you can assign to help organize the resources that you create.
      * 
      */
     private final Map<String,String> tags;
@@ -55,23 +55,23 @@ public final class GetVaultResult {
     }
 
     /**
-     * The ARN of the vault.
+     * @return The ARN of the vault.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The server-side encryption key that is used to protect your backups.
+     * @return The server-side encryption key that is used to protect your backups.
      * 
-    */
+     */
     public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
@@ -79,16 +79,16 @@ public final class GetVaultResult {
         return this.name;
     }
     /**
-     * The number of recovery points that are stored in a backup vault.
+     * @return The number of recovery points that are stored in a backup vault.
      * 
-    */
+     */
     public Integer recoveryPoints() {
         return this.recoveryPoints;
     }
     /**
-     * Metadata that you can assign to help organize the resources that you create.
+     * @return Metadata that you can assign to help organize the resources that you create.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

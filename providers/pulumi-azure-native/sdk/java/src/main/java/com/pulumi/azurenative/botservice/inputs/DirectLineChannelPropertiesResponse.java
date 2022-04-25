@@ -27,6 +27,10 @@ public final class DirectLineChannelPropertiesResponse extends com.pulumi.resour
     @Import(name="directLineEmbedCode")
     private @Nullable String directLineEmbedCode;
 
+    /**
+     * @return Direct Line embed code of the resource
+     * 
+     */
     public Optional<String> directLineEmbedCode() {
         return Optional.ofNullable(this.directLineEmbedCode);
     }
@@ -38,6 +42,10 @@ public final class DirectLineChannelPropertiesResponse extends com.pulumi.resour
     @Import(name="sites")
     private @Nullable List<DirectLineSiteResponse> sites;
 
+    /**
+     * @return The list of Direct Line sites
+     * 
+     */
     public Optional<List<DirectLineSiteResponse>> sites() {
         return Optional.ofNullable(this.sites);
     }
@@ -67,16 +75,34 @@ public final class DirectLineChannelPropertiesResponse extends com.pulumi.resour
             $ = new DirectLineChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param directLineEmbedCode Direct Line embed code of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder directLineEmbedCode(@Nullable String directLineEmbedCode) {
             $.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
 
+        /**
+         * @param sites The list of Direct Line sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(@Nullable List<DirectLineSiteResponse> sites) {
             $.sites = sites;
             return this;
         }
 
+        /**
+         * @param sites The list of Direct Line sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(DirectLineSiteResponse... sites) {
             return sites(List.of(sites));
         }

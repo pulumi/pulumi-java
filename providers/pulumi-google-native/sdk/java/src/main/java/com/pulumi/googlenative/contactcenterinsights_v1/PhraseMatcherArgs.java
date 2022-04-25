@@ -27,6 +27,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="active")
     private @Nullable Output<Boolean> active;
 
+    /**
+     * @return Applies the phrase matcher only when it is active.
+     * 
+     */
     public Optional<Output<Boolean>> active() {
         return Optional.ofNullable(this.active);
     }
@@ -38,6 +42,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the phrase matcher.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -56,6 +64,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,6 +79,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phraseMatchRuleGroups")
     private @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
 
+    /**
+     * @return A list of phase match rule groups that are included in this matcher.
+     * 
+     */
     public Optional<Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>>> phraseMatchRuleGroups() {
         return Optional.ofNullable(this.phraseMatchRuleGroups);
     }
@@ -85,6 +101,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleMatch")
     private @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
 
+    /**
+     * @return The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
+     * 
+     */
     public Optional<Output<PhraseMatcherRoleMatch>> roleMatch() {
         return Optional.ofNullable(this.roleMatch);
     }
@@ -96,6 +116,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<PhraseMatcherType> type;
 
+    /**
+     * @return The type of this phrase matcher.
+     * 
+     */
     public Output<PhraseMatcherType> type() {
         return this.type;
     }
@@ -107,6 +131,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionTag")
     private @Nullable Output<String> versionTag;
 
+    /**
+     * @return The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
+     * 
+     */
     public Optional<Output<String>> versionTag() {
         return Optional.ofNullable(this.versionTag);
     }
@@ -143,20 +171,44 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PhraseMatcherArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active Applies the phrase matcher only when it is active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(@Nullable Output<Boolean> active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param active Applies the phrase matcher only when it is active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Boolean active) {
             return active(Output.of(active));
         }
 
+        /**
+         * @param displayName The human-readable name of the phrase matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the phrase matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -170,24 +222,54 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param phraseMatchRuleGroups A list of phase match rule groups that are included in this matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchRuleGroups(@Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups) {
             $.phraseMatchRuleGroups = phraseMatchRuleGroups;
             return this;
         }
 
+        /**
+         * @param phraseMatchRuleGroups A list of phase match rule groups that are included in this matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchRuleGroups(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs> phraseMatchRuleGroups) {
             return phraseMatchRuleGroups(Output.of(phraseMatchRuleGroups));
         }
 
+        /**
+         * @param phraseMatchRuleGroups A list of phase match rule groups that are included in this matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseMatchRuleGroups(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs... phraseMatchRuleGroups) {
             return phraseMatchRuleGroups(List.of(phraseMatchRuleGroups));
         }
@@ -201,29 +283,65 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param roleMatch The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleMatch(@Nullable Output<PhraseMatcherRoleMatch> roleMatch) {
             $.roleMatch = roleMatch;
             return this;
         }
 
+        /**
+         * @param roleMatch The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleMatch(PhraseMatcherRoleMatch roleMatch) {
             return roleMatch(Output.of(roleMatch));
         }
 
+        /**
+         * @param type The type of this phrase matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<PhraseMatcherType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of this phrase matcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(PhraseMatcherType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param versionTag The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTag(@Nullable Output<String> versionTag) {
             $.versionTag = versionTag;
             return this;
         }
 
+        /**
+         * @param versionTag The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTag(String versionTag) {
             return versionTag(Output.of(versionTag));
         }

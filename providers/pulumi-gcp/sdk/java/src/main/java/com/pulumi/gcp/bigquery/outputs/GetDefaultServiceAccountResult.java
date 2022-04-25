@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class GetDefaultServiceAccountResult {
     /**
-     * The email address of the service account. This value is often used to refer to the service account
+     * @return The email address of the service account. This value is often used to refer to the service account
      * in order to grant IAM permissions.
      * 
      */
     private final String email;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -33,17 +33,17 @@ public final class GetDefaultServiceAccountResult {
     }
 
     /**
-     * The email address of the service account. This value is often used to refer to the service account
+     * @return The email address of the service account. This value is often used to refer to the service account
      * in order to grant IAM permissions.
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

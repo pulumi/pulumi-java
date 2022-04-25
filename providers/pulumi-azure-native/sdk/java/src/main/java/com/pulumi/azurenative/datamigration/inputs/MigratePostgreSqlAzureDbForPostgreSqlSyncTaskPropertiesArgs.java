@@ -28,6 +28,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
     @Import(name="input")
     private @Nullable Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input;
 
+    /**
+     * @return Task input
+     * 
+     */
     public Optional<Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs>> input() {
         return Optional.ofNullable(this.input);
     }
@@ -40,6 +44,11 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
     @Import(name="taskType", required=true)
     private Output<String> taskType;
 
+    /**
+     * @return Task type.
+     * Expected value is &#39;Migrate.PostgreSql.AzureDbForPostgreSql.Sync&#39;.
+     * 
+     */
     public Output<String> taskType() {
         return this.taskType;
     }
@@ -69,20 +78,46 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
             $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param input Task input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable Output<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input Task input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param taskType Task type.
+         * Expected value is &#39;Migrate.PostgreSql.AzureDbForPostgreSql.Sync&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(Output<String> taskType) {
             $.taskType = taskType;
             return this;
         }
 
+        /**
+         * @param taskType Task type.
+         * Expected value is &#39;Migrate.PostgreSql.AzureDbForPostgreSql.Sync&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(String taskType) {
             return taskType(Output.of(taskType));
         }

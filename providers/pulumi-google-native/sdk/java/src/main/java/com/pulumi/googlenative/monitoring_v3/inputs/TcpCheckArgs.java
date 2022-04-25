@@ -26,6 +26,10 @@ public final class TcpCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -54,11 +58,23 @@ public final class TcpCheckArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TcpCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

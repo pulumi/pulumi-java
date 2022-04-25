@@ -25,6 +25,10 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="messageId", required=true)
     private String messageId;
 
+    /**
+     * @return The message id.
+     * 
+     */
     public String messageId() {
         return this.messageId;
     }
@@ -36,6 +40,10 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="schemaName", required=true)
     private String schemaName;
 
+    /**
+     * @return The schema name.
+     * 
+     */
     public String schemaName() {
         return this.schemaName;
     }
@@ -47,6 +55,10 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="schemaVersion", required=true)
     private String schemaVersion;
 
+    /**
+     * @return The schema version.
+     * 
+     */
     public String schemaVersion() {
         return this.schemaVersion;
     }
@@ -58,6 +70,10 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="senderApplicationId")
     private @Nullable String senderApplicationId;
 
+    /**
+     * @return The sender application id.
+     * 
+     */
     public Optional<String> senderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
@@ -89,21 +105,45 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
             $ = new X12SchemaReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param schemaName The schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaVersion The schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersion(String schemaVersion) {
             $.schemaVersion = schemaVersion;
             return this;
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
             $.senderApplicationId = senderApplicationId;
             return this;

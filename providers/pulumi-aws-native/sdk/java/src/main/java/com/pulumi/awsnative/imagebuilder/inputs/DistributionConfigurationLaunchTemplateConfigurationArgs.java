@@ -27,6 +27,10 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The account ID that this configuration applies to.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -38,6 +42,10 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     @Import(name="launchTemplateId")
     private @Nullable Output<String> launchTemplateId;
 
+    /**
+     * @return Identifies the EC2 launch template to use.
+     * 
+     */
     public Optional<Output<String>> launchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
@@ -49,6 +57,10 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     @Import(name="setDefaultVersion")
     private @Nullable Output<Boolean> setDefaultVersion;
 
+    /**
+     * @return Set the specified EC2 launch template as the default launch template for the specified account.
+     * 
+     */
     public Optional<Output<Boolean>> setDefaultVersion() {
         return Optional.ofNullable(this.setDefaultVersion);
     }
@@ -79,29 +91,65 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
             $ = new DistributionConfigurationLaunchTemplateConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The account ID that this configuration applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The account ID that this configuration applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param launchTemplateId Identifies the EC2 launch template to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
             $.launchTemplateId = launchTemplateId;
             return this;
         }
 
+        /**
+         * @param launchTemplateId Identifies the EC2 launch template to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateId(String launchTemplateId) {
             return launchTemplateId(Output.of(launchTemplateId));
         }
 
+        /**
+         * @param setDefaultVersion Set the specified EC2 launch template as the default launch template for the specified account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setDefaultVersion(@Nullable Output<Boolean> setDefaultVersion) {
             $.setDefaultVersion = setDefaultVersion;
             return this;
         }
 
+        /**
+         * @param setDefaultVersion Set the specified EC2 launch template as the default launch template for the specified account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setDefaultVersion(Boolean setDefaultVersion) {
             return setDefaultVersion(Output.of(setDefaultVersion));
         }

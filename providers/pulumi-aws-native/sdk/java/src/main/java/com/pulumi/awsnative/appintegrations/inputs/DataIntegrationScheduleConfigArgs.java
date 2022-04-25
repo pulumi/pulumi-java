@@ -20,6 +20,10 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
     @Import(name="firstExecutionFrom", required=true)
     private Output<String> firstExecutionFrom;
 
+    /**
+     * @return The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
+     * 
+     */
     public Output<String> firstExecutionFrom() {
         return this.firstExecutionFrom;
     }
@@ -31,6 +35,10 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
     @Import(name="object", required=true)
     private Output<String> object;
 
+    /**
+     * @return The name of the object to pull from the data source.
+     * 
+     */
     public Output<String> object() {
         return this.object;
     }
@@ -42,6 +50,10 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
     @Import(name="scheduleExpression", required=true)
     private Output<String> scheduleExpression;
 
+    /**
+     * @return How often the data should be pulled from data source.
+     * 
+     */
     public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
@@ -72,29 +84,65 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
             $ = new DataIntegrationScheduleConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firstExecutionFrom The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstExecutionFrom(Output<String> firstExecutionFrom) {
             $.firstExecutionFrom = firstExecutionFrom;
             return this;
         }
 
+        /**
+         * @param firstExecutionFrom The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstExecutionFrom(String firstExecutionFrom) {
             return firstExecutionFrom(Output.of(firstExecutionFrom));
         }
 
+        /**
+         * @param object The name of the object to pull from the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object The name of the object to pull from the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }
 
+        /**
+         * @param scheduleExpression How often the data should be pulled from data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(Output<String> scheduleExpression) {
             $.scheduleExpression = scheduleExpression;
             return this;
         }
 
+        /**
+         * @param scheduleExpression How often the data should be pulled from data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(String scheduleExpression) {
             return scheduleExpression(Output.of(scheduleExpression));
         }

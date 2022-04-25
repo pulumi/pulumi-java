@@ -21,6 +21,10 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="documentFormat")
     private @Nullable String documentFormat;
 
+    /**
+     * @return Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
+     * 
+     */
     public Optional<String> documentFormat() {
         return Optional.ofNullable(this.documentFormat);
     }
@@ -32,6 +36,10 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="documentVersion")
     private @Nullable String documentVersion;
 
+    /**
+     * @return The document version for which you want information.
+     * 
+     */
     public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
@@ -43,6 +51,10 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Systems Manager document.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -73,16 +85,34 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDocumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param documentFormat Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentFormat(@Nullable String documentFormat) {
             $.documentFormat = documentFormat;
             return this;
         }
 
+        /**
+         * @param documentVersion The document version for which you want information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(@Nullable String documentVersion) {
             $.documentVersion = documentVersion;
             return this;
         }
 
+        /**
+         * @param name The name of the Systems Manager document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

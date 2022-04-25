@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFileServicePropertiesResult {
     /**
-     * Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
+     * @return Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
      * 
      */
     private final @Nullable CorsRulesResponse cors;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Protocol settings for file service
+     * @return Protocol settings for file service
      * 
      */
     private final @Nullable ProtocolSettingsResponse protocolSettings;
     /**
-     * The file service properties for share soft delete.
+     * @return The file service properties for share soft delete.
      * 
      */
     private final @Nullable DeleteRetentionPolicyResponse shareDeleteRetentionPolicy;
     /**
-     * Sku name and tier.
+     * @return Sku name and tier.
      * 
      */
     private final SkuResponse sku;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -70,51 +70,51 @@ public final class GetFileServicePropertiesResult {
     }
 
     /**
-     * Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
+     * @return Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
      * 
-    */
+     */
     public Optional<CorsRulesResponse> cors() {
         return Optional.ofNullable(this.cors);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Protocol settings for file service
+     * @return Protocol settings for file service
      * 
-    */
+     */
     public Optional<ProtocolSettingsResponse> protocolSettings() {
         return Optional.ofNullable(this.protocolSettings);
     }
     /**
-     * The file service properties for share soft delete.
+     * @return The file service properties for share soft delete.
      * 
-    */
+     */
     public Optional<DeleteRetentionPolicyResponse> shareDeleteRetentionPolicy() {
         return Optional.ofNullable(this.shareDeleteRetentionPolicy);
     }
     /**
-     * Sku name and tier.
+     * @return Sku name and tier.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -24,6 +24,10 @@ public final class GrafeasV1beta1PackageDetailsArgs extends com.pulumi.resources
     @Import(name="installation", required=true)
     private Output<InstallationArgs> installation;
 
+    /**
+     * @return Where the package was installed.
+     * 
+     */
     public Output<InstallationArgs> installation() {
         return this.installation;
     }
@@ -52,11 +56,23 @@ public final class GrafeasV1beta1PackageDetailsArgs extends com.pulumi.resources
             $ = new GrafeasV1beta1PackageDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param installation Where the package was installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installation(Output<InstallationArgs> installation) {
             $.installation = installation;
             return this;
         }
 
+        /**
+         * @param installation Where the package was installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installation(InstallationArgs installation) {
             return installation(Output.of(installation));
         }

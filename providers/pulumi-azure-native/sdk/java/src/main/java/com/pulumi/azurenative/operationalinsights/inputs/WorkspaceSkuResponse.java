@@ -26,6 +26,10 @@ public final class WorkspaceSkuResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="capacityReservationLevel")
     private @Nullable Integer capacityReservationLevel;
 
+    /**
+     * @return The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+     * 
+     */
     public Optional<Integer> capacityReservationLevel() {
         return Optional.ofNullable(this.capacityReservationLevel);
     }
@@ -37,6 +41,10 @@ public final class WorkspaceSkuResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="lastSkuUpdate", required=true)
     private String lastSkuUpdate;
 
+    /**
+     * @return The last time when the sku was updated.
+     * 
+     */
     public String lastSkuUpdate() {
         return this.lastSkuUpdate;
     }
@@ -48,6 +56,10 @@ public final class WorkspaceSkuResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -78,16 +90,34 @@ public final class WorkspaceSkuResponse extends com.pulumi.resources.InvokeArgs 
             $ = new WorkspaceSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityReservationLevel The capacity reservation level for this workspace, when CapacityReservation sku is selected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationLevel(@Nullable Integer capacityReservationLevel) {
             $.capacityReservationLevel = capacityReservationLevel;
             return this;
         }
 
+        /**
+         * @param lastSkuUpdate The last time when the sku was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSkuUpdate(String lastSkuUpdate) {
             $.lastSkuUpdate = lastSkuUpdate;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -22,6 +22,10 @@ public final class AssetModelMetric extends com.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
     private String expression;
 
+    /**
+     * @return The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
+     * 
+     */
     public String expression() {
         return this.expression;
     }
@@ -33,6 +37,10 @@ public final class AssetModelMetric extends com.pulumi.resources.InvokeArgs {
     @Import(name="variables", required=true)
     private List<AssetModelExpressionVariable> variables;
 
+    /**
+     * @return The list of variables used in the expression.
+     * 
+     */
     public List<AssetModelExpressionVariable> variables() {
         return this.variables;
     }
@@ -44,6 +52,10 @@ public final class AssetModelMetric extends com.pulumi.resources.InvokeArgs {
     @Import(name="window", required=true)
     private AssetModelMetricWindow window;
 
+    /**
+     * @return The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
+     * 
+     */
     public AssetModelMetricWindow window() {
         return this.window;
     }
@@ -74,20 +86,44 @@ public final class AssetModelMetric extends com.pulumi.resources.InvokeArgs {
             $ = new AssetModelMetric(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expression The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param variables The list of variables used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(List<AssetModelExpressionVariable> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables The list of variables used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(AssetModelExpressionVariable... variables) {
             return variables(List.of(variables));
         }
 
+        /**
+         * @param window The window (time interval) over which AWS IoT SiteWise computes the metric&#39;s aggregation expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder window(AssetModelMetricWindow window) {
             $.window = window;
             return this;

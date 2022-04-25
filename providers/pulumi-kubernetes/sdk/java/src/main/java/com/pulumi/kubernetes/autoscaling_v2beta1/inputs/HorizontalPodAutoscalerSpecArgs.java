@@ -29,6 +29,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
     @Import(name="maxReplicas", required=true)
     private Output<Integer> maxReplicas;
 
+    /**
+     * @return maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.
+     * 
+     */
     public Output<Integer> maxReplicas() {
         return this.maxReplicas;
     }
@@ -40,6 +44,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
     @Import(name="metrics")
     private @Nullable Output<List<MetricSpecArgs>> metrics;
 
+    /**
+     * @return metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.
+     * 
+     */
     public Optional<Output<List<MetricSpecArgs>>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -51,6 +59,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
     @Import(name="minReplicas")
     private @Nullable Output<Integer> minReplicas;
 
+    /**
+     * @return minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
+     * 
+     */
     public Optional<Output<Integer>> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
@@ -62,6 +74,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
     @Import(name="scaleTargetRef", required=true)
     private Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
+    /**
+     * @return scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.
+     * 
+     */
     public Output<CrossVersionObjectReferenceArgs> scaleTargetRef() {
         return this.scaleTargetRef;
     }
@@ -93,42 +109,96 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
             $ = new HorizontalPodAutoscalerSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxReplicas maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(Output<Integer> maxReplicas) {
             $.maxReplicas = maxReplicas;
             return this;
         }
 
+        /**
+         * @param maxReplicas maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(Integer maxReplicas) {
             return maxReplicas(Output.of(maxReplicas));
         }
 
+        /**
+         * @param metrics metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable Output<List<MetricSpecArgs>> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<MetricSpecArgs> metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param metrics metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(MetricSpecArgs... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param minReplicas minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             $.minReplicas = minReplicas;
             return this;
         }
 
+        /**
+         * @param minReplicas minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(Integer minReplicas) {
             return minReplicas(Output.of(minReplicas));
         }
 
+        /**
+         * @param scaleTargetRef scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleTargetRef(Output<CrossVersionObjectReferenceArgs> scaleTargetRef) {
             $.scaleTargetRef = scaleTargetRef;
             return this;
         }
 
+        /**
+         * @param scaleTargetRef scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
             return scaleTargetRef(Output.of(scaleTargetRef));
         }

@@ -24,6 +24,10 @@ public final class RelationshipTypeFieldMappingArgs extends com.pulumi.resources
     @Import(name="profileFieldName", required=true)
     private Output<String> profileFieldName;
 
+    /**
+     * @return Specifies the fieldName in profile.
+     * 
+     */
     public Output<String> profileFieldName() {
         return this.profileFieldName;
     }
@@ -35,6 +39,10 @@ public final class RelationshipTypeFieldMappingArgs extends com.pulumi.resources
     @Import(name="relatedProfileKeyProperty", required=true)
     private Output<String> relatedProfileKeyProperty;
 
+    /**
+     * @return Specifies the KeyProperty (from StrongId) of the related profile.
+     * 
+     */
     public Output<String> relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
@@ -64,20 +72,44 @@ public final class RelationshipTypeFieldMappingArgs extends com.pulumi.resources
             $ = new RelationshipTypeFieldMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileFieldName Specifies the fieldName in profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileFieldName(Output<String> profileFieldName) {
             $.profileFieldName = profileFieldName;
             return this;
         }
 
+        /**
+         * @param profileFieldName Specifies the fieldName in profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileFieldName(String profileFieldName) {
             return profileFieldName(Output.of(profileFieldName));
         }
 
+        /**
+         * @param relatedProfileKeyProperty Specifies the KeyProperty (from StrongId) of the related profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedProfileKeyProperty(Output<String> relatedProfileKeyProperty) {
             $.relatedProfileKeyProperty = relatedProfileKeyProperty;
             return this;
         }
 
+        /**
+         * @param relatedProfileKeyProperty Specifies the KeyProperty (from StrongId) of the related profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedProfileKeyProperty(String relatedProfileKeyProperty) {
             return relatedProfileKeyProperty(Output.of(relatedProfileKeyProperty));
         }

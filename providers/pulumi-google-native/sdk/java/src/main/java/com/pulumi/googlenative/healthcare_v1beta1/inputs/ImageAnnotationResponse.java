@@ -25,6 +25,10 @@ public final class ImageAnnotationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="boundingPolys", required=true)
     private List<BoundingPolyResponse> boundingPolys;
 
+    /**
+     * @return The list of polygons outlining the sensitive regions in the image.
+     * 
+     */
     public List<BoundingPolyResponse> boundingPolys() {
         return this.boundingPolys;
     }
@@ -36,6 +40,10 @@ public final class ImageAnnotationResponse extends com.pulumi.resources.InvokeAr
     @Import(name="frameIndex", required=true)
     private Integer frameIndex;
 
+    /**
+     * @return 0-based index of the image frame. For example, an image frame in a DICOM instance.
+     * 
+     */
     public Integer frameIndex() {
         return this.frameIndex;
     }
@@ -65,15 +73,33 @@ public final class ImageAnnotationResponse extends com.pulumi.resources.InvokeAr
             $ = new ImageAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boundingPolys The list of polygons outlining the sensitive regions in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolys(List<BoundingPolyResponse> boundingPolys) {
             $.boundingPolys = boundingPolys;
             return this;
         }
 
+        /**
+         * @param boundingPolys The list of polygons outlining the sensitive regions in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolys(BoundingPolyResponse... boundingPolys) {
             return boundingPolys(List.of(boundingPolys));
         }
 
+        /**
+         * @param frameIndex 0-based index of the image frame. For example, an image frame in a DICOM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameIndex(Integer frameIndex) {
             $.frameIndex = frameIndex;
             return this;

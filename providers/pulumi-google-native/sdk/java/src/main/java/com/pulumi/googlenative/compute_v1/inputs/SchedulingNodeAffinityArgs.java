@@ -28,6 +28,10 @@ public final class SchedulingNodeAffinityArgs extends com.pulumi.resources.Resou
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Corresponds to the label key of Node resource.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -39,6 +43,10 @@ public final class SchedulingNodeAffinityArgs extends com.pulumi.resources.Resou
     @Import(name="operator")
     private @Nullable Output<SchedulingNodeAffinityOperator> operator;
 
+    /**
+     * @return Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
+     * 
+     */
     public Optional<Output<SchedulingNodeAffinityOperator>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -50,6 +58,10 @@ public final class SchedulingNodeAffinityArgs extends com.pulumi.resources.Resou
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return Corresponds to the label values of Node resource.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -80,33 +92,75 @@ public final class SchedulingNodeAffinityArgs extends com.pulumi.resources.Resou
             $ = new SchedulingNodeAffinityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Corresponds to the label key of Node resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Corresponds to the label key of Node resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param operator Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<SchedulingNodeAffinityOperator> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(SchedulingNodeAffinityOperator operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param values Corresponds to the label values of Node resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Corresponds to the label values of Node resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values Corresponds to the label values of Node resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

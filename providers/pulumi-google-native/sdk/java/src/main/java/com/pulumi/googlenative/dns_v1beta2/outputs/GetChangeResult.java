@@ -13,28 +13,28 @@ import java.util.Objects;
 @CustomType
 public final class GetChangeResult {
     /**
-     * Which ResourceRecordSets to add?
+     * @return Which ResourceRecordSets to add?
      * 
      */
     private final List<ResourceRecordSetResponse> additions;
     /**
-     * Which ResourceRecordSets to remove? Must match existing data exactly.
+     * @return Which ResourceRecordSets to remove? Must match existing data exactly.
      * 
      */
     private final List<ResourceRecordSetResponse> deletions;
     /**
-     * If the DNS queries for the zone will be served.
+     * @return If the DNS queries for the zone will be served.
      * 
      */
     private final Boolean isServing;
     private final String kind;
     /**
-     * The time that this operation was started by the server (output only). This is in RFC3339 text format.
+     * @return The time that this operation was started by the server (output only). This is in RFC3339 text format.
      * 
      */
     private final String startTime;
     /**
-     * Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * @return Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
      */
     private final String status;
@@ -56,23 +56,23 @@ public final class GetChangeResult {
     }
 
     /**
-     * Which ResourceRecordSets to add?
+     * @return Which ResourceRecordSets to add?
      * 
-    */
+     */
     public List<ResourceRecordSetResponse> additions() {
         return this.additions;
     }
     /**
-     * Which ResourceRecordSets to remove? Must match existing data exactly.
+     * @return Which ResourceRecordSets to remove? Must match existing data exactly.
      * 
-    */
+     */
     public List<ResourceRecordSetResponse> deletions() {
         return this.deletions;
     }
     /**
-     * If the DNS queries for the zone will be served.
+     * @return If the DNS queries for the zone will be served.
      * 
-    */
+     */
     public Boolean isServing() {
         return this.isServing;
     }
@@ -80,16 +80,16 @@ public final class GetChangeResult {
         return this.kind;
     }
     /**
-     * The time that this operation was started by the server (output only). This is in RFC3339 text format.
+     * @return The time that this operation was started by the server (output only). This is in RFC3339 text format.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
+     * @return Status of the operation (output only). A status of &#34;done&#34; means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

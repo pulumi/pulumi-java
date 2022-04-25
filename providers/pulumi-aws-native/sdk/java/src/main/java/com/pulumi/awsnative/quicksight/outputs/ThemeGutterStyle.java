@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThemeGutterStyle {
     /**
-     * &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
+     * @return &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
      *         &lt;/p&gt;
      * 
      */
@@ -24,10 +24,10 @@ public final class ThemeGutterStyle {
     }
 
     /**
-     * &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
+     * @return &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
      *         &lt;/p&gt;
      * 
-    */
+     */
     public Optional<Boolean> show() {
         return Optional.ofNullable(this.show);
     }

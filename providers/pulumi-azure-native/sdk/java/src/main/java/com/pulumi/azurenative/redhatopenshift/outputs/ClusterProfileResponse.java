@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterProfileResponse {
     /**
-     * The domain for the cluster (immutable).
+     * @return The domain for the cluster (immutable).
      * 
      */
     private final @Nullable String domain;
     /**
-     * The pull secret for the cluster (immutable).
+     * @return The pull secret for the cluster (immutable).
      * 
      */
     private final @Nullable String pullSecret;
     /**
-     * The ID of the cluster resource group (immutable).
+     * @return The ID of the cluster resource group (immutable).
      * 
      */
     private final @Nullable String resourceGroupId;
     /**
-     * The version of the cluster (immutable).
+     * @return The version of the cluster (immutable).
      * 
      */
     private final @Nullable String version;
@@ -45,30 +45,30 @@ public final class ClusterProfileResponse {
     }
 
     /**
-     * The domain for the cluster (immutable).
+     * @return The domain for the cluster (immutable).
      * 
-    */
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
-     * The pull secret for the cluster (immutable).
+     * @return The pull secret for the cluster (immutable).
      * 
-    */
+     */
     public Optional<String> pullSecret() {
         return Optional.ofNullable(this.pullSecret);
     }
     /**
-     * The ID of the cluster resource group (immutable).
+     * @return The ID of the cluster resource group (immutable).
      * 
-    */
+     */
     public Optional<String> resourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }
     /**
-     * The version of the cluster (immutable).
+     * @return The version of the cluster (immutable).
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -24,6 +24,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of API Version Set.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Name of API Version Set
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -46,6 +54,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -68,6 +84,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionHeaderName")
     private @Nullable Output<String> versionHeaderName;
 
+    /**
+     * @return Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+     * 
+     */
     public Optional<Output<String>> versionHeaderName() {
         return Optional.ofNullable(this.versionHeaderName);
     }
@@ -79,6 +99,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionQueryName")
     private @Nullable Output<String> versionQueryName;
 
+    /**
+     * @return Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+     * 
+     */
     public Optional<Output<String>> versionQueryName() {
         return Optional.ofNullable(this.versionQueryName);
     }
@@ -90,6 +114,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionSetId")
     private @Nullable Output<String> versionSetId;
 
+    /**
+     * @return Api Version Set identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> versionSetId() {
         return Optional.ofNullable(this.versionSetId);
     }
@@ -101,6 +129,10 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versioningScheme", required=true)
     private Output<Either<String,VersioningScheme>> versioningScheme;
 
+    /**
+     * @return An value that determines where the API Version identifier will be located in a HTTP request.
+     * 
+     */
     public Output<Either<String,VersioningScheme>> versioningScheme() {
         return this.versioningScheme;
     }
@@ -136,82 +168,190 @@ public final class ApiVersionSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiVersionSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of API Version Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of API Version Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Name of API Version Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Name of API Version Set
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param versionHeaderName Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionHeaderName(@Nullable Output<String> versionHeaderName) {
             $.versionHeaderName = versionHeaderName;
             return this;
         }
 
+        /**
+         * @param versionHeaderName Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionHeaderName(String versionHeaderName) {
             return versionHeaderName(Output.of(versionHeaderName));
         }
 
+        /**
+         * @param versionQueryName Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionQueryName(@Nullable Output<String> versionQueryName) {
             $.versionQueryName = versionQueryName;
             return this;
         }
 
+        /**
+         * @param versionQueryName Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionQueryName(String versionQueryName) {
             return versionQueryName(Output.of(versionQueryName));
         }
 
+        /**
+         * @param versionSetId Api Version Set identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionSetId(@Nullable Output<String> versionSetId) {
             $.versionSetId = versionSetId;
             return this;
         }
 
+        /**
+         * @param versionSetId Api Version Set identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionSetId(String versionSetId) {
             return versionSetId(Output.of(versionSetId));
         }
 
+        /**
+         * @param versioningScheme An value that determines where the API Version identifier will be located in a HTTP request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versioningScheme(Output<Either<String,VersioningScheme>> versioningScheme) {
             $.versioningScheme = versioningScheme;
             return this;
         }
 
+        /**
+         * @param versioningScheme An value that determines where the API Version identifier will be located in a HTTP request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versioningScheme(Either<String,VersioningScheme> versioningScheme) {
             return versioningScheme(Output.of(versioningScheme));
         }
 
+        /**
+         * @param versioningScheme An value that determines where the API Version identifier will be located in a HTTP request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versioningScheme(String versioningScheme) {
             return versioningScheme(Either.ofLeft(versioningScheme));
         }
 
+        /**
+         * @param versioningScheme An value that determines where the API Version identifier will be located in a HTTP request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versioningScheme(VersioningScheme versioningScheme) {
             return versioningScheme(Either.ofRight(versioningScheme));
         }

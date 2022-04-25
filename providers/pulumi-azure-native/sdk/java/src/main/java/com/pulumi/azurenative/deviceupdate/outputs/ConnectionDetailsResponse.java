@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class ConnectionDetailsResponse {
     /**
-     * Group ID.
+     * @return Group ID.
      * 
      */
     private final String groupId;
     /**
-     * Connection details ID.
+     * @return Connection details ID.
      * 
      */
     private final String id;
     /**
-     * Link ID.
+     * @return Link ID.
      * 
      */
     private final String linkIdentifier;
     /**
-     * Member name.
+     * @return Member name.
      * 
      */
     private final String memberName;
     /**
-     * Private IP address.
+     * @return Private IP address.
      * 
      */
     private final String privateIpAddress;
@@ -50,37 +50,37 @@ public final class ConnectionDetailsResponse {
     }
 
     /**
-     * Group ID.
+     * @return Group ID.
      * 
-    */
+     */
     public String groupId() {
         return this.groupId;
     }
     /**
-     * Connection details ID.
+     * @return Connection details ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Link ID.
+     * @return Link ID.
      * 
-    */
+     */
     public String linkIdentifier() {
         return this.linkIdentifier;
     }
     /**
-     * Member name.
+     * @return Member name.
      * 
-    */
+     */
     public String memberName() {
         return this.memberName;
     }
     /**
-     * Private IP address.
+     * @return Private IP address.
      * 
-    */
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }

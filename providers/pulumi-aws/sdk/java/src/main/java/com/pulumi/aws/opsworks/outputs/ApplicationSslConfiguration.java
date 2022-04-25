@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationSslConfiguration {
     /**
-     * The contents of the certificate&#39;s domain.crt file.
+     * @return The contents of the certificate&#39;s domain.crt file.
      * 
      */
     private final String certificate;
     /**
-     * Can be used to specify an intermediate certificate authority key or client authentication.
+     * @return Can be used to specify an intermediate certificate authority key or client authentication.
      * 
      */
     private final @Nullable String chain;
     /**
-     * The private key; the contents of the certificate&#39;s domain.key file.
+     * @return The private key; the contents of the certificate&#39;s domain.key file.
      * 
      */
     private final String privateKey;
@@ -38,23 +38,23 @@ public final class ApplicationSslConfiguration {
     }
 
     /**
-     * The contents of the certificate&#39;s domain.crt file.
+     * @return The contents of the certificate&#39;s domain.crt file.
      * 
-    */
+     */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * Can be used to specify an intermediate certificate authority key or client authentication.
+     * @return Can be used to specify an intermediate certificate authority key or client authentication.
      * 
-    */
+     */
     public Optional<String> chain() {
         return Optional.ofNullable(this.chain);
     }
     /**
-     * The private key; the contents of the certificate&#39;s domain.key file.
+     * @return The private key; the contents of the certificate&#39;s domain.key file.
      * 
-    */
+     */
     public String privateKey() {
         return this.privateKey;
     }

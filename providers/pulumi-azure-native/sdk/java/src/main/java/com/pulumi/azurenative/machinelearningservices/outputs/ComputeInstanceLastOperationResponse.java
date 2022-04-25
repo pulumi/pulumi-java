@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ComputeInstanceLastOperationResponse {
     /**
-     * Name of the last operation.
+     * @return Name of the last operation.
      * 
      */
     private final @Nullable String operationName;
     /**
-     * Operation status.
+     * @return Operation status.
      * 
      */
     private final @Nullable String operationStatus;
     /**
-     * Time of the last operation.
+     * @return Time of the last operation.
      * 
      */
     private final @Nullable String operationTime;
@@ -38,23 +38,23 @@ public final class ComputeInstanceLastOperationResponse {
     }
 
     /**
-     * Name of the last operation.
+     * @return Name of the last operation.
      * 
-    */
+     */
     public Optional<String> operationName() {
         return Optional.ofNullable(this.operationName);
     }
     /**
-     * Operation status.
+     * @return Operation status.
      * 
-    */
+     */
     public Optional<String> operationStatus() {
         return Optional.ofNullable(this.operationStatus);
     }
     /**
-     * Time of the last operation.
+     * @return Time of the last operation.
      * 
-    */
+     */
     public Optional<String> operationTime() {
         return Optional.ofNullable(this.operationTime);
     }

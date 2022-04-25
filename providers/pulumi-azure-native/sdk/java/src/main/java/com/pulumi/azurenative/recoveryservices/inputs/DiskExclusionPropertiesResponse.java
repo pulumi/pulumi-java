@@ -23,6 +23,10 @@ public final class DiskExclusionPropertiesResponse extends com.pulumi.resources.
     @Import(name="diskLunList")
     private @Nullable List<Integer> diskLunList;
 
+    /**
+     * @return List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
+     * 
+     */
     public Optional<List<Integer>> diskLunList() {
         return Optional.ofNullable(this.diskLunList);
     }
@@ -34,6 +38,10 @@ public final class DiskExclusionPropertiesResponse extends com.pulumi.resources.
     @Import(name="isInclusionList")
     private @Nullable Boolean isInclusionList;
 
+    /**
+     * @return Flag to indicate whether DiskLunList is to be included/ excluded from backup.
+     * 
+     */
     public Optional<Boolean> isInclusionList() {
         return Optional.ofNullable(this.isInclusionList);
     }
@@ -63,15 +71,33 @@ public final class DiskExclusionPropertiesResponse extends com.pulumi.resources.
             $ = new DiskExclusionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskLunList List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskLunList(@Nullable List<Integer> diskLunList) {
             $.diskLunList = diskLunList;
             return this;
         }
 
+        /**
+         * @param diskLunList List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskLunList(Integer... diskLunList) {
             return diskLunList(List.of(diskLunList));
         }
 
+        /**
+         * @param isInclusionList Flag to indicate whether DiskLunList is to be included/ excluded from backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isInclusionList(@Nullable Boolean isInclusionList) {
             $.isInclusionList = isInclusionList;
             return this;

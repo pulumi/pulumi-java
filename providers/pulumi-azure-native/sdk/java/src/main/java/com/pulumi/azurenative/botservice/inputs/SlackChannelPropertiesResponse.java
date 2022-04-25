@@ -26,6 +26,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return The Slack client id
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -37,6 +41,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="clientSecret")
     private @Nullable String clientSecret;
 
+    /**
+     * @return The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -48,6 +56,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -59,6 +71,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="isValidated", required=true)
     private Boolean isValidated;
 
+    /**
+     * @return Whether this channel is validated for the bot
+     * 
+     */
     public Boolean isValidated() {
         return this.isValidated;
     }
@@ -70,6 +86,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="landingPageUrl")
     private @Nullable String landingPageUrl;
 
+    /**
+     * @return The Slack landing page Url
+     * 
+     */
     public Optional<String> landingPageUrl() {
         return Optional.ofNullable(this.landingPageUrl);
     }
@@ -81,6 +101,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="lastSubmissionId", required=true)
     private String lastSubmissionId;
 
+    /**
+     * @return The Sms auth token
+     * 
+     */
     public String lastSubmissionId() {
         return this.lastSubmissionId;
     }
@@ -92,6 +116,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="redirectAction", required=true)
     private String redirectAction;
 
+    /**
+     * @return The Slack redirect action
+     * 
+     */
     public String redirectAction() {
         return this.redirectAction;
     }
@@ -103,6 +131,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="registerBeforeOAuthFlow", required=true)
     private Boolean registerBeforeOAuthFlow;
 
+    /**
+     * @return Whether to register the settings before OAuth validation is performed. Recommended to True.
+     * 
+     */
     public Boolean registerBeforeOAuthFlow() {
         return this.registerBeforeOAuthFlow;
     }
@@ -114,6 +146,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="signingSecret")
     private @Nullable String signingSecret;
 
+    /**
+     * @return The Slack signing secret.
+     * 
+     */
     public Optional<String> signingSecret() {
         return Optional.ofNullable(this.signingSecret);
     }
@@ -125,6 +161,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="verificationToken")
     private @Nullable String verificationToken;
 
+    /**
+     * @return The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<String> verificationToken() {
         return Optional.ofNullable(this.verificationToken);
     }
@@ -162,51 +202,111 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
             $ = new SlackChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The Slack client id
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable String clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(Boolean isValidated) {
             $.isValidated = isValidated;
             return this;
         }
 
+        /**
+         * @param landingPageUrl The Slack landing page Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder landingPageUrl(@Nullable String landingPageUrl) {
             $.landingPageUrl = landingPageUrl;
             return this;
         }
 
+        /**
+         * @param lastSubmissionId The Sms auth token
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSubmissionId(String lastSubmissionId) {
             $.lastSubmissionId = lastSubmissionId;
             return this;
         }
 
+        /**
+         * @param redirectAction The Slack redirect action
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectAction(String redirectAction) {
             $.redirectAction = redirectAction;
             return this;
         }
 
+        /**
+         * @param registerBeforeOAuthFlow Whether to register the settings before OAuth validation is performed. Recommended to True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registerBeforeOAuthFlow(Boolean registerBeforeOAuthFlow) {
             $.registerBeforeOAuthFlow = registerBeforeOAuthFlow;
             return this;
         }
 
+        /**
+         * @param signingSecret The Slack signing secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingSecret(@Nullable String signingSecret) {
             $.signingSecret = signingSecret;
             return this;
         }
 
+        /**
+         * @param verificationToken The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationToken(@Nullable String verificationToken) {
             $.verificationToken = verificationToken;
             return this;

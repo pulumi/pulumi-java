@@ -23,6 +23,10 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="dataset", required=true)
     private String dataset;
 
+    /**
+     * @return Dataset accessed in the connection.
+     * 
+     */
     public String dataset() {
         return this.dataset;
     }
@@ -34,6 +38,10 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return Project accessed in the connection.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -45,6 +53,10 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="query", required=true)
     private String query;
 
+    /**
+     * @return Query used to access data in the connection.
+     * 
+     */
     public String query() {
         return this.query;
     }
@@ -56,6 +68,10 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="table", required=true)
     private String table;
 
+    /**
+     * @return Table accessed in the connection.
+     * 
+     */
     public String table() {
         return this.table;
     }
@@ -87,21 +103,45 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
             $ = new BigQueryIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Dataset accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(String dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param project Project accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param query Query used to access data in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param table Table accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             $.table = table;
             return this;

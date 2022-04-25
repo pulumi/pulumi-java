@@ -22,6 +22,10 @@ public final class DetectorDatasourcesGetArgs extends com.pulumi.resources.Resou
     @Import(name="s3Logs")
     private @Nullable Output<DetectorDatasourcesS3LogsGetArgs> s3Logs;
 
+    /**
+     * @return Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
+     * 
+     */
     public Optional<Output<DetectorDatasourcesS3LogsGetArgs>> s3Logs() {
         return Optional.ofNullable(this.s3Logs);
     }
@@ -50,11 +54,23 @@ public final class DetectorDatasourcesGetArgs extends com.pulumi.resources.Resou
             $ = new DetectorDatasourcesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Logs Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Logs(@Nullable Output<DetectorDatasourcesS3LogsGetArgs> s3Logs) {
             $.s3Logs = s3Logs;
             return this;
         }
 
+        /**
+         * @param s3Logs Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Logs(DetectorDatasourcesS3LogsGetArgs s3Logs) {
             return s3Logs(Output.of(s3Logs));
         }

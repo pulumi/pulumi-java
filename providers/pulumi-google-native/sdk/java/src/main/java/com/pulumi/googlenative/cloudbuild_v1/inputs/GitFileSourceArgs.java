@@ -27,6 +27,10 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path of the file, with the repo root as the root of the path.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -38,6 +42,10 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repoType")
     private @Nullable Output<GitFileSourceRepoType> repoType;
 
+    /**
+     * @return See RepoType above.
+     * 
+     */
     public Optional<Output<GitFileSourceRepoType>> repoType() {
         return Optional.ofNullable(this.repoType);
     }
@@ -49,6 +57,10 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revision")
     private @Nullable Output<String> revision;
 
+    /**
+     * @return The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
+     * 
+     */
     public Optional<Output<String>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -60,6 +72,10 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -91,38 +107,86 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GitFileSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The path of the file, with the repo root as the root of the path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path of the file, with the repo root as the root of the path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param repoType See RepoType above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(@Nullable Output<GitFileSourceRepoType> repoType) {
             $.repoType = repoType;
             return this;
         }
 
+        /**
+         * @param repoType See RepoType above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(GitFileSourceRepoType repoType) {
             return repoType(Output.of(repoType));
         }
 
+        /**
+         * @param revision The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<String> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(String revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param uri The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

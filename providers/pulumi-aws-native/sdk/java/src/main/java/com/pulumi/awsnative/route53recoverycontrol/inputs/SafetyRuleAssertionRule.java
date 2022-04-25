@@ -25,6 +25,10 @@ public final class SafetyRuleAssertionRule extends com.pulumi.resources.InvokeAr
     @Import(name="assertedControls", required=true)
     private List<String> assertedControls;
 
+    /**
+     * @return The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three AWS Regions.
+     * 
+     */
     public List<String> assertedControls() {
         return this.assertedControls;
     }
@@ -36,6 +40,10 @@ public final class SafetyRuleAssertionRule extends com.pulumi.resources.InvokeAr
     @Import(name="waitPeriodMs", required=true)
     private Integer waitPeriodMs;
 
+    /**
+     * @return An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent &#34;flapping&#34; of state. The wait period is 5000 ms by default, but you can choose a custom value.
+     * 
+     */
     public Integer waitPeriodMs() {
         return this.waitPeriodMs;
     }
@@ -65,15 +73,33 @@ public final class SafetyRuleAssertionRule extends com.pulumi.resources.InvokeAr
             $ = new SafetyRuleAssertionRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assertedControls The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three AWS Regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assertedControls(List<String> assertedControls) {
             $.assertedControls = assertedControls;
             return this;
         }
 
+        /**
+         * @param assertedControls The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three AWS Regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assertedControls(String... assertedControls) {
             return assertedControls(List.of(assertedControls));
         }
 
+        /**
+         * @param waitPeriodMs An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent &#34;flapping&#34; of state. The wait period is 5000 ms by default, but you can choose a custom value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitPeriodMs(Integer waitPeriodMs) {
             $.waitPeriodMs = waitPeriodMs;
             return this;

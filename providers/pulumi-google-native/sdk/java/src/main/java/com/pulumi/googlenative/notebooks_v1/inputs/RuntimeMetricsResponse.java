@@ -24,6 +24,10 @@ public final class RuntimeMetricsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="systemMetrics", required=true)
     private Map<String,String> systemMetrics;
 
+    /**
+     * @return The system metrics.
+     * 
+     */
     public Map<String,String> systemMetrics() {
         return this.systemMetrics;
     }
@@ -52,6 +56,12 @@ public final class RuntimeMetricsResponse extends com.pulumi.resources.InvokeArg
             $ = new RuntimeMetricsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param systemMetrics The system metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemMetrics(Map<String,String> systemMetrics) {
             $.systemMetrics = systemMetrics;
             return this;

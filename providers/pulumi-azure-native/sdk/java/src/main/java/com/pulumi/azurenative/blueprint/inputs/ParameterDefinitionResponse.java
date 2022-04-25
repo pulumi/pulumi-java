@@ -27,6 +27,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="allowedValues")
     private @Nullable List<Object> allowedValues;
 
+    /**
+     * @return Array of allowed values for this parameter.
+     * 
+     */
     public Optional<List<Object>> allowedValues() {
         return Optional.ofNullable(this.allowedValues);
     }
@@ -38,6 +42,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="defaultValue")
     private @Nullable Object defaultValue;
 
+    /**
+     * @return Default Value for this parameter.
+     * 
+     */
     public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -49,6 +57,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of this parameter/resourceGroup.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +72,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return DisplayName of this parameter/resourceGroup.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -71,6 +87,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="strongType")
     private @Nullable String strongType;
 
+    /**
+     * @return StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+     * 
+     */
     public Optional<String> strongType() {
         return Optional.ofNullable(this.strongType);
     }
@@ -82,6 +102,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Allowed data types for Resource Manager template parameters.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -115,35 +139,77 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
             $ = new ParameterDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedValues Array of allowed values for this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
             $.allowedValues = allowedValues;
             return this;
         }
 
+        /**
+         * @param allowedValues Array of allowed values for this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedValues(Object... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param defaultValue Default Value for this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Object defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param description Description of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName DisplayName of this parameter/resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param strongType StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongType(@Nullable String strongType) {
             $.strongType = strongType;
             return this;
         }
 
+        /**
+         * @param type Allowed data types for Resource Manager template parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

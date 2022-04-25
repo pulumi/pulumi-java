@@ -25,6 +25,10 @@ public final class ReusableConfigWrapperArgs extends com.pulumi.resources.Resour
     @Import(name="reusableConfig", required=true)
     private Output<String> reusableConfig;
 
+    /**
+     * @return A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
+     * 
+     */
     public Output<String> reusableConfig() {
         return this.reusableConfig;
     }
@@ -36,6 +40,10 @@ public final class ReusableConfigWrapperArgs extends com.pulumi.resources.Resour
     @Import(name="reusableConfigValues", required=true)
     private Output<ReusableConfigValuesArgs> reusableConfigValues;
 
+    /**
+     * @return A user-specified inline ReusableConfigValues.
+     * 
+     */
     public Output<ReusableConfigValuesArgs> reusableConfigValues() {
         return this.reusableConfigValues;
     }
@@ -65,20 +73,44 @@ public final class ReusableConfigWrapperArgs extends com.pulumi.resources.Resour
             $ = new ReusableConfigWrapperArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reusableConfig A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reusableConfig(Output<String> reusableConfig) {
             $.reusableConfig = reusableConfig;
             return this;
         }
 
+        /**
+         * @param reusableConfig A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reusableConfig(String reusableConfig) {
             return reusableConfig(Output.of(reusableConfig));
         }
 
+        /**
+         * @param reusableConfigValues A user-specified inline ReusableConfigValues.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reusableConfigValues(Output<ReusableConfigValuesArgs> reusableConfigValues) {
             $.reusableConfigValues = reusableConfigValues;
             return this;
         }
 
+        /**
+         * @param reusableConfigValues A user-specified inline ReusableConfigValues.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reusableConfigValues(ReusableConfigValuesArgs reusableConfigValues) {
             return reusableConfigValues(Output.of(reusableConfigValues));
         }

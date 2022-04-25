@@ -25,6 +25,10 @@ public final class EnvironmentStateDetailsResponse extends com.pulumi.resources.
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -36,6 +40,10 @@ public final class EnvironmentStateDetailsResponse extends com.pulumi.resources.
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return A message that describes the state in detail.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -65,11 +73,23 @@ public final class EnvironmentStateDetailsResponse extends com.pulumi.resources.
             $ = new EnvironmentStateDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message A message that describes the state in detail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;

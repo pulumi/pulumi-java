@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return Alias for the metric. Alias will be used to replace metric name in query results.
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
     @Import(name="function")
     private @Nullable Output<String> function;
 
+    /**
+     * @return Aggregation function: avg, min, max, or sum.
+     * 
+     */
     public Optional<Output<String>> function() {
         return Optional.ofNullable(this.function);
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Metric name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
     @Import(name="operator")
     private @Nullable Output<String> operator;
 
+    /**
+     * @return One of `+`, `-`, `/`, `%`, `*`.
+     * 
+     */
     public Optional<Output<String>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Operand value should be provided when operator is set.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -102,47 +122,107 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
             $ = new GoogleCloudApigeeV1QueryMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias Alias for the metric. Alias will be used to replace metric name in query results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias Alias for the metric. Alias will be used to replace metric name in query results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param function Aggregation function: avg, min, max, or sum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(@Nullable Output<String> function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param function Aggregation function: avg, min, max, or sum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             return function(Output.of(function));
         }
 
+        /**
+         * @param name Metric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Metric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param operator One of `+`, `-`, `/`, `%`, `*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<String> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator One of `+`, `-`, `/`, `%`, `*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param value Operand value should be provided when operator is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Operand value should be provided when operator is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

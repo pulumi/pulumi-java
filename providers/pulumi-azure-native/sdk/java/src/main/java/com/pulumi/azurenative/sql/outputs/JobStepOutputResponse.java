@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobStepOutputResponse {
     /**
-     * The resource ID of the credential to use to connect to the output destination.
+     * @return The resource ID of the credential to use to connect to the output destination.
      * 
      */
     private final String credential;
     /**
-     * The output destination database.
+     * @return The output destination database.
      * 
      */
     private final String databaseName;
     /**
-     * The output destination resource group.
+     * @return The output destination resource group.
      * 
      */
     private final @Nullable String resourceGroupName;
     /**
-     * The output destination schema.
+     * @return The output destination schema.
      * 
      */
     private final @Nullable String schemaName;
     /**
-     * The output destination server name.
+     * @return The output destination server name.
      * 
      */
     private final String serverName;
     /**
-     * The output destination subscription id.
+     * @return The output destination subscription id.
      * 
      */
     private final @Nullable String subscriptionId;
     /**
-     * The output destination table.
+     * @return The output destination table.
      * 
      */
     private final String tableName;
     /**
-     * The output destination type.
+     * @return The output destination type.
      * 
      */
     private final @Nullable String type;
@@ -73,58 +73,58 @@ public final class JobStepOutputResponse {
     }
 
     /**
-     * The resource ID of the credential to use to connect to the output destination.
+     * @return The resource ID of the credential to use to connect to the output destination.
      * 
-    */
+     */
     public String credential() {
         return this.credential;
     }
     /**
-     * The output destination database.
+     * @return The output destination database.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * The output destination resource group.
+     * @return The output destination resource group.
      * 
-    */
+     */
     public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
     /**
-     * The output destination schema.
+     * @return The output destination schema.
      * 
-    */
+     */
     public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
     /**
-     * The output destination server name.
+     * @return The output destination server name.
      * 
-    */
+     */
     public String serverName() {
         return this.serverName;
     }
     /**
-     * The output destination subscription id.
+     * @return The output destination subscription id.
      * 
-    */
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
-     * The output destination table.
+     * @return The output destination table.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }
     /**
-     * The output destination type.
+     * @return The output destination type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

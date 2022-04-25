@@ -26,6 +26,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="digest")
     private @Nullable String digest;
 
+    /**
+     * @return The digest of the content, as defined by the Registry V2 HTTP API Specification.
+     * 
+     */
     public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
@@ -37,6 +41,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="length")
     private @Nullable Double length;
 
+    /**
+     * @return The number of bytes of the content. Same as Size field.
+     * 
+     */
     public Optional<Double> length() {
         return Optional.ofNullable(this.length);
     }
@@ -48,6 +56,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mediaType")
     private @Nullable String mediaType;
 
+    /**
+     * @return The MIME type of the referenced object.
+     * 
+     */
     public Optional<String> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
@@ -59,6 +71,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the artifact.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="repository")
     private @Nullable String repository;
 
+    /**
+     * @return The repository name.
+     * 
+     */
     public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -81,6 +101,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="size")
     private @Nullable Double size;
 
+    /**
+     * @return The number of bytes of the content. Same as Length field.
+     * 
+     */
     public Optional<Double> size() {
         return Optional.ofNullable(this.size);
     }
@@ -92,6 +116,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tag")
     private @Nullable String tag;
 
+    /**
+     * @return The tag name.
+     * 
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -103,6 +131,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The direct URL to the content.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -114,6 +146,10 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version of the artifact.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -150,46 +186,100 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digest The digest of the content, as defined by the Registry V2 HTTP API Specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(@Nullable String digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param length The number of bytes of the content. Same as Size field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder length(@Nullable Double length) {
             $.length = length;
             return this;
         }
 
+        /**
+         * @param mediaType The MIME type of the referenced object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaType(@Nullable String mediaType) {
             $.mediaType = mediaType;
             return this;
         }
 
+        /**
+         * @param name The name of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param repository The repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable String repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param size The number of bytes of the content. Same as Length field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Double size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param tag The tag name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable String tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param url The direct URL to the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param version The version of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

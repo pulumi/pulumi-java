@@ -18,57 +18,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationPropertiesResponse {
     /**
-     * The application state.
+     * @return The application state.
      * 
      */
     private final String applicationState;
     /**
-     * The application type.
+     * @return The application type.
      * 
      */
     private final @Nullable String applicationType;
     /**
-     * The list of roles in the cluster.
+     * @return The list of roles in the cluster.
      * 
      */
     private final @Nullable ComputeProfileResponse computeProfile;
     /**
-     * The application create date time.
+     * @return The application create date time.
      * 
      */
     private final String createdDate;
     /**
-     * The list of errors.
+     * @return The list of errors.
      * 
      */
     private final @Nullable List<ErrorsResponse> errors;
     /**
-     * The list of application HTTPS endpoints.
+     * @return The list of application HTTPS endpoints.
      * 
      */
     private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
     /**
-     * The list of install script actions.
+     * @return The list of install script actions.
      * 
      */
     private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
     /**
-     * The marketplace identifier.
+     * @return The marketplace identifier.
      * 
      */
     private final String marketplaceIdentifier;
     /**
-     * The provisioning state of the application.
+     * @return The provisioning state of the application.
      * 
      */
     private final String provisioningState;
     /**
-     * The list of application SSH endpoints.
+     * @return The list of application SSH endpoints.
      * 
      */
     private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
     /**
-     * The list of uninstall script actions.
+     * @return The list of uninstall script actions.
      * 
      */
     private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
@@ -100,79 +100,79 @@ public final class ApplicationPropertiesResponse {
     }
 
     /**
-     * The application state.
+     * @return The application state.
      * 
-    */
+     */
     public String applicationState() {
         return this.applicationState;
     }
     /**
-     * The application type.
+     * @return The application type.
      * 
-    */
+     */
     public Optional<String> applicationType() {
         return Optional.ofNullable(this.applicationType);
     }
     /**
-     * The list of roles in the cluster.
+     * @return The list of roles in the cluster.
      * 
-    */
+     */
     public Optional<ComputeProfileResponse> computeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
     /**
-     * The application create date time.
+     * @return The application create date time.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The list of errors.
+     * @return The list of errors.
      * 
-    */
+     */
     public List<ErrorsResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * The list of application HTTPS endpoints.
+     * @return The list of application HTTPS endpoints.
      * 
-    */
+     */
     public List<ApplicationGetHttpsEndpointResponse> httpsEndpoints() {
         return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
     }
     /**
-     * The list of install script actions.
+     * @return The list of install script actions.
      * 
-    */
+     */
     public List<RuntimeScriptActionResponse> installScriptActions() {
         return this.installScriptActions == null ? List.of() : this.installScriptActions;
     }
     /**
-     * The marketplace identifier.
+     * @return The marketplace identifier.
      * 
-    */
+     */
     public String marketplaceIdentifier() {
         return this.marketplaceIdentifier;
     }
     /**
-     * The provisioning state of the application.
+     * @return The provisioning state of the application.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The list of application SSH endpoints.
+     * @return The list of application SSH endpoints.
      * 
-    */
+     */
     public List<ApplicationGetEndpointResponse> sshEndpoints() {
         return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
     }
     /**
-     * The list of uninstall script actions.
+     * @return The list of uninstall script actions.
      * 
-    */
+     */
     public List<RuntimeScriptActionResponse> uninstallScriptActions() {
         return this.uninstallScriptActions == null ? List.of() : this.uninstallScriptActions;
     }

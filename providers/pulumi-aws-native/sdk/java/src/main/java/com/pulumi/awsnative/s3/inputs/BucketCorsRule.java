@@ -28,6 +28,10 @@ public final class BucketCorsRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedHeaders")
     private @Nullable List<String> allowedHeaders;
 
+    /**
+     * @return Headers that are specified in the Access-Control-Request-Headers header.
+     * 
+     */
     public Optional<List<String>> allowedHeaders() {
         return Optional.ofNullable(this.allowedHeaders);
     }
@@ -39,6 +43,10 @@ public final class BucketCorsRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedMethods", required=true)
     private List<BucketCorsRuleAllowedMethodsItem> allowedMethods;
 
+    /**
+     * @return An HTTP method that you allow the origin to execute.
+     * 
+     */
     public List<BucketCorsRuleAllowedMethodsItem> allowedMethods() {
         return this.allowedMethods;
     }
@@ -50,6 +58,10 @@ public final class BucketCorsRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedOrigins", required=true)
     private List<String> allowedOrigins;
 
+    /**
+     * @return One or more origins you want customers to be able to access the bucket from.
+     * 
+     */
     public List<String> allowedOrigins() {
         return this.allowedOrigins;
     }
@@ -61,6 +73,10 @@ public final class BucketCorsRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="exposedHeaders")
     private @Nullable List<String> exposedHeaders;
 
+    /**
+     * @return One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+     * 
+     */
     public Optional<List<String>> exposedHeaders() {
         return Optional.ofNullable(this.exposedHeaders);
     }
@@ -72,6 +88,10 @@ public final class BucketCorsRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return A unique identifier for this rule.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -83,6 +103,10 @@ public final class BucketCorsRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxAge")
     private @Nullable Integer maxAge;
 
+    /**
+     * @return The time in seconds that your browser is to cache the preflight response for the specified resource.
+     * 
+     */
     public Optional<Integer> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
@@ -116,47 +140,107 @@ public final class BucketCorsRule extends com.pulumi.resources.InvokeArgs {
             $ = new BucketCorsRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedHeaders Headers that are specified in the Access-Control-Request-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             $.allowedHeaders = allowedHeaders;
             return this;
         }
 
+        /**
+         * @param allowedHeaders Headers that are specified in the Access-Control-Request-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(String... allowedHeaders) {
             return allowedHeaders(List.of(allowedHeaders));
         }
 
+        /**
+         * @param allowedMethods An HTTP method that you allow the origin to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(List<BucketCorsRuleAllowedMethodsItem> allowedMethods) {
             $.allowedMethods = allowedMethods;
             return this;
         }
 
+        /**
+         * @param allowedMethods An HTTP method that you allow the origin to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(BucketCorsRuleAllowedMethodsItem... allowedMethods) {
             return allowedMethods(List.of(allowedMethods));
         }
 
+        /**
+         * @param allowedOrigins One or more origins you want customers to be able to access the bucket from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(List<String> allowedOrigins) {
             $.allowedOrigins = allowedOrigins;
             return this;
         }
 
+        /**
+         * @param allowedOrigins One or more origins you want customers to be able to access the bucket from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
 
+        /**
+         * @param exposedHeaders One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
             $.exposedHeaders = exposedHeaders;
             return this;
         }
 
+        /**
+         * @param exposedHeaders One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(String... exposedHeaders) {
             return exposedHeaders(List.of(exposedHeaders));
         }
 
+        /**
+         * @param id A unique identifier for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param maxAge The time in seconds that your browser is to cache the preflight response for the specified resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(@Nullable Integer maxAge) {
             $.maxAge = maxAge;
             return this;

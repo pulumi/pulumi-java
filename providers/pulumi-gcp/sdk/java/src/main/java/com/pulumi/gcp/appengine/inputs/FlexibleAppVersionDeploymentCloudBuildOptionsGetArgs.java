@@ -22,6 +22,10 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs extends 
     @Import(name="appYamlPath", required=true)
     private Output<String> appYamlPath;
 
+    /**
+     * @return Path to the yaml file used in deployment, used to determine runtime configuration details.
+     * 
+     */
     public Output<String> appYamlPath() {
         return this.appYamlPath;
     }
@@ -34,6 +38,11 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs extends 
     @Import(name="cloudBuildTimeout")
     private @Nullable Output<String> cloudBuildTimeout;
 
+    /**
+     * @return The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
     public Optional<Output<String>> cloudBuildTimeout() {
         return Optional.ofNullable(this.cloudBuildTimeout);
     }
@@ -63,20 +72,46 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs extends 
             $ = new FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appYamlPath Path to the yaml file used in deployment, used to determine runtime configuration details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appYamlPath(Output<String> appYamlPath) {
             $.appYamlPath = appYamlPath;
             return this;
         }
 
+        /**
+         * @param appYamlPath Path to the yaml file used in deployment, used to determine runtime configuration details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appYamlPath(String appYamlPath) {
             return appYamlPath(Output.of(appYamlPath));
         }
 
+        /**
+         * @param cloudBuildTimeout The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildTimeout(@Nullable Output<String> cloudBuildTimeout) {
             $.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
 
+        /**
+         * @param cloudBuildTimeout The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildTimeout(String cloudBuildTimeout) {
             return cloudBuildTimeout(Output.of(cloudBuildTimeout));
         }

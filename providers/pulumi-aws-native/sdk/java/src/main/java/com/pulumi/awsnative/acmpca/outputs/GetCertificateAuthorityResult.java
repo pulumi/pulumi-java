@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCertificateAuthorityResult {
     /**
-     * The Amazon Resource Name (ARN) of the certificate authority.
+     * @return The Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
+     * @return The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
      * 
      */
     private final @Nullable String certificateSigningRequest;
     /**
-     * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
+     * @return Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
      * 
      */
     private final @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration;
@@ -44,23 +44,23 @@ public final class GetCertificateAuthorityResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the certificate authority.
+     * @return The Amazon Resource Name (ARN) of the certificate authority.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
+     * @return The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
      * 
-    */
+     */
     public Optional<String> certificateSigningRequest() {
         return Optional.ofNullable(this.certificateSigningRequest);
     }
     /**
-     * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
+     * @return Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
      * 
-    */
+     */
     public Optional<CertificateAuthorityRevocationConfiguration> revocationConfiguration() {
         return Optional.ofNullable(this.revocationConfiguration);
     }

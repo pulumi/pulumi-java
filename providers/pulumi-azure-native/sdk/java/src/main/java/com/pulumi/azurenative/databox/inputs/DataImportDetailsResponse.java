@@ -25,6 +25,10 @@ public final class DataImportDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="accountDetails", required=true)
     private Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
+    /**
+     * @return Account details of the data to be transferred
+     * 
+     */
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails() {
         return this.accountDetails;
     }
@@ -53,15 +57,33 @@ public final class DataImportDetailsResponse extends com.pulumi.resources.Invoke
             $ = new DataImportDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
             $.accountDetails = accountDetails;
             return this;
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(ManagedDiskDetailsResponse accountDetails) {
             return accountDetails(Either.ofLeft(accountDetails));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(StorageAccountDetailsResponse accountDetails) {
             return accountDetails(Either.ofRight(accountDetails));
         }

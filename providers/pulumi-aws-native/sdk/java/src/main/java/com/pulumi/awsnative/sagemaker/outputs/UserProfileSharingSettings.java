@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserProfileSharingSettings {
     /**
-     * Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
+     * @return Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
      * 
      */
     private final @Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption;
     /**
-     * When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
+     * @return When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
      * 
      */
     private final @Nullable String s3KmsKeyId;
     /**
-     * When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
+     * @return When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
      * 
      */
     private final @Nullable String s3OutputPath;
@@ -39,23 +39,23 @@ public final class UserProfileSharingSettings {
     }
 
     /**
-     * Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
+     * @return Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
      * 
-    */
+     */
     public Optional<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption() {
         return Optional.ofNullable(this.notebookOutputOption);
     }
     /**
-     * When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
+     * @return When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
      * 
-    */
+     */
     public Optional<String> s3KmsKeyId() {
         return Optional.ofNullable(this.s3KmsKeyId);
     }
     /**
-     * When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
+     * @return When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
      * 
-    */
+     */
     public Optional<String> s3OutputPath() {
         return Optional.ofNullable(this.s3OutputPath);
     }

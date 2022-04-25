@@ -26,6 +26,10 @@ public final class NonAzureQueryPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="functionAlias")
     private @Nullable Output<String> functionAlias;
 
+    /**
+     * @return Log Analytics Saved Search name.
+     * 
+     */
     public Optional<Output<String>> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
@@ -37,6 +41,10 @@ public final class NonAzureQueryPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="workspaceId")
     private @Nullable Output<String> workspaceId;
 
+    /**
+     * @return Workspace Id for Log Analytics in which the saved Search is resided.
+     * 
+     */
     public Optional<Output<String>> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -66,20 +74,44 @@ public final class NonAzureQueryPropertiesArgs extends com.pulumi.resources.Reso
             $ = new NonAzureQueryPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionAlias Log Analytics Saved Search name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAlias(@Nullable Output<String> functionAlias) {
             $.functionAlias = functionAlias;
             return this;
         }
 
+        /**
+         * @param functionAlias Log Analytics Saved Search name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAlias(String functionAlias) {
             return functionAlias(Output.of(functionAlias));
         }
 
+        /**
+         * @param workspaceId Workspace Id for Log Analytics in which the saved Search is resided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId Workspace Id for Log Analytics in which the saved Search is resided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }

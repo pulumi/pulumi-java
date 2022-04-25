@@ -25,6 +25,10 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="providers", required=true)
     private List<AuthProviderResponse> providers;
 
+    /**
+     * @return Defines a set of authentication providers that a service supports.
+     * 
+     */
     public List<AuthProviderResponse> providers() {
         return this.providers;
     }
@@ -36,6 +40,10 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rules", required=true)
     private List<AuthenticationRuleResponse> rules;
 
+    /**
+     * @return A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public List<AuthenticationRuleResponse> rules() {
         return this.rules;
     }
@@ -65,20 +73,44 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
             $ = new AuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providers Defines a set of authentication providers that a service supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(List<AuthProviderResponse> providers) {
             $.providers = providers;
             return this;
         }
 
+        /**
+         * @param providers Defines a set of authentication providers that a service supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(AuthProviderResponse... providers) {
             return providers(List.of(providers));
         }
 
+        /**
+         * @param rules A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<AuthenticationRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(AuthenticationRuleResponse... rules) {
             return rules(List.of(rules));
         }

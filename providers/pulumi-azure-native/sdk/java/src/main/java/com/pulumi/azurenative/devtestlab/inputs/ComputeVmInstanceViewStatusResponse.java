@@ -25,6 +25,10 @@ public final class ComputeVmInstanceViewStatusResponse extends com.pulumi.resour
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Gets the status Code.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -36,6 +40,10 @@ public final class ComputeVmInstanceViewStatusResponse extends com.pulumi.resour
     @Import(name="displayStatus")
     private @Nullable String displayStatus;
 
+    /**
+     * @return Gets the short localizable label for the status.
+     * 
+     */
     public Optional<String> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
@@ -47,6 +55,10 @@ public final class ComputeVmInstanceViewStatusResponse extends com.pulumi.resour
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Gets the message associated with the status.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -77,16 +89,34 @@ public final class ComputeVmInstanceViewStatusResponse extends com.pulumi.resour
             $ = new ComputeVmInstanceViewStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Gets the status Code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param displayStatus Gets the short localizable label for the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(@Nullable String displayStatus) {
             $.displayStatus = displayStatus;
             return this;
         }
 
+        /**
+         * @param message Gets the message associated with the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;

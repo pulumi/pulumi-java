@@ -25,6 +25,10 @@ public final class ResourceUsageExportConfigResponse extends com.pulumi.resource
     @Import(name="bigqueryDestination", required=true)
     private BigQueryDestinationResponse bigqueryDestination;
 
+    /**
+     * @return Configuration to use BigQuery as usage export destination.
+     * 
+     */
     public BigQueryDestinationResponse bigqueryDestination() {
         return this.bigqueryDestination;
     }
@@ -36,6 +40,10 @@ public final class ResourceUsageExportConfigResponse extends com.pulumi.resource
     @Import(name="consumptionMeteringConfig", required=true)
     private ConsumptionMeteringConfigResponse consumptionMeteringConfig;
 
+    /**
+     * @return Configuration to enable resource consumption metering.
+     * 
+     */
     public ConsumptionMeteringConfigResponse consumptionMeteringConfig() {
         return this.consumptionMeteringConfig;
     }
@@ -47,6 +55,10 @@ public final class ResourceUsageExportConfigResponse extends com.pulumi.resource
     @Import(name="enableNetworkEgressMetering", required=true)
     private Boolean enableNetworkEgressMetering;
 
+    /**
+     * @return Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+     * 
+     */
     public Boolean enableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }
@@ -77,16 +89,34 @@ public final class ResourceUsageExportConfigResponse extends com.pulumi.resource
             $ = new ResourceUsageExportConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryDestination Configuration to use BigQuery as usage export destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDestination(BigQueryDestinationResponse bigqueryDestination) {
             $.bigqueryDestination = bigqueryDestination;
             return this;
         }
 
+        /**
+         * @param consumptionMeteringConfig Configuration to enable resource consumption metering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumptionMeteringConfig(ConsumptionMeteringConfigResponse consumptionMeteringConfig) {
             $.consumptionMeteringConfig = consumptionMeteringConfig;
             return this;
         }
 
+        /**
+         * @param enableNetworkEgressMetering Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
             $.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;

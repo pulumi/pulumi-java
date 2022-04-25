@@ -26,6 +26,10 @@ public final class BucketEncryptionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="defaultKmsKeyName")
     private @Nullable Output<String> defaultKmsKeyName;
 
+    /**
+     * @return A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+     * 
+     */
     public Optional<Output<String>> defaultKmsKeyName() {
         return Optional.ofNullable(this.defaultKmsKeyName);
     }
@@ -54,11 +58,23 @@ public final class BucketEncryptionArgs extends com.pulumi.resources.ResourceArg
             $ = new BucketEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultKmsKeyName A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKmsKeyName(@Nullable Output<String> defaultKmsKeyName) {
             $.defaultKmsKeyName = defaultKmsKeyName;
             return this;
         }
 
+        /**
+         * @param defaultKmsKeyName A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKmsKeyName(String defaultKmsKeyName) {
             return defaultKmsKeyName(Output.of(defaultKmsKeyName));
         }

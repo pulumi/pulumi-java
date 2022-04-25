@@ -24,6 +24,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return Name of s3 bucket to save the results of the query execution.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -35,6 +39,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfiguration")
     private @Nullable Output<DatabaseEncryptionConfigurationArgs> encryptionConfiguration;
 
+    /**
+     * @return The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+     * 
+     */
     public Optional<Output<DatabaseEncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
@@ -46,6 +54,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
     private @Nullable Output<Boolean> forceDestroy;
 
+    /**
+     * @return A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
+     * 
+     */
     public Optional<Output<Boolean>> forceDestroy() {
         return Optional.ofNullable(this.forceDestroy);
     }
@@ -57,6 +69,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the database to create.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -88,38 +104,86 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Name of s3 bucket to save the results of the query execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Name of s3 bucket to save the results of the query execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param encryptionConfiguration The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(@Nullable Output<DatabaseEncryptionConfigurationArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param encryptionConfiguration The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(DatabaseEncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 
+        /**
+         * @param forceDestroy A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             $.forceDestroy = forceDestroy;
             return this;
         }
 
+        /**
+         * @param forceDestroy A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(Boolean forceDestroy) {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param name Name of the database to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the database to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

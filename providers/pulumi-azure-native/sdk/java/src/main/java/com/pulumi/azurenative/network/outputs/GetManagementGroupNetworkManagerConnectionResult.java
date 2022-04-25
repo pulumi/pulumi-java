@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetManagementGroupNetworkManagerConnectionResult {
     /**
-     * A description of the scope connection.
+     * @return A description of the scope connection.
      * 
      */
     private final @Nullable String description;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Network Manager Id.
+     * @return Network Manager Id.
      * 
      */
     private final @Nullable String networkManagerId;
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -67,51 +67,51 @@ public final class GetManagementGroupNetworkManagerConnectionResult {
     }
 
     /**
-     * A description of the scope connection.
+     * @return A description of the scope connection.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network Manager Id.
+     * @return Network Manager Id.
      * 
-    */
+     */
     public Optional<String> networkManagerId() {
         return Optional.ofNullable(this.networkManagerId);
     }
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

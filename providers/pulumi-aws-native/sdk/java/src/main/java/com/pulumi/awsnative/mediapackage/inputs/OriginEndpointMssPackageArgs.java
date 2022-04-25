@@ -35,6 +35,10 @@ public final class OriginEndpointMssPackageArgs extends com.pulumi.resources.Res
     @Import(name="manifestWindowSeconds")
     private @Nullable Output<Integer> manifestWindowSeconds;
 
+    /**
+     * @return The time window (in seconds) contained in each manifest.
+     * 
+     */
     public Optional<Output<Integer>> manifestWindowSeconds() {
         return Optional.ofNullable(this.manifestWindowSeconds);
     }
@@ -46,6 +50,10 @@ public final class OriginEndpointMssPackageArgs extends com.pulumi.resources.Res
     @Import(name="segmentDurationSeconds")
     private @Nullable Output<Integer> segmentDurationSeconds;
 
+    /**
+     * @return The duration (in seconds) of each segment.
+     * 
+     */
     public Optional<Output<Integer>> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
@@ -93,20 +101,44 @@ public final class OriginEndpointMssPackageArgs extends com.pulumi.resources.Res
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param manifestWindowSeconds The time window (in seconds) contained in each manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestWindowSeconds(@Nullable Output<Integer> manifestWindowSeconds) {
             $.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
 
+        /**
+         * @param manifestWindowSeconds The time window (in seconds) contained in each manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestWindowSeconds(Integer manifestWindowSeconds) {
             return manifestWindowSeconds(Output.of(manifestWindowSeconds));
         }
 
+        /**
+         * @param segmentDurationSeconds The duration (in seconds) of each segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
             $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
+        /**
+         * @param segmentDurationSeconds The duration (in seconds) of each segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDurationSeconds(Integer segmentDurationSeconds) {
             return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }

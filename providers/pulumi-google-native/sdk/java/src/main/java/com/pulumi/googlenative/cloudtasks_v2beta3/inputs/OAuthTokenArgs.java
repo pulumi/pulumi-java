@@ -26,6 +26,10 @@ public final class OAuthTokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -37,6 +41,10 @@ public final class OAuthTokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
     private @Nullable Output<String> serviceAccountEmail;
 
+    /**
+     * @return [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+     * 
+     */
     public Optional<Output<String>> serviceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
@@ -66,20 +74,44 @@ public final class OAuthTokenArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OAuthTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param serviceAccountEmail [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             return serviceAccountEmail(Output.of(serviceAccountEmail));
         }

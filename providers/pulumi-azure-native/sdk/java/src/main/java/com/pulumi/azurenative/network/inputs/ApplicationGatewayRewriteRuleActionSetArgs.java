@@ -28,6 +28,10 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends com.pulumi
     @Import(name="requestHeaderConfigurations")
     private @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
 
+    /**
+     * @return Request Header Actions in the Action Set.
+     * 
+     */
     public Optional<Output<List<ApplicationGatewayHeaderConfigurationArgs>>> requestHeaderConfigurations() {
         return Optional.ofNullable(this.requestHeaderConfigurations);
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends com.pulumi
     @Import(name="responseHeaderConfigurations")
     private @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
 
+    /**
+     * @return Response Header Actions in the Action Set.
+     * 
+     */
     public Optional<Output<List<ApplicationGatewayHeaderConfigurationArgs>>> responseHeaderConfigurations() {
         return Optional.ofNullable(this.responseHeaderConfigurations);
     }
@@ -50,6 +58,10 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends com.pulumi
     @Import(name="urlConfiguration")
     private @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
 
+    /**
+     * @return Url Configuration Action in the Action Set.
+     * 
+     */
     public Optional<Output<ApplicationGatewayUrlConfigurationArgs>> urlConfiguration() {
         return Optional.ofNullable(this.urlConfiguration);
     }
@@ -80,37 +92,85 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends com.pulumi
             $ = new ApplicationGatewayRewriteRuleActionSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestHeaderConfigurations Request Header Actions in the Action Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderConfigurations(@Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations) {
             $.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
 
+        /**
+         * @param requestHeaderConfigurations Request Header Actions in the Action Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderConfigurations(List<ApplicationGatewayHeaderConfigurationArgs> requestHeaderConfigurations) {
             return requestHeaderConfigurations(Output.of(requestHeaderConfigurations));
         }
 
+        /**
+         * @param requestHeaderConfigurations Request Header Actions in the Action Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderConfigurations(ApplicationGatewayHeaderConfigurationArgs... requestHeaderConfigurations) {
             return requestHeaderConfigurations(List.of(requestHeaderConfigurations));
         }
 
+        /**
+         * @param responseHeaderConfigurations Response Header Actions in the Action Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderConfigurations(@Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations) {
             $.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
 
+        /**
+         * @param responseHeaderConfigurations Response Header Actions in the Action Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderConfigurations(List<ApplicationGatewayHeaderConfigurationArgs> responseHeaderConfigurations) {
             return responseHeaderConfigurations(Output.of(responseHeaderConfigurations));
         }
 
+        /**
+         * @param responseHeaderConfigurations Response Header Actions in the Action Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderConfigurations(ApplicationGatewayHeaderConfigurationArgs... responseHeaderConfigurations) {
             return responseHeaderConfigurations(List.of(responseHeaderConfigurations));
         }
 
+        /**
+         * @param urlConfiguration Url Configuration Action in the Action Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlConfiguration(@Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
             $.urlConfiguration = urlConfiguration;
             return this;
         }
 
+        /**
+         * @param urlConfiguration Url Configuration Action in the Action Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlConfiguration(ApplicationGatewayUrlConfigurationArgs urlConfiguration) {
             return urlConfiguration(Output.of(urlConfiguration));
         }

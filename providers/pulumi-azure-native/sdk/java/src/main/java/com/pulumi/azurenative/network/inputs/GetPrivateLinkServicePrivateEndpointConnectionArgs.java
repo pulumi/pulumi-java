@@ -21,6 +21,10 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
     @Import(name="peConnectionName", required=true)
     private String peConnectionName;
 
+    /**
+     * @return The name of the private end point connection.
+     * 
+     */
     public String peConnectionName() {
         return this.peConnectionName;
     }
@@ -43,6 +51,10 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -54,6 +66,10 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the private link service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -85,21 +101,45 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
             $ = new GetPrivateLinkServicePrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param peConnectionName The name of the private end point connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peConnectionName(String peConnectionName) {
             $.peConnectionName = peConnectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the private link service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class B2BPartnerContentResponse {
     /**
-     * The list of partner business identities.
+     * @return The list of partner business identities.
      * 
      */
     private final @Nullable List<BusinessIdentityResponse> businessIdentities;
@@ -23,9 +23,9 @@ public final class B2BPartnerContentResponse {
     }
 
     /**
-     * The list of partner business identities.
+     * @return The list of partner business identities.
      * 
-    */
+     */
     public List<BusinessIdentityResponse> businessIdentities() {
         return this.businessIdentities == null ? List.of() : this.businessIdentities;
     }

@@ -22,6 +22,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -33,6 +37,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="offer")
     private @Nullable Output<String> offer;
 
+    /**
+     * @return For example, UbuntuServer or WindowsServer.
+     * 
+     */
     public Optional<Output<String>> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -44,6 +52,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return For example, Canonical or MicrosoftWindowsServer.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -55,6 +67,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return For example, 18.04-LTS or 2019-Datacenter.
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -66,6 +82,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -98,47 +118,107 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ImageReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param offer For example, UbuntuServer or WindowsServer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable Output<String> offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param offer For example, UbuntuServer or WindowsServer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(String offer) {
             return offer(Output.of(offer));
         }
 
+        /**
+         * @param publisher For example, Canonical or MicrosoftWindowsServer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher For example, Canonical or MicrosoftWindowsServer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param sku For example, 18.04-LTS or 2019-Datacenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku For example, 18.04-LTS or 2019-Datacenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param version A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

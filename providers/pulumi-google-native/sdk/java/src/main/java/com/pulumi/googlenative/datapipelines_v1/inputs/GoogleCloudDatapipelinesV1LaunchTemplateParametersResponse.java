@@ -26,6 +26,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="environment", required=true)
     private GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
 
+    /**
+     * @return The runtime environment for the job.
+     * 
+     */
     public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment() {
         return this.environment;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="jobName", required=true)
     private String jobName;
 
+    /**
+     * @return The job name to use for the created job.
+     * 
+     */
     public String jobName() {
         return this.jobName;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="parameters", required=true)
     private Map<String,String> parameters;
 
+    /**
+     * @return The runtime parameters to pass to the job.
+     * 
+     */
     public Map<String,String> parameters() {
         return this.parameters;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="transformNameMapping", required=true)
     private Map<String,String> transformNameMapping;
 
+    /**
+     * @return Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+     * 
+     */
     public Map<String,String> transformNameMapping() {
         return this.transformNameMapping;
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     @Import(name="update", required=true)
     private Boolean update;
 
+    /**
+     * @return If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+     * 
+     */
     public Boolean update() {
         return this.update;
     }
@@ -102,26 +122,56 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
             $ = new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environment The runtime environment for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param jobName The job name to use for the created job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param parameters The runtime parameters to pass to the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param transformNameMapping Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformNameMapping(Map<String,String> transformNameMapping) {
             $.transformNameMapping = transformNameMapping;
             return this;
         }
 
+        /**
+         * @param update If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(Boolean update) {
             $.update = update;
             return this;

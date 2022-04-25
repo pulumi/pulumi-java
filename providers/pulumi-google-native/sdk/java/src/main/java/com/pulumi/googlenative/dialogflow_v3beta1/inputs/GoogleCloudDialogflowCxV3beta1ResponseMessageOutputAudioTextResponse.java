@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
     @Import(name="allowPlaybackInterruption", required=true)
     private Boolean allowPlaybackInterruption;
 
+    /**
+     * @return Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
+     * 
+     */
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
     @Import(name="ssml", required=true)
     private String ssml;
 
+    /**
+     * @return The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
+     * 
+     */
     public String ssml() {
         return this.ssml;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
     @Import(name="text", required=true)
     private String text;
 
+    /**
+     * @return The raw text to be synthesized.
+     * 
+     */
     public String text() {
         return this.text;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
             $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPlaybackInterruption Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
 
+        /**
+         * @param ssml The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(String ssml) {
             $.ssml = ssml;
             return this;
         }
 
+        /**
+         * @param text The raw text to be synthesized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             $.text = text;
             return this;

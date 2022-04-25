@@ -19,6 +19,10 @@ public final class GetRosettaNetProcessConfigurationArgs extends com.pulumi.reso
     @Import(name="integrationAccountName", required=true)
     private String integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public String integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetRosettaNetProcessConfigurationArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetRosettaNetProcessConfigurationArgs extends com.pulumi.reso
     @Import(name="rosettaNetProcessConfigurationName", required=true)
     private String rosettaNetProcessConfigurationName;
 
+    /**
+     * @return The integration account RosettaNetProcessConfiguration name.
+     * 
+     */
     public String rosettaNetProcessConfigurationName() {
         return this.rosettaNetProcessConfigurationName;
     }
@@ -71,16 +83,34 @@ public final class GetRosettaNetProcessConfigurationArgs extends com.pulumi.reso
             $ = new GetRosettaNetProcessConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param rosettaNetProcessConfigurationName The integration account RosettaNetProcessConfiguration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rosettaNetProcessConfigurationName(String rosettaNetProcessConfigurationName) {
             $.rosettaNetProcessConfigurationName = rosettaNetProcessConfigurationName;
             return this;

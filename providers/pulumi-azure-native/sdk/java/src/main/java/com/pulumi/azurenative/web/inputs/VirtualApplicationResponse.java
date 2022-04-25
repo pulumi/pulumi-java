@@ -28,6 +28,10 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     @Import(name="physicalPath")
     private @Nullable String physicalPath;
 
+    /**
+     * @return Physical path.
+     * 
+     */
     public Optional<String> physicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
@@ -39,6 +43,10 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     @Import(name="preloadEnabled")
     private @Nullable Boolean preloadEnabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Boolean> preloadEnabled() {
         return Optional.ofNullable(this.preloadEnabled);
     }
@@ -50,6 +58,10 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     @Import(name="virtualDirectories")
     private @Nullable List<VirtualDirectoryResponse> virtualDirectories;
 
+    /**
+     * @return Virtual directories for virtual application.
+     * 
+     */
     public Optional<List<VirtualDirectoryResponse>> virtualDirectories() {
         return Optional.ofNullable(this.virtualDirectories);
     }
@@ -61,6 +73,10 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
     @Import(name="virtualPath")
     private @Nullable String virtualPath;
 
+    /**
+     * @return Virtual path.
+     * 
+     */
     public Optional<String> virtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }
@@ -92,25 +108,55 @@ public final class VirtualApplicationResponse extends com.pulumi.resources.Invok
             $ = new VirtualApplicationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param physicalPath Physical path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalPath(@Nullable String physicalPath) {
             $.physicalPath = physicalPath;
             return this;
         }
 
+        /**
+         * @param preloadEnabled &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preloadEnabled(@Nullable Boolean preloadEnabled) {
             $.preloadEnabled = preloadEnabled;
             return this;
         }
 
+        /**
+         * @param virtualDirectories Virtual directories for virtual application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualDirectories(@Nullable List<VirtualDirectoryResponse> virtualDirectories) {
             $.virtualDirectories = virtualDirectories;
             return this;
         }
 
+        /**
+         * @param virtualDirectories Virtual directories for virtual application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualDirectories(VirtualDirectoryResponse... virtualDirectories) {
             return virtualDirectories(List.of(virtualDirectories));
         }
 
+        /**
+         * @param virtualPath Virtual path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualPath(@Nullable String virtualPath) {
             $.virtualPath = virtualPath;
             return this;

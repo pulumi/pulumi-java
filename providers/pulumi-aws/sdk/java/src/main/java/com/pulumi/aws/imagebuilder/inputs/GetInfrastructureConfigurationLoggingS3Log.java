@@ -19,6 +19,10 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends com.pulumi
     @Import(name="s3BucketName", required=true)
     private String s3BucketName;
 
+    /**
+     * @return Name of the S3 Bucket for logging.
+     * 
+     */
     public String s3BucketName() {
         return this.s3BucketName;
     }
@@ -30,6 +34,10 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends com.pulumi
     @Import(name="s3KeyPrefix", required=true)
     private String s3KeyPrefix;
 
+    /**
+     * @return Key prefix for S3 Bucket logging.
+     * 
+     */
     public String s3KeyPrefix() {
         return this.s3KeyPrefix;
     }
@@ -59,11 +67,23 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends com.pulumi
             $ = new GetInfrastructureConfigurationLoggingS3Log(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3BucketName Name of the S3 Bucket for logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3BucketName(String s3BucketName) {
             $.s3BucketName = s3BucketName;
             return this;
         }
 
+        /**
+         * @param s3KeyPrefix Key prefix for S3 Bucket logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KeyPrefix(String s3KeyPrefix) {
             $.s3KeyPrefix = s3KeyPrefix;
             return this;

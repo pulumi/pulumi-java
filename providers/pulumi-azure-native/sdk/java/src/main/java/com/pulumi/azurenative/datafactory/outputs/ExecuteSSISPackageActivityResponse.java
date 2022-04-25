@@ -25,98 +25,98 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExecuteSSISPackageActivityResponse {
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
+     * @return The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object environmentPath;
     /**
-     * The package execution credential.
+     * @return The package execution credential.
      * 
      */
     private final @Nullable SSISExecutionCredentialResponse executionCredential;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * SSIS package execution log location.
+     * @return SSIS package execution log location.
      * 
      */
     private final @Nullable SSISLogLocationResponse logLocation;
     /**
-     * The logging level of SSIS package execution. Type: string (or Expression with resultType string).
+     * @return The logging level of SSIS package execution. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object loggingLevel;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * The package level connection managers to execute the SSIS package.
+     * @return The package level connection managers to execute the SSIS package.
      * 
      */
     private final @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers;
     /**
-     * SSIS package location.
+     * @return SSIS package location.
      * 
      */
     private final SSISPackageLocationResponse packageLocation;
     /**
-     * The package level parameters to execute the SSIS package.
+     * @return The package level parameters to execute the SSIS package.
      * 
      */
     private final @Nullable Map<String,SSISExecutionParameterResponse> packageParameters;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * The project level connection managers to execute the SSIS package.
+     * @return The project level connection managers to execute the SSIS package.
      * 
      */
     private final @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers;
     /**
-     * The project level parameters to execute the SSIS package.
+     * @return The project level parameters to execute the SSIS package.
      * 
      */
     private final @Nullable Map<String,SSISExecutionParameterResponse> projectParameters;
     /**
-     * The property overrides to execute the SSIS package.
+     * @return The property overrides to execute the SSIS package.
      * 
      */
     private final @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides;
     /**
-     * Specifies the runtime to execute SSIS package. The value should be &#34;x86&#34; or &#34;x64&#34;. Type: string (or Expression with resultType string).
+     * @return Specifies the runtime to execute SSIS package. The value should be &#34;x86&#34; or &#34;x64&#34;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object runtime;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;ExecuteSSISPackage&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -164,136 +164,136 @@ public final class ExecuteSSISPackageActivityResponse {
     }
 
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public IntegrationRuntimeReferenceResponse connectVia() {
         return this.connectVia;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
+     * @return The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> environmentPath() {
         return Optional.ofNullable(this.environmentPath);
     }
     /**
-     * The package execution credential.
+     * @return The package execution credential.
      * 
-    */
+     */
     public Optional<SSISExecutionCredentialResponse> executionCredential() {
         return Optional.ofNullable(this.executionCredential);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * SSIS package execution log location.
+     * @return SSIS package execution log location.
      * 
-    */
+     */
     public Optional<SSISLogLocationResponse> logLocation() {
         return Optional.ofNullable(this.logLocation);
     }
     /**
-     * The logging level of SSIS package execution. Type: string (or Expression with resultType string).
+     * @return The logging level of SSIS package execution. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The package level connection managers to execute the SSIS package.
+     * @return The package level connection managers to execute the SSIS package.
      * 
-    */
+     */
     public Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers() {
         return this.packageConnectionManagers == null ? Map.of() : this.packageConnectionManagers;
     }
     /**
-     * SSIS package location.
+     * @return SSIS package location.
      * 
-    */
+     */
     public SSISPackageLocationResponse packageLocation() {
         return this.packageLocation;
     }
     /**
-     * The package level parameters to execute the SSIS package.
+     * @return The package level parameters to execute the SSIS package.
      * 
-    */
+     */
     public Map<String,SSISExecutionParameterResponse> packageParameters() {
         return this.packageParameters == null ? Map.of() : this.packageParameters;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * The project level connection managers to execute the SSIS package.
+     * @return The project level connection managers to execute the SSIS package.
      * 
-    */
+     */
     public Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers() {
         return this.projectConnectionManagers == null ? Map.of() : this.projectConnectionManagers;
     }
     /**
-     * The project level parameters to execute the SSIS package.
+     * @return The project level parameters to execute the SSIS package.
      * 
-    */
+     */
     public Map<String,SSISExecutionParameterResponse> projectParameters() {
         return this.projectParameters == null ? Map.of() : this.projectParameters;
     }
     /**
-     * The property overrides to execute the SSIS package.
+     * @return The property overrides to execute the SSIS package.
      * 
-    */
+     */
     public Map<String,SSISPropertyOverrideResponse> propertyOverrides() {
         return this.propertyOverrides == null ? Map.of() : this.propertyOverrides;
     }
     /**
-     * Specifies the runtime to execute SSIS package. The value should be &#34;x86&#34; or &#34;x64&#34;. Type: string (or Expression with resultType string).
+     * @return Specifies the runtime to execute SSIS package. The value should be &#34;x86&#34; or &#34;x64&#34;. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> runtime() {
         return Optional.ofNullable(this.runtime);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;ExecuteSSISPackage&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

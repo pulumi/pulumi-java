@@ -21,92 +21,92 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMetricAlertResult {
     /**
-     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
     private final @Nullable List<MetricAlertActionResponse> actions;
     /**
-     * the flag that indicates whether the alert should be auto resolved or not. The default is true.
+     * @return the flag that indicates whether the alert should be auto resolved or not. The default is true.
      * 
      */
     private final @Nullable Boolean autoMitigate;
     /**
-     * defines the specific alert criteria information.
+     * @return defines the specific alert criteria information.
      * 
      */
     private final Object criteria;
     /**
-     * the description of the metric alert that will be included in the alert email.
+     * @return the description of the metric alert that will be included in the alert email.
      * 
      */
     private final @Nullable String description;
     /**
-     * the flag that indicates whether the metric alert is enabled.
+     * @return the flag that indicates whether the metric alert is enabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * how often the metric alert is evaluated represented in ISO 8601 duration format.
+     * @return how often the metric alert is evaluated represented in ISO 8601 duration format.
      * 
      */
     private final String evaluationFrequency;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * the value indicating whether this alert rule is migrated.
+     * @return the value indicating whether this alert rule is migrated.
      * 
      */
     private final Boolean isMigrated;
     /**
-     * Last time the rule was updated in ISO8601 format.
+     * @return Last time the rule was updated in ISO8601 format.
      * 
      */
     private final String lastUpdatedTime;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * the list of resource id&#39;s that this metric alert is scoped to.
+     * @return the list of resource id&#39;s that this metric alert is scoped to.
      * 
      */
     private final List<String> scopes;
     /**
-     * Alert severity {0, 1, 2, 3, 4}
+     * @return Alert severity {0, 1, 2, 3, 4}
      * 
      */
     private final Integer severity;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+     * @return the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
     private final @Nullable String targetResourceRegion;
     /**
-     * the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+     * @return the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
      */
     private final @Nullable String targetResourceType;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
     /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
      * 
      */
     private final String windowSize;
@@ -152,128 +152,128 @@ public final class GetMetricAlertResult {
     }
 
     /**
-     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
-    */
+     */
     public List<MetricAlertActionResponse> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
-     * the flag that indicates whether the alert should be auto resolved or not. The default is true.
+     * @return the flag that indicates whether the alert should be auto resolved or not. The default is true.
      * 
-    */
+     */
     public Optional<Boolean> autoMitigate() {
         return Optional.ofNullable(this.autoMitigate);
     }
     /**
-     * defines the specific alert criteria information.
+     * @return defines the specific alert criteria information.
      * 
-    */
+     */
     public Object criteria() {
         return this.criteria;
     }
     /**
-     * the description of the metric alert that will be included in the alert email.
+     * @return the description of the metric alert that will be included in the alert email.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * the flag that indicates whether the metric alert is enabled.
+     * @return the flag that indicates whether the metric alert is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * how often the metric alert is evaluated represented in ISO 8601 duration format.
+     * @return how often the metric alert is evaluated represented in ISO 8601 duration format.
      * 
-    */
+     */
     public String evaluationFrequency() {
         return this.evaluationFrequency;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * the value indicating whether this alert rule is migrated.
+     * @return the value indicating whether this alert rule is migrated.
      * 
-    */
+     */
     public Boolean isMigrated() {
         return this.isMigrated;
     }
     /**
-     * Last time the rule was updated in ISO8601 format.
+     * @return Last time the rule was updated in ISO8601 format.
      * 
-    */
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * the list of resource id&#39;s that this metric alert is scoped to.
+     * @return the list of resource id&#39;s that this metric alert is scoped to.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes;
     }
     /**
-     * Alert severity {0, 1, 2, 3, 4}
+     * @return Alert severity {0, 1, 2, 3, 4}
      * 
-    */
+     */
     public Integer severity() {
         return this.severity;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+     * @return the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
-    */
+     */
     public Optional<String> targetResourceRegion() {
         return Optional.ofNullable(this.targetResourceRegion);
     }
     /**
-     * the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
+     * @return the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
      * 
-    */
+     */
     public Optional<String> targetResourceType() {
         return Optional.ofNullable(this.targetResourceType);
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
      * 
-    */
+     */
     public String windowSize() {
         return this.windowSize;
     }

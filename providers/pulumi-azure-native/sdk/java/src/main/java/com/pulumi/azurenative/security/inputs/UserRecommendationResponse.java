@@ -25,6 +25,10 @@ public final class UserRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="recommendationAction")
     private @Nullable String recommendationAction;
 
+    /**
+     * @return The recommendation action of the machine or rule
+     * 
+     */
     public Optional<String> recommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
@@ -36,6 +40,10 @@ public final class UserRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Represents a user that is recommended to be allowed for a certain rule
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -65,11 +73,23 @@ public final class UserRecommendationResponse extends com.pulumi.resources.Invok
             $ = new UserRecommendationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recommendationAction The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationAction(@Nullable String recommendationAction) {
             $.recommendationAction = recommendationAction;
             return this;
         }
 
+        /**
+         * @param username Represents a user that is recommended to be allowed for a certain rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

@@ -28,6 +28,10 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<List<DaprMetadataArgs>> metadata;
 
+    /**
+     * @return Component metadata
+     * 
+     */
     public Optional<Output<List<DaprMetadataArgs>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -39,6 +43,10 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Component name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Component type
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -61,6 +73,10 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Component version
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -92,42 +108,96 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DaprComponentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata Component metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<List<DaprMetadataArgs>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Component metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(List<DaprMetadataArgs> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param metadata Component metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(DaprMetadataArgs... metadata) {
             return metadata(List.of(metadata));
         }
 
+        /**
+         * @param name Component name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Component name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Component type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Component type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param version Component version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Component version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

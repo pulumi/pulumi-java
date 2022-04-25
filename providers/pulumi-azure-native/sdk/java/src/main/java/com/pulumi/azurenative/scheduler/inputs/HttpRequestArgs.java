@@ -27,6 +27,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
     private @Nullable Output<Object> authentication;
 
+    /**
+     * @return Gets or sets the authentication method of the request.
+     * 
+     */
     public Optional<Output<Object>> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -38,6 +42,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return Gets or sets the request body.
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -49,6 +57,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="headers")
     private @Nullable Output<Map<String,String>> headers;
 
+    /**
+     * @return Gets or sets the headers.
+     * 
+     */
     public Optional<Output<Map<String,String>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -60,6 +72,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="method")
     private @Nullable Output<String> method;
 
+    /**
+     * @return Gets or sets the method of the request.
+     * 
+     */
     public Optional<Output<String>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -71,6 +87,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return Gets or sets the URI of the request.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -103,47 +123,107 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication Gets or sets the authentication method of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable Output<Object> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication Gets or sets the authentication method of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Object authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param body Gets or sets the request body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Gets or sets the request body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param headers Gets or sets the headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Gets or sets the headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Map<String,String> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param method Gets or sets the method of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<String> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Gets or sets the method of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param uri Gets or sets the URI of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri Gets or sets the URI of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

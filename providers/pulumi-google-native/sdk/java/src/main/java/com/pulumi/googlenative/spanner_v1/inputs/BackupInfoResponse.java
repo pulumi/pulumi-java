@@ -23,6 +23,10 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backup", required=true)
     private String backup;
 
+    /**
+     * @return Name of the backup.
+     * 
+     */
     public String backup() {
         return this.backup;
     }
@@ -34,6 +38,10 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time the CreateBackup request was received.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -45,6 +53,10 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceDatabase", required=true)
     private String sourceDatabase;
 
+    /**
+     * @return Name of the database the backup was created from.
+     * 
+     */
     public String sourceDatabase() {
         return this.sourceDatabase;
     }
@@ -56,6 +68,10 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="versionTime", required=true)
     private String versionTime;
 
+    /**
+     * @return The backup contains an externally consistent copy of `source_database` at the timestamp specified by `version_time`. If the CreateBackup request did not specify `version_time`, the `version_time` of the backup is equivalent to the `create_time`.
+     * 
+     */
     public String versionTime() {
         return this.versionTime;
     }
@@ -87,21 +103,45 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BackupInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backup Name of the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backup(String backup) {
             $.backup = backup;
             return this;
         }
 
+        /**
+         * @param createTime The time the CreateBackup request was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param sourceDatabase Name of the database the backup was created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabase(String sourceDatabase) {
             $.sourceDatabase = sourceDatabase;
             return this;
         }
 
+        /**
+         * @param versionTime The backup contains an externally consistent copy of `source_database` at the timestamp specified by `version_time`. If the CreateBackup request did not specify `version_time`, the `version_time` of the backup is equivalent to the `create_time`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionTime(String versionTime) {
             $.versionTime = versionTime;
             return this;

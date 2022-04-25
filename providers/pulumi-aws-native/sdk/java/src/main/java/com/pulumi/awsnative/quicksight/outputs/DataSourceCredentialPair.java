@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSourceCredentialPair {
     /**
-     * &lt;p&gt;A set of alternate data source parameters that you want to share for these
+     * @return &lt;p&gt;A set of alternate data source parameters that you want to share for these
      *             credentials. The credentials are applied in tandem with the data source parameters when
      *             you copy a data source by using a create or update request. The API operation compares
      *             the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request with the
@@ -26,12 +26,12 @@ public final class DataSourceCredentialPair {
      */
     private final @Nullable List<DataSourceParameters> alternateDataSourceParameters;
     /**
-     * &lt;p&gt;Password.&lt;/p&gt;
+     * @return &lt;p&gt;Password.&lt;/p&gt;
      * 
      */
     private final String password;
     /**
-     * &lt;p&gt;User name.&lt;/p&gt;
+     * @return &lt;p&gt;User name.&lt;/p&gt;
      * 
      */
     private final String username;
@@ -47,7 +47,7 @@ public final class DataSourceCredentialPair {
     }
 
     /**
-     * &lt;p&gt;A set of alternate data source parameters that you want to share for these
+     * @return &lt;p&gt;A set of alternate data source parameters that you want to share for these
      *             credentials. The credentials are applied in tandem with the data source parameters when
      *             you copy a data source by using a create or update request. The API operation compares
      *             the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request with the
@@ -57,21 +57,21 @@ public final class DataSourceCredentialPair {
      *             null, the &lt;code&gt;DataSourceParameters&lt;/code&gt; originally used with these
      *                 &lt;code&gt;Credentials&lt;/code&gt; is automatically allowed.&lt;/p&gt;
      * 
-    */
+     */
     public List<DataSourceParameters> alternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? List.of() : this.alternateDataSourceParameters;
     }
     /**
-     * &lt;p&gt;Password.&lt;/p&gt;
+     * @return &lt;p&gt;Password.&lt;/p&gt;
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * &lt;p&gt;User name.&lt;/p&gt;
+     * @return &lt;p&gt;User name.&lt;/p&gt;
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

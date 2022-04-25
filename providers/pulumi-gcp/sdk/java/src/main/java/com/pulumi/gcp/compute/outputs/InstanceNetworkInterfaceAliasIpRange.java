@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceNetworkInterfaceAliasIpRange {
     /**
-     * The IP CIDR range represented by this alias IP range. This IP CIDR range
+     * @return The IP CIDR range represented by this alias IP range. This IP CIDR range
      * must belong to the specified subnetwork and cannot contain IP addresses reserved by
      * system or used by other network interfaces. This range may be a single IP address
      * (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
@@ -20,7 +20,7 @@ public final class InstanceNetworkInterfaceAliasIpRange {
      */
     private final String ipCidrRange;
     /**
-     * The subnetwork secondary range name specifying
+     * @return The subnetwork secondary range name specifying
      * the secondary range from which to allocate the IP CIDR range for this alias IP
      * range. If left unspecified, the primary range of the subnetwork will be used.
      * 
@@ -36,21 +36,21 @@ public final class InstanceNetworkInterfaceAliasIpRange {
     }
 
     /**
-     * The IP CIDR range represented by this alias IP range. This IP CIDR range
+     * @return The IP CIDR range represented by this alias IP range. This IP CIDR range
      * must belong to the specified subnetwork and cannot contain IP addresses reserved by
      * system or used by other network interfaces. This range may be a single IP address
      * (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
      * 
-    */
+     */
     public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
-     * The subnetwork secondary range name specifying
+     * @return The subnetwork secondary range name specifying
      * the secondary range from which to allocate the IP CIDR range for this alias IP
      * range. If left unspecified, the primary range of the subnetwork will be used.
      * 
-    */
+     */
     public Optional<String> subnetworkRangeName() {
         return Optional.ofNullable(this.subnetworkRangeName);
     }

@@ -23,6 +23,10 @@ public final class ManagedIdentityConfigurationResponse extends com.pulumi.resou
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The objectId of the Managed Identity that is linked to the Managed Storage account.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -34,6 +38,10 @@ public final class ManagedIdentityConfigurationResponse extends com.pulumi.resou
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant Id where the Managed Identity is created.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -45,6 +53,10 @@ public final class ManagedIdentityConfigurationResponse extends com.pulumi.resou
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of Identity created. It can be either SystemAssigned or UserAssigned.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class ManagedIdentityConfigurationResponse extends com.pulumi.resou
             $ = new ManagedIdentityConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The objectId of the Managed Identity that is linked to the Managed Storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant Id where the Managed Identity is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of Identity created. It can be either SystemAssigned or UserAssigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

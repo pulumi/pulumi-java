@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class GetAppEngineServiceResult {
     private final String displayName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -47,9 +47,9 @@ public final class GetAppEngineServiceResult {
         return this.displayName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

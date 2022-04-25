@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse exten
     @Import(name="isControlGroup", required=true)
     private Boolean isControlGroup;
 
+    /**
+     * @return Whether the variant is for the control group.
+     * 
+     */
     public Boolean isControlGroup() {
         return this.isControlGroup;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse exten
     @Import(name="trafficAllocation", required=true)
     private Double trafficAllocation;
 
+    /**
+     * @return Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
+     * 
+     */
     public Double trafficAllocation() {
         return this.trafficAllocation;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse exten
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -77,16 +89,34 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse exten
             $ = new GoogleCloudDialogflowCxV3VersionVariantsVariantResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isControlGroup Whether the variant is for the control group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isControlGroup(Boolean isControlGroup) {
             $.isControlGroup = isControlGroup;
             return this;
         }
 
+        /**
+         * @param trafficAllocation Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficAllocation(Double trafficAllocation) {
             $.trafficAllocation = trafficAllocation;
             return this;
         }
 
+        /**
+         * @param version The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

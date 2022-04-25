@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class RestoreInfoResponse {
     /**
-     * Information about the backup used to restore the database. The backup may no longer exist.
+     * @return Information about the backup used to restore the database. The backup may no longer exist.
      * 
      */
     private final BackupInfoResponse backupInfo;
     /**
-     * The type of the restore source.
+     * @return The type of the restore source.
      * 
      */
     private final String sourceType;
@@ -30,16 +30,16 @@ public final class RestoreInfoResponse {
     }
 
     /**
-     * Information about the backup used to restore the database. The backup may no longer exist.
+     * @return Information about the backup used to restore the database. The backup may no longer exist.
      * 
-    */
+     */
     public BackupInfoResponse backupInfo() {
         return this.backupInfo;
     }
     /**
-     * The type of the restore source.
+     * @return The type of the restore source.
      * 
-    */
+     */
     public String sourceType() {
         return this.sourceType;
     }

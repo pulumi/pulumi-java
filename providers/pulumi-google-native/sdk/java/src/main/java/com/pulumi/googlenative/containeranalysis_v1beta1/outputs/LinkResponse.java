@@ -14,27 +14,27 @@ import java.util.Objects;
 @CustomType
 public final class LinkResponse {
     /**
-     * ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
+     * @return ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
      * 
      */
     private final ByProductsResponse byproducts;
     /**
-     * This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren&#39;t directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: &#34;command&#34;: [&#34;git&#34;, &#34;clone&#34;, &#34;https://github.com/in-toto/demo-project.git&#34;]
+     * @return This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren&#39;t directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: &#34;command&#34;: [&#34;git&#34;, &#34;clone&#34;, &#34;https://github.com/in-toto/demo-project.git&#34;]
      * 
      */
     private final List<String> command;
     /**
-     * This is a field that can be used to capture information about the environment. It is suggested for this field to contain information that details environment variables, filesystem information, and the present working directory. The recommended structure of this field is: &#34;environment&#34;: { &#34;custom_values&#34;: { &#34;variables&#34;: &#34;&#34;, &#34;filesystem&#34;: &#34;&#34;, &#34;workdir&#34;: &#34;&#34;, &#34;&#34;: &#34;...&#34; } }
+     * @return This is a field that can be used to capture information about the environment. It is suggested for this field to contain information that details environment variables, filesystem information, and the present working directory. The recommended structure of this field is: &#34;environment&#34;: { &#34;custom_values&#34;: { &#34;variables&#34;: &#34;&#34;, &#34;filesystem&#34;: &#34;&#34;, &#34;workdir&#34;: &#34;&#34;, &#34;&#34;: &#34;...&#34; } }
      * 
      */
     private final EnvironmentResponse environment;
     /**
-     * Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: &#34;materials&#34;: [ { &#34;resource_uri&#34;: &#34;foo/bar&#34;, &#34;hashes&#34;: { &#34;sha256&#34;: &#34;ebebf...&#34;, : } } ]
+     * @return Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: &#34;materials&#34;: [ { &#34;resource_uri&#34;: &#34;foo/bar&#34;, &#34;hashes&#34;: { &#34;sha256&#34;: &#34;ebebf...&#34;, : } } ]
      * 
      */
     private final List<GrafeasV1beta1IntotoArtifactResponse> materials;
     /**
-     * Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
+     * @return Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
      * 
      */
     private final List<GrafeasV1beta1IntotoArtifactResponse> products;
@@ -54,37 +54,37 @@ public final class LinkResponse {
     }
 
     /**
-     * ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
+     * @return ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
      * 
-    */
+     */
     public ByProductsResponse byproducts() {
         return this.byproducts;
     }
     /**
-     * This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren&#39;t directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: &#34;command&#34;: [&#34;git&#34;, &#34;clone&#34;, &#34;https://github.com/in-toto/demo-project.git&#34;]
+     * @return This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren&#39;t directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: &#34;command&#34;: [&#34;git&#34;, &#34;clone&#34;, &#34;https://github.com/in-toto/demo-project.git&#34;]
      * 
-    */
+     */
     public List<String> command() {
         return this.command;
     }
     /**
-     * This is a field that can be used to capture information about the environment. It is suggested for this field to contain information that details environment variables, filesystem information, and the present working directory. The recommended structure of this field is: &#34;environment&#34;: { &#34;custom_values&#34;: { &#34;variables&#34;: &#34;&#34;, &#34;filesystem&#34;: &#34;&#34;, &#34;workdir&#34;: &#34;&#34;, &#34;&#34;: &#34;...&#34; } }
+     * @return This is a field that can be used to capture information about the environment. It is suggested for this field to contain information that details environment variables, filesystem information, and the present working directory. The recommended structure of this field is: &#34;environment&#34;: { &#34;custom_values&#34;: { &#34;variables&#34;: &#34;&#34;, &#34;filesystem&#34;: &#34;&#34;, &#34;workdir&#34;: &#34;&#34;, &#34;&#34;: &#34;...&#34; } }
      * 
-    */
+     */
     public EnvironmentResponse environment() {
         return this.environment;
     }
     /**
-     * Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: &#34;materials&#34;: [ { &#34;resource_uri&#34;: &#34;foo/bar&#34;, &#34;hashes&#34;: { &#34;sha256&#34;: &#34;ebebf...&#34;, : } } ]
+     * @return Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: &#34;materials&#34;: [ { &#34;resource_uri&#34;: &#34;foo/bar&#34;, &#34;hashes&#34;: { &#34;sha256&#34;: &#34;ebebf...&#34;, : } } ]
      * 
-    */
+     */
     public List<GrafeasV1beta1IntotoArtifactResponse> materials() {
         return this.materials;
     }
     /**
-     * Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
+     * @return Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
      * 
-    */
+     */
     public List<GrafeasV1beta1IntotoArtifactResponse> products() {
         return this.products;
     }

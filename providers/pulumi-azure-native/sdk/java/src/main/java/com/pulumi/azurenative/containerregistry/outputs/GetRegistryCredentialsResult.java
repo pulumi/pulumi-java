@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRegistryCredentialsResult {
     /**
-     * The administrator password.
+     * @return The administrator password.
      * 
      */
     private final @Nullable String password;
     /**
-     * The administrator username.
+     * @return The administrator username.
      * 
      */
     private final @Nullable String username;
@@ -31,16 +31,16 @@ public final class GetRegistryCredentialsResult {
     }
 
     /**
-     * The administrator password.
+     * @return The administrator password.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The administrator username.
+     * @return The administrator username.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

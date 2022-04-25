@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse {
     /**
-     * Text in this cell.
+     * @return Text in this cell.
      * 
      */
     private final String text;
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellRespons
     }
 
     /**
-     * Text in this cell.
+     * @return Text in this cell.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

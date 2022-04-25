@@ -27,6 +27,10 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A longer, human-readable description for the AMI.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,11 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ebsBlockDevices")
     private @Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
+    /**
+     * @return Nested block describing an EBS block device that should be
+     * attached to created instances. The structure of this block is described below.
+     * 
+     */
     public Optional<Output<List<AmiFromInstanceEbsBlockDeviceArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
@@ -51,6 +60,11 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ephemeralBlockDevices")
     private @Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
+    /**
+     * @return Nested block describing an ephemeral block device that
+     * should be attached to created instances. The structure of this block is described below.
+     * 
+     */
     public Optional<Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
@@ -62,6 +76,10 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A region-unique name for the AMI.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -76,6 +94,13 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="snapshotWithoutReboot")
     private @Nullable Output<Boolean> snapshotWithoutReboot;
 
+    /**
+     * @return Boolean that overrides the behavior of stopping
+     * the instance before snapshotting. This is risky since it may cause a snapshot of an
+     * inconsistent filesystem state, but can be used to avoid downtime if the user otherwise
+     * guarantees that no filesystem writes will be underway at the time of snapshot.
+     * 
+     */
     public Optional<Output<Boolean>> snapshotWithoutReboot() {
         return Optional.ofNullable(this.snapshotWithoutReboot);
     }
@@ -87,6 +112,10 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceInstanceId", required=true)
     private Output<String> sourceInstanceId;
 
+    /**
+     * @return The id of the instance to use as the basis of the AMI.
+     * 
+     */
     public Output<String> sourceInstanceId() {
         return this.sourceInstanceId;
     }
@@ -98,6 +127,10 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -132,73 +165,181 @@ public final class AmiFromInstanceArgs extends com.pulumi.resources.ResourceArgs
             $ = new AmiFromInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A longer, human-readable description for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A longer, human-readable description for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(@Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(List<AmiFromInstanceEbsBlockDeviceArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
+        /**
+         * @param ebsBlockDevices Nested block describing an EBS block device that should be
+         * attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(AmiFromInstanceEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(List<AmiFromInstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param ephemeralBlockDevices Nested block describing an ephemeral block device that
+         * should be attached to created instances. The structure of this block is described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(AmiFromInstanceEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param name A region-unique name for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A region-unique name for the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param snapshotWithoutReboot Boolean that overrides the behavior of stopping
+         * the instance before snapshotting. This is risky since it may cause a snapshot of an
+         * inconsistent filesystem state, but can be used to avoid downtime if the user otherwise
+         * guarantees that no filesystem writes will be underway at the time of snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotWithoutReboot(@Nullable Output<Boolean> snapshotWithoutReboot) {
             $.snapshotWithoutReboot = snapshotWithoutReboot;
             return this;
         }
 
+        /**
+         * @param snapshotWithoutReboot Boolean that overrides the behavior of stopping
+         * the instance before snapshotting. This is risky since it may cause a snapshot of an
+         * inconsistent filesystem state, but can be used to avoid downtime if the user otherwise
+         * guarantees that no filesystem writes will be underway at the time of snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotWithoutReboot(Boolean snapshotWithoutReboot) {
             return snapshotWithoutReboot(Output.of(snapshotWithoutReboot));
         }
 
+        /**
+         * @param sourceInstanceId The id of the instance to use as the basis of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstanceId(Output<String> sourceInstanceId) {
             $.sourceInstanceId = sourceInstanceId;
             return this;
         }
 
+        /**
+         * @param sourceInstanceId The id of the instance to use as the basis of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstanceId(String sourceInstanceId) {
             return sourceInstanceId(Output.of(sourceInstanceId));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

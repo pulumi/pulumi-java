@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccessPolicyResult {
     /**
-     * The ARN of the access policy.
+     * @return The ARN of the access policy.
      * 
      */
     private final @Nullable String accessPolicyArn;
     /**
-     * The ID of the access policy.
+     * @return The ID of the access policy.
      * 
      */
     private final @Nullable String accessPolicyId;
     /**
-     * The identity for this access policy. Choose either a user or a group but not both.
+     * @return The identity for this access policy. Choose either a user or a group but not both.
      * 
      */
     private final @Nullable AccessPolicyIdentity accessPolicyIdentity;
     /**
-     * The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
+     * @return The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
      * 
      */
     private final @Nullable String accessPolicyPermission;
     /**
-     * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
+     * @return The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
      * 
      */
     private final @Nullable AccessPolicyResource accessPolicyResource;
@@ -54,37 +54,37 @@ public final class GetAccessPolicyResult {
     }
 
     /**
-     * The ARN of the access policy.
+     * @return The ARN of the access policy.
      * 
-    */
+     */
     public Optional<String> accessPolicyArn() {
         return Optional.ofNullable(this.accessPolicyArn);
     }
     /**
-     * The ID of the access policy.
+     * @return The ID of the access policy.
      * 
-    */
+     */
     public Optional<String> accessPolicyId() {
         return Optional.ofNullable(this.accessPolicyId);
     }
     /**
-     * The identity for this access policy. Choose either a user or a group but not both.
+     * @return The identity for this access policy. Choose either a user or a group but not both.
      * 
-    */
+     */
     public Optional<AccessPolicyIdentity> accessPolicyIdentity() {
         return Optional.ofNullable(this.accessPolicyIdentity);
     }
     /**
-     * The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
+     * @return The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
      * 
-    */
+     */
     public Optional<String> accessPolicyPermission() {
         return Optional.ofNullable(this.accessPolicyPermission);
     }
     /**
-     * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
+     * @return The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
      * 
-    */
+     */
     public Optional<AccessPolicyResource> accessPolicyResource() {
         return Optional.ofNullable(this.accessPolicyResource);
     }

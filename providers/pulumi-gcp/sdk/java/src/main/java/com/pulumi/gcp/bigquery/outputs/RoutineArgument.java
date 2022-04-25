@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoutineArgument {
     /**
-     * Defaults to FIXED_TYPE.
+     * @return Defaults to FIXED_TYPE.
      * Default value is `FIXED_TYPE`.
      * Possible values are `FIXED_TYPE` and `ANY_TYPE`.
      * 
      */
     private final @Nullable String argumentKind;
     /**
-     * A JSON schema for the data type. Required unless argumentKind = ANY_TYPE.
+     * @return A JSON schema for the data type. Required unless argumentKind = ANY_TYPE.
      * ~&gt;**NOTE**: Because this field expects a JSON string, any changes to the string
      * will create a diff, even if the JSON itself hasn&#39;t changed. If the API returns
      * a different value for the same schema, e.g. it switched the order of values
@@ -30,13 +30,13 @@ public final class RoutineArgument {
      */
     private final @Nullable String dataType;
     /**
-     * Specifies whether the argument is input or output. Can be set for procedures only.
+     * @return Specifies whether the argument is input or output. Can be set for procedures only.
      * Possible values are `IN`, `OUT`, and `INOUT`.
      * 
      */
     private final @Nullable String mode;
     /**
-     * The name of this argument. Can be absent for function return argument.
+     * @return The name of this argument. Can be absent for function return argument.
      * 
      */
     private final @Nullable String name;
@@ -54,16 +54,16 @@ public final class RoutineArgument {
     }
 
     /**
-     * Defaults to FIXED_TYPE.
+     * @return Defaults to FIXED_TYPE.
      * Default value is `FIXED_TYPE`.
      * Possible values are `FIXED_TYPE` and `ANY_TYPE`.
      * 
-    */
+     */
     public Optional<String> argumentKind() {
         return Optional.ofNullable(this.argumentKind);
     }
     /**
-     * A JSON schema for the data type. Required unless argumentKind = ANY_TYPE.
+     * @return A JSON schema for the data type. Required unless argumentKind = ANY_TYPE.
      * ~&gt;**NOTE**: Because this field expects a JSON string, any changes to the string
      * will create a diff, even if the JSON itself hasn&#39;t changed. If the API returns
      * a different value for the same schema, e.g. it switched the order of values
@@ -71,22 +71,22 @@ public final class RoutineArgument {
      * suppress the recurring diff this causes. As a workaround, we recommend using
      * the schema as returned by the API.
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * Specifies whether the argument is input or output. Can be set for procedures only.
+     * @return Specifies whether the argument is input or output. Can be set for procedures only.
      * Possible values are `IN`, `OUT`, and `INOUT`.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The name of this argument. Can be absent for function return argument.
+     * @return The name of this argument. Can be absent for function return argument.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

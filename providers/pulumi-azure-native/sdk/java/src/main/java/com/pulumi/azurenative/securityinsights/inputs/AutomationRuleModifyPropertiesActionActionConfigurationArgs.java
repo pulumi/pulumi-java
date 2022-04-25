@@ -34,6 +34,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="classification")
     private @Nullable Output<Either<String,IncidentClassification>> classification;
 
+    /**
+     * @return The reason the incident was closed
+     * 
+     */
     public Optional<Output<Either<String,IncidentClassification>>> classification() {
         return Optional.ofNullable(this.classification);
     }
@@ -45,6 +49,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="classificationComment")
     private @Nullable Output<String> classificationComment;
 
+    /**
+     * @return Describes the reason the incident was closed
+     * 
+     */
     public Optional<Output<String>> classificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
@@ -56,6 +64,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="classificationReason")
     private @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
+    /**
+     * @return The classification reason to close the incident with
+     * 
+     */
     public Optional<Output<Either<String,IncidentClassificationReason>>> classificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
@@ -67,6 +79,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="labels")
     private @Nullable Output<List<IncidentLabelArgs>> labels;
 
+    /**
+     * @return List of labels to add to the incident
+     * 
+     */
     public Optional<Output<List<IncidentLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -78,6 +94,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="owner")
     private @Nullable Output<IncidentOwnerInfoArgs> owner;
 
+    /**
+     * @return Describes a user that the incident is assigned to
+     * 
+     */
     public Optional<Output<IncidentOwnerInfoArgs>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -89,6 +109,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="severity")
     private @Nullable Output<Either<String,IncidentSeverity>> severity;
 
+    /**
+     * @return The severity of the incident
+     * 
+     */
     public Optional<Output<Either<String,IncidentSeverity>>> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -100,6 +124,10 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     @Import(name="status")
     private @Nullable Output<Either<String,IncidentStatus>> status;
 
+    /**
+     * @return The status of the incident
+     * 
+     */
     public Optional<Output<Either<String,IncidentStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -134,101 +162,239 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
             $ = new AutomationRuleModifyPropertiesActionActionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(@Nullable Output<Either<String,IncidentClassification>> classification) {
             $.classification = classification;
             return this;
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(Either<String,IncidentClassification> classification) {
             return classification(Output.of(classification));
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(String classification) {
             return classification(Either.ofLeft(classification));
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(IncidentClassification classification) {
             return classification(Either.ofRight(classification));
         }
 
+        /**
+         * @param classificationComment Describes the reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationComment(@Nullable Output<String> classificationComment) {
             $.classificationComment = classificationComment;
             return this;
         }
 
+        /**
+         * @param classificationComment Describes the reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationComment(String classificationComment) {
             return classificationComment(Output.of(classificationComment));
         }
 
+        /**
+         * @param classificationReason The classification reason to close the incident with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
             $.classificationReason = classificationReason;
             return this;
         }
 
+        /**
+         * @param classificationReason The classification reason to close the incident with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(Either<String,IncidentClassificationReason> classificationReason) {
             return classificationReason(Output.of(classificationReason));
         }
 
+        /**
+         * @param classificationReason The classification reason to close the incident with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(String classificationReason) {
             return classificationReason(Either.ofLeft(classificationReason));
         }
 
+        /**
+         * @param classificationReason The classification reason to close the incident with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(IncidentClassificationReason classificationReason) {
             return classificationReason(Either.ofRight(classificationReason));
         }
 
+        /**
+         * @param labels List of labels to add to the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels List of labels to add to the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<IncidentLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels List of labels to add to the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(IncidentLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param owner Describes a user that the incident is assigned to
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner Describes a user that the incident is assigned to
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(IncidentOwnerInfoArgs owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Either<String,IncidentSeverity> severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             return severity(Either.ofLeft(severity));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(IncidentSeverity severity) {
             return severity(Either.ofRight(severity));
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,IncidentStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,IncidentStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(IncidentStatus status) {
             return status(Either.ofRight(status));
         }

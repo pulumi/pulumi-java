@@ -25,6 +25,10 @@ public final class WeeklyMaintenanceWindowArgs extends com.pulumi.resources.Reso
     @Import(name="day", required=true)
     private Output<WeeklyMaintenanceWindowDay> day;
 
+    /**
+     * @return The day of week that maintenance updates occur.
+     * 
+     */
     public Output<WeeklyMaintenanceWindowDay> day() {
         return this.day;
     }
@@ -36,6 +40,10 @@ public final class WeeklyMaintenanceWindowArgs extends com.pulumi.resources.Reso
     @Import(name="startTime", required=true)
     private Output<TimeOfDayArgs> startTime;
 
+    /**
+     * @return Start time of the window in UTC time.
+     * 
+     */
     public Output<TimeOfDayArgs> startTime() {
         return this.startTime;
     }
@@ -65,20 +73,44 @@ public final class WeeklyMaintenanceWindowArgs extends com.pulumi.resources.Reso
             $ = new WeeklyMaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day The day of week that maintenance updates occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Output<WeeklyMaintenanceWindowDay> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day The day of week that maintenance updates occur.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(WeeklyMaintenanceWindowDay day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param startTime Start time of the window in UTC time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<TimeOfDayArgs> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the window in UTC time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(TimeOfDayArgs startTime) {
             return startTime(Output.of(startTime));
         }

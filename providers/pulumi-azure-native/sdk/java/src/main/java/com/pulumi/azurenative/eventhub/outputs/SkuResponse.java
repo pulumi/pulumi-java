@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuResponse {
     /**
-     * The Event Hubs throughput units, value should be 0 to 20 throughput units.
+     * @return The Event Hubs throughput units, value should be 0 to 20 throughput units.
      * 
      */
     private final @Nullable Integer capacity;
     /**
-     * Name of this SKU.
+     * @return Name of this SKU.
      * 
      */
     private final String name;
     /**
-     * The billing tier of this particular SKU.
+     * @return The billing tier of this particular SKU.
      * 
      */
     private final @Nullable String tier;
@@ -39,23 +39,23 @@ public final class SkuResponse {
     }
 
     /**
-     * The Event Hubs throughput units, value should be 0 to 20 throughput units.
+     * @return The Event Hubs throughput units, value should be 0 to 20 throughput units.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Name of this SKU.
+     * @return Name of this SKU.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The billing tier of this particular SKU.
+     * @return The billing tier of this particular SKU.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

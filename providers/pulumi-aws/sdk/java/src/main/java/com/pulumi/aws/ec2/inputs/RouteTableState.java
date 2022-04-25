@@ -25,6 +25,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the route table.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return The ID of the AWS account that owns the route table.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -47,6 +55,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="propagatingVgws")
     private @Nullable Output<List<String>> propagatingVgws;
 
+    /**
+     * @return A list of virtual gateways for propagation.
+     * 
+     */
     public Optional<Output<List<String>>> propagatingVgws() {
         return Optional.ofNullable(this.propagatingVgws);
     }
@@ -58,6 +70,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="routes")
     private @Nullable Output<List<RouteTableRouteGetArgs>> routes;
 
+    /**
+     * @return A list of route objects. Their keys are documented below.
+     * 
+     */
     public Optional<Output<List<RouteTableRouteGetArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -69,6 +85,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -91,6 +115,10 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The VPC ID.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -125,73 +153,169 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
             $ = new RouteTableState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param ownerId The ID of the AWS account that owns the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId The ID of the AWS account that owns the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param propagatingVgws A list of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
             $.propagatingVgws = propagatingVgws;
             return this;
         }
 
+        /**
+         * @param propagatingVgws A list of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(List<String> propagatingVgws) {
             return propagatingVgws(Output.of(propagatingVgws));
         }
 
+        /**
+         * @param propagatingVgws A list of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(String... propagatingVgws) {
             return propagatingVgws(List.of(propagatingVgws));
         }
 
+        /**
+         * @param routes A list of route objects. Their keys are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<List<RouteTableRouteGetArgs>> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes A list of route objects. Their keys are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<RouteTableRouteGetArgs> routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param routes A list of route objects. Their keys are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(RouteTableRouteGetArgs... routes) {
             return routes(List.of(routes));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param vpcId The VPC ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The VPC ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

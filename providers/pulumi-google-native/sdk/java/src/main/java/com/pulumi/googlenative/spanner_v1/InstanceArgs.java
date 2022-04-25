@@ -24,6 +24,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
     private Output<String> config;
 
+    /**
+     * @return The name of the instance&#39;s configuration. Values are of the form `projects//instanceConfigs/`. See also InstanceConfig and ListInstanceConfigs.
+     * 
+     */
     public Output<String> config() {
         return this.config;
     }
@@ -35,6 +39,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -46,6 +54,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return The ID of the instance to create. Valid identifiers are of the form `a-z*[a-z0-9]` and must be between 2 and 64 characters in length.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -57,6 +69,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer&#39;s organizational needs and deployment strategies. Cloud Labels can be used to filter collections of resources. They can be used to control how resource metrics are aggregated. And they can be used as arguments to policy management rules (e.g. route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `a-z{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `[a-z0-9_-]{0,63}`. * No more than 64 labels can be associated with a given resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan to use labels in your own code, please note that additional characters may be allowed in the future. And so you are advised to use an internal label representation, such as JSON, which doesn&#39;t rely upon specific characters being disallowed. For example, representing labels as the string: name + &#34;_&#34; + value would prove problematic if we were to allow &#34;_&#34; in a future release.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -68,6 +84,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique identifier for the instance, which cannot be changed after the instance is created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of the name must be between 2 and 64 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +99,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeCount")
     private @Nullable Output<Integer> nodeCount;
 
+    /**
+     * @return The number of nodes allocated to this instance. At most one of either node_count or processing_units should be present in the message. This may be zero in API responses for instances that are not yet in state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information about nodes and processing units.
+     * 
+     */
     public Optional<Output<Integer>> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
@@ -90,6 +114,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="processingUnits")
     private @Nullable Output<Integer> processingUnits;
 
+    /**
+     * @return The number of processing units allocated to this instance. At most one of processing_units or node_count should be present in the message. This may be zero in API responses for instances that are not yet in state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information about nodes and processing units.
+     * 
+     */
     public Optional<Output<Integer>> processingUnits() {
         return Optional.ofNullable(this.processingUnits);
     }
@@ -132,65 +160,149 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The name of the instance&#39;s configuration. Values are of the form `projects//instanceConfigs/`. See also InstanceConfig and ListInstanceConfigs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<String> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The name of the instance&#39;s configuration. Values are of the form `projects//instanceConfigs/`. See also InstanceConfig and ListInstanceConfigs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(String config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param displayName The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param instanceId The ID of the instance to create. Valid identifiers are of the form `a-z*[a-z0-9]` and must be between 2 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The ID of the instance to create. Valid identifiers are of the form `a-z*[a-z0-9]` and must be between 2 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param labels Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer&#39;s organizational needs and deployment strategies. Cloud Labels can be used to filter collections of resources. They can be used to control how resource metrics are aggregated. And they can be used as arguments to policy management rules (e.g. route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `a-z{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `[a-z0-9_-]{0,63}`. * No more than 64 labels can be associated with a given resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan to use labels in your own code, please note that additional characters may be allowed in the future. And so you are advised to use an internal label representation, such as JSON, which doesn&#39;t rely upon specific characters being disallowed. For example, representing labels as the string: name + &#34;_&#34; + value would prove problematic if we were to allow &#34;_&#34; in a future release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer&#39;s organizational needs and deployment strategies. Cloud Labels can be used to filter collections of resources. They can be used to control how resource metrics are aggregated. And they can be used as arguments to policy management rules (e.g. route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `a-z{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `[a-z0-9_-]{0,63}`. * No more than 64 labels can be associated with a given resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan to use labels in your own code, please note that additional characters may be allowed in the future. And so you are advised to use an internal label representation, such as JSON, which doesn&#39;t rely upon specific characters being disallowed. For example, representing labels as the string: name + &#34;_&#34; + value would prove problematic if we were to allow &#34;_&#34; in a future release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name A unique identifier for the instance, which cannot be changed after the instance is created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of the name must be between 2 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique identifier for the instance, which cannot be changed after the instance is created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of the name must be between 2 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeCount The number of nodes allocated to this instance. At most one of either node_count or processing_units should be present in the message. This may be zero in API responses for instances that are not yet in state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information about nodes and processing units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             $.nodeCount = nodeCount;
             return this;
         }
 
+        /**
+         * @param nodeCount The number of nodes allocated to this instance. At most one of either node_count or processing_units should be present in the message. This may be zero in API responses for instances that are not yet in state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information about nodes and processing units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(Integer nodeCount) {
             return nodeCount(Output.of(nodeCount));
         }
 
+        /**
+         * @param processingUnits The number of processing units allocated to this instance. At most one of processing_units or node_count should be present in the message. This may be zero in API responses for instances that are not yet in state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information about nodes and processing units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingUnits(@Nullable Output<Integer> processingUnits) {
             $.processingUnits = processingUnits;
             return this;
         }
 
+        /**
+         * @param processingUnits The number of processing units allocated to this instance. At most one of processing_units or node_count should be present in the message. This may be zero in API responses for instances that are not yet in state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information about nodes and processing units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingUnits(Integer processingUnits) {
             return processingUnits(Output.of(processingUnits));
         }

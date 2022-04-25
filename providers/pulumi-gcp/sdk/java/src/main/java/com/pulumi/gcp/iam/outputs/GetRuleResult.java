@@ -11,23 +11,23 @@ import java.util.Objects;
 @CustomType
 public final class GetRuleResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
+     * @return specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
      * 
      */
     private final List<String> includedPermissions;
     private final String name;
     /**
-     * indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
+     * @return indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
      * 
      */
     private final String stage;
     /**
-     * is a friendly title for the role, such as &#34;Role Viewer&#34;
+     * @return is a friendly title for the role, such as &#34;Role Viewer&#34;
      * 
      */
     private final String title;
@@ -47,16 +47,16 @@ public final class GetRuleResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
+     * @return specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
      * 
-    */
+     */
     public List<String> includedPermissions() {
         return this.includedPermissions;
     }
@@ -64,16 +64,16 @@ public final class GetRuleResult {
         return this.name;
     }
     /**
-     * indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
+     * @return indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
      * 
-    */
+     */
     public String stage() {
         return this.stage;
     }
     /**
-     * is a friendly title for the role, such as &#34;Role Viewer&#34;
+     * @return is a friendly title for the role, such as &#34;Role Viewer&#34;
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

@@ -24,6 +24,10 @@ public final class AllowedCSIDriverArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name is the registered name of the CSI driver
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class AllowedCSIDriverArgs extends com.pulumi.resources.ResourceArg
             $ = new AllowedCSIDriverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name is the registered name of the CSI driver
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name is the registered name of the CSI driver
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

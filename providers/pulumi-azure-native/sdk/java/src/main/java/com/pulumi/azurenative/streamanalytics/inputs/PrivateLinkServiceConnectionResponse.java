@@ -27,6 +27,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="groupIds")
     private @Nullable List<String> groupIds;
 
+    /**
+     * @return The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
+     * 
+     */
     public Optional<List<String>> groupIds() {
         return Optional.ofNullable(this.groupIds);
     }
@@ -38,6 +42,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return A collection of read-only information about the state of the connection to the private remote resource.
+     * 
+     */
     public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -49,6 +57,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="privateLinkServiceId")
     private @Nullable String privateLinkServiceId;
 
+    /**
+     * @return The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.
+     * 
+     */
     public Optional<String> privateLinkServiceId() {
         return Optional.ofNullable(this.privateLinkServiceId);
     }
@@ -60,6 +72,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
     @Import(name="requestMessage")
     private @Nullable String requestMessage;
 
+    /**
+     * @return A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+     * 
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -91,25 +107,55 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
             $ = new PrivateLinkServiceConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIds The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(@Nullable List<String> groupIds) {
             $.groupIds = groupIds;
             return this;
         }
 
+        /**
+         * @param groupIds The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState A collection of read-only information about the state of the connection to the private remote resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceId The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
             $.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
 
+        /**
+         * @param requestMessage A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable String requestMessage) {
             $.requestMessage = requestMessage;
             return this;

@@ -19,6 +19,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateName", required=true)
     private String certificateName;
 
+    /**
+     * @return The name for the certificate.
+     * 
+     */
     public String certificateName() {
         return this.certificateName;
     }
@@ -47,6 +51,12 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName The name for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             $.certificateName = certificateName;
             return this;

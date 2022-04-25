@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataTransferConfigScheduleOptions {
     /**
-     * If true, automatic scheduling of data transfer runs for this
+     * @return If true, automatic scheduling of data transfer runs for this
      * configuration will be disabled. The runs can be started on ad-hoc
      * basis using transferConfigs.startManualRuns API. When automatic
      * scheduling is disabled, the TransferConfig.schedule field will
@@ -22,7 +22,7 @@ public final class DataTransferConfigScheduleOptions {
      */
     private final @Nullable Boolean disableAutoScheduling;
     /**
-     * Defines time to stop scheduling transfer runs. A transfer run cannot be
+     * @return Defines time to stop scheduling transfer runs. A transfer run cannot be
      * scheduled at or after the end time. The end time can be changed at any
      * moment. The time when a data transfer can be triggered manually is not
      * limited by this option.
@@ -30,7 +30,7 @@ public final class DataTransferConfigScheduleOptions {
      */
     private final @Nullable String endTime;
     /**
-     * Specifies time to start scheduling transfer runs. The first run will be
+     * @return Specifies time to start scheduling transfer runs. The first run will be
      * scheduled at or after the start time according to a recurrence pattern
      * defined in the schedule string. The start time can be changed at any
      * moment. The time when a data transfer can be triggered manually is not
@@ -50,34 +50,34 @@ public final class DataTransferConfigScheduleOptions {
     }
 
     /**
-     * If true, automatic scheduling of data transfer runs for this
+     * @return If true, automatic scheduling of data transfer runs for this
      * configuration will be disabled. The runs can be started on ad-hoc
      * basis using transferConfigs.startManualRuns API. When automatic
      * scheduling is disabled, the TransferConfig.schedule field will
      * be ignored.
      * 
-    */
+     */
     public Optional<Boolean> disableAutoScheduling() {
         return Optional.ofNullable(this.disableAutoScheduling);
     }
     /**
-     * Defines time to stop scheduling transfer runs. A transfer run cannot be
+     * @return Defines time to stop scheduling transfer runs. A transfer run cannot be
      * scheduled at or after the end time. The end time can be changed at any
      * moment. The time when a data transfer can be triggered manually is not
      * limited by this option.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Specifies time to start scheduling transfer runs. The first run will be
+     * @return Specifies time to start scheduling transfer runs. The first run will be
      * scheduled at or after the start time according to a recurrence pattern
      * defined in the schedule string. The start time can be changed at any
      * moment. The time when a data transfer can be triggered manually is not
      * limited by this option.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }

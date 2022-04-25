@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class QueryParameterValueResponse {
     /**
-     * [Optional] The array values, if this is an array type.
+     * @return [Optional] The array values, if this is an array type.
      * 
      */
     private final List<QueryParameterValueResponse> arrayValues;
     /**
-     * [Optional] The struct field values, in order of the struct type&#39;s declaration.
+     * @return [Optional] The struct field values, in order of the struct type&#39;s declaration.
      * 
      */
     private final Map<String,String> structValues;
     /**
-     * [Optional] The value of this value, if a simple scalar type.
+     * @return [Optional] The value of this value, if a simple scalar type.
      * 
      */
     private final String value;
@@ -38,23 +38,23 @@ public final class QueryParameterValueResponse {
     }
 
     /**
-     * [Optional] The array values, if this is an array type.
+     * @return [Optional] The array values, if this is an array type.
      * 
-    */
+     */
     public List<QueryParameterValueResponse> arrayValues() {
         return this.arrayValues;
     }
     /**
-     * [Optional] The struct field values, in order of the struct type&#39;s declaration.
+     * @return [Optional] The struct field values, in order of the struct type&#39;s declaration.
      * 
-    */
+     */
     public Map<String,String> structValues() {
         return this.structValues;
     }
     /**
-     * [Optional] The value of this value, if a simple scalar type.
+     * @return [Optional] The value of this value, if a simple scalar type.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

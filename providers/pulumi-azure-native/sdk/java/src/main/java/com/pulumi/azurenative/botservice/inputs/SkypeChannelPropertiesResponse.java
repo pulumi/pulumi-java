@@ -26,6 +26,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="callingWebHook")
     private @Nullable String callingWebHook;
 
+    /**
+     * @return Calling web hook for Skype channel
+     * 
+     */
     public Optional<String> callingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
@@ -37,6 +41,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="enableCalling")
     private @Nullable Boolean enableCalling;
 
+    /**
+     * @return Enable calling for Skype channel
+     * 
+     */
     public Optional<Boolean> enableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
@@ -48,6 +56,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="enableGroups")
     private @Nullable Boolean enableGroups;
 
+    /**
+     * @return Enable groups for Skype channel
+     * 
+     */
     public Optional<Boolean> enableGroups() {
         return Optional.ofNullable(this.enableGroups);
     }
@@ -59,6 +71,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="enableMediaCards")
     private @Nullable Boolean enableMediaCards;
 
+    /**
+     * @return Enable media cards for Skype channel
+     * 
+     */
     public Optional<Boolean> enableMediaCards() {
         return Optional.ofNullable(this.enableMediaCards);
     }
@@ -70,6 +86,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="enableMessaging")
     private @Nullable Boolean enableMessaging;
 
+    /**
+     * @return Enable messaging for Skype channel
+     * 
+     */
     public Optional<Boolean> enableMessaging() {
         return Optional.ofNullable(this.enableMessaging);
     }
@@ -81,6 +101,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="enableScreenSharing")
     private @Nullable Boolean enableScreenSharing;
 
+    /**
+     * @return Enable screen sharing for Skype channel
+     * 
+     */
     public Optional<Boolean> enableScreenSharing() {
         return Optional.ofNullable(this.enableScreenSharing);
     }
@@ -92,6 +116,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="enableVideo")
     private @Nullable Boolean enableVideo;
 
+    /**
+     * @return Enable video for Skype channel
+     * 
+     */
     public Optional<Boolean> enableVideo() {
         return Optional.ofNullable(this.enableVideo);
     }
@@ -103,6 +131,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="groupsMode")
     private @Nullable String groupsMode;
 
+    /**
+     * @return Group mode for Skype channel
+     * 
+     */
     public Optional<String> groupsMode() {
         return Optional.ofNullable(this.groupsMode);
     }
@@ -114,6 +146,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="incomingCallRoute")
     private @Nullable String incomingCallRoute;
 
+    /**
+     * @return Incoming call route for Skype channel
+     * 
+     */
     public Optional<String> incomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
@@ -125,6 +161,10 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -162,51 +202,111 @@ public final class SkypeChannelPropertiesResponse extends com.pulumi.resources.I
             $ = new SkypeChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callingWebHook Calling web hook for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder callingWebHook(@Nullable String callingWebHook) {
             $.callingWebHook = callingWebHook;
             return this;
         }
 
+        /**
+         * @param enableCalling Enable calling for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCalling(@Nullable Boolean enableCalling) {
             $.enableCalling = enableCalling;
             return this;
         }
 
+        /**
+         * @param enableGroups Enable groups for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableGroups(@Nullable Boolean enableGroups) {
             $.enableGroups = enableGroups;
             return this;
         }
 
+        /**
+         * @param enableMediaCards Enable media cards for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMediaCards(@Nullable Boolean enableMediaCards) {
             $.enableMediaCards = enableMediaCards;
             return this;
         }
 
+        /**
+         * @param enableMessaging Enable messaging for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMessaging(@Nullable Boolean enableMessaging) {
             $.enableMessaging = enableMessaging;
             return this;
         }
 
+        /**
+         * @param enableScreenSharing Enable screen sharing for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableScreenSharing(@Nullable Boolean enableScreenSharing) {
             $.enableScreenSharing = enableScreenSharing;
             return this;
         }
 
+        /**
+         * @param enableVideo Enable video for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVideo(@Nullable Boolean enableVideo) {
             $.enableVideo = enableVideo;
             return this;
         }
 
+        /**
+         * @param groupsMode Group mode for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupsMode(@Nullable String groupsMode) {
             $.groupsMode = groupsMode;
             return this;
         }
 
+        /**
+         * @param incomingCallRoute Incoming call route for Skype channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             $.incomingCallRoute = incomingCallRoute;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;

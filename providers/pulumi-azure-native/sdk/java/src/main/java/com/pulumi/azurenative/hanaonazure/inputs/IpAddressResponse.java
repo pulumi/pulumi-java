@@ -25,6 +25,10 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return Specifies the IP address of the network interface.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -53,6 +57,12 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IpAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress Specifies the IP address of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;

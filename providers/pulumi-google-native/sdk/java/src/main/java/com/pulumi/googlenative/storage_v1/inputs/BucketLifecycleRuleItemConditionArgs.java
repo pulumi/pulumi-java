@@ -29,6 +29,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="age")
     private @Nullable Output<Integer> age;
 
+    /**
+     * @return Age of an object (in days). This condition is satisfied when an object reaches the specified age.
+     * 
+     */
     public Optional<Output<Integer>> age() {
         return Optional.ofNullable(this.age);
     }
@@ -40,6 +44,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="createdBefore")
     private @Nullable Output<String> createdBefore;
 
+    /**
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when an object is created before midnight of the specified date in UTC.
+     * 
+     */
     public Optional<Output<String>> createdBefore() {
         return Optional.ofNullable(this.createdBefore);
     }
@@ -51,6 +59,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="customTimeBefore")
     private @Nullable Output<String> customTimeBefore;
 
+    /**
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the custom time on an object is before this date in UTC.
+     * 
+     */
     public Optional<Output<String>> customTimeBefore() {
         return Optional.ofNullable(this.customTimeBefore);
     }
@@ -62,6 +74,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="daysSinceCustomTime")
     private @Nullable Output<Integer> daysSinceCustomTime;
 
+    /**
+     * @return Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
+     * 
+     */
     public Optional<Output<Integer>> daysSinceCustomTime() {
         return Optional.ofNullable(this.daysSinceCustomTime);
     }
@@ -73,6 +89,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="daysSinceNoncurrentTime")
     private @Nullable Output<Integer> daysSinceNoncurrentTime;
 
+    /**
+     * @return Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it&#39;s zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
+     * 
+     */
     public Optional<Output<Integer>> daysSinceNoncurrentTime() {
         return Optional.ofNullable(this.daysSinceNoncurrentTime);
     }
@@ -84,6 +104,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="isLive")
     private @Nullable Output<Boolean> isLive;
 
+    /**
+     * @return Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
+     * 
+     */
     public Optional<Output<Boolean>> isLive() {
         return Optional.ofNullable(this.isLive);
     }
@@ -95,6 +119,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="matchesPattern")
     private @Nullable Output<String> matchesPattern;
 
+    /**
+     * @return A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the &#34;Early Access&#34; launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
+     * 
+     */
     public Optional<Output<String>> matchesPattern() {
         return Optional.ofNullable(this.matchesPattern);
     }
@@ -106,6 +134,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="matchesStorageClass")
     private @Nullable Output<List<String>> matchesStorageClass;
 
+    /**
+     * @return Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
+     * 
+     */
     public Optional<Output<List<String>>> matchesStorageClass() {
         return Optional.ofNullable(this.matchesStorageClass);
     }
@@ -117,6 +149,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="noncurrentTimeBefore")
     private @Nullable Output<String> noncurrentTimeBefore;
 
+    /**
+     * @return A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
+     * 
+     */
     public Optional<Output<String>> noncurrentTimeBefore() {
         return Optional.ofNullable(this.noncurrentTimeBefore);
     }
@@ -128,6 +164,10 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
     @Import(name="numNewerVersions")
     private @Nullable Output<Integer> numNewerVersions;
 
+    /**
+     * @return Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
+     * 
+     */
     public Optional<Output<Integer>> numNewerVersions() {
         return Optional.ofNullable(this.numNewerVersions);
     }
@@ -165,96 +205,222 @@ public final class BucketLifecycleRuleItemConditionArgs extends com.pulumi.resou
             $ = new BucketLifecycleRuleItemConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param age Age of an object (in days). This condition is satisfied when an object reaches the specified age.
+         * 
+         * @return builder
+         * 
+         */
         public Builder age(@Nullable Output<Integer> age) {
             $.age = age;
             return this;
         }
 
+        /**
+         * @param age Age of an object (in days). This condition is satisfied when an object reaches the specified age.
+         * 
+         * @return builder
+         * 
+         */
         public Builder age(Integer age) {
             return age(Output.of(age));
         }
 
+        /**
+         * @param createdBefore A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when an object is created before midnight of the specified date in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBefore(@Nullable Output<String> createdBefore) {
             $.createdBefore = createdBefore;
             return this;
         }
 
+        /**
+         * @param createdBefore A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when an object is created before midnight of the specified date in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBefore(String createdBefore) {
             return createdBefore(Output.of(createdBefore));
         }
 
+        /**
+         * @param customTimeBefore A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the custom time on an object is before this date in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTimeBefore(@Nullable Output<String> customTimeBefore) {
             $.customTimeBefore = customTimeBefore;
             return this;
         }
 
+        /**
+         * @param customTimeBefore A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the custom time on an object is before this date in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customTimeBefore(String customTimeBefore) {
             return customTimeBefore(Output.of(customTimeBefore));
         }
 
+        /**
+         * @param daysSinceCustomTime Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysSinceCustomTime(@Nullable Output<Integer> daysSinceCustomTime) {
             $.daysSinceCustomTime = daysSinceCustomTime;
             return this;
         }
 
+        /**
+         * @param daysSinceCustomTime Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysSinceCustomTime(Integer daysSinceCustomTime) {
             return daysSinceCustomTime(Output.of(daysSinceCustomTime));
         }
 
+        /**
+         * @param daysSinceNoncurrentTime Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it&#39;s zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysSinceNoncurrentTime(@Nullable Output<Integer> daysSinceNoncurrentTime) {
             $.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
             return this;
         }
 
+        /**
+         * @param daysSinceNoncurrentTime Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it&#39;s zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysSinceNoncurrentTime(Integer daysSinceNoncurrentTime) {
             return daysSinceNoncurrentTime(Output.of(daysSinceNoncurrentTime));
         }
 
+        /**
+         * @param isLive Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLive(@Nullable Output<Boolean> isLive) {
             $.isLive = isLive;
             return this;
         }
 
+        /**
+         * @param isLive Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLive(Boolean isLive) {
             return isLive(Output.of(isLive));
         }
 
+        /**
+         * @param matchesPattern A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the &#34;Early Access&#34; launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchesPattern(@Nullable Output<String> matchesPattern) {
             $.matchesPattern = matchesPattern;
             return this;
         }
 
+        /**
+         * @param matchesPattern A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the &#34;Early Access&#34; launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchesPattern(String matchesPattern) {
             return matchesPattern(Output.of(matchesPattern));
         }
 
+        /**
+         * @param matchesStorageClass Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchesStorageClass(@Nullable Output<List<String>> matchesStorageClass) {
             $.matchesStorageClass = matchesStorageClass;
             return this;
         }
 
+        /**
+         * @param matchesStorageClass Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchesStorageClass(List<String> matchesStorageClass) {
             return matchesStorageClass(Output.of(matchesStorageClass));
         }
 
+        /**
+         * @param matchesStorageClass Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchesStorageClass(String... matchesStorageClass) {
             return matchesStorageClass(List.of(matchesStorageClass));
         }
 
+        /**
+         * @param noncurrentTimeBefore A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentTimeBefore(@Nullable Output<String> noncurrentTimeBefore) {
             $.noncurrentTimeBefore = noncurrentTimeBefore;
             return this;
         }
 
+        /**
+         * @param noncurrentTimeBefore A date in RFC 3339 format with only the date part (for instance, &#34;2013-01-15&#34;). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentTimeBefore(String noncurrentTimeBefore) {
             return noncurrentTimeBefore(Output.of(noncurrentTimeBefore));
         }
 
+        /**
+         * @param numNewerVersions Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numNewerVersions(@Nullable Output<Integer> numNewerVersions) {
             $.numNewerVersions = numNewerVersions;
             return this;
         }
 
+        /**
+         * @param numNewerVersions Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numNewerVersions(Integer numNewerVersions) {
             return numNewerVersions(Output.of(numNewerVersions));
         }

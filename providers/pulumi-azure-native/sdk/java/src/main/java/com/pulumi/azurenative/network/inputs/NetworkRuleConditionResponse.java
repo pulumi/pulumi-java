@@ -27,6 +27,10 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the rule condition.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="destinationAddresses")
     private @Nullable List<String> destinationAddresses;
 
+    /**
+     * @return List of destination IP addresses or Service Tags.
+     * 
+     */
     public Optional<List<String>> destinationAddresses() {
         return Optional.ofNullable(this.destinationAddresses);
     }
@@ -49,6 +57,10 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="destinationIpGroups")
     private @Nullable List<String> destinationIpGroups;
 
+    /**
+     * @return List of destination IpGroups for this rule.
+     * 
+     */
     public Optional<List<String>> destinationIpGroups() {
         return Optional.ofNullable(this.destinationIpGroups);
     }
@@ -60,6 +72,10 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="destinationPorts")
     private @Nullable List<String> destinationPorts;
 
+    /**
+     * @return List of destination ports.
+     * 
+     */
     public Optional<List<String>> destinationPorts() {
         return Optional.ofNullable(this.destinationPorts);
     }
@@ -71,6 +87,10 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="ipProtocols")
     private @Nullable List<String> ipProtocols;
 
+    /**
+     * @return Array of FirewallPolicyRuleConditionNetworkProtocols.
+     * 
+     */
     public Optional<List<String>> ipProtocols() {
         return Optional.ofNullable(this.ipProtocols);
     }
@@ -82,6 +102,10 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the rule condition.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -94,6 +118,11 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="ruleConditionType", required=true)
     private String ruleConditionType;
 
+    /**
+     * @return Rule Condition Type.
+     * Expected value is &#39;NetworkRuleCondition&#39;.
+     * 
+     */
     public String ruleConditionType() {
         return this.ruleConditionType;
     }
@@ -105,6 +134,10 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="sourceAddresses")
     private @Nullable List<String> sourceAddresses;
 
+    /**
+     * @return List of source IP addresses for this rule.
+     * 
+     */
     public Optional<List<String>> sourceAddresses() {
         return Optional.ofNullable(this.sourceAddresses);
     }
@@ -116,6 +149,10 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
     @Import(name="sourceIpGroups")
     private @Nullable List<String> sourceIpGroups;
 
+    /**
+     * @return List of source IpGroups for this rule.
+     * 
+     */
     public Optional<List<String>> sourceIpGroups() {
         return Optional.ofNullable(this.sourceIpGroups);
     }
@@ -152,71 +189,162 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
             $ = new NetworkRuleConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the rule condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses or Service Tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             $.destinationAddresses = destinationAddresses;
             return this;
         }
 
+        /**
+         * @param destinationAddresses List of destination IP addresses or Service Tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
 
+        /**
+         * @param destinationIpGroups List of destination IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
             $.destinationIpGroups = destinationIpGroups;
             return this;
         }
 
+        /**
+         * @param destinationIpGroups List of destination IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIpGroups(String... destinationIpGroups) {
             return destinationIpGroups(List.of(destinationIpGroups));
         }
 
+        /**
+         * @param destinationPorts List of destination ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             $.destinationPorts = destinationPorts;
             return this;
         }
 
+        /**
+         * @param destinationPorts List of destination ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
 
+        /**
+         * @param ipProtocols Array of FirewallPolicyRuleConditionNetworkProtocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(@Nullable List<String> ipProtocols) {
             $.ipProtocols = ipProtocols;
             return this;
         }
 
+        /**
+         * @param ipProtocols Array of FirewallPolicyRuleConditionNetworkProtocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(String... ipProtocols) {
             return ipProtocols(List.of(ipProtocols));
         }
 
+        /**
+         * @param name Name of the rule condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param ruleConditionType Rule Condition Type.
+         * Expected value is &#39;NetworkRuleCondition&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleConditionType(String ruleConditionType) {
             $.ruleConditionType = ruleConditionType;
             return this;
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             $.sourceAddresses = sourceAddresses;
             return this;
         }
 
+        /**
+         * @param sourceAddresses List of source IP addresses for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             $.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
+        /**
+         * @param sourceIpGroups List of source IpGroups for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIpGroups(String... sourceIpGroups) {
             return sourceIpGroups(List.of(sourceIpGroups));
         }

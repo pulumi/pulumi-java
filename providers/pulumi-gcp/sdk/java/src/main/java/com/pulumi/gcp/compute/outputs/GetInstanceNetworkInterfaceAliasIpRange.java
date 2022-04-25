@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceNetworkInterfaceAliasIpRange {
     /**
-     * The IP CIDR range represented by this alias IP range.
+     * @return The IP CIDR range represented by this alias IP range.
      * 
      */
     private final String ipCidrRange;
     /**
-     * The subnetwork secondary range name specifying
+     * @return The subnetwork secondary range name specifying
      * the secondary range from which to allocate the IP CIDR range for this alias IP
      * range.
      * 
@@ -31,18 +31,18 @@ public final class GetInstanceNetworkInterfaceAliasIpRange {
     }
 
     /**
-     * The IP CIDR range represented by this alias IP range.
+     * @return The IP CIDR range represented by this alias IP range.
      * 
-    */
+     */
     public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
-     * The subnetwork secondary range name specifying
+     * @return The subnetwork secondary range name specifying
      * the secondary range from which to allocate the IP CIDR range for this alias IP
      * range.
      * 
-    */
+     */
     public String subnetworkRangeName() {
         return this.subnetworkRangeName;
     }

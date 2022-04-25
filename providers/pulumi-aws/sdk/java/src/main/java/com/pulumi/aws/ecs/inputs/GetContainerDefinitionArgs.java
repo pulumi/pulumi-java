@@ -19,6 +19,10 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return The name of the container definition
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -30,6 +34,10 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
     @Import(name="taskDefinition", required=true)
     private String taskDefinition;
 
+    /**
+     * @return The ARN of the task definition which contains the container
+     * 
+     */
     public String taskDefinition() {
         return this.taskDefinition;
     }
@@ -59,11 +67,23 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
             $ = new GetContainerDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName The name of the container definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param taskDefinition The ARN of the task definition which contains the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskDefinition(String taskDefinition) {
             $.taskDefinition = taskDefinition;
             return this;

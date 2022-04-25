@@ -16,52 +16,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PatchDeploymentRecurringSchedule {
     /**
-     * The end time at which a recurring patch deployment schedule is no longer active.
+     * @return The end time at which a recurring patch deployment schedule is no longer active.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final @Nullable String endTime;
     /**
-     * - 
+     * @return -
      * The time the last patch job ran successfully.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final @Nullable String lastExecuteTime;
     /**
-     * Schedule with monthly executions.
+     * @return Schedule with monthly executions.
      * Structure is documented below.
      * 
      */
     private final @Nullable PatchDeploymentRecurringScheduleMonthly monthly;
     /**
-     * - 
+     * @return -
      * The time the next patch job is scheduled to run.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final @Nullable String nextExecuteTime;
     /**
-     * The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
+     * @return The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final @Nullable String startTime;
     /**
-     * Time of the day to run a recurring deployment.
+     * @return Time of the day to run a recurring deployment.
      * Structure is documented below.
      * 
      */
     private final PatchDeploymentRecurringScheduleTimeOfDay timeOfDay;
     /**
-     * Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
+     * @return Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
      * determined by the chosen time zone.
      * Structure is documented below.
      * 
      */
     private final PatchDeploymentRecurringScheduleTimeZone timeZone;
     /**
-     * Schedule with weekly executions.
+     * @return Schedule with weekly executions.
      * Structure is documented below.
      * 
      */
@@ -88,69 +88,69 @@ public final class PatchDeploymentRecurringSchedule {
     }
 
     /**
-     * The end time at which a recurring patch deployment schedule is no longer active.
+     * @return The end time at which a recurring patch deployment schedule is no longer active.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * - 
+     * @return -
      * The time the last patch job ran successfully.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public Optional<String> lastExecuteTime() {
         return Optional.ofNullable(this.lastExecuteTime);
     }
     /**
-     * Schedule with monthly executions.
+     * @return Schedule with monthly executions.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentRecurringScheduleMonthly> monthly() {
         return Optional.ofNullable(this.monthly);
     }
     /**
-     * - 
+     * @return -
      * The time the next patch job is scheduled to run.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public Optional<String> nextExecuteTime() {
         return Optional.ofNullable(this.nextExecuteTime);
     }
     /**
-     * The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
+     * @return The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
      * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Time of the day to run a recurring deployment.
+     * @return Time of the day to run a recurring deployment.
      * Structure is documented below.
      * 
-    */
+     */
     public PatchDeploymentRecurringScheduleTimeOfDay timeOfDay() {
         return this.timeOfDay;
     }
     /**
-     * Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
+     * @return Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
      * determined by the chosen time zone.
      * Structure is documented below.
      * 
-    */
+     */
     public PatchDeploymentRecurringScheduleTimeZone timeZone() {
         return this.timeZone;
     }
     /**
-     * Schedule with weekly executions.
+     * @return Schedule with weekly executions.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentRecurringScheduleWeekly> weekly() {
         return Optional.ofNullable(this.weekly);
     }

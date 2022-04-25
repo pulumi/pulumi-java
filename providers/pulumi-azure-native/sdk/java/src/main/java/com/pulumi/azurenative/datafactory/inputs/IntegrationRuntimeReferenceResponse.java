@@ -27,6 +27,10 @@ public final class IntegrationRuntimeReferenceResponse extends com.pulumi.resour
     @Import(name="parameters")
     private @Nullable Map<String,Object> parameters;
 
+    /**
+     * @return Arguments for integration runtime.
+     * 
+     */
     public Optional<Map<String,Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -38,6 +42,10 @@ public final class IntegrationRuntimeReferenceResponse extends com.pulumi.resour
     @Import(name="referenceName", required=true)
     private String referenceName;
 
+    /**
+     * @return Reference integration runtime name.
+     * 
+     */
     public String referenceName() {
         return this.referenceName;
     }
@@ -49,6 +57,10 @@ public final class IntegrationRuntimeReferenceResponse extends com.pulumi.resour
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of integration runtime.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -79,16 +91,34 @@ public final class IntegrationRuntimeReferenceResponse extends com.pulumi.resour
             $ = new IntegrationRuntimeReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Arguments for integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param referenceName Reference integration runtime name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param type Type of integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

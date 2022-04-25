@@ -21,6 +21,10 @@ public final class DeviceFleetEdgeOutputConfig extends com.pulumi.resources.Invo
     @Import(name="kmsKeyId")
     private @Nullable String kmsKeyId;
 
+    /**
+     * @return The KMS key id used for encryption on the S3 bucket
+     * 
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -32,6 +36,10 @@ public final class DeviceFleetEdgeOutputConfig extends com.pulumi.resources.Invo
     @Import(name="s3OutputLocation", required=true)
     private String s3OutputLocation;
 
+    /**
+     * @return The Amazon Simple Storage (S3) bucket URI
+     * 
+     */
     public String s3OutputLocation() {
         return this.s3OutputLocation;
     }
@@ -61,11 +69,23 @@ public final class DeviceFleetEdgeOutputConfig extends com.pulumi.resources.Invo
             $ = new DeviceFleetEdgeOutputConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyId The KMS key id used for encryption on the S3 bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param s3OutputLocation The Amazon Simple Storage (S3) bucket URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3OutputLocation(String s3OutputLocation) {
             $.s3OutputLocation = s3OutputLocation;
             return this;

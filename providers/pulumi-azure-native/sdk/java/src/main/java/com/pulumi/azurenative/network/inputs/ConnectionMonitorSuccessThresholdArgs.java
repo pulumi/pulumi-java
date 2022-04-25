@@ -27,6 +27,10 @@ public final class ConnectionMonitorSuccessThresholdArgs extends com.pulumi.reso
     @Import(name="checksFailedPercent")
     private @Nullable Output<Integer> checksFailedPercent;
 
+    /**
+     * @return The maximum percentage of failed checks permitted for a test to evaluate as successful.
+     * 
+     */
     public Optional<Output<Integer>> checksFailedPercent() {
         return Optional.ofNullable(this.checksFailedPercent);
     }
@@ -38,6 +42,10 @@ public final class ConnectionMonitorSuccessThresholdArgs extends com.pulumi.reso
     @Import(name="roundTripTimeMs")
     private @Nullable Output<Double> roundTripTimeMs;
 
+    /**
+     * @return The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
+     * 
+     */
     public Optional<Output<Double>> roundTripTimeMs() {
         return Optional.ofNullable(this.roundTripTimeMs);
     }
@@ -67,20 +75,44 @@ public final class ConnectionMonitorSuccessThresholdArgs extends com.pulumi.reso
             $ = new ConnectionMonitorSuccessThresholdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checksFailedPercent The maximum percentage of failed checks permitted for a test to evaluate as successful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksFailedPercent(@Nullable Output<Integer> checksFailedPercent) {
             $.checksFailedPercent = checksFailedPercent;
             return this;
         }
 
+        /**
+         * @param checksFailedPercent The maximum percentage of failed checks permitted for a test to evaluate as successful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksFailedPercent(Integer checksFailedPercent) {
             return checksFailedPercent(Output.of(checksFailedPercent));
         }
 
+        /**
+         * @param roundTripTimeMs The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roundTripTimeMs(@Nullable Output<Double> roundTripTimeMs) {
             $.roundTripTimeMs = roundTripTimeMs;
             return this;
         }
 
+        /**
+         * @param roundTripTimeMs The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roundTripTimeMs(Double roundTripTimeMs) {
             return roundTripTimeMs(Output.of(roundTripTimeMs));
         }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetRepositoryEncryptionConfiguration {
     /**
-     * The encryption type to use for the repository, either `AES256` or `KMS`.
+     * @return The encryption type to use for the repository, either `AES256` or `KMS`.
      * 
      */
     private final String encryptionType;
     /**
-     * If `encryption_type` is `KMS`, the ARN of the KMS key used.
+     * @return If `encryption_type` is `KMS`, the ARN of the KMS key used.
      * 
      */
     private final String kmsKey;
@@ -29,16 +29,16 @@ public final class GetRepositoryEncryptionConfiguration {
     }
 
     /**
-     * The encryption type to use for the repository, either `AES256` or `KMS`.
+     * @return The encryption type to use for the repository, either `AES256` or `KMS`.
      * 
-    */
+     */
     public String encryptionType() {
         return this.encryptionType;
     }
     /**
-     * If `encryption_type` is `KMS`, the ARN of the KMS key used.
+     * @return If `encryption_type` is `KMS`, the ARN of the KMS key used.
      * 
-    */
+     */
     public String kmsKey() {
         return this.kmsKey;
     }

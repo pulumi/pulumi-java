@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MembershipStateResponse {
     /**
-     * The current state of the Membership resource.
+     * @return The current state of the Membership resource.
      * 
      */
     private final String code;
@@ -21,9 +21,9 @@ public final class MembershipStateResponse {
     }
 
     /**
-     * The current state of the Membership resource.
+     * @return The current state of the Membership resource.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }

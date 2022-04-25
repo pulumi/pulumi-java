@@ -29,6 +29,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
     @Import(name="command")
     private @Nullable List<String> command;
 
+    /**
+     * @return The command to execute within the init container in exec form.
+     * 
+     */
     public Optional<List<String>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -40,6 +44,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
     @Import(name="environmentVariables")
     private @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
+    /**
+     * @return The environment variables to set in the init container.
+     * 
+     */
     public Optional<List<EnvironmentVariableResponse>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -51,6 +59,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
     @Import(name="image")
     private @Nullable String image;
 
+    /**
+     * @return The image of the init container.
+     * 
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
@@ -62,6 +74,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
     @Import(name="instanceView", required=true)
     private InitContainerPropertiesDefinitionResponseInstanceView instanceView;
 
+    /**
+     * @return The instance view of the init container. Only valid in response.
+     * 
+     */
     public InitContainerPropertiesDefinitionResponseInstanceView instanceView() {
         return this.instanceView;
     }
@@ -73,6 +89,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name for the init container.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -84,6 +104,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
     @Import(name="volumeMounts")
     private @Nullable List<VolumeMountResponse> volumeMounts;
 
+    /**
+     * @return The volume mounts available to the init container.
+     * 
+     */
     public Optional<List<VolumeMountResponse>> volumeMounts() {
         return Optional.ofNullable(this.volumeMounts);
     }
@@ -117,44 +141,98 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
             $ = new InitContainerDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command The command to execute within the init container in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable List<String> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command The command to execute within the init container in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
 
+        /**
+         * @param image The image of the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param instanceView The instance view of the init container. Only valid in response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceView(InitContainerPropertiesDefinitionResponseInstanceView instanceView) {
             $.instanceView = instanceView;
             return this;
         }
 
+        /**
+         * @param name The name for the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param volumeMounts The volume mounts available to the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
             $.volumeMounts = volumeMounts;
             return this;
         }
 
+        /**
+         * @param volumeMounts The volume mounts available to the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(VolumeMountResponse... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }

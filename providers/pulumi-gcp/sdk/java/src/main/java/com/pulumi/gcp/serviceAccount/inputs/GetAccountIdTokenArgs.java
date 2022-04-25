@@ -23,6 +23,10 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="delegates")
     private @Nullable List<String> delegates;
 
+    /**
+     * @return Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
+     * 
+     */
     public Optional<List<String>> delegates() {
         return Optional.ofNullable(this.delegates);
     }
@@ -34,6 +38,10 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="includeEmail")
     private @Nullable Boolean includeEmail;
 
+    /**
+     * @return Include the verified email in the claim. Used only when using impersonation mode.
+     * 
+     */
     public Optional<Boolean> includeEmail() {
         return Optional.ofNullable(this.includeEmail);
     }
@@ -45,6 +53,10 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="targetAudience", required=true)
     private String targetAudience;
 
+    /**
+     * @return The audience claim for the `id_token`.
+     * 
+     */
     public String targetAudience() {
         return this.targetAudience;
     }
@@ -56,6 +68,10 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="targetServiceAccount")
     private @Nullable String targetServiceAccount;
 
+    /**
+     * @return The email of the service account being impersonated.  Used only when using impersonation mode.
+     * 
+     */
     public Optional<String> targetServiceAccount() {
         return Optional.ofNullable(this.targetServiceAccount);
     }
@@ -87,25 +103,55 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetAccountIdTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delegates Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegates(@Nullable List<String> delegates) {
             $.delegates = delegates;
             return this;
         }
 
+        /**
+         * @param delegates Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegates(String... delegates) {
             return delegates(List.of(delegates));
         }
 
+        /**
+         * @param includeEmail Include the verified email in the claim. Used only when using impersonation mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeEmail(@Nullable Boolean includeEmail) {
             $.includeEmail = includeEmail;
             return this;
         }
 
+        /**
+         * @param targetAudience The audience claim for the `id_token`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAudience(String targetAudience) {
             $.targetAudience = targetAudience;
             return this;
         }
 
+        /**
+         * @param targetServiceAccount The email of the service account being impersonated.  Used only when using impersonation mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServiceAccount(@Nullable String targetServiceAccount) {
             $.targetServiceAccount = targetServiceAccount;
             return this;

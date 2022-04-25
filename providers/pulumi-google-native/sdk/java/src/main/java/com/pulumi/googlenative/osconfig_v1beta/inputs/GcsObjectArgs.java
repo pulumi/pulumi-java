@@ -24,6 +24,10 @@ public final class GcsObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return Bucket of the Google Cloud Storage object.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -35,6 +39,10 @@ public final class GcsObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="generationNumber", required=true)
     private Output<String> generationNumber;
 
+    /**
+     * @return Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+     * 
+     */
     public Output<String> generationNumber() {
         return this.generationNumber;
     }
@@ -46,6 +54,10 @@ public final class GcsObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="object", required=true)
     private Output<String> object;
 
+    /**
+     * @return Name of the Google Cloud Storage object.
+     * 
+     */
     public Output<String> object() {
         return this.object;
     }
@@ -76,29 +88,65 @@ public final class GcsObjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GcsObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Bucket of the Google Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Bucket of the Google Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param generationNumber Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generationNumber(Output<String> generationNumber) {
             $.generationNumber = generationNumber;
             return this;
         }
 
+        /**
+         * @param generationNumber Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generationNumber(String generationNumber) {
             return generationNumber(Output.of(generationNumber));
         }
 
+        /**
+         * @param object Name of the Google Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(Output<String> object) {
             $.object = object;
             return this;
         }
 
+        /**
+         * @param object Name of the Google Cloud Storage object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             return object(Output.of(object));
         }

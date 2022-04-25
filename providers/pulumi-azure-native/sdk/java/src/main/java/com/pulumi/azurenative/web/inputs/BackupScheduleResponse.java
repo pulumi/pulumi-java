@@ -28,6 +28,10 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="frequencyInterval", required=true)
     private Integer frequencyInterval;
 
+    /**
+     * @return How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
+     * 
+     */
     public Integer frequencyInterval() {
         return this.frequencyInterval;
     }
@@ -39,6 +43,10 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="frequencyUnit", required=true)
     private String frequencyUnit;
 
+    /**
+     * @return The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
+     * 
+     */
     public String frequencyUnit() {
         return this.frequencyUnit;
     }
@@ -50,6 +58,10 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keepAtLeastOneBackup", required=true)
     private Boolean keepAtLeastOneBackup;
 
+    /**
+     * @return True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
+     * 
+     */
     public Boolean keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
@@ -61,6 +73,10 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastExecutionTime", required=true)
     private String lastExecutionTime;
 
+    /**
+     * @return Last time when this schedule was triggered.
+     * 
+     */
     public String lastExecutionTime() {
         return this.lastExecutionTime;
     }
@@ -72,6 +88,10 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="retentionPeriodInDays", required=true)
     private Integer retentionPeriodInDays;
 
+    /**
+     * @return After how many days backups should be deleted.
+     * 
+     */
     public Integer retentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
@@ -83,6 +103,10 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return When the schedule should start working.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -116,31 +140,67 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
             $ = new BackupScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequencyInterval How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyInterval(Integer frequencyInterval) {
             $.frequencyInterval = frequencyInterval;
             return this;
         }
 
+        /**
+         * @param frequencyUnit The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyUnit(String frequencyUnit) {
             $.frequencyUnit = frequencyUnit;
             return this;
         }
 
+        /**
+         * @param keepAtLeastOneBackup True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
             $.keepAtLeastOneBackup = keepAtLeastOneBackup;
             return this;
         }
 
+        /**
+         * @param lastExecutionTime Last time when this schedule was triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExecutionTime(String lastExecutionTime) {
             $.lastExecutionTime = lastExecutionTime;
             return this;
         }
 
+        /**
+         * @param retentionPeriodInDays After how many days backups should be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
             $.retentionPeriodInDays = retentionPeriodInDays;
             return this;
         }
 
+        /**
+         * @param startTime When the schedule should start working.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;

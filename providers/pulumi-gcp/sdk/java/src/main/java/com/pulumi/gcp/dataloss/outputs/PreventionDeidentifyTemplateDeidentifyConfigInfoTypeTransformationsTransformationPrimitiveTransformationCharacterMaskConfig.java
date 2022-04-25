@@ -16,25 +16,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig {
     /**
-     * Characters to skip when doing de-identification of a value. These will be left alone and skipped.
+     * @return Characters to skip when doing de-identification of a value. These will be left alone and skipped.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores;
     /**
-     * Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
+     * @return Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
      * such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
      * strings, and 0 for digits.
      * 
      */
     private final @Nullable String maskingCharacter;
     /**
-     * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
+     * @return Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
      * 
      */
     private final @Nullable Integer numberToMask;
     /**
-     * Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
+     * @return Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
      * input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
      * 
      */
@@ -53,34 +53,34 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     /**
-     * Characters to skip when doing de-identification of a value. These will be left alone and skipped.
+     * @return Characters to skip when doing de-identification of a value. These will be left alone and skipped.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores() {
         return this.charactersToIgnores == null ? List.of() : this.charactersToIgnores;
     }
     /**
-     * Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
+     * @return Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
      * such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
      * strings, and 0 for digits.
      * 
-    */
+     */
     public Optional<String> maskingCharacter() {
         return Optional.ofNullable(this.maskingCharacter);
     }
     /**
-     * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
+     * @return Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
      * 
-    */
+     */
     public Optional<Integer> numberToMask() {
         return Optional.ofNullable(this.numberToMask);
     }
     /**
-     * Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
+     * @return Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
      * input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
      * 
-    */
+     */
     public Optional<Boolean> reverseOrder() {
         return Optional.ofNullable(this.reverseOrder);
     }

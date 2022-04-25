@@ -24,6 +24,10 @@ public final class ScheduledActionTargetActionArgs extends com.pulumi.resources.
     @Import(name="pauseCluster")
     private @Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster;
 
+    /**
+     * @return An action that runs a `PauseCluster` API operation. Documented below.
+     * 
+     */
     public Optional<Output<ScheduledActionTargetActionPauseClusterArgs>> pauseCluster() {
         return Optional.ofNullable(this.pauseCluster);
     }
@@ -35,6 +39,10 @@ public final class ScheduledActionTargetActionArgs extends com.pulumi.resources.
     @Import(name="resizeCluster")
     private @Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster;
 
+    /**
+     * @return An action that runs a `ResizeCluster` API operation. Documented below.
+     * 
+     */
     public Optional<Output<ScheduledActionTargetActionResizeClusterArgs>> resizeCluster() {
         return Optional.ofNullable(this.resizeCluster);
     }
@@ -46,6 +54,10 @@ public final class ScheduledActionTargetActionArgs extends com.pulumi.resources.
     @Import(name="resumeCluster")
     private @Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster;
 
+    /**
+     * @return An action that runs a `ResumeCluster` API operation. Documented below.
+     * 
+     */
     public Optional<Output<ScheduledActionTargetActionResumeClusterArgs>> resumeCluster() {
         return Optional.ofNullable(this.resumeCluster);
     }
@@ -76,29 +88,65 @@ public final class ScheduledActionTargetActionArgs extends com.pulumi.resources.
             $ = new ScheduledActionTargetActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pauseCluster An action that runs a `PauseCluster` API operation. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pauseCluster(@Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster) {
             $.pauseCluster = pauseCluster;
             return this;
         }
 
+        /**
+         * @param pauseCluster An action that runs a `PauseCluster` API operation. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pauseCluster(ScheduledActionTargetActionPauseClusterArgs pauseCluster) {
             return pauseCluster(Output.of(pauseCluster));
         }
 
+        /**
+         * @param resizeCluster An action that runs a `ResizeCluster` API operation. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeCluster(@Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster) {
             $.resizeCluster = resizeCluster;
             return this;
         }
 
+        /**
+         * @param resizeCluster An action that runs a `ResizeCluster` API operation. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeCluster(ScheduledActionTargetActionResizeClusterArgs resizeCluster) {
             return resizeCluster(Output.of(resizeCluster));
         }
 
+        /**
+         * @param resumeCluster An action that runs a `ResumeCluster` API operation. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resumeCluster(@Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster) {
             $.resumeCluster = resumeCluster;
             return this;
         }
 
+        /**
+         * @param resumeCluster An action that runs a `ResumeCluster` API operation. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resumeCluster(ScheduledActionTargetActionResumeClusterArgs resumeCluster) {
             return resumeCluster(Output.of(resumeCluster));
         }

@@ -30,6 +30,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="deleteOption")
     private @Nullable String deleteOption;
 
+    /**
+     * @return Specify what happens to the network interface when the VM is deleted
+     * 
+     */
     public Optional<String> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
@@ -41,6 +45,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="dnsSettings")
     private @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
 
+    /**
+     * @return The dns settings to be applied on the network interfaces.
+     * 
+     */
     public Optional<VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -59,6 +67,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="enableAcceleratedNetworking")
     private @Nullable Boolean enableAcceleratedNetworking;
 
+    /**
+     * @return Specifies whether the network interface is accelerated networking-enabled.
+     * 
+     */
     public Optional<Boolean> enableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
@@ -70,6 +82,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="enableFpga")
     private @Nullable Boolean enableFpga;
 
+    /**
+     * @return Specifies whether the network interface is FPGA networking-enabled.
+     * 
+     */
     public Optional<Boolean> enableFpga() {
         return Optional.ofNullable(this.enableFpga);
     }
@@ -81,6 +97,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="enableIPForwarding")
     private @Nullable Boolean enableIPForwarding;
 
+    /**
+     * @return Whether IP forwarding enabled on this NIC.
+     * 
+     */
     public Optional<Boolean> enableIPForwarding() {
         return Optional.ofNullable(this.enableIPForwarding);
     }
@@ -92,6 +112,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="ipConfigurations", required=true)
     private List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
+    /**
+     * @return Specifies the IP configurations of the network interface.
+     * 
+     */
     public List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
@@ -103,6 +127,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The network interface configuration name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -114,6 +142,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="networkSecurityGroup")
     private @Nullable SubResourceResponse networkSecurityGroup;
 
+    /**
+     * @return The network security group.
+     * 
+     */
     public Optional<SubResourceResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
@@ -125,6 +157,10 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
     @Import(name="primary")
     private @Nullable Boolean primary;
 
+    /**
+     * @return Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     * 
+     */
     public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
@@ -162,11 +198,23 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
             $ = new VirtualMachineNetworkInterfaceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOption Specify what happens to the network interface when the VM is deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(@Nullable String deleteOption) {
             $.deleteOption = deleteOption;
             return this;
         }
 
+        /**
+         * @param dnsSettings The dns settings to be applied on the network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
@@ -177,40 +225,88 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends c
             return this;
         }
 
+        /**
+         * @param enableAcceleratedNetworking Specifies whether the network interface is accelerated networking-enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
+        /**
+         * @param enableFpga Specifies whether the network interface is FPGA networking-enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFpga(@Nullable Boolean enableFpga) {
             $.enableFpga = enableFpga;
             return this;
         }
 
+        /**
+         * @param enableIPForwarding Whether IP forwarding enabled on this NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             $.enableIPForwarding = enableIPForwarding;
             return this;
         }
 
+        /**
+         * @param ipConfigurations Specifies the IP configurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations Specifies the IP configurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(VirtualMachineNetworkInterfaceIPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param name The network interface configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkSecurityGroup The network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroup(@Nullable SubResourceResponse networkSecurityGroup) {
             $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
+        /**
+         * @param primary Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(@Nullable Boolean primary) {
             $.primary = primary;
             return this;

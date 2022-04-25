@@ -30,6 +30,10 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyStepDetails")
     private @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
 
+    /**
+     * @return Details for a step that performs a file copy.
+     * 
+     */
     public Optional<Output<WorkflowStepCopyStepDetailsPropertiesArgs>> copyStepDetails() {
         return Optional.ofNullable(this.copyStepDetails);
     }
@@ -41,6 +45,10 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customStepDetails")
     private @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
 
+    /**
+     * @return Details for a step that invokes a lambda function.
+     * 
+     */
     public Optional<Output<WorkflowStepCustomStepDetailsPropertiesArgs>> customStepDetails() {
         return Optional.ofNullable(this.customStepDetails);
     }
@@ -52,6 +60,10 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteStepDetails")
     private @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
 
+    /**
+     * @return Details for a step that deletes the file.
+     * 
+     */
     public Optional<Output<WorkflowStepDeleteStepDetailsPropertiesArgs>> deleteStepDetails() {
         return Optional.ofNullable(this.deleteStepDetails);
     }
@@ -63,6 +75,10 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagStepDetails")
     private @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;
 
+    /**
+     * @return Details for a step that creates one or more tags.
+     * 
+     */
     public Optional<Output<WorkflowStepTagStepDetailsPropertiesArgs>> tagStepDetails() {
         return Optional.ofNullable(this.tagStepDetails);
     }
@@ -102,38 +118,86 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkflowStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyStepDetails Details for a step that performs a file copy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyStepDetails(@Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails) {
             $.copyStepDetails = copyStepDetails;
             return this;
         }
 
+        /**
+         * @param copyStepDetails Details for a step that performs a file copy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyStepDetails(WorkflowStepCopyStepDetailsPropertiesArgs copyStepDetails) {
             return copyStepDetails(Output.of(copyStepDetails));
         }
 
+        /**
+         * @param customStepDetails Details for a step that invokes a lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customStepDetails(@Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails) {
             $.customStepDetails = customStepDetails;
             return this;
         }
 
+        /**
+         * @param customStepDetails Details for a step that invokes a lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customStepDetails(WorkflowStepCustomStepDetailsPropertiesArgs customStepDetails) {
             return customStepDetails(Output.of(customStepDetails));
         }
 
+        /**
+         * @param deleteStepDetails Details for a step that deletes the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteStepDetails(@Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails) {
             $.deleteStepDetails = deleteStepDetails;
             return this;
         }
 
+        /**
+         * @param deleteStepDetails Details for a step that deletes the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteStepDetails(WorkflowStepDeleteStepDetailsPropertiesArgs deleteStepDetails) {
             return deleteStepDetails(Output.of(deleteStepDetails));
         }
 
+        /**
+         * @param tagStepDetails Details for a step that creates one or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagStepDetails(@Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails) {
             $.tagStepDetails = tagStepDetails;
             return this;
         }
 
+        /**
+         * @param tagStepDetails Details for a step that creates one or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagStepDetails(WorkflowStepTagStepDetailsPropertiesArgs tagStepDetails) {
             return tagStepDetails(Output.of(tagStepDetails));
         }

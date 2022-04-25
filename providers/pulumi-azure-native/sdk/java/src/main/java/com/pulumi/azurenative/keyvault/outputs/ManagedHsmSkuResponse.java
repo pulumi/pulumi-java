@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ManagedHsmSkuResponse {
     /**
-     * SKU Family of the managed HSM Pool
+     * @return SKU Family of the managed HSM Pool
      * 
      */
     private final String family;
     /**
-     * SKU of the managed HSM Pool
+     * @return SKU of the managed HSM Pool
      * 
      */
     private final String name;
@@ -29,16 +29,16 @@ public final class ManagedHsmSkuResponse {
     }
 
     /**
-     * SKU Family of the managed HSM Pool
+     * @return SKU Family of the managed HSM Pool
      * 
-    */
+     */
     public String family() {
         return this.family;
     }
     /**
-     * SKU of the managed HSM Pool
+     * @return SKU of the managed HSM Pool
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

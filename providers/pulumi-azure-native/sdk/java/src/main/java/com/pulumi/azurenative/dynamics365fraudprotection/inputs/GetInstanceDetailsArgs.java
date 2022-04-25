@@ -19,6 +19,10 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="instanceName", required=true)
     private String instanceName;
 
+    /**
+     * @return The name of the instance. It must be a minimum of 3 characters, and a maximum of 63.
+     * 
+     */
     public String instanceName() {
         return this.instanceName;
     }
@@ -30,6 +34,10 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
             $ = new GetInstanceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceName The name of the instance. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

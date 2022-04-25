@@ -23,6 +23,12 @@ public final class GetFunctionEventTrigger extends com.pulumi.resources.InvokeAr
     @Import(name="eventType", required=true)
     private String eventType;
 
+    /**
+     * @return The type of event to observe. For example: `&#34;google.storage.object.finalize&#34;`.
+     * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
+     * for a full reference of accepted triggers.
+     * 
+     */
     public String eventType() {
         return this.eventType;
     }
@@ -34,6 +40,10 @@ public final class GetFunctionEventTrigger extends com.pulumi.resources.InvokeAr
     @Import(name="failurePolicies", required=true)
     private List<GetFunctionEventTriggerFailurePolicy> failurePolicies;
 
+    /**
+     * @return Policy for failed executions. Structure is documented below.
+     * 
+     */
     public List<GetFunctionEventTriggerFailurePolicy> failurePolicies() {
         return this.failurePolicies;
     }
@@ -45,6 +55,10 @@ public final class GetFunctionEventTrigger extends com.pulumi.resources.InvokeAr
     @Import(name="resource", required=true)
     private String resource;
 
+    /**
+     * @return The name of the resource whose events are being observed, for example, `&#34;myBucket&#34;`
+     * 
+     */
     public String resource() {
         return this.resource;
     }
@@ -75,20 +89,46 @@ public final class GetFunctionEventTrigger extends com.pulumi.resources.InvokeAr
             $ = new GetFunctionEventTrigger(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventType The type of event to observe. For example: `&#34;google.storage.object.finalize&#34;`.
+         * See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
+         * for a full reference of accepted triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(String eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param failurePolicies Policy for failed executions. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failurePolicies(List<GetFunctionEventTriggerFailurePolicy> failurePolicies) {
             $.failurePolicies = failurePolicies;
             return this;
         }
 
+        /**
+         * @param failurePolicies Policy for failed executions. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failurePolicies(GetFunctionEventTriggerFailurePolicy... failurePolicies) {
             return failurePolicies(List.of(failurePolicies));
         }
 
+        /**
+         * @param resource The name of the resource whose events are being observed, for example, `&#34;myBucket&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             $.resource = resource;
             return this;

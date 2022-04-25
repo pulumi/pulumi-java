@@ -21,6 +21,10 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointType")
     private @Nullable String endpointType;
 
+    /**
+     * @return Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
+     * 
+     */
     public Optional<String> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
@@ -49,6 +53,12 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointType Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(@Nullable String endpointType) {
             $.endpointType = endpointType;
             return this;

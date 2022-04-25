@@ -24,6 +24,10 @@ public final class VirtualMachineResponse extends com.pulumi.resources.InvokeArg
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return The unique identifier of the Managed Compute Engine instance.
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -35,6 +39,10 @@ public final class VirtualMachineResponse extends com.pulumi.resources.InvokeArg
     @Import(name="instanceName", required=true)
     private String instanceName;
 
+    /**
+     * @return The user-friendly name of the Managed Compute Engine instance.
+     * 
+     */
     public String instanceName() {
         return this.instanceName;
     }
@@ -46,6 +54,10 @@ public final class VirtualMachineResponse extends com.pulumi.resources.InvokeArg
     @Import(name="virtualMachineConfig", required=true)
     private VirtualMachineConfigResponse virtualMachineConfig;
 
+    /**
+     * @return Virtual Machine configuration settings.
+     * 
+     */
     public VirtualMachineConfigResponse virtualMachineConfig() {
         return this.virtualMachineConfig;
     }
@@ -76,16 +88,34 @@ public final class VirtualMachineResponse extends com.pulumi.resources.InvokeArg
             $ = new VirtualMachineResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceId The unique identifier of the Managed Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceName The user-friendly name of the Managed Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param virtualMachineConfig Virtual Machine configuration settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineConfig(VirtualMachineConfigResponse virtualMachineConfig) {
             $.virtualMachineConfig = virtualMachineConfig;
             return this;

@@ -19,6 +19,10 @@ public final class GetADCCatalogArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="catalogName", required=true)
     private String catalogName;
 
+    /**
+     * @return The name of the data catalog in the specified subscription and resource group.
+     * 
+     */
     public String catalogName() {
         return this.catalogName;
     }
@@ -30,6 +34,10 @@ public final class GetADCCatalogArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetADCCatalogArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetADCCatalogArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogName The name of the data catalog in the specified subscription and resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogName(String catalogName) {
             $.catalogName = catalogName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

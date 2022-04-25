@@ -35,6 +35,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationSettings")
     private @Nullable Output<StackApplicationSettingsGetArgs> applicationSettings;
 
+    /**
+     * @return Settings for application settings persistence.
+     * 
+     */
     public Optional<Output<StackApplicationSettingsGetArgs>> applicationSettings() {
         return Optional.ofNullable(this.applicationSettings);
     }
@@ -46,6 +50,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the appstream stack.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -57,6 +65,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
     private @Nullable Output<String> createdTime;
 
+    /**
+     * @return Date and time, in UTC and extended RFC 3339 format, when the stack was created.
+     * 
+     */
     public Optional<Output<String>> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -68,6 +80,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description for the AppStream stack.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -79,6 +95,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Stack name to display.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -90,6 +110,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="embedHostDomains")
     private @Nullable Output<List<String>> embedHostDomains;
 
+    /**
+     * @return Domains where AppStream 2.0 streaming sessions can be embedded in an iframe. You must approve the domains that you want to host embedded AppStream 2.0 streaming sessions.
+     * 
+     */
     public Optional<Output<List<String>>> embedHostDomains() {
         return Optional.ofNullable(this.embedHostDomains);
     }
@@ -101,6 +125,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="feedbackUrl")
     private @Nullable Output<String> feedbackUrl;
 
+    /**
+     * @return URL that users are redirected to after they click the Send Feedback link. If no URL is specified, no Send Feedback link is displayed. .
+     * 
+     */
     public Optional<Output<String>> feedbackUrl() {
         return Optional.ofNullable(this.feedbackUrl);
     }
@@ -112,6 +140,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name for the AppStream stack.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -123,6 +155,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="redirectUrl")
     private @Nullable Output<String> redirectUrl;
 
+    /**
+     * @return URL that users are redirected to after their streaming session ends.
+     * 
+     */
     public Optional<Output<String>> redirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
@@ -134,6 +170,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageConnectors")
     private @Nullable Output<List<StackStorageConnectorGetArgs>> storageConnectors;
 
+    /**
+     * @return Configuration block for the storage connectors to enable. See below.
+     * 
+     */
     public Optional<Output<List<StackStorageConnectorGetArgs>>> storageConnectors() {
         return Optional.ofNullable(this.storageConnectors);
     }
@@ -159,6 +199,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userSettings")
     private @Nullable Output<List<StackUserSettingGetArgs>> userSettings;
 
+    /**
+     * @return Configuration block for the actions that are enabled or disabled for users during their streaming sessions. By default, these actions are enabled. See below.
+     * 
+     */
     public Optional<Output<List<StackUserSettingGetArgs>>> userSettings() {
         return Optional.ofNullable(this.userSettings);
     }
@@ -213,100 +257,232 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
             return accessEndpoints(List.of(accessEndpoints));
         }
 
+        /**
+         * @param applicationSettings Settings for application settings persistence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSettings(@Nullable Output<StackApplicationSettingsGetArgs> applicationSettings) {
             $.applicationSettings = applicationSettings;
             return this;
         }
 
+        /**
+         * @param applicationSettings Settings for application settings persistence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSettings(StackApplicationSettingsGetArgs applicationSettings) {
             return applicationSettings(Output.of(applicationSettings));
         }
 
+        /**
+         * @param arn ARN of the appstream stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the appstream stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param createdTime Date and time, in UTC and extended RFC 3339 format, when the stack was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable Output<String> createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param createdTime Date and time, in UTC and extended RFC 3339 format, when the stack was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             return createdTime(Output.of(createdTime));
         }
 
+        /**
+         * @param description Description for the AppStream stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description for the AppStream stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Stack name to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Stack name to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param embedHostDomains Domains where AppStream 2.0 streaming sessions can be embedded in an iframe. You must approve the domains that you want to host embedded AppStream 2.0 streaming sessions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder embedHostDomains(@Nullable Output<List<String>> embedHostDomains) {
             $.embedHostDomains = embedHostDomains;
             return this;
         }
 
+        /**
+         * @param embedHostDomains Domains where AppStream 2.0 streaming sessions can be embedded in an iframe. You must approve the domains that you want to host embedded AppStream 2.0 streaming sessions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder embedHostDomains(List<String> embedHostDomains) {
             return embedHostDomains(Output.of(embedHostDomains));
         }
 
+        /**
+         * @param embedHostDomains Domains where AppStream 2.0 streaming sessions can be embedded in an iframe. You must approve the domains that you want to host embedded AppStream 2.0 streaming sessions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder embedHostDomains(String... embedHostDomains) {
             return embedHostDomains(List.of(embedHostDomains));
         }
 
+        /**
+         * @param feedbackUrl URL that users are redirected to after they click the Send Feedback link. If no URL is specified, no Send Feedback link is displayed. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedbackUrl(@Nullable Output<String> feedbackUrl) {
             $.feedbackUrl = feedbackUrl;
             return this;
         }
 
+        /**
+         * @param feedbackUrl URL that users are redirected to after they click the Send Feedback link. If no URL is specified, no Send Feedback link is displayed. .
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedbackUrl(String feedbackUrl) {
             return feedbackUrl(Output.of(feedbackUrl));
         }
 
+        /**
+         * @param name Unique name for the AppStream stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name for the AppStream stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param redirectUrl URL that users are redirected to after their streaming session ends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
             $.redirectUrl = redirectUrl;
             return this;
         }
 
+        /**
+         * @param redirectUrl URL that users are redirected to after their streaming session ends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUrl(String redirectUrl) {
             return redirectUrl(Output.of(redirectUrl));
         }
 
+        /**
+         * @param storageConnectors Configuration block for the storage connectors to enable. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConnectors(@Nullable Output<List<StackStorageConnectorGetArgs>> storageConnectors) {
             $.storageConnectors = storageConnectors;
             return this;
         }
 
+        /**
+         * @param storageConnectors Configuration block for the storage connectors to enable. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConnectors(List<StackStorageConnectorGetArgs> storageConnectors) {
             return storageConnectors(Output.of(storageConnectors));
         }
 
+        /**
+         * @param storageConnectors Configuration block for the storage connectors to enable. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConnectors(StackStorageConnectorGetArgs... storageConnectors) {
             return storageConnectors(List.of(storageConnectors));
         }
@@ -329,15 +505,33 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param userSettings Configuration block for the actions that are enabled or disabled for users during their streaming sessions. By default, these actions are enabled. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettings(@Nullable Output<List<StackUserSettingGetArgs>> userSettings) {
             $.userSettings = userSettings;
             return this;
         }
 
+        /**
+         * @param userSettings Configuration block for the actions that are enabled or disabled for users during their streaming sessions. By default, these actions are enabled. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettings(List<StackUserSettingGetArgs> userSettings) {
             return userSettings(Output.of(userSettings));
         }
 
+        /**
+         * @param userSettings Configuration block for the actions that are enabled or disabled for users during their streaming sessions. By default, these actions are enabled. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettings(StackUserSettingGetArgs... userSettings) {
             return userSettings(List.of(userSettings));
         }

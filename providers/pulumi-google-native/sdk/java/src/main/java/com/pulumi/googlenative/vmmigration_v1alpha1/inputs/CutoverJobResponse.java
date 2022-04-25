@@ -26,6 +26,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computeEngineTargetDetails", required=true)
     private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
 
+    /**
+     * @return Details of the target VM in Compute Engine.
+     * 
+     */
     public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
@@ -37,6 +41,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time the cutover job was created (as an API call, not when it was actually created in the target).
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -48,6 +56,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="error", required=true)
     private StatusResponse error;
 
+    /**
+     * @return Provides details for the errors that led to the Cutover Job&#39;s state.
+     * 
+     */
     public StatusResponse error() {
         return this.error;
     }
@@ -59,6 +71,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the cutover job.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -70,6 +86,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="progress", required=true)
     private Integer progress;
 
+    /**
+     * @return The current progress in percentage of the cutover job.
+     * 
+     */
     public Integer progress() {
         return this.progress;
     }
@@ -81,6 +101,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="progressPercent", required=true)
     private Integer progressPercent;
 
+    /**
+     * @return The current progress in percentage of the cutover job.
+     * 
+     */
     public Integer progressPercent() {
         return this.progressPercent;
     }
@@ -92,6 +116,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return State of the cutover job.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -103,6 +131,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stateMessage", required=true)
     private String stateMessage;
 
+    /**
+     * @return A message providing possible extra details about the current state.
+     * 
+     */
     public String stateMessage() {
         return this.stateMessage;
     }
@@ -114,6 +146,10 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stateTime", required=true)
     private String stateTime;
 
+    /**
+     * @return The time the state was last updated.
+     * 
+     */
     public String stateTime() {
         return this.stateTime;
     }
@@ -150,46 +186,100 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CutoverJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeEngineTargetDetails Details of the target VM in Compute Engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
             $.computeEngineTargetDetails = computeEngineTargetDetails;
             return this;
         }
 
+        /**
+         * @param createTime The time the cutover job was created (as an API call, not when it was actually created in the target).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param error Provides details for the errors that led to the Cutover Job&#39;s state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(StatusResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param name The name of the cutover job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param progress The current progress in percentage of the cutover job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progress(Integer progress) {
             $.progress = progress;
             return this;
         }
 
+        /**
+         * @param progressPercent The current progress in percentage of the cutover job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressPercent(Integer progressPercent) {
             $.progressPercent = progressPercent;
             return this;
         }
 
+        /**
+         * @param state State of the cutover job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stateMessage A message providing possible extra details about the current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateMessage(String stateMessage) {
             $.stateMessage = stateMessage;
             return this;
         }
 
+        /**
+         * @param stateTime The time the state was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateTime(String stateTime) {
             $.stateTime = stateTime;
             return this;

@@ -39,6 +39,18 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alternateDataSourceParameters")
     private @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
+    /**
+     * @return &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
+     *             stored with this data source. The credentials are applied in tandem with the data source
+     *             parameters when you copy a data source by using a create or update request. The API
+     *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
+     *             with the structures in the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; allow list. If the
+     *             structures are an exact match, the request is allowed to use the credentials from this
+     *             existing data source. If the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; list is null,
+     *             the &lt;code&gt;Credentials&lt;/code&gt; originally used with this &lt;code&gt;DataSourceParameters&lt;/code&gt;
+     *             are automatically allowed.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DataSourceParametersArgs>>> alternateDataSourceParameters() {
         return Optional.ofNullable(this.alternateDataSourceParameters);
     }
@@ -85,6 +97,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;A display name for the data source.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -96,6 +112,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<List<DataSourceResourcePermissionArgs>> permissions;
 
+    /**
+     * @return &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DataSourceResourcePermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -114,6 +134,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DataSourceTagArgs>> tags;
 
+    /**
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<DataSourceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -167,15 +191,57 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alternateDataSourceParameters &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
+         *             stored with this data source. The credentials are applied in tandem with the data source
+         *             parameters when you copy a data source by using a create or update request. The API
+         *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
+         *             with the structures in the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; allow list. If the
+         *             structures are an exact match, the request is allowed to use the credentials from this
+         *             existing data source. If the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; list is null,
+         *             the &lt;code&gt;Credentials&lt;/code&gt; originally used with this &lt;code&gt;DataSourceParameters&lt;/code&gt;
+         *             are automatically allowed.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateDataSourceParameters(@Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters) {
             $.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
 
+        /**
+         * @param alternateDataSourceParameters &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
+         *             stored with this data source. The credentials are applied in tandem with the data source
+         *             parameters when you copy a data source by using a create or update request. The API
+         *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
+         *             with the structures in the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; allow list. If the
+         *             structures are an exact match, the request is allowed to use the credentials from this
+         *             existing data source. If the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; list is null,
+         *             the &lt;code&gt;Credentials&lt;/code&gt; originally used with this &lt;code&gt;DataSourceParameters&lt;/code&gt;
+         *             are automatically allowed.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateDataSourceParameters(List<DataSourceParametersArgs> alternateDataSourceParameters) {
             return alternateDataSourceParameters(Output.of(alternateDataSourceParameters));
         }
 
+        /**
+         * @param alternateDataSourceParameters &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
+         *             stored with this data source. The credentials are applied in tandem with the data source
+         *             parameters when you copy a data source by using a create or update request. The API
+         *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
+         *             with the structures in the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; allow list. If the
+         *             structures are an exact match, the request is allowed to use the credentials from this
+         *             existing data source. If the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; list is null,
+         *             the &lt;code&gt;Credentials&lt;/code&gt; originally used with this &lt;code&gt;DataSourceParameters&lt;/code&gt;
+         *             are automatically allowed.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateDataSourceParameters(DataSourceParametersArgs... alternateDataSourceParameters) {
             return alternateDataSourceParameters(List.of(alternateDataSourceParameters));
         }
@@ -225,24 +291,54 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
             return errorInfo(Output.of(errorInfo));
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the data source.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the data source.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<DataSourceResourcePermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<DataSourceResourcePermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(DataSourceResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
@@ -256,15 +352,33 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
             return sslProperties(Output.of(sslProperties));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DataSourceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DataSourceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DataSourceTagArgs... tags) {
             return tags(List.of(tags));
         }

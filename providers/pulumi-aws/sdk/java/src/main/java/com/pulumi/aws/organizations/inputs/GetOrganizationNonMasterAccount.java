@@ -19,6 +19,10 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return ARN of the root
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -30,6 +34,10 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return Email of the account
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -41,6 +49,10 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Identifier of the root
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -52,6 +64,10 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the policy type
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,6 +79,10 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the policy type as it relates to the associated root
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -95,26 +115,56 @@ public final class GetOrganizationNonMasterAccount extends com.pulumi.resources.
             $ = new GetOrganizationNonMasterAccount(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param email Email of the account
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param id Identifier of the root
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the policy type
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param status The status of the policy type as it relates to the associated root
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

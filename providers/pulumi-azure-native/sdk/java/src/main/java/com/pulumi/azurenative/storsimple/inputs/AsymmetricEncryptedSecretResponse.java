@@ -25,6 +25,10 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
     @Import(name="encryptionAlgorithm", required=true)
     private String encryptionAlgorithm;
 
+    /**
+     * @return The algorithm used to encrypt &#34;Value&#34;.
+     * 
+     */
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
@@ -36,6 +40,10 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
     @Import(name="encryptionCertThumbprint")
     private @Nullable String encryptionCertThumbprint;
 
+    /**
+     * @return Thumbprint certificate that was used to encrypt &#34;Value&#34;. If the value in unencrypted, it will be null.
+     * 
+     */
     public Optional<String> encryptionCertThumbprint() {
         return Optional.ofNullable(this.encryptionCertThumbprint);
     }
@@ -47,6 +55,10 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the secret.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -77,16 +89,34 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
             $ = new AsymmetricEncryptedSecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionAlgorithm The algorithm used to encrypt &#34;Value&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param encryptionCertThumbprint Thumbprint certificate that was used to encrypt &#34;Value&#34;. If the value in unencrypted, it will be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
             $.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;
         }
 
+        /**
+         * @param value The value of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

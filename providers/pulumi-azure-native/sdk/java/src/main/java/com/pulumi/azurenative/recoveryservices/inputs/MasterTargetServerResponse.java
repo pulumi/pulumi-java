@@ -31,6 +31,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="agentExpiryDate")
     private @Nullable String agentExpiryDate;
 
+    /**
+     * @return Agent expiry date.
+     * 
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
@@ -42,6 +46,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return The version of the scout component on the server.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -53,6 +61,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="agentVersionDetails")
     private @Nullable VersionDetailsResponse agentVersionDetails;
 
+    /**
+     * @return Agent version details.
+     * 
+     */
     public Optional<VersionDetailsResponse> agentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
@@ -64,6 +76,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="dataStores")
     private @Nullable List<DataStoreResponse> dataStores;
 
+    /**
+     * @return The list of data stores in the fabric.
+     * 
+     */
     public Optional<List<DataStoreResponse>> dataStores() {
         return Optional.ofNullable(this.dataStores);
     }
@@ -75,6 +91,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="diskCount")
     private @Nullable Integer diskCount;
 
+    /**
+     * @return Disk count of the master target.
+     * 
+     */
     public Optional<Integer> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
@@ -86,6 +106,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="healthErrors")
     private @Nullable List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return Health errors.
+     * 
+     */
     public Optional<List<HealthErrorResponse>> healthErrors() {
         return Optional.ofNullable(this.healthErrors);
     }
@@ -97,6 +121,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The server Id.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -108,6 +136,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return The IP address of the server.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -119,6 +151,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="lastHeartbeat")
     private @Nullable String lastHeartbeat;
 
+    /**
+     * @return The last heartbeat received from the server.
+     * 
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
@@ -130,6 +166,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="marsAgentExpiryDate")
     private @Nullable String marsAgentExpiryDate;
 
+    /**
+     * @return MARS agent expiry date.
+     * 
+     */
     public Optional<String> marsAgentExpiryDate() {
         return Optional.ofNullable(this.marsAgentExpiryDate);
     }
@@ -141,6 +181,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="marsAgentVersion")
     private @Nullable String marsAgentVersion;
 
+    /**
+     * @return MARS agent version.
+     * 
+     */
     public Optional<String> marsAgentVersion() {
         return Optional.ofNullable(this.marsAgentVersion);
     }
@@ -152,6 +196,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="marsAgentVersionDetails")
     private @Nullable VersionDetailsResponse marsAgentVersionDetails;
 
+    /**
+     * @return Mars agent version details.
+     * 
+     */
     public Optional<VersionDetailsResponse> marsAgentVersionDetails() {
         return Optional.ofNullable(this.marsAgentVersionDetails);
     }
@@ -163,6 +211,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The server name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -174,6 +226,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return The OS type of the server.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -185,6 +241,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="osVersion")
     private @Nullable String osVersion;
 
+    /**
+     * @return OS Version of the master target.
+     * 
+     */
     public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
@@ -196,6 +256,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="retentionVolumes")
     private @Nullable List<RetentionVolumeResponse> retentionVolumes;
 
+    /**
+     * @return The retention volumes of Master target Server.
+     * 
+     */
     public Optional<List<RetentionVolumeResponse>> retentionVolumes() {
         return Optional.ofNullable(this.retentionVolumes);
     }
@@ -207,6 +271,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="validationErrors")
     private @Nullable List<HealthErrorResponse> validationErrors;
 
+    /**
+     * @return Validation errors.
+     * 
+     */
     public Optional<List<HealthErrorResponse>> validationErrors() {
         return Optional.ofNullable(this.validationErrors);
     }
@@ -218,6 +286,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
     @Import(name="versionStatus")
     private @Nullable String versionStatus;
 
+    /**
+     * @return Version status
+     * 
+     */
     public Optional<String> versionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }
@@ -263,107 +335,239 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
             $ = new MasterTargetServerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentExpiryDate Agent expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             $.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
+        /**
+         * @param agentVersion The version of the scout component on the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param agentVersionDetails Agent version details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             $.agentVersionDetails = agentVersionDetails;
             return this;
         }
 
+        /**
+         * @param dataStores The list of data stores in the fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStores(@Nullable List<DataStoreResponse> dataStores) {
             $.dataStores = dataStores;
             return this;
         }
 
+        /**
+         * @param dataStores The list of data stores in the fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStores(DataStoreResponse... dataStores) {
             return dataStores(List.of(dataStores));
         }
 
+        /**
+         * @param diskCount Disk count of the master target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(@Nullable Integer diskCount) {
             $.diskCount = diskCount;
             return this;
         }
 
+        /**
+         * @param healthErrors Health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors Health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param id The server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param lastHeartbeat The last heartbeat received from the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             $.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
+        /**
+         * @param marsAgentExpiryDate MARS agent expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marsAgentExpiryDate(@Nullable String marsAgentExpiryDate) {
             $.marsAgentExpiryDate = marsAgentExpiryDate;
             return this;
         }
 
+        /**
+         * @param marsAgentVersion MARS agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marsAgentVersion(@Nullable String marsAgentVersion) {
             $.marsAgentVersion = marsAgentVersion;
             return this;
         }
 
+        /**
+         * @param marsAgentVersionDetails Mars agent version details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marsAgentVersionDetails(@Nullable VersionDetailsResponse marsAgentVersionDetails) {
             $.marsAgentVersionDetails = marsAgentVersionDetails;
             return this;
         }
 
+        /**
+         * @param name The server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param osType The OS type of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osVersion OS Version of the master target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(@Nullable String osVersion) {
             $.osVersion = osVersion;
             return this;
         }
 
+        /**
+         * @param retentionVolumes The retention volumes of Master target Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionVolumes(@Nullable List<RetentionVolumeResponse> retentionVolumes) {
             $.retentionVolumes = retentionVolumes;
             return this;
         }
 
+        /**
+         * @param retentionVolumes The retention volumes of Master target Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionVolumes(RetentionVolumeResponse... retentionVolumes) {
             return retentionVolumes(List.of(retentionVolumes));
         }
 
+        /**
+         * @param validationErrors Validation errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(HealthErrorResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }
 
+        /**
+         * @param versionStatus Version status
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionStatus(@Nullable String versionStatus) {
             $.versionStatus = versionStatus;
             return this;

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyAssignmentPropertiesResponseScope {
     /**
-     * Display name of the resource
+     * @return Display name of the resource
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Scope id of the resource
+     * @return Scope id of the resource
      * 
      */
     private final @Nullable String id;
     /**
-     * Type of the resource
+     * @return Type of the resource
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class PolicyAssignmentPropertiesResponseScope {
     }
 
     /**
-     * Display name of the resource
+     * @return Display name of the resource
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Scope id of the resource
+     * @return Scope id of the resource
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Type of the resource
+     * @return Type of the resource
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

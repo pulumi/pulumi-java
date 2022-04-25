@@ -19,6 +19,10 @@ public final class LicenseResourceRequirementsResponse extends com.pulumi.resour
     @Import(name="minGuestCpuCount", required=true)
     private Integer minGuestCpuCount;
 
+    /**
+     * @return Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
+     * 
+     */
     public Integer minGuestCpuCount() {
         return this.minGuestCpuCount;
     }
@@ -30,6 +34,10 @@ public final class LicenseResourceRequirementsResponse extends com.pulumi.resour
     @Import(name="minMemoryMb", required=true)
     private Integer minMemoryMb;
 
+    /**
+     * @return Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+     * 
+     */
     public Integer minMemoryMb() {
         return this.minMemoryMb;
     }
@@ -59,11 +67,23 @@ public final class LicenseResourceRequirementsResponse extends com.pulumi.resour
             $ = new LicenseResourceRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minGuestCpuCount Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minGuestCpuCount(Integer minGuestCpuCount) {
             $.minGuestCpuCount = minGuestCpuCount;
             return this;
         }
 
+        /**
+         * @param minMemoryMb Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minMemoryMb(Integer minMemoryMb) {
             $.minMemoryMb = minMemoryMb;
             return this;

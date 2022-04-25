@@ -26,6 +26,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
     @Import(name="privateIPAddress")
     private @Nullable String privateIPAddress;
 
+    /**
+     * @return The virtual network private IP address of the IP configuration.
+     * 
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -37,6 +41,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
     @Import(name="publicIPAddress")
     private @Nullable SubResourceResponse publicIPAddress;
 
+    /**
+     * @return The reference to the public ip address resource.
+     * 
+     */
     public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -48,6 +56,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
     @Import(name="subnet")
     private @Nullable SubResourceResponse subnet;
 
+    /**
+     * @return The reference to the virtual network subnet resource.
+     * 
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -78,16 +90,34 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
             $ = new LoadBalancerFrontendIPConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateIPAddress The virtual network private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param publicIPAddress The reference to the public ip address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param subnet The reference to the virtual network subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;

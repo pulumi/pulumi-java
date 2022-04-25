@@ -26,6 +26,10 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The time the replication cycle has ended.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -37,6 +41,10 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     @Import(name="progress", required=true)
     private Integer progress;
 
+    /**
+     * @return The current progress in percentage of this cycle.
+     * 
+     */
     public Integer progress() {
         return this.progress;
     }
@@ -48,6 +56,10 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     @Import(name="progressPercent", required=true)
     private Integer progressPercent;
 
+    /**
+     * @return The current progress in percentage of this cycle.
+     * 
+     */
     public Integer progressPercent() {
         return this.progressPercent;
     }
@@ -59,6 +71,10 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time the replication cycle has started.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -70,6 +86,10 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     @Import(name="steps", required=true)
     private List<CycleStepResponse> steps;
 
+    /**
+     * @return The cycle&#39;s steps list reflecting its progress.
+     * 
+     */
     public List<CycleStepResponse> steps() {
         return this.steps;
     }
@@ -81,6 +101,10 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
     @Import(name="totalPauseDuration", required=true)
     private String totalPauseDuration;
 
+    /**
+     * @return The accumulated duration the replication cycle was paused.
+     * 
+     */
     public String totalPauseDuration() {
         return this.totalPauseDuration;
     }
@@ -114,35 +138,77 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
             $ = new ReplicationCycleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime The time the replication cycle has ended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param progress The current progress in percentage of this cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progress(Integer progress) {
             $.progress = progress;
             return this;
         }
 
+        /**
+         * @param progressPercent The current progress in percentage of this cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressPercent(Integer progressPercent) {
             $.progressPercent = progressPercent;
             return this;
         }
 
+        /**
+         * @param startTime The time the replication cycle has started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param steps The cycle&#39;s steps list reflecting its progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<CycleStepResponse> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps The cycle&#39;s steps list reflecting its progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(CycleStepResponse... steps) {
             return steps(List.of(steps));
         }
 
+        /**
+         * @param totalPauseDuration The accumulated duration the replication cycle was paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalPauseDuration(String totalPauseDuration) {
             $.totalPauseDuration = totalPauseDuration;
             return this;

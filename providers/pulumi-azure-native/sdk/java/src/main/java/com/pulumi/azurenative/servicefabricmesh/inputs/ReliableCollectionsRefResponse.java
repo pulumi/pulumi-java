@@ -26,6 +26,10 @@ public final class ReliableCollectionsRefResponse extends com.pulumi.resources.I
     @Import(name="doNotPersistState")
     private @Nullable Boolean doNotPersistState;
 
+    /**
+     * @return False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
+     * 
+     */
     public Optional<Boolean> doNotPersistState() {
         return Optional.ofNullable(this.doNotPersistState);
     }
@@ -37,6 +41,10 @@ public final class ReliableCollectionsRefResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -66,11 +74,23 @@ public final class ReliableCollectionsRefResponse extends com.pulumi.resources.I
             $ = new ReliableCollectionsRefResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param doNotPersistState False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotPersistState(@Nullable Boolean doNotPersistState) {
             $.doNotPersistState = doNotPersistState;
             return this;
         }
 
+        /**
+         * @param name Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

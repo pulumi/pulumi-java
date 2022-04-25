@@ -27,6 +27,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorized")
     private @Nullable Output<Boolean> authorized;
 
+    /**
+     * @return Whether the channel is authorized.
+     * 
+     */
     public Optional<Output<Boolean>> authorized() {
         return Optional.ofNullable(this.authorized);
     }
@@ -38,6 +42,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="latencyMode")
     private @Nullable Output<ChannelLatencyMode> latencyMode;
 
+    /**
+     * @return Channel latency mode.
+     * 
+     */
     public Optional<Output<ChannelLatencyMode>> latencyMode() {
         return Optional.ofNullable(this.latencyMode);
     }
@@ -49,6 +57,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Channel
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recordingConfigurationArn")
     private @Nullable Output<String> recordingConfigurationArn;
 
+    /**
+     * @return Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
+     * 
+     */
     public Optional<Output<String>> recordingConfigurationArn() {
         return Optional.ofNullable(this.recordingConfigurationArn);
     }
@@ -71,6 +87,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ChannelTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     public Optional<Output<List<ChannelTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -82,6 +102,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<ChannelType> type;
 
+    /**
+     * @return Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
+     * 
+     */
     public Optional<Output<ChannelType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -115,60 +139,138 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorized Whether the channel is authorized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorized(@Nullable Output<Boolean> authorized) {
             $.authorized = authorized;
             return this;
         }
 
+        /**
+         * @param authorized Whether the channel is authorized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorized(Boolean authorized) {
             return authorized(Output.of(authorized));
         }
 
+        /**
+         * @param latencyMode Channel latency mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latencyMode(@Nullable Output<ChannelLatencyMode> latencyMode) {
             $.latencyMode = latencyMode;
             return this;
         }
 
+        /**
+         * @param latencyMode Channel latency mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latencyMode(ChannelLatencyMode latencyMode) {
             return latencyMode(Output.of(latencyMode));
         }
 
+        /**
+         * @param name Channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param recordingConfigurationArn Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordingConfigurationArn(@Nullable Output<String> recordingConfigurationArn) {
             $.recordingConfigurationArn = recordingConfigurationArn;
             return this;
         }
 
+        /**
+         * @param recordingConfigurationArn Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordingConfigurationArn(String recordingConfigurationArn) {
             return recordingConfigurationArn(Output.of(recordingConfigurationArn));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ChannelTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ChannelTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ChannelType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ChannelType type) {
             return type(Output.of(type));
         }

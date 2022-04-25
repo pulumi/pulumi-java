@@ -23,6 +23,10 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
     @Import(name="gcsFileUri", required=true)
     private String gcsFileUri;
 
+    /**
+     * @return PDF file for the instruction. Only gcs path is allowed.
+     * 
+     */
     public String gcsFileUri() {
         return this.gcsFileUri;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
             $ = new GoogleCloudDatalabelingV1beta1PdfInstructionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcsFileUri PDF file for the instruction. Only gcs path is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsFileUri(String gcsFileUri) {
             $.gcsFileUri = gcsFileUri;
             return this;

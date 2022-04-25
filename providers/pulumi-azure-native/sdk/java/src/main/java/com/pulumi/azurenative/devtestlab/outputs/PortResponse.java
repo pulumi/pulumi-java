@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PortResponse {
     /**
-     * Backend port of the target virtual machine.
+     * @return Backend port of the target virtual machine.
      * 
      */
     private final @Nullable Integer backendPort;
     /**
-     * Protocol type of the port.
+     * @return Protocol type of the port.
      * 
      */
     private final @Nullable String transportProtocol;
@@ -32,16 +32,16 @@ public final class PortResponse {
     }
 
     /**
-     * Backend port of the target virtual machine.
+     * @return Backend port of the target virtual machine.
      * 
-    */
+     */
     public Optional<Integer> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
     /**
-     * Protocol type of the port.
+     * @return Protocol type of the port.
      * 
-    */
+     */
     public Optional<String> transportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }

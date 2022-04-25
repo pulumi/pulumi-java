@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebAclRuleActionCount {
     /**
-     * Defines custom handling for the web request. See Custom Request Handling below for details.
+     * @return Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
      */
     private final @Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling;
@@ -23,9 +23,9 @@ public final class WebAclRuleActionCount {
     }
 
     /**
-     * Defines custom handling for the web request. See Custom Request Handling below for details.
+     * @return Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleActionCountCustomRequestHandling> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }

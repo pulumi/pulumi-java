@@ -26,6 +26,10 @@ public final class X509ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="critical", required=true)
     private Output<Boolean> critical;
 
+    /**
+     * @return Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * 
+     */
     public Output<Boolean> critical() {
         return this.critical;
     }
@@ -37,6 +41,10 @@ public final class X509ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectId", required=true)
     private Output<ObjectIdArgs> objectId;
 
+    /**
+     * @return The OID for this X.509 extension.
+     * 
+     */
     public Output<ObjectIdArgs> objectId() {
         return this.objectId;
     }
@@ -48,6 +56,10 @@ public final class X509ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value of this X.509 extension.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -78,29 +90,65 @@ public final class X509ExtensionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new X509ExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param critical Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+         * 
+         * @return builder
+         * 
+         */
         public Builder critical(Output<Boolean> critical) {
             $.critical = critical;
             return this;
         }
 
+        /**
+         * @param critical Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+         * 
+         * @return builder
+         * 
+         */
         public Builder critical(Boolean critical) {
             return critical(Output.of(critical));
         }
 
+        /**
+         * @param objectId The OID for this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<ObjectIdArgs> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId The OID for this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(ObjectIdArgs objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param value The value of this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

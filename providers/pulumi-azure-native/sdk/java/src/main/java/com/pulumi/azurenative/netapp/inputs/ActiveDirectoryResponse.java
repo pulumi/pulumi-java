@@ -28,6 +28,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="activeDirectoryId")
     private @Nullable String activeDirectoryId;
 
+    /**
+     * @return Id of the Active Directory
+     * 
+     */
     public Optional<String> activeDirectoryId() {
         return Optional.ofNullable(this.activeDirectoryId);
     }
@@ -39,6 +43,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="adName")
     private @Nullable String adName;
 
+    /**
+     * @return Name of the active directory machine. This optional parameter is used only while creating kerberos volume
+     * 
+     */
     public Optional<String> adName() {
         return Optional.ofNullable(this.adName);
     }
@@ -50,6 +58,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="aesEncryption")
     private @Nullable Boolean aesEncryption;
 
+    /**
+     * @return If enabled, AES encryption will be enabled for SMB communication.
+     * 
+     */
     public Optional<Boolean> aesEncryption() {
         return Optional.ofNullable(this.aesEncryption);
     }
@@ -61,6 +73,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="allowLocalNfsUsersWithLdap")
     private @Nullable Boolean allowLocalNfsUsersWithLdap;
 
+    /**
+     * @return  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
+     * 
+     */
     public Optional<Boolean> allowLocalNfsUsersWithLdap() {
         return Optional.ofNullable(this.allowLocalNfsUsersWithLdap);
     }
@@ -72,6 +88,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="backupOperators")
     private @Nullable List<String> backupOperators;
 
+    /**
+     * @return Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
+     * 
+     */
     public Optional<List<String>> backupOperators() {
         return Optional.ofNullable(this.backupOperators);
     }
@@ -83,6 +103,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dns")
     private @Nullable String dns;
 
+    /**
+     * @return Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
+     * 
+     */
     public Optional<String> dns() {
         return Optional.ofNullable(this.dns);
     }
@@ -94,6 +118,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="domain")
     private @Nullable String domain;
 
+    /**
+     * @return Name of the Active Directory domain
+     * 
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -105,6 +133,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="kdcIP")
     private @Nullable String kdcIP;
 
+    /**
+     * @return kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
+     * 
+     */
     public Optional<String> kdcIP() {
         return Optional.ofNullable(this.kdcIP);
     }
@@ -116,6 +148,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ldapOverTLS")
     private @Nullable Boolean ldapOverTLS;
 
+    /**
+     * @return Specifies whether or not the LDAP traffic needs to be secured via TLS.
+     * 
+     */
     public Optional<Boolean> ldapOverTLS() {
         return Optional.ofNullable(this.ldapOverTLS);
     }
@@ -127,6 +163,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ldapSigning")
     private @Nullable Boolean ldapSigning;
 
+    /**
+     * @return Specifies whether or not the LDAP traffic needs to be signed.
+     * 
+     */
     public Optional<Boolean> ldapSigning() {
         return Optional.ofNullable(this.ldapSigning);
     }
@@ -138,6 +178,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="organizationalUnit")
     private @Nullable String organizationalUnit;
 
+    /**
+     * @return The Organizational Unit (OU) within the Windows Active Directory
+     * 
+     */
     public Optional<String> organizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
@@ -149,6 +193,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Plain text password of Active Directory domain administrator, value is masked in the response
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -160,6 +208,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="securityOperators")
     private @Nullable List<String> securityOperators;
 
+    /**
+     * @return Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
+     * 
+     */
     public Optional<List<String>> securityOperators() {
         return Optional.ofNullable(this.securityOperators);
     }
@@ -171,6 +223,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="serverRootCACertificate")
     private @Nullable String serverRootCACertificate;
 
+    /**
+     * @return When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service&#39;s self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
+     * 
+     */
     public Optional<String> serverRootCACertificate() {
         return Optional.ofNullable(this.serverRootCACertificate);
     }
@@ -182,6 +238,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="site")
     private @Nullable String site;
 
+    /**
+     * @return The Active Directory site the service will limit Domain Controller discovery to
+     * 
+     */
     public Optional<String> site() {
         return Optional.ofNullable(this.site);
     }
@@ -193,6 +253,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="smbServerName")
     private @Nullable String smbServerName;
 
+    /**
+     * @return NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
+     * 
+     */
     public Optional<String> smbServerName() {
         return Optional.ofNullable(this.smbServerName);
     }
@@ -204,6 +268,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the Active Directory
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -215,6 +283,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="statusDetails", required=true)
     private String statusDetails;
 
+    /**
+     * @return Any details in regards to the Status of the Active Directory
+     * 
+     */
     public String statusDetails() {
         return this.statusDetails;
     }
@@ -226,6 +298,10 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Username of Active Directory domain administrator
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -272,104 +348,230 @@ public final class ActiveDirectoryResponse extends com.pulumi.resources.InvokeAr
             $ = new ActiveDirectoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDirectoryId Id of the Active Directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
             $.activeDirectoryId = activeDirectoryId;
             return this;
         }
 
+        /**
+         * @param adName Name of the active directory machine. This optional parameter is used only while creating kerberos volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder adName(@Nullable String adName) {
             $.adName = adName;
             return this;
         }
 
+        /**
+         * @param aesEncryption If enabled, AES encryption will be enabled for SMB communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aesEncryption(@Nullable Boolean aesEncryption) {
             $.aesEncryption = aesEncryption;
             return this;
         }
 
+        /**
+         * @param allowLocalNfsUsersWithLdap  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
             $.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
             return this;
         }
 
+        /**
+         * @param backupOperators Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupOperators(@Nullable List<String> backupOperators) {
             $.backupOperators = backupOperators;
             return this;
         }
 
+        /**
+         * @param backupOperators Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupOperators(String... backupOperators) {
             return backupOperators(List.of(backupOperators));
         }
 
+        /**
+         * @param dns Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder dns(@Nullable String dns) {
             $.dns = dns;
             return this;
         }
 
+        /**
+         * @param domain Name of the Active Directory domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param kdcIP kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kdcIP(@Nullable String kdcIP) {
             $.kdcIP = kdcIP;
             return this;
         }
 
+        /**
+         * @param ldapOverTLS Specifies whether or not the LDAP traffic needs to be secured via TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapOverTLS(@Nullable Boolean ldapOverTLS) {
             $.ldapOverTLS = ldapOverTLS;
             return this;
         }
 
+        /**
+         * @param ldapSigning Specifies whether or not the LDAP traffic needs to be signed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapSigning(@Nullable Boolean ldapSigning) {
             $.ldapSigning = ldapSigning;
             return this;
         }
 
+        /**
+         * @param organizationalUnit The Organizational Unit (OU) within the Windows Active Directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
             $.organizationalUnit = organizationalUnit;
             return this;
         }
 
+        /**
+         * @param password Plain text password of Active Directory domain administrator, value is masked in the response
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param securityOperators Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityOperators(@Nullable List<String> securityOperators) {
             $.securityOperators = securityOperators;
             return this;
         }
 
+        /**
+         * @param securityOperators Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityOperators(String... securityOperators) {
             return securityOperators(List.of(securityOperators));
         }
 
+        /**
+         * @param serverRootCACertificate When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service&#39;s self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverRootCACertificate(@Nullable String serverRootCACertificate) {
             $.serverRootCACertificate = serverRootCACertificate;
             return this;
         }
 
+        /**
+         * @param site The Active Directory site the service will limit Domain Controller discovery to
+         * 
+         * @return builder
+         * 
+         */
         public Builder site(@Nullable String site) {
             $.site = site;
             return this;
         }
 
+        /**
+         * @param smbServerName NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbServerName(@Nullable String smbServerName) {
             $.smbServerName = smbServerName;
             return this;
         }
 
+        /**
+         * @param status Status of the Active Directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param statusDetails Any details in regards to the Status of the Active Directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusDetails(String statusDetails) {
             $.statusDetails = statusDetails;
             return this;
         }
 
+        /**
+         * @param username Username of Active Directory domain administrator
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

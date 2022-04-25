@@ -22,6 +22,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -33,6 +37,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="audience")
     private @Nullable Output<String> audience;
 
+    /**
+     * @return Intended audience for the service principal.
+     * 
+     */
     public Optional<Output<String>> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -44,6 +52,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="authority")
     private @Nullable Output<String> authority;
 
+    /**
+     * @return AAD Authority URL which was used to request the token for the service principal.
+     * 
+     */
     public Optional<Output<String>> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -55,6 +67,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="objectId")
     private @Nullable Output<String> objectId;
 
+    /**
+     * @return Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -66,6 +82,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -98,47 +118,107 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
             $ = new CollectorBodyAgentSpnPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param audience Intended audience for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable Output<String> audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param audience Intended audience for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             return audience(Output.of(audience));
         }
 
+        /**
+         * @param authority AAD Authority URL which was used to request the token for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable Output<String> authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param authority AAD Authority URL which was used to request the token for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(String authority) {
             return authority(Output.of(authority));
         }
 
+        /**
+         * @param objectId Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param tenantId Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

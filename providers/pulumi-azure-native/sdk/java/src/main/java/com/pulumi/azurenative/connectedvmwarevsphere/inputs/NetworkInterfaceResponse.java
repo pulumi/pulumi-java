@@ -28,6 +28,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="deviceKey")
     private @Nullable Integer deviceKey;
 
+    /**
+     * @return Gets or sets the device key value.
+     * 
+     */
     public Optional<Integer> deviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
@@ -39,6 +43,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipAddresses", required=true)
     private List<String> ipAddresses;
 
+    /**
+     * @return Gets or sets the nic ip addresses.
+     * 
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses;
     }
@@ -50,6 +58,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipSettings")
     private @Nullable NicIPSettingsResponse ipSettings;
 
+    /**
+     * @return Gets or sets the ipsettings.
+     * 
+     */
     public Optional<NicIPSettingsResponse> ipSettings() {
         return Optional.ofNullable(this.ipSettings);
     }
@@ -61,6 +73,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return Gets or sets the label of the virtual network in vCenter that the nic is connected to.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -72,6 +88,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="macAddress", required=true)
     private String macAddress;
 
+    /**
+     * @return Gets or sets the NIC MAC address.
+     * 
+     */
     public String macAddress() {
         return this.macAddress;
     }
@@ -83,6 +103,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the name of the network interface.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -94,6 +118,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkId")
     private @Nullable String networkId;
 
+    /**
+     * @return Gets or sets the ARM Id of the network resource to connect the virtual machine.
+     * 
+     */
     public Optional<String> networkId() {
         return Optional.ofNullable(this.networkId);
     }
@@ -105,6 +133,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkMoName", required=true)
     private String networkMoName;
 
+    /**
+     * @return Gets or sets the name of the virtual network in vCenter that the nic is connected to.
+     * 
+     */
     public String networkMoName() {
         return this.networkMoName;
     }
@@ -117,6 +149,11 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkMoRefId", required=true)
     private String networkMoRefId;
 
+    /**
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
+     * that the nic is connected to.
+     * 
+     */
     public String networkMoRefId() {
         return this.networkMoRefId;
     }
@@ -128,6 +165,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="nicType")
     private @Nullable String nicType;
 
+    /**
+     * @return NIC type
+     * 
+     */
     public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
@@ -139,6 +180,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="powerOnBoot")
     private @Nullable String powerOnBoot;
 
+    /**
+     * @return Gets or sets the power on boot.
+     * 
+     */
     public Optional<String> powerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }
@@ -177,60 +222,133 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
             $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceKey Gets or sets the device key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceKey(@Nullable Integer deviceKey) {
             $.deviceKey = deviceKey;
             return this;
         }
 
+        /**
+         * @param ipAddresses Gets or sets the nic ip addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses Gets or sets the nic ip addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param ipSettings Gets or sets the ipsettings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSettings(@Nullable NicIPSettingsResponse ipSettings) {
             $.ipSettings = ipSettings;
             return this;
         }
 
+        /**
+         * @param label Gets or sets the label of the virtual network in vCenter that the nic is connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param macAddress Gets or sets the NIC MAC address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder macAddress(String macAddress) {
             $.macAddress = macAddress;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkId Gets or sets the ARM Id of the network resource to connect the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkId(@Nullable String networkId) {
             $.networkId = networkId;
             return this;
         }
 
+        /**
+         * @param networkMoName Gets or sets the name of the virtual network in vCenter that the nic is connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMoName(String networkMoName) {
             $.networkMoName = networkMoName;
             return this;
         }
 
+        /**
+         * @param networkMoRefId Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
+         * that the nic is connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMoRefId(String networkMoRefId) {
             $.networkMoRefId = networkMoRefId;
             return this;
         }
 
+        /**
+         * @param nicType NIC type
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(@Nullable String nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param powerOnBoot Gets or sets the power on boot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerOnBoot(@Nullable String powerOnBoot) {
             $.powerOnBoot = powerOnBoot;
             return this;

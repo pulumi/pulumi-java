@@ -25,6 +25,10 @@ public final class TimeSeriesTableArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dataSets", required=true)
     private Output<List<TableDataSetArgs>> dataSets;
 
+    /**
+     * @return The data displayed in this table.
+     * 
+     */
     public Output<List<TableDataSetArgs>> dataSets() {
         return this.dataSets;
     }
@@ -53,15 +57,33 @@ public final class TimeSeriesTableArgs extends com.pulumi.resources.ResourceArgs
             $ = new TimeSeriesTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSets The data displayed in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(Output<List<TableDataSetArgs>> dataSets) {
             $.dataSets = dataSets;
             return this;
         }
 
+        /**
+         * @param dataSets The data displayed in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(List<TableDataSetArgs> dataSets) {
             return dataSets(Output.of(dataSets));
         }
 
+        /**
+         * @param dataSets The data displayed in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(TableDataSetArgs... dataSets) {
             return dataSets(List.of(dataSets));
         }

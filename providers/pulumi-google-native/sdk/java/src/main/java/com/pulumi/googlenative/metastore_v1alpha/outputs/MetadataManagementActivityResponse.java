@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class MetadataManagementActivityResponse {
     /**
-     * The latest metadata exports of the metastore service.
+     * @return The latest metadata exports of the metastore service.
      * 
      */
     private final List<MetadataExportResponse> metadataExports;
     /**
-     * The latest restores of the metastore service.
+     * @return The latest restores of the metastore service.
      * 
      */
     private final List<RestoreResponse> restores;
@@ -31,16 +31,16 @@ public final class MetadataManagementActivityResponse {
     }
 
     /**
-     * The latest metadata exports of the metastore service.
+     * @return The latest metadata exports of the metastore service.
      * 
-    */
+     */
     public List<MetadataExportResponse> metadataExports() {
         return this.metadataExports;
     }
     /**
-     * The latest restores of the metastore service.
+     * @return The latest restores of the metastore service.
      * 
-    */
+     */
     public List<RestoreResponse> restores() {
         return this.restores;
     }

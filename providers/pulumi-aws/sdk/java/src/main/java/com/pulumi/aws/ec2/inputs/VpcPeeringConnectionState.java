@@ -26,6 +26,10 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="acceptStatus")
     private @Nullable Output<String> acceptStatus;
 
+    /**
+     * @return The status of the VPC Peering Connection request.
+     * 
+     */
     public Optional<Output<String>> acceptStatus() {
         return Optional.ofNullable(this.acceptStatus);
     }
@@ -38,6 +42,11 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="accepter")
     private @Nullable Output<VpcPeeringConnectionAccepterGetArgs> accepter;
 
+    /**
+     * @return An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+     * the peering connection (a maximum of one).
+     * 
+     */
     public Optional<Output<VpcPeeringConnectionAccepterGetArgs>> accepter() {
         return Optional.ofNullable(this.accepter);
     }
@@ -49,6 +58,10 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="autoAccept")
     private @Nullable Output<Boolean> autoAccept;
 
+    /**
+     * @return Accept the peering (both VPCs need to be in the same AWS account and region).
+     * 
+     */
     public Optional<Output<Boolean>> autoAccept() {
         return Optional.ofNullable(this.autoAccept);
     }
@@ -61,6 +74,11 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="peerOwnerId")
     private @Nullable Output<String> peerOwnerId;
 
+    /**
+     * @return The AWS account ID of the owner of the peer VPC.
+     * Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+     * 
+     */
     public Optional<Output<String>> peerOwnerId() {
         return Optional.ofNullable(this.peerOwnerId);
     }
@@ -73,6 +91,11 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="peerRegion")
     private @Nullable Output<String> peerRegion;
 
+    /**
+     * @return The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
+     * and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
+     * 
+     */
     public Optional<Output<String>> peerRegion() {
         return Optional.ofNullable(this.peerRegion);
     }
@@ -84,6 +107,10 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="peerVpcId")
     private @Nullable Output<String> peerVpcId;
 
+    /**
+     * @return The ID of the VPC with which you are creating the VPC Peering Connection.
+     * 
+     */
     public Optional<Output<String>> peerVpcId() {
         return Optional.ofNullable(this.peerVpcId);
     }
@@ -96,6 +123,11 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="requester")
     private @Nullable Output<VpcPeeringConnectionRequesterGetArgs> requester;
 
+    /**
+     * @return A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+     * the peering connection (a maximum of one).
+     * 
+     */
     public Optional<Output<VpcPeeringConnectionRequesterGetArgs>> requester() {
         return Optional.ofNullable(this.requester);
     }
@@ -107,6 +139,10 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -118,6 +154,10 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -129,6 +169,10 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The ID of the requester VPC.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -166,92 +210,220 @@ public final class VpcPeeringConnectionState extends com.pulumi.resources.Resour
             $ = new VpcPeeringConnectionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptStatus The status of the VPC Peering Connection request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptStatus(@Nullable Output<String> acceptStatus) {
             $.acceptStatus = acceptStatus;
             return this;
         }
 
+        /**
+         * @param acceptStatus The status of the VPC Peering Connection request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptStatus(String acceptStatus) {
             return acceptStatus(Output.of(acceptStatus));
         }
 
+        /**
+         * @param accepter An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+         * the peering connection (a maximum of one).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accepter(@Nullable Output<VpcPeeringConnectionAccepterGetArgs> accepter) {
             $.accepter = accepter;
             return this;
         }
 
+        /**
+         * @param accepter An optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
+         * the peering connection (a maximum of one).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accepter(VpcPeeringConnectionAccepterGetArgs accepter) {
             return accepter(Output.of(accepter));
         }
 
+        /**
+         * @param autoAccept Accept the peering (both VPCs need to be in the same AWS account and region).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
             $.autoAccept = autoAccept;
             return this;
         }
 
+        /**
+         * @param autoAccept Accept the peering (both VPCs need to be in the same AWS account and region).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoAccept(Boolean autoAccept) {
             return autoAccept(Output.of(autoAccept));
         }
 
+        /**
+         * @param peerOwnerId The AWS account ID of the owner of the peer VPC.
+         * Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerOwnerId(@Nullable Output<String> peerOwnerId) {
             $.peerOwnerId = peerOwnerId;
             return this;
         }
 
+        /**
+         * @param peerOwnerId The AWS account ID of the owner of the peer VPC.
+         * Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerOwnerId(String peerOwnerId) {
             return peerOwnerId(Output.of(peerOwnerId));
         }
 
+        /**
+         * @param peerRegion The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
+         * and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerRegion(@Nullable Output<String> peerRegion) {
             $.peerRegion = peerRegion;
             return this;
         }
 
+        /**
+         * @param peerRegion The region of the accepter VPC of the VPC Peering Connection. `auto_accept` must be `false`,
+         * and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerRegion(String peerRegion) {
             return peerRegion(Output.of(peerRegion));
         }
 
+        /**
+         * @param peerVpcId The ID of the VPC with which you are creating the VPC Peering Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerVpcId(@Nullable Output<String> peerVpcId) {
             $.peerVpcId = peerVpcId;
             return this;
         }
 
+        /**
+         * @param peerVpcId The ID of the VPC with which you are creating the VPC Peering Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerVpcId(String peerVpcId) {
             return peerVpcId(Output.of(peerVpcId));
         }
 
+        /**
+         * @param requester A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+         * the peering connection (a maximum of one).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requester(@Nullable Output<VpcPeeringConnectionRequesterGetArgs> requester) {
             $.requester = requester;
             return this;
         }
 
+        /**
+         * @param requester A optional configuration block that allows for [VPC Peering Connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
+         * the peering connection (a maximum of one).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requester(VpcPeeringConnectionRequesterGetArgs requester) {
             return requester(Output.of(requester));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param vpcId The ID of the requester VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the requester VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

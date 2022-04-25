@@ -27,6 +27,10 @@ public final class ImageTemplateIdentityResponse extends com.pulumi.resources.In
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of identity used for the image template. The type &#39;None&#39; will remove any identities from the image template.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -38,6 +42,10 @@ public final class ImageTemplateIdentityResponse extends com.pulumi.resources.In
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
+    /**
+     * @return The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Map<String,ImageTemplateIdentityResponseUserAssignedIdentities>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -67,11 +75,23 @@ public final class ImageTemplateIdentityResponse extends com.pulumi.resources.In
             $ = new ImageTemplateIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of identity used for the image template. The type &#39;None&#39; will remove any identities from the image template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

@@ -29,6 +29,10 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="messages", required=true)
     private List<MessageResponse> messages;
 
+    /**
+     * @return Supplementary informative messages during rollout.
+     * 
+     */
     public List<MessageResponse> messages() {
         return this.messages;
     }
@@ -40,6 +44,10 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the step.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +59,10 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operationInfo", required=true)
     private StepOperationInfoResponse operationInfo;
 
+    /**
+     * @return Detailed information of specific action execution.
+     * 
+     */
     public StepOperationInfoResponse operationInfo() {
         return this.operationInfo;
     }
@@ -62,6 +74,10 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceOperations", required=true)
     private List<ResourceOperationResponse> resourceOperations;
 
+    /**
+     * @return Set of resource operations that were performed, if any, on an Azure resource.
+     * 
+     */
     public List<ResourceOperationResponse> resourceOperations() {
         return this.resourceOperations;
     }
@@ -73,6 +89,10 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Current state of the step.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -84,6 +104,10 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stepGroup")
     private @Nullable String stepGroup;
 
+    /**
+     * @return The step group the current step is part of.
+     * 
+     */
     public Optional<String> stepGroup() {
         return Optional.ofNullable(this.stepGroup);
     }
@@ -117,39 +141,87 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RolloutStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messages Supplementary informative messages during rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(List<MessageResponse> messages) {
             $.messages = messages;
             return this;
         }
 
+        /**
+         * @param messages Supplementary informative messages during rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(MessageResponse... messages) {
             return messages(List.of(messages));
         }
 
+        /**
+         * @param name Name of the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operationInfo Detailed information of specific action execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationInfo(StepOperationInfoResponse operationInfo) {
             $.operationInfo = operationInfo;
             return this;
         }
 
+        /**
+         * @param resourceOperations Set of resource operations that were performed, if any, on an Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOperations(List<ResourceOperationResponse> resourceOperations) {
             $.resourceOperations = resourceOperations;
             return this;
         }
 
+        /**
+         * @param resourceOperations Set of resource operations that were performed, if any, on an Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOperations(ResourceOperationResponse... resourceOperations) {
             return resourceOperations(List.of(resourceOperations));
         }
 
+        /**
+         * @param status Current state of the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param stepGroup The step group the current step is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepGroup(@Nullable String stepGroup) {
             $.stepGroup = stepGroup;
             return this;

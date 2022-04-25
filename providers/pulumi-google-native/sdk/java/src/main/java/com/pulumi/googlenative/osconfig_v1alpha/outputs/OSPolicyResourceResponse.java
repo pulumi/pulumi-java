@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class OSPolicyResourceResponse {
     /**
-     * Exec resource
+     * @return Exec resource
      * 
      */
     private final OSPolicyResourceExecResourceResponse exec;
     /**
-     * File resource
+     * @return File resource
      * 
      */
     private final OSPolicyResourceFileResourceResponse file;
     /**
-     * Package resource
+     * @return Package resource
      * 
      */
     private final OSPolicyResourcePackageResourceResponse pkg;
     /**
-     * Package repository resource
+     * @return Package repository resource
      * 
      */
     private final OSPolicyResourceRepositoryResourceResponse repository;
@@ -46,30 +46,30 @@ public final class OSPolicyResourceResponse {
     }
 
     /**
-     * Exec resource
+     * @return Exec resource
      * 
-    */
+     */
     public OSPolicyResourceExecResourceResponse exec() {
         return this.exec;
     }
     /**
-     * File resource
+     * @return File resource
      * 
-    */
+     */
     public OSPolicyResourceFileResourceResponse file() {
         return this.file;
     }
     /**
-     * Package resource
+     * @return Package resource
      * 
-    */
+     */
     public OSPolicyResourcePackageResourceResponse pkg() {
         return this.pkg;
     }
     /**
-     * Package repository resource
+     * @return Package repository resource
      * 
-    */
+     */
     public OSPolicyResourceRepositoryResourceResponse repository() {
         return this.repository;
     }

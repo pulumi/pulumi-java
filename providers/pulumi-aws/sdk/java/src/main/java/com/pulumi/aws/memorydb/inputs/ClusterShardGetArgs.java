@@ -26,6 +26,11 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of this node.
+     * * `endpoint`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +42,10 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="nodes")
     private @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
 
+    /**
+     * @return Set of nodes in this shard.
+     * 
+     */
     public Optional<Output<List<ClusterShardNodeGetArgs>>> nodes() {
         return Optional.ofNullable(this.nodes);
     }
@@ -48,6 +57,10 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="numNodes")
     private @Nullable Output<Integer> numNodes;
 
+    /**
+     * @return Number of individual nodes in this shard.
+     * 
+     */
     public Optional<Output<Integer>> numNodes() {
         return Optional.ofNullable(this.numNodes);
     }
@@ -59,6 +72,10 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="slots")
     private @Nullable Output<String> slots;
 
+    /**
+     * @return Keyspace for this shard. Example: `0-16383`.
+     * 
+     */
     public Optional<Output<String>> slots() {
         return Optional.ofNullable(this.slots);
     }
@@ -90,42 +107,98 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
             $ = new ClusterShardGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of this node.
+         * * `endpoint`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of this node.
+         * * `endpoint`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodes Set of nodes in this shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(@Nullable Output<List<ClusterShardNodeGetArgs>> nodes) {
             $.nodes = nodes;
             return this;
         }
 
+        /**
+         * @param nodes Set of nodes in this shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(List<ClusterShardNodeGetArgs> nodes) {
             return nodes(Output.of(nodes));
         }
 
+        /**
+         * @param nodes Set of nodes in this shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(ClusterShardNodeGetArgs... nodes) {
             return nodes(List.of(nodes));
         }
 
+        /**
+         * @param numNodes Number of individual nodes in this shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
             $.numNodes = numNodes;
             return this;
         }
 
+        /**
+         * @param numNodes Number of individual nodes in this shard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numNodes(Integer numNodes) {
             return numNodes(Output.of(numNodes));
         }
 
+        /**
+         * @param slots Keyspace for this shard. Example: `0-16383`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slots(@Nullable Output<String> slots) {
             $.slots = slots;
             return this;
         }
 
+        /**
+         * @param slots Keyspace for this shard. Example: `0-16383`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slots(String slots) {
             return slots(Output.of(slots));
         }

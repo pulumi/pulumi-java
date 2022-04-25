@@ -19,6 +19,10 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Azure Video Analyzer account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
     @Import(name="edgeModuleName", required=true)
     private String edgeModuleName;
 
+    /**
+     * @return The name of the edge module used to create a new provisioning token.
+     * 
+     */
     public String edgeModuleName() {
         return this.edgeModuleName;
     }
@@ -41,6 +49,10 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
     @Import(name="expirationDate", required=true)
     private String expirationDate;
 
+    /**
+     * @return The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+     * 
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
@@ -52,6 +64,10 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
             $ = new ListEdgeModuleProvisioningTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param edgeModuleName The name of the edge module used to create a new provisioning token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeModuleName(String edgeModuleName) {
             $.edgeModuleName = edgeModuleName;
             return this;
         }
 
+        /**
+         * @param expirationDate The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

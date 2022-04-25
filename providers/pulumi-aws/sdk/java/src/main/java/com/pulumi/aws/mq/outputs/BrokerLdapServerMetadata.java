@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BrokerLdapServerMetadata {
     /**
-     * List of a fully qualified domain name of the LDAP server and an optional failover server.
+     * @return List of a fully qualified domain name of the LDAP server and an optional failover server.
      * 
      */
     private final @Nullable List<String> hosts;
     /**
-     * Fully qualified name of the directory to search for a user’s groups.
+     * @return Fully qualified name of the directory to search for a user’s groups.
      * 
      */
     private final @Nullable String roleBase;
     /**
-     * Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.
+     * @return Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.
      * 
      */
     private final @Nullable String roleName;
     /**
-     * Search criteria for groups.
+     * @return Search criteria for groups.
      * 
      */
     private final @Nullable String roleSearchMatching;
     /**
-     * Whether the directory search scope is the entire sub-tree.
+     * @return Whether the directory search scope is the entire sub-tree.
      * 
      */
     private final @Nullable Boolean roleSearchSubtree;
     /**
-     * Service account password.
+     * @return Service account password.
      * 
      */
     private final @Nullable String serviceAccountPassword;
     /**
-     * Service account username.
+     * @return Service account username.
      * 
      */
     private final @Nullable String serviceAccountUsername;
     /**
-     * Fully qualified name of the directory where you want to search for users.
+     * @return Fully qualified name of the directory where you want to search for users.
      * 
      */
     private final @Nullable String userBase;
     /**
-     * Specifies the name of the LDAP attribute for the user group membership.
+     * @return Specifies the name of the LDAP attribute for the user group membership.
      * 
      */
     private final @Nullable String userRoleName;
     /**
-     * Search criteria for users.
+     * @return Search criteria for users.
      * 
      */
     private final @Nullable String userSearchMatching;
     /**
-     * Whether the directory search scope is the entire sub-tree.
+     * @return Whether the directory search scope is the entire sub-tree.
      * 
      */
     private final @Nullable Boolean userSearchSubtree;
@@ -96,79 +96,79 @@ public final class BrokerLdapServerMetadata {
     }
 
     /**
-     * List of a fully qualified domain name of the LDAP server and an optional failover server.
+     * @return List of a fully qualified domain name of the LDAP server and an optional failover server.
      * 
-    */
+     */
     public List<String> hosts() {
         return this.hosts == null ? List.of() : this.hosts;
     }
     /**
-     * Fully qualified name of the directory to search for a user’s groups.
+     * @return Fully qualified name of the directory to search for a user’s groups.
      * 
-    */
+     */
     public Optional<String> roleBase() {
         return Optional.ofNullable(this.roleBase);
     }
     /**
-     * Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.
+     * @return Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.
      * 
-    */
+     */
     public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
-     * Search criteria for groups.
+     * @return Search criteria for groups.
      * 
-    */
+     */
     public Optional<String> roleSearchMatching() {
         return Optional.ofNullable(this.roleSearchMatching);
     }
     /**
-     * Whether the directory search scope is the entire sub-tree.
+     * @return Whether the directory search scope is the entire sub-tree.
      * 
-    */
+     */
     public Optional<Boolean> roleSearchSubtree() {
         return Optional.ofNullable(this.roleSearchSubtree);
     }
     /**
-     * Service account password.
+     * @return Service account password.
      * 
-    */
+     */
     public Optional<String> serviceAccountPassword() {
         return Optional.ofNullable(this.serviceAccountPassword);
     }
     /**
-     * Service account username.
+     * @return Service account username.
      * 
-    */
+     */
     public Optional<String> serviceAccountUsername() {
         return Optional.ofNullable(this.serviceAccountUsername);
     }
     /**
-     * Fully qualified name of the directory where you want to search for users.
+     * @return Fully qualified name of the directory where you want to search for users.
      * 
-    */
+     */
     public Optional<String> userBase() {
         return Optional.ofNullable(this.userBase);
     }
     /**
-     * Specifies the name of the LDAP attribute for the user group membership.
+     * @return Specifies the name of the LDAP attribute for the user group membership.
      * 
-    */
+     */
     public Optional<String> userRoleName() {
         return Optional.ofNullable(this.userRoleName);
     }
     /**
-     * Search criteria for users.
+     * @return Search criteria for users.
      * 
-    */
+     */
     public Optional<String> userSearchMatching() {
         return Optional.ofNullable(this.userSearchMatching);
     }
     /**
-     * Whether the directory search scope is the entire sub-tree.
+     * @return Whether the directory search scope is the entire sub-tree.
      * 
-    */
+     */
     public Optional<Boolean> userSearchSubtree() {
         return Optional.ofNullable(this.userSearchSubtree);
     }

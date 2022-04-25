@@ -27,6 +27,10 @@ public final class ReportConfigDatasetConfigurationArgs extends com.pulumi.resou
     @Import(name="columns")
     private @Nullable Output<List<String>> columns;
 
+    /**
+     * @return Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+     * 
+     */
     public Optional<Output<List<String>>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -55,15 +59,33 @@ public final class ReportConfigDatasetConfigurationArgs extends com.pulumi.resou
             $ = new ReportConfigDatasetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<List<String>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<String> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(String... columns) {
             return columns(List.of(columns));
         }

@@ -25,6 +25,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointUrl")
     private @Nullable String endpointUrl;
 
+    /**
+     * @return The URL of the endpoint.
+     * 
+     */
     public Optional<String> endpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
@@ -36,6 +40,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the endpoint.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,11 +73,23 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointUrl The URL of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUrl(@Nullable String endpointUrl) {
             $.endpointUrl = endpointUrl;
             return this;
         }
 
+        /**
+         * @param type The type of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

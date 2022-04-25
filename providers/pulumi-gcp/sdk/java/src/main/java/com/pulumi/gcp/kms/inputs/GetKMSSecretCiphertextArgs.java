@@ -21,6 +21,12 @@ public final class GetKMSSecretCiphertextArgs extends com.pulumi.resources.Invok
     @Import(name="cryptoKey", required=true)
     private String cryptoKey;
 
+    /**
+     * @return The id of the CryptoKey that will be used to
+     * encrypt the provided plaintext. This is represented by the format
+     * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
+     * 
+     */
     public String cryptoKey() {
         return this.cryptoKey;
     }
@@ -32,6 +38,10 @@ public final class GetKMSSecretCiphertextArgs extends com.pulumi.resources.Invok
     @Import(name="plaintext", required=true)
     private String plaintext;
 
+    /**
+     * @return The plaintext to be encrypted
+     * 
+     */
     public String plaintext() {
         return this.plaintext;
     }
@@ -61,11 +71,25 @@ public final class GetKMSSecretCiphertextArgs extends com.pulumi.resources.Invok
             $ = new GetKMSSecretCiphertextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cryptoKey The id of the CryptoKey that will be used to
+         * encrypt the provided plaintext. This is represented by the format
+         * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoKey(String cryptoKey) {
             $.cryptoKey = cryptoKey;
             return this;
         }
 
+        /**
+         * @param plaintext The plaintext to be encrypted
+         * 
+         * @return builder
+         * 
+         */
         public Builder plaintext(String plaintext) {
             $.plaintext = plaintext;
             return this;

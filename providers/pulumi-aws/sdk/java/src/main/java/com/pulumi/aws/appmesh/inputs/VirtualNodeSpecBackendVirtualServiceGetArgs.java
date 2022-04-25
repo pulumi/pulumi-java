@@ -23,6 +23,10 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends com.pulum
     @Import(name="clientPolicy")
     private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy;
 
+    /**
+     * @return The client policy for the backend.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs>> clientPolicy() {
         return Optional.ofNullable(this.clientPolicy);
     }
@@ -34,6 +38,10 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends com.pulum
     @Import(name="virtualServiceName", required=true)
     private Output<String> virtualServiceName;
 
+    /**
+     * @return The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> virtualServiceName() {
         return this.virtualServiceName;
     }
@@ -63,20 +71,44 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends com.pulum
             $ = new VirtualNodeSpecBackendVirtualServiceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientPolicy The client policy for the backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientPolicy(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy) {
             $.clientPolicy = clientPolicy;
             return this;
         }
 
+        /**
+         * @param clientPolicy The client policy for the backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientPolicy(VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs clientPolicy) {
             return clientPolicy(Output.of(clientPolicy));
         }
 
+        /**
+         * @param virtualServiceName The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualServiceName(Output<String> virtualServiceName) {
             $.virtualServiceName = virtualServiceName;
             return this;
         }
 
+        /**
+         * @param virtualServiceName The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualServiceName(String virtualServiceName) {
             return virtualServiceName(Output.of(virtualServiceName));
         }

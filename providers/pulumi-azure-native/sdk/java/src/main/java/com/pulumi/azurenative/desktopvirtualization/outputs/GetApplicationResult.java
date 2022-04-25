@@ -14,87 +14,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApplicationResult {
     /**
-     * Resource Type of Application.
+     * @return Resource Type of Application.
      * 
      */
     private final @Nullable String applicationType;
     /**
-     * Command Line Arguments for Application.
+     * @return Command Line Arguments for Application.
      * 
      */
     private final @Nullable String commandLineArguments;
     /**
-     * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+     * @return Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
      * 
      */
     private final String commandLineSetting;
     /**
-     * Description of Application.
+     * @return Description of Application.
      * 
      */
     private final @Nullable String description;
     /**
-     * Specifies a path for the executable file for the application.
+     * @return Specifies a path for the executable file for the application.
      * 
      */
     private final @Nullable String filePath;
     /**
-     * Friendly name of Application.
+     * @return Friendly name of Application.
      * 
      */
     private final @Nullable String friendlyName;
     /**
-     * the icon a 64 bit string as a byte array.
+     * @return the icon a 64 bit string as a byte array.
      * 
      */
     private final String iconContent;
     /**
-     * Hash of the icon.
+     * @return Hash of the icon.
      * 
      */
     private final String iconHash;
     /**
-     * Index of the icon.
+     * @return Index of the icon.
      * 
      */
     private final @Nullable Integer iconIndex;
     /**
-     * Path to icon.
+     * @return Path to icon.
      * 
      */
     private final @Nullable String iconPath;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Specifies the package application Id for MSIX applications
+     * @return Specifies the package application Id for MSIX applications
      * 
      */
     private final @Nullable String msixPackageApplicationId;
     /**
-     * Specifies the package family name for MSIX applications
+     * @return Specifies the package family name for MSIX applications
      * 
      */
     private final @Nullable String msixPackageFamilyName;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * ObjectId of Application. (internal use)
+     * @return ObjectId of Application. (internal use)
      * 
      */
     private final String objectId;
     /**
-     * Specifies whether to show the RemoteApp program in the RD Web Access server.
+     * @return Specifies whether to show the RemoteApp program in the RD Web Access server.
      * 
      */
     private final @Nullable Boolean showInPortal;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -138,121 +138,121 @@ public final class GetApplicationResult {
     }
 
     /**
-     * Resource Type of Application.
+     * @return Resource Type of Application.
      * 
-    */
+     */
     public Optional<String> applicationType() {
         return Optional.ofNullable(this.applicationType);
     }
     /**
-     * Command Line Arguments for Application.
+     * @return Command Line Arguments for Application.
      * 
-    */
+     */
     public Optional<String> commandLineArguments() {
         return Optional.ofNullable(this.commandLineArguments);
     }
     /**
-     * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+     * @return Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
      * 
-    */
+     */
     public String commandLineSetting() {
         return this.commandLineSetting;
     }
     /**
-     * Description of Application.
+     * @return Description of Application.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Specifies a path for the executable file for the application.
+     * @return Specifies a path for the executable file for the application.
      * 
-    */
+     */
     public Optional<String> filePath() {
         return Optional.ofNullable(this.filePath);
     }
     /**
-     * Friendly name of Application.
+     * @return Friendly name of Application.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * the icon a 64 bit string as a byte array.
+     * @return the icon a 64 bit string as a byte array.
      * 
-    */
+     */
     public String iconContent() {
         return this.iconContent;
     }
     /**
-     * Hash of the icon.
+     * @return Hash of the icon.
      * 
-    */
+     */
     public String iconHash() {
         return this.iconHash;
     }
     /**
-     * Index of the icon.
+     * @return Index of the icon.
      * 
-    */
+     */
     public Optional<Integer> iconIndex() {
         return Optional.ofNullable(this.iconIndex);
     }
     /**
-     * Path to icon.
+     * @return Path to icon.
      * 
-    */
+     */
     public Optional<String> iconPath() {
         return Optional.ofNullable(this.iconPath);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the package application Id for MSIX applications
+     * @return Specifies the package application Id for MSIX applications
      * 
-    */
+     */
     public Optional<String> msixPackageApplicationId() {
         return Optional.ofNullable(this.msixPackageApplicationId);
     }
     /**
-     * Specifies the package family name for MSIX applications
+     * @return Specifies the package family name for MSIX applications
      * 
-    */
+     */
     public Optional<String> msixPackageFamilyName() {
         return Optional.ofNullable(this.msixPackageFamilyName);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * ObjectId of Application. (internal use)
+     * @return ObjectId of Application. (internal use)
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * Specifies whether to show the RemoteApp program in the RD Web Access server.
+     * @return Specifies whether to show the RemoteApp program in the RD Web Access server.
      * 
-    */
+     */
     public Optional<Boolean> showInPortal() {
         return Optional.ofNullable(this.showInPortal);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

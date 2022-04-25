@@ -26,6 +26,10 @@ public final class TemplateSourceAnalysisArgs extends com.pulumi.resources.Resou
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -38,6 +42,11 @@ public final class TemplateSourceAnalysisArgs extends com.pulumi.resources.Resou
     @Import(name="dataSetReferences", required=true)
     private Output<List<TemplateDataSetReferenceArgs>> dataSetReferences;
 
+    /**
+     * @return &lt;p&gt;A structure containing information about the dataset references used as placeholders
+     *             in the template.&lt;/p&gt;
+     * 
+     */
     public Output<List<TemplateDataSetReferenceArgs>> dataSetReferences() {
         return this.dataSetReferences;
     }
@@ -67,24 +76,57 @@ public final class TemplateSourceAnalysisArgs extends com.pulumi.resources.Resou
             $ = new TemplateSourceAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;A structure containing information about the dataset references used as placeholders
+         *             in the template.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(Output<List<TemplateDataSetReferenceArgs>> dataSetReferences) {
             $.dataSetReferences = dataSetReferences;
             return this;
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;A structure containing information about the dataset references used as placeholders
+         *             in the template.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(List<TemplateDataSetReferenceArgs> dataSetReferences) {
             return dataSetReferences(Output.of(dataSetReferences));
         }
 
+        /**
+         * @param dataSetReferences &lt;p&gt;A structure containing information about the dataset references used as placeholders
+         *             in the template.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetReferences(TemplateDataSetReferenceArgs... dataSetReferences) {
             return dataSetReferences(List.of(dataSetReferences));
         }

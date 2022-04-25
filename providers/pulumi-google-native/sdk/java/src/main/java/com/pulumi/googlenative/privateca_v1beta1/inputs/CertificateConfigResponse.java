@@ -25,6 +25,10 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="publicKey", required=true)
     private PublicKeyResponse publicKey;
 
+    /**
+     * @return Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+     * 
+     */
     public PublicKeyResponse publicKey() {
         return this.publicKey;
     }
@@ -36,6 +40,10 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="reusableConfig", required=true)
     private ReusableConfigWrapperResponse reusableConfig;
 
+    /**
+     * @return Describes how some of the technical fields in a certificate should be populated.
+     * 
+     */
     public ReusableConfigWrapperResponse reusableConfig() {
         return this.reusableConfig;
     }
@@ -47,6 +55,10 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="subjectConfig", required=true)
     private SubjectConfigResponse subjectConfig;
 
+    /**
+     * @return Specifies some of the values in a certificate that are related to the subject.
+     * 
+     */
     public SubjectConfigResponse subjectConfig() {
         return this.subjectConfig;
     }
@@ -77,16 +89,34 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
             $ = new CertificateConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKey Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(PublicKeyResponse publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param reusableConfig Describes how some of the technical fields in a certificate should be populated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reusableConfig(ReusableConfigWrapperResponse reusableConfig) {
             $.reusableConfig = reusableConfig;
             return this;
         }
 
+        /**
+         * @param subjectConfig Specifies some of the values in a certificate that are related to the subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectConfig(SubjectConfigResponse subjectConfig) {
             $.subjectConfig = subjectConfig;
             return this;

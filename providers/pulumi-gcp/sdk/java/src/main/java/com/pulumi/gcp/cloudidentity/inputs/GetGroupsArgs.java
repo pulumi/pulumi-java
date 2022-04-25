@@ -19,6 +19,10 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parent", required=true)
     private String parent;
 
+    /**
+     * @return The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
+     * 
+     */
     public String parent() {
         return this.parent;
     }
@@ -47,6 +51,12 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGroupsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parent The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             $.parent = parent;
             return this;

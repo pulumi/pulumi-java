@@ -23,6 +23,10 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
     @Import(name="followGaeApplication", required=true)
     private String followGaeApplication;
 
+    /**
+     * @return The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
+     * 
+     */
     public String followGaeApplication() {
         return this.followGaeApplication;
     }
@@ -34,6 +38,10 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#locationPreference`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -45,6 +53,10 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
     @Import(name="secondaryZone", required=true)
     private String secondaryZone;
 
+    /**
+     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+     * 
+     */
     public String secondaryZone() {
         return this.secondaryZone;
     }
@@ -56,6 +68,10 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -87,21 +103,45 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
             $ = new LocationPreferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param followGaeApplication The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder followGaeApplication(String followGaeApplication) {
             $.followGaeApplication = followGaeApplication;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#locationPreference`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param secondaryZone The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryZone(String secondaryZone) {
             $.secondaryZone = secondaryZone;
             return this;
         }
 
+        /**
+         * @param zone The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

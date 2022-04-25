@@ -26,6 +26,10 @@ public final class EncryptionKeyDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="kekType")
     private @Nullable String kekType;
 
+    /**
+     * @return The type of kek encryption key
+     * 
+     */
     public Optional<String> kekType() {
         return Optional.ofNullable(this.kekType);
     }
@@ -37,6 +41,10 @@ public final class EncryptionKeyDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="kekUrl")
     private @Nullable String kekUrl;
 
+    /**
+     * @return Specifies the url for kek encryption key.
+     * 
+     */
     public Optional<String> kekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
@@ -48,6 +56,10 @@ public final class EncryptionKeyDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="kekVaultResourceID")
     private @Nullable String kekVaultResourceID;
 
+    /**
+     * @return Specifies the keyvault resource id for kek encryption key.
+     * 
+     */
     public Optional<String> kekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }
@@ -78,16 +90,34 @@ public final class EncryptionKeyDetailsResponse extends com.pulumi.resources.Inv
             $ = new EncryptionKeyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kekType The type of kek encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(@Nullable String kekType) {
             $.kekType = kekType;
             return this;
         }
 
+        /**
+         * @param kekUrl Specifies the url for kek encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekUrl(@Nullable String kekUrl) {
             $.kekUrl = kekUrl;
             return this;
         }
 
+        /**
+         * @param kekVaultResourceID Specifies the keyvault resource id for kek encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             $.kekVaultResourceID = kekVaultResourceID;
             return this;

@@ -25,6 +25,15 @@ public final class Hl7StoreNotificationConfigGetArgs extends com.pulumi.resource
     @Import(name="pubsubTopic", required=true)
     private Output<String> pubsubTopic;
 
+    /**
+     * @return The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+     * PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+     * It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+     * was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+     * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
+     * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+     * 
+     */
     public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
@@ -53,11 +62,33 @@ public final class Hl7StoreNotificationConfigGetArgs extends com.pulumi.resource
             $ = new Hl7StoreNotificationConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubTopic The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+         * PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+         * It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+         * was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+         * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
+         * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopic(Output<String> pubsubTopic) {
             $.pubsubTopic = pubsubTopic;
             return this;
         }
 
+        /**
+         * @param pubsubTopic The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+         * PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
+         * It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
+         * was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
+         * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
+         * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopic(String pubsubTopic) {
             return pubsubTopic(Output.of(pubsubTopic));
         }

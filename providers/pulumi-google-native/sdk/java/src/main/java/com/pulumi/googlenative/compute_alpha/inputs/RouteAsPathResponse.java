@@ -21,6 +21,10 @@ public final class RouteAsPathResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="asLists", required=true)
     private List<Integer> asLists;
 
+    /**
+     * @return The AS numbers of the AS Path.
+     * 
+     */
     public List<Integer> asLists() {
         return this.asLists;
     }
@@ -32,6 +36,10 @@ public final class RouteAsPathResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pathSegmentType", required=true)
     private String pathSegmentType;
 
+    /**
+     * @return The type of the AS Path, which can be one of the following values: - &#39;AS_SET&#39;: unordered set of autonomous systems that the route in has traversed - &#39;AS_SEQUENCE&#39;: ordered set of autonomous systems that the route has traversed - &#39;AS_CONFED_SEQUENCE&#39;: ordered set of Member Autonomous Systems in the local confederation that the route has traversed - &#39;AS_CONFED_SET&#39;: unordered set of Member Autonomous Systems in the local confederation that the route has traversed
+     * 
+     */
     public String pathSegmentType() {
         return this.pathSegmentType;
     }
@@ -61,15 +69,33 @@ public final class RouteAsPathResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RouteAsPathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asLists The AS numbers of the AS Path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asLists(List<Integer> asLists) {
             $.asLists = asLists;
             return this;
         }
 
+        /**
+         * @param asLists The AS numbers of the AS Path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asLists(Integer... asLists) {
             return asLists(List.of(asLists));
         }
 
+        /**
+         * @param pathSegmentType The type of the AS Path, which can be one of the following values: - &#39;AS_SET&#39;: unordered set of autonomous systems that the route in has traversed - &#39;AS_SEQUENCE&#39;: ordered set of autonomous systems that the route has traversed - &#39;AS_CONFED_SEQUENCE&#39;: ordered set of Member Autonomous Systems in the local confederation that the route has traversed - &#39;AS_CONFED_SET&#39;: unordered set of Member Autonomous Systems in the local confederation that the route has traversed
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathSegmentType(String pathSegmentType) {
             $.pathSegmentType = pathSegmentType;
             return this;

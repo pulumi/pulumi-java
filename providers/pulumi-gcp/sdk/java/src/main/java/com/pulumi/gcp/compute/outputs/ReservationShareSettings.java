@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReservationShareSettings {
     /**
-     * A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
+     * @return A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<ReservationShareSettingsProjectMap> projectMaps;
     /**
-     * Type of sharing for this shared-reservation
+     * @return Type of sharing for this shared-reservation
      * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
      * 
      */
@@ -35,18 +35,18 @@ public final class ReservationShareSettings {
     }
 
     /**
-     * A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
+     * @return A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS.
      * Structure is documented below.
      * 
-    */
+     */
     public List<ReservationShareSettingsProjectMap> projectMaps() {
         return this.projectMaps == null ? List.of() : this.projectMaps;
     }
     /**
-     * Type of sharing for this shared-reservation
+     * @return Type of sharing for this shared-reservation
      * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
      * 
-    */
+     */
     public Optional<String> shareType() {
         return Optional.ofNullable(this.shareType);
     }

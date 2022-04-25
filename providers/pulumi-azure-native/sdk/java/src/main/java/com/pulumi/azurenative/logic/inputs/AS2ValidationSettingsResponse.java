@@ -27,6 +27,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="checkCertificateRevocationListOnReceive", required=true)
     private Boolean checkCertificateRevocationListOnReceive;
 
+    /**
+     * @return The value indicating whether to check for certificate revocation list on receive.
+     * 
+     */
     public Boolean checkCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
     }
@@ -38,6 +42,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="checkCertificateRevocationListOnSend", required=true)
     private Boolean checkCertificateRevocationListOnSend;
 
+    /**
+     * @return The value indicating whether to check for certificate revocation list on send.
+     * 
+     */
     public Boolean checkCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
     }
@@ -49,6 +57,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="checkDuplicateMessage", required=true)
     private Boolean checkDuplicateMessage;
 
+    /**
+     * @return The value indicating whether to check for duplicate message.
+     * 
+     */
     public Boolean checkDuplicateMessage() {
         return this.checkDuplicateMessage;
     }
@@ -60,6 +72,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="compressMessage", required=true)
     private Boolean compressMessage;
 
+    /**
+     * @return The value indicating whether the message has to be compressed.
+     * 
+     */
     public Boolean compressMessage() {
         return this.compressMessage;
     }
@@ -71,6 +87,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="encryptMessage", required=true)
     private Boolean encryptMessage;
 
+    /**
+     * @return The value indicating whether the message has to be encrypted.
+     * 
+     */
     public Boolean encryptMessage() {
         return this.encryptMessage;
     }
@@ -82,6 +102,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="encryptionAlgorithm", required=true)
     private String encryptionAlgorithm;
 
+    /**
+     * @return The encryption algorithm.
+     * 
+     */
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
@@ -93,6 +117,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="interchangeDuplicatesValidityDays", required=true)
     private Integer interchangeDuplicatesValidityDays;
 
+    /**
+     * @return The number of days to look back for duplicate interchange.
+     * 
+     */
     public Integer interchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
     }
@@ -104,6 +132,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="overrideMessageProperties", required=true)
     private Boolean overrideMessageProperties;
 
+    /**
+     * @return The value indicating whether to override incoming message properties with those in agreement.
+     * 
+     */
     public Boolean overrideMessageProperties() {
         return this.overrideMessageProperties;
     }
@@ -115,6 +147,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="signMessage", required=true)
     private Boolean signMessage;
 
+    /**
+     * @return The value indicating whether the message has to be signed.
+     * 
+     */
     public Boolean signMessage() {
         return this.signMessage;
     }
@@ -126,6 +162,10 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="signingAlgorithm")
     private @Nullable String signingAlgorithm;
 
+    /**
+     * @return The signing algorithm.
+     * 
+     */
     public Optional<String> signingAlgorithm() {
         return Optional.ofNullable(this.signingAlgorithm);
     }
@@ -163,51 +203,111 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
             $ = new AS2ValidationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkCertificateRevocationListOnReceive The value indicating whether to check for certificate revocation list on receive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
             $.checkCertificateRevocationListOnReceive = checkCertificateRevocationListOnReceive;
             return this;
         }
 
+        /**
+         * @param checkCertificateRevocationListOnSend The value indicating whether to check for certificate revocation list on send.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
             $.checkCertificateRevocationListOnSend = checkCertificateRevocationListOnSend;
             return this;
         }
 
+        /**
+         * @param checkDuplicateMessage The value indicating whether to check for duplicate message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateMessage(Boolean checkDuplicateMessage) {
             $.checkDuplicateMessage = checkDuplicateMessage;
             return this;
         }
 
+        /**
+         * @param compressMessage The value indicating whether the message has to be compressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressMessage(Boolean compressMessage) {
             $.compressMessage = compressMessage;
             return this;
         }
 
+        /**
+         * @param encryptMessage The value indicating whether the message has to be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptMessage(Boolean encryptMessage) {
             $.encryptMessage = encryptMessage;
             return this;
         }
 
+        /**
+         * @param encryptionAlgorithm The encryption algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param interchangeDuplicatesValidityDays The number of days to look back for duplicate interchange.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
             $.interchangeDuplicatesValidityDays = interchangeDuplicatesValidityDays;
             return this;
         }
 
+        /**
+         * @param overrideMessageProperties The value indicating whether to override incoming message properties with those in agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideMessageProperties(Boolean overrideMessageProperties) {
             $.overrideMessageProperties = overrideMessageProperties;
             return this;
         }
 
+        /**
+         * @param signMessage The value indicating whether the message has to be signed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signMessage(Boolean signMessage) {
             $.signMessage = signMessage;
             return this;
         }
 
+        /**
+         * @param signingAlgorithm The signing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
             $.signingAlgorithm = signingAlgorithm;
             return this;

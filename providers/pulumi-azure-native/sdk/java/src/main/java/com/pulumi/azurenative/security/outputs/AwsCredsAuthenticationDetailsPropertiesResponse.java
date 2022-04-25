@@ -11,33 +11,33 @@ import java.util.Objects;
 @CustomType
 public final class AwsCredsAuthenticationDetailsPropertiesResponse {
     /**
-     * The ID of the cloud account
+     * @return The ID of the cloud account
      * 
      */
     private final String accountId;
     /**
-     * State of the multi-cloud connector
+     * @return State of the multi-cloud connector
      * 
      */
     private final String authenticationProvisioningState;
     /**
-     * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is &#39;awsCreds&#39;.
      * 
      */
     private final String authenticationType;
     /**
-     * Public key element of the AWS credential object (write only)
+     * @return Public key element of the AWS credential object (write only)
      * 
      */
     private final String awsAccessKeyId;
     /**
-     * Secret key element of the AWS credential object (write only)
+     * @return Secret key element of the AWS credential object (write only)
      * 
      */
     private final String awsSecretAccessKey;
     /**
-     * The permissions detected in the cloud account.
+     * @return The permissions detected in the cloud account.
      * 
      */
     private final List<String> grantedPermissions;
@@ -59,45 +59,45 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
     }
 
     /**
-     * The ID of the cloud account
+     * @return The ID of the cloud account
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * State of the multi-cloud connector
+     * @return State of the multi-cloud connector
      * 
-    */
+     */
     public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
     /**
-     * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is &#39;awsCreds&#39;.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * Public key element of the AWS credential object (write only)
+     * @return Public key element of the AWS credential object (write only)
      * 
-    */
+     */
     public String awsAccessKeyId() {
         return this.awsAccessKeyId;
     }
     /**
-     * Secret key element of the AWS credential object (write only)
+     * @return Secret key element of the AWS credential object (write only)
      * 
-    */
+     */
     public String awsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
     /**
-     * The permissions detected in the cloud account.
+     * @return The permissions detected in the cloud account.
      * 
-    */
+     */
     public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }

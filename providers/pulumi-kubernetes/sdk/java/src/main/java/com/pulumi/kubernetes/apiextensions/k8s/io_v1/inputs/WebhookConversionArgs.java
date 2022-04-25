@@ -28,6 +28,10 @@ public final class WebhookConversionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clientConfig")
     private @Nullable Output<WebhookClientConfigArgs> clientConfig;
 
+    /**
+     * @return clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.
+     * 
+     */
     public Optional<Output<WebhookClientConfigArgs>> clientConfig() {
         return Optional.ofNullable(this.clientConfig);
     }
@@ -39,6 +43,10 @@ public final class WebhookConversionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="conversionReviewVersions", required=true)
     private Output<List<String>> conversionReviewVersions;
 
+    /**
+     * @return conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.
+     * 
+     */
     public Output<List<String>> conversionReviewVersions() {
         return this.conversionReviewVersions;
     }
@@ -68,24 +76,54 @@ public final class WebhookConversionArgs extends com.pulumi.resources.ResourceAr
             $ = new WebhookConversionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientConfig clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfig(@Nullable Output<WebhookClientConfigArgs> clientConfig) {
             $.clientConfig = clientConfig;
             return this;
         }
 
+        /**
+         * @param clientConfig clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
             return clientConfig(Output.of(clientConfig));
         }
 
+        /**
+         * @param conversionReviewVersions conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversionReviewVersions(Output<List<String>> conversionReviewVersions) {
             $.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
 
+        /**
+         * @param conversionReviewVersions conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversionReviewVersions(List<String> conversionReviewVersions) {
             return conversionReviewVersions(Output.of(conversionReviewVersions));
         }
 
+        /**
+         * @param conversionReviewVersions conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversionReviewVersions(String... conversionReviewVersions) {
             return conversionReviewVersions(List.of(conversionReviewVersions));
         }

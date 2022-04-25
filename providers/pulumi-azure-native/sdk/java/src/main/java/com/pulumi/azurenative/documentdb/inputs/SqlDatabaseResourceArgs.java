@@ -24,6 +24,10 @@ public final class SqlDatabaseResourceArgs extends com.pulumi.resources.Resource
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Name of the Cosmos DB SQL database
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class SqlDatabaseResourceArgs extends com.pulumi.resources.Resource
             $ = new SqlDatabaseResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Name of the Cosmos DB SQL database
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB SQL database
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

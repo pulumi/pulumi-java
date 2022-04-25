@@ -19,6 +19,10 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the Data Lake Store account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
     @Import(name="virtualNetworkRuleName", required=true)
     private String virtualNetworkRuleName;
 
+    /**
+     * @return The name of the virtual network rule to retrieve.
+     * 
+     */
     public String virtualNetworkRuleName() {
         return this.virtualNetworkRuleName;
     }
@@ -71,16 +83,34 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
             $ = new GetVirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRuleName The name of the virtual network rule to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
             $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;

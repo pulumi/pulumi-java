@@ -36,6 +36,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Creation time of this experiment.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -47,6 +51,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs> definition;
 
+    /**
+     * @return The definition of the experiment.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs>> definition() {
         return Optional.ofNullable(this.definition);
     }
@@ -58,6 +66,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The human-readable description of the experiment.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -69,6 +81,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -80,6 +96,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return End time of this experiment.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -98,6 +118,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="experimentLength")
     private @Nullable Output<String> experimentLength;
 
+    /**
+     * @return Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
+     * 
+     */
     public Optional<Output<String>> experimentLength() {
         return Optional.ofNullable(this.experimentLength);
     }
@@ -109,6 +133,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdateTime")
     private @Nullable Output<String> lastUpdateTime;
 
+    /**
+     * @return Last update time of this experiment.
+     * 
+     */
     public Optional<Output<String>> lastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
@@ -127,6 +155,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -145,6 +177,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="result")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs> result;
 
+    /**
+     * @return Inference result of the experiment.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs>> result() {
         return Optional.ofNullable(this.result);
     }
@@ -156,6 +192,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rolloutConfig")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs> rolloutConfig;
 
+    /**
+     * @return The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs>> rolloutConfig() {
         return Optional.ofNullable(this.rolloutConfig);
     }
@@ -167,6 +207,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rolloutFailureReason")
     private @Nullable Output<String> rolloutFailureReason;
 
+    /**
+     * @return The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
+     * 
+     */
     public Optional<Output<String>> rolloutFailureReason() {
         return Optional.ofNullable(this.rolloutFailureReason);
     }
@@ -178,6 +222,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rolloutState")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1RolloutStateArgs> rolloutState;
 
+    /**
+     * @return State of the auto rollout process.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1RolloutStateArgs>> rolloutState() {
         return Optional.ofNullable(this.rolloutState);
     }
@@ -189,6 +237,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Start time of this experiment.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -200,6 +252,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<ExperimentState> state;
 
+    /**
+     * @return The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT-&gt;RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT-&gt;DONE or RUNNING-&gt;DONE.
+     * 
+     */
     public Optional<Output<ExperimentState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -211,6 +267,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variantsHistory")
     private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>> variantsHistory;
 
+    /**
+     * @return The history of updates to the experiment variants.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>>> variantsHistory() {
         return Optional.ofNullable(this.variantsHistory);
     }
@@ -266,47 +326,107 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
             return agentId(Output.of(agentId));
         }
 
+        /**
+         * @param createTime Creation time of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Creation time of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param definition The definition of the experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(@Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition The definition of the experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param description The human-readable description of the experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The human-readable description of the experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param endTime End time of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime End time of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
@@ -320,20 +440,44 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param experimentLength Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentLength(@Nullable Output<String> experimentLength) {
             $.experimentLength = experimentLength;
             return this;
         }
 
+        /**
+         * @param experimentLength Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentLength(String experimentLength) {
             return experimentLength(Output.of(experimentLength));
         }
 
+        /**
+         * @param lastUpdateTime Last update time of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateTime(@Nullable Output<String> lastUpdateTime) {
             $.lastUpdateTime = lastUpdateTime;
             return this;
         }
 
+        /**
+         * @param lastUpdateTime Last update time of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateTime(String lastUpdateTime) {
             return lastUpdateTime(Output.of(lastUpdateTime));
         }
@@ -347,11 +491,23 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -365,69 +521,159 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param result Inference result of the experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(@Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs> result) {
             $.result = result;
             return this;
         }
 
+        /**
+         * @param result Inference result of the experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(GoogleCloudDialogflowCxV3beta1ExperimentResultArgs result) {
             return result(Output.of(result));
         }
 
+        /**
+         * @param rolloutConfig The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutConfig(@Nullable Output<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs> rolloutConfig) {
             $.rolloutConfig = rolloutConfig;
             return this;
         }
 
+        /**
+         * @param rolloutConfig The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutConfig(GoogleCloudDialogflowCxV3beta1RolloutConfigArgs rolloutConfig) {
             return rolloutConfig(Output.of(rolloutConfig));
         }
 
+        /**
+         * @param rolloutFailureReason The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutFailureReason(@Nullable Output<String> rolloutFailureReason) {
             $.rolloutFailureReason = rolloutFailureReason;
             return this;
         }
 
+        /**
+         * @param rolloutFailureReason The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutFailureReason(String rolloutFailureReason) {
             return rolloutFailureReason(Output.of(rolloutFailureReason));
         }
 
+        /**
+         * @param rolloutState State of the auto rollout process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutState(@Nullable Output<GoogleCloudDialogflowCxV3beta1RolloutStateArgs> rolloutState) {
             $.rolloutState = rolloutState;
             return this;
         }
 
+        /**
+         * @param rolloutState State of the auto rollout process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutState(GoogleCloudDialogflowCxV3beta1RolloutStateArgs rolloutState) {
             return rolloutState(Output.of(rolloutState));
         }
 
+        /**
+         * @param startTime Start time of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param state The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT-&gt;RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT-&gt;DONE or RUNNING-&gt;DONE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<ExperimentState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT-&gt;RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT-&gt;DONE or RUNNING-&gt;DONE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ExperimentState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param variantsHistory The history of updates to the experiment variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variantsHistory(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>> variantsHistory) {
             $.variantsHistory = variantsHistory;
             return this;
         }
 
+        /**
+         * @param variantsHistory The history of updates to the experiment variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variantsHistory(List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs> variantsHistory) {
             return variantsHistory(Output.of(variantsHistory));
         }
 
+        /**
+         * @param variantsHistory The history of updates to the experiment variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variantsHistory(GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs... variantsHistory) {
             return variantsHistory(List.of(variantsHistory));
         }

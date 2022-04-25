@@ -25,6 +25,11 @@ public final class CopyOnExpiryOptionResponse extends com.pulumi.resources.Invok
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;CopyOnExpiryOption&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -53,6 +58,13 @@ public final class CopyOnExpiryOptionResponse extends com.pulumi.resources.Invok
             $ = new CopyOnExpiryOptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;CopyOnExpiryOption&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;

@@ -27,6 +27,10 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
     @Import(name="identity")
     private @Nullable ResourceIdentityResponse identity;
 
+    /**
+     * @return The Key Vault identity.
+     * 
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -38,6 +42,10 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
     @Import(name="keyVaultProperties")
     private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
+    /**
+     * @return The properties of the key used to encrypt the account.
+     * 
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -49,6 +57,10 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The current status of the Key Vault mapping.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -60,6 +72,10 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of key used to encrypt the Account Key.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -91,21 +107,45 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
             $ = new AccountEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The Key Vault identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties The properties of the key used to encrypt the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param status The current status of the Key Vault mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type The type of key used to encrypt the Account Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -24,6 +24,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the thing.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<Map<String,String>> attributes;
 
+    /**
+     * @return Map of attributes of the thing.
+     * 
+     */
     public Optional<Output<Map<String,String>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -46,6 +54,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultClientId")
     private @Nullable Output<String> defaultClientId;
 
+    /**
+     * @return The default client ID.
+     * 
+     */
     public Optional<Output<String>> defaultClientId() {
         return Optional.ofNullable(this.defaultClientId);
     }
@@ -57,6 +69,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the thing.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="thingTypeName")
     private @Nullable Output<String> thingTypeName;
 
+    /**
+     * @return The thing type name.
+     * 
+     */
     public Optional<Output<String>> thingTypeName() {
         return Optional.ofNullable(this.thingTypeName);
     }
@@ -79,6 +99,10 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<Integer> version;
 
+    /**
+     * @return The current version of the thing record in the registry.
+     * 
+     */
     public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -112,56 +136,128 @@ public final class ThingState extends com.pulumi.resources.ResourceArgs {
             $ = new ThingState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the thing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the thing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param attributes Map of attributes of the thing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Map of attributes of the thing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Map<String,String> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param defaultClientId The default client ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultClientId(@Nullable Output<String> defaultClientId) {
             $.defaultClientId = defaultClientId;
             return this;
         }
 
+        /**
+         * @param defaultClientId The default client ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultClientId(String defaultClientId) {
             return defaultClientId(Output.of(defaultClientId));
         }
 
+        /**
+         * @param name The name of the thing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the thing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param thingTypeName The thing type name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingTypeName(@Nullable Output<String> thingTypeName) {
             $.thingTypeName = thingTypeName;
             return this;
         }
 
+        /**
+         * @param thingTypeName The thing type name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingTypeName(String thingTypeName) {
             return thingTypeName(Output.of(thingTypeName));
         }
 
+        /**
+         * @param version The current version of the thing record in the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The current version of the thing record in the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

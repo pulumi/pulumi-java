@@ -25,6 +25,10 @@ public final class ACIServiceResponseResponseVnetConfiguration extends com.pulum
     @Import(name="subnetName")
     private @Nullable String subnetName;
 
+    /**
+     * @return The name of the virtual network subnet.
+     * 
+     */
     public Optional<String> subnetName() {
         return Optional.ofNullable(this.subnetName);
     }
@@ -36,6 +40,10 @@ public final class ACIServiceResponseResponseVnetConfiguration extends com.pulum
     @Import(name="vnetName")
     private @Nullable String vnetName;
 
+    /**
+     * @return The name of the virtual network.
+     * 
+     */
     public Optional<String> vnetName() {
         return Optional.ofNullable(this.vnetName);
     }
@@ -65,11 +73,23 @@ public final class ACIServiceResponseResponseVnetConfiguration extends com.pulum
             $ = new ACIServiceResponseResponseVnetConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetName The name of the virtual network subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetName(@Nullable String subnetName) {
             $.subnetName = subnetName;
             return this;
         }
 
+        /**
+         * @param vnetName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetName(@Nullable String vnetName) {
             $.vnetName = vnetName;
             return this;

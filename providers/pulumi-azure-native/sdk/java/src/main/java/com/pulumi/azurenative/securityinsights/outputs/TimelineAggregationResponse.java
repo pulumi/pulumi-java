@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class TimelineAggregationResponse {
     /**
-     * the total items found for a kind
+     * @return the total items found for a kind
      * 
      */
     private final Integer count;
     /**
-     * the query kind
+     * @return the query kind
      * 
      */
     private final String kind;
@@ -30,16 +30,16 @@ public final class TimelineAggregationResponse {
     }
 
     /**
-     * the total items found for a kind
+     * @return the total items found for a kind
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * the query kind
+     * @return the query kind
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }

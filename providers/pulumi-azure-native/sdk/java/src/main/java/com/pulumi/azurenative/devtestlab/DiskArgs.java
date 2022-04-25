@@ -26,6 +26,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskBlobName")
     private @Nullable Output<String> diskBlobName;
 
+    /**
+     * @return When backed by a blob, the name of the VHD blob without extension.
+     * 
+     */
     public Optional<Output<String>> diskBlobName() {
         return Optional.ofNullable(this.diskBlobName);
     }
@@ -37,6 +41,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGiB")
     private @Nullable Output<Integer> diskSizeGiB;
 
+    /**
+     * @return The size of the disk in Gibibytes.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
@@ -48,6 +56,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
     private @Nullable Output<Either<String,StorageType>> diskType;
 
+    /**
+     * @return The storage type for the disk (i.e. Standard, Premium).
+     * 
+     */
     public Optional<Output<Either<String,StorageType>>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -59,6 +71,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskUri")
     private @Nullable Output<String> diskUri;
 
+    /**
+     * @return When backed by a blob, the URI of underlying blob.
+     * 
+     */
     public Optional<Output<String>> diskUri() {
         return Optional.ofNullable(this.diskUri);
     }
@@ -70,6 +86,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostCaching")
     private @Nullable Output<String> hostCaching;
 
+    /**
+     * @return The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
+     * 
+     */
     public Optional<Output<String>> hostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
@@ -81,6 +101,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -92,6 +116,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="leasedByLabVmId")
     private @Nullable Output<String> leasedByLabVmId;
 
+    /**
+     * @return The resource ID of the VM to which this disk is leased.
+     * 
+     */
     public Optional<Output<String>> leasedByLabVmId() {
         return Optional.ofNullable(this.leasedByLabVmId);
     }
@@ -103,6 +131,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -114,6 +146,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedDiskId")
     private @Nullable Output<String> managedDiskId;
 
+    /**
+     * @return When backed by managed disk, this is the ID of the compute disk resource.
+     * 
+     */
     public Optional<Output<String>> managedDiskId() {
         return Optional.ofNullable(this.managedDiskId);
     }
@@ -125,6 +161,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the disk.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -136,6 +176,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -147,6 +191,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountId")
     private @Nullable Output<String> storageAccountId;
 
+    /**
+     * @return When backed by a blob, the storage account where the blob is.
+     * 
+     */
     public Optional<Output<String>> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
@@ -158,6 +206,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -169,6 +221,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
     private Output<String> userName;
 
+    /**
+     * @return The name of the user profile.
+     * 
+     */
     public Output<String> userName() {
         return this.userName;
     }
@@ -210,136 +266,316 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskBlobName When backed by a blob, the name of the VHD blob without extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskBlobName(@Nullable Output<String> diskBlobName) {
             $.diskBlobName = diskBlobName;
             return this;
         }
 
+        /**
+         * @param diskBlobName When backed by a blob, the name of the VHD blob without extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskBlobName(String diskBlobName) {
             return diskBlobName(Output.of(diskBlobName));
         }
 
+        /**
+         * @param diskSizeGiB The size of the disk in Gibibytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGiB(@Nullable Output<Integer> diskSizeGiB) {
             $.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
+        /**
+         * @param diskSizeGiB The size of the disk in Gibibytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGiB(Integer diskSizeGiB) {
             return diskSizeGiB(Output.of(diskSizeGiB));
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<Either<String,StorageType>> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(Either<String,StorageType> diskType) {
             return diskType(Output.of(diskType));
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Either.ofLeft(diskType));
         }
 
+        /**
+         * @param diskType The storage type for the disk (i.e. Standard, Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(StorageType diskType) {
             return diskType(Either.ofRight(diskType));
         }
 
+        /**
+         * @param diskUri When backed by a blob, the URI of underlying blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUri(@Nullable Output<String> diskUri) {
             $.diskUri = diskUri;
             return this;
         }
 
+        /**
+         * @param diskUri When backed by a blob, the URI of underlying blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUri(String diskUri) {
             return diskUri(Output.of(diskUri));
         }
 
+        /**
+         * @param hostCaching The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(@Nullable Output<String> hostCaching) {
             $.hostCaching = hostCaching;
             return this;
         }
 
+        /**
+         * @param hostCaching The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(String hostCaching) {
             return hostCaching(Output.of(hostCaching));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param leasedByLabVmId The resource ID of the VM to which this disk is leased.
+         * 
+         * @return builder
+         * 
+         */
         public Builder leasedByLabVmId(@Nullable Output<String> leasedByLabVmId) {
             $.leasedByLabVmId = leasedByLabVmId;
             return this;
         }
 
+        /**
+         * @param leasedByLabVmId The resource ID of the VM to which this disk is leased.
+         * 
+         * @return builder
+         * 
+         */
         public Builder leasedByLabVmId(String leasedByLabVmId) {
             return leasedByLabVmId(Output.of(leasedByLabVmId));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedDiskId When backed by managed disk, this is the ID of the compute disk resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDiskId(@Nullable Output<String> managedDiskId) {
             $.managedDiskId = managedDiskId;
             return this;
         }
 
+        /**
+         * @param managedDiskId When backed by managed disk, this is the ID of the compute disk resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDiskId(String managedDiskId) {
             return managedDiskId(Output.of(managedDiskId));
         }
 
+        /**
+         * @param name The name of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccountId When backed by a blob, the storage account where the blob is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountId When backed by a blob, the storage account where the blob is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             return storageAccountId(Output.of(storageAccountId));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param userName The name of the user profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The name of the user profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

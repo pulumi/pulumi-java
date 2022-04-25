@@ -23,6 +23,11 @@ public final class EdgeCacheServiceRoutingGetArgs extends com.pulumi.resources.R
     @Import(name="hostRules", required=true)
     private Output<List<EdgeCacheServiceRoutingHostRuleGetArgs>> hostRules;
 
+    /**
+     * @return The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<EdgeCacheServiceRoutingHostRuleGetArgs>> hostRules() {
         return this.hostRules;
     }
@@ -34,6 +39,10 @@ public final class EdgeCacheServiceRoutingGetArgs extends com.pulumi.resources.R
     @Import(name="pathMatchers", required=true)
     private Output<List<EdgeCacheServiceRoutingPathMatcherGetArgs>> pathMatchers;
 
+    /**
+     * @return The name of the pathMatcher associated with this hostRule.
+     * 
+     */
     public Output<List<EdgeCacheServiceRoutingPathMatcherGetArgs>> pathMatchers() {
         return this.pathMatchers;
     }
@@ -63,28 +72,67 @@ public final class EdgeCacheServiceRoutingGetArgs extends com.pulumi.resources.R
             $ = new EdgeCacheServiceRoutingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostRules The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(Output<List<EdgeCacheServiceRoutingHostRuleGetArgs>> hostRules) {
             $.hostRules = hostRules;
             return this;
         }
 
+        /**
+         * @param hostRules The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(List<EdgeCacheServiceRoutingHostRuleGetArgs> hostRules) {
             return hostRules(Output.of(hostRules));
         }
 
+        /**
+         * @param hostRules The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(EdgeCacheServiceRoutingHostRuleGetArgs... hostRules) {
             return hostRules(List.of(hostRules));
         }
 
+        /**
+         * @param pathMatchers The name of the pathMatcher associated with this hostRule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(Output<List<EdgeCacheServiceRoutingPathMatcherGetArgs>> pathMatchers) {
             $.pathMatchers = pathMatchers;
             return this;
         }
 
+        /**
+         * @param pathMatchers The name of the pathMatcher associated with this hostRule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(List<EdgeCacheServiceRoutingPathMatcherGetArgs> pathMatchers) {
             return pathMatchers(Output.of(pathMatchers));
         }
 
+        /**
+         * @param pathMatchers The name of the pathMatcher associated with this hostRule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(EdgeCacheServiceRoutingPathMatcherGetArgs... pathMatchers) {
             return pathMatchers(List.of(pathMatchers));
         }

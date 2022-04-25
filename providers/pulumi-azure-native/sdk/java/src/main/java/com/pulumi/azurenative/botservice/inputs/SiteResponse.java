@@ -28,6 +28,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eTag")
     private @Nullable String eTag;
 
+    /**
+     * @return Entity Tag
+     * 
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -39,6 +43,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isBlockUserUploadEnabled")
     private @Nullable Boolean isBlockUserUploadEnabled;
 
+    /**
+     * @return Whether this site is enabled for block user upload.
+     * 
+     */
     public Optional<Boolean> isBlockUserUploadEnabled() {
         return Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
@@ -50,6 +58,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this site is enabled for DirectLine channel.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -61,6 +73,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isSecureSiteEnabled")
     private @Nullable Boolean isSecureSiteEnabled;
 
+    /**
+     * @return Whether this site is enabled for authentication with Bot Framework.
+     * 
+     */
     public Optional<Boolean> isSecureSiteEnabled() {
         return Optional.ofNullable(this.isSecureSiteEnabled);
     }
@@ -72,6 +88,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isTokenEnabled")
     private @Nullable Boolean isTokenEnabled;
 
+    /**
+     * @return Whether this site is token enabled for channel
+     * 
+     */
     public Optional<Boolean> isTokenEnabled() {
         return Optional.ofNullable(this.isTokenEnabled);
     }
@@ -83,6 +103,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isV1Enabled", required=true)
     private Boolean isV1Enabled;
 
+    /**
+     * @return Whether this site is enabled for Bot Framework V1 protocol.
+     * 
+     */
     public Boolean isV1Enabled() {
         return this.isV1Enabled;
     }
@@ -94,6 +118,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isV3Enabled", required=true)
     private Boolean isV3Enabled;
 
+    /**
+     * @return Whether this site is enabled for Bot Framework V1 protocol.
+     * 
+     */
     public Boolean isV3Enabled() {
         return this.isV3Enabled;
     }
@@ -105,6 +133,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isWebchatPreviewEnabled", required=true)
     private Boolean isWebchatPreviewEnabled;
 
+    /**
+     * @return Whether this site is enabled for preview versions of Webchat
+     * 
+     */
     public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
@@ -116,6 +148,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -127,6 +163,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key2", required=true)
     private String key2;
 
+    /**
+     * @return Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public String key2() {
         return this.key2;
     }
@@ -138,6 +178,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteId", required=true)
     private String siteId;
 
+    /**
+     * @return Site Id
+     * 
+     */
     public String siteId() {
         return this.siteId;
     }
@@ -149,6 +193,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteName", required=true)
     private String siteName;
 
+    /**
+     * @return Site name
+     * 
+     */
     public String siteName() {
         return this.siteName;
     }
@@ -160,6 +208,10 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustedOrigins")
     private @Nullable List<String> trustedOrigins;
 
+    /**
+     * @return List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+     * 
+     */
     public Optional<List<String>> trustedOrigins() {
         return Optional.ofNullable(this.trustedOrigins);
     }
@@ -200,71 +252,155 @@ public final class SiteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SiteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag Entity Tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable String eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param isBlockUserUploadEnabled Whether this site is enabled for block user upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
             $.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this site is enabled for DirectLine channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isSecureSiteEnabled Whether this site is enabled for authentication with Bot Framework.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
             $.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
 
+        /**
+         * @param isTokenEnabled Whether this site is token enabled for channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder isTokenEnabled(@Nullable Boolean isTokenEnabled) {
             $.isTokenEnabled = isTokenEnabled;
             return this;
         }
 
+        /**
+         * @param isV1Enabled Whether this site is enabled for Bot Framework V1 protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isV1Enabled(Boolean isV1Enabled) {
             $.isV1Enabled = isV1Enabled;
             return this;
         }
 
+        /**
+         * @param isV3Enabled Whether this site is enabled for Bot Framework V1 protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isV3Enabled(Boolean isV3Enabled) {
             $.isV3Enabled = isV3Enabled;
             return this;
         }
 
+        /**
+         * @param isWebchatPreviewEnabled Whether this site is enabled for preview versions of Webchat
+         * 
+         * @return builder
+         * 
+         */
         public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
             $.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
             return this;
         }
 
+        /**
+         * @param key Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key2 Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key2(String key2) {
             $.key2 = key2;
             return this;
         }
 
+        /**
+         * @param siteId Site Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(String siteId) {
             $.siteId = siteId;
             return this;
         }
 
+        /**
+         * @param siteName Site name
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             $.siteName = siteName;
             return this;
         }
 
+        /**
+         * @param trustedOrigins List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
             $.trustedOrigins = trustedOrigins;
             return this;
         }
 
+        /**
+         * @param trustedOrigins List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedOrigins(String... trustedOrigins) {
             return trustedOrigins(List.of(trustedOrigins));
         }

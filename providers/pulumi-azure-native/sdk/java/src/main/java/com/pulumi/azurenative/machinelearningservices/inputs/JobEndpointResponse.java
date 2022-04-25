@@ -27,6 +27,10 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpoint")
     private @Nullable String endpoint;
 
+    /**
+     * @return Url for endpoint.
+     * 
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -38,6 +42,10 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobEndpointType")
     private @Nullable String jobEndpointType;
 
+    /**
+     * @return Endpoint type.
+     * 
+     */
     public Optional<String> jobEndpointType() {
         return Optional.ofNullable(this.jobEndpointType);
     }
@@ -49,6 +57,10 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return Port for endpoint.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -60,6 +72,10 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Additional properties to set on the endpoint.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -91,21 +107,45 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint Url for endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param jobEndpointType Endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobEndpointType(@Nullable String jobEndpointType) {
             $.jobEndpointType = jobEndpointType;
             return this;
         }
 
+        /**
+         * @param port Port for endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param properties Additional properties to set on the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;

@@ -24,6 +24,10 @@ public final class AwsAccessKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessKeyId", required=true)
     private Output<String> accessKeyId;
 
+    /**
+     * @return AWS access key ID.
+     * 
+     */
     public Output<String> accessKeyId() {
         return this.accessKeyId;
     }
@@ -35,6 +39,10 @@ public final class AwsAccessKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretAccessKey", required=true)
     private Output<String> secretAccessKey;
 
+    /**
+     * @return AWS secret access key. This field is not returned in RPC responses.
+     * 
+     */
     public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
@@ -64,20 +72,44 @@ public final class AwsAccessKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AwsAccessKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKeyId AWS access key ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(Output<String> accessKeyId) {
             $.accessKeyId = accessKeyId;
             return this;
         }
 
+        /**
+         * @param accessKeyId AWS access key ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(String accessKeyId) {
             return accessKeyId(Output.of(accessKeyId));
         }
 
+        /**
+         * @param secretAccessKey AWS secret access key. This field is not returned in RPC responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(Output<String> secretAccessKey) {
             $.secretAccessKey = secretAccessKey;
             return this;
         }
 
+        /**
+         * @param secretAccessKey AWS secret access key. This field is not returned in RPC responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(String secretAccessKey) {
             return secretAccessKey(Output.of(secretAccessKey));
         }

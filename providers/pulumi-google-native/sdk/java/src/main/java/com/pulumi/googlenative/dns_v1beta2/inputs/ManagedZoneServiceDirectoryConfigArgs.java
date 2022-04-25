@@ -34,6 +34,10 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends com.pulumi.reso
     @Import(name="namespace")
     private @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
+    /**
+     * @return Contains information about the namespace associated with the zone.
+     * 
+     */
     public Optional<Output<ManagedZoneServiceDirectoryConfigNamespaceArgs>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -72,11 +76,23 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends com.pulumi.reso
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param namespace Contains information about the namespace associated with the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Contains information about the namespace associated with the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
             return namespace(Output.of(namespace));
         }

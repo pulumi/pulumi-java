@@ -23,6 +23,10 @@ public final class MonitoringScheduleStoppingCondition extends com.pulumi.resour
     @Import(name="maxRuntimeInSeconds", required=true)
     private Integer maxRuntimeInSeconds;
 
+    /**
+     * @return The maximum runtime allowed in seconds.
+     * 
+     */
     public Integer maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
@@ -51,6 +55,12 @@ public final class MonitoringScheduleStoppingCondition extends com.pulumi.resour
             $ = new MonitoringScheduleStoppingCondition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxRuntimeInSeconds The maximum runtime allowed in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             $.maxRuntimeInSeconds = maxRuntimeInSeconds;
             return this;

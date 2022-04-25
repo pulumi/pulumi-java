@@ -25,6 +25,10 @@ public final class PeriodicTimerSourceInfoResponse extends com.pulumi.resources.
     @Import(name="schedule", required=true)
     private String schedule;
 
+    /**
+     * @return Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+     * 
+     */
     public String schedule() {
         return this.schedule;
     }
@@ -36,6 +40,10 @@ public final class PeriodicTimerSourceInfoResponse extends com.pulumi.resources.
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -47,6 +55,10 @@ public final class PeriodicTimerSourceInfoResponse extends com.pulumi.resources.
     @Import(name="topic")
     private @Nullable String topic;
 
+    /**
+     * @return Topic where periodic events are published to IoT device.
+     * 
+     */
     public Optional<String> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -77,16 +89,34 @@ public final class PeriodicTimerSourceInfoResponse extends com.pulumi.resources.
             $ = new PeriodicTimerSourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param startTime The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param topic Topic where periodic events are published to IoT device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable String topic) {
             $.topic = topic;
             return this;

@@ -26,6 +26,10 @@ public final class PurchasePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The plan ID.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class PurchasePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="product")
     private @Nullable Output<String> product;
 
+    /**
+     * @return Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+     * 
+     */
     public Optional<Output<String>> product() {
         return Optional.ofNullable(this.product);
     }
@@ -48,6 +56,10 @@ public final class PurchasePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="promotionCode")
     private @Nullable Output<String> promotionCode;
 
+    /**
+     * @return The promotion code.
+     * 
+     */
     public Optional<Output<String>> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -59,6 +71,10 @@ public final class PurchasePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return The plan ID.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -90,38 +106,86 @@ public final class PurchasePlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PurchasePlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param product Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable Output<String> product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param product Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(String product) {
             return product(Output.of(product));
         }
 
+        /**
+         * @param promotionCode The promotion code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param promotionCode The promotion code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(String promotionCode) {
             return promotionCode(Output.of(promotionCode));
         }
 
+        /**
+         * @param publisher The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }

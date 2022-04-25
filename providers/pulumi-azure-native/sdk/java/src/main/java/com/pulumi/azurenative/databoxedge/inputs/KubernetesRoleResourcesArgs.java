@@ -27,6 +27,10 @@ public final class KubernetesRoleResourcesArgs extends com.pulumi.resources.Reso
     @Import(name="compute", required=true)
     private Output<KubernetesRoleComputeArgs> compute;
 
+    /**
+     * @return Kubernetes role compute resource
+     * 
+     */
     public Output<KubernetesRoleComputeArgs> compute() {
         return this.compute;
     }
@@ -38,6 +42,10 @@ public final class KubernetesRoleResourcesArgs extends com.pulumi.resources.Reso
     @Import(name="storage")
     private @Nullable Output<KubernetesRoleStorageArgs> storage;
 
+    /**
+     * @return Kubernetes role storage resource
+     * 
+     */
     public Optional<Output<KubernetesRoleStorageArgs>> storage() {
         return Optional.ofNullable(this.storage);
     }
@@ -67,20 +75,44 @@ public final class KubernetesRoleResourcesArgs extends com.pulumi.resources.Reso
             $ = new KubernetesRoleResourcesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compute Kubernetes role compute resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(Output<KubernetesRoleComputeArgs> compute) {
             $.compute = compute;
             return this;
         }
 
+        /**
+         * @param compute Kubernetes role compute resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(KubernetesRoleComputeArgs compute) {
             return compute(Output.of(compute));
         }
 
+        /**
+         * @param storage Kubernetes role storage resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(@Nullable Output<KubernetesRoleStorageArgs> storage) {
             $.storage = storage;
             return this;
         }
 
+        /**
+         * @param storage Kubernetes role storage resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(KubernetesRoleStorageArgs storage) {
             return storage(Output.of(storage));
         }

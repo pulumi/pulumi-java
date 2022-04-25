@@ -31,6 +31,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Azure Video Analyzer account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -42,6 +46,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
     private Output<Either<String,Kind>> kind;
 
+    /**
+     * @return Topology kind.
+     * 
+     */
     public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
@@ -64,6 +76,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameters")
     private @Nullable Output<List<ParameterDeclarationArgs>> parameters;
 
+    /**
+     * @return List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+     * 
+     */
     public Optional<Output<List<ParameterDeclarationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -75,6 +91,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="pipelineTopologyName")
     private @Nullable Output<String> pipelineTopologyName;
 
+    /**
+     * @return Pipeline topology unique identifier.
+     * 
+     */
     public Optional<Output<String>> pipelineTopologyName() {
         return Optional.ofNullable(this.pipelineTopologyName);
     }
@@ -86,6 +106,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="processors")
     private @Nullable Output<List<EncoderProcessorArgs>> processors;
 
+    /**
+     * @return List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
+     * 
+     */
     public Optional<Output<List<EncoderProcessorArgs>>> processors() {
         return Optional.ofNullable(this.processors);
     }
@@ -97,6 +121,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -108,6 +136,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sinks", required=true)
     private Output<List<VideoSinkArgs>> sinks;
 
+    /**
+     * @return List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
+     * 
+     */
     public Output<List<VideoSinkArgs>> sinks() {
         return this.sinks;
     }
@@ -119,6 +151,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return Describes the properties of a SKU.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -130,6 +166,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sources", required=true)
     private Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
 
+    /**
+     * @return List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
+     * 
+     */
     public Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources() {
         return this.sources;
     }
@@ -167,116 +207,272 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
             $ = new PipelineTopologyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param description An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param kind Topology kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,Kind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Topology kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,Kind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Topology kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Topology kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param parameters List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<ParameterDeclarationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ParameterDeclarationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ParameterDeclarationArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param pipelineTopologyName Pipeline topology unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineTopologyName(@Nullable Output<String> pipelineTopologyName) {
             $.pipelineTopologyName = pipelineTopologyName;
             return this;
         }
 
+        /**
+         * @param pipelineTopologyName Pipeline topology unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineTopologyName(String pipelineTopologyName) {
             return pipelineTopologyName(Output.of(pipelineTopologyName));
         }
 
+        /**
+         * @param processors List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processors(@Nullable Output<List<EncoderProcessorArgs>> processors) {
             $.processors = processors;
             return this;
         }
 
+        /**
+         * @param processors List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processors(List<EncoderProcessorArgs> processors) {
             return processors(Output.of(processors));
         }
 
+        /**
+         * @param processors List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processors(EncoderProcessorArgs... processors) {
             return processors(List.of(processors));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sinks List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(Output<List<VideoSinkArgs>> sinks) {
             $.sinks = sinks;
             return this;
         }
 
+        /**
+         * @param sinks List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(List<VideoSinkArgs> sinks) {
             return sinks(Output.of(sinks));
         }
 
+        /**
+         * @param sinks List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(VideoSinkArgs... sinks) {
             return sinks(List.of(sinks));
         }
 
+        /**
+         * @param sku Describes the properties of a SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Describes the properties of a SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param sources List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<Either<RtspSourceArgs,VideoSourceArgs>> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(Either<RtspSourceArgs,VideoSourceArgs>... sources) {
             return sources(List.of(sources));
         }

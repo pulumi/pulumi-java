@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CosmosDbSqlApiSourceResponse {
     /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
     private final @Nullable Object additionalColumns;
     /**
-     * Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+     * @return Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object detectDatetime;
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * Page size of the result. Type: integer (or Expression with resultType integer).
+     * @return Page size of the result. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object pageSize;
     /**
-     * Preferred regions. Type: array of strings (or Expression with resultType array of strings).
+     * @return Preferred regions. Type: array of strings (or Expression with resultType array of strings).
      * 
      */
     private final @Nullable Object preferredRegions;
     /**
-     * SQL API query. Type: string (or Expression with resultType string).
+     * @return SQL API query. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object query;
     /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object sourceRetryCount;
     /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object sourceRetryWait;
     /**
-     * Copy source type.
+     * @return Copy source type.
      * Expected value is &#39;CosmosDbSqlApiSource&#39;.
      * 
      */
@@ -89,73 +89,73 @@ public final class CosmosDbSqlApiSourceResponse {
     }
 
     /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-    */
+     */
     public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
-     * Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+     * @return Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> detectDatetime() {
         return Optional.ofNullable(this.detectDatetime);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * Page size of the result. Type: integer (or Expression with resultType integer).
+     * @return Page size of the result. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> pageSize() {
         return Optional.ofNullable(this.pageSize);
     }
     /**
-     * Preferred regions. Type: array of strings (or Expression with resultType array of strings).
+     * @return Preferred regions. Type: array of strings (or Expression with resultType array of strings).
      * 
-    */
+     */
     public Optional<Object> preferredRegions() {
         return Optional.ofNullable(this.preferredRegions);
     }
     /**
-     * SQL API query. Type: string (or Expression with resultType string).
+     * @return SQL API query. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> query() {
         return Optional.ofNullable(this.query);
     }
     /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
-     * Copy source type.
+     * @return Copy source type.
      * Expected value is &#39;CosmosDbSqlApiSource&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

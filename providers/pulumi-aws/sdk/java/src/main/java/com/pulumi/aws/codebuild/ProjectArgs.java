@@ -37,6 +37,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifacts", required=true)
     private Output<ProjectArtifactsArgs> artifacts;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Output<ProjectArtifactsArgs> artifacts() {
         return this.artifacts;
     }
@@ -48,6 +52,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="badgeEnabled")
     private @Nullable Output<Boolean> badgeEnabled;
 
+    /**
+     * @return Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
+     * 
+     */
     public Optional<Output<Boolean>> badgeEnabled() {
         return Optional.ofNullable(this.badgeEnabled);
     }
@@ -59,6 +67,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildBatchConfig")
     private @Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig;
 
+    /**
+     * @return Defines the batch build options for the project.
+     * 
+     */
     public Optional<Output<ProjectBuildBatchConfigArgs>> buildBatchConfig() {
         return Optional.ofNullable(this.buildBatchConfig);
     }
@@ -70,6 +82,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildTimeout")
     private @Nullable Output<Integer> buildTimeout;
 
+    /**
+     * @return Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+     * 
+     */
     public Optional<Output<Integer>> buildTimeout() {
         return Optional.ofNullable(this.buildTimeout);
     }
@@ -81,6 +97,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cache")
     private @Nullable Output<ProjectCacheArgs> cache;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<ProjectCacheArgs>> cache() {
         return Optional.ofNullable(this.cache);
     }
@@ -92,6 +112,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="concurrentBuildLimit")
     private @Nullable Output<Integer> concurrentBuildLimit;
 
+    /**
+     * @return Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
+     * 
+     */
     public Optional<Output<Integer>> concurrentBuildLimit() {
         return Optional.ofNullable(this.concurrentBuildLimit);
     }
@@ -103,6 +127,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Short description of the project.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -114,6 +142,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKey")
     private @Nullable Output<String> encryptionKey;
 
+    /**
+     * @return AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project&#39;s build output artifacts.
+     * 
+     */
     public Optional<Output<String>> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
@@ -125,6 +157,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environment", required=true)
     private Output<ProjectEnvironmentArgs> environment;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Output<ProjectEnvironmentArgs> environment() {
         return this.environment;
     }
@@ -136,6 +172,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemLocations")
     private @Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations;
 
+    /**
+     * @return A set of file system locations to to mount inside the build. File system locations are documented below.
+     * 
+     */
     public Optional<Output<List<ProjectFileSystemLocationArgs>>> fileSystemLocations() {
         return Optional.ofNullable(this.fileSystemLocations);
     }
@@ -147,6 +187,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logsConfig")
     private @Nullable Output<ProjectLogsConfigArgs> logsConfig;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<ProjectLogsConfigArgs>> logsConfig() {
         return Optional.ofNullable(this.logsConfig);
     }
@@ -158,6 +202,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -169,6 +217,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectVisibility")
     private @Nullable Output<String> projectVisibility;
 
+    /**
+     * @return Specifies the visibility of the project&#39;s builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
+     * 
+     */
     public Optional<Output<String>> projectVisibility() {
         return Optional.ofNullable(this.projectVisibility);
     }
@@ -180,6 +232,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queuedTimeout")
     private @Nullable Output<Integer> queuedTimeout;
 
+    /**
+     * @return Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+     * 
+     */
     public Optional<Output<Integer>> queuedTimeout() {
         return Optional.ofNullable(this.queuedTimeout);
     }
@@ -191,6 +247,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceAccessRole")
     private @Nullable Output<String> resourceAccessRole;
 
+    /**
+     * @return The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project&#39;s builds.
+     * 
+     */
     public Optional<Output<String>> resourceAccessRole() {
         return Optional.ofNullable(this.resourceAccessRole);
     }
@@ -202,6 +262,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondaryArtifacts")
     private @Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<List<ProjectSecondaryArtifactArgs>>> secondaryArtifacts() {
         return Optional.ofNullable(this.secondaryArtifacts);
     }
@@ -213,6 +277,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondarySourceVersions")
     private @Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<List<ProjectSecondarySourceVersionArgs>>> secondarySourceVersions() {
         return Optional.ofNullable(this.secondarySourceVersions);
     }
@@ -224,6 +292,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondarySources")
     private @Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<List<ProjectSecondarySourceArgs>>> secondarySources() {
         return Optional.ofNullable(this.secondarySources);
     }
@@ -235,6 +307,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole", required=true)
     private Output<String> serviceRole;
 
+    /**
+     * @return Specifies the service role ARN for the batch build project.
+     * 
+     */
     public Output<String> serviceRole() {
         return this.serviceRole;
     }
@@ -246,6 +322,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
     private Output<ProjectSourceArgs> source;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Output<ProjectSourceArgs> source() {
         return this.source;
     }
@@ -257,6 +337,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceVersion")
     private @Nullable Output<String> sourceVersion;
 
+    /**
+     * @return The source version for the corresponding source identifier. See [AWS docs](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ProjectSourceVersion.html#CodeBuild-Type-ProjectSourceVersion-sourceVersion) for more details.
+     * 
+     */
     public Optional<Output<String>> sourceVersion() {
         return Optional.ofNullable(this.sourceVersion);
     }
@@ -268,6 +352,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -279,6 +367,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
     private @Nullable Output<ProjectVpcConfigArgs> vpcConfig;
 
+    /**
+     * @return Configuration block. Detailed below.
+     * 
+     */
     public Optional<Output<ProjectVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
@@ -329,225 +421,525 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifacts Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(Output<ProjectArtifactsArgs> artifacts) {
             $.artifacts = artifacts;
             return this;
         }
 
+        /**
+         * @param artifacts Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifacts(ProjectArtifactsArgs artifacts) {
             return artifacts(Output.of(artifacts));
         }
 
+        /**
+         * @param badgeEnabled Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder badgeEnabled(@Nullable Output<Boolean> badgeEnabled) {
             $.badgeEnabled = badgeEnabled;
             return this;
         }
 
+        /**
+         * @param badgeEnabled Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder badgeEnabled(Boolean badgeEnabled) {
             return badgeEnabled(Output.of(badgeEnabled));
         }
 
+        /**
+         * @param buildBatchConfig Defines the batch build options for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildBatchConfig(@Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig) {
             $.buildBatchConfig = buildBatchConfig;
             return this;
         }
 
+        /**
+         * @param buildBatchConfig Defines the batch build options for the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildBatchConfig(ProjectBuildBatchConfigArgs buildBatchConfig) {
             return buildBatchConfig(Output.of(buildBatchConfig));
         }
 
+        /**
+         * @param buildTimeout Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildTimeout(@Nullable Output<Integer> buildTimeout) {
             $.buildTimeout = buildTimeout;
             return this;
         }
 
+        /**
+         * @param buildTimeout Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildTimeout(Integer buildTimeout) {
             return buildTimeout(Output.of(buildTimeout));
         }
 
+        /**
+         * @param cache Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cache(@Nullable Output<ProjectCacheArgs> cache) {
             $.cache = cache;
             return this;
         }
 
+        /**
+         * @param cache Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cache(ProjectCacheArgs cache) {
             return cache(Output.of(cache));
         }
 
+        /**
+         * @param concurrentBuildLimit Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentBuildLimit(@Nullable Output<Integer> concurrentBuildLimit) {
             $.concurrentBuildLimit = concurrentBuildLimit;
             return this;
         }
 
+        /**
+         * @param concurrentBuildLimit Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentBuildLimit(Integer concurrentBuildLimit) {
             return concurrentBuildLimit(Output.of(concurrentBuildLimit));
         }
 
+        /**
+         * @param description Short description of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Short description of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptionKey AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project&#39;s build output artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             $.encryptionKey = encryptionKey;
             return this;
         }
 
+        /**
+         * @param encryptionKey AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project&#39;s build output artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(String encryptionKey) {
             return encryptionKey(Output.of(encryptionKey));
         }
 
+        /**
+         * @param environment Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Output<ProjectEnvironmentArgs> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(ProjectEnvironmentArgs environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param fileSystemLocations A set of file system locations to to mount inside the build. File system locations are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemLocations(@Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations) {
             $.fileSystemLocations = fileSystemLocations;
             return this;
         }
 
+        /**
+         * @param fileSystemLocations A set of file system locations to to mount inside the build. File system locations are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemLocations(List<ProjectFileSystemLocationArgs> fileSystemLocations) {
             return fileSystemLocations(Output.of(fileSystemLocations));
         }
 
+        /**
+         * @param fileSystemLocations A set of file system locations to to mount inside the build. File system locations are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemLocations(ProjectFileSystemLocationArgs... fileSystemLocations) {
             return fileSystemLocations(List.of(fileSystemLocations));
         }
 
+        /**
+         * @param logsConfig Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsConfig(@Nullable Output<ProjectLogsConfigArgs> logsConfig) {
             $.logsConfig = logsConfig;
             return this;
         }
 
+        /**
+         * @param logsConfig Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsConfig(ProjectLogsConfigArgs logsConfig) {
             return logsConfig(Output.of(logsConfig));
         }
 
+        /**
+         * @param name Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param projectVisibility Specifies the visibility of the project&#39;s builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectVisibility(@Nullable Output<String> projectVisibility) {
             $.projectVisibility = projectVisibility;
             return this;
         }
 
+        /**
+         * @param projectVisibility Specifies the visibility of the project&#39;s builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectVisibility(String projectVisibility) {
             return projectVisibility(Output.of(projectVisibility));
         }
 
+        /**
+         * @param queuedTimeout Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queuedTimeout(@Nullable Output<Integer> queuedTimeout) {
             $.queuedTimeout = queuedTimeout;
             return this;
         }
 
+        /**
+         * @param queuedTimeout Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queuedTimeout(Integer queuedTimeout) {
             return queuedTimeout(Output.of(queuedTimeout));
         }
 
+        /**
+         * @param resourceAccessRole The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project&#39;s builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAccessRole(@Nullable Output<String> resourceAccessRole) {
             $.resourceAccessRole = resourceAccessRole;
             return this;
         }
 
+        /**
+         * @param resourceAccessRole The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project&#39;s builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAccessRole(String resourceAccessRole) {
             return resourceAccessRole(Output.of(resourceAccessRole));
         }
 
+        /**
+         * @param secondaryArtifacts Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryArtifacts(@Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts) {
             $.secondaryArtifacts = secondaryArtifacts;
             return this;
         }
 
+        /**
+         * @param secondaryArtifacts Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryArtifacts(List<ProjectSecondaryArtifactArgs> secondaryArtifacts) {
             return secondaryArtifacts(Output.of(secondaryArtifacts));
         }
 
+        /**
+         * @param secondaryArtifacts Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryArtifacts(ProjectSecondaryArtifactArgs... secondaryArtifacts) {
             return secondaryArtifacts(List.of(secondaryArtifacts));
         }
 
+        /**
+         * @param secondarySourceVersions Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarySourceVersions(@Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions) {
             $.secondarySourceVersions = secondarySourceVersions;
             return this;
         }
 
+        /**
+         * @param secondarySourceVersions Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarySourceVersions(List<ProjectSecondarySourceVersionArgs> secondarySourceVersions) {
             return secondarySourceVersions(Output.of(secondarySourceVersions));
         }
 
+        /**
+         * @param secondarySourceVersions Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarySourceVersions(ProjectSecondarySourceVersionArgs... secondarySourceVersions) {
             return secondarySourceVersions(List.of(secondarySourceVersions));
         }
 
+        /**
+         * @param secondarySources Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarySources(@Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources) {
             $.secondarySources = secondarySources;
             return this;
         }
 
+        /**
+         * @param secondarySources Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarySources(List<ProjectSecondarySourceArgs> secondarySources) {
             return secondarySources(Output.of(secondarySources));
         }
 
+        /**
+         * @param secondarySources Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarySources(ProjectSecondarySourceArgs... secondarySources) {
             return secondarySources(List.of(secondarySources));
         }
 
+        /**
+         * @param serviceRole Specifies the service role ARN for the batch build project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(Output<String> serviceRole) {
             $.serviceRole = serviceRole;
             return this;
         }
 
+        /**
+         * @param serviceRole Specifies the service role ARN for the batch build project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(String serviceRole) {
             return serviceRole(Output.of(serviceRole));
         }
 
+        /**
+         * @param source Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<ProjectSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(ProjectSourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param sourceVersion The source version for the corresponding source identifier. See [AWS docs](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ProjectSourceVersion.html#CodeBuild-Type-ProjectSourceVersion-sourceVersion) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVersion(@Nullable Output<String> sourceVersion) {
             $.sourceVersion = sourceVersion;
             return this;
         }
 
+        /**
+         * @param sourceVersion The source version for the corresponding source identifier. See [AWS docs](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ProjectSourceVersion.html#CodeBuild-Type-ProjectSourceVersion-sourceVersion) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVersion(String sourceVersion) {
             return sourceVersion(Output.of(sourceVersion));
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vpcConfig Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfig(@Nullable Output<ProjectVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
 
+        /**
+         * @param vpcConfig Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfig(ProjectVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }

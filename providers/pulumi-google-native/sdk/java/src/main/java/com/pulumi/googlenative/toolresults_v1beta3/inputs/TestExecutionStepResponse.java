@@ -27,6 +27,10 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
     @Import(name="testIssues", required=true)
     private List<TestIssueResponse> testIssues;
 
+    /**
+     * @return Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
+     * 
+     */
     public List<TestIssueResponse> testIssues() {
         return this.testIssues;
     }
@@ -38,6 +42,10 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
     @Import(name="testSuiteOverviews", required=true)
     private List<TestSuiteOverviewResponse> testSuiteOverviews;
 
+    /**
+     * @return List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
+     * 
+     */
     public List<TestSuiteOverviewResponse> testSuiteOverviews() {
         return this.testSuiteOverviews;
     }
@@ -49,6 +57,10 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
     @Import(name="testTiming", required=true)
     private TestTimingResponse testTiming;
 
+    /**
+     * @return The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional
+     * 
+     */
     public TestTimingResponse testTiming() {
         return this.testTiming;
     }
@@ -60,6 +72,10 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
     @Import(name="toolExecution", required=true)
     private ToolExecutionResponse toolExecution;
 
+    /**
+     * @return Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional
+     * 
+     */
     public ToolExecutionResponse toolExecution() {
         return this.toolExecution;
     }
@@ -91,29 +107,65 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
             $ = new TestExecutionStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testIssues Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testIssues(List<TestIssueResponse> testIssues) {
             $.testIssues = testIssues;
             return this;
         }
 
+        /**
+         * @param testIssues Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testIssues(TestIssueResponse... testIssues) {
             return testIssues(List.of(testIssues));
         }
 
+        /**
+         * @param testSuiteOverviews List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuiteOverviews(List<TestSuiteOverviewResponse> testSuiteOverviews) {
             $.testSuiteOverviews = testSuiteOverviews;
             return this;
         }
 
+        /**
+         * @param testSuiteOverviews List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuiteOverviews(TestSuiteOverviewResponse... testSuiteOverviews) {
             return testSuiteOverviews(List.of(testSuiteOverviews));
         }
 
+        /**
+         * @param testTiming The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTiming(TestTimingResponse testTiming) {
             $.testTiming = testTiming;
             return this;
         }
 
+        /**
+         * @param toolExecution Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolExecution(ToolExecutionResponse toolExecution) {
             $.toolExecution = toolExecution;
             return this;

@@ -19,68 +19,68 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HDInsightPigActivityResponse {
     /**
-     * User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
+     * @return User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
      * 
      */
     private final @Nullable Object arguments;
     /**
-     * Allows user to specify defines for Pig job request.
+     * @return Allows user to specify defines for Pig job request.
      * 
      */
     private final @Nullable Map<String,Object> defines;
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Debug info option.
+     * @return Debug info option.
      * 
      */
     private final @Nullable String getDebugInfo;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * Script linked service reference.
+     * @return Script linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
     /**
-     * Script path. Type: string (or Expression with resultType string).
+     * @return Script path. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object scriptPath;
     /**
-     * Storage linked service references.
+     * @return Storage linked service references.
      * 
      */
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;HDInsightPig&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -116,94 +116,94 @@ public final class HDInsightPigActivityResponse {
     }
 
     /**
-     * User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
+     * @return User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
      * 
-    */
+     */
     public Optional<Object> arguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
-     * Allows user to specify defines for Pig job request.
+     * @return Allows user to specify defines for Pig job request.
      * 
-    */
+     */
     public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Debug info option.
+     * @return Debug info option.
      * 
-    */
+     */
     public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Script linked service reference.
+     * @return Script linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> scriptLinkedService() {
         return Optional.ofNullable(this.scriptLinkedService);
     }
     /**
-     * Script path. Type: string (or Expression with resultType string).
+     * @return Script path. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> scriptPath() {
         return Optional.ofNullable(this.scriptPath);
     }
     /**
-     * Storage linked service references.
+     * @return Storage linked service references.
      * 
-    */
+     */
     public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;HDInsightPig&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

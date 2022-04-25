@@ -19,6 +19,10 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="hoursOfOperationArn", required=true)
     private String hoursOfOperationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the hours of operation.
+     * 
+     */
     public String hoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
@@ -47,6 +51,12 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
             $ = new GetHoursOfOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hoursOfOperationArn The Amazon Resource Name (ARN) for the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursOfOperationArn(String hoursOfOperationArn) {
             $.hoursOfOperationArn = hoursOfOperationArn;
             return this;

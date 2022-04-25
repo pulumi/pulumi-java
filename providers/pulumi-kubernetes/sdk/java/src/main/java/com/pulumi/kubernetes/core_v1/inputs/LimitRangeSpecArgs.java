@@ -25,6 +25,10 @@ public final class LimitRangeSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="limits", required=true)
     private Output<List<LimitRangeItemArgs>> limits;
 
+    /**
+     * @return Limits is the list of LimitRangeItem objects that are enforced.
+     * 
+     */
     public Output<List<LimitRangeItemArgs>> limits() {
         return this.limits;
     }
@@ -53,15 +57,33 @@ public final class LimitRangeSpecArgs extends com.pulumi.resources.ResourceArgs 
             $ = new LimitRangeSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limits Limits is the list of LimitRangeItem objects that are enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(Output<List<LimitRangeItemArgs>> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits Limits is the list of LimitRangeItem objects that are enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(List<LimitRangeItemArgs> limits) {
             return limits(Output.of(limits));
         }
 
+        /**
+         * @param limits Limits is the list of LimitRangeItem objects that are enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(LimitRangeItemArgs... limits) {
             return limits(List.of(limits));
         }

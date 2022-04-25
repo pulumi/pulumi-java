@@ -22,6 +22,10 @@ public final class RuleGroupRuleActionAllowArgs extends com.pulumi.resources.Res
     @Import(name="customRequestHandling")
     private @Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling;
 
+    /**
+     * @return Defines custom handling for the web request. See Custom Request Handling below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs>> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }
@@ -50,11 +54,23 @@ public final class RuleGroupRuleActionAllowArgs extends com.pulumi.resources.Res
             $ = new RuleGroupRuleActionAllowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customRequestHandling Defines custom handling for the web request. See Custom Request Handling below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHandling(@Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling) {
             $.customRequestHandling = customRequestHandling;
             return this;
         }
 
+        /**
+         * @param customRequestHandling Defines custom handling for the web request. See Custom Request Handling below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHandling(RuleGroupRuleActionAllowCustomRequestHandlingArgs customRequestHandling) {
             return customRequestHandling(Output.of(customRequestHandling));
         }

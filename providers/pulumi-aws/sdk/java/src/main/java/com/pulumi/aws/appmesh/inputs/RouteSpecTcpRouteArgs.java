@@ -23,6 +23,10 @@ public final class RouteSpecTcpRouteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="action", required=true)
     private Output<RouteSpecTcpRouteActionArgs> action;
 
+    /**
+     * @return The action to take if a match is determined.
+     * 
+     */
     public Output<RouteSpecTcpRouteActionArgs> action() {
         return this.action;
     }
@@ -34,6 +38,10 @@ public final class RouteSpecTcpRouteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="timeout")
     private @Nullable Output<RouteSpecTcpRouteTimeoutArgs> timeout;
 
+    /**
+     * @return The types of timeouts.
+     * 
+     */
     public Optional<Output<RouteSpecTcpRouteTimeoutArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -63,20 +71,44 @@ public final class RouteSpecTcpRouteArgs extends com.pulumi.resources.ResourceAr
             $ = new RouteSpecTcpRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<RouteSpecTcpRouteActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RouteSpecTcpRouteActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param timeout The types of timeouts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<RouteSpecTcpRouteTimeoutArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The types of timeouts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(RouteSpecTcpRouteTimeoutArgs timeout) {
             return timeout(Output.of(timeout));
         }

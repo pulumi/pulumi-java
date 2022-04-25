@@ -26,6 +26,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
     @Import(name="eventHubName")
     private @Nullable String eventHubName;
 
+    /**
+     * @return The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
@@ -37,6 +41,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
     @Import(name="partitionKey")
     private @Nullable String partitionKey;
 
+    /**
+     * @return The key/column that is used to determine to which partition to send event data.
+     * 
+     */
     public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
@@ -48,6 +56,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
     @Import(name="serviceBusNamespace")
     private @Nullable String serviceBusNamespace;
 
+    /**
+     * @return The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
@@ -59,6 +71,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
     @Import(name="sharedAccessPolicyKey")
     private @Nullable String sharedAccessPolicyKey;
 
+    /**
+     * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
@@ -70,6 +86,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
     @Import(name="sharedAccessPolicyName")
     private @Nullable String sharedAccessPolicyName;
 
+    /**
+     * @return The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
@@ -82,6 +102,11 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -115,31 +140,68 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
             $ = new EventHubOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHubName The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(@Nullable String eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param partitionKey The key/column that is used to determine to which partition to send event data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKey(@Nullable String partitionKey) {
             $.partitionKey = partitionKey;
             return this;
         }
 
+        /**
+         * @param serviceBusNamespace The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             $.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
+        /**
+         * @param sharedAccessPolicyKey The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             $.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
+        /**
+         * @param sharedAccessPolicyName The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             $.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

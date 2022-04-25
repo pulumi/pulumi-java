@@ -23,6 +23,11 @@ public final class TriggerWebhookConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="secret", required=true)
     private Output<String> secret;
 
+    /**
+     * @return Secrets to decrypt using Cloud Key Management Service.
+     * Structure is documented below.
+     * 
+     */
     public Output<String> secret() {
         return this.secret;
     }
@@ -36,6 +41,12 @@ public final class TriggerWebhookConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return -
+     * Potential issues with the underlying Pub/Sub subscription configuration.
+     * Only populated on get requests.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -65,20 +76,50 @@ public final class TriggerWebhookConfigArgs extends com.pulumi.resources.Resourc
             $ = new TriggerWebhookConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secret Secrets to decrypt using Cloud Key Management Service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Secrets to decrypt using Cloud Key Management Service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param state -
+         * Potential issues with the underlying Pub/Sub subscription configuration.
+         * Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state -
+         * Potential issues with the underlying Pub/Sub subscription configuration.
+         * Only populated on get requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

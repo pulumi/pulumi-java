@@ -25,6 +25,10 @@ public final class ARecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipv4Address")
     private @Nullable String ipv4Address;
 
+    /**
+     * @return The IPv4 address of this A record.
+     * 
+     */
     public Optional<String> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }
@@ -53,6 +57,12 @@ public final class ARecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ARecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipv4Address The IPv4 address of this A record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(@Nullable String ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;

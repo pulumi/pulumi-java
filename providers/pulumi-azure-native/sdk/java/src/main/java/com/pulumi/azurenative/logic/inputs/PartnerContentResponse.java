@@ -25,6 +25,10 @@ public final class PartnerContentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="b2b")
     private @Nullable B2BPartnerContentResponse b2b;
 
+    /**
+     * @return The B2B partner content.
+     * 
+     */
     public Optional<B2BPartnerContentResponse> b2b() {
         return Optional.ofNullable(this.b2b);
     }
@@ -53,6 +57,12 @@ public final class PartnerContentResponse extends com.pulumi.resources.InvokeArg
             $ = new PartnerContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param b2b The B2B partner content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder b2b(@Nullable B2BPartnerContentResponse b2b) {
             $.b2b = b2b;
             return this;

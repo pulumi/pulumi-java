@@ -22,6 +22,10 @@ public final class MetricDescriptorMetadataArgs extends com.pulumi.resources.Res
     @Import(name="ingestDelay")
     private @Nullable Output<String> ingestDelay;
 
+    /**
+     * @return The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In `[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)`.
+     * 
+     */
     public Optional<Output<String>> ingestDelay() {
         return Optional.ofNullable(this.ingestDelay);
     }
@@ -33,6 +37,10 @@ public final class MetricDescriptorMetadataArgs extends com.pulumi.resources.Res
     @Import(name="samplePeriod")
     private @Nullable Output<String> samplePeriod;
 
+    /**
+     * @return The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period. In `[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)`.
+     * 
+     */
     public Optional<Output<String>> samplePeriod() {
         return Optional.ofNullable(this.samplePeriod);
     }
@@ -62,20 +70,44 @@ public final class MetricDescriptorMetadataArgs extends com.pulumi.resources.Res
             $ = new MetricDescriptorMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingestDelay The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In `[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestDelay(@Nullable Output<String> ingestDelay) {
             $.ingestDelay = ingestDelay;
             return this;
         }
 
+        /**
+         * @param ingestDelay The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In `[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestDelay(String ingestDelay) {
             return ingestDelay(Output.of(ingestDelay));
         }
 
+        /**
+         * @param samplePeriod The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period. In `[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplePeriod(@Nullable Output<String> samplePeriod) {
             $.samplePeriod = samplePeriod;
             return this;
         }
 
+        /**
+         * @param samplePeriod The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period. In `[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplePeriod(String samplePeriod) {
             return samplePeriod(Output.of(samplePeriod));
         }

@@ -25,6 +25,10 @@ public final class QosPortRangeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="end")
     private @Nullable Integer end;
 
+    /**
+     * @return Qos Port Range end.
+     * 
+     */
     public Optional<Integer> end() {
         return Optional.ofNullable(this.end);
     }
@@ -36,6 +40,10 @@ public final class QosPortRangeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="start")
     private @Nullable Integer start;
 
+    /**
+     * @return Qos Port Range start.
+     * 
+     */
     public Optional<Integer> start() {
         return Optional.ofNullable(this.start);
     }
@@ -65,11 +73,23 @@ public final class QosPortRangeResponse extends com.pulumi.resources.InvokeArgs 
             $ = new QosPortRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end Qos Port Range end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable Integer end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param start Qos Port Range start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable Integer start) {
             $.start = start;
             return this;

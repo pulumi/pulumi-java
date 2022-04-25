@@ -22,6 +22,10 @@ public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="datasetId")
     private @Nullable Output<String> datasetId;
 
+    /**
+     * @return [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     * 
+     */
     public Optional<Output<String>> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
@@ -33,6 +37,10 @@ public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return [Optional] The ID of the project containing this dataset.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -62,20 +70,44 @@ public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArg
             $ = new DatasetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(@Nullable Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param project [Optional] The ID of the project containing this dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project [Optional] The ID of the project containing this dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

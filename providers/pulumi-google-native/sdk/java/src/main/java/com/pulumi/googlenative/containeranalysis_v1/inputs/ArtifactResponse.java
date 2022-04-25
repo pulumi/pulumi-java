@@ -24,6 +24,10 @@ public final class ArtifactResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="checksum", required=true)
     private String checksum;
 
+    /**
+     * @return Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.
+     * 
+     */
     public String checksum() {
         return this.checksum;
     }
@@ -35,6 +39,10 @@ public final class ArtifactResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="names", required=true)
     private List<String> names;
 
+    /**
+     * @return Related artifact names. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. Note that a single Artifact ID can have multiple names, for example if two tags are applied to one image.
+     * 
+     */
     public List<String> names() {
         return this.names;
     }
@@ -64,16 +72,34 @@ public final class ArtifactResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ArtifactResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checksum Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checksum(String checksum) {
             $.checksum = checksum;
             return this;
         }
 
+        /**
+         * @param names Related artifact names. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. Note that a single Artifact ID can have multiple names, for example if two tags are applied to one image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(List<String> names) {
             $.names = names;
             return this;
         }
 
+        /**
+         * @param names Related artifact names. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. Note that a single Artifact ID can have multiple names, for example if two tags are applied to one image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(String... names) {
             return names(List.of(names));
         }

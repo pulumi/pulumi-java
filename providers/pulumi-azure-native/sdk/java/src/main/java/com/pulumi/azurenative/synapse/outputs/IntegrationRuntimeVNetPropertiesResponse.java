@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IntegrationRuntimeVNetPropertiesResponse {
     /**
-     * Resource IDs of the public IP addresses that this integration runtime will use.
+     * @return Resource IDs of the public IP addresses that this integration runtime will use.
      * 
      */
     private final @Nullable List<String> publicIPs;
     /**
-     * The name of the subnet this integration runtime will join.
+     * @return The name of the subnet this integration runtime will join.
      * 
      */
     private final @Nullable String subnet;
     /**
-     * The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
+     * @return The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
      * 
      */
     private final @Nullable String subnetId;
     /**
-     * The ID of the VNet that this integration runtime will join.
+     * @return The ID of the VNet that this integration runtime will join.
      * 
      */
     private final @Nullable String vNetId;
@@ -46,30 +46,30 @@ public final class IntegrationRuntimeVNetPropertiesResponse {
     }
 
     /**
-     * Resource IDs of the public IP addresses that this integration runtime will use.
+     * @return Resource IDs of the public IP addresses that this integration runtime will use.
      * 
-    */
+     */
     public List<String> publicIPs() {
         return this.publicIPs == null ? List.of() : this.publicIPs;
     }
     /**
-     * The name of the subnet this integration runtime will join.
+     * @return The name of the subnet this integration runtime will join.
      * 
-    */
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
+     * @return The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
      * 
-    */
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
-     * The ID of the VNet that this integration runtime will join.
+     * @return The ID of the VNet that this integration runtime will join.
      * 
-    */
+     */
     public Optional<String> vNetId() {
         return Optional.ofNullable(this.vNetId);
     }

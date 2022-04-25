@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends com.pulumi.reso
     @Import(name="buckets")
     private @Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets;
 
+    /**
+     * @return Set of buckets. Ranges must be non-overlapping.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2BucketArgs>>> buckets() {
         return Optional.ofNullable(this.buckets);
     }
@@ -55,15 +59,33 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends com.pulumi.reso
             $ = new GooglePrivacyDlpV2BucketingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buckets Set of buckets. Ranges must be non-overlapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buckets(@Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets) {
             $.buckets = buckets;
             return this;
         }
 
+        /**
+         * @param buckets Set of buckets. Ranges must be non-overlapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buckets(List<GooglePrivacyDlpV2BucketArgs> buckets) {
             return buckets(Output.of(buckets));
         }
 
+        /**
+         * @param buckets Set of buckets. Ranges must be non-overlapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buckets(GooglePrivacyDlpV2BucketArgs... buckets) {
             return buckets(List.of(buckets));
         }

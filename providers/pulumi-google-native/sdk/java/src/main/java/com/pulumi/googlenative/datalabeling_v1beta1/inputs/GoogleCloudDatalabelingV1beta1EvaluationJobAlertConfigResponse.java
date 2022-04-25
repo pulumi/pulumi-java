@@ -24,6 +24,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return An email address to send alerts to.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
     @Import(name="minAcceptableMeanAveragePrecision", required=true)
     private Double minAcceptableMeanAveragePrecision;
 
+    /**
+     * @return A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version&#39;s predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
+     * 
+     */
     public Double minAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
             $ = new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email An email address to send alerts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param minAcceptableMeanAveragePrecision A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version&#39;s predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
             $.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
             return this;

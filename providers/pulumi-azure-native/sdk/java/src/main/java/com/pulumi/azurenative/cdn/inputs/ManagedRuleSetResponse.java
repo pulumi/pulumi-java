@@ -28,6 +28,10 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="anomalyScore")
     private @Nullable Integer anomalyScore;
 
+    /**
+     * @return Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
+     * 
+     */
     public Optional<Integer> anomalyScore() {
         return Optional.ofNullable(this.anomalyScore);
     }
@@ -39,6 +43,10 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ruleGroupOverrides")
     private @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
+    /**
+     * @return Defines the rule overrides to apply to the rule set.
+     * 
+     */
     public Optional<List<ManagedRuleGroupOverrideResponse>> ruleGroupOverrides() {
         return Optional.ofNullable(this.ruleGroupOverrides);
     }
@@ -50,6 +58,10 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ruleSetType", required=true)
     private String ruleSetType;
 
+    /**
+     * @return Defines the rule set type to use.
+     * 
+     */
     public String ruleSetType() {
         return this.ruleSetType;
     }
@@ -61,6 +73,10 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ruleSetVersion", required=true)
     private String ruleSetVersion;
 
+    /**
+     * @return Defines the version of the rule set to use.
+     * 
+     */
     public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
@@ -92,25 +108,55 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
             $ = new ManagedRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param anomalyScore Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyScore(@Nullable Integer anomalyScore) {
             $.anomalyScore = anomalyScore;
             return this;
         }
 
+        /**
+         * @param ruleGroupOverrides Defines the rule overrides to apply to the rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
             $.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
+        /**
+         * @param ruleGroupOverrides Defines the rule overrides to apply to the rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupOverrides(ManagedRuleGroupOverrideResponse... ruleGroupOverrides) {
             return ruleGroupOverrides(List.of(ruleGroupOverrides));
         }
 
+        /**
+         * @param ruleSetType Defines the rule set type to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetType(String ruleSetType) {
             $.ruleSetType = ruleSetType;
             return this;
         }
 
+        /**
+         * @param ruleSetVersion Defines the version of the rule set to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetVersion(String ruleSetVersion) {
             $.ruleSetVersion = ruleSetVersion;
             return this;

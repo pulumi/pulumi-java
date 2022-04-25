@@ -28,6 +28,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="botIconUrl")
     private @Nullable String botIconUrl;
 
+    /**
+     * @return The bot icon url
+     * 
+     */
     public Optional<String> botIconUrl() {
         return Optional.ofNullable(this.botIconUrl);
     }
@@ -39,6 +43,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="botId")
     private @Nullable String botId;
 
+    /**
+     * @return The bot id
+     * 
+     */
     public Optional<String> botId() {
         return Optional.ofNullable(this.botId);
     }
@@ -50,6 +58,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="channelDisplayName")
     private @Nullable String channelDisplayName;
 
+    /**
+     * @return The channel display name
+     * 
+     */
     public Optional<String> channelDisplayName() {
         return Optional.ofNullable(this.channelDisplayName);
     }
@@ -61,6 +73,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="channelId")
     private @Nullable String channelId;
 
+    /**
+     * @return The channel id
+     * 
+     */
     public Optional<String> channelId() {
         return Optional.ofNullable(this.channelId);
     }
@@ -72,6 +88,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="disableLocalAuth")
     private @Nullable Boolean disableLocalAuth;
 
+    /**
+     * @return Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+     * 
+     */
     public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
@@ -83,6 +103,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="extensionKey1")
     private @Nullable String extensionKey1;
 
+    /**
+     * @return The extensionKey1
+     * 
+     */
     public Optional<String> extensionKey1() {
         return Optional.ofNullable(this.extensionKey1);
     }
@@ -94,6 +118,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="extensionKey2")
     private @Nullable String extensionKey2;
 
+    /**
+     * @return The extensionKey2
+     * 
+     */
     public Optional<String> extensionKey2() {
         return Optional.ofNullable(this.extensionKey2);
     }
@@ -105,6 +133,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isEnabled")
     private @Nullable Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -116,6 +148,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sites")
     private @Nullable List<SiteResponse> sites;
 
+    /**
+     * @return The list of sites
+     * 
+     */
     public Optional<List<SiteResponse>> sites() {
         return Optional.ofNullable(this.sites);
     }
@@ -152,51 +188,111 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
             $ = new ChannelSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param botIconUrl The bot icon url
+         * 
+         * @return builder
+         * 
+         */
         public Builder botIconUrl(@Nullable String botIconUrl) {
             $.botIconUrl = botIconUrl;
             return this;
         }
 
+        /**
+         * @param botId The bot id
+         * 
+         * @return builder
+         * 
+         */
         public Builder botId(@Nullable String botId) {
             $.botId = botId;
             return this;
         }
 
+        /**
+         * @param channelDisplayName The channel display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelDisplayName(@Nullable String channelDisplayName) {
             $.channelDisplayName = channelDisplayName;
             return this;
         }
 
+        /**
+         * @param channelId The channel id
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelId(@Nullable String channelId) {
             $.channelId = channelId;
             return this;
         }
 
+        /**
+         * @param disableLocalAuth Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             $.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
+        /**
+         * @param extensionKey1 The extensionKey1
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionKey1(@Nullable String extensionKey1) {
             $.extensionKey1 = extensionKey1;
             return this;
         }
 
+        /**
+         * @param extensionKey2 The extensionKey2
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionKey2(@Nullable String extensionKey2) {
             $.extensionKey2 = extensionKey2;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param sites The list of sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(@Nullable List<SiteResponse> sites) {
             $.sites = sites;
             return this;
         }
 
+        /**
+         * @param sites The list of sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(SiteResponse... sites) {
             return sites(List.of(sites));
         }

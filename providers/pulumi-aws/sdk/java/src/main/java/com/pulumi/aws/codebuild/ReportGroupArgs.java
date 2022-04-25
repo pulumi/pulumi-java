@@ -25,6 +25,10 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteReports")
     private @Nullable Output<Boolean> deleteReports;
 
+    /**
+     * @return If `true`, deletes any reports that belong to a report group before deleting the report group. If `false`, you must delete any reports in the report group before deleting it. Default value is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> deleteReports() {
         return Optional.ofNullable(this.deleteReports);
     }
@@ -36,6 +40,10 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exportConfig", required=true)
     private Output<ReportGroupExportConfigArgs> exportConfig;
 
+    /**
+     * @return Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
+     * 
+     */
     public Output<ReportGroupExportConfigArgs> exportConfig() {
         return this.exportConfig;
     }
@@ -47,6 +55,10 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of a Report Group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -69,6 +85,10 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The export configuration type. Valid values are `S3` and `NO_EXPORT`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -101,47 +121,107 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReportGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteReports If `true`, deletes any reports that belong to a report group before deleting the report group. If `false`, you must delete any reports in the report group before deleting it. Default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteReports(@Nullable Output<Boolean> deleteReports) {
             $.deleteReports = deleteReports;
             return this;
         }
 
+        /**
+         * @param deleteReports If `true`, deletes any reports that belong to a report group before deleting the report group. If `false`, you must delete any reports in the report group before deleting it. Default value is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteReports(Boolean deleteReports) {
             return deleteReports(Output.of(deleteReports));
         }
 
+        /**
+         * @param exportConfig Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportConfig(Output<ReportGroupExportConfigArgs> exportConfig) {
             $.exportConfig = exportConfig;
             return this;
         }
 
+        /**
+         * @param exportConfig Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportConfig(ReportGroupExportConfigArgs exportConfig) {
             return exportConfig(Output.of(exportConfig));
         }
 
+        /**
+         * @param name The name of a Report Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of a Report Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type The export configuration type. Valid values are `S3` and `NO_EXPORT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The export configuration type. Valid values are `S3` and `NO_EXPORT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

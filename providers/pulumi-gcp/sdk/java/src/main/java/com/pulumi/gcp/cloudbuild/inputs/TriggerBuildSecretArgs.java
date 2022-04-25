@@ -23,6 +23,10 @@ public final class TriggerBuildSecretArgs extends com.pulumi.resources.ResourceA
     @Import(name="kmsKeyName", required=true)
     private Output<String> kmsKeyName;
 
+    /**
+     * @return Cloud KMS key name to use to decrypt these envs.
+     * 
+     */
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -36,6 +40,12 @@ public final class TriggerBuildSecretArgs extends com.pulumi.resources.ResourceA
     @Import(name="secretEnv")
     private @Nullable Output<Map<String,String>> secretEnv;
 
+    /**
+     * @return A list of global environment variables, which are encrypted using a Cloud Key Management
+     * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+     * will be available to all build steps in this build.
+     * 
+     */
     public Optional<Output<Map<String,String>>> secretEnv() {
         return Optional.ofNullable(this.secretEnv);
     }
@@ -65,20 +75,48 @@ public final class TriggerBuildSecretArgs extends com.pulumi.resources.ResourceA
             $ = new TriggerBuildSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Cloud KMS key name to use to decrypt these envs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Cloud KMS key name to use to decrypt these envs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param secretEnv A list of global environment variables, which are encrypted using a Cloud Key Management
+         * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+         * will be available to all build steps in this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnv(@Nullable Output<Map<String,String>> secretEnv) {
             $.secretEnv = secretEnv;
             return this;
         }
 
+        /**
+         * @param secretEnv A list of global environment variables, which are encrypted using a Cloud Key Management
+         * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
+         * will be available to all build steps in this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretEnv(Map<String,String> secretEnv) {
             return secretEnv(Output.of(secretEnv));
         }

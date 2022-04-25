@@ -29,6 +29,13 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoExpansionMode")
     private @Nullable Output<String> autoExpansionMode;
 
+    /**
+     * @return Represents kinds of entities.
+     * * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
+     * * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity.
+     *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
+     * 
+     */
     public Optional<Output<String>> autoExpansionMode() {
         return Optional.ofNullable(this.autoExpansionMode);
     }
@@ -40,6 +47,10 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the entity type, unique within the agent.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -51,6 +62,10 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableFuzzyExtraction")
     private @Nullable Output<Boolean> enableFuzzyExtraction;
 
+    /**
+     * @return Enables fuzzy entity extraction during classification.
+     * 
+     */
     public Optional<Output<Boolean>> enableFuzzyExtraction() {
         return Optional.ofNullable(this.enableFuzzyExtraction);
     }
@@ -63,6 +78,11 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="entities")
     private @Nullable Output<List<CxEntityTypeEntityGetArgs>> entities;
 
+    /**
+     * @return The collection of entity entries associated with the entity type.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CxEntityTypeEntityGetArgs>>> entities() {
         return Optional.ofNullable(this.entities);
     }
@@ -76,6 +96,12 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="excludedPhrases")
     private @Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases;
 
+    /**
+     * @return Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
+     * If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CxEntityTypeExcludedPhraseGetArgs>>> excludedPhrases() {
         return Optional.ofNullable(this.excludedPhrases);
     }
@@ -91,6 +117,14 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Indicates whether the entity type can be automatically expanded.
+     * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
+     * * KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
+     * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
+     *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -106,6 +140,14 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
     private @Nullable Output<String> languageCode;
 
+    /**
+     * @return The language of the following fields in entityType:
+     * EntityType.entities.value
+     * EntityType.entities.synonyms
+     * EntityType.excluded_phrases.value
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
@@ -118,6 +160,11 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+     * ID&gt;/entityTypes/&lt;Entity Type ID&gt;.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -130,6 +177,11 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The agent to create a entity type for.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -141,6 +193,10 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="redact")
     private @Nullable Output<Boolean> redact;
 
+    /**
+     * @return Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
+     * 
+     */
     public Optional<Output<Boolean>> redact() {
         return Optional.ofNullable(this.redact);
     }
@@ -178,100 +234,267 @@ public final class CxEntityTypeState extends com.pulumi.resources.ResourceArgs {
             $ = new CxEntityTypeState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoExpansionMode Represents kinds of entities.
+         * * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
+         * * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity.
+         *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoExpansionMode(@Nullable Output<String> autoExpansionMode) {
             $.autoExpansionMode = autoExpansionMode;
             return this;
         }
 
+        /**
+         * @param autoExpansionMode Represents kinds of entities.
+         * * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity.
+         * * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity.
+         *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoExpansionMode(String autoExpansionMode) {
             return autoExpansionMode(Output.of(autoExpansionMode));
         }
 
+        /**
+         * @param displayName The human-readable name of the entity type, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the entity type, unique within the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enableFuzzyExtraction Enables fuzzy entity extraction during classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             $.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
 
+        /**
+         * @param enableFuzzyExtraction Enables fuzzy entity extraction during classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFuzzyExtraction(Boolean enableFuzzyExtraction) {
             return enableFuzzyExtraction(Output.of(enableFuzzyExtraction));
         }
 
+        /**
+         * @param entities The collection of entity entries associated with the entity type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(@Nullable Output<List<CxEntityTypeEntityGetArgs>> entities) {
             $.entities = entities;
             return this;
         }
 
+        /**
+         * @param entities The collection of entity entries associated with the entity type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(List<CxEntityTypeEntityGetArgs> entities) {
             return entities(Output.of(entities));
         }
 
+        /**
+         * @param entities The collection of entity entries associated with the entity type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entities(CxEntityTypeEntityGetArgs... entities) {
             return entities(List.of(entities));
         }
 
+        /**
+         * @param excludedPhrases Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
+         * If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPhrases(@Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases) {
             $.excludedPhrases = excludedPhrases;
             return this;
         }
 
+        /**
+         * @param excludedPhrases Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
+         * If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPhrases(List<CxEntityTypeExcludedPhraseGetArgs> excludedPhrases) {
             return excludedPhrases(Output.of(excludedPhrases));
         }
 
+        /**
+         * @param excludedPhrases Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
+         * If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPhrases(CxEntityTypeExcludedPhraseGetArgs... excludedPhrases) {
             return excludedPhrases(List.of(excludedPhrases));
         }
 
+        /**
+         * @param kind Indicates whether the entity type can be automatically expanded.
+         * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
+         * * KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
+         * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
+         *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Indicates whether the entity type can be automatically expanded.
+         * * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value.
+         * * KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases).
+         * * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values.
+         *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param languageCode The language of the following fields in entityType:
+         * EntityType.entities.value
+         * EntityType.entities.synonyms
+         * EntityType.excluded_phrases.value
+         * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode The language of the following fields in entityType:
+         * EntityType.entities.value
+         * EntityType.entities.synonyms
+         * EntityType.excluded_phrases.value
+         * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }
 
+        /**
+         * @param name The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+         * ID&gt;/entityTypes/&lt;Entity Type ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
+         * ID&gt;/entityTypes/&lt;Entity Type ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent The agent to create a entity type for.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The agent to create a entity type for.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param redact Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redact(@Nullable Output<Boolean> redact) {
             $.redact = redact;
             return this;
         }
 
+        /**
+         * @param redact Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redact(Boolean redact) {
             return redact(Output.of(redact));
         }

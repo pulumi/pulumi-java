@@ -27,6 +27,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="automationAccountName")
     private @Nullable Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Optional<Output<String>> automationAccountName() {
         return Optional.ofNullable(this.automationAccountName);
     }
@@ -38,6 +42,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="disableLocalAuth")
     private @Nullable Output<Boolean> disableLocalAuth;
 
+    /**
+     * @return Indicates whether requests using non-AAD authentication are blocked
+     * 
+     */
     public Optional<Output<Boolean>> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
@@ -49,6 +57,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encryption")
     private @Nullable Output<EncryptionPropertiesArgs> encryption;
 
+    /**
+     * @return Set the encryption properties for the automation account
+     * 
+     */
     public Optional<Output<EncryptionPropertiesArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -60,6 +72,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return Sets the identity property for automation account
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -71,6 +87,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Gets or sets the location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -82,6 +102,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets name of the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,6 +117,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Boolean> publicNetworkAccess;
 
+    /**
+     * @return Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
+     * 
+     */
     public Optional<Output<Boolean>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -104,6 +132,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -115,6 +147,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Gets or sets account SKU.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -126,6 +162,10 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the tags attached to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -163,92 +203,212 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
             $ = new AutomationAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(@Nullable Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param disableLocalAuth Indicates whether requests using non-AAD authentication are blocked
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
             $.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
+        /**
+         * @param disableLocalAuth Indicates whether requests using non-AAD authentication are blocked
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(Boolean disableLocalAuth) {
             return disableLocalAuth(Output.of(disableLocalAuth));
         }
 
+        /**
+         * @param encryption Set the encryption properties for the automation account
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Set the encryption properties for the automation account
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(EncryptionPropertiesArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param identity Sets the identity property for automation account
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Sets the identity property for automation account
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location Gets or sets the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Gets or sets the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Gets or sets name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param publicNetworkAccess Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Boolean> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Boolean publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Gets or sets account SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets account SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Gets or sets the tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets the tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

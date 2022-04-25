@@ -25,6 +25,10 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
     @Import(name="cpu")
     private @Nullable Output<Integer> cpu;
 
+    /**
+     * @return Number of CPU cores needed.
+     * 
+     */
     public Optional<Output<Integer>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -36,6 +40,10 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
     @Import(name="diskGb")
     private @Nullable Output<Integer> diskGb;
 
+    /**
+     * @return Disk size (GB) needed.
+     * 
+     */
     public Optional<Output<Integer>> diskGb() {
         return Optional.ofNullable(this.diskGb);
     }
@@ -47,6 +55,10 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
     @Import(name="memoryGb")
     private @Nullable Output<Double> memoryGb;
 
+    /**
+     * @return Memory (GB) needed.
+     * 
+     */
     public Optional<Output<Double>> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
@@ -59,6 +71,11 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
     @Import(name="volumes")
     private @Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
 
+    /**
+     * @return List of ports, or port pairs, to forward from the virtual machine to the application container.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<FlexibleAppVersionResourcesVolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -90,42 +107,99 @@ public final class FlexibleAppVersionResourcesArgs extends com.pulumi.resources.
             $ = new FlexibleAppVersionResourcesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Number of CPU cores needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Integer> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Number of CPU cores needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Integer cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param diskGb Disk size (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskGb(@Nullable Output<Integer> diskGb) {
             $.diskGb = diskGb;
             return this;
         }
 
+        /**
+         * @param diskGb Disk size (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskGb(Integer diskGb) {
             return diskGb(Output.of(diskGb));
         }
 
+        /**
+         * @param memoryGb Memory (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             $.memoryGb = memoryGb;
             return this;
         }
 
+        /**
+         * @param memoryGb Memory (GB) needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(Double memoryGb) {
             return memoryGb(Output.of(memoryGb));
         }
 
+        /**
+         * @param volumes List of ports, or port pairs, to forward from the virtual machine to the application container.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes List of ports, or port pairs, to forward from the virtual machine to the application container.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<FlexibleAppVersionResourcesVolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes List of ports, or port pairs, to forward from the virtual machine to the application container.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(FlexibleAppVersionResourcesVolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }

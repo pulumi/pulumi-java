@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     @Import(name="media", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
 
+    /**
+     * @return Optional. However at least one of the title, description or media must be set. Media (image, GIF or a video) to include in the card.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media() {
         return this.media;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     @Import(name="suggestions", required=true)
     private List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
 
+    /**
+     * @return Optional. List of suggestions to include in the card.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions() {
         return this.suggestions;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return Optional. Title of the card (at most 200 bytes). At least one of the title, description or media must be set.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -90,25 +106,55 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param media Optional. However at least one of the title, description or media must be set. Media (image, GIF or a video) to include in the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder media(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media) {
             $.media = media;
             return this;
         }
 
+        /**
+         * @param suggestions Optional. List of suggestions to include in the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestions(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions) {
             $.suggestions = suggestions;
             return this;
         }
 
+        /**
+         * @param suggestions Optional. List of suggestions to include in the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse... suggestions) {
             return suggestions(List.of(suggestions));
         }
 
+        /**
+         * @param title Optional. Title of the card (at most 200 bytes). At least one of the title, description or media must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

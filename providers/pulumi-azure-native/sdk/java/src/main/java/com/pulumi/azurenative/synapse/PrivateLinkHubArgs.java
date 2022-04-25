@@ -23,6 +23,10 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="privateLinkHubName")
     private @Nullable Output<String> privateLinkHubName;
 
+    /**
+     * @return Name of the privateLinkHub
+     * 
+     */
     public Optional<Output<String>> privateLinkHubName() {
         return Optional.ofNullable(this.privateLinkHubName);
     }
@@ -45,6 +53,10 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return PrivateLinkHub provisioning state
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -56,6 +68,10 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,47 +119,107 @@ public final class PrivateLinkHubArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PrivateLinkHubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param privateLinkHubName Name of the privateLinkHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkHubName(@Nullable Output<String> privateLinkHubName) {
             $.privateLinkHubName = privateLinkHubName;
             return this;
         }
 
+        /**
+         * @param privateLinkHubName Name of the privateLinkHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkHubName(String privateLinkHubName) {
             return privateLinkHubName(Output.of(privateLinkHubName));
         }
 
+        /**
+         * @param provisioningState PrivateLinkHub provisioning state
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState PrivateLinkHub provisioning state
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

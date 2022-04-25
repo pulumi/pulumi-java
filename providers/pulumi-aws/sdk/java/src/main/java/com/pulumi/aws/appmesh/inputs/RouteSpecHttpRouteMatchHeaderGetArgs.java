@@ -24,6 +24,10 @@ public final class RouteSpecHttpRouteMatchHeaderGetArgs extends com.pulumi.resou
     @Import(name="invert")
     private @Nullable Output<Boolean> invert;
 
+    /**
+     * @return If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> invert() {
         return Optional.ofNullable(this.invert);
     }
@@ -35,6 +39,10 @@ public final class RouteSpecHttpRouteMatchHeaderGetArgs extends com.pulumi.resou
     @Import(name="match")
     private @Nullable Output<RouteSpecHttpRouteMatchHeaderMatchGetArgs> match;
 
+    /**
+     * @return The method and value to match the header value sent with a request. Specify one match method.
+     * 
+     */
     public Optional<Output<RouteSpecHttpRouteMatchHeaderMatchGetArgs>> match() {
         return Optional.ofNullable(this.match);
     }
@@ -46,6 +54,10 @@ public final class RouteSpecHttpRouteMatchHeaderGetArgs extends com.pulumi.resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A name for the HTTP header in the client request that will be matched on.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -76,29 +88,65 @@ public final class RouteSpecHttpRouteMatchHeaderGetArgs extends com.pulumi.resou
             $ = new RouteSpecHttpRouteMatchHeaderGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param invert If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invert(@Nullable Output<Boolean> invert) {
             $.invert = invert;
             return this;
         }
 
+        /**
+         * @param invert If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invert(Boolean invert) {
             return invert(Output.of(invert));
         }
 
+        /**
+         * @param match The method and value to match the header value sent with a request. Specify one match method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(@Nullable Output<RouteSpecHttpRouteMatchHeaderMatchGetArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match The method and value to match the header value sent with a request. Specify one match method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(RouteSpecHttpRouteMatchHeaderMatchGetArgs match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param name A name for the HTTP header in the client request that will be matched on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for the HTTP header in the client request that will be matched on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -28,6 +28,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
     @Import(name="httpsCAFile")
     private @Nullable String httpsCAFile;
 
+    /**
+     * @return Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
+     * 
+     */
     public Optional<String> httpsCAFile() {
         return Optional.ofNullable(this.httpsCAFile);
     }
@@ -39,6 +43,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
     @Import(name="httpsUser")
     private @Nullable String httpsUser;
 
+    /**
+     * @return Base64-encoded HTTPS username used to access private git repositories over HTTPS
+     * 
+     */
     public Optional<String> httpsUser() {
         return Optional.ofNullable(this.httpsUser);
     }
@@ -50,6 +58,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
     @Import(name="localAuthRef")
     private @Nullable String localAuthRef;
 
+    /**
+     * @return Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
+     * 
+     */
     public Optional<String> localAuthRef() {
         return Optional.ofNullable(this.localAuthRef);
     }
@@ -61,6 +73,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
     @Import(name="repositoryRef")
     private @Nullable RepositoryRefDefinitionResponse repositoryRef;
 
+    /**
+     * @return The source reference for the GitRepository object.
+     * 
+     */
     public Optional<RepositoryRefDefinitionResponse> repositoryRef() {
         return Optional.ofNullable(this.repositoryRef);
     }
@@ -72,6 +88,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
     @Import(name="sshKnownHosts")
     private @Nullable String sshKnownHosts;
 
+    /**
+     * @return Base64-encoded known_hosts value containing public SSH keys required to access private git repositories over SSH
+     * 
+     */
     public Optional<String> sshKnownHosts() {
         return Optional.ofNullable(this.sshKnownHosts);
     }
@@ -83,6 +103,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
     @Import(name="syncIntervalInSeconds")
     private @Nullable Double syncIntervalInSeconds;
 
+    /**
+     * @return The interval at which to re-reconcile the cluster git repository source with the remote.
+     * 
+     */
     public Optional<Double> syncIntervalInSeconds() {
         return Optional.ofNullable(this.syncIntervalInSeconds);
     }
@@ -94,6 +118,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
     @Import(name="timeoutInSeconds")
     private @Nullable Double timeoutInSeconds;
 
+    /**
+     * @return The maximum time to attempt to reconcile the cluster git repository source with the remote.
+     * 
+     */
     public Optional<Double> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -105,6 +133,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The URL to sync for the flux configuration git repository.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -140,41 +172,89 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
             $ = new GitRepositoryDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpsCAFile Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsCAFile(@Nullable String httpsCAFile) {
             $.httpsCAFile = httpsCAFile;
             return this;
         }
 
+        /**
+         * @param httpsUser Base64-encoded HTTPS username used to access private git repositories over HTTPS
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsUser(@Nullable String httpsUser) {
             $.httpsUser = httpsUser;
             return this;
         }
 
+        /**
+         * @param localAuthRef Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localAuthRef(@Nullable String localAuthRef) {
             $.localAuthRef = localAuthRef;
             return this;
         }
 
+        /**
+         * @param repositoryRef The source reference for the GitRepository object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryRef(@Nullable RepositoryRefDefinitionResponse repositoryRef) {
             $.repositoryRef = repositoryRef;
             return this;
         }
 
+        /**
+         * @param sshKnownHosts Base64-encoded known_hosts value containing public SSH keys required to access private git repositories over SSH
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
             $.sshKnownHosts = sshKnownHosts;
             return this;
         }
 
+        /**
+         * @param syncIntervalInSeconds The interval at which to re-reconcile the cluster git repository source with the remote.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             $.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutInSeconds The maximum time to attempt to reconcile the cluster git repository source with the remote.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
+        /**
+         * @param url The URL to sync for the flux configuration git repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

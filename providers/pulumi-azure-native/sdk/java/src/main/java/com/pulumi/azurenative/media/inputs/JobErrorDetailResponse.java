@@ -23,6 +23,10 @@ public final class JobErrorDetailResponse extends com.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Code describing the error detail.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class JobErrorDetailResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A human-readable representation of the error.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -63,11 +71,23 @@ public final class JobErrorDetailResponse extends com.pulumi.resources.InvokeArg
             $ = new JobErrorDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Code describing the error detail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message A human-readable representation of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

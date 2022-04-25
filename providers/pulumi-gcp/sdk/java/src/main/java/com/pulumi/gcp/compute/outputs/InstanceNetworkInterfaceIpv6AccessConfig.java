@@ -14,13 +14,13 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
     private final @Nullable String externalIpv6;
     private final @Nullable String externalIpv6PrefixLength;
     /**
-     * The service-level to be provided for IPv6 traffic when the
+     * @return The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
      */
     private final String networkTier;
     /**
-     * The domain name to be used when creating DNSv6
+     * @return The domain name to be used when creating DNSv6
      * records for the external IPv6 ranges..
      * 
      */
@@ -45,18 +45,18 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
         return Optional.ofNullable(this.externalIpv6PrefixLength);
     }
     /**
-     * The service-level to be provided for IPv6 traffic when the
+     * @return The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-    */
+     */
     public String networkTier() {
         return this.networkTier;
     }
     /**
-     * The domain name to be used when creating DNSv6
+     * @return The domain name to be used when creating DNSv6
      * records for the external IPv6 ranges..
      * 
-    */
+     */
     public Optional<String> publicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }

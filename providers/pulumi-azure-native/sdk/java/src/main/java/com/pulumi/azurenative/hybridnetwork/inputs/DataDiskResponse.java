@@ -26,6 +26,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createOption")
     private @Nullable String createOption;
 
+    /**
+     * @return Specifies how the virtual machine should be created.
+     * 
+     */
     public Optional<String> createOption() {
         return Optional.ofNullable(this.createOption);
     }
@@ -37,6 +41,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -48,6 +56,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of data disk.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,16 +90,34 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DataDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(@Nullable String createOption) {
             $.createOption = createOption;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param name The name of data disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

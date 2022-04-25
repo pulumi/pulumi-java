@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class VMSSVMInfoResponse {
     /**
-     * A value indicating compliance status of the machine for the assigned guest configuration.
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
      * 
      */
     private final String complianceStatus;
     /**
-     * Date and time when last compliance status was checked.
+     * @return Date and time when last compliance status was checked.
      * 
      */
     private final String lastComplianceChecked;
     /**
-     * Id of the latest report for the guest configuration assignment.
+     * @return Id of the latest report for the guest configuration assignment.
      * 
      */
     private final String latestReportId;
     /**
-     * UUID of the VM.
+     * @return UUID of the VM.
      * 
      */
     private final String vmId;
     /**
-     * Azure resource Id of the VM.
+     * @return Azure resource Id of the VM.
      * 
      */
     private final String vmResourceId;
@@ -50,37 +50,37 @@ public final class VMSSVMInfoResponse {
     }
 
     /**
-     * A value indicating compliance status of the machine for the assigned guest configuration.
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
      * 
-    */
+     */
     public String complianceStatus() {
         return this.complianceStatus;
     }
     /**
-     * Date and time when last compliance status was checked.
+     * @return Date and time when last compliance status was checked.
      * 
-    */
+     */
     public String lastComplianceChecked() {
         return this.lastComplianceChecked;
     }
     /**
-     * Id of the latest report for the guest configuration assignment.
+     * @return Id of the latest report for the guest configuration assignment.
      * 
-    */
+     */
     public String latestReportId() {
         return this.latestReportId;
     }
     /**
-     * UUID of the VM.
+     * @return UUID of the VM.
      * 
-    */
+     */
     public String vmId() {
         return this.vmId;
     }
     /**
-     * Azure resource Id of the VM.
+     * @return Azure resource Id of the VM.
      * 
-    */
+     */
     public String vmResourceId() {
         return this.vmResourceId;
     }

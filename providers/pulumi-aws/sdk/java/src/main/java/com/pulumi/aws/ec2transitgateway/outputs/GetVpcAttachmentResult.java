@@ -14,48 +14,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVpcAttachmentResult {
     /**
-     * Whether Appliance Mode support is enabled.
+     * @return Whether Appliance Mode support is enabled.
      * 
      */
     private final String applianceModeSupport;
     /**
-     * Whether DNS support is enabled.
+     * @return Whether DNS support is enabled.
      * 
      */
     private final String dnsSupport;
     private final @Nullable List<GetVpcAttachmentFilter> filters;
     /**
-     * EC2 Transit Gateway VPC Attachment identifier
+     * @return EC2 Transit Gateway VPC Attachment identifier
      * 
      */
     private final String id;
     /**
-     * Whether IPv6 support is enabled.
+     * @return Whether IPv6 support is enabled.
      * 
      */
     private final String ipv6Support;
     /**
-     * Identifiers of EC2 Subnets.
+     * @return Identifiers of EC2 Subnets.
      * 
      */
     private final List<String> subnetIds;
     /**
-     * Key-value tags for the EC2 Transit Gateway VPC Attachment
+     * @return Key-value tags for the EC2 Transit Gateway VPC Attachment
      * 
      */
     private final Map<String,String> tags;
     /**
-     * EC2 Transit Gateway identifier
+     * @return EC2 Transit Gateway identifier
      * 
      */
     private final String transitGatewayId;
     /**
-     * Identifier of EC2 VPC.
+     * @return Identifier of EC2 VPC.
      * 
      */
     private final String vpcId;
     /**
-     * Identifier of the AWS account that owns the EC2 VPC.
+     * @return Identifier of the AWS account that owns the EC2 VPC.
      * 
      */
     private final String vpcOwnerId;
@@ -85,16 +85,16 @@ public final class GetVpcAttachmentResult {
     }
 
     /**
-     * Whether Appliance Mode support is enabled.
+     * @return Whether Appliance Mode support is enabled.
      * 
-    */
+     */
     public String applianceModeSupport() {
         return this.applianceModeSupport;
     }
     /**
-     * Whether DNS support is enabled.
+     * @return Whether DNS support is enabled.
      * 
-    */
+     */
     public String dnsSupport() {
         return this.dnsSupport;
     }
@@ -102,51 +102,51 @@ public final class GetVpcAttachmentResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * EC2 Transit Gateway VPC Attachment identifier
+     * @return EC2 Transit Gateway VPC Attachment identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Whether IPv6 support is enabled.
+     * @return Whether IPv6 support is enabled.
      * 
-    */
+     */
     public String ipv6Support() {
         return this.ipv6Support;
     }
     /**
-     * Identifiers of EC2 Subnets.
+     * @return Identifiers of EC2 Subnets.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
-     * Key-value tags for the EC2 Transit Gateway VPC Attachment
+     * @return Key-value tags for the EC2 Transit Gateway VPC Attachment
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * EC2 Transit Gateway identifier
+     * @return EC2 Transit Gateway identifier
      * 
-    */
+     */
     public String transitGatewayId() {
         return this.transitGatewayId;
     }
     /**
-     * Identifier of EC2 VPC.
+     * @return Identifier of EC2 VPC.
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }
     /**
-     * Identifier of the AWS account that owns the EC2 VPC.
+     * @return Identifier of the AWS account that owns the EC2 VPC.
      * 
-    */
+     */
     public String vpcOwnerId() {
         return this.vpcOwnerId;
     }

@@ -25,6 +25,10 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -36,6 +40,10 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
     @Import(name="parameterName")
     private @Nullable String parameterName;
 
+    /**
+     * @return Name of the parameter in the connection provider&#39;s OAuth settings
+     * 
+     */
     public Optional<String> parameterName() {
         return Optional.ofNullable(this.parameterName);
     }
@@ -47,6 +55,10 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
     @Import(name="redirectUrl")
     private @Nullable String redirectUrl;
 
+    /**
+     * @return Name of the parameter in the connection provider&#39;s OAuth settings
+     * 
+     */
     public Optional<String> redirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
@@ -58,6 +70,10 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return The tenant id
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -89,21 +105,45 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
             $ = new ConsentLinkParameterDefinition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param parameterName Name of the parameter in the connection provider&#39;s OAuth settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterName(@Nullable String parameterName) {
             $.parameterName = parameterName;
             return this;
         }
 
+        /**
+         * @param redirectUrl Name of the parameter in the connection provider&#39;s OAuth settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUrl(@Nullable String redirectUrl) {
             $.redirectUrl = redirectUrl;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

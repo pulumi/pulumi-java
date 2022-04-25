@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageTestsConfiguration {
     /**
-     * ImageTestsEnabled
+     * @return ImageTestsEnabled
      * 
      */
     private final @Nullable Boolean imageTestsEnabled;
     /**
-     * TimeoutMinutes
+     * @return TimeoutMinutes
      * 
      */
     private final @Nullable Integer timeoutMinutes;
@@ -32,16 +32,16 @@ public final class ImageTestsConfiguration {
     }
 
     /**
-     * ImageTestsEnabled
+     * @return ImageTestsEnabled
      * 
-    */
+     */
     public Optional<Boolean> imageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
     /**
-     * TimeoutMinutes
+     * @return TimeoutMinutes
      * 
-    */
+     */
     public Optional<Integer> timeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }

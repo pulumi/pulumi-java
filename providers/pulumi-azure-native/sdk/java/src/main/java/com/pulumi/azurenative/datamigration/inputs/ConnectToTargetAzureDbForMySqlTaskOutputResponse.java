@@ -25,6 +25,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
     @Import(name="databases", required=true)
     private List<String> databases;
 
+    /**
+     * @return List of databases on target server
+     * 
+     */
     public List<String> databases() {
         return this.databases;
     }
@@ -36,6 +40,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +55,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
     @Import(name="serverVersion", required=true)
     private String serverVersion;
 
+    /**
+     * @return Version of the target server
+     * 
+     */
     public String serverVersion() {
         return this.serverVersion;
     }
@@ -58,6 +70,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
     @Import(name="targetServerBrandVersion", required=true)
     private String targetServerBrandVersion;
 
+    /**
+     * @return Target server brand version
+     * 
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
@@ -69,6 +85,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Validation errors associated with the task
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -101,35 +121,77 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends com.
             $ = new ConnectToTargetAzureDbForMySqlTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databases List of databases on target server
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(List<String> databases) {
             $.databases = databases;
             return this;
         }
 
+        /**
+         * @param databases List of databases on target server
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(String... databases) {
             return databases(List.of(databases));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param serverVersion Version of the target server
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(String serverVersion) {
             $.serverVersion = serverVersion;
             return this;
         }
 
+        /**
+         * @param targetServerBrandVersion Target server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors associated with the task
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors associated with the task
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

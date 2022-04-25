@@ -10,28 +10,28 @@ import java.util.Objects;
 @CustomType
 public final class EccTokenKeyResponse {
     /**
-     * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+     * @return Elliptical curve algorithm to be used: ES256, ES384 or ES512.
      * 
      */
     private final String alg;
     /**
-     * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+     * @return JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
      */
     private final String kid;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
      * 
      */
     private final String type;
     /**
-     * X coordinate.
+     * @return X coordinate.
      * 
      */
     private final String x;
     /**
-     * Y coordinate.
+     * @return Y coordinate.
      * 
      */
     private final String y;
@@ -51,38 +51,38 @@ public final class EccTokenKeyResponse {
     }
 
     /**
-     * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+     * @return Elliptical curve algorithm to be used: ES256, ES384 or ES512.
      * 
-    */
+     */
     public String alg() {
         return this.alg;
     }
     /**
-     * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+     * @return JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
-    */
+     */
     public String kid() {
         return this.kid;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * X coordinate.
+     * @return X coordinate.
      * 
-    */
+     */
     public String x() {
         return this.x;
     }
     /**
-     * Y coordinate.
+     * @return Y coordinate.
      * 
-    */
+     */
     public String y() {
         return this.y;
     }

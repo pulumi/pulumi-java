@@ -28,6 +28,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Swagger schema description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="format")
     private @Nullable String format;
 
+    /**
+     * @return The format, if &#39;type&#39; is not &#39;object&#39;
+     * 
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
@@ -50,6 +58,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="properties")
     private @Nullable Map<String,ColumnSpecificationResponse> properties;
 
+    /**
+     * @return The set of columns within the data table.
+     * 
+     */
     public Optional<Map<String,ColumnSpecificationResponse>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -61,6 +73,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return Swagger schema title.
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -72,6 +88,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the entity described in swagger.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -104,26 +124,56 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
             $ = new TableSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Swagger schema description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param format The format, if &#39;type&#39; is not &#39;object&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param properties The set of columns within the data table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,ColumnSpecificationResponse> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param title Swagger schema title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param type The type of the entity described in swagger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -26,6 +26,10 @@ public final class ManagedRuleSetListResponse extends com.pulumi.resources.Invok
     @Import(name="managedRuleSets")
     private @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets;
 
+    /**
+     * @return List of rule sets.
+     * 
+     */
     public Optional<List<FrontDoorManagedRuleSetResponse>> managedRuleSets() {
         return Optional.ofNullable(this.managedRuleSets);
     }
@@ -54,11 +58,23 @@ public final class ManagedRuleSetListResponse extends com.pulumi.resources.Invok
             $ = new ManagedRuleSetListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedRuleSets List of rule sets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRuleSets(@Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
             $.managedRuleSets = managedRuleSets;
             return this;
         }
 
+        /**
+         * @param managedRuleSets List of rule sets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRuleSets(FrontDoorManagedRuleSetResponse... managedRuleSets) {
             return managedRuleSets(List.of(managedRuleSets));
         }

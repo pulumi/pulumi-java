@@ -19,6 +19,10 @@ public final class GetDomainNodeToNodeEncryption extends com.pulumi.resources.In
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether node to node encryption is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -47,6 +51,12 @@ public final class GetDomainNodeToNodeEncryption extends com.pulumi.resources.In
             $ = new GetDomainNodeToNodeEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether node to node encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

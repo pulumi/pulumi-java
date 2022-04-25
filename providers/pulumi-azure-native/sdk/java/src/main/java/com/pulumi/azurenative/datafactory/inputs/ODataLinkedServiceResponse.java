@@ -34,6 +34,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="aadResourceId")
     private @Nullable Object aadResourceId;
 
+    /**
+     * @return Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> aadResourceId() {
         return Optional.ofNullable(this.aadResourceId);
     }
@@ -45,6 +49,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="aadServicePrincipalCredentialType")
     private @Nullable String aadServicePrincipalCredentialType;
 
+    /**
+     * @return Specify the credential type (key or cert) is used for service principal.
+     * 
+     */
     public Optional<String> aadServicePrincipalCredentialType() {
         return Optional.ofNullable(this.aadServicePrincipalCredentialType);
     }
@@ -56,6 +64,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -67,6 +79,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="authHeaders")
     private @Nullable Object authHeaders;
 
+    /**
+     * @return The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+     * 
+     */
     public Optional<Object> authHeaders() {
         return Optional.ofNullable(this.authHeaders);
     }
@@ -78,6 +94,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return Type of authentication used to connect to the OData service.
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -89,6 +109,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="azureCloudType")
     private @Nullable Object azureCloudType;
 
+    /**
+     * @return Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> azureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
@@ -100,6 +124,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -111,6 +139,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -122,6 +154,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -133,6 +169,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -144,6 +184,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password of the OData service.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -155,6 +199,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="servicePrincipalEmbeddedCert")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert;
 
+    /**
+     * @return Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalEmbeddedCert() {
         return Optional.ofNullable(this.servicePrincipalEmbeddedCert);
     }
@@ -166,6 +214,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="servicePrincipalEmbeddedCertPassword")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword;
 
+    /**
+     * @return Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalEmbeddedCertPassword() {
         return Optional.ofNullable(this.servicePrincipalEmbeddedCertPassword);
     }
@@ -177,6 +229,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="servicePrincipalId")
     private @Nullable Object servicePrincipalId;
 
+    /**
+     * @return Specify the application id of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
@@ -188,6 +244,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="servicePrincipalKey")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
+    /**
+     * @return Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
@@ -199,6 +259,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="tenant")
     private @Nullable Object tenant;
 
+    /**
+     * @return Specify the tenant information (domain name or tenant ID) under which your application resides. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -211,6 +275,11 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;OData&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -222,6 +291,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="url", required=true)
     private Object url;
 
+    /**
+     * @return The URL of the OData service endpoint. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object url() {
         return this.url;
     }
@@ -233,6 +306,10 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="userName")
     private @Nullable Object userName;
 
+    /**
+     * @return User name of the OData service. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -279,132 +356,301 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
             $ = new ODataLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadResourceId Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadResourceId(@Nullable Object aadResourceId) {
             $.aadResourceId = aadResourceId;
             return this;
         }
 
+        /**
+         * @param aadServicePrincipalCredentialType Specify the credential type (key or cert) is used for service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadServicePrincipalCredentialType(@Nullable String aadServicePrincipalCredentialType) {
             $.aadServicePrincipalCredentialType = aadServicePrincipalCredentialType;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authHeaders The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authHeaders(@Nullable Object authHeaders) {
             $.authHeaders = authHeaders;
             return this;
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the OData service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param azureCloudType Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureCloudType(@Nullable Object azureCloudType) {
             $.azureCloudType = azureCloudType;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password Password of the OData service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password of the OData service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password of the OData service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param servicePrincipalEmbeddedCert Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalEmbeddedCert(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert) {
             $.servicePrincipalEmbeddedCert = servicePrincipalEmbeddedCert;
             return this;
         }
 
+        /**
+         * @param servicePrincipalEmbeddedCert Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalEmbeddedCert(AzureKeyVaultSecretReferenceResponse servicePrincipalEmbeddedCert) {
             return servicePrincipalEmbeddedCert(Either.ofLeft(servicePrincipalEmbeddedCert));
         }
 
+        /**
+         * @param servicePrincipalEmbeddedCert Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalEmbeddedCert(SecureStringResponse servicePrincipalEmbeddedCert) {
             return servicePrincipalEmbeddedCert(Either.ofRight(servicePrincipalEmbeddedCert));
         }
 
+        /**
+         * @param servicePrincipalEmbeddedCertPassword Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalEmbeddedCertPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword) {
             $.servicePrincipalEmbeddedCertPassword = servicePrincipalEmbeddedCertPassword;
             return this;
         }
 
+        /**
+         * @param servicePrincipalEmbeddedCertPassword Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalEmbeddedCertPassword(AzureKeyVaultSecretReferenceResponse servicePrincipalEmbeddedCertPassword) {
             return servicePrincipalEmbeddedCertPassword(Either.ofLeft(servicePrincipalEmbeddedCertPassword));
         }
 
+        /**
+         * @param servicePrincipalEmbeddedCertPassword Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalEmbeddedCertPassword(SecureStringResponse servicePrincipalEmbeddedCertPassword) {
             return servicePrincipalEmbeddedCertPassword(Either.ofRight(servicePrincipalEmbeddedCertPassword));
         }
 
+        /**
+         * @param servicePrincipalId Specify the application id of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
+        /**
+         * @param tenant Specify the tenant information (domain name or tenant ID) under which your application resides. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(@Nullable Object tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;OData&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param url The URL of the OData service endpoint. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param userName User name of the OData service. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Object userName) {
             $.userName = userName;
             return this;

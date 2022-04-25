@@ -27,6 +27,10 @@ public final class ManagementPolicyDefinitionArgs extends com.pulumi.resources.R
     @Import(name="actions", required=true)
     private Output<ManagementPolicyActionArgs> actions;
 
+    /**
+     * @return An object that defines the action set.
+     * 
+     */
     public Output<ManagementPolicyActionArgs> actions() {
         return this.actions;
     }
@@ -38,6 +42,10 @@ public final class ManagementPolicyDefinitionArgs extends com.pulumi.resources.R
     @Import(name="filters")
     private @Nullable Output<ManagementPolicyFilterArgs> filters;
 
+    /**
+     * @return An object that defines the filter set.
+     * 
+     */
     public Optional<Output<ManagementPolicyFilterArgs>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -67,20 +75,44 @@ public final class ManagementPolicyDefinitionArgs extends com.pulumi.resources.R
             $ = new ManagementPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions An object that defines the action set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<ManagementPolicyActionArgs> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions An object that defines the action set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(ManagementPolicyActionArgs actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param filters An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable Output<ManagementPolicyFilterArgs> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(ManagementPolicyFilterArgs filters) {
             return filters(Output.of(filters));
         }

@@ -23,6 +23,10 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="crashed", required=true)
     private Boolean crashed;
 
+    /**
+     * @return If the failure was severe because the system (app) under test crashed.
+     * 
+     */
     public Boolean crashed() {
         return this.crashed;
     }
@@ -34,6 +38,10 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="deviceOutOfMemory", required=true)
     private Boolean deviceOutOfMemory;
 
+    /**
+     * @return If the device ran out of memory during a test, causing the test to crash.
+     * 
+     */
     public Boolean deviceOutOfMemory() {
         return this.deviceOutOfMemory;
     }
@@ -45,6 +53,10 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="failedRoboscript", required=true)
     private Boolean failedRoboscript;
 
+    /**
+     * @return If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
+     * 
+     */
     public Boolean failedRoboscript() {
         return this.failedRoboscript;
     }
@@ -56,6 +68,10 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="notInstalled", required=true)
     private Boolean notInstalled;
 
+    /**
+     * @return If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
+     * 
+     */
     public Boolean notInstalled() {
         return this.notInstalled;
     }
@@ -67,6 +83,10 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="otherNativeCrash", required=true)
     private Boolean otherNativeCrash;
 
+    /**
+     * @return If a native process (including any other than the app) crashed.
+     * 
+     */
     public Boolean otherNativeCrash() {
         return this.otherNativeCrash;
     }
@@ -78,6 +98,10 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="timedOut", required=true)
     private Boolean timedOut;
 
+    /**
+     * @return If the test overran some time limit, and that is why it failed.
+     * 
+     */
     public Boolean timedOut() {
         return this.timedOut;
     }
@@ -89,6 +113,10 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="unableToCrawl", required=true)
     private Boolean unableToCrawl;
 
+    /**
+     * @return If the robo was unable to crawl the app; perhaps because the app did not start.
+     * 
+     */
     public Boolean unableToCrawl() {
         return this.unableToCrawl;
     }
@@ -123,36 +151,78 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
             $ = new FailureDetailResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crashed If the failure was severe because the system (app) under test crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crashed(Boolean crashed) {
             $.crashed = crashed;
             return this;
         }
 
+        /**
+         * @param deviceOutOfMemory If the device ran out of memory during a test, causing the test to crash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceOutOfMemory(Boolean deviceOutOfMemory) {
             $.deviceOutOfMemory = deviceOutOfMemory;
             return this;
         }
 
+        /**
+         * @param failedRoboscript If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedRoboscript(Boolean failedRoboscript) {
             $.failedRoboscript = failedRoboscript;
             return this;
         }
 
+        /**
+         * @param notInstalled If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notInstalled(Boolean notInstalled) {
             $.notInstalled = notInstalled;
             return this;
         }
 
+        /**
+         * @param otherNativeCrash If a native process (including any other than the app) crashed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherNativeCrash(Boolean otherNativeCrash) {
             $.otherNativeCrash = otherNativeCrash;
             return this;
         }
 
+        /**
+         * @param timedOut If the test overran some time limit, and that is why it failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timedOut(Boolean timedOut) {
             $.timedOut = timedOut;
             return this;
         }
 
+        /**
+         * @param unableToCrawl If the robo was unable to crawl the app; perhaps because the app did not start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unableToCrawl(Boolean unableToCrawl) {
             $.unableToCrawl = unableToCrawl;
             return this;

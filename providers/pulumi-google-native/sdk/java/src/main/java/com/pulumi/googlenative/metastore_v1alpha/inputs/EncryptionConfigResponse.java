@@ -23,6 +23,10 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="kmsKey", required=true)
     private String kmsKey;
 
+    /**
+     * @return The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
+     * 
+     */
     public String kmsKey() {
         return this.kmsKey;
     }
@@ -51,6 +55,12 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
             $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKey The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             $.kmsKey = kmsKey;
             return this;

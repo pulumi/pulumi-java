@@ -25,6 +25,10 @@ public final class CacheExpirationActionParametersResponse extends com.pulumi.re
     @Import(name="cacheBehavior", required=true)
     private String cacheBehavior;
 
+    /**
+     * @return Caching behavior for the requests
+     * 
+     */
     public String cacheBehavior() {
         return this.cacheBehavior;
     }
@@ -36,6 +40,10 @@ public final class CacheExpirationActionParametersResponse extends com.pulumi.re
     @Import(name="cacheDuration")
     private @Nullable String cacheDuration;
 
+    /**
+     * @return The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
+     * 
+     */
     public Optional<String> cacheDuration() {
         return Optional.ofNullable(this.cacheDuration);
     }
@@ -47,6 +55,10 @@ public final class CacheExpirationActionParametersResponse extends com.pulumi.re
     @Import(name="cacheType", required=true)
     private String cacheType;
 
+    /**
+     * @return The level at which the content needs to be cached.
+     * 
+     */
     public String cacheType() {
         return this.cacheType;
     }
@@ -85,16 +97,34 @@ public final class CacheExpirationActionParametersResponse extends com.pulumi.re
             $ = new CacheExpirationActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheBehavior(String cacheBehavior) {
             $.cacheBehavior = cacheBehavior;
             return this;
         }
 
+        /**
+         * @param cacheDuration The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheDuration(@Nullable String cacheDuration) {
             $.cacheDuration = cacheDuration;
             return this;
         }
 
+        /**
+         * @param cacheType The level at which the content needs to be cached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheType(String cacheType) {
             $.cacheType = cacheType;
             return this;

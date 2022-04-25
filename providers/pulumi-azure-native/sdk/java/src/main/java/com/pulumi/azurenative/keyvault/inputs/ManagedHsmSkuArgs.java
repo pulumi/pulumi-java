@@ -27,6 +27,10 @@ public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
     private Output<Either<String,ManagedHsmSkuFamily>> family;
 
+    /**
+     * @return SKU Family of the managed HSM Pool
+     * 
+     */
     public Output<Either<String,ManagedHsmSkuFamily>> family() {
         return this.family;
     }
@@ -38,6 +42,10 @@ public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<ManagedHsmSkuName> name;
 
+    /**
+     * @return SKU of the managed HSM Pool
+     * 
+     */
     public Output<ManagedHsmSkuName> name() {
         return this.name;
     }
@@ -67,28 +75,64 @@ public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ManagedHsmSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family SKU Family of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Output<Either<String,ManagedHsmSkuFamily>> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family SKU Family of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Either<String,ManagedHsmSkuFamily> family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param family SKU Family of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Either.ofLeft(family));
         }
 
+        /**
+         * @param family SKU Family of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(ManagedHsmSkuFamily family) {
             return family(Either.ofRight(family));
         }
 
+        /**
+         * @param name SKU of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<ManagedHsmSkuName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name SKU of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(ManagedHsmSkuName name) {
             return name(Output.of(name));
         }

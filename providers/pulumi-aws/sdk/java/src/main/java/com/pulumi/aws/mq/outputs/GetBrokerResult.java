@@ -31,7 +31,7 @@ public final class GetBrokerResult {
     private final String engineVersion;
     private final String hostInstanceType;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -128,9 +128,9 @@ public final class GetBrokerResult {
         return this.hostInstanceType;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

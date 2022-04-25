@@ -24,6 +24,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
     @Import(name="dimensions")
     private @Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs>> dimensions;
 
+    /**
+     * @return Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
+     * 
+     */
     public Optional<Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs>>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -35,6 +39,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return The name of the metric.
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -46,6 +54,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return The namespace of the metric.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -57,6 +69,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
     @Import(name="statistic", required=true)
     private Output<String> statistic;
 
+    /**
+     * @return The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
+     * 
+     */
     public Output<String> statistic() {
         return this.statistic;
     }
@@ -68,6 +84,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
     @Import(name="unit")
     private @Nullable Output<String> unit;
 
+    /**
+     * @return The unit of the metric.
+     * 
+     */
     public Optional<Output<String>> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -100,51 +120,117 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
             $ = new PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensions Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs>> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs> dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param dimensions Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param metricName The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName The name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param namespace The namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace The namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param statistic The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statistic(Output<String> statistic) {
             $.statistic = statistic;
             return this;
         }
 
+        /**
+         * @param statistic The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statistic(String statistic) {
             return statistic(Output.of(statistic));
         }
 
+        /**
+         * @param unit The unit of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable Output<String> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit The unit of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             return unit(Output.of(unit));
         }

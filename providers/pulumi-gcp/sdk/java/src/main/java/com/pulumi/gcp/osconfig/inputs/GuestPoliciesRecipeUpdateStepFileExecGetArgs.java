@@ -24,6 +24,10 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends com.pulu
     @Import(name="allowedExitCodes")
     private @Nullable Output<List<Integer>> allowedExitCodes;
 
+    /**
+     * @return Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     * 
+     */
     public Optional<Output<List<Integer>>> allowedExitCodes() {
         return Optional.ofNullable(this.allowedExitCodes);
     }
@@ -35,6 +39,10 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends com.pulu
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return Arguments to be passed to the provided executable.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -46,6 +54,10 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends com.pulu
     @Import(name="artifactId")
     private @Nullable Output<String> artifactId;
 
+    /**
+     * @return The id of the relevant artifact in the recipe.
+     * 
+     */
     public Optional<Output<String>> artifactId() {
         return Optional.ofNullable(this.artifactId);
     }
@@ -57,6 +69,10 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends com.pulu
     @Import(name="localPath")
     private @Nullable Output<String> localPath;
 
+    /**
+     * @return The absolute path of the file on the local filesystem.
+     * 
+     */
     public Optional<Output<String>> localPath() {
         return Optional.ofNullable(this.localPath);
     }
@@ -88,46 +104,106 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends com.pulu
             $ = new GuestPoliciesRecipeUpdateStepFileExecGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(@Nullable Output<List<Integer>> allowedExitCodes) {
             $.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             return allowedExitCodes(Output.of(allowedExitCodes));
         }
 
+        /**
+         * @param allowedExitCodes Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
 
+        /**
+         * @param args Arguments to be passed to the provided executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Arguments to be passed to the provided executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args Arguments to be passed to the provided executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(@Nullable Output<String> artifactId) {
             $.artifactId = artifactId;
             return this;
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(String artifactId) {
             return artifactId(Output.of(artifactId));
         }
 
+        /**
+         * @param localPath The absolute path of the file on the local filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(@Nullable Output<String> localPath) {
             $.localPath = localPath;
             return this;
         }
 
+        /**
+         * @param localPath The absolute path of the file on the local filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             return localPath(Output.of(localPath));
         }

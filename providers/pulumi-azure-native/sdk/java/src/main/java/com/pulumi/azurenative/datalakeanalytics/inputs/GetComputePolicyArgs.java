@@ -19,6 +19,10 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the Data Lake Analytics account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="computePolicyName", required=true)
     private String computePolicyName;
 
+    /**
+     * @return The name of the compute policy to retrieve.
+     * 
+     */
     public String computePolicyName() {
         return this.computePolicyName;
     }
@@ -41,6 +49,10 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetComputePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param computePolicyName The name of the compute policy to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computePolicyName(String computePolicyName) {
             $.computePolicyName = computePolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

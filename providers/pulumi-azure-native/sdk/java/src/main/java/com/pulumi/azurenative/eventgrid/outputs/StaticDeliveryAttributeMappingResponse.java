@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StaticDeliveryAttributeMappingResponse {
     /**
-     * Boolean flag to tell if the attribute contains sensitive information .
+     * @return Boolean flag to tell if the attribute contains sensitive information .
      * 
      */
     private final @Nullable Boolean isSecret;
     /**
-     * Name of the delivery attribute or header.
+     * @return Name of the delivery attribute or header.
      * 
      */
     private final @Nullable String name;
     /**
-     * Type of the delivery attribute or header name.
+     * @return Type of the delivery attribute or header name.
      * Expected value is &#39;Static&#39;.
      * 
      */
     private final String type;
     /**
-     * Value of the delivery attribute.
+     * @return Value of the delivery attribute.
      * 
      */
     private final @Nullable String value;
@@ -47,31 +47,31 @@ public final class StaticDeliveryAttributeMappingResponse {
     }
 
     /**
-     * Boolean flag to tell if the attribute contains sensitive information .
+     * @return Boolean flag to tell if the attribute contains sensitive information .
      * 
-    */
+     */
     public Optional<Boolean> isSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
-     * Name of the delivery attribute or header.
+     * @return Name of the delivery attribute or header.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Type of the delivery attribute or header name.
+     * @return Type of the delivery attribute or header name.
      * Expected value is &#39;Static&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value of the delivery attribute.
+     * @return Value of the delivery attribute.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

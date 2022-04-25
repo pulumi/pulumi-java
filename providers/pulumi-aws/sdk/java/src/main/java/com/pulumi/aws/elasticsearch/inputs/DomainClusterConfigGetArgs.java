@@ -25,6 +25,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="dedicatedMasterCount")
     private @Nullable Output<Integer> dedicatedMasterCount;
 
+    /**
+     * @return Number of dedicated main nodes in the cluster.
+     * 
+     */
     public Optional<Output<Integer>> dedicatedMasterCount() {
         return Optional.ofNullable(this.dedicatedMasterCount);
     }
@@ -36,6 +40,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="dedicatedMasterEnabled")
     private @Nullable Output<Boolean> dedicatedMasterEnabled;
 
+    /**
+     * @return Whether dedicated main nodes are enabled for the cluster.
+     * 
+     */
     public Optional<Output<Boolean>> dedicatedMasterEnabled() {
         return Optional.ofNullable(this.dedicatedMasterEnabled);
     }
@@ -47,6 +55,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="dedicatedMasterType")
     private @Nullable Output<String> dedicatedMasterType;
 
+    /**
+     * @return Instance type of the dedicated main nodes in the cluster.
+     * 
+     */
     public Optional<Output<String>> dedicatedMasterType() {
         return Optional.ofNullable(this.dedicatedMasterType);
     }
@@ -58,6 +70,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="instanceCount")
     private @Nullable Output<Integer> instanceCount;
 
+    /**
+     * @return Number of instances in the cluster.
+     * 
+     */
     public Optional<Output<Integer>> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
@@ -69,6 +85,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return Instance type of data nodes in the cluster.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -80,6 +100,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="warmCount")
     private @Nullable Output<Integer> warmCount;
 
+    /**
+     * @return Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
+     * 
+     */
     public Optional<Output<Integer>> warmCount() {
         return Optional.ofNullable(this.warmCount);
     }
@@ -91,6 +115,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="warmEnabled")
     private @Nullable Output<Boolean> warmEnabled;
 
+    /**
+     * @return Whether to enable warm storage.
+     * 
+     */
     public Optional<Output<Boolean>> warmEnabled() {
         return Optional.ofNullable(this.warmEnabled);
     }
@@ -102,6 +130,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="warmType")
     private @Nullable Output<String> warmType;
 
+    /**
+     * @return Instance type for the Elasticsearch cluster&#39;s warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+     * 
+     */
     public Optional<Output<String>> warmType() {
         return Optional.ofNullable(this.warmType);
     }
@@ -113,6 +145,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="zoneAwarenessConfig")
     private @Nullable Output<DomainClusterConfigZoneAwarenessConfigGetArgs> zoneAwarenessConfig;
 
+    /**
+     * @return Configuration block containing zone awareness settings. Detailed below.
+     * 
+     */
     public Optional<Output<DomainClusterConfigZoneAwarenessConfigGetArgs>> zoneAwarenessConfig() {
         return Optional.ofNullable(this.zoneAwarenessConfig);
     }
@@ -124,6 +160,10 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
     @Import(name="zoneAwarenessEnabled")
     private @Nullable Output<Boolean> zoneAwarenessEnabled;
 
+    /**
+     * @return Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
+     * 
+     */
     public Optional<Output<Boolean>> zoneAwarenessEnabled() {
         return Optional.ofNullable(this.zoneAwarenessEnabled);
     }
@@ -161,92 +201,212 @@ public final class DomainClusterConfigGetArgs extends com.pulumi.resources.Resou
             $ = new DomainClusterConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dedicatedMasterCount Number of dedicated main nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterCount(@Nullable Output<Integer> dedicatedMasterCount) {
             $.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
 
+        /**
+         * @param dedicatedMasterCount Number of dedicated main nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterCount(Integer dedicatedMasterCount) {
             return dedicatedMasterCount(Output.of(dedicatedMasterCount));
         }
 
+        /**
+         * @param dedicatedMasterEnabled Whether dedicated main nodes are enabled for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterEnabled(@Nullable Output<Boolean> dedicatedMasterEnabled) {
             $.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
 
+        /**
+         * @param dedicatedMasterEnabled Whether dedicated main nodes are enabled for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterEnabled(Boolean dedicatedMasterEnabled) {
             return dedicatedMasterEnabled(Output.of(dedicatedMasterEnabled));
         }
 
+        /**
+         * @param dedicatedMasterType Instance type of the dedicated main nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterType(@Nullable Output<String> dedicatedMasterType) {
             $.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
 
+        /**
+         * @param dedicatedMasterType Instance type of the dedicated main nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedMasterType(String dedicatedMasterType) {
             return dedicatedMasterType(Output.of(dedicatedMasterType));
         }
 
+        /**
+         * @param instanceCount Number of instances in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceCount Number of instances in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(Integer instanceCount) {
             return instanceCount(Output.of(instanceCount));
         }
 
+        /**
+         * @param instanceType Instance type of data nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Instance type of data nodes in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param warmCount Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmCount(@Nullable Output<Integer> warmCount) {
             $.warmCount = warmCount;
             return this;
         }
 
+        /**
+         * @param warmCount Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmCount(Integer warmCount) {
             return warmCount(Output.of(warmCount));
         }
 
+        /**
+         * @param warmEnabled Whether to enable warm storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmEnabled(@Nullable Output<Boolean> warmEnabled) {
             $.warmEnabled = warmEnabled;
             return this;
         }
 
+        /**
+         * @param warmEnabled Whether to enable warm storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmEnabled(Boolean warmEnabled) {
             return warmEnabled(Output.of(warmEnabled));
         }
 
+        /**
+         * @param warmType Instance type for the Elasticsearch cluster&#39;s warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmType(@Nullable Output<String> warmType) {
             $.warmType = warmType;
             return this;
         }
 
+        /**
+         * @param warmType Instance type for the Elasticsearch cluster&#39;s warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmType(String warmType) {
             return warmType(Output.of(warmType));
         }
 
+        /**
+         * @param zoneAwarenessConfig Configuration block containing zone awareness settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneAwarenessConfig(@Nullable Output<DomainClusterConfigZoneAwarenessConfigGetArgs> zoneAwarenessConfig) {
             $.zoneAwarenessConfig = zoneAwarenessConfig;
             return this;
         }
 
+        /**
+         * @param zoneAwarenessConfig Configuration block containing zone awareness settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneAwarenessConfig(DomainClusterConfigZoneAwarenessConfigGetArgs zoneAwarenessConfig) {
             return zoneAwarenessConfig(Output.of(zoneAwarenessConfig));
         }
 
+        /**
+         * @param zoneAwarenessEnabled Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneAwarenessEnabled(@Nullable Output<Boolean> zoneAwarenessEnabled) {
             $.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }
 
+        /**
+         * @param zoneAwarenessEnabled Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneAwarenessEnabled(Boolean zoneAwarenessEnabled) {
             return zoneAwarenessEnabled(Output.of(zoneAwarenessEnabled));
         }

@@ -24,6 +24,10 @@ public final class InstancePublicPortsPortInfoArgs extends com.pulumi.resources.
     @Import(name="cidrs")
     private @Nullable Output<List<String>> cidrs;
 
+    /**
+     * @return Set of CIDR blocks.
+     * 
+     */
     public Optional<Output<List<String>>> cidrs() {
         return Optional.ofNullable(this.cidrs);
     }
@@ -35,6 +39,10 @@ public final class InstancePublicPortsPortInfoArgs extends com.pulumi.resources.
     @Import(name="fromPort", required=true)
     private Output<Integer> fromPort;
 
+    /**
+     * @return First port in a range of open ports on an instance.
+     * 
+     */
     public Output<Integer> fromPort() {
         return this.fromPort;
     }
@@ -46,6 +54,10 @@ public final class InstancePublicPortsPortInfoArgs extends com.pulumi.resources.
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
+    /**
+     * @return IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
+     * 
+     */
     public Output<String> protocol() {
         return this.protocol;
     }
@@ -57,6 +69,10 @@ public final class InstancePublicPortsPortInfoArgs extends com.pulumi.resources.
     @Import(name="toPort", required=true)
     private Output<Integer> toPort;
 
+    /**
+     * @return Last port in a range of open ports on an instance.
+     * 
+     */
     public Output<Integer> toPort() {
         return this.toPort;
     }
@@ -88,42 +104,96 @@ public final class InstancePublicPortsPortInfoArgs extends com.pulumi.resources.
             $ = new InstancePublicPortsPortInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrs Set of CIDR blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrs(@Nullable Output<List<String>> cidrs) {
             $.cidrs = cidrs;
             return this;
         }
 
+        /**
+         * @param cidrs Set of CIDR blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrs(List<String> cidrs) {
             return cidrs(Output.of(cidrs));
         }
 
+        /**
+         * @param cidrs Set of CIDR blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrs(String... cidrs) {
             return cidrs(List.of(cidrs));
         }
 
+        /**
+         * @param fromPort First port in a range of open ports on an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Output<Integer> fromPort) {
             $.fromPort = fromPort;
             return this;
         }
 
+        /**
+         * @param fromPort First port in a range of open ports on an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Integer fromPort) {
             return fromPort(Output.of(fromPort));
         }
 
+        /**
+         * @param protocol IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param toPort Last port in a range of open ports on an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Output<Integer> toPort) {
             $.toPort = toPort;
             return this;
         }
 
+        /**
+         * @param toPort Last port in a range of open ports on an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Integer toPort) {
             return toPort(Output.of(toPort));
         }

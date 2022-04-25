@@ -18,32 +18,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LifecyclePolicyPolicyDetailsSchedule {
     /**
-     * Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
+     * @return Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
      * 
      */
     private final @Nullable Boolean copyTags;
     /**
-     * See the `create_rule` block. Max of 1 per schedule.
+     * @return See the `create_rule` block. Max of 1 per schedule.
      * 
      */
     private final LifecyclePolicyPolicyDetailsScheduleCreateRule createRule;
     /**
-     * See the `cross_region_copy_rule` block. Max of 3 per schedule.
+     * @return See the `cross_region_copy_rule` block. Max of 3 per schedule.
      * 
      */
     private final @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules;
     /**
-     * A name for the schedule.
+     * @return A name for the schedule.
      * 
      */
     private final String name;
     /**
-     * The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
+     * @return The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
      * 
      */
     private final LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule;
     /**
-     * A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+     * @return A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
      * 
      */
     private final @Nullable Map<String,String> tagsToAdd;
@@ -65,44 +65,44 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
     }
 
     /**
-     * Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
+     * @return Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
      * 
-    */
+     */
     public Optional<Boolean> copyTags() {
         return Optional.ofNullable(this.copyTags);
     }
     /**
-     * See the `create_rule` block. Max of 1 per schedule.
+     * @return See the `create_rule` block. Max of 1 per schedule.
      * 
-    */
+     */
     public LifecyclePolicyPolicyDetailsScheduleCreateRule createRule() {
         return this.createRule;
     }
     /**
-     * See the `cross_region_copy_rule` block. Max of 3 per schedule.
+     * @return See the `cross_region_copy_rule` block. Max of 3 per schedule.
      * 
-    */
+     */
     public List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules() {
         return this.crossRegionCopyRules == null ? List.of() : this.crossRegionCopyRules;
     }
     /**
-     * A name for the schedule.
+     * @return A name for the schedule.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
+     * @return The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
      * 
-    */
+     */
     public LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule() {
         return this.retainRule;
     }
     /**
-     * A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
+     * @return A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
      * 
-    */
+     */
     public Map<String,String> tagsToAdd() {
         return this.tagsToAdd == null ? Map.of() : this.tagsToAdd;
     }

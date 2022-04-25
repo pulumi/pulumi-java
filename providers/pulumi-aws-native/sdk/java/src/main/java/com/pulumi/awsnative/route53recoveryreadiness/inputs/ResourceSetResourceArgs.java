@@ -28,6 +28,10 @@ public final class ResourceSetResourceArgs extends com.pulumi.resources.Resource
     @Import(name="componentId")
     private @Nullable Output<String> componentId;
 
+    /**
+     * @return The component identifier of the resource, generated when DNS target resource is used.
+     * 
+     */
     public Optional<Output<String>> componentId() {
         return Optional.ofNullable(this.componentId);
     }
@@ -46,6 +50,10 @@ public final class ResourceSetResourceArgs extends com.pulumi.resources.Resource
     @Import(name="readinessScopes")
     private @Nullable Output<List<String>> readinessScopes;
 
+    /**
+     * @return A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+     * 
+     */
     public Optional<Output<List<String>>> readinessScopes() {
         return Optional.ofNullable(this.readinessScopes);
     }
@@ -57,6 +65,10 @@ public final class ResourceSetResourceArgs extends com.pulumi.resources.Resource
     @Import(name="resourceArn")
     private @Nullable Output<String> resourceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AWS resource.
+     * 
+     */
     public Optional<Output<String>> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }
@@ -88,11 +100,23 @@ public final class ResourceSetResourceArgs extends com.pulumi.resources.Resource
             $ = new ResourceSetResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentId The component identifier of the resource, generated when DNS target resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentId(@Nullable Output<String> componentId) {
             $.componentId = componentId;
             return this;
         }
 
+        /**
+         * @param componentId The component identifier of the resource, generated when DNS target resource is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentId(String componentId) {
             return componentId(Output.of(componentId));
         }
@@ -106,24 +130,54 @@ public final class ResourceSetResourceArgs extends com.pulumi.resources.Resource
             return dnsTargetResource(Output.of(dnsTargetResource));
         }
 
+        /**
+         * @param readinessScopes A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessScopes(@Nullable Output<List<String>> readinessScopes) {
             $.readinessScopes = readinessScopes;
             return this;
         }
 
+        /**
+         * @param readinessScopes A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessScopes(List<String> readinessScopes) {
             return readinessScopes(Output.of(readinessScopes));
         }
 
+        /**
+         * @param readinessScopes A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessScopes(String... readinessScopes) {
             return readinessScopes(List.of(readinessScopes));
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the AWS resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the AWS resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             return resourceArn(Output.of(resourceArn));
         }

@@ -23,6 +23,10 @@ public final class CategoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="categoryId", required=true)
     private String categoryId;
 
+    /**
+     * @return The identifier of the category.
+     * 
+     */
     public String categoryId() {
         return this.categoryId;
     }
@@ -34,6 +38,10 @@ public final class CategoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The localized name of the category.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class CategoryResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CategoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categoryId The identifier of the category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categoryId(String categoryId) {
             $.categoryId = categoryId;
             return this;
         }
 
+        /**
+         * @param name The localized name of the category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

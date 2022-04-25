@@ -25,6 +25,10 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends com.pulumi.res
     @Import(name="maxCapacity")
     private @Nullable Double maxCapacity;
 
+    /**
+     * @return The maximum capacity any one database can consume.
+     * 
+     */
     public Optional<Double> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
@@ -36,6 +40,10 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends com.pulumi.res
     @Import(name="minCapacity")
     private @Nullable Double minCapacity;
 
+    /**
+     * @return The minimum capacity all databases are guaranteed.
+     * 
+     */
     public Optional<Double> minCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }
@@ -65,11 +73,23 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends com.pulumi.res
             $ = new ElasticPoolPerDatabaseSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxCapacity The maximum capacity any one database can consume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacity(@Nullable Double maxCapacity) {
             $.maxCapacity = maxCapacity;
             return this;
         }
 
+        /**
+         * @param minCapacity The minimum capacity all databases are guaranteed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(@Nullable Double minCapacity) {
             $.minCapacity = minCapacity;
             return this;

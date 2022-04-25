@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GcfsConfigResponse {
     /**
-     * Whether to use GCFS.
+     * @return Whether to use GCFS.
      * 
      */
     private final Boolean enabled;
@@ -21,9 +21,9 @@ public final class GcfsConfigResponse {
     }
 
     /**
-     * Whether to use GCFS.
+     * @return Whether to use GCFS.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

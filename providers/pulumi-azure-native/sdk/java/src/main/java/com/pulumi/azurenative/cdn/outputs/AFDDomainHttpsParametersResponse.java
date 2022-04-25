@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AFDDomainHttpsParametersResponse {
     /**
-     * Defines the source of the SSL certificate.
+     * @return Defines the source of the SSL certificate.
      * 
      */
     private final String certificateType;
     /**
-     * TLS protocol version that will be used for Https
+     * @return TLS protocol version that will be used for Https
      * 
      */
     private final @Nullable String minimumTlsVersion;
     /**
-     * Resource reference to the secret. ie. subs/rg/profile/secret
+     * @return Resource reference to the secret. ie. subs/rg/profile/secret
      * 
      */
     private final @Nullable ResourceReferenceResponse secret;
@@ -39,23 +39,23 @@ public final class AFDDomainHttpsParametersResponse {
     }
 
     /**
-     * Defines the source of the SSL certificate.
+     * @return Defines the source of the SSL certificate.
      * 
-    */
+     */
     public String certificateType() {
         return this.certificateType;
     }
     /**
-     * TLS protocol version that will be used for Https
+     * @return TLS protocol version that will be used for Https
      * 
-    */
+     */
     public Optional<String> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
-     * Resource reference to the secret. ie. subs/rg/profile/secret
+     * @return Resource reference to the secret. ie. subs/rg/profile/secret
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> secret() {
         return Optional.ofNullable(this.secret);
     }

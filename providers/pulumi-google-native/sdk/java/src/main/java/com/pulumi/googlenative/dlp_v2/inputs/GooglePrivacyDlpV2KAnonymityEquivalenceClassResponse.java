@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
     @Import(name="equivalenceClassSize", required=true)
     private String equivalenceClassSize;
 
+    /**
+     * @return Size of the equivalence class, for example number of rows with the above set of values.
+     * 
+     */
     public String equivalenceClassSize() {
         return this.equivalenceClassSize;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
     @Import(name="quasiIdsValues", required=true)
     private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
+    /**
+     * @return Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
+     * 
+     */
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
@@ -65,16 +73,34 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
             $ = new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param equivalenceClassSize Size of the equivalence class, for example number of rows with the above set of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equivalenceClassSize(String equivalenceClassSize) {
             $.equivalenceClassSize = equivalenceClassSize;
             return this;
         }
 
+        /**
+         * @param quasiIdsValues Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             $.quasiIdsValues = quasiIdsValues;
             return this;
         }
 
+        /**
+         * @param quasiIdsValues Set of values defining the equivalence class. One value per quasi-identifier column in the original KAnonymity metric message. The order is always the same as the original request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
             return quasiIdsValues(List.of(quasiIdsValues));
         }

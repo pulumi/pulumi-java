@@ -26,6 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends com.
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends com.
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the AnnotationSpec. Maximum of 64 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends com.
             $ = new GoogleCloudDatalabelingV1beta1AnnotationSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the AnnotationSpec. Maximum of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the AnnotationSpec. Maximum of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

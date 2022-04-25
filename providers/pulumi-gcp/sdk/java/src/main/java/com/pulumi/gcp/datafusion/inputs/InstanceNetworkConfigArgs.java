@@ -21,6 +21,11 @@ public final class InstanceNetworkConfigArgs extends com.pulumi.resources.Resour
     @Import(name="ipAllocation", required=true)
     private Output<String> ipAllocation;
 
+    /**
+     * @return The IP range in CIDR notation to use for the managed Data Fusion instance
+     * nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+     * 
+     */
     public Output<String> ipAllocation() {
         return this.ipAllocation;
     }
@@ -34,6 +39,12 @@ public final class InstanceNetworkConfigArgs extends com.pulumi.resources.Resour
     @Import(name="network", required=true)
     private Output<String> network;
 
+    /**
+     * @return Name of the network in the project with which the tenant project
+     * will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+     * project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+     * 
+     */
     public Output<String> network() {
         return this.network;
     }
@@ -63,20 +74,50 @@ public final class InstanceNetworkConfigArgs extends com.pulumi.resources.Resour
             $ = new InstanceNetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAllocation The IP range in CIDR notation to use for the managed Data Fusion instance
+         * nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocation(Output<String> ipAllocation) {
             $.ipAllocation = ipAllocation;
             return this;
         }
 
+        /**
+         * @param ipAllocation The IP range in CIDR notation to use for the managed Data Fusion instance
+         * nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocation(String ipAllocation) {
             return ipAllocation(Output.of(ipAllocation));
         }
 
+        /**
+         * @param network Name of the network in the project with which the tenant project
+         * will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+         * project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network Name of the network in the project with which the tenant project
+         * will be peered for executing pipelines. In case of shared VPC where the network resides in another host
+         * project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }

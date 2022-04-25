@@ -26,6 +26,10 @@ public final class PeeringServiceSkuArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the peering service SKU.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,11 +58,23 @@ public final class PeeringServiceSkuArgs extends com.pulumi.resources.ResourceAr
             $ = new PeeringServiceSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the peering service SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the peering service SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

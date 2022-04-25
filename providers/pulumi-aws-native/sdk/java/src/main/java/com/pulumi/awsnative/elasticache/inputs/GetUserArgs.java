@@ -19,6 +19,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return The ID of the user.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -47,6 +51,12 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userId The ID of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;

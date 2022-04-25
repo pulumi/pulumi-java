@@ -28,6 +28,10 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
     @Import(name="autoScale")
     private @Nullable AutoScaleConfigurationResponse autoScale;
 
+    /**
+     * @return The auto-scale configuration
+     * 
+     */
     public Optional<AutoScaleConfigurationResponse> autoScale() {
         return Optional.ofNullable(this.autoScale);
     }
@@ -39,6 +43,10 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
     @Import(name="etag")
     private @Nullable String etag;
 
+    /**
+     * @return The configuration ETag for updates.
+     * 
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -50,6 +58,10 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
     @Import(name="serviceAuth")
     private @Nullable ServiceAuthConfigurationResponse serviceAuth;
 
+    /**
+     * @return Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
+     * 
+     */
     public Optional<ServiceAuthConfigurationResponse> serviceAuth() {
         return Optional.ofNullable(this.serviceAuth);
     }
@@ -61,6 +73,10 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
     @Import(name="ssl")
     private @Nullable SslConfigurationResponse ssl;
 
+    /**
+     * @return The SSL configuration properties
+     * 
+     */
     public Optional<SslConfigurationResponse> ssl() {
         return Optional.ofNullable(this.ssl);
     }
@@ -92,21 +108,45 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
             $ = new GlobalServiceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScale The auto-scale configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScale(@Nullable AutoScaleConfigurationResponse autoScale) {
             $.autoScale = autoScale;
             return this;
         }
 
+        /**
+         * @param etag The configuration ETag for updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param serviceAuth Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAuth(@Nullable ServiceAuthConfigurationResponse serviceAuth) {
             $.serviceAuth = serviceAuth;
             return this;
         }
 
+        /**
+         * @param ssl The SSL configuration properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(@Nullable SslConfigurationResponse ssl) {
             $.ssl = ssl;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AdBreakResponse {
     /**
-     * Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
+     * @return Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
      * 
      */
     private final String startTimeOffset;
@@ -21,9 +21,9 @@ public final class AdBreakResponse {
     }
 
     /**
-     * Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
+     * @return Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
      * 
-    */
+     */
     public String startTimeOffset() {
         return this.startTimeOffset;
     }

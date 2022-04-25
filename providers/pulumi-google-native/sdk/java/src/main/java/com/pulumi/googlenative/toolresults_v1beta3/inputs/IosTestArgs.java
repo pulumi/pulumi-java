@@ -30,6 +30,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosAppInfo")
     private @Nullable Output<IosAppInfoArgs> iosAppInfo;
 
+    /**
+     * @return Information about the application under test.
+     * 
+     */
     public Optional<Output<IosAppInfoArgs>> iosAppInfo() {
         return Optional.ofNullable(this.iosAppInfo);
     }
@@ -41,6 +45,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosRoboTest")
     private @Nullable Output<IosRoboTestArgs> iosRoboTest;
 
+    /**
+     * @return An iOS Robo test.
+     * 
+     */
     public Optional<Output<IosRoboTestArgs>> iosRoboTest() {
         return Optional.ofNullable(this.iosRoboTest);
     }
@@ -52,6 +60,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosTestLoop")
     private @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
+    /**
+     * @return An iOS test loop.
+     * 
+     */
     public Optional<Output<IosTestLoopArgs>> iosTestLoop() {
         return Optional.ofNullable(this.iosTestLoop);
     }
@@ -63,6 +75,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iosXcTest")
     private @Nullable Output<IosXcTestArgs> iosXcTest;
 
+    /**
+     * @return An iOS XCTest.
+     * 
+     */
     public Optional<Output<IosXcTestArgs>> iosXcTest() {
         return Optional.ofNullable(this.iosXcTest);
     }
@@ -74,6 +90,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testTimeout")
     private @Nullable Output<DurationArgs> testTimeout;
 
+    /**
+     * @return Max time a test is allowed to run before it is automatically cancelled.
+     * 
+     */
     public Optional<Output<DurationArgs>> testTimeout() {
         return Optional.ofNullable(this.testTimeout);
     }
@@ -106,47 +126,107 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iosAppInfo Information about the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosAppInfo(@Nullable Output<IosAppInfoArgs> iosAppInfo) {
             $.iosAppInfo = iosAppInfo;
             return this;
         }
 
+        /**
+         * @param iosAppInfo Information about the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosAppInfo(IosAppInfoArgs iosAppInfo) {
             return iosAppInfo(Output.of(iosAppInfo));
         }
 
+        /**
+         * @param iosRoboTest An iOS Robo test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosRoboTest(@Nullable Output<IosRoboTestArgs> iosRoboTest) {
             $.iosRoboTest = iosRoboTest;
             return this;
         }
 
+        /**
+         * @param iosRoboTest An iOS Robo test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosRoboTest(IosRoboTestArgs iosRoboTest) {
             return iosRoboTest(Output.of(iosRoboTest));
         }
 
+        /**
+         * @param iosTestLoop An iOS test loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestLoop(@Nullable Output<IosTestLoopArgs> iosTestLoop) {
             $.iosTestLoop = iosTestLoop;
             return this;
         }
 
+        /**
+         * @param iosTestLoop An iOS test loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestLoop(IosTestLoopArgs iosTestLoop) {
             return iosTestLoop(Output.of(iosTestLoop));
         }
 
+        /**
+         * @param iosXcTest An iOS XCTest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosXcTest(@Nullable Output<IosXcTestArgs> iosXcTest) {
             $.iosXcTest = iosXcTest;
             return this;
         }
 
+        /**
+         * @param iosXcTest An iOS XCTest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosXcTest(IosXcTestArgs iosXcTest) {
             return iosXcTest(Output.of(iosXcTest));
         }
 
+        /**
+         * @param testTimeout Max time a test is allowed to run before it is automatically cancelled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTimeout(@Nullable Output<DurationArgs> testTimeout) {
             $.testTimeout = testTimeout;
             return this;
         }
 
+        /**
+         * @param testTimeout Max time a test is allowed to run before it is automatically cancelled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTimeout(DurationArgs testTimeout) {
             return testTimeout(Output.of(testTimeout));
         }

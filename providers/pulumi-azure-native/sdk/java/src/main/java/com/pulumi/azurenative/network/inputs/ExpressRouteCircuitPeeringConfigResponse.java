@@ -27,6 +27,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="advertisedCommunities")
     private @Nullable List<String> advertisedCommunities;
 
+    /**
+     * @return The communities of bgp peering. Specified for microsoft peering.
+     * 
+     */
     public Optional<List<String>> advertisedCommunities() {
         return Optional.ofNullable(this.advertisedCommunities);
     }
@@ -38,6 +42,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="advertisedPublicPrefixes")
     private @Nullable List<String> advertisedPublicPrefixes;
 
+    /**
+     * @return The reference to AdvertisedPublicPrefixes.
+     * 
+     */
     public Optional<List<String>> advertisedPublicPrefixes() {
         return Optional.ofNullable(this.advertisedPublicPrefixes);
     }
@@ -49,6 +57,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="advertisedPublicPrefixesState", required=true)
     private String advertisedPublicPrefixesState;
 
+    /**
+     * @return The advertised public prefix state of the Peering resource.
+     * 
+     */
     public String advertisedPublicPrefixesState() {
         return this.advertisedPublicPrefixesState;
     }
@@ -60,6 +72,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="customerASN")
     private @Nullable Integer customerASN;
 
+    /**
+     * @return The CustomerASN of the peering.
+     * 
+     */
     public Optional<Integer> customerASN() {
         return Optional.ofNullable(this.customerASN);
     }
@@ -71,6 +87,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="legacyMode")
     private @Nullable Integer legacyMode;
 
+    /**
+     * @return The legacy mode of the peering.
+     * 
+     */
     public Optional<Integer> legacyMode() {
         return Optional.ofNullable(this.legacyMode);
     }
@@ -82,6 +102,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
     @Import(name="routingRegistryName")
     private @Nullable String routingRegistryName;
 
+    /**
+     * @return The RoutingRegistryName of the configuration.
+     * 
+     */
     public Optional<String> routingRegistryName() {
         return Optional.ofNullable(this.routingRegistryName);
     }
@@ -115,39 +139,87 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
             $ = new ExpressRouteCircuitPeeringConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advertisedCommunities The communities of bgp peering. Specified for microsoft peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
             $.advertisedCommunities = advertisedCommunities;
             return this;
         }
 
+        /**
+         * @param advertisedCommunities The communities of bgp peering. Specified for microsoft peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedCommunities(String... advertisedCommunities) {
             return advertisedCommunities(List.of(advertisedCommunities));
         }
 
+        /**
+         * @param advertisedPublicPrefixes The reference to AdvertisedPublicPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
             $.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
 
+        /**
+         * @param advertisedPublicPrefixes The reference to AdvertisedPublicPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedPublicPrefixes(String... advertisedPublicPrefixes) {
             return advertisedPublicPrefixes(List.of(advertisedPublicPrefixes));
         }
 
+        /**
+         * @param advertisedPublicPrefixesState The advertised public prefix state of the Peering resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedPublicPrefixesState(String advertisedPublicPrefixesState) {
             $.advertisedPublicPrefixesState = advertisedPublicPrefixesState;
             return this;
         }
 
+        /**
+         * @param customerASN The CustomerASN of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerASN(@Nullable Integer customerASN) {
             $.customerASN = customerASN;
             return this;
         }
 
+        /**
+         * @param legacyMode The legacy mode of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legacyMode(@Nullable Integer legacyMode) {
             $.legacyMode = legacyMode;
             return this;
         }
 
+        /**
+         * @param routingRegistryName The RoutingRegistryName of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingRegistryName(@Nullable String routingRegistryName) {
             $.routingRegistryName = routingRegistryName;
             return this;

@@ -13,53 +13,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DynamicsSinkResponse {
     /**
-     * The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+     * @return The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object alternateKeyName;
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * The flag indicating whether ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return The flag indicating whether ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object ignoreNullValues;
     /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object sinkRetryCount;
     /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object sinkRetryWait;
     /**
-     * Copy sink type.
+     * @return Copy sink type.
      * Expected value is &#39;DynamicsSink&#39;.
      * 
      */
     private final String type;
     /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
     private final @Nullable Object writeBatchSize;
     /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object writeBatchTimeout;
     /**
-     * The write behavior for the operation.
+     * @return The write behavior for the operation.
      * 
      */
     private final String writeBehavior;
@@ -89,73 +89,73 @@ public final class DynamicsSinkResponse {
     }
 
     /**
-     * The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+     * @return The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> alternateKeyName() {
         return Optional.ofNullable(this.alternateKeyName);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The flag indicating whether ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return The flag indicating whether ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> ignoreNullValues() {
         return Optional.ofNullable(this.ignoreNullValues);
     }
     /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
-     * Copy sink type.
+     * @return Copy sink type.
      * Expected value is &#39;DynamicsSink&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
-     * The write behavior for the operation.
+     * @return The write behavior for the operation.
      * 
-    */
+     */
     public String writeBehavior() {
         return this.writeBehavior;
     }

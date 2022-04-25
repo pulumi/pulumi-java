@@ -23,6 +23,10 @@ public final class ImageInformationResponse extends com.pulumi.resources.InvokeA
     @Import(name="imageType", required=true)
     private String imageType;
 
+    /**
+     * @return Type of the image
+     * 
+     */
     public String imageType() {
         return this.imageType;
     }
@@ -34,6 +38,10 @@ public final class ImageInformationResponse extends com.pulumi.resources.InvokeA
     @Import(name="imageUrl", required=true)
     private String imageUrl;
 
+    /**
+     * @return Url of the image
+     * 
+     */
     public String imageUrl() {
         return this.imageUrl;
     }
@@ -63,11 +71,23 @@ public final class ImageInformationResponse extends com.pulumi.resources.InvokeA
             $ = new ImageInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageType Type of the image
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageType(String imageType) {
             $.imageType = imageType;
             return this;
         }
 
+        /**
+         * @param imageUrl Url of the image
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUrl(String imageUrl) {
             $.imageUrl = imageUrl;
             return this;

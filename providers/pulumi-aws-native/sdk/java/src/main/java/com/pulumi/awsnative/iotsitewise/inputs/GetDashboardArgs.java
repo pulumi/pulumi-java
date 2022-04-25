@@ -19,6 +19,10 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dashboardId", required=true)
     private String dashboardId;
 
+    /**
+     * @return The ID of the dashboard.
+     * 
+     */
     public String dashboardId() {
         return this.dashboardId;
     }
@@ -47,6 +51,12 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDashboardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dashboardId The ID of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardId(String dashboardId) {
             $.dashboardId = dashboardId;
             return this;

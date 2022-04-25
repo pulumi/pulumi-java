@@ -19,6 +19,10 @@ public final class GetOrganizationalUnitsArgs extends com.pulumi.resources.Invok
     @Import(name="parentId", required=true)
     private String parentId;
 
+    /**
+     * @return The parent ID of the organizational unit.
+     * 
+     */
     public String parentId() {
         return this.parentId;
     }
@@ -47,6 +51,12 @@ public final class GetOrganizationalUnitsArgs extends com.pulumi.resources.Invok
             $ = new GetOrganizationalUnitsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parentId The parent ID of the organizational unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(String parentId) {
             $.parentId = parentId;
             return this;

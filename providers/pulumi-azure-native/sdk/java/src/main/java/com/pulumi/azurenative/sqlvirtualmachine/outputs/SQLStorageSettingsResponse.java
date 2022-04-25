@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SQLStorageSettingsResponse {
     /**
-     * SQL Server default file path
+     * @return SQL Server default file path
      * 
      */
     private final @Nullable String defaultFilePath;
     /**
-     * Logical Unit Numbers for the disks.
+     * @return Logical Unit Numbers for the disks.
      * 
      */
     private final @Nullable List<Integer> luns;
@@ -33,16 +33,16 @@ public final class SQLStorageSettingsResponse {
     }
 
     /**
-     * SQL Server default file path
+     * @return SQL Server default file path
      * 
-    */
+     */
     public Optional<String> defaultFilePath() {
         return Optional.ofNullable(this.defaultFilePath);
     }
     /**
-     * Logical Unit Numbers for the disks.
+     * @return Logical Unit Numbers for the disks.
      * 
-    */
+     */
     public List<Integer> luns() {
         return this.luns == null ? List.of() : this.luns;
     }

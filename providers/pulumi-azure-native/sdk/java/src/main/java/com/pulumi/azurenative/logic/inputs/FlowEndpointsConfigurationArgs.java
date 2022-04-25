@@ -26,6 +26,10 @@ public final class FlowEndpointsConfigurationArgs extends com.pulumi.resources.R
     @Import(name="connector")
     private @Nullable Output<FlowEndpointsArgs> connector;
 
+    /**
+     * @return The connector endpoints.
+     * 
+     */
     public Optional<Output<FlowEndpointsArgs>> connector() {
         return Optional.ofNullable(this.connector);
     }
@@ -37,6 +41,10 @@ public final class FlowEndpointsConfigurationArgs extends com.pulumi.resources.R
     @Import(name="workflow")
     private @Nullable Output<FlowEndpointsArgs> workflow;
 
+    /**
+     * @return The workflow endpoints.
+     * 
+     */
     public Optional<Output<FlowEndpointsArgs>> workflow() {
         return Optional.ofNullable(this.workflow);
     }
@@ -66,20 +74,44 @@ public final class FlowEndpointsConfigurationArgs extends com.pulumi.resources.R
             $ = new FlowEndpointsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connector The connector endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connector(@Nullable Output<FlowEndpointsArgs> connector) {
             $.connector = connector;
             return this;
         }
 
+        /**
+         * @param connector The connector endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connector(FlowEndpointsArgs connector) {
             return connector(Output.of(connector));
         }
 
+        /**
+         * @param workflow The workflow endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflow(@Nullable Output<FlowEndpointsArgs> workflow) {
             $.workflow = workflow;
             return this;
         }
 
+        /**
+         * @param workflow The workflow endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflow(FlowEndpointsArgs workflow) {
             return workflow(Output.of(workflow));
         }

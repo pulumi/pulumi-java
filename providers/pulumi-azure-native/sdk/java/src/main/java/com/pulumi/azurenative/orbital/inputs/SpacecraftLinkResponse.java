@@ -24,6 +24,10 @@ public final class SpacecraftLinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="bandwidthMHz", required=true)
     private Double bandwidthMHz;
 
+    /**
+     * @return Bandwidth in MHz
+     * 
+     */
     public Double bandwidthMHz() {
         return this.bandwidthMHz;
     }
@@ -35,6 +39,10 @@ public final class SpacecraftLinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="centerFrequencyMHz", required=true)
     private Double centerFrequencyMHz;
 
+    /**
+     * @return Center Frequency in MHz
+     * 
+     */
     public Double centerFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
@@ -46,6 +54,10 @@ public final class SpacecraftLinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return Direction (uplink or downlink)
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -57,6 +69,10 @@ public final class SpacecraftLinkResponse extends com.pulumi.resources.InvokeArg
     @Import(name="polarization", required=true)
     private String polarization;
 
+    /**
+     * @return polarization. eg (RHCP, LHCP)
+     * 
+     */
     public String polarization() {
         return this.polarization;
     }
@@ -88,21 +104,45 @@ public final class SpacecraftLinkResponse extends com.pulumi.resources.InvokeArg
             $ = new SpacecraftLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthMHz Bandwidth in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthMHz(Double bandwidthMHz) {
             $.bandwidthMHz = bandwidthMHz;
             return this;
         }
 
+        /**
+         * @param centerFrequencyMHz Center Frequency in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             $.centerFrequencyMHz = centerFrequencyMHz;
             return this;
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(String polarization) {
             $.polarization = polarization;
             return this;

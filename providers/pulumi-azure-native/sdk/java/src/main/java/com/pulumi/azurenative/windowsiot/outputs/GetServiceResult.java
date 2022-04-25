@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServiceResult {
     /**
-     * Windows IoT Device Service OEM AAD domain
+     * @return Windows IoT Device Service OEM AAD domain
      * 
      */
     private final @Nullable String adminDomainName;
     /**
-     * Windows IoT Device Service ODM AAD domain
+     * @return Windows IoT Device Service ODM AAD domain
      * 
      */
     private final @Nullable String billingDomainName;
     /**
-     * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+     * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
      */
     private final String id;
     /**
-     * The Azure Region where the resource lives
+     * @return The Azure Region where the resource lives
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Windows IoT Device Service notes.
+     * @return Windows IoT Device Service notes.
      * 
      */
     private final @Nullable String notes;
     /**
-     * Windows IoT Device Service device allocation,
+     * @return Windows IoT Device Service device allocation,
      * 
      */
     private final @Nullable Double quantity;
     /**
-     * Windows IoT Device Service start date,
+     * @return Windows IoT Device Service start date,
      * 
      */
     private final String startDate;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -96,79 +96,79 @@ public final class GetServiceResult {
     }
 
     /**
-     * Windows IoT Device Service OEM AAD domain
+     * @return Windows IoT Device Service OEM AAD domain
      * 
-    */
+     */
     public Optional<String> adminDomainName() {
         return Optional.ofNullable(this.adminDomainName);
     }
     /**
-     * Windows IoT Device Service ODM AAD domain
+     * @return Windows IoT Device Service ODM AAD domain
      * 
-    */
+     */
     public Optional<String> billingDomainName() {
         return Optional.ofNullable(this.billingDomainName);
     }
     /**
-     * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+     * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Azure Region where the resource lives
+     * @return The Azure Region where the resource lives
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Windows IoT Device Service notes.
+     * @return Windows IoT Device Service notes.
      * 
-    */
+     */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
-     * Windows IoT Device Service device allocation,
+     * @return Windows IoT Device Service device allocation,
      * 
-    */
+     */
     public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
     /**
-     * Windows IoT Device Service start date,
+     * @return Windows IoT Device Service start date,
      * 
-    */
+     */
     public String startDate() {
         return this.startDate;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

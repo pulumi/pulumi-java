@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends com.p
     @Import(name="conversationTurns", required=true)
     private List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns;
 
+    /**
+     * @return The conversation turns uttered during the test case replay in chronological order.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns() {
         return this.conversationTurns;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends com.p
     @Import(name="environment", required=true)
     private String environment;
 
+    /**
+     * @return Environment where the test was run. If not set, it indicates the draft environment.
+     * 
+     */
     public String environment() {
         return this.environment;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends com.p
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends com.p
     @Import(name="testResult", required=true)
     private String testResult;
 
+    /**
+     * @return Whether the test case passed in the agent environment.
+     * 
+     */
     public String testResult() {
         return this.testResult;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends com.p
     @Import(name="testTime", required=true)
     private String testTime;
 
+    /**
+     * @return The time that the test was run.
+     * 
+     */
     public String testTime() {
         return this.testTime;
     }
@@ -101,30 +121,66 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends com.p
             $ = new GoogleCloudDialogflowCxV3TestCaseResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conversationTurns The conversation turns uttered during the test case replay in chronological order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationTurns(List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns) {
             $.conversationTurns = conversationTurns;
             return this;
         }
 
+        /**
+         * @param conversationTurns The conversation turns uttered during the test case replay in chronological order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationTurns(GoogleCloudDialogflowCxV3ConversationTurnResponse... conversationTurns) {
             return conversationTurns(List.of(conversationTurns));
         }
 
+        /**
+         * @param environment Environment where the test was run. If not set, it indicates the draft environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param name The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param testResult Whether the test case passed in the agent environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testResult(String testResult) {
             $.testResult = testResult;
             return this;
         }
 
+        /**
+         * @param testTime The time that the test was run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTime(String testTime) {
             $.testTime = testTime;
             return this;

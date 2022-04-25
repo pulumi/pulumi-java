@@ -26,6 +26,10 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -37,6 +41,10 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
     @Import(name="details")
     private @Nullable List<DeleteCertificateErrorResponse> details;
 
+    /**
+     * @return A list of additional details about the error.
+     * 
+     */
     public Optional<List<DeleteCertificateErrorResponse>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -48,6 +56,10 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A message describing the error, intended to be suitable for display in a user interface.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -59,6 +71,10 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The target of the particular error. For example, the name of the property in error.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -90,25 +106,55 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
             $ = new DeleteCertificateErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details A list of additional details about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable List<DeleteCertificateErrorResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details A list of additional details about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(DeleteCertificateErrorResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message A message describing the error, intended to be suitable for display in a user interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param target The target of the particular error. For example, the name of the property in error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

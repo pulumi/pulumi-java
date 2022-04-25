@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AwsClusterControlPlaneAwsServicesAuthentication {
     /**
-     * Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+     * @return Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
      * 
      */
     private final String roleArn;
     /**
-     * Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
+     * @return Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
      * 
      */
     private final @Nullable String roleSessionName;
@@ -31,16 +31,16 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
     }
 
     /**
-     * Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
+     * @return Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
+     * @return Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
      * 
-    */
+     */
     public Optional<String> roleSessionName() {
         return Optional.ofNullable(this.roleSessionName);
     }

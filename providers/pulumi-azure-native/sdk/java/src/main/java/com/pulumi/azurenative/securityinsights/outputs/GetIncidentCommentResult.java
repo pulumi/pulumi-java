@@ -14,47 +14,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIncidentCommentResult {
     /**
-     * Describes the client that created the comment
+     * @return Describes the client that created the comment
      * 
      */
     private final ClientInfoResponse author;
     /**
-     * The time the comment was created
+     * @return The time the comment was created
      * 
      */
     private final String createdTimeUtc;
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * The time the comment was updated
+     * @return The time the comment was updated
      * 
      */
     private final String lastModifiedTimeUtc;
     /**
-     * The comment message
+     * @return The comment message
      * 
      */
     private final String message;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -82,65 +82,65 @@ public final class GetIncidentCommentResult {
     }
 
     /**
-     * Describes the client that created the comment
+     * @return Describes the client that created the comment
      * 
-    */
+     */
     public ClientInfoResponse author() {
         return this.author;
     }
     /**
-     * The time the comment was created
+     * @return The time the comment was created
      * 
-    */
+     */
     public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The time the comment was updated
+     * @return The time the comment was updated
      * 
-    */
+     */
     public String lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
-     * The comment message
+     * @return The comment message
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

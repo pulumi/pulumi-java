@@ -24,97 +24,97 @@ import javax.annotation.Nullable;
 public final class GetFunctionResult {
     private final @Nullable List<FunctionArchitecturesItem> architectures;
     /**
-     * Unique identifier for function resources
+     * @return Unique identifier for function resources
      * 
      */
     private final @Nullable String arn;
     /**
-     * A unique Arn for CodeSigningConfig resource
+     * @return A unique Arn for CodeSigningConfig resource
      * 
      */
     private final @Nullable String codeSigningConfigArn;
     /**
-     * A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
+     * @return A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
      * 
      */
     private final @Nullable FunctionDeadLetterConfig deadLetterConfig;
     /**
-     * A description of the function.
+     * @return A description of the function.
      * 
      */
     private final @Nullable String description;
     /**
-     * Environment variables that are accessible from function code during execution.
+     * @return Environment variables that are accessible from function code during execution.
      * 
      */
     private final @Nullable FunctionEnvironment environment;
     /**
-     * Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
+     * @return Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
      * 
      */
     private final @Nullable List<FunctionFileSystemConfig> fileSystemConfigs;
     /**
-     * The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
+     * @return The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
      * 
      */
     private final @Nullable String handler;
     /**
-     * ImageConfig
+     * @return ImageConfig
      * 
      */
     private final @Nullable FunctionImageConfig imageConfig;
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
+     * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
     private final @Nullable String kmsKeyArn;
     /**
-     * A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
+     * @return A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
      * 
      */
     private final @Nullable List<String> layers;
     /**
-     * The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * @return The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
      */
     private final @Nullable Integer memorySize;
     /**
-     * PackageType.
+     * @return PackageType.
      * 
      */
     private final @Nullable FunctionPackageType packageType;
     /**
-     * The number of simultaneous executions to reserve for the function.
+     * @return The number of simultaneous executions to reserve for the function.
      * 
      */
     private final @Nullable Integer reservedConcurrentExecutions;
     /**
-     * The Amazon Resource Name (ARN) of the function&#39;s execution role.
+     * @return The Amazon Resource Name (ARN) of the function&#39;s execution role.
      * 
      */
     private final @Nullable String role;
     /**
-     * The identifier of the function&#39;s runtime.
+     * @return The identifier of the function&#39;s runtime.
      * 
      */
     private final @Nullable String runtime;
     /**
-     * A list of tags to apply to the function.
+     * @return A list of tags to apply to the function.
      * 
      */
     private final @Nullable List<FunctionTag> tags;
     /**
-     * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+     * @return The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
      * 
      */
     private final @Nullable Integer timeout;
     /**
-     * Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
+     * @return Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
      * 
      */
     private final @Nullable FunctionTracingConfig tracingConfig;
     /**
-     * For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
+     * @return For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
      * 
      */
     private final @Nullable FunctionVpcConfig vpcConfig;
@@ -167,135 +167,135 @@ public final class GetFunctionResult {
         return this.architectures == null ? List.of() : this.architectures;
     }
     /**
-     * Unique identifier for function resources
+     * @return Unique identifier for function resources
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * A unique Arn for CodeSigningConfig resource
+     * @return A unique Arn for CodeSigningConfig resource
      * 
-    */
+     */
     public Optional<String> codeSigningConfigArn() {
         return Optional.ofNullable(this.codeSigningConfigArn);
     }
     /**
-     * A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
+     * @return A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
      * 
-    */
+     */
     public Optional<FunctionDeadLetterConfig> deadLetterConfig() {
         return Optional.ofNullable(this.deadLetterConfig);
     }
     /**
-     * A description of the function.
+     * @return A description of the function.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Environment variables that are accessible from function code during execution.
+     * @return Environment variables that are accessible from function code during execution.
      * 
-    */
+     */
     public Optional<FunctionEnvironment> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
-     * Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
+     * @return Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
      * 
-    */
+     */
     public List<FunctionFileSystemConfig> fileSystemConfigs() {
         return this.fileSystemConfigs == null ? List.of() : this.fileSystemConfigs;
     }
     /**
-     * The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
+     * @return The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
      * 
-    */
+     */
     public Optional<String> handler() {
         return Optional.ofNullable(this.handler);
     }
     /**
-     * ImageConfig
+     * @return ImageConfig
      * 
-    */
+     */
     public Optional<FunctionImageConfig> imageConfig() {
         return Optional.ofNullable(this.imageConfig);
     }
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
+     * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
-     * A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
+     * @return A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
      * 
-    */
+     */
     public List<String> layers() {
         return this.layers == null ? List.of() : this.layers;
     }
     /**
-     * The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * @return The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
-    */
+     */
     public Optional<Integer> memorySize() {
         return Optional.ofNullable(this.memorySize);
     }
     /**
-     * PackageType.
+     * @return PackageType.
      * 
-    */
+     */
     public Optional<FunctionPackageType> packageType() {
         return Optional.ofNullable(this.packageType);
     }
     /**
-     * The number of simultaneous executions to reserve for the function.
+     * @return The number of simultaneous executions to reserve for the function.
      * 
-    */
+     */
     public Optional<Integer> reservedConcurrentExecutions() {
         return Optional.ofNullable(this.reservedConcurrentExecutions);
     }
     /**
-     * The Amazon Resource Name (ARN) of the function&#39;s execution role.
+     * @return The Amazon Resource Name (ARN) of the function&#39;s execution role.
      * 
-    */
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
-     * The identifier of the function&#39;s runtime.
+     * @return The identifier of the function&#39;s runtime.
      * 
-    */
+     */
     public Optional<String> runtime() {
         return Optional.ofNullable(this.runtime);
     }
     /**
-     * A list of tags to apply to the function.
+     * @return A list of tags to apply to the function.
      * 
-    */
+     */
     public List<FunctionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+     * @return The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
      * 
-    */
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
+     * @return Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
      * 
-    */
+     */
     public Optional<FunctionTracingConfig> tracingConfig() {
         return Optional.ofNullable(this.tracingConfig);
     }
     /**
-     * For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
+     * @return For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
      * 
-    */
+     */
     public Optional<FunctionVpcConfig> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }

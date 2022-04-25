@@ -25,6 +25,11 @@ public final class AvroSerializationResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Avro&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -53,6 +58,13 @@ public final class AvroSerializationResponse extends com.pulumi.resources.Invoke
             $ = new AvroSerializationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Avro&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

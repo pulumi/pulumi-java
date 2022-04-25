@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetManagedPrivateEndpointResult {
     /**
-     * The groupId in which the managed private endpoint is created.
+     * @return The groupId in which the managed private endpoint is created.
      * 
      */
     private final String groupId;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The ARM resource ID of the resource for which the managed private endpoint is created.
+     * @return The ARM resource ID of the resource for which the managed private endpoint is created.
      * 
      */
     private final String privateLinkResourceId;
     /**
-     * The region of the resource to which the managed private endpoint is created.
+     * @return The region of the resource to which the managed private endpoint is created.
      * 
      */
     private final @Nullable String privateLinkResourceRegion;
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The user request message.
+     * @return The user request message.
      * 
      */
     private final @Nullable String requestMessage;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -81,65 +81,65 @@ public final class GetManagedPrivateEndpointResult {
     }
 
     /**
-     * The groupId in which the managed private endpoint is created.
+     * @return The groupId in which the managed private endpoint is created.
      * 
-    */
+     */
     public String groupId() {
         return this.groupId;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The ARM resource ID of the resource for which the managed private endpoint is created.
+     * @return The ARM resource ID of the resource for which the managed private endpoint is created.
      * 
-    */
+     */
     public String privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
-     * The region of the resource to which the managed private endpoint is created.
+     * @return The region of the resource to which the managed private endpoint is created.
      * 
-    */
+     */
     public Optional<String> privateLinkResourceRegion() {
         return Optional.ofNullable(this.privateLinkResourceRegion);
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The user request message.
+     * @return The user request message.
      * 
-    */
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -28,6 +28,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="command")
     private @Nullable Output<List<String>> command;
 
+    /**
+     * @return A string array representing the command that the container runs to determine if it is healthy.
+     * 
+     */
     public Optional<Output<List<String>>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -39,6 +43,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
+    /**
+     * @return The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
+     * 
+     */
     public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -50,6 +58,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="retries")
     private @Nullable Output<Integer> retries;
 
+    /**
+     * @return The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
+     * 
+     */
     public Optional<Output<Integer>> retries() {
         return Optional.ofNullable(this.retries);
     }
@@ -61,6 +73,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="startPeriod")
     private @Nullable Output<Integer> startPeriod;
 
+    /**
+     * @return The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
+     * 
+     */
     public Optional<Output<Integer>> startPeriod() {
         return Optional.ofNullable(this.startPeriod);
     }
@@ -72,6 +88,10 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
+    /**
+     * @return The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
+     * 
+     */
     public Optional<Output<Integer>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -104,51 +124,117 @@ public final class TaskDefinitionHealthCheckArgs extends com.pulumi.resources.Re
             $ = new TaskDefinitionHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command A string array representing the command that the container runs to determine if it is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable Output<List<String>> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command A string array representing the command that the container runs to determine if it is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param command A string array representing the command that the container runs to determine if it is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param interval The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The time period in seconds between each health check execution. You may specify between 5 and 300 seconds. The default value is 30 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param retries The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retries(@Nullable Output<Integer> retries) {
             $.retries = retries;
             return this;
         }
 
+        /**
+         * @param retries The number of times to retry a failed health check before the container is considered unhealthy. You may specify between 1 and 10 retries. The default value is three retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retries(Integer retries) {
             return retries(Output.of(retries));
         }
 
+        /**
+         * @param startPeriod The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startPeriod(@Nullable Output<Integer> startPeriod) {
             $.startPeriod = startPeriod;
             return this;
         }
 
+        /**
+         * @param startPeriod The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries. You may specify between 0 and 300 seconds. The startPeriod is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startPeriod(Integer startPeriod) {
             return startPeriod(Output.of(startPeriod));
         }
 
+        /**
+         * @param timeout The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The time period in seconds to wait for a health check to succeed before it is considered a failure. You may specify between 2 and 60 seconds. The default value is 5 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Integer timeout) {
             return timeout(Output.of(timeout));
         }

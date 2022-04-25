@@ -28,6 +28,10 @@ public final class PostgreSqlConnectionProfileArgs extends com.pulumi.resources.
     @Import(name="cloudSqlId")
     private @Nullable Output<String> cloudSqlId;
 
+    /**
+     * @return If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
+     * 
+     */
     public Optional<Output<String>> cloudSqlId() {
         return Optional.ofNullable(this.cloudSqlId);
     }
@@ -39,6 +43,10 @@ public final class PostgreSqlConnectionProfileArgs extends com.pulumi.resources.
     @Import(name="host", required=true)
     private Output<String> host;
 
+    /**
+     * @return The IP or hostname of the source PostgreSQL database.
+     * 
+     */
     public Output<String> host() {
         return this.host;
     }
@@ -50,6 +58,10 @@ public final class PostgreSqlConnectionProfileArgs extends com.pulumi.resources.
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -61,6 +73,10 @@ public final class PostgreSqlConnectionProfileArgs extends com.pulumi.resources.
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The network port of the source PostgreSQL database.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -72,6 +88,10 @@ public final class PostgreSqlConnectionProfileArgs extends com.pulumi.resources.
     @Import(name="ssl")
     private @Nullable Output<SslConfigArgs> ssl;
 
+    /**
+     * @return SSL configuration for the destination to connect to the source database.
+     * 
+     */
     public Optional<Output<SslConfigArgs>> ssl() {
         return Optional.ofNullable(this.ssl);
     }
@@ -83,6 +103,10 @@ public final class PostgreSqlConnectionProfileArgs extends com.pulumi.resources.
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -116,56 +140,128 @@ public final class PostgreSqlConnectionProfileArgs extends com.pulumi.resources.
             $ = new PostgreSqlConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSqlId If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlId(@Nullable Output<String> cloudSqlId) {
             $.cloudSqlId = cloudSqlId;
             return this;
         }
 
+        /**
+         * @param cloudSqlId If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlId(String cloudSqlId) {
             return cloudSqlId(Output.of(cloudSqlId));
         }
 
+        /**
+         * @param host The IP or hostname of the source PostgreSQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host The IP or hostname of the source PostgreSQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param password Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param port The network port of the source PostgreSQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The network port of the source PostgreSQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param ssl SSL configuration for the destination to connect to the source database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(@Nullable Output<SslConfigArgs> ssl) {
             $.ssl = ssl;
             return this;
         }
 
+        /**
+         * @param ssl SSL configuration for the destination to connect to the source database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(SslConfigArgs ssl) {
             return ssl(Output.of(ssl));
         }
 
+        /**
+         * @param username The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

@@ -23,6 +23,10 @@ public final class ClientCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN)
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -34,6 +38,10 @@ public final class ClientCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="createdDate")
     private @Nullable Output<String> createdDate;
 
+    /**
+     * @return The date when the client certificate was created.
+     * 
+     */
     public Optional<Output<String>> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -45,6 +53,10 @@ public final class ClientCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the client certificate.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -56,6 +68,10 @@ public final class ClientCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="expirationDate")
     private @Nullable Output<String> expirationDate;
 
+    /**
+     * @return The date when the client certificate will expire.
+     * 
+     */
     public Optional<Output<String>> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -67,6 +83,10 @@ public final class ClientCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="pemEncodedCertificate")
     private @Nullable Output<String> pemEncodedCertificate;
 
+    /**
+     * @return The PEM-encoded public key of the client certificate.
+     * 
+     */
     public Optional<Output<String>> pemEncodedCertificate() {
         return Optional.ofNullable(this.pemEncodedCertificate);
     }
@@ -78,6 +98,10 @@ public final class ClientCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,6 +113,10 @@ public final class ClientCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -123,65 +151,149 @@ public final class ClientCertificateState extends com.pulumi.resources.ResourceA
             $ = new ClientCertificateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param createdDate The date when the client certificate was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable Output<String> createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param createdDate The date when the client certificate was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             return createdDate(Output.of(createdDate));
         }
 
+        /**
+         * @param description The description of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expirationDate The date when the client certificate will expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param expirationDate The date when the client certificate will expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             return expirationDate(Output.of(expirationDate));
         }
 
+        /**
+         * @param pemEncodedCertificate The PEM-encoded public key of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemEncodedCertificate(@Nullable Output<String> pemEncodedCertificate) {
             $.pemEncodedCertificate = pemEncodedCertificate;
             return this;
         }
 
+        /**
+         * @param pemEncodedCertificate The PEM-encoded public key of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemEncodedCertificate(String pemEncodedCertificate) {
             return pemEncodedCertificate(Output.of(pemEncodedCertificate));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

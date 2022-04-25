@@ -27,6 +27,10 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return Describes the override action to be applied when rule matches.
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -38,6 +42,10 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
     @Import(name="enabledState")
     private @Nullable String enabledState;
 
+    /**
+     * @return Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+     * 
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -49,6 +57,10 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
     @Import(name="exclusions")
     private @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
+    /**
+     * @return Describes the exclusions that are applied to this specific rule.
+     * 
+     */
     public Optional<List<ManagedRuleExclusionResponse>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
@@ -60,6 +72,10 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
     @Import(name="ruleId", required=true)
     private String ruleId;
 
+    /**
+     * @return Identifier for the managed rule.
+     * 
+     */
     public String ruleId() {
         return this.ruleId;
     }
@@ -91,25 +107,55 @@ public final class FrontDoorManagedRuleOverrideResponse extends com.pulumi.resou
             $ = new FrontDoorManagedRuleOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Describes the override action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param enabledState Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable String enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to this specific rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to this specific rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(ManagedRuleExclusionResponse... exclusions) {
             return exclusions(List.of(exclusions));
         }
 
+        /**
+         * @param ruleId Identifier for the managed rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             $.ruleId = ruleId;
             return this;

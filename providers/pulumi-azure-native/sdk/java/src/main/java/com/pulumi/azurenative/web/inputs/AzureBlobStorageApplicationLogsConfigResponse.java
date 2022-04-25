@@ -26,6 +26,10 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
     @Import(name="level")
     private @Nullable String level;
 
+    /**
+     * @return Log level.
+     * 
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
@@ -39,6 +43,12 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
     @Import(name="retentionInDays")
     private @Nullable Integer retentionInDays;
 
+    /**
+     * @return Retention in days.
+     * Remove blobs older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -50,6 +60,10 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
     @Import(name="sasUrl")
     private @Nullable String sasUrl;
 
+    /**
+     * @return SAS url to a azure blob container with read/write/list/delete permissions.
+     * 
+     */
     public Optional<String> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
@@ -80,16 +94,36 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
             $ = new AzureBlobStorageApplicationLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable String level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param retentionInDays Retention in days.
+         * Remove blobs older than X days.
+         * 0 or lower means no retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param sasUrl SAS url to a azure blob container with read/write/list/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(@Nullable String sasUrl) {
             $.sasUrl = sasUrl;
             return this;

@@ -24,6 +24,10 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTimeOffset", required=true)
     private String endTimeOffset;
 
+    /**
+     * @return End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.
+     * 
+     */
     public String endTimeOffset() {
         return this.endTimeOffset;
     }
@@ -35,6 +39,10 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputs", required=true)
     private List<String> inputs;
 
+    /**
+     * @return List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.
+     * 
+     */
     public List<String> inputs() {
         return this.inputs;
     }
@@ -46,6 +54,10 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A unique key for this atom. Must be specified when using advanced mapping.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -57,6 +69,10 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTimeOffset", required=true)
     private String startTimeOffset;
 
+    /**
+     * @return Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.
+     * 
+     */
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
@@ -88,25 +104,55 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EditAtomResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTimeOffset End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeOffset(String endTimeOffset) {
             $.endTimeOffset = endTimeOffset;
             return this;
         }
 
+        /**
+         * @param inputs List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<String> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(String... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param key A unique key for this atom. Must be specified when using advanced mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param startTimeOffset Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffset(String startTimeOffset) {
             $.startTimeOffset = startTimeOffset;
             return this;

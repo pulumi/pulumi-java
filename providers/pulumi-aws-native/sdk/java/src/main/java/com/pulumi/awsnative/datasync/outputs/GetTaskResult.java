@@ -18,25 +18,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTaskResult {
     /**
-     * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
+     * @return The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
      * 
      */
     private final @Nullable String cloudWatchLogGroupArn;
     private final @Nullable List<String> destinationNetworkInterfaceArns;
     /**
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
+     * @return Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
      * 
      */
     private final @Nullable String errorCode;
     /**
-     * Detailed description of an error that was encountered during the task execution.
+     * @return Detailed description of an error that was encountered during the task execution.
      * 
      */
     private final @Nullable String errorDetail;
     private final @Nullable List<TaskFilterRule> excludes;
     private final @Nullable List<TaskFilterRule> includes;
     /**
-     * The name of a task. This value is a text reference that is used to identify the task in the console.
+     * @return The name of a task. This value is a text reference that is used to identify the task in the console.
      * 
      */
     private final @Nullable String name;
@@ -44,17 +44,17 @@ public final class GetTaskResult {
     private final @Nullable TaskSchedule schedule;
     private final @Nullable List<String> sourceNetworkInterfaceArns;
     /**
-     * The status of the task that was described.
+     * @return The status of the task that was described.
      * 
      */
     private final @Nullable TaskStatus status;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<TaskTag> tags;
     /**
-     * The ARN of the task.
+     * @return The ARN of the task.
      * 
      */
     private final @Nullable String taskArn;
@@ -90,9 +90,9 @@ public final class GetTaskResult {
     }
 
     /**
-     * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
+     * @return The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
      * 
-    */
+     */
     public Optional<String> cloudWatchLogGroupArn() {
         return Optional.ofNullable(this.cloudWatchLogGroupArn);
     }
@@ -100,16 +100,16 @@ public final class GetTaskResult {
         return this.destinationNetworkInterfaceArns == null ? List.of() : this.destinationNetworkInterfaceArns;
     }
     /**
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
+     * @return Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
      * 
-    */
+     */
     public Optional<String> errorCode() {
         return Optional.ofNullable(this.errorCode);
     }
     /**
-     * Detailed description of an error that was encountered during the task execution.
+     * @return Detailed description of an error that was encountered during the task execution.
      * 
-    */
+     */
     public Optional<String> errorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
@@ -120,9 +120,9 @@ public final class GetTaskResult {
         return this.includes == null ? List.of() : this.includes;
     }
     /**
-     * The name of a task. This value is a text reference that is used to identify the task in the console.
+     * @return The name of a task. This value is a text reference that is used to identify the task in the console.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -136,23 +136,23 @@ public final class GetTaskResult {
         return this.sourceNetworkInterfaceArns == null ? List.of() : this.sourceNetworkInterfaceArns;
     }
     /**
-     * The status of the task that was described.
+     * @return The status of the task that was described.
      * 
-    */
+     */
     public Optional<TaskStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<TaskTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The ARN of the task.
+     * @return The ARN of the task.
      * 
-    */
+     */
     public Optional<String> taskArn() {
         return Optional.ofNullable(this.taskArn);
     }

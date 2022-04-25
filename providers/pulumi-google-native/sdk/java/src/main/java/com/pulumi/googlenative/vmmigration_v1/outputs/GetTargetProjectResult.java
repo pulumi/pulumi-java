@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetTargetProjectResult {
     /**
-     * The time this target project resource was created (not related to when the Compute Engine project it points to was created).
+     * @return The time this target project resource was created (not related to when the Compute Engine project it points to was created).
      * 
      */
     private final String createTime;
     /**
-     * The target project&#39;s description.
+     * @return The target project&#39;s description.
      * 
      */
     private final String description;
     /**
-     * The name of the target project.
+     * @return The name of the target project.
      * 
      */
     private final String name;
     /**
-     * The target project ID (number) or project name.
+     * @return The target project ID (number) or project name.
      * 
      */
     private final String project;
     /**
-     * The last time the target project resource was updated.
+     * @return The last time the target project resource was updated.
      * 
      */
     private final String updateTime;
@@ -50,37 +50,37 @@ public final class GetTargetProjectResult {
     }
 
     /**
-     * The time this target project resource was created (not related to when the Compute Engine project it points to was created).
+     * @return The time this target project resource was created (not related to when the Compute Engine project it points to was created).
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The target project&#39;s description.
+     * @return The target project&#39;s description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The name of the target project.
+     * @return The name of the target project.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The target project ID (number) or project name.
+     * @return The target project ID (number) or project name.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * The last time the target project resource was updated.
+     * @return The last time the target project resource was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

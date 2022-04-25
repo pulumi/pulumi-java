@@ -12,37 +12,37 @@ import java.util.Objects;
 @CustomType
 public final class GetConnectionResult {
     /**
-     * Cloud SQL properties.
+     * @return Cloud SQL properties.
      * 
      */
     private final CloudSqlPropertiesResponse cloudSql;
     /**
-     * The creation timestamp of the connection.
+     * @return The creation timestamp of the connection.
      * 
      */
     private final String creationTime;
     /**
-     * User provided description.
+     * @return User provided description.
      * 
      */
     private final String description;
     /**
-     * User provided display name for the connection.
+     * @return User provided display name for the connection.
      * 
      */
     private final String friendlyName;
     /**
-     * True, if credential is configured for this connection.
+     * @return True, if credential is configured for this connection.
      * 
      */
     private final Boolean hasCredential;
     /**
-     * The last update timestamp of the connection.
+     * @return The last update timestamp of the connection.
      * 
      */
     private final String lastModifiedTime;
     /**
-     * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
+     * @return The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
      * 
      */
     private final String name;
@@ -66,51 +66,51 @@ public final class GetConnectionResult {
     }
 
     /**
-     * Cloud SQL properties.
+     * @return Cloud SQL properties.
      * 
-    */
+     */
     public CloudSqlPropertiesResponse cloudSql() {
         return this.cloudSql;
     }
     /**
-     * The creation timestamp of the connection.
+     * @return The creation timestamp of the connection.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * User provided description.
+     * @return User provided description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * User provided display name for the connection.
+     * @return User provided display name for the connection.
      * 
-    */
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
     /**
-     * True, if credential is configured for this connection.
+     * @return True, if credential is configured for this connection.
      * 
-    */
+     */
     public Boolean hasCredential() {
         return this.hasCredential;
     }
     /**
-     * The last update timestamp of the connection.
+     * @return The last update timestamp of the connection.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
+     * @return The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

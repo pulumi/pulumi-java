@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PrivateClusterMasterGlobalAccessConfigResponse {
     /**
-     * Whenever master is accessible globally or not.
+     * @return Whenever master is accessible globally or not.
      * 
      */
     private final Boolean enabled;
@@ -21,9 +21,9 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse {
     }
 
     /**
-     * Whenever master is accessible globally or not.
+     * @return Whenever master is accessible globally or not.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

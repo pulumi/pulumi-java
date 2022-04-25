@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class FargateProfileLabel {
     /**
-     * The key name of the label.
+     * @return The key name of the label.
      * 
      */
     private final String key;
     /**
-     * The value for the label.
+     * @return The value for the label.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class FargateProfileLabel {
     }
 
     /**
-     * The key name of the label.
+     * @return The key name of the label.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value for the label.
+     * @return The value for the label.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

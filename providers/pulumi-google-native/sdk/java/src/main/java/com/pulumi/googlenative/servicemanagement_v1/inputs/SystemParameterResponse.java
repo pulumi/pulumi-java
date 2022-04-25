@@ -23,6 +23,10 @@ public final class SystemParameterResponse extends com.pulumi.resources.InvokeAr
     @Import(name="httpHeader", required=true)
     private String httpHeader;
 
+    /**
+     * @return Define the HTTP header name to use for the parameter. It is case insensitive.
+     * 
+     */
     public String httpHeader() {
         return this.httpHeader;
     }
@@ -34,6 +38,10 @@ public final class SystemParameterResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Define the name of the parameter, such as &#34;api_key&#34; . It is case sensitive.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class SystemParameterResponse extends com.pulumi.resources.InvokeAr
     @Import(name="urlQueryParameter", required=true)
     private String urlQueryParameter;
 
+    /**
+     * @return Define the URL query parameter name to use for the parameter. It is case sensitive.
+     * 
+     */
     public String urlQueryParameter() {
         return this.urlQueryParameter;
     }
@@ -75,16 +87,34 @@ public final class SystemParameterResponse extends com.pulumi.resources.InvokeAr
             $ = new SystemParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpHeader Define the HTTP header name to use for the parameter. It is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeader(String httpHeader) {
             $.httpHeader = httpHeader;
             return this;
         }
 
+        /**
+         * @param name Define the name of the parameter, such as &#34;api_key&#34; . It is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param urlQueryParameter Define the URL query parameter name to use for the parameter. It is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlQueryParameter(String urlQueryParameter) {
             $.urlQueryParameter = urlQueryParameter;
             return this;

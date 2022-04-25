@@ -32,6 +32,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="codeId")
     private @Nullable String codeId;
 
+    /**
+     * @return ARM resource ID of the code asset.
+     * 
+     */
     public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
@@ -43,6 +47,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="command", required=true)
     private String command;
 
+    /**
+     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * 
+     */
     public String command() {
         return this.command;
     }
@@ -54,6 +62,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="distribution")
     private @Nullable Object distribution;
 
+    /**
+     * @return Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+     * 
+     */
     public Optional<Object> distribution() {
         return Optional.ofNullable(this.distribution);
     }
@@ -65,6 +77,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="environmentId")
     private @Nullable String environmentId;
 
+    /**
+     * @return The ARM resource ID of the Environment specification for the job.
+     * 
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -76,6 +92,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="environmentVariables")
     private @Nullable Map<String,String> environmentVariables;
 
+    /**
+     * @return Environment variables included in the job.
+     * 
+     */
     public Optional<Map<String,String>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -87,6 +107,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="inputDataBindings")
     private @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
+    /**
+     * @return Mapping of input data bindings used in the job.
+     * 
+     */
     public Optional<Map<String,InputDataBindingResponse>> inputDataBindings() {
         return Optional.ofNullable(this.inputDataBindings);
     }
@@ -98,6 +122,10 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="outputDataBindings")
     private @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
+    /**
+     * @return Mapping of output data bindings used in the job.
+     * 
+     */
     public Optional<Map<String,OutputDataBindingResponse>> outputDataBindings() {
         return Optional.ofNullable(this.outputDataBindings);
     }
@@ -110,6 +138,11 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeout")
     private @Nullable String timeout;
 
+    /**
+     * @return The max run duration in ISO 8601 format, after which the trial component will be cancelled.
+     * Only supports duration with precision as low as Seconds.
+     * 
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -145,41 +178,90 @@ public final class TrialComponentResponse extends com.pulumi.resources.InvokeArg
             $ = new TrialComponentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeId ARM resource ID of the code asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeId(@Nullable String codeId) {
             $.codeId = codeId;
             return this;
         }
 
+        /**
+         * @param command The command to execute on startup of the job. eg. &#34;python train.py&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param distribution Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(@Nullable Object distribution) {
             $.distribution = distribution;
             return this;
         }
 
+        /**
+         * @param environmentId The ARM resource ID of the Environment specification for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable String environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables included in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param inputDataBindings Mapping of input data bindings used in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
             $.inputDataBindings = inputDataBindings;
             return this;
         }
 
+        /**
+         * @param outputDataBindings Mapping of output data bindings used in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
             $.outputDataBindings = outputDataBindings;
             return this;
         }
 
+        /**
+         * @param timeout The max run duration in ISO 8601 format, after which the trial component will be cancelled.
+         * Only supports duration with precision as low as Seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable String timeout) {
             $.timeout = timeout;
             return this;

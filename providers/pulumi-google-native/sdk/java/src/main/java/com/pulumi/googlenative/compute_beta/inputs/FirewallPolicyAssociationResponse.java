@@ -19,6 +19,10 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="attachmentTarget", required=true)
     private String attachmentTarget;
 
+    /**
+     * @return The target that the firewall policy is attached to.
+     * 
+     */
     public String attachmentTarget() {
         return this.attachmentTarget;
     }
@@ -30,6 +34,10 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Deprecated, please use short name instead. The display name of the firewall policy of the association.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -41,6 +49,10 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="firewallPolicyId", required=true)
     private String firewallPolicyId;
 
+    /**
+     * @return The firewall policy ID of the association.
+     * 
+     */
     public String firewallPolicyId() {
         return this.firewallPolicyId;
     }
@@ -52,6 +64,10 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name for an association.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,6 +79,10 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="shortName", required=true)
     private String shortName;
 
+    /**
+     * @return The short name of the firewall policy of the association.
+     * 
+     */
     public String shortName() {
         return this.shortName;
     }
@@ -95,26 +115,56 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
             $ = new FirewallPolicyAssociationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachmentTarget The target that the firewall policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentTarget(String attachmentTarget) {
             $.attachmentTarget = attachmentTarget;
             return this;
         }
 
+        /**
+         * @param displayName Deprecated, please use short name instead. The display name of the firewall policy of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param firewallPolicyId The firewall policy ID of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicyId(String firewallPolicyId) {
             $.firewallPolicyId = firewallPolicyId;
             return this;
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param shortName The short name of the firewall policy of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(String shortName) {
             $.shortName = shortName;
             return this;

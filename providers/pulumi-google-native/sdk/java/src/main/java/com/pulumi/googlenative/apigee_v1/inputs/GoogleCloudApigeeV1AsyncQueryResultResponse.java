@@ -19,6 +19,10 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends com.pulum
     @Import(name="expires", required=true)
     private String expires;
 
+    /**
+     * @return Query result will be unaccessable after this time.
+     * 
+     */
     public String expires() {
         return this.expires;
     }
@@ -30,6 +34,10 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends com.pulum
     @Import(name="self", required=true)
     private String self;
 
+    /**
+     * @return Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
+     * 
+     */
     public String self() {
         return this.self;
     }
@@ -59,11 +67,23 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends com.pulum
             $ = new GoogleCloudApigeeV1AsyncQueryResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expires Query result will be unaccessable after this time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expires(String expires) {
             $.expires = expires;
             return this;
         }
 
+        /**
+         * @param self Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
+         * 
+         * @return builder
+         * 
+         */
         public Builder self(String self) {
             $.self = self;
             return this;

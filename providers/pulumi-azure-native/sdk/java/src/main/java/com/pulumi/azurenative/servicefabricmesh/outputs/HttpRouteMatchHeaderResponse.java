@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HttpRouteMatchHeaderResponse {
     /**
-     * Name of header to match in request.
+     * @return Name of header to match in request.
      * 
      */
     private final String name;
     /**
-     * how to match header value
+     * @return how to match header value
      * 
      */
     private final @Nullable String type;
     /**
-     * Value of header to match in request.
+     * @return Value of header to match in request.
      * 
      */
     private final @Nullable String value;
@@ -38,23 +38,23 @@ public final class HttpRouteMatchHeaderResponse {
     }
 
     /**
-     * Name of header to match in request.
+     * @return Name of header to match in request.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * how to match header value
+     * @return how to match header value
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Value of header to match in request.
+     * @return Value of header to match in request.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

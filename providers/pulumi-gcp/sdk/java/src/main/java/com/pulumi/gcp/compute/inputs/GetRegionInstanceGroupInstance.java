@@ -21,6 +21,10 @@ public final class GetRegionInstanceGroupInstance extends com.pulumi.resources.I
     @Import(name="instance", required=true)
     private String instance;
 
+    /**
+     * @return URL to the instance.
+     * 
+     */
     public String instance() {
         return this.instance;
     }
@@ -32,6 +36,10 @@ public final class GetRegionInstanceGroupInstance extends com.pulumi.resources.I
     @Import(name="namedPorts", required=true)
     private List<GetRegionInstanceGroupInstanceNamedPort> namedPorts;
 
+    /**
+     * @return List of named ports in the group, as a list of resources, each containing:
+     * 
+     */
     public List<GetRegionInstanceGroupInstanceNamedPort> namedPorts() {
         return this.namedPorts;
     }
@@ -43,6 +51,10 @@ public final class GetRegionInstanceGroupInstance extends com.pulumi.resources.I
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return String description of current state of the instance.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -73,20 +85,44 @@ public final class GetRegionInstanceGroupInstance extends com.pulumi.resources.I
             $ = new GetRegionInstanceGroupInstance(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instance URL to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param namedPorts List of named ports in the group, as a list of resources, each containing:
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(List<GetRegionInstanceGroupInstanceNamedPort> namedPorts) {
             $.namedPorts = namedPorts;
             return this;
         }
 
+        /**
+         * @param namedPorts List of named ports in the group, as a list of resources, each containing:
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(GetRegionInstanceGroupInstanceNamedPort... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
 
+        /**
+         * @param status String description of current state of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetLaunchTemplateMonitoring {
     /**
-     * Whether Nitro Enclaves are enabled.
+     * @return Whether Nitro Enclaves are enabled.
      * 
      */
     private final Boolean enabled;
@@ -21,9 +21,9 @@ public final class GetLaunchTemplateMonitoring {
     }
 
     /**
-     * Whether Nitro Enclaves are enabled.
+     * @return Whether Nitro Enclaves are enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

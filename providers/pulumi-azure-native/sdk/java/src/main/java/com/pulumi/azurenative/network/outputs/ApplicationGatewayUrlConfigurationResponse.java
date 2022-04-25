@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayUrlConfigurationResponse {
     /**
-     * Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
+     * @return Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
      * 
      */
     private final @Nullable String modifiedPath;
     /**
-     * Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
+     * @return Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
      * 
      */
     private final @Nullable String modifiedQueryString;
     /**
-     * If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
+     * @return If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
      * 
      */
     private final @Nullable Boolean reroute;
@@ -39,23 +39,23 @@ public final class ApplicationGatewayUrlConfigurationResponse {
     }
 
     /**
-     * Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
+     * @return Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
      * 
-    */
+     */
     public Optional<String> modifiedPath() {
         return Optional.ofNullable(this.modifiedPath);
     }
     /**
-     * Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
+     * @return Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
      * 
-    */
+     */
     public Optional<String> modifiedQueryString() {
         return Optional.ofNullable(this.modifiedQueryString);
     }
     /**
-     * If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
+     * @return If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
      * 
-    */
+     */
     public Optional<Boolean> reroute() {
         return Optional.ofNullable(this.reroute);
     }

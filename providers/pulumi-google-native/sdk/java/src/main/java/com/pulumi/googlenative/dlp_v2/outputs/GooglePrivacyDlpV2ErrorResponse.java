@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ErrorResponse {
     /**
-     * Detailed error codes and messages.
+     * @return Detailed error codes and messages.
      * 
      */
     private final GoogleRpcStatusResponse details;
     /**
-     * The times the error occurred.
+     * @return The times the error occurred.
      * 
      */
     private final List<String> timestamps;
@@ -31,16 +31,16 @@ public final class GooglePrivacyDlpV2ErrorResponse {
     }
 
     /**
-     * Detailed error codes and messages.
+     * @return Detailed error codes and messages.
      * 
-    */
+     */
     public GoogleRpcStatusResponse details() {
         return this.details;
     }
     /**
-     * The times the error occurred.
+     * @return The times the error occurred.
      * 
-    */
+     */
     public List<String> timestamps() {
         return this.timestamps;
     }

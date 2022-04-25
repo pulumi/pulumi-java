@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DiagnosticsDescriptionResponse {
     /**
-     * The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
+     * @return The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
      * 
      */
     private final @Nullable List<String> defaultSinkRefs;
     /**
-     * Status of whether or not sinks are enabled.
+     * @return Status of whether or not sinks are enabled.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * List of supported sinks that can be referenced.
+     * @return List of supported sinks that can be referenced.
      * 
      */
     private final @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks;
@@ -41,23 +41,23 @@ public final class DiagnosticsDescriptionResponse {
     }
 
     /**
-     * The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
+     * @return The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
      * 
-    */
+     */
     public List<String> defaultSinkRefs() {
         return this.defaultSinkRefs == null ? List.of() : this.defaultSinkRefs;
     }
     /**
-     * Status of whether or not sinks are enabled.
+     * @return Status of whether or not sinks are enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * List of supported sinks that can be referenced.
+     * @return List of supported sinks that can be referenced.
      * 
-    */
+     */
     public List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }

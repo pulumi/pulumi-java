@@ -26,6 +26,10 @@ public final class VpnServerConfigRadiusServerRootCertificateArgs extends com.pu
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The certificate name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class VpnServerConfigRadiusServerRootCertificateArgs extends com.pu
     @Import(name="publicCertData")
     private @Nullable Output<String> publicCertData;
 
+    /**
+     * @return The certificate public data.
+     * 
+     */
     public Optional<Output<String>> publicCertData() {
         return Optional.ofNullable(this.publicCertData);
     }
@@ -66,20 +74,44 @@ public final class VpnServerConfigRadiusServerRootCertificateArgs extends com.pu
             $ = new VpnServerConfigRadiusServerRootCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param publicCertData The certificate public data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertData(@Nullable Output<String> publicCertData) {
             $.publicCertData = publicCertData;
             return this;
         }
 
+        /**
+         * @param publicCertData The certificate public data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertData(String publicCertData) {
             return publicCertData(Output.of(publicCertData));
         }

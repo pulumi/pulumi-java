@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse {
     /**
-     * The type of the feature that enabled for fulfillment.
+     * @return The type of the feature that enabled for fulfillment.
      * 
      */
     private final String type;
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse {
     }
 
     /**
-     * The type of the feature that enabled for fulfillment.
+     * @return The type of the feature that enabled for fulfillment.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

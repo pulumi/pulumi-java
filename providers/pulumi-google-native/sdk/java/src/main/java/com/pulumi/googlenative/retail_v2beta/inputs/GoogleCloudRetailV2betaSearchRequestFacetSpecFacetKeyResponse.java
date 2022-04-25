@@ -25,6 +25,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
     @Import(name="contains", required=true)
     private List<String> contains;
 
+    /**
+     * @return Only get facet values that contains the given strings. For example, suppose &#34;categories&#34; has three values &#34;Women &gt; Shoe&#34;, &#34;Women &gt; Dress&#34; and &#34;Men &gt; Shoe&#34;. If set &#34;contains&#34; to &#34;Shoe&#34;, the &#34;categories&#34; facet will give only &#34;Women &gt; Shoe&#34; and &#34;Men &gt; Shoe&#34;. Only supported on textual fields. Maximum is 10.
+     * 
+     */
     public List<String> contains() {
         return this.contains;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
     @Import(name="intervals", required=true)
     private List<GoogleCloudRetailV2betaIntervalResponse> intervals;
 
+    /**
+     * @return Set only if values should be bucketized into intervals. Must be set for facets with numerical values. Must not be set for facet with text values. Maximum number of intervals is 30.
+     * 
+     */
     public List<GoogleCloudRetailV2betaIntervalResponse> intervals() {
         return this.intervals;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Supported textual and numerical facet keys in Product object, over which the facet values are computed. Facet key is case-sensitive. Allowed facet keys when FacetKey.query is not specified: * textual_field = * &#34;brands&#34; * &#34;categories&#34; * &#34;genders&#34; * &#34;ageGroups&#34; * &#34;availability&#34; * &#34;colorFamilies&#34; * &#34;colors&#34; * &#34;sizes&#34; * &#34;materials&#34; * &#34;patterns&#34; * &#34;conditions&#34; * &#34;attributes.key&#34; * &#34;pickupInStore&#34; * &#34;shipToStore&#34; * &#34;sameDayDelivery&#34; * &#34;nextDayDelivery&#34; * &#34;customFulfillment1&#34; * &#34;customFulfillment2&#34; * &#34;customFulfillment3&#34; * &#34;customFulfillment4&#34; * &#34;customFulfillment5&#34; * &#34;inventory(place_id,attributes.key)&#34; * numerical_field = * &#34;price&#34; * &#34;discount&#34; * &#34;rating&#34; * &#34;ratingCount&#34; * &#34;attributes.key&#34; * &#34;inventory(place_id,price)&#34; * &#34;inventory(place_id,original_price)&#34; * &#34;inventory(place_id,attributes.key)&#34;
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
     @Import(name="orderBy", required=true)
     private String orderBy;
 
+    /**
+     * @return The order in which Facet.values are returned. Allowed values are: * &#34;count desc&#34;, which means order by Facet.FacetValue.count descending. * &#34;value desc&#34;, which means order by Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical intervals are sorted in the order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.place_ids are sorted in the order given by FacetSpec.FacetKey.restricted_values.
+     * 
+     */
     public String orderBy() {
         return this.orderBy;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
     @Import(name="prefixes", required=true)
     private List<String> prefixes;
 
+    /**
+     * @return Only get facet values that start with the given string prefix. For example, suppose &#34;categories&#34; has three values &#34;Women &gt; Shoe&#34;, &#34;Women &gt; Dress&#34; and &#34;Men &gt; Shoe&#34;. If set &#34;prefixes&#34; to &#34;Women&#34;, the &#34;categories&#34; facet will give only &#34;Women &gt; Shoe&#34; and &#34;Women &gt; Dress&#34;. Only supported on textual fields. Maximum is 10.
+     * 
+     */
     public List<String> prefixes() {
         return this.prefixes;
     }
@@ -80,6 +100,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
     @Import(name="query", required=true)
     private String query;
 
+    /**
+     * @return The query that is used to compute facet for the given facet key. When provided, it will override the default behavior of facet computation. The query syntax is the same as a filter expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no limitation on FacetKey.key when query is specified. In the response, FacetValue.value will be always &#34;1&#34; and FacetValue.count will be the number of results that matches the query. For example, you can set a customized facet for &#34;shipToStore&#34;, where FacetKey.key is &#34;customizedShipToStore&#34;, and FacetKey.query is &#34;availability: ANY(\&#34;IN_STOCK\&#34;) AND shipToStore: ANY(\&#34;123\&#34;)&#34;. Then the facet will count the products that are both in stock and ship to store &#34;123&#34;.
+     * 
+     */
     public String query() {
         return this.query;
     }
@@ -91,6 +115,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
     @Import(name="restrictedValues", required=true)
     private List<String> restrictedValues;
 
+    /**
+     * @return Only get facet for the given restricted values. For example, when using &#34;pickupInStore&#34; as key and set restricted values to [&#34;store123&#34;, &#34;store456&#34;], only facets for &#34;store123&#34; and &#34;store456&#34; are returned. Only supported on textual fields and fulfillments. Maximum is 20. Must be set for the fulfillment facet keys: * pickupInStore * shipToStore * sameDayDelivery * nextDayDelivery * customFulfillment1 * customFulfillment2 * customFulfillment3 * customFulfillment4 * customFulfillment5
+     * 
+     */
     public List<String> restrictedValues() {
         return this.restrictedValues;
     }
@@ -125,53 +153,119 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
             $ = new GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contains Only get facet values that contains the given strings. For example, suppose &#34;categories&#34; has three values &#34;Women &gt; Shoe&#34;, &#34;Women &gt; Dress&#34; and &#34;Men &gt; Shoe&#34;. If set &#34;contains&#34; to &#34;Shoe&#34;, the &#34;categories&#34; facet will give only &#34;Women &gt; Shoe&#34; and &#34;Men &gt; Shoe&#34;. Only supported on textual fields. Maximum is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contains(List<String> contains) {
             $.contains = contains;
             return this;
         }
 
+        /**
+         * @param contains Only get facet values that contains the given strings. For example, suppose &#34;categories&#34; has three values &#34;Women &gt; Shoe&#34;, &#34;Women &gt; Dress&#34; and &#34;Men &gt; Shoe&#34;. If set &#34;contains&#34; to &#34;Shoe&#34;, the &#34;categories&#34; facet will give only &#34;Women &gt; Shoe&#34; and &#34;Men &gt; Shoe&#34;. Only supported on textual fields. Maximum is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contains(String... contains) {
             return contains(List.of(contains));
         }
 
+        /**
+         * @param intervals Set only if values should be bucketized into intervals. Must be set for facets with numerical values. Must not be set for facet with text values. Maximum number of intervals is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervals(List<GoogleCloudRetailV2betaIntervalResponse> intervals) {
             $.intervals = intervals;
             return this;
         }
 
+        /**
+         * @param intervals Set only if values should be bucketized into intervals. Must be set for facets with numerical values. Must not be set for facet with text values. Maximum number of intervals is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervals(GoogleCloudRetailV2betaIntervalResponse... intervals) {
             return intervals(List.of(intervals));
         }
 
+        /**
+         * @param key Supported textual and numerical facet keys in Product object, over which the facet values are computed. Facet key is case-sensitive. Allowed facet keys when FacetKey.query is not specified: * textual_field = * &#34;brands&#34; * &#34;categories&#34; * &#34;genders&#34; * &#34;ageGroups&#34; * &#34;availability&#34; * &#34;colorFamilies&#34; * &#34;colors&#34; * &#34;sizes&#34; * &#34;materials&#34; * &#34;patterns&#34; * &#34;conditions&#34; * &#34;attributes.key&#34; * &#34;pickupInStore&#34; * &#34;shipToStore&#34; * &#34;sameDayDelivery&#34; * &#34;nextDayDelivery&#34; * &#34;customFulfillment1&#34; * &#34;customFulfillment2&#34; * &#34;customFulfillment3&#34; * &#34;customFulfillment4&#34; * &#34;customFulfillment5&#34; * &#34;inventory(place_id,attributes.key)&#34; * numerical_field = * &#34;price&#34; * &#34;discount&#34; * &#34;rating&#34; * &#34;ratingCount&#34; * &#34;attributes.key&#34; * &#34;inventory(place_id,price)&#34; * &#34;inventory(place_id,original_price)&#34; * &#34;inventory(place_id,attributes.key)&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param orderBy The order in which Facet.values are returned. Allowed values are: * &#34;count desc&#34;, which means order by Facet.FacetValue.count descending. * &#34;value desc&#34;, which means order by Facet.FacetValue.value descending. Only applies to textual facets. If not set, textual values are sorted in [natural order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical intervals are sorted in the order given by FacetSpec.FacetKey.intervals; FulfillmentInfo.place_ids are sorted in the order given by FacetSpec.FacetKey.restricted_values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderBy(String orderBy) {
             $.orderBy = orderBy;
             return this;
         }
 
+        /**
+         * @param prefixes Only get facet values that start with the given string prefix. For example, suppose &#34;categories&#34; has three values &#34;Women &gt; Shoe&#34;, &#34;Women &gt; Dress&#34; and &#34;Men &gt; Shoe&#34;. If set &#34;prefixes&#34; to &#34;Women&#34;, the &#34;categories&#34; facet will give only &#34;Women &gt; Shoe&#34; and &#34;Women &gt; Dress&#34;. Only supported on textual fields. Maximum is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixes(List<String> prefixes) {
             $.prefixes = prefixes;
             return this;
         }
 
+        /**
+         * @param prefixes Only get facet values that start with the given string prefix. For example, suppose &#34;categories&#34; has three values &#34;Women &gt; Shoe&#34;, &#34;Women &gt; Dress&#34; and &#34;Men &gt; Shoe&#34;. If set &#34;prefixes&#34; to &#34;Women&#34;, the &#34;categories&#34; facet will give only &#34;Women &gt; Shoe&#34; and &#34;Women &gt; Dress&#34;. Only supported on textual fields. Maximum is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixes(String... prefixes) {
             return prefixes(List.of(prefixes));
         }
 
+        /**
+         * @param query The query that is used to compute facet for the given facet key. When provided, it will override the default behavior of facet computation. The query syntax is the same as a filter expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no limitation on FacetKey.key when query is specified. In the response, FacetValue.value will be always &#34;1&#34; and FacetValue.count will be the number of results that matches the query. For example, you can set a customized facet for &#34;shipToStore&#34;, where FacetKey.key is &#34;customizedShipToStore&#34;, and FacetKey.query is &#34;availability: ANY(\&#34;IN_STOCK\&#34;) AND shipToStore: ANY(\&#34;123\&#34;)&#34;. Then the facet will count the products that are both in stock and ship to store &#34;123&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param restrictedValues Only get facet for the given restricted values. For example, when using &#34;pickupInStore&#34; as key and set restricted values to [&#34;store123&#34;, &#34;store456&#34;], only facets for &#34;store123&#34; and &#34;store456&#34; are returned. Only supported on textual fields and fulfillments. Maximum is 20. Must be set for the fulfillment facet keys: * pickupInStore * shipToStore * sameDayDelivery * nextDayDelivery * customFulfillment1 * customFulfillment2 * customFulfillment3 * customFulfillment4 * customFulfillment5
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictedValues(List<String> restrictedValues) {
             $.restrictedValues = restrictedValues;
             return this;
         }
 
+        /**
+         * @param restrictedValues Only get facet for the given restricted values. For example, when using &#34;pickupInStore&#34; as key and set restricted values to [&#34;store123&#34;, &#34;store456&#34;], only facets for &#34;store123&#34; and &#34;store456&#34; are returned. Only supported on textual fields and fulfillments. Maximum is 20. Must be set for the fulfillment facet keys: * pickupInStore * shipToStore * sameDayDelivery * nextDayDelivery * customFulfillment1 * customFulfillment2 * customFulfillment3 * customFulfillment4 * customFulfillment5
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictedValues(String... restrictedValues) {
             return restrictedValues(List.of(restrictedValues));
         }

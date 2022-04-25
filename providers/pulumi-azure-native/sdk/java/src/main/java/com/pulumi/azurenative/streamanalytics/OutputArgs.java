@@ -35,6 +35,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasource")
     private @Nullable Output<Object> datasource;
 
+    /**
+     * @return Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<Object>> datasource() {
         return Optional.ofNullable(this.datasource);
     }
@@ -46,6 +50,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName", required=true)
     private Output<String> jobName;
 
+    /**
+     * @return The name of the streaming job.
+     * 
+     */
     public Output<String> jobName() {
         return this.jobName;
     }
@@ -57,6 +65,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +80,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputName")
     private @Nullable Output<String> outputName;
 
+    /**
+     * @return The name of the output.
+     * 
+     */
     public Optional<Output<String>> outputName() {
         return Optional.ofNullable(this.outputName);
     }
@@ -79,6 +95,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,6 +110,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serialization")
     private @Nullable Output<Object> serialization;
 
+    /**
+     * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<Object>> serialization() {
         return Optional.ofNullable(this.serialization);
     }
@@ -123,56 +147,128 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasource Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasource(@Nullable Output<Object> datasource) {
             $.datasource = datasource;
             return this;
         }
 
+        /**
+         * @param datasource Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasource(Object datasource) {
             return datasource(Output.of(datasource));
         }
 
+        /**
+         * @param jobName The name of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The name of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputName The name of the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputName(@Nullable Output<String> outputName) {
             $.outputName = outputName;
             return this;
         }
 
+        /**
+         * @param outputName The name of the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputName(String outputName) {
             return outputName(Output.of(outputName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serialization Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialization(@Nullable Output<Object> serialization) {
             $.serialization = serialization;
             return this;
         }
 
+        /**
+         * @param serialization Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialization(Object serialization) {
             return serialization(Output.of(serialization));
         }

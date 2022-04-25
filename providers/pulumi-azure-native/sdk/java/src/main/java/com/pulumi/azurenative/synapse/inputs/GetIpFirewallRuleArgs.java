@@ -19,6 +19,10 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="ruleName", required=true)
     private String ruleName;
 
+    /**
+     * @return The IP firewall rule name
+     * 
+     */
     public String ruleName() {
         return this.ruleName;
     }
@@ -41,6 +49,10 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetIpFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param ruleName The IP firewall rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

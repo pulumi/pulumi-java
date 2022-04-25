@@ -13,32 +13,32 @@ import java.util.Objects;
 @CustomType
 public final class ReplicationCycleResponse {
     /**
-     * The time the replication cycle has ended.
+     * @return The time the replication cycle has ended.
      * 
      */
     private final String endTime;
     /**
-     * The current progress in percentage of this cycle.
+     * @return The current progress in percentage of this cycle.
      * 
      */
     private final Integer progress;
     /**
-     * The current progress in percentage of this cycle.
+     * @return The current progress in percentage of this cycle.
      * 
      */
     private final Integer progressPercent;
     /**
-     * The time the replication cycle has started.
+     * @return The time the replication cycle has started.
      * 
      */
     private final String startTime;
     /**
-     * The cycle&#39;s steps list reflecting its progress.
+     * @return The cycle&#39;s steps list reflecting its progress.
      * 
      */
     private final List<CycleStepResponse> steps;
     /**
-     * The accumulated duration the replication cycle was paused.
+     * @return The accumulated duration the replication cycle was paused.
      * 
      */
     private final String totalPauseDuration;
@@ -60,44 +60,44 @@ public final class ReplicationCycleResponse {
     }
 
     /**
-     * The time the replication cycle has ended.
+     * @return The time the replication cycle has ended.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The current progress in percentage of this cycle.
+     * @return The current progress in percentage of this cycle.
      * 
-    */
+     */
     public Integer progress() {
         return this.progress;
     }
     /**
-     * The current progress in percentage of this cycle.
+     * @return The current progress in percentage of this cycle.
      * 
-    */
+     */
     public Integer progressPercent() {
         return this.progressPercent;
     }
     /**
-     * The time the replication cycle has started.
+     * @return The time the replication cycle has started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The cycle&#39;s steps list reflecting its progress.
+     * @return The cycle&#39;s steps list reflecting its progress.
      * 
-    */
+     */
     public List<CycleStepResponse> steps() {
         return this.steps;
     }
     /**
-     * The accumulated duration the replication cycle was paused.
+     * @return The accumulated duration the replication cycle was paused.
      * 
-    */
+     */
     public String totalPauseDuration() {
         return this.totalPauseDuration;
     }

@@ -24,6 +24,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -35,6 +39,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="importance")
     private @Nullable Output<String> importance;
 
+    /**
+     * @return The workload group importance level.
+     * 
+     */
     public Optional<Output<String>> importance() {
         return Optional.ofNullable(this.importance);
     }
@@ -46,6 +54,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxResourcePercent", required=true)
     private Output<Integer> maxResourcePercent;
 
+    /**
+     * @return The workload group cap percentage resource.
+     * 
+     */
     public Output<Integer> maxResourcePercent() {
         return this.maxResourcePercent;
     }
@@ -57,6 +69,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxResourcePercentPerRequest")
     private @Nullable Output<Double> maxResourcePercentPerRequest;
 
+    /**
+     * @return The workload group request maximum grant percentage.
+     * 
+     */
     public Optional<Output<Double>> maxResourcePercentPerRequest() {
         return Optional.ofNullable(this.maxResourcePercentPerRequest);
     }
@@ -68,6 +84,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minResourcePercent", required=true)
     private Output<Integer> minResourcePercent;
 
+    /**
+     * @return The workload group minimum percentage resource.
+     * 
+     */
     public Output<Integer> minResourcePercent() {
         return this.minResourcePercent;
     }
@@ -79,6 +99,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minResourcePercentPerRequest", required=true)
     private Output<Double> minResourcePercentPerRequest;
 
+    /**
+     * @return The workload group request minimum grant percentage.
+     * 
+     */
     public Output<Double> minResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
@@ -90,6 +114,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryExecutionTimeout")
     private @Nullable Output<Integer> queryExecutionTimeout;
 
+    /**
+     * @return The workload group query execution timeout.
+     * 
+     */
     public Optional<Output<Integer>> queryExecutionTimeout() {
         return Optional.ofNullable(this.queryExecutionTimeout);
     }
@@ -101,6 +129,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -112,6 +144,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -123,6 +159,10 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workloadGroupName")
     private @Nullable Output<String> workloadGroupName;
 
+    /**
+     * @return The name of the workload group.
+     * 
+     */
     public Optional<Output<String>> workloadGroupName() {
         return Optional.ofNullable(this.workloadGroupName);
     }
@@ -160,92 +200,212 @@ public final class WorkloadGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkloadGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param importance The workload group importance level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importance(@Nullable Output<String> importance) {
             $.importance = importance;
             return this;
         }
 
+        /**
+         * @param importance The workload group importance level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importance(String importance) {
             return importance(Output.of(importance));
         }
 
+        /**
+         * @param maxResourcePercent The workload group cap percentage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxResourcePercent(Output<Integer> maxResourcePercent) {
             $.maxResourcePercent = maxResourcePercent;
             return this;
         }
 
+        /**
+         * @param maxResourcePercent The workload group cap percentage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxResourcePercent(Integer maxResourcePercent) {
             return maxResourcePercent(Output.of(maxResourcePercent));
         }
 
+        /**
+         * @param maxResourcePercentPerRequest The workload group request maximum grant percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxResourcePercentPerRequest(@Nullable Output<Double> maxResourcePercentPerRequest) {
             $.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
             return this;
         }
 
+        /**
+         * @param maxResourcePercentPerRequest The workload group request maximum grant percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxResourcePercentPerRequest(Double maxResourcePercentPerRequest) {
             return maxResourcePercentPerRequest(Output.of(maxResourcePercentPerRequest));
         }
 
+        /**
+         * @param minResourcePercent The workload group minimum percentage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minResourcePercent(Output<Integer> minResourcePercent) {
             $.minResourcePercent = minResourcePercent;
             return this;
         }
 
+        /**
+         * @param minResourcePercent The workload group minimum percentage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minResourcePercent(Integer minResourcePercent) {
             return minResourcePercent(Output.of(minResourcePercent));
         }
 
+        /**
+         * @param minResourcePercentPerRequest The workload group request minimum grant percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minResourcePercentPerRequest(Output<Double> minResourcePercentPerRequest) {
             $.minResourcePercentPerRequest = minResourcePercentPerRequest;
             return this;
         }
 
+        /**
+         * @param minResourcePercentPerRequest The workload group request minimum grant percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minResourcePercentPerRequest(Double minResourcePercentPerRequest) {
             return minResourcePercentPerRequest(Output.of(minResourcePercentPerRequest));
         }
 
+        /**
+         * @param queryExecutionTimeout The workload group query execution timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryExecutionTimeout(@Nullable Output<Integer> queryExecutionTimeout) {
             $.queryExecutionTimeout = queryExecutionTimeout;
             return this;
         }
 
+        /**
+         * @param queryExecutionTimeout The workload group query execution timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryExecutionTimeout(Integer queryExecutionTimeout) {
             return queryExecutionTimeout(Output.of(queryExecutionTimeout));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(@Nullable Output<String> workloadGroupName) {
             $.workloadGroupName = workloadGroupName;
             return this;
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(String workloadGroupName) {
             return workloadGroupName(Output.of(workloadGroupName));
         }

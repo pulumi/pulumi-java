@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SubjectAccessReviewStatus {
     /**
-     * Allowed is required. True if the action would be allowed, false otherwise.
+     * @return Allowed is required. True if the action would be allowed, false otherwise.
      * 
      */
     private final Boolean allowed;
     /**
-     * Denied is optional. True if the action would be denied, otherwise false. If both allowed is false and denied is false, then the authorizer has no opinion on whether to authorize the action. Denied may not be true if Allowed is true.
+     * @return Denied is optional. True if the action would be denied, otherwise false. If both allowed is false and denied is false, then the authorizer has no opinion on whether to authorize the action. Denied may not be true if Allowed is true.
      * 
      */
     private final @Nullable Boolean denied;
     /**
-     * EvaluationError is an indication that some error occurred during the authorization check. It is entirely possible to get an error and be able to continue determine authorization status in spite of it. For instance, RBAC can be missing a role, but enough roles are still present and bound to reason about the request.
+     * @return EvaluationError is an indication that some error occurred during the authorization check. It is entirely possible to get an error and be able to continue determine authorization status in spite of it. For instance, RBAC can be missing a role, but enough roles are still present and bound to reason about the request.
      * 
      */
     private final @Nullable String evaluationError;
     /**
-     * Reason is optional.  It indicates why a request was allowed or denied.
+     * @return Reason is optional.  It indicates why a request was allowed or denied.
      * 
      */
     private final @Nullable String reason;
@@ -46,30 +46,30 @@ public final class SubjectAccessReviewStatus {
     }
 
     /**
-     * Allowed is required. True if the action would be allowed, false otherwise.
+     * @return Allowed is required. True if the action would be allowed, false otherwise.
      * 
-    */
+     */
     public Boolean allowed() {
         return this.allowed;
     }
     /**
-     * Denied is optional. True if the action would be denied, otherwise false. If both allowed is false and denied is false, then the authorizer has no opinion on whether to authorize the action. Denied may not be true if Allowed is true.
+     * @return Denied is optional. True if the action would be denied, otherwise false. If both allowed is false and denied is false, then the authorizer has no opinion on whether to authorize the action. Denied may not be true if Allowed is true.
      * 
-    */
+     */
     public Optional<Boolean> denied() {
         return Optional.ofNullable(this.denied);
     }
     /**
-     * EvaluationError is an indication that some error occurred during the authorization check. It is entirely possible to get an error and be able to continue determine authorization status in spite of it. For instance, RBAC can be missing a role, but enough roles are still present and bound to reason about the request.
+     * @return EvaluationError is an indication that some error occurred during the authorization check. It is entirely possible to get an error and be able to continue determine authorization status in spite of it. For instance, RBAC can be missing a role, but enough roles are still present and bound to reason about the request.
      * 
-    */
+     */
     public Optional<String> evaluationError() {
         return Optional.ofNullable(this.evaluationError);
     }
     /**
-     * Reason is optional.  It indicates why a request was allowed or denied.
+     * @return Reason is optional.  It indicates why a request was allowed or denied.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }

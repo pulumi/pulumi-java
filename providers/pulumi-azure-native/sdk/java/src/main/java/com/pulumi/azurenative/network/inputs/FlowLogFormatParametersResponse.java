@@ -27,6 +27,10 @@ public final class FlowLogFormatParametersResponse extends com.pulumi.resources.
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The file type of flow log.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -38,6 +42,10 @@ public final class FlowLogFormatParametersResponse extends com.pulumi.resources.
     @Import(name="version")
     private @Nullable Integer version;
 
+    /**
+     * @return The version (revision) of the flow log.
+     * 
+     */
     public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
@@ -67,11 +75,23 @@ public final class FlowLogFormatParametersResponse extends com.pulumi.resources.
             $ = new FlowLogFormatParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The file type of flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version The version (revision) of the flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Integer version) {
             $.version = version;
             return this;

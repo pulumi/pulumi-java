@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LifecycleHandler {
     /**
-     * Exec specifies the action to take.
+     * @return Exec specifies the action to take.
      * 
      */
     private final @Nullable ExecAction exec;
     /**
-     * HTTPGet specifies the http request to perform.
+     * @return HTTPGet specifies the http request to perform.
      * 
      */
     private final @Nullable HTTPGetAction httpGet;
     /**
-     * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
+     * @return Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
      * 
      */
     private final @Nullable TCPSocketAction tcpSocket;
@@ -40,23 +40,23 @@ public final class LifecycleHandler {
     }
 
     /**
-     * Exec specifies the action to take.
+     * @return Exec specifies the action to take.
      * 
-    */
+     */
     public Optional<ExecAction> exec() {
         return Optional.ofNullable(this.exec);
     }
     /**
-     * HTTPGet specifies the http request to perform.
+     * @return HTTPGet specifies the http request to perform.
      * 
-    */
+     */
     public Optional<HTTPGetAction> httpGet() {
         return Optional.ofNullable(this.httpGet);
     }
     /**
-     * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
+     * @return Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
      * 
-    */
+     */
     public Optional<TCPSocketAction> tcpSocket() {
         return Optional.ofNullable(this.tcpSocket);
     }

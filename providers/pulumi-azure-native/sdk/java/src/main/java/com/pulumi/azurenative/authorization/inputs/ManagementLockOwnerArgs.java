@@ -26,6 +26,10 @@ public final class ManagementLockOwnerArgs extends com.pulumi.resources.Resource
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return The application ID of the lock owner.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -54,11 +58,23 @@ public final class ManagementLockOwnerArgs extends com.pulumi.resources.Resource
             $ = new ManagementLockOwnerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID of the lock owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The application ID of the lock owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }

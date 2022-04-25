@@ -23,6 +23,10 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="detail", required=true)
     private String detail;
 
+    /**
+     * @return Optional details of cluster&#39;s state.
+     * 
+     */
     public String detail() {
         return this.detail;
     }
@@ -34,6 +38,10 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The cluster&#39;s state.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -45,6 +53,10 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="stateStartTime", required=true)
     private String stateStartTime;
 
+    /**
+     * @return Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+     * 
+     */
     public String stateStartTime() {
         return this.stateStartTime;
     }
@@ -56,6 +68,10 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="substate", required=true)
     private String substate;
 
+    /**
+     * @return Additional state information that includes status reported by the agent.
+     * 
+     */
     public String substate() {
         return this.substate;
     }
@@ -87,21 +103,45 @@ public final class ClusterStatusResponse extends com.pulumi.resources.InvokeArgs
             $ = new ClusterStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detail Optional details of cluster&#39;s state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detail(String detail) {
             $.detail = detail;
             return this;
         }
 
+        /**
+         * @param state The cluster&#39;s state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stateStartTime Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateStartTime(String stateStartTime) {
             $.stateStartTime = stateStartTime;
             return this;
         }
 
+        /**
+         * @param substate Additional state information that includes status reported by the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substate(String substate) {
             $.substate = substate;
             return this;

@@ -22,6 +22,10 @@ public final class ModelPackageGroupPolicyState extends com.pulumi.resources.Res
     @Import(name="modelPackageGroupName")
     private @Nullable Output<String> modelPackageGroupName;
 
+    /**
+     * @return The name of the model package group.
+     * 
+     */
     public Optional<Output<String>> modelPackageGroupName() {
         return Optional.ofNullable(this.modelPackageGroupName);
     }
@@ -58,11 +62,23 @@ public final class ModelPackageGroupPolicyState extends com.pulumi.resources.Res
             $ = new ModelPackageGroupPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modelPackageGroupName The name of the model package group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
             $.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
 
+        /**
+         * @param modelPackageGroupName The name of the model package group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelPackageGroupName(String modelPackageGroupName) {
             return modelPackageGroupName(Output.of(modelPackageGroupName));
         }

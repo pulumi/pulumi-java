@@ -19,6 +19,10 @@ public final class GetVirtualClusterArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Id of the virtual cluster.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetVirtualClusterArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetVirtualClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Id of the virtual cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

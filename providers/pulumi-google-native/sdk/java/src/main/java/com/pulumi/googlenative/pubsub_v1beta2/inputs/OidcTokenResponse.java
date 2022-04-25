@@ -23,6 +23,10 @@ public final class OidcTokenResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="audience", required=true)
     private String audience;
 
+    /**
+     * @return Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used.
+     * 
+     */
     public String audience() {
         return this.audience;
     }
@@ -34,6 +38,10 @@ public final class OidcTokenResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountEmail", required=true)
     private String serviceAccountEmail;
 
+    /**
+     * @return [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating the OIDC token. The caller (for CreateSubscription, UpdateSubscription, and ModifyPushConfig RPCs) must have the iam.serviceAccounts.actAs permission for the service account.
+     * 
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -63,11 +71,23 @@ public final class OidcTokenResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OidcTokenResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating the OIDC token. The caller (for CreateSubscription, UpdateSubscription, and ModifyPushConfig RPCs) must have the iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;

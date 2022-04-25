@@ -27,6 +27,10 @@ public final class AzureBlobStorageDataArgs extends com.pulumi.resources.Resourc
     @Import(name="azureCredentials", required=true)
     private Output<AzureCredentialsArgs> azureCredentials;
 
+    /**
+     * @return Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+     * 
+     */
     public Output<AzureCredentialsArgs> azureCredentials() {
         return this.azureCredentials;
     }
@@ -38,6 +42,10 @@ public final class AzureBlobStorageDataArgs extends com.pulumi.resources.Resourc
     @Import(name="container", required=true)
     private Output<String> container;
 
+    /**
+     * @return The container to transfer from the Azure Storage account.
+     * 
+     */
     public Output<String> container() {
         return this.container;
     }
@@ -49,6 +57,10 @@ public final class AzureBlobStorageDataArgs extends com.pulumi.resources.Resourc
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -60,6 +72,10 @@ public final class AzureBlobStorageDataArgs extends com.pulumi.resources.Resourc
     @Import(name="storageAccount", required=true)
     private Output<String> storageAccount;
 
+    /**
+     * @return The name of the Azure Storage account.
+     * 
+     */
     public Output<String> storageAccount() {
         return this.storageAccount;
     }
@@ -91,38 +107,86 @@ public final class AzureBlobStorageDataArgs extends com.pulumi.resources.Resourc
             $ = new AzureBlobStorageDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureCredentials Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureCredentials(Output<AzureCredentialsArgs> azureCredentials) {
             $.azureCredentials = azureCredentials;
             return this;
         }
 
+        /**
+         * @param azureCredentials Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureCredentials(AzureCredentialsArgs azureCredentials) {
             return azureCredentials(Output.of(azureCredentials));
         }
 
+        /**
+         * @param container The container to transfer from the Azure Storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(Output<String> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container The container to transfer from the Azure Storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param path Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param storageAccount The name of the Azure Storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(Output<String> storageAccount) {
             $.storageAccount = storageAccount;
             return this;
         }
 
+        /**
+         * @param storageAccount The name of the Azure Storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(String storageAccount) {
             return storageAccount(Output.of(storageAccount));
         }

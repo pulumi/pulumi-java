@@ -22,6 +22,10 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends com.pulumi.resour
     @Import(name="cpus")
     private @Nullable Output<String> cpus;
 
+    /**
+     * @return Number of virtual CPUs to use.
+     * 
+     */
     public Optional<Output<String>> cpus() {
         return Optional.ofNullable(this.cpus);
     }
@@ -34,6 +38,11 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends com.pulumi.resour
     @Import(name="localSsd")
     private @Nullable Output<String> localSsd;
 
+    /**
+     * @return -
+     * Use local SSD
+     * 
+     */
     public Optional<Output<String>> localSsd() {
         return Optional.ofNullable(this.localSsd);
     }
@@ -45,6 +54,10 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends com.pulumi.resour
     @Import(name="memory")
     private @Nullable Output<String> memory;
 
+    /**
+     * @return Physical memory available to the node, defined in MB.
+     * 
+     */
     public Optional<Output<String>> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -75,29 +88,67 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends com.pulumi.resour
             $ = new NodeTemplateNodeTypeFlexibilityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpus Number of virtual CPUs to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpus(@Nullable Output<String> cpus) {
             $.cpus = cpus;
             return this;
         }
 
+        /**
+         * @param cpus Number of virtual CPUs to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpus(String cpus) {
             return cpus(Output.of(cpus));
         }
 
+        /**
+         * @param localSsd -
+         * Use local SSD
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsd(@Nullable Output<String> localSsd) {
             $.localSsd = localSsd;
             return this;
         }
 
+        /**
+         * @param localSsd -
+         * Use local SSD
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsd(String localSsd) {
             return localSsd(Output.of(localSsd));
         }
 
+        /**
+         * @param memory Physical memory available to the node, defined in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable Output<String> memory) {
             $.memory = memory;
             return this;
         }
 
+        /**
+         * @param memory Physical memory available to the node, defined in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(String memory) {
             return memory(Output.of(memory));
         }

@@ -62,7 +62,7 @@ public final class GetClusterResult {
     private final Boolean enableTpu;
     private final String endpoint;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -293,9 +293,9 @@ public final class GetClusterResult {
         return this.endpoint;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

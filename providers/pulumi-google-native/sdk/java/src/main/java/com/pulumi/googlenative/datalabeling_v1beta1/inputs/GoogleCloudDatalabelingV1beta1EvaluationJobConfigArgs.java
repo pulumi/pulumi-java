@@ -36,6 +36,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="bigqueryImportKeys", required=true)
     private Output<Map<String,String>> bigqueryImportKeys;
 
+    /**
+     * @return Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).
+     * 
+     */
     public Output<Map<String,String>> bigqueryImportKeys() {
         return this.bigqueryImportKeys;
     }
@@ -47,6 +51,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="boundingPolyConfig")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig;
 
+    /**
+     * @return Specify this field if your model version performs image object detection (bounding box detection). `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs>> boundingPolyConfig() {
         return Optional.ofNullable(this.boundingPolyConfig);
     }
@@ -58,6 +66,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="evaluationConfig", required=true)
     private Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig;
 
+    /**
+     * @return Details for calculating evaluation metrics and creating Evaulations. If your model version performs image object detection, you must specify the `boundingBoxEvaluationOptions` field within this configuration. Otherwise, provide an empty object for this configuration.
+     * 
+     */
     public Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig() {
         return this.evaluationConfig;
     }
@@ -69,6 +81,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="evaluationJobAlertConfig")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig;
 
+    /**
+     * @return Optional. Configuration details for evaluation job alerts. Specify this field if you want to receive email alerts if the evaluation job finds that your predictions have low mean average precision during a run.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs>> evaluationJobAlertConfig() {
         return Optional.ofNullable(this.evaluationJobAlertConfig);
     }
@@ -80,6 +96,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="exampleCount", required=true)
     private Output<Integer> exampleCount;
 
+    /**
+     * @return The maximum number of predictions to sample and save to BigQuery during each evaluation interval. This limit overrides `example_sample_percentage`: even if the service has not sampled enough predictions to fulfill `example_sample_perecentage` during an interval, it stops sampling predictions when it meets this limit.
+     * 
+     */
     public Output<Integer> exampleCount() {
         return this.exampleCount;
     }
@@ -91,6 +111,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="exampleSamplePercentage", required=true)
     private Output<Double> exampleSamplePercentage;
 
+    /**
+     * @return Fraction of predictions to sample and save to BigQuery during each evaluation interval. For example, 0.1 means 10% of predictions served by your model version get saved to BigQuery.
+     * 
+     */
     public Output<Double> exampleSamplePercentage() {
         return this.exampleSamplePercentage;
     }
@@ -102,6 +126,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="humanAnnotationConfig")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig;
 
+    /**
+     * @return Optional. Details for human annotation of your data. If you set labelMissingGroundTruth to `true` for this evaluation job, then you must specify this field. If you plan to provide your own ground truth labels, then omit this field. Note that you must create an Instruction resource before you can specify this field. Provide the name of the instruction resource in the `instruction` field within this configuration.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs>> humanAnnotationConfig() {
         return Optional.ofNullable(this.humanAnnotationConfig);
     }
@@ -113,6 +141,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="imageClassificationConfig")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig;
 
+    /**
+     * @return Specify this field if your model version performs image classification or general classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs>> imageClassificationConfig() {
         return Optional.ofNullable(this.imageClassificationConfig);
     }
@@ -124,6 +156,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="inputConfig")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig;
 
+    /**
+     * @return Rquired. Details for the sampled prediction input. Within this configuration, there are requirements for several fields: * `dataType` must be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`, `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION` (image object detection). * If your machine learning model performs classification, you must specify `classificationMetadata.isMultiLabel`. * You must specify `bigquerySource` (not `gcsSource`).
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1InputConfigArgs>> inputConfig() {
         return Optional.ofNullable(this.inputConfig);
     }
@@ -135,6 +171,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     @Import(name="textClassificationConfig")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig;
 
+    /**
+     * @return Specify this field if your model version performs text classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs>> textClassificationConfig() {
         return Optional.ofNullable(this.textClassificationConfig);
     }
@@ -172,92 +212,212 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
             $ = new GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryImportKeys Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryImportKeys(Output<Map<String,String>> bigqueryImportKeys) {
             $.bigqueryImportKeys = bigqueryImportKeys;
             return this;
         }
 
+        /**
+         * @param bigqueryImportKeys Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryImportKeys(Map<String,String> bigqueryImportKeys) {
             return bigqueryImportKeys(Output.of(bigqueryImportKeys));
         }
 
+        /**
+         * @param boundingPolyConfig Specify this field if your model version performs image object detection (bounding box detection). `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolyConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig) {
             $.boundingPolyConfig = boundingPolyConfig;
             return this;
         }
 
+        /**
+         * @param boundingPolyConfig Specify this field if your model version performs image object detection (bounding box detection). `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolyConfig(GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs boundingPolyConfig) {
             return boundingPolyConfig(Output.of(boundingPolyConfig));
         }
 
+        /**
+         * @param evaluationConfig Details for calculating evaluation metrics and creating Evaulations. If your model version performs image object detection, you must specify the `boundingBoxEvaluationOptions` field within this configuration. Otherwise, provide an empty object for this configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationConfig(Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig) {
             $.evaluationConfig = evaluationConfig;
             return this;
         }
 
+        /**
+         * @param evaluationConfig Details for calculating evaluation metrics and creating Evaulations. If your model version performs image object detection, you must specify the `boundingBoxEvaluationOptions` field within this configuration. Otherwise, provide an empty object for this configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationConfig(GoogleCloudDatalabelingV1beta1EvaluationConfigArgs evaluationConfig) {
             return evaluationConfig(Output.of(evaluationConfig));
         }
 
+        /**
+         * @param evaluationJobAlertConfig Optional. Configuration details for evaluation job alerts. Specify this field if you want to receive email alerts if the evaluation job finds that your predictions have low mean average precision during a run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationJobAlertConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig) {
             $.evaluationJobAlertConfig = evaluationJobAlertConfig;
             return this;
         }
 
+        /**
+         * @param evaluationJobAlertConfig Optional. Configuration details for evaluation job alerts. Specify this field if you want to receive email alerts if the evaluation job finds that your predictions have low mean average precision during a run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationJobAlertConfig(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs evaluationJobAlertConfig) {
             return evaluationJobAlertConfig(Output.of(evaluationJobAlertConfig));
         }
 
+        /**
+         * @param exampleCount The maximum number of predictions to sample and save to BigQuery during each evaluation interval. This limit overrides `example_sample_percentage`: even if the service has not sampled enough predictions to fulfill `example_sample_perecentage` during an interval, it stops sampling predictions when it meets this limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exampleCount(Output<Integer> exampleCount) {
             $.exampleCount = exampleCount;
             return this;
         }
 
+        /**
+         * @param exampleCount The maximum number of predictions to sample and save to BigQuery during each evaluation interval. This limit overrides `example_sample_percentage`: even if the service has not sampled enough predictions to fulfill `example_sample_perecentage` during an interval, it stops sampling predictions when it meets this limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exampleCount(Integer exampleCount) {
             return exampleCount(Output.of(exampleCount));
         }
 
+        /**
+         * @param exampleSamplePercentage Fraction of predictions to sample and save to BigQuery during each evaluation interval. For example, 0.1 means 10% of predictions served by your model version get saved to BigQuery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exampleSamplePercentage(Output<Double> exampleSamplePercentage) {
             $.exampleSamplePercentage = exampleSamplePercentage;
             return this;
         }
 
+        /**
+         * @param exampleSamplePercentage Fraction of predictions to sample and save to BigQuery during each evaluation interval. For example, 0.1 means 10% of predictions served by your model version get saved to BigQuery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exampleSamplePercentage(Double exampleSamplePercentage) {
             return exampleSamplePercentage(Output.of(exampleSamplePercentage));
         }
 
+        /**
+         * @param humanAnnotationConfig Optional. Details for human annotation of your data. If you set labelMissingGroundTruth to `true` for this evaluation job, then you must specify this field. If you plan to provide your own ground truth labels, then omit this field. Note that you must create an Instruction resource before you can specify this field. Provide the name of the instruction resource in the `instruction` field within this configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanAnnotationConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig) {
             $.humanAnnotationConfig = humanAnnotationConfig;
             return this;
         }
 
+        /**
+         * @param humanAnnotationConfig Optional. Details for human annotation of your data. If you set labelMissingGroundTruth to `true` for this evaluation job, then you must specify this field. If you plan to provide your own ground truth labels, then omit this field. Note that you must create an Instruction resource before you can specify this field. Provide the name of the instruction resource in the `instruction` field within this configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanAnnotationConfig(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs humanAnnotationConfig) {
             return humanAnnotationConfig(Output.of(humanAnnotationConfig));
         }
 
+        /**
+         * @param imageClassificationConfig Specify this field if your model version performs image classification or general classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageClassificationConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig) {
             $.imageClassificationConfig = imageClassificationConfig;
             return this;
         }
 
+        /**
+         * @param imageClassificationConfig Specify this field if your model version performs image classification or general classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageClassificationConfig(GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs imageClassificationConfig) {
             return imageClassificationConfig(Output.of(imageClassificationConfig));
         }
 
+        /**
+         * @param inputConfig Rquired. Details for the sampled prediction input. Within this configuration, there are requirements for several fields: * `dataType` must be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`, `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION` (image object detection). * If your machine learning model performs classification, you must specify `classificationMetadata.isMultiLabel`. * You must specify `bigquerySource` (not `gcsSource`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig) {
             $.inputConfig = inputConfig;
             return this;
         }
 
+        /**
+         * @param inputConfig Rquired. Details for the sampled prediction input. Within this configuration, there are requirements for several fields: * `dataType` must be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`, `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION` (image object detection). * If your machine learning model performs classification, you must specify `classificationMetadata.isMultiLabel`. * You must specify `bigquerySource` (not `gcsSource`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputConfig(GoogleCloudDatalabelingV1beta1InputConfigArgs inputConfig) {
             return inputConfig(Output.of(inputConfig));
         }
 
+        /**
+         * @param textClassificationConfig Specify this field if your model version performs text classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textClassificationConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig) {
             $.textClassificationConfig = textClassificationConfig;
             return this;
         }
 
+        /**
+         * @param textClassificationConfig Specify this field if your model version performs text classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textClassificationConfig(GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs textClassificationConfig) {
             return textClassificationConfig(Output.of(textClassificationConfig));
         }

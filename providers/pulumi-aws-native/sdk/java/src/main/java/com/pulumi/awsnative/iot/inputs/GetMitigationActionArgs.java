@@ -19,6 +19,10 @@ public final class GetMitigationActionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="actionName", required=true)
     private String actionName;
 
+    /**
+     * @return A unique identifier for the mitigation action.
+     * 
+     */
     public String actionName() {
         return this.actionName;
     }
@@ -47,6 +51,12 @@ public final class GetMitigationActionArgs extends com.pulumi.resources.InvokeAr
             $ = new GetMitigationActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionName A unique identifier for the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionName(String actionName) {
             $.actionName = actionName;
             return this;

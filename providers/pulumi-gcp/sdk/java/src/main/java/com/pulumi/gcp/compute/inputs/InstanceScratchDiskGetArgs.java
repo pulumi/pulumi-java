@@ -20,6 +20,10 @@ public final class InstanceScratchDiskGetArgs extends com.pulumi.resources.Resou
     @Import(name="interface", required=true)
     private Output<String> interface_;
 
+    /**
+     * @return The disk interface to use for attaching this disk; either SCSI or NVME.
+     * 
+     */
     public Output<String> interface_() {
         return this.interface_;
     }
@@ -48,11 +52,23 @@ public final class InstanceScratchDiskGetArgs extends com.pulumi.resources.Resou
             $ = new InstanceScratchDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interface_ The disk interface to use for attaching this disk; either SCSI or NVME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(Output<String> interface_) {
             $.interface_ = interface_;
             return this;
         }
 
+        /**
+         * @param interface_ The disk interface to use for attaching this disk; either SCSI or NVME.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(String interface_) {
             return interface_(Output.of(interface_));
         }

@@ -25,6 +25,11 @@ public final class AccessLevelsAccessLevelArgs extends com.pulumi.resources.Reso
     @Import(name="basic")
     private @Nullable Output<AccessLevelsAccessLevelBasicArgs> basic;
 
+    /**
+     * @return A set of predefined conditions for the access level and a combining function.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AccessLevelsAccessLevelBasicArgs>> basic() {
         return Optional.ofNullable(this.basic);
     }
@@ -38,6 +43,12 @@ public final class AccessLevelsAccessLevelArgs extends com.pulumi.resources.Reso
     @Import(name="custom")
     private @Nullable Output<AccessLevelsAccessLevelCustomArgs> custom;
 
+    /**
+     * @return Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+     * See CEL spec at: https://github.com/google/cel-spec.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AccessLevelsAccessLevelCustomArgs>> custom() {
         return Optional.ofNullable(this.custom);
     }
@@ -49,6 +60,10 @@ public final class AccessLevelsAccessLevelArgs extends com.pulumi.resources.Reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the expression
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +77,12 @@ public final class AccessLevelsAccessLevelArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Resource name for the Access Level. The short_name component must begin
+     * with a letter and only include alphanumeric and &#39;_&#39;.
+     * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -73,6 +94,10 @@ public final class AccessLevelsAccessLevelArgs extends com.pulumi.resources.Reso
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return Title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -105,47 +130,117 @@ public final class AccessLevelsAccessLevelArgs extends com.pulumi.resources.Reso
             $ = new AccessLevelsAccessLevelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basic A set of predefined conditions for the access level and a combining function.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basic(@Nullable Output<AccessLevelsAccessLevelBasicArgs> basic) {
             $.basic = basic;
             return this;
         }
 
+        /**
+         * @param basic A set of predefined conditions for the access level and a combining function.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basic(AccessLevelsAccessLevelBasicArgs basic) {
             return basic(Output.of(basic));
         }
 
+        /**
+         * @param custom Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+         * See CEL spec at: https://github.com/google/cel-spec.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(@Nullable Output<AccessLevelsAccessLevelCustomArgs> custom) {
             $.custom = custom;
             return this;
         }
 
+        /**
+         * @param custom Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+         * See CEL spec at: https://github.com/google/cel-spec.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(AccessLevelsAccessLevelCustomArgs custom) {
             return custom(Output.of(custom));
         }
 
+        /**
+         * @param description Description of the expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Resource name for the Access Level. The short_name component must begin
+         * with a letter and only include alphanumeric and &#39;_&#39;.
+         * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name for the Access Level. The short_name component must begin
+         * with a letter and only include alphanumeric and &#39;_&#39;.
+         * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param title Title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

@@ -19,6 +19,10 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server on which the sync agent is hosted.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -41,6 +49,10 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="syncAgentName", required=true)
     private String syncAgentName;
 
+    /**
+     * @return The name of the sync agent.
+     * 
+     */
     public String syncAgentName() {
         return this.syncAgentName;
     }
@@ -71,16 +83,34 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSyncAgentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server on which the sync agent is hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param syncAgentName The name of the sync agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncAgentName(String syncAgentName) {
             $.syncAgentName = syncAgentName;
             return this;

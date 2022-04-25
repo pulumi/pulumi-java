@@ -22,6 +22,10 @@ public final class ClientCertAuthenticationResponse extends com.pulumi.resources
     @Import(name="certificateExpirationDate")
     private @Nullable String certificateExpirationDate;
 
+    /**
+     * @return Gets or sets the certificate expiration date.
+     * 
+     */
     public Optional<String> certificateExpirationDate() {
         return Optional.ofNullable(this.certificateExpirationDate);
     }
@@ -33,6 +37,10 @@ public final class ClientCertAuthenticationResponse extends com.pulumi.resources
     @Import(name="certificateSubjectName")
     private @Nullable String certificateSubjectName;
 
+    /**
+     * @return Gets or sets the certificate subject name.
+     * 
+     */
     public Optional<String> certificateSubjectName() {
         return Optional.ofNullable(this.certificateSubjectName);
     }
@@ -44,6 +52,10 @@ public final class ClientCertAuthenticationResponse extends com.pulumi.resources
     @Import(name="certificateThumbprint")
     private @Nullable String certificateThumbprint;
 
+    /**
+     * @return Gets or sets the certificate thumbprint.
+     * 
+     */
     public Optional<String> certificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
@@ -55,6 +67,10 @@ public final class ClientCertAuthenticationResponse extends com.pulumi.resources
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Gets or sets the certificate password, return value will always be empty.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -66,6 +82,10 @@ public final class ClientCertAuthenticationResponse extends com.pulumi.resources
     @Import(name="pfx")
     private @Nullable String pfx;
 
+    /**
+     * @return Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
+     * 
+     */
     public Optional<String> pfx() {
         return Optional.ofNullable(this.pfx);
     }
@@ -78,6 +98,11 @@ public final class ClientCertAuthenticationResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Gets or sets the HTTP authentication type.
+     * Expected value is &#39;ClientCertificate&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -111,31 +136,68 @@ public final class ClientCertAuthenticationResponse extends com.pulumi.resources
             $ = new ClientCertAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateExpirationDate Gets or sets the certificate expiration date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateExpirationDate(@Nullable String certificateExpirationDate) {
             $.certificateExpirationDate = certificateExpirationDate;
             return this;
         }
 
+        /**
+         * @param certificateSubjectName Gets or sets the certificate subject name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSubjectName(@Nullable String certificateSubjectName) {
             $.certificateSubjectName = certificateSubjectName;
             return this;
         }
 
+        /**
+         * @param certificateThumbprint Gets or sets the certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             $.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
+        /**
+         * @param password Gets or sets the certificate password, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param pfx Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(@Nullable String pfx) {
             $.pfx = pfx;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the HTTP authentication type.
+         * Expected value is &#39;ClientCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

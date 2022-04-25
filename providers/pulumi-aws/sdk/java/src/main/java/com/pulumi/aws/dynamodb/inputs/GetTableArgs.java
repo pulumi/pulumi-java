@@ -23,6 +23,10 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the DynamoDB table.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -67,6 +71,12 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

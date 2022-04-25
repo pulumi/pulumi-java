@@ -25,6 +25,10 @@ public final class SkipErrorFileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dataInconsistency")
     private @Nullable Object dataInconsistency;
 
+    /**
+     * @return Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> dataInconsistency() {
         return Optional.ofNullable(this.dataInconsistency);
     }
@@ -36,6 +40,10 @@ public final class SkipErrorFileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="fileMissing")
     private @Nullable Object fileMissing;
 
+    /**
+     * @return Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> fileMissing() {
         return Optional.ofNullable(this.fileMissing);
     }
@@ -65,11 +73,23 @@ public final class SkipErrorFileResponse extends com.pulumi.resources.InvokeArgs
             $ = new SkipErrorFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataInconsistency Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataInconsistency(@Nullable Object dataInconsistency) {
             $.dataInconsistency = dataInconsistency;
             return this;
         }
 
+        /**
+         * @param fileMissing Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileMissing(@Nullable Object fileMissing) {
             $.fileMissing = fileMissing;
             return this;

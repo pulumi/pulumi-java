@@ -20,6 +20,10 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends com.pulumi.re
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the instance group.  One of `name` or `self_link` must be provided.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends com.pulumi.re
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Integer port number
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -60,11 +68,23 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends com.pulumi.re
             $ = new GetRegionInstanceGroupInstanceNamedPort(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the instance group.  One of `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param port Integer port number
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

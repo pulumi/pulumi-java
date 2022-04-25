@@ -26,6 +26,10 @@ public final class BudgetFilterPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="dimensions")
     private @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
 
+    /**
+     * @return Has comparison expression for a dimension
+     * 
+     */
     public Optional<Output<BudgetComparisonExpressionArgs>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -37,6 +41,10 @@ public final class BudgetFilterPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<BudgetComparisonExpressionArgs> tags;
 
+    /**
+     * @return Has comparison expression for a tag
+     * 
+     */
     public Optional<Output<BudgetComparisonExpressionArgs>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -66,20 +74,44 @@ public final class BudgetFilterPropertiesArgs extends com.pulumi.resources.Resou
             $ = new BudgetFilterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensions Has comparison expression for a dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable Output<BudgetComparisonExpressionArgs> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions Has comparison expression for a dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(BudgetComparisonExpressionArgs dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param tags Has comparison expression for a tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<BudgetComparisonExpressionArgs> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Has comparison expression for a tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(BudgetComparisonExpressionArgs tags) {
             return tags(Output.of(tags));
         }

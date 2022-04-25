@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StudioComponentActiveDirectoryConfiguration {
     /**
-     * &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+     * @return &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
      * 
      */
     private final @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes;
     /**
-     * &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
+     * @return &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
      * 
      */
     private final @Nullable String directoryId;
     /**
-     * &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
+     * @return &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
      * 
      */
     private final @Nullable String organizationalUnitDistinguishedName;
@@ -40,23 +40,23 @@ public final class StudioComponentActiveDirectoryConfiguration {
     }
 
     /**
-     * &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
+     * @return &lt;p&gt;A collection of custom attributes for an Active Directory computer.&lt;/p&gt;
      * 
-    */
+     */
     public List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes() {
         return this.computerAttributes == null ? List.of() : this.computerAttributes;
     }
     /**
-     * &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
+     * @return &lt;p&gt;The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> directoryId() {
         return Optional.ofNullable(this.directoryId);
     }
     /**
-     * &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
+     * @return &lt;p&gt;The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> organizationalUnitDistinguishedName() {
         return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }

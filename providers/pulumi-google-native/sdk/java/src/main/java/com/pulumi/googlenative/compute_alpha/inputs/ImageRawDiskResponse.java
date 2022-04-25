@@ -23,6 +23,10 @@ public final class ImageRawDiskResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="containerType", required=true)
     private String containerType;
 
+    /**
+     * @return The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.
+     * 
+     */
     public String containerType() {
         return this.containerType;
     }
@@ -34,6 +38,10 @@ public final class ImageRawDiskResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -63,11 +71,23 @@ public final class ImageRawDiskResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ImageRawDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerType The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param source The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;

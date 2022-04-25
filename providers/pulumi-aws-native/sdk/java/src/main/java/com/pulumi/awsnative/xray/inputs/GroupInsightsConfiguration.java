@@ -21,6 +21,10 @@ public final class GroupInsightsConfiguration extends com.pulumi.resources.Invok
     @Import(name="insightsEnabled")
     private @Nullable Boolean insightsEnabled;
 
+    /**
+     * @return Set the InsightsEnabled value to true to enable insights or false to disable insights.
+     * 
+     */
     public Optional<Boolean> insightsEnabled() {
         return Optional.ofNullable(this.insightsEnabled);
     }
@@ -32,6 +36,10 @@ public final class GroupInsightsConfiguration extends com.pulumi.resources.Invok
     @Import(name="notificationsEnabled")
     private @Nullable Boolean notificationsEnabled;
 
+    /**
+     * @return Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
+     * 
+     */
     public Optional<Boolean> notificationsEnabled() {
         return Optional.ofNullable(this.notificationsEnabled);
     }
@@ -61,11 +69,23 @@ public final class GroupInsightsConfiguration extends com.pulumi.resources.Invok
             $ = new GroupInsightsConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insightsEnabled Set the InsightsEnabled value to true to enable insights or false to disable insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insightsEnabled(@Nullable Boolean insightsEnabled) {
             $.insightsEnabled = insightsEnabled;
             return this;
         }
 
+        /**
+         * @param notificationsEnabled Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationsEnabled(@Nullable Boolean notificationsEnabled) {
             $.notificationsEnabled = notificationsEnabled;
             return this;

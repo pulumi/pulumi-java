@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class SecureStringResponse {
     /**
-     * Type of the secret.
+     * @return Type of the secret.
      * Expected value is &#39;SecureString&#39;.
      * 
      */
     private final String type;
     /**
-     * Value of secure string.
+     * @return Value of secure string.
      * 
      */
     private final String value;
@@ -30,17 +30,17 @@ public final class SecureStringResponse {
     }
 
     /**
-     * Type of the secret.
+     * @return Type of the secret.
      * Expected value is &#39;SecureString&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value of secure string.
+     * @return Value of secure string.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

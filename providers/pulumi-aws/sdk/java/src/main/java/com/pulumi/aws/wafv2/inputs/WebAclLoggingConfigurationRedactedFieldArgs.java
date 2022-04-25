@@ -32,6 +32,13 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     @Import(name="allQueryArguments")
     private @Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments;
 
+    /**
+     * @return Redact all query arguments.
+     * 
+     * @deprecated
+     * Not supported by WAFv2 API
+     * 
+     */
     @Deprecated /* Not supported by WAFv2 API */
     public Optional<Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs>> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
@@ -48,6 +55,13 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     @Import(name="body")
     private @Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body;
 
+    /**
+     * @return Redact the request body, which immediately follows the request headers.
+     * 
+     * @deprecated
+     * Not supported by WAFv2 API
+     * 
+     */
     @Deprecated /* Not supported by WAFv2 API */
     public Optional<Output<WebAclLoggingConfigurationRedactedFieldBodyArgs>> body() {
         return Optional.ofNullable(this.body);
@@ -60,6 +74,10 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     @Import(name="method")
     private @Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method;
 
+    /**
+     * @return Redact the HTTP method. Must be specified as an empty configuration block `{}`. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     public Optional<Output<WebAclLoggingConfigurationRedactedFieldMethodArgs>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -71,6 +89,10 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     @Import(name="queryString")
     private @Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString;
 
+    /**
+     * @return Redact the query string. Must be specified as an empty configuration block `{}`. This is the part of a URL that appears after a `?` character, if any.
+     * 
+     */
     public Optional<Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs>> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -82,6 +104,10 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     @Import(name="singleHeader")
     private @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader;
 
+    /**
+     * @return Redact a single header. See Single Header below for details.
+     * 
+     */
     public Optional<Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs>> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
@@ -97,6 +123,13 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     @Import(name="singleQueryArgument")
     private @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument;
 
+    /**
+     * @return Redact a single query argument. See Single Query Argument below for details.
+     * 
+     * @deprecated
+     * Not supported by WAFv2 API
+     * 
+     */
     @Deprecated /* Not supported by WAFv2 API */
     public Optional<Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs>> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
@@ -109,6 +142,10 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
     @Import(name="uriPath")
     private @Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath;
 
+    /**
+     * @return Redact the request URI path. Must be specified as an empty configuration block `{}`. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+     * 
+     */
     public Optional<Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs>> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
@@ -143,65 +180,173 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends com.pulum
             $ = new WebAclLoggingConfigurationRedactedFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allQueryArguments Redact all query arguments.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Not supported by WAFv2 API
+         * 
+         */
+        @Deprecated /* Not supported by WAFv2 API */
         public Builder allQueryArguments(@Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments) {
             $.allQueryArguments = allQueryArguments;
             return this;
         }
 
+        /**
+         * @param allQueryArguments Redact all query arguments.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Not supported by WAFv2 API
+         * 
+         */
+        @Deprecated /* Not supported by WAFv2 API */
         public Builder allQueryArguments(WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs allQueryArguments) {
             return allQueryArguments(Output.of(allQueryArguments));
         }
 
+        /**
+         * @param body Redact the request body, which immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Not supported by WAFv2 API
+         * 
+         */
+        @Deprecated /* Not supported by WAFv2 API */
         public Builder body(@Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Redact the request body, which immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Not supported by WAFv2 API
+         * 
+         */
+        @Deprecated /* Not supported by WAFv2 API */
         public Builder body(WebAclLoggingConfigurationRedactedFieldBodyArgs body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param method Redact the HTTP method. Must be specified as an empty configuration block `{}`. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Redact the HTTP method. Must be specified as an empty configuration block `{}`. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(WebAclLoggingConfigurationRedactedFieldMethodArgs method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param queryString Redact the query string. Must be specified as an empty configuration block `{}`. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString Redact the query string. Must be specified as an empty configuration block `{}`. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(WebAclLoggingConfigurationRedactedFieldQueryStringArgs queryString) {
             return queryString(Output.of(queryString));
         }
 
+        /**
+         * @param singleHeader Redact a single header. See Single Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(@Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader) {
             $.singleHeader = singleHeader;
             return this;
         }
 
+        /**
+         * @param singleHeader Redact a single header. See Single Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs singleHeader) {
             return singleHeader(Output.of(singleHeader));
         }
 
+        /**
+         * @param singleQueryArgument Redact a single query argument. See Single Query Argument below for details.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Not supported by WAFv2 API
+         * 
+         */
+        @Deprecated /* Not supported by WAFv2 API */
         public Builder singleQueryArgument(@Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument) {
             $.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
+        /**
+         * @param singleQueryArgument Redact a single query argument. See Single Query Argument below for details.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Not supported by WAFv2 API
+         * 
+         */
+        @Deprecated /* Not supported by WAFv2 API */
         public Builder singleQueryArgument(WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs singleQueryArgument) {
             return singleQueryArgument(Output.of(singleQueryArgument));
         }
 
+        /**
+         * @param uriPath Redact the request URI path. Must be specified as an empty configuration block `{}`. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(@Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath) {
             $.uriPath = uriPath;
             return this;
         }
 
+        /**
+         * @param uriPath Redact the request URI path. Must be specified as an empty configuration block `{}`. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(WebAclLoggingConfigurationRedactedFieldUriPathArgs uriPath) {
             return uriPath(Output.of(uriPath));
         }

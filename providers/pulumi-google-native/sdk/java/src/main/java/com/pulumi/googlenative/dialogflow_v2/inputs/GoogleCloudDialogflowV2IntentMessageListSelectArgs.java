@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends co
     @Import(name="items", required=true)
     private Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
 
+    /**
+     * @return List items.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items() {
         return this.items;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends co
     @Import(name="subtitle")
     private @Nullable Output<String> subtitle;
 
+    /**
+     * @return Optional. Subtitle of the list.
+     * 
+     */
     public Optional<Output<String>> subtitle() {
         return Optional.ofNullable(this.subtitle);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends co
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Optional. The overall title of the list.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -80,33 +92,75 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends co
             $ = new GoogleCloudDialogflowV2IntentMessageListSelectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items List items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items List items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items List items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(GoogleCloudDialogflowV2IntentMessageListSelectItemArgs... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param subtitle Optional. Subtitle of the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(@Nullable Output<String> subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param subtitle Optional. Subtitle of the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             return subtitle(Output.of(subtitle));
         }
 
+        /**
+         * @param title Optional. The overall title of the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Optional. The overall title of the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
     /**
-     * Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
+     * @return Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
      * 
      */
     private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
@@ -22,9 +22,9 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
     }
 
     /**
-     * Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
+     * @return Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
      * 
-    */
+     */
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns() {
         return this.columns;
     }

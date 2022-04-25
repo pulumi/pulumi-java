@@ -22,6 +22,10 @@ public final class AccessKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pgpKey")
     private @Nullable Output<String> pgpKey;
 
+    /**
+     * @return Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
+     * 
+     */
     public Optional<Output<String>> pgpKey() {
         return Optional.ofNullable(this.pgpKey);
     }
@@ -33,6 +37,10 @@ public final class AccessKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -44,6 +52,10 @@ public final class AccessKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="user", required=true)
     private Output<String> user;
 
+    /**
+     * @return IAM user to associate with this access key.
+     * 
+     */
     public Output<String> user() {
         return this.user;
     }
@@ -74,29 +86,65 @@ public final class AccessKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccessKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pgpKey Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
             $.pgpKey = pgpKey;
             return this;
         }
 
+        /**
+         * @param pgpKey Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pgpKey(String pgpKey) {
             return pgpKey(Output.of(pgpKey));
         }
 
+        /**
+         * @param status Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param user IAM user to associate with this access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user IAM user to associate with this access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }

@@ -24,6 +24,10 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the bucket.
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -35,6 +39,10 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
     @Import(name="rules")
     private @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
 
+    /**
+     * @return Configuration block(s) containing lifecycle rules for the bucket.
+     * 
+     */
     public Optional<Output<List<BucketLifecycleConfigurationRuleGetArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -64,24 +72,54 @@ public final class BucketLifecycleConfigurationState extends com.pulumi.resource
             $ = new BucketLifecycleConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Amazon Resource Name (ARN) of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Amazon Resource Name (ARN) of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param rules Configuration block(s) containing lifecycle rules for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Configuration block(s) containing lifecycle rules for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BucketLifecycleConfigurationRuleGetArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Configuration block(s) containing lifecycle rules for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BucketLifecycleConfigurationRuleGetArgs... rules) {
             return rules(List.of(rules));
         }

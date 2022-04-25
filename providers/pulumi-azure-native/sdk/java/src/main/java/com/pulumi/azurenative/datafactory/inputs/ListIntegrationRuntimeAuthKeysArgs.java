@@ -19,6 +19,10 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends com.pulumi.resourc
     @Import(name="factoryName", required=true)
     private String factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public String factoryName() {
         return this.factoryName;
     }
@@ -30,6 +34,10 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends com.pulumi.resourc
     @Import(name="integrationRuntimeName", required=true)
     private String integrationRuntimeName;
 
+    /**
+     * @return The integration runtime name.
+     * 
+     */
     public String integrationRuntimeName() {
         return this.integrationRuntimeName;
     }
@@ -41,6 +49,10 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends com.pulumi.resourc
             $ = new ListIntegrationRuntimeAuthKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param integrationRuntimeName The integration runtime name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationRuntimeName(String integrationRuntimeName) {
             $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

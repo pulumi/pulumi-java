@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class DetectorModelSns {
     private final @Nullable DetectorModelPayload payload;
     /**
-     * The ARN of the Amazon SNS target where the message is sent.
+     * @return The ARN of the Amazon SNS target where the message is sent.
      * 
      */
     private final String targetArn;
@@ -31,9 +31,9 @@ public final class DetectorModelSns {
         return Optional.ofNullable(this.payload);
     }
     /**
-     * The ARN of the Amazon SNS target where the message is sent.
+     * @return The ARN of the Amazon SNS target where the message is sent.
      * 
-    */
+     */
     public String targetArn() {
         return this.targetArn;
     }

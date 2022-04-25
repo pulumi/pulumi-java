@@ -25,6 +25,10 @@ public final class AutoscaleCapacityResponse extends com.pulumi.resources.Invoke
     @Import(name="maxInstanceCount")
     private @Nullable Integer maxInstanceCount;
 
+    /**
+     * @return The maximum instance count of the cluster
+     * 
+     */
     public Optional<Integer> maxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
@@ -36,6 +40,10 @@ public final class AutoscaleCapacityResponse extends com.pulumi.resources.Invoke
     @Import(name="minInstanceCount")
     private @Nullable Integer minInstanceCount;
 
+    /**
+     * @return The minimum instance count of the cluster
+     * 
+     */
     public Optional<Integer> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
@@ -65,11 +73,23 @@ public final class AutoscaleCapacityResponse extends com.pulumi.resources.Invoke
             $ = new AutoscaleCapacityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstanceCount The maximum instance count of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
             $.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
+        /**
+         * @param minInstanceCount The minimum instance count of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             $.minInstanceCount = minInstanceCount;
             return this;

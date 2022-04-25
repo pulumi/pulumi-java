@@ -21,38 +21,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterAddonsConfig {
     /**
-     * . Structure is documented below.
+     * @return . Structure is documented below.
      * 
      */
     private final @Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig;
     /**
-     * .
+     * @return .
      * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
      * 
      */
     private final @Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig;
     /**
-     * .
+     * @return .
      * The status of the NodeLocal DNSCache addon. It is disabled by default.
      * Set `enabled = true` to enable.
      * 
      */
     private final @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig;
     /**
-     * .
+     * @return .
      * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
      * 
      */
     private final @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig;
     /**
-     * The status of the Filestore CSI driver addon,
+     * @return The status of the Filestore CSI driver addon,
      * which allows the usage of filestore instance as volumes.
      * It is disbaled by default; set `enabled = true` to enable.
      * 
      */
     private final @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig;
     /**
-     * The status of the Horizontal Pod Autoscaling
+     * @return The status of the Horizontal Pod Autoscaling
      * addon, which increases or decreases the number of replica pods a replication controller
      * has based on the resource usage of the existing pods.
      * It is enabled by default;
@@ -61,26 +61,26 @@ public final class ClusterAddonsConfig {
      */
     private final @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling;
     /**
-     * The status of the HTTP (L7) load balancing
+     * @return The status of the HTTP (L7) load balancing
      * controller addon, which makes it easy to set up HTTP load balancers for services in a
      * cluster. It is enabled by default; set `disabled = true` to disable.
      * 
      */
     private final @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing;
     /**
-     * .
+     * @return .
      * Structure is documented below.
      * 
      */
     private final @Nullable ClusterAddonsConfigIstioConfig istioConfig;
     /**
-     * .
+     * @return .
      * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
      * 
      */
     private final @Nullable ClusterAddonsConfigKalmConfig kalmConfig;
     /**
-     * Whether we should enable the network policy addon
+     * @return Whether we should enable the network policy addon
      * for the master.  This must be enabled in order to enable network policy for the nodes.
      * To enable this, you must also define a `network_policy` block,
      * otherwise nothing will happen.
@@ -115,91 +115,91 @@ public final class ClusterAddonsConfig {
     }
 
     /**
-     * . Structure is documented below.
+     * @return . Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigCloudrunConfig> cloudrunConfig() {
         return Optional.ofNullable(this.cloudrunConfig);
     }
     /**
-     * .
+     * @return .
      * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigConfigConnectorConfig> configConnectorConfig() {
         return Optional.ofNullable(this.configConnectorConfig);
     }
     /**
-     * .
+     * @return .
      * The status of the NodeLocal DNSCache addon. It is disabled by default.
      * Set `enabled = true` to enable.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigDnsCacheConfig> dnsCacheConfig() {
         return Optional.ofNullable(this.dnsCacheConfig);
     }
     /**
-     * .
+     * @return .
      * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfig() {
         return Optional.ofNullable(this.gcePersistentDiskCsiDriverConfig);
     }
     /**
-     * The status of the Filestore CSI driver addon,
+     * @return The status of the Filestore CSI driver addon,
      * which allows the usage of filestore instance as volumes.
      * It is disbaled by default; set `enabled = true` to enable.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfig() {
         return Optional.ofNullable(this.gcpFilestoreCsiDriverConfig);
     }
     /**
-     * The status of the Horizontal Pod Autoscaling
+     * @return The status of the Horizontal Pod Autoscaling
      * addon, which increases or decreases the number of replica pods a replication controller
      * has based on the resource usage of the existing pods.
      * It is enabled by default;
      * set `disabled = true` to disable.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscaling() {
         return Optional.ofNullable(this.horizontalPodAutoscaling);
     }
     /**
-     * The status of the HTTP (L7) load balancing
+     * @return The status of the HTTP (L7) load balancing
      * controller addon, which makes it easy to set up HTTP load balancers for services in a
      * cluster. It is enabled by default; set `disabled = true` to disable.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigHttpLoadBalancing> httpLoadBalancing() {
         return Optional.ofNullable(this.httpLoadBalancing);
     }
     /**
-     * .
+     * @return .
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigIstioConfig> istioConfig() {
         return Optional.ofNullable(this.istioConfig);
     }
     /**
-     * .
+     * @return .
      * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigKalmConfig> kalmConfig() {
         return Optional.ofNullable(this.kalmConfig);
     }
     /**
-     * Whether we should enable the network policy addon
+     * @return Whether we should enable the network policy addon
      * for the master.  This must be enabled in order to enable network policy for the nodes.
      * To enable this, you must also define a `network_policy` block,
      * otherwise nothing will happen.
      * It can only be disabled if the nodes already do not have network policies enabled.
      * Defaults to disabled; set `disabled = false` to enable.
      * 
-    */
+     */
     public Optional<ClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfig() {
         return Optional.ofNullable(this.networkPolicyConfig);
     }

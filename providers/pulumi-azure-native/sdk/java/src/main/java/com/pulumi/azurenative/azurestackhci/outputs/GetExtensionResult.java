@@ -16,92 +16,92 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExtensionResult {
     /**
-     * Aggregate state of Arc Extensions across the nodes in this HCI cluster.
+     * @return Aggregate state of Arc Extensions across the nodes in this HCI cluster.
      * 
      */
     private final String aggregateState;
     /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
     private final @Nullable Boolean autoUpgradeMinorVersion;
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
      */
     private final @Nullable String createdAt;
     /**
-     * The identity that created the resource.
+     * @return The identity that created the resource.
      * 
      */
     private final @Nullable String createdBy;
     /**
-     * The type of identity that created the resource.
+     * @return The type of identity that created the resource.
      * 
      */
     private final @Nullable String createdByType;
     /**
-     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
     private final @Nullable String forceUpdateTag;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The timestamp of resource last modification (UTC)
+     * @return The timestamp of resource last modification (UTC)
      * 
      */
     private final @Nullable String lastModifiedAt;
     /**
-     * The identity that last modified the resource.
+     * @return The identity that last modified the resource.
      * 
      */
     private final @Nullable String lastModifiedBy;
     /**
-     * The type of identity that last modified the resource.
+     * @return The type of identity that last modified the resource.
      * 
      */
     private final @Nullable String lastModifiedByType;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * State of Arc Extension in each of the nodes.
+     * @return State of Arc Extension in each of the nodes.
      * 
      */
     private final List<PerNodeExtensionStateResponse> perNodeExtensionDetails;
     /**
-     * Protected settings (may contain secrets).
+     * @return Protected settings (may contain secrets).
      * 
      */
     private final @Nullable Object protectedSettings;
     /**
-     * Provisioning state of the Extension proxy resource.
+     * @return Provisioning state of the Extension proxy resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The name of the extension handler publisher.
+     * @return The name of the extension handler publisher.
      * 
      */
     private final @Nullable String publisher;
     /**
-     * Json formatted public settings for the extension.
+     * @return Json formatted public settings for the extension.
      * 
      */
     private final @Nullable Object settings;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * Specifies the version of the script handler.
+     * @return Specifies the version of the script handler.
      * 
      */
     private final @Nullable String typeHandlerVersion;
@@ -147,128 +147,128 @@ public final class GetExtensionResult {
     }
 
     /**
-     * Aggregate state of Arc Extensions across the nodes in this HCI cluster.
+     * @return Aggregate state of Arc Extensions across the nodes in this HCI cluster.
      * 
-    */
+     */
     public String aggregateState() {
         return this.aggregateState;
     }
     /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
-    */
+     */
     public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
-     * The identity that created the resource.
+     * @return The identity that created the resource.
      * 
-    */
+     */
     public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The type of identity that created the resource.
+     * @return The type of identity that created the resource.
      * 
-    */
+     */
     public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
-     * How the extension handler should be forced to update even if the extension configuration has not changed.
+     * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
-    */
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The timestamp of resource last modification (UTC)
+     * @return The timestamp of resource last modification (UTC)
      * 
-    */
+     */
     public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
-     * The identity that last modified the resource.
+     * @return The identity that last modified the resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
-     * The type of identity that last modified the resource.
+     * @return The type of identity that last modified the resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of Arc Extension in each of the nodes.
+     * @return State of Arc Extension in each of the nodes.
      * 
-    */
+     */
     public List<PerNodeExtensionStateResponse> perNodeExtensionDetails() {
         return this.perNodeExtensionDetails;
     }
     /**
-     * Protected settings (may contain secrets).
+     * @return Protected settings (may contain secrets).
      * 
-    */
+     */
     public Optional<Object> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
     /**
-     * Provisioning state of the Extension proxy resource.
+     * @return Provisioning state of the Extension proxy resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The name of the extension handler publisher.
+     * @return The name of the extension handler publisher.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * Json formatted public settings for the extension.
+     * @return Json formatted public settings for the extension.
      * 
-    */
+     */
     public Optional<Object> settings() {
         return Optional.ofNullable(this.settings);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies the version of the script handler.
+     * @return Specifies the version of the script handler.
      * 
-    */
+     */
     public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }

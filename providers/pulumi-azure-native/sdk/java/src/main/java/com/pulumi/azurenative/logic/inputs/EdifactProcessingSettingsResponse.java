@@ -23,6 +23,10 @@ public final class EdifactProcessingSettingsResponse extends com.pulumi.resource
     @Import(name="createEmptyXmlTagsForTrailingSeparators", required=true)
     private Boolean createEmptyXmlTagsForTrailingSeparators;
 
+    /**
+     * @return The value indicating whether to create empty xml tags for trailing separators.
+     * 
+     */
     public Boolean createEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
     }
@@ -34,6 +38,10 @@ public final class EdifactProcessingSettingsResponse extends com.pulumi.resource
     @Import(name="maskSecurityInfo", required=true)
     private Boolean maskSecurityInfo;
 
+    /**
+     * @return The value indicating whether to mask security information.
+     * 
+     */
     public Boolean maskSecurityInfo() {
         return this.maskSecurityInfo;
     }
@@ -45,6 +53,10 @@ public final class EdifactProcessingSettingsResponse extends com.pulumi.resource
     @Import(name="preserveInterchange", required=true)
     private Boolean preserveInterchange;
 
+    /**
+     * @return The value indicating whether to preserve interchange.
+     * 
+     */
     public Boolean preserveInterchange() {
         return this.preserveInterchange;
     }
@@ -56,6 +68,10 @@ public final class EdifactProcessingSettingsResponse extends com.pulumi.resource
     @Import(name="suspendInterchangeOnError", required=true)
     private Boolean suspendInterchangeOnError;
 
+    /**
+     * @return The value indicating whether to suspend interchange on error.
+     * 
+     */
     public Boolean suspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
     }
@@ -67,6 +83,10 @@ public final class EdifactProcessingSettingsResponse extends com.pulumi.resource
     @Import(name="useDotAsDecimalSeparator", required=true)
     private Boolean useDotAsDecimalSeparator;
 
+    /**
+     * @return The value indicating whether to use dot as decimal separator.
+     * 
+     */
     public Boolean useDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
     }
@@ -99,26 +119,56 @@ public final class EdifactProcessingSettingsResponse extends com.pulumi.resource
             $ = new EdifactProcessingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createEmptyXmlTagsForTrailingSeparators The value indicating whether to create empty xml tags for trailing separators.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
             $.createEmptyXmlTagsForTrailingSeparators = createEmptyXmlTagsForTrailingSeparators;
             return this;
         }
 
+        /**
+         * @param maskSecurityInfo The value indicating whether to mask security information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maskSecurityInfo(Boolean maskSecurityInfo) {
             $.maskSecurityInfo = maskSecurityInfo;
             return this;
         }
 
+        /**
+         * @param preserveInterchange The value indicating whether to preserve interchange.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveInterchange(Boolean preserveInterchange) {
             $.preserveInterchange = preserveInterchange;
             return this;
         }
 
+        /**
+         * @param suspendInterchangeOnError The value indicating whether to suspend interchange on error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendInterchangeOnError(Boolean suspendInterchangeOnError) {
             $.suspendInterchangeOnError = suspendInterchangeOnError;
             return this;
         }
 
+        /**
+         * @param useDotAsDecimalSeparator The value indicating whether to use dot as decimal separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
             $.useDotAsDecimalSeparator = useDotAsDecimalSeparator;
             return this;

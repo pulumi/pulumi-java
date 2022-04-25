@@ -25,6 +25,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterQueueUrl")
     private @Nullable Output<String> deadLetterQueueUrl;
 
+    /**
+     * @return The URL of the SQS dead letter queue
+     * 
+     */
     public Optional<Output<String>> deadLetterQueueUrl() {
         return Optional.ofNullable(this.deadLetterQueueUrl);
     }
@@ -36,6 +40,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultEncryptionKey")
     private @Nullable Output<String> defaultEncryptionKey;
 
+    /**
+     * @return The default encryption key
+     * 
+     */
     public Optional<Output<String>> defaultEncryptionKey() {
         return Optional.ofNullable(this.defaultEncryptionKey);
     }
@@ -47,6 +55,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultExpirationDays")
     private @Nullable Output<Integer> defaultExpirationDays;
 
+    /**
+     * @return The default number of days until the data within the domain expires.
+     * 
+     */
     public Optional<Output<Integer>> defaultExpirationDays() {
         return Optional.ofNullable(this.defaultExpirationDays);
     }
@@ -58,6 +70,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The unique name of the domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -69,6 +85,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DomainTagArgs>> tags;
 
+    /**
+     * @return The tags (keys and values) associated with the domain
+     * 
+     */
     public Optional<Output<List<DomainTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,51 +121,117 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deadLetterQueueUrl The URL of the SQS dead letter queue
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterQueueUrl(@Nullable Output<String> deadLetterQueueUrl) {
             $.deadLetterQueueUrl = deadLetterQueueUrl;
             return this;
         }
 
+        /**
+         * @param deadLetterQueueUrl The URL of the SQS dead letter queue
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterQueueUrl(String deadLetterQueueUrl) {
             return deadLetterQueueUrl(Output.of(deadLetterQueueUrl));
         }
 
+        /**
+         * @param defaultEncryptionKey The default encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEncryptionKey(@Nullable Output<String> defaultEncryptionKey) {
             $.defaultEncryptionKey = defaultEncryptionKey;
             return this;
         }
 
+        /**
+         * @param defaultEncryptionKey The default encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEncryptionKey(String defaultEncryptionKey) {
             return defaultEncryptionKey(Output.of(defaultEncryptionKey));
         }
 
+        /**
+         * @param defaultExpirationDays The default number of days until the data within the domain expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultExpirationDays(@Nullable Output<Integer> defaultExpirationDays) {
             $.defaultExpirationDays = defaultExpirationDays;
             return this;
         }
 
+        /**
+         * @param defaultExpirationDays The default number of days until the data within the domain expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultExpirationDays(Integer defaultExpirationDays) {
             return defaultExpirationDays(Output.of(defaultExpirationDays));
         }
 
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DomainTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DomainTagArgs... tags) {
             return tags(List.of(tags));
         }

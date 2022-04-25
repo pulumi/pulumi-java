@@ -28,6 +28,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="dataDiskIds")
     private @Nullable List<String> dataDiskIds;
 
+    /**
+     * @return Gets data disks blob uri for the virtual machine.
+     * 
+     */
     public Optional<List<String>> dataDiskIds() {
         return Optional.ofNullable(this.dataDiskIds);
     }
@@ -39,6 +43,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="dataDisks")
     private @Nullable List<ComputeDataDiskResponse> dataDisks;
 
+    /**
+     * @return Gets all data disks attached to the virtual machine.
+     * 
+     */
     public Optional<List<ComputeDataDiskResponse>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -50,6 +58,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="networkInterfaceId")
     private @Nullable String networkInterfaceId;
 
+    /**
+     * @return Gets the network interface ID of the virtual machine.
+     * 
+     */
     public Optional<String> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
@@ -61,6 +73,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="osDiskId")
     private @Nullable String osDiskId;
 
+    /**
+     * @return Gets OS disk blob uri for the virtual machine.
+     * 
+     */
     public Optional<String> osDiskId() {
         return Optional.ofNullable(this.osDiskId);
     }
@@ -72,6 +88,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return Gets the OS type of the virtual machine.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -83,6 +103,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="statuses")
     private @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
 
+    /**
+     * @return Gets the statuses of the virtual machine.
+     * 
+     */
     public Optional<List<ComputeVmInstanceViewStatusResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -94,6 +118,10 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="vmSize")
     private @Nullable String vmSize;
 
+    /**
+     * @return Gets the size of the virtual machine.
+     * 
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -128,48 +156,108 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
             $ = new ComputeVmPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDiskIds Gets data disks blob uri for the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskIds(@Nullable List<String> dataDiskIds) {
             $.dataDiskIds = dataDiskIds;
             return this;
         }
 
+        /**
+         * @param dataDiskIds Gets data disks blob uri for the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskIds(String... dataDiskIds) {
             return dataDiskIds(List.of(dataDiskIds));
         }
 
+        /**
+         * @param dataDisks Gets all data disks attached to the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable List<ComputeDataDiskResponse> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Gets all data disks attached to the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(ComputeDataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param networkInterfaceId Gets the network interface ID of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param osDiskId Gets OS disk blob uri for the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskId(@Nullable String osDiskId) {
             $.osDiskId = osDiskId;
             return this;
         }
 
+        /**
+         * @param osType Gets the OS type of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param statuses Gets the statuses of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<ComputeVmInstanceViewStatusResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses Gets the statuses of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(ComputeVmInstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
 
+        /**
+         * @param vmSize Gets the size of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable String vmSize) {
             $.vmSize = vmSize;
             return this;

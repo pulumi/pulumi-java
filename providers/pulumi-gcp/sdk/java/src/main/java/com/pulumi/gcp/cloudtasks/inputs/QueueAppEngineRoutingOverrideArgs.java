@@ -23,6 +23,11 @@ public final class QueueAppEngineRoutingOverrideArgs extends com.pulumi.resource
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return -
+     * The host that the task is sent to.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -35,6 +40,11 @@ public final class QueueAppEngineRoutingOverrideArgs extends com.pulumi.resource
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return App instance.
+     * By default, the task is sent to an instance which is available when the task is attempted.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -47,6 +57,11 @@ public final class QueueAppEngineRoutingOverrideArgs extends com.pulumi.resource
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return App service.
+     * By default, the task is sent to the service which is the default service when the task is attempted.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -59,6 +74,11 @@ public final class QueueAppEngineRoutingOverrideArgs extends com.pulumi.resource
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return App version.
+     * By default, the task is sent to the version which is the default version when the task is attempted.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -90,38 +110,94 @@ public final class QueueAppEngineRoutingOverrideArgs extends com.pulumi.resource
             $ = new QueueAppEngineRoutingOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host -
+         * The host that the task is sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host -
+         * The host that the task is sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param instance App instance.
+         * By default, the task is sent to an instance which is available when the task is attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance App instance.
+         * By default, the task is sent to an instance which is available when the task is attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param service App service.
+         * By default, the task is sent to the service which is the default service when the task is attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service App service.
+         * By default, the task is sent to the service which is the default service when the task is attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param version App version.
+         * By default, the task is sent to the version which is the default version when the task is attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version App version.
+         * By default, the task is sent to the version which is the default version when the task is attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

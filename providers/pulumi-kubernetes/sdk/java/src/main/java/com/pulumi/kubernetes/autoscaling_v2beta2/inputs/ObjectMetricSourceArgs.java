@@ -33,6 +33,10 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="metric", required=true)
     private Output<MetricIdentifierArgs> metric;
 
+    /**
+     * @return metric identifies the target metric by name and selector
+     * 
+     */
     public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
@@ -44,6 +48,10 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="target", required=true)
     private Output<MetricTargetArgs> target;
 
+    /**
+     * @return target specifies the target value for the given metric
+     * 
+     */
     public Output<MetricTargetArgs> target() {
         return this.target;
     }
@@ -83,20 +91,44 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
             return describedObject(Output.of(describedObject));
         }
 
+        /**
+         * @param metric metric identifies the target metric by name and selector
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(Output<MetricIdentifierArgs> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric metric identifies the target metric by name and selector
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(MetricIdentifierArgs metric) {
             return metric(Output.of(metric));
         }
 
+        /**
+         * @param target target specifies the target value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<MetricTargetArgs> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target target specifies the target value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(MetricTargetArgs target) {
             return target(Output.of(target));
         }

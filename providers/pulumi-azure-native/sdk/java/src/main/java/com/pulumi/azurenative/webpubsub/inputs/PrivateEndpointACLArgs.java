@@ -29,6 +29,10 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
     @Import(name="allow")
     private @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow;
 
+    /**
+     * @return Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     * 
+     */
     public Optional<Output<List<Either<String,WebPubSubRequestType>>>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -40,6 +44,10 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
     @Import(name="deny")
     private @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny;
 
+    /**
+     * @return Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     * 
+     */
     public Optional<Output<List<Either<String,WebPubSubRequestType>>>> deny() {
         return Optional.ofNullable(this.deny);
     }
@@ -51,6 +59,10 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the private endpoint connection
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -81,37 +93,85 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
             $ = new PrivateEndpointACLArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable Output<List<Either<String,WebPubSubRequestType>>> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(List<Either<String,WebPubSubRequestType>> allow) {
             return allow(Output.of(allow));
         }
 
+        /**
+         * @param allow Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(Either<String,WebPubSubRequestType>... allow) {
             return allow(List.of(allow));
         }
 
+        /**
+         * @param deny Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deny(@Nullable Output<List<Either<String,WebPubSubRequestType>>> deny) {
             $.deny = deny;
             return this;
         }
 
+        /**
+         * @param deny Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deny(List<Either<String,WebPubSubRequestType>> deny) {
             return deny(Output.of(deny));
         }
 
+        /**
+         * @param deny Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deny(Either<String,WebPubSubRequestType>... deny) {
             return deny(List.of(deny));
         }
 
+        /**
+         * @param name Name of the private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

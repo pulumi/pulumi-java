@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
     @Import(name="audioEncoding", required=true)
     private String audioEncoding;
 
+    /**
+     * @return Audio encoding of the audio content to process.
+     * 
+     */
     public String audioEncoding() {
         return this.audioEncoding;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
     @Import(name="enableWordInfo", required=true)
     private Boolean enableWordInfo;
 
+    /**
+     * @return Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn&#39;t return any word-level information.
+     * 
+     */
     public Boolean enableWordInfo() {
         return this.enableWordInfo;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
     @Import(name="model", required=true)
     private String model;
 
+    /**
+     * @return Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.
+     * 
+     */
     public String model() {
         return this.model;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
     @Import(name="modelVariant", required=true)
     private String modelVariant;
 
+    /**
+     * @return Optional. Which variant of the Speech model to use.
+     * 
+     */
     public String modelVariant() {
         return this.modelVariant;
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
     @Import(name="phraseHints", required=true)
     private List<String> phraseHints;
 
+    /**
+     * @return Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.
+     * 
+     */
     public List<String> phraseHints() {
         return this.phraseHints;
     }
@@ -81,6 +101,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
     @Import(name="sampleRateHertz", required=true)
     private Integer sampleRateHertz;
 
+    /**
+     * @return Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
+     * 
+     */
     public Integer sampleRateHertz() {
         return this.sampleRateHertz;
     }
@@ -92,6 +116,10 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
     @Import(name="singleUtterance", required=true)
     private Boolean singleUtterance;
 
+    /**
+     * @return Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio&#39;s voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
+     * 
+     */
     public Boolean singleUtterance() {
         return this.singleUtterance;
     }
@@ -126,40 +154,88 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
             $ = new GoogleCloudDialogflowCxV3InputAudioConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioEncoding Audio encoding of the audio content to process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioEncoding(String audioEncoding) {
             $.audioEncoding = audioEncoding;
             return this;
         }
 
+        /**
+         * @param enableWordInfo Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn&#39;t return any word-level information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableWordInfo(Boolean enableWordInfo) {
             $.enableWordInfo = enableWordInfo;
             return this;
         }
 
+        /**
+         * @param model Optional. Which Speech model to select for the given request. Select the model best suited to your domain to get best results. If a model is not explicitly specified, then we auto-select a model based on the parameters in the InputAudioConfig. If enhanced speech model is enabled for the agent and an enhanced version of the specified model for the language does not exist, then the speech is recognized using the standard version of the specified model. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(String model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param modelVariant Optional. Which variant of the Speech model to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelVariant(String modelVariant) {
             $.modelVariant = modelVariant;
             return this;
         }
 
+        /**
+         * @param phraseHints Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseHints(List<String> phraseHints) {
             $.phraseHints = phraseHints;
             return this;
         }
 
+        /**
+         * @param phraseHints Optional. A list of strings containing words and phrases that the speech recognizer should recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phraseHints(String... phraseHints) {
             return phraseHints(List.of(phraseHints));
         }
 
+        /**
+         * @param sampleRateHertz Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRateHertz(Integer sampleRateHertz) {
             $.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
+        /**
+         * @param singleUtterance Optional. If `false` (default), recognition does not cease until the client closes the stream. If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it detects the audio&#39;s voice has stopped or paused. In this case, once a detected intent is received, the client should close the stream and start a new request with a new stream as needed. Note: This setting is relevant only for streaming methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleUtterance(Boolean singleUtterance) {
             $.singleUtterance = singleUtterance;
             return this;

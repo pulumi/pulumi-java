@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomImagePropertiesFromPlanResponse {
     /**
-     * The id of the plan, equivalent to name of the plan
+     * @return The id of the plan, equivalent to name of the plan
      * 
      */
     private final @Nullable String id;
     /**
-     * The offer for the plan from the marketplace image the custom image is derived from
+     * @return The offer for the plan from the marketplace image the custom image is derived from
      * 
      */
     private final @Nullable String offer;
     /**
-     * The publisher for the plan from the marketplace image the custom image is derived from
+     * @return The publisher for the plan from the marketplace image the custom image is derived from
      * 
      */
     private final @Nullable String publisher;
@@ -38,23 +38,23 @@ public final class CustomImagePropertiesFromPlanResponse {
     }
 
     /**
-     * The id of the plan, equivalent to name of the plan
+     * @return The id of the plan, equivalent to name of the plan
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The offer for the plan from the marketplace image the custom image is derived from
+     * @return The offer for the plan from the marketplace image the custom image is derived from
      * 
-    */
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
-     * The publisher for the plan from the marketplace image the custom image is derived from
+     * @return The publisher for the plan from the marketplace image the custom image is derived from
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }

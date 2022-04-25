@@ -22,6 +22,10 @@ public final class DataSourceParametersAthenaGetArgs extends com.pulumi.resource
     @Import(name="workGroup")
     private @Nullable Output<String> workGroup;
 
+    /**
+     * @return The work-group to which to connect.
+     * 
+     */
     public Optional<Output<String>> workGroup() {
         return Optional.ofNullable(this.workGroup);
     }
@@ -50,11 +54,23 @@ public final class DataSourceParametersAthenaGetArgs extends com.pulumi.resource
             $ = new DataSourceParametersAthenaGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workGroup The work-group to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(@Nullable Output<String> workGroup) {
             $.workGroup = workGroup;
             return this;
         }
 
+        /**
+         * @param workGroup The work-group to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroup(String workGroup) {
             return workGroup(Output.of(workGroup));
         }

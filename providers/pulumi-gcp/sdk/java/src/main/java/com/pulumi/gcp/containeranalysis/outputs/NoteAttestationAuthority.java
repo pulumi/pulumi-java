@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class NoteAttestationAuthority {
     /**
-     * This submessage provides human-readable hints about the purpose of
+     * @return This submessage provides human-readable hints about the purpose of
      * the AttestationAuthority. Because the name of a Note acts as its
      * resource reference, it is important to disambiguate the canonical
      * name of the Note (which might be a UUID for security purposes)
@@ -29,7 +29,7 @@ public final class NoteAttestationAuthority {
     }
 
     /**
-     * This submessage provides human-readable hints about the purpose of
+     * @return This submessage provides human-readable hints about the purpose of
      * the AttestationAuthority. Because the name of a Note acts as its
      * resource reference, it is important to disambiguate the canonical
      * name of the Note (which might be a UUID for security purposes)
@@ -39,7 +39,7 @@ public final class NoteAttestationAuthority {
      * Attestations to verify.
      * Structure is documented below.
      * 
-    */
+     */
     public NoteAttestationAuthorityHint hint() {
         return this.hint;
     }

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListVMHostResult {
     /**
-     * Link to the next Vm resource Id, if any.
+     * @return Link to the next Vm resource Id, if any.
      * 
      */
     private final @Nullable String nextLink;
     /**
-     * Results of a list operation.
+     * @return Results of a list operation.
      * 
      */
     private final @Nullable List<VMResourcesResponse> value;
@@ -33,16 +33,16 @@ public final class ListVMHostResult {
     }
 
     /**
-     * Link to the next Vm resource Id, if any.
+     * @return Link to the next Vm resource Id, if any.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * Results of a list operation.
+     * @return Results of a list operation.
      * 
-    */
+     */
     public List<VMResourcesResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

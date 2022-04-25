@@ -27,6 +27,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="duration")
     private @Nullable Output<String> duration;
 
+    /**
+     * @return Optional. Duration of the patch. After the duration ends, the patch times out.
+     * 
+     */
     public Optional<Output<String>> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -49,6 +57,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceFilter", required=true)
     private Output<PatchInstanceFilterArgs> instanceFilter;
 
+    /**
+     * @return VM instances to patch.
+     * 
+     */
     public Output<PatchInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
     }
@@ -60,6 +72,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +87,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="oneTimeSchedule", required=true)
     private Output<OneTimeScheduleArgs> oneTimeSchedule;
 
+    /**
+     * @return Schedule a one-time execution.
+     * 
+     */
     public Output<OneTimeScheduleArgs> oneTimeSchedule() {
         return this.oneTimeSchedule;
     }
@@ -82,6 +102,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="patchConfig")
     private @Nullable Output<PatchConfigArgs> patchConfig;
 
+    /**
+     * @return Optional. Patch configuration that is applied.
+     * 
+     */
     public Optional<Output<PatchConfigArgs>> patchConfig() {
         return Optional.ofNullable(this.patchConfig);
     }
@@ -107,6 +131,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="recurringSchedule", required=true)
     private Output<RecurringScheduleArgs> recurringSchedule;
 
+    /**
+     * @return Schedule recurring executions.
+     * 
+     */
     public Output<RecurringScheduleArgs> recurringSchedule() {
         return this.recurringSchedule;
     }
@@ -118,6 +146,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="rollout")
     private @Nullable Output<PatchRolloutArgs> rollout;
 
+    /**
+     * @return Optional. Rollout strategy of the patch job.
+     * 
+     */
     public Optional<Output<PatchRolloutArgs>> rollout() {
         return Optional.ofNullable(this.rollout);
     }
@@ -155,56 +187,128 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
             $ = new PatchDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param duration Optional. Duration of the patch. After the duration ends, the patch times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable Output<String> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration Optional. Duration of the patch. After the duration ends, the patch times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param instanceFilter VM instances to patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(Output<PatchInstanceFilterArgs> instanceFilter) {
             $.instanceFilter = instanceFilter;
             return this;
         }
 
+        /**
+         * @param instanceFilter VM instances to patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(PatchInstanceFilterArgs instanceFilter) {
             return instanceFilter(Output.of(instanceFilter));
         }
 
+        /**
+         * @param name Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param oneTimeSchedule Schedule a one-time execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneTimeSchedule(Output<OneTimeScheduleArgs> oneTimeSchedule) {
             $.oneTimeSchedule = oneTimeSchedule;
             return this;
         }
 
+        /**
+         * @param oneTimeSchedule Schedule a one-time execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneTimeSchedule(OneTimeScheduleArgs oneTimeSchedule) {
             return oneTimeSchedule(Output.of(oneTimeSchedule));
         }
 
+        /**
+         * @param patchConfig Optional. Patch configuration that is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchConfig(@Nullable Output<PatchConfigArgs> patchConfig) {
             $.patchConfig = patchConfig;
             return this;
         }
 
+        /**
+         * @param patchConfig Optional. Patch configuration that is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchConfig(PatchConfigArgs patchConfig) {
             return patchConfig(Output.of(patchConfig));
         }
@@ -227,20 +331,44 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
             return project(Output.of(project));
         }
 
+        /**
+         * @param recurringSchedule Schedule recurring executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringSchedule(Output<RecurringScheduleArgs> recurringSchedule) {
             $.recurringSchedule = recurringSchedule;
             return this;
         }
 
+        /**
+         * @param recurringSchedule Schedule recurring executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringSchedule(RecurringScheduleArgs recurringSchedule) {
             return recurringSchedule(Output.of(recurringSchedule));
         }
 
+        /**
+         * @param rollout Optional. Rollout strategy of the patch job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(@Nullable Output<PatchRolloutArgs> rollout) {
             $.rollout = rollout;
             return this;
         }
 
+        /**
+         * @param rollout Optional. Rollout strategy of the patch job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(PatchRolloutArgs rollout) {
             return rollout(Output.of(rollout));
         }

@@ -22,6 +22,12 @@ public final class QueueStackdriverLoggingConfigArgs extends com.pulumi.resource
     @Import(name="samplingRatio", required=true)
     private Output<Double> samplingRatio;
 
+    /**
+     * @return Specifies the fraction of operations to write to Stackdriver Logging.
+     * This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+     * default and means that no operations are logged.
+     * 
+     */
     public Output<Double> samplingRatio() {
         return this.samplingRatio;
     }
@@ -50,11 +56,27 @@ public final class QueueStackdriverLoggingConfigArgs extends com.pulumi.resource
             $ = new QueueStackdriverLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param samplingRatio Specifies the fraction of operations to write to Stackdriver Logging.
+         * This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+         * default and means that no operations are logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRatio(Output<Double> samplingRatio) {
             $.samplingRatio = samplingRatio;
             return this;
         }
 
+        /**
+         * @param samplingRatio Specifies the fraction of operations to write to Stackdriver Logging.
+         * This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+         * default and means that no operations are logged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRatio(Double samplingRatio) {
             return samplingRatio(Output.of(samplingRatio));
         }

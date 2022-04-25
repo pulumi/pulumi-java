@@ -19,6 +19,10 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadataName", required=true)
     private String metadataName;
 
+    /**
+     * @return The Metadata name.
+     * 
+     */
     public String metadataName() {
         return this.metadataName;
     }
@@ -30,6 +34,10 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
     private String operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -41,6 +49,10 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetMetadataArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadataName The Metadata name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataName(String metadataName) {
             $.metadataName = metadataName;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

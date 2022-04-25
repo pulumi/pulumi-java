@@ -26,6 +26,10 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends c
     @Import(name="numIntegralSteps")
     private @Nullable Output<Integer> numIntegralSteps;
 
+    /**
+     * @return Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
+     * 
+     */
     public Optional<Output<Integer>> numIntegralSteps() {
         return Optional.ofNullable(this.numIntegralSteps);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends c
             $ = new GoogleCloudMlV1__IntegratedGradientsAttributionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numIntegralSteps Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numIntegralSteps(@Nullable Output<Integer> numIntegralSteps) {
             $.numIntegralSteps = numIntegralSteps;
             return this;
         }
 
+        /**
+         * @param numIntegralSteps Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numIntegralSteps(Integer numIntegralSteps) {
             return numIntegralSteps(Output.of(numIntegralSteps));
         }

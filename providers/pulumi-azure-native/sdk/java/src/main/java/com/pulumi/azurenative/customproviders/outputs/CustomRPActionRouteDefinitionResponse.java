@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomRPActionRouteDefinitionResponse {
     /**
-     * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. &#39;https://testendpoint/&#39;) or can specify to route via a path (e.g. &#39;https://testendpoint/{requestPath}&#39;)
+     * @return The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. &#39;https://testendpoint/&#39;) or can specify to route via a path (e.g. &#39;https://testendpoint/{requestPath}&#39;)
      * 
      */
     private final String endpoint;
     /**
-     * The name of the route definition. This becomes the name for the ARM extension (e.g. &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}&#39;)
+     * @return The name of the route definition. This becomes the name for the ARM extension (e.g. &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}&#39;)
      * 
      */
     private final String name;
     /**
-     * The routing types that are supported for action requests.
+     * @return The routing types that are supported for action requests.
      * 
      */
     private final @Nullable String routingType;
@@ -38,23 +38,23 @@ public final class CustomRPActionRouteDefinitionResponse {
     }
 
     /**
-     * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. &#39;https://testendpoint/&#39;) or can specify to route via a path (e.g. &#39;https://testendpoint/{requestPath}&#39;)
+     * @return The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. &#39;https://testendpoint/&#39;) or can specify to route via a path (e.g. &#39;https://testendpoint/{requestPath}&#39;)
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The name of the route definition. This becomes the name for the ARM extension (e.g. &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}&#39;)
+     * @return The name of the route definition. This becomes the name for the ARM extension (e.g. &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}&#39;)
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The routing types that are supported for action requests.
+     * @return The routing types that are supported for action requests.
      * 
-    */
+     */
     public Optional<String> routingType() {
         return Optional.ofNullable(this.routingType);
     }

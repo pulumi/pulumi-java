@@ -30,6 +30,14 @@ public final class StatusCauseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return The field of the resource that has caused this error, as named by its JSON serialization. May include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may appear more than once in an array of causes due to fields having multiple errors. Optional.
+     * 
+     * Examples:
+     *   &#34;name&#34; - the field &#34;name&#34; on the current resource
+     *   &#34;items[0].name&#34; - the field &#34;name&#34; on the first array entry in &#34;items&#34;
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -41,6 +49,10 @@ public final class StatusCauseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return A human-readable description of the cause of the error.  This field may be presented as-is to a reader.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -52,6 +64,10 @@ public final class StatusCauseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return A machine-readable description of the cause of the error. If this value is empty there is no information available.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -82,29 +98,73 @@ public final class StatusCauseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StatusCauseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field The field of the resource that has caused this error, as named by its JSON serialization. May include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may appear more than once in an array of causes due to fields having multiple errors. Optional.
+         * 
+         * Examples:
+         *   &#34;name&#34; - the field &#34;name&#34; on the current resource
+         *   &#34;items[0].name&#34; - the field &#34;name&#34; on the first array entry in &#34;items&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field The field of the resource that has caused this error, as named by its JSON serialization. May include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may appear more than once in an array of causes due to fields having multiple errors. Optional.
+         * 
+         * Examples:
+         *   &#34;name&#34; - the field &#34;name&#34; on the current resource
+         *   &#34;items[0].name&#34; - the field &#34;name&#34; on the first array entry in &#34;items&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param message A human-readable description of the cause of the error.  This field may be presented as-is to a reader.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message A human-readable description of the cause of the error.  This field may be presented as-is to a reader.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param reason A machine-readable description of the cause of the error. If this value is empty there is no information available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason A machine-readable description of the cause of the error. If this value is empty there is no information available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }

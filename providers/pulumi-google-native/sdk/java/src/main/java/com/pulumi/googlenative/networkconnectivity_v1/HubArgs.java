@@ -25,6 +25,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of the hub.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -43,6 +47,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -54,6 +62,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +91,10 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingVpcs")
     private @Nullable Output<List<RoutingVPCArgs>> routingVpcs;
 
+    /**
+     * @return The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+     * 
+     */
     public Optional<Output<List<RoutingVPCArgs>>> routingVpcs() {
         return Optional.ofNullable(this.routingVpcs);
     }
@@ -113,11 +129,23 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -131,20 +159,44 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
             return hubId(Output.of(hubId));
         }
 
+        /**
+         * @param labels Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -167,15 +219,33 @@ public final class HubArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param routingVpcs The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingVpcs(@Nullable Output<List<RoutingVPCArgs>> routingVpcs) {
             $.routingVpcs = routingVpcs;
             return this;
         }
 
+        /**
+         * @param routingVpcs The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingVpcs(List<RoutingVPCArgs> routingVpcs) {
             return routingVpcs(Output.of(routingVpcs));
         }
 
+        /**
+         * @param routingVpcs The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingVpcs(RoutingVPCArgs... routingVpcs) {
             return routingVpcs(List.of(routingVpcs));
         }

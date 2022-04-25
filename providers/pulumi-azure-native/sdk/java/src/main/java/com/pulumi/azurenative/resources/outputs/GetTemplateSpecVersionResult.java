@@ -17,57 +17,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTemplateSpecVersionResult {
     /**
-     * Template Spec version description.
+     * @return Template Spec version description.
      * 
      */
     private final @Nullable String description;
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
      */
     private final String id;
     /**
-     * An array of linked template artifacts.
+     * @return An array of linked template artifacts.
      * 
      */
     private final @Nullable List<LinkedTemplateArtifactResponse> linkedTemplates;
     /**
-     * The location of the Template Spec Version. It must match the location of the parent Template Spec.
+     * @return The location of the Template Spec Version. It must match the location of the parent Template Spec.
      * 
      */
     private final String location;
     /**
-     * The main Azure Resource Manager template content.
+     * @return The main Azure Resource Manager template content.
      * 
      */
     private final @Nullable Object mainTemplate;
     /**
-     * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+     * @return The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
     private final @Nullable Object metadata;
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
      */
     private final String name;
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
      */
     private final String type;
     /**
-     * The Azure Resource Manager template UI definition content.
+     * @return The Azure Resource Manager template UI definition content.
      * 
      */
     private final @Nullable Object uiFormDefinition;
@@ -99,79 +99,79 @@ public final class GetTemplateSpecVersionResult {
     }
 
     /**
-     * Template Spec version description.
+     * @return Template Spec version description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * An array of linked template artifacts.
+     * @return An array of linked template artifacts.
      * 
-    */
+     */
     public List<LinkedTemplateArtifactResponse> linkedTemplates() {
         return this.linkedTemplates == null ? List.of() : this.linkedTemplates;
     }
     /**
-     * The location of the Template Spec Version. It must match the location of the parent Template Spec.
+     * @return The location of the Template Spec Version. It must match the location of the parent Template Spec.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The main Azure Resource Manager template content.
+     * @return The main Azure Resource Manager template content.
      * 
-    */
+     */
     public Optional<Object> mainTemplate() {
         return Optional.ofNullable(this.mainTemplate);
     }
     /**
-     * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+     * @return The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
-    */
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The Azure Resource Manager template UI definition content.
+     * @return The Azure Resource Manager template UI definition content.
      * 
-    */
+     */
     public Optional<Object> uiFormDefinition() {
         return Optional.ofNullable(this.uiFormDefinition);
     }

@@ -23,6 +23,10 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
     @Import(name="containerPort", required=true)
     private Output<Integer> containerPort;
 
+    /**
+     * @return Port number.
+     * 
+     */
     public Output<Integer> containerPort() {
         return this.containerPort;
     }
@@ -34,6 +38,10 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Volume&#39;s name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return Protocol used on port. Defaults to TCP.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -75,29 +87,65 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
             $ = new ServiceTemplateSpecContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerPort Port number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Output<Integer> containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param containerPort Port number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             return containerPort(Output.of(containerPort));
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param protocol Protocol used on port. Defaults to TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol used on port. Defaults to TCP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

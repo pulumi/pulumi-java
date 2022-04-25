@@ -27,6 +27,10 @@ public final class PowerQuerySinkMappingResponse extends com.pulumi.resources.In
     @Import(name="dataflowSinks")
     private @Nullable List<PowerQuerySinkResponse> dataflowSinks;
 
+    /**
+     * @return List of sinks mapped to Power Query mashup query.
+     * 
+     */
     public Optional<List<PowerQuerySinkResponse>> dataflowSinks() {
         return Optional.ofNullable(this.dataflowSinks);
     }
@@ -38,6 +42,10 @@ public final class PowerQuerySinkMappingResponse extends com.pulumi.resources.In
     @Import(name="queryName")
     private @Nullable String queryName;
 
+    /**
+     * @return Name of the query in Power Query mashup document.
+     * 
+     */
     public Optional<String> queryName() {
         return Optional.ofNullable(this.queryName);
     }
@@ -67,15 +75,33 @@ public final class PowerQuerySinkMappingResponse extends com.pulumi.resources.In
             $ = new PowerQuerySinkMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataflowSinks List of sinks mapped to Power Query mashup query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowSinks(@Nullable List<PowerQuerySinkResponse> dataflowSinks) {
             $.dataflowSinks = dataflowSinks;
             return this;
         }
 
+        /**
+         * @param dataflowSinks List of sinks mapped to Power Query mashup query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflowSinks(PowerQuerySinkResponse... dataflowSinks) {
             return dataflowSinks(List.of(dataflowSinks));
         }
 
+        /**
+         * @param queryName Name of the query in Power Query mashup document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryName(@Nullable String queryName) {
             $.queryName = queryName;
             return this;

@@ -28,6 +28,10 @@ public final class CloudServiceNetworkProfileArgs extends com.pulumi.resources.R
     @Import(name="loadBalancerConfigurations")
     private @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
+    /**
+     * @return List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+     * 
+     */
     public Optional<Output<List<LoadBalancerConfigurationArgs>>> loadBalancerConfigurations() {
         return Optional.ofNullable(this.loadBalancerConfigurations);
     }
@@ -39,6 +43,10 @@ public final class CloudServiceNetworkProfileArgs extends com.pulumi.resources.R
     @Import(name="swappableCloudService")
     private @Nullable Output<SubResourceArgs> swappableCloudService;
 
+    /**
+     * @return The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> swappableCloudService() {
         return Optional.ofNullable(this.swappableCloudService);
     }
@@ -68,24 +76,54 @@ public final class CloudServiceNetworkProfileArgs extends com.pulumi.resources.R
             $ = new CloudServiceNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancerConfigurations List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfigurations(@Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
             $.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
 
+        /**
+         * @param loadBalancerConfigurations List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfigurations(List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
             return loadBalancerConfigurations(Output.of(loadBalancerConfigurations));
         }
 
+        /**
+         * @param loadBalancerConfigurations List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfigurations(LoadBalancerConfigurationArgs... loadBalancerConfigurations) {
             return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
         }
 
+        /**
+         * @param swappableCloudService The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swappableCloudService(@Nullable Output<SubResourceArgs> swappableCloudService) {
             $.swappableCloudService = swappableCloudService;
             return this;
         }
 
+        /**
+         * @param swappableCloudService The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swappableCloudService(SubResourceArgs swappableCloudService) {
             return swappableCloudService(Output.of(swappableCloudService));
         }

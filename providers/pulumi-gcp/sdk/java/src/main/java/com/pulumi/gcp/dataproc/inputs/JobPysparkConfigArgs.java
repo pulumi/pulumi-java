@@ -25,6 +25,10 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="archiveUris")
     private @Nullable Output<List<String>> archiveUris;
 
+    /**
+     * @return HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+     * 
+     */
     public Optional<Output<List<String>>> archiveUris() {
         return Optional.ofNullable(this.archiveUris);
     }
@@ -36,6 +40,10 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -47,6 +55,10 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fileUris")
     private @Nullable Output<List<String>> fileUris;
 
+    /**
+     * @return HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+     * 
+     */
     public Optional<Output<List<String>>> fileUris() {
         return Optional.ofNullable(this.fileUris);
     }
@@ -58,6 +70,10 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="jarFileUris")
     private @Nullable Output<List<String>> jarFileUris;
 
+    /**
+     * @return HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     public Optional<Output<List<String>>> jarFileUris() {
         return Optional.ofNullable(this.jarFileUris);
     }
@@ -76,6 +92,10 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="mainPythonFileUri", required=true)
     private Output<String> mainPythonFileUri;
 
+    /**
+     * @return The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+     * 
+     */
     public Output<String> mainPythonFileUri() {
         return this.mainPythonFileUri;
     }
@@ -87,6 +107,10 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -98,6 +122,10 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="pythonFileUris")
     private @Nullable Output<List<String>> pythonFileUris;
 
+    /**
+     * @return HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+     * 
+     */
     public Optional<Output<List<String>>> pythonFileUris() {
         return Optional.ofNullable(this.pythonFileUris);
     }
@@ -133,54 +161,126 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new JobPysparkConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveUris HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
             $.archiveUris = archiveUris;
             return this;
         }
 
+        /**
+         * @param archiveUris HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(List<String> archiveUris) {
             return archiveUris(Output.of(archiveUris));
         }
 
+        /**
+         * @param archiveUris HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
 
+        /**
+         * @param args The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param fileUris HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
             $.fileUris = fileUris;
             return this;
         }
 
+        /**
+         * @param fileUris HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(List<String> fileUris) {
             return fileUris(Output.of(fileUris));
         }
 
+        /**
+         * @param fileUris HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
 
+        /**
+         * @param jarFileUris HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             $.jarFileUris = jarFileUris;
             return this;
         }
 
+        /**
+         * @param jarFileUris HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(List<String> jarFileUris) {
             return jarFileUris(Output.of(jarFileUris));
         }
 
+        /**
+         * @param jarFileUris HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
@@ -194,33 +294,75 @@ public final class JobPysparkConfigArgs extends com.pulumi.resources.ResourceArg
             return loggingConfig(Output.of(loggingConfig));
         }
 
+        /**
+         * @param mainPythonFileUri The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPythonFileUri(Output<String> mainPythonFileUri) {
             $.mainPythonFileUri = mainPythonFileUri;
             return this;
         }
 
+        /**
+         * @param mainPythonFileUri The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPythonFileUri(String mainPythonFileUri) {
             return mainPythonFileUri(Output.of(mainPythonFileUri));
         }
 
+        /**
+         * @param properties A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param pythonFileUris HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFileUris(@Nullable Output<List<String>> pythonFileUris) {
             $.pythonFileUris = pythonFileUris;
             return this;
         }
 
+        /**
+         * @param pythonFileUris HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFileUris(List<String> pythonFileUris) {
             return pythonFileUris(Output.of(pythonFileUris));
         }
 
+        /**
+         * @param pythonFileUris HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFileUris(String... pythonFileUris) {
             return pythonFileUris(List.of(pythonFileUris));
         }

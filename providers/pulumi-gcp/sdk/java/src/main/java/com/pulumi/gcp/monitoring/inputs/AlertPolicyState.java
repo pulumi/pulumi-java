@@ -30,6 +30,11 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertStrategy")
     private @Nullable Output<AlertPolicyAlertStrategyGetArgs> alertStrategy;
 
+    /**
+     * @return Control over how this alert policy&#39;s notification channels are notified.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AlertPolicyAlertStrategyGetArgs>> alertStrategy() {
         return Optional.ofNullable(this.alertStrategy);
     }
@@ -43,6 +48,12 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="combiner")
     private @Nullable Output<String> combiner;
 
+    /**
+     * @return How to combine the results of multiple conditions to
+     * determine if an incident should be opened.
+     * Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
+     * 
+     */
     public Optional<Output<String>> combiner() {
         return Optional.ofNullable(this.combiner);
     }
@@ -58,6 +69,14 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<List<AlertPolicyConditionGetArgs>> conditions;
 
+    /**
+     * @return A list of conditions for the policy. The conditions are combined by
+     * AND or OR according to the combiner field. If the combined conditions
+     * evaluate to true, then an incident is created. A policy can have from
+     * one to six conditions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<AlertPolicyConditionGetArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -70,6 +89,11 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationRecords")
     private @Nullable Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords;
 
+    /**
+     * @return A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
+     * ignored.
+     * 
+     */
     public Optional<Output<List<AlertPolicyCreationRecordGetArgs>>> creationRecords() {
         return Optional.ofNullable(this.creationRecords);
     }
@@ -85,6 +109,14 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A short name or phrase used to identify the
+     * condition in dashboards, notifications, and
+     * incidents. To avoid confusion, don&#39;t use the same
+     * display name for multiple conditions in the same
+     * policy.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -101,6 +133,15 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentation")
     private @Nullable Output<AlertPolicyDocumentationGetArgs> documentation;
 
+    /**
+     * @return Documentation that is included with notifications and incidents related
+     * to this policy. Best practice is for the documentation to include information
+     * to help responders understand, mitigate, escalate, and correct the underlying
+     * problems detected by the alerting policy. Notification channels that have
+     * limited capacity might not show this documentation.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AlertPolicyDocumentationGetArgs>> documentation() {
         return Optional.ofNullable(this.documentation);
     }
@@ -112,6 +153,10 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether or not the policy is enabled. The default is true.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -129,6 +174,16 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return -
+     * The unique resource name for this condition.
+     * Its syntax is:
+     * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+     * [CONDITION_ID] is assigned by Stackdriver Monitoring when
+     * the condition is created as part of a new or updated alerting
+     * policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -146,6 +201,16 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationChannels")
     private @Nullable Output<List<String>> notificationChannels;
 
+    /**
+     * @return Identifies the notification channels to which notifications should be
+     * sent when incidents are opened or closed or when new violations occur
+     * on an already opened incident. Each element of this array corresponds
+     * to the name field in each of the NotificationChannel objects that are
+     * returned from the notificationChannels.list method. The syntax of the
+     * entries in this field is
+     * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
+     * 
+     */
     public Optional<Output<List<String>>> notificationChannels() {
         return Optional.ofNullable(this.notificationChannels);
     }
@@ -158,6 +223,11 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -173,6 +243,14 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userLabels")
     private @Nullable Output<Map<String,String>> userLabels;
 
+    /**
+     * @return This field is intended to be used for organizing and identifying the AlertPolicy
+     * objects.The field can contain up to 64 entries. Each key and value is limited
+     * to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+     * can contain only lowercase letters, numerals, underscores, and dashes. Keys
+     * must begin with a letter.
+     * 
+     */
     public Optional<Output<Map<String,String>>> userLabels() {
         return Optional.ofNullable(this.userLabels);
     }
@@ -211,113 +289,342 @@ public final class AlertPolicyState extends com.pulumi.resources.ResourceArgs {
             $ = new AlertPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertStrategy Control over how this alert policy&#39;s notification channels are notified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertStrategy(@Nullable Output<AlertPolicyAlertStrategyGetArgs> alertStrategy) {
             $.alertStrategy = alertStrategy;
             return this;
         }
 
+        /**
+         * @param alertStrategy Control over how this alert policy&#39;s notification channels are notified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertStrategy(AlertPolicyAlertStrategyGetArgs alertStrategy) {
             return alertStrategy(Output.of(alertStrategy));
         }
 
+        /**
+         * @param combiner How to combine the results of multiple conditions to
+         * determine if an incident should be opened.
+         * Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder combiner(@Nullable Output<String> combiner) {
             $.combiner = combiner;
             return this;
         }
 
+        /**
+         * @param combiner How to combine the results of multiple conditions to
+         * determine if an incident should be opened.
+         * Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder combiner(String combiner) {
             return combiner(Output.of(combiner));
         }
 
+        /**
+         * @param conditions A list of conditions for the policy. The conditions are combined by
+         * AND or OR according to the combiner field. If the combined conditions
+         * evaluate to true, then an incident is created. A policy can have from
+         * one to six conditions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<AlertPolicyConditionGetArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A list of conditions for the policy. The conditions are combined by
+         * AND or OR according to the combiner field. If the combined conditions
+         * evaluate to true, then an incident is created. A policy can have from
+         * one to six conditions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<AlertPolicyConditionGetArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions A list of conditions for the policy. The conditions are combined by
+         * AND or OR according to the combiner field. If the combined conditions
+         * evaluate to true, then an incident is created. A policy can have from
+         * one to six conditions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(AlertPolicyConditionGetArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param creationRecords A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
+         * ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationRecords(@Nullable Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords) {
             $.creationRecords = creationRecords;
             return this;
         }
 
+        /**
+         * @param creationRecords A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
+         * ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationRecords(List<AlertPolicyCreationRecordGetArgs> creationRecords) {
             return creationRecords(Output.of(creationRecords));
         }
 
+        /**
+         * @param creationRecords A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
+         * ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationRecords(AlertPolicyCreationRecordGetArgs... creationRecords) {
             return creationRecords(List.of(creationRecords));
         }
 
+        /**
+         * @param displayName A short name or phrase used to identify the
+         * condition in dashboards, notifications, and
+         * incidents. To avoid confusion, don&#39;t use the same
+         * display name for multiple conditions in the same
+         * policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A short name or phrase used to identify the
+         * condition in dashboards, notifications, and
+         * incidents. To avoid confusion, don&#39;t use the same
+         * display name for multiple conditions in the same
+         * policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param documentation Documentation that is included with notifications and incidents related
+         * to this policy. Best practice is for the documentation to include information
+         * to help responders understand, mitigate, escalate, and correct the underlying
+         * problems detected by the alerting policy. Notification channels that have
+         * limited capacity might not show this documentation.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentation(@Nullable Output<AlertPolicyDocumentationGetArgs> documentation) {
             $.documentation = documentation;
             return this;
         }
 
+        /**
+         * @param documentation Documentation that is included with notifications and incidents related
+         * to this policy. Best practice is for the documentation to include information
+         * to help responders understand, mitigate, escalate, and correct the underlying
+         * problems detected by the alerting policy. Notification channels that have
+         * limited capacity might not show this documentation.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentation(AlertPolicyDocumentationGetArgs documentation) {
             return documentation(Output.of(documentation));
         }
 
+        /**
+         * @param enabled Whether or not the policy is enabled. The default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether or not the policy is enabled. The default is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param name -
+         * The unique resource name for this condition.
+         * Its syntax is:
+         * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+         * [CONDITION_ID] is assigned by Stackdriver Monitoring when
+         * the condition is created as part of a new or updated alerting
+         * policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name -
+         * The unique resource name for this condition.
+         * Its syntax is:
+         * projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
+         * [CONDITION_ID] is assigned by Stackdriver Monitoring when
+         * the condition is created as part of a new or updated alerting
+         * policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notificationChannels Identifies the notification channels to which notifications should be
+         * sent when incidents are opened or closed or when new violations occur
+         * on an already opened incident. Each element of this array corresponds
+         * to the name field in each of the NotificationChannel objects that are
+         * returned from the notificationChannels.list method. The syntax of the
+         * entries in this field is
+         * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationChannels(@Nullable Output<List<String>> notificationChannels) {
             $.notificationChannels = notificationChannels;
             return this;
         }
 
+        /**
+         * @param notificationChannels Identifies the notification channels to which notifications should be
+         * sent when incidents are opened or closed or when new violations occur
+         * on an already opened incident. Each element of this array corresponds
+         * to the name field in each of the NotificationChannel objects that are
+         * returned from the notificationChannels.list method. The syntax of the
+         * entries in this field is
+         * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationChannels(List<String> notificationChannels) {
             return notificationChannels(Output.of(notificationChannels));
         }
 
+        /**
+         * @param notificationChannels Identifies the notification channels to which notifications should be
+         * sent when incidents are opened or closed or when new violations occur
+         * on an already opened incident. Each element of this array corresponds
+         * to the name field in each of the NotificationChannel objects that are
+         * returned from the notificationChannels.list method. The syntax of the
+         * entries in this field is
+         * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationChannels(String... notificationChannels) {
             return notificationChannels(List.of(notificationChannels));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param userLabels This field is intended to be used for organizing and identifying the AlertPolicy
+         * objects.The field can contain up to 64 entries. Each key and value is limited
+         * to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+         * can contain only lowercase letters, numerals, underscores, and dashes. Keys
+         * must begin with a letter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
             $.userLabels = userLabels;
             return this;
         }
 
+        /**
+         * @param userLabels This field is intended to be used for organizing and identifying the AlertPolicy
+         * objects.The field can contain up to 64 entries. Each key and value is limited
+         * to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
+         * can contain only lowercase letters, numerals, underscores, and dashes. Keys
+         * must begin with a letter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userLabels(Map<String,String> userLabels) {
             return userLabels(Output.of(userLabels));
         }

@@ -10,37 +10,37 @@ import java.util.Objects;
 @CustomType
 public final class GetLinkedServerResult {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Fully qualified resourceId of the linked redis cache.
+     * @return Fully qualified resourceId of the linked redis cache.
      * 
      */
     private final String linkedRedisCacheId;
     /**
-     * Location of the linked redis cache.
+     * @return Location of the linked redis cache.
      * 
      */
     private final String linkedRedisCacheLocation;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Terminal state of the link between primary and secondary redis cache.
+     * @return Terminal state of the link between primary and secondary redis cache.
      * 
      */
     private final String provisioningState;
     /**
-     * Role of the linked server.
+     * @return Role of the linked server.
      * 
      */
     private final String serverRole;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -64,51 +64,51 @@ public final class GetLinkedServerResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Fully qualified resourceId of the linked redis cache.
+     * @return Fully qualified resourceId of the linked redis cache.
      * 
-    */
+     */
     public String linkedRedisCacheId() {
         return this.linkedRedisCacheId;
     }
     /**
-     * Location of the linked redis cache.
+     * @return Location of the linked redis cache.
      * 
-    */
+     */
     public String linkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Terminal state of the link between primary and secondary redis cache.
+     * @return Terminal state of the link between primary and secondary redis cache.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Role of the linked server.
+     * @return Role of the linked server.
      * 
-    */
+     */
     public String serverRole() {
         return this.serverRole;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

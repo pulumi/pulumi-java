@@ -26,6 +26,10 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sourceVault", required=true)
     private Output<SubResourceArgs> sourceVault;
 
+    /**
+     * @return The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+     * 
+     */
     public Output<SubResourceArgs> sourceVault() {
         return this.sourceVault;
     }
@@ -37,6 +41,10 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="vaultCertificates", required=true)
     private Output<List<VaultCertificateArgs>> vaultCertificates;
 
+    /**
+     * @return The list of key vault references in SourceVault which contain certificates.
+     * 
+     */
     public Output<List<VaultCertificateArgs>> vaultCertificates() {
         return this.vaultCertificates;
     }
@@ -66,24 +74,54 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
             $ = new VaultSecretGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceVault The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(Output<SubResourceArgs> sourceVault) {
             $.sourceVault = sourceVault;
             return this;
         }
 
+        /**
+         * @param sourceVault The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(SubResourceArgs sourceVault) {
             return sourceVault(Output.of(sourceVault));
         }
 
+        /**
+         * @param vaultCertificates The list of key vault references in SourceVault which contain certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCertificates(Output<List<VaultCertificateArgs>> vaultCertificates) {
             $.vaultCertificates = vaultCertificates;
             return this;
         }
 
+        /**
+         * @param vaultCertificates The list of key vault references in SourceVault which contain certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCertificates(List<VaultCertificateArgs> vaultCertificates) {
             return vaultCertificates(Output.of(vaultCertificates));
         }
 
+        /**
+         * @param vaultCertificates The list of key vault references in SourceVault which contain certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCertificates(VaultCertificateArgs... vaultCertificates) {
             return vaultCertificates(List.of(vaultCertificates));
         }

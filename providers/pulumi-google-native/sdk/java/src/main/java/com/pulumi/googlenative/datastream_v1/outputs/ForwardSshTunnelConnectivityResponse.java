@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class ForwardSshTunnelConnectivityResponse {
     /**
-     * Hostname for the SSH tunnel.
+     * @return Hostname for the SSH tunnel.
      * 
      */
     private final String hostname;
     /**
-     * Input only. SSH password.
+     * @return Input only. SSH password.
      * 
      */
     private final String password;
     /**
-     * Port for the SSH tunnel, default value is 22.
+     * @return Port for the SSH tunnel, default value is 22.
      * 
      */
     private final Integer port;
     /**
-     * Input only. SSH private key.
+     * @return Input only. SSH private key.
      * 
      */
     private final String privateKey;
     /**
-     * Username for the SSH tunnel.
+     * @return Username for the SSH tunnel.
      * 
      */
     private final String username;
@@ -51,37 +51,37 @@ public final class ForwardSshTunnelConnectivityResponse {
     }
 
     /**
-     * Hostname for the SSH tunnel.
+     * @return Hostname for the SSH tunnel.
      * 
-    */
+     */
     public String hostname() {
         return this.hostname;
     }
     /**
-     * Input only. SSH password.
+     * @return Input only. SSH password.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Port for the SSH tunnel, default value is 22.
+     * @return Port for the SSH tunnel, default value is 22.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Input only. SSH private key.
+     * @return Input only. SSH private key.
      * 
-    */
+     */
     public String privateKey() {
         return this.privateKey;
     }
     /**
-     * Username for the SSH tunnel.
+     * @return Username for the SSH tunnel.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

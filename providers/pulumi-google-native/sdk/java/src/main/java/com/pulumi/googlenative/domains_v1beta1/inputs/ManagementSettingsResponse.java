@@ -23,6 +23,10 @@ public final class ManagementSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="renewalMethod", required=true)
     private String renewalMethod;
 
+    /**
+     * @return The renewal method for this `Registration`.
+     * 
+     */
     public String renewalMethod() {
         return this.renewalMethod;
     }
@@ -34,6 +38,10 @@ public final class ManagementSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="transferLockState", required=true)
     private String transferLockState;
 
+    /**
+     * @return Controls whether the domain can be transferred to another registrar.
+     * 
+     */
     public String transferLockState() {
         return this.transferLockState;
     }
@@ -63,11 +71,23 @@ public final class ManagementSettingsResponse extends com.pulumi.resources.Invok
             $ = new ManagementSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param renewalMethod The renewal method for this `Registration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renewalMethod(String renewalMethod) {
             $.renewalMethod = renewalMethod;
             return this;
         }
 
+        /**
+         * @param transferLockState Controls whether the domain can be transferred to another registrar.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferLockState(String transferLockState) {
             $.transferLockState = transferLockState;
             return this;

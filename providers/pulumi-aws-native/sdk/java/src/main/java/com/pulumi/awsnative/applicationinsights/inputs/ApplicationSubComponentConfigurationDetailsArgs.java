@@ -29,6 +29,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends com.p
     @Import(name="alarmMetrics")
     private @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
+    /**
+     * @return A list of metrics to monitor for the component.
+     * 
+     */
     public Optional<Output<List<ApplicationAlarmMetricArgs>>> alarmMetrics() {
         return Optional.ofNullable(this.alarmMetrics);
     }
@@ -40,6 +44,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends com.p
     @Import(name="logs")
     private @Nullable Output<List<ApplicationLogArgs>> logs;
 
+    /**
+     * @return A list of logs to monitor for the component.
+     * 
+     */
     public Optional<Output<List<ApplicationLogArgs>>> logs() {
         return Optional.ofNullable(this.logs);
     }
@@ -51,6 +59,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends com.p
     @Import(name="windowsEvents")
     private @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
 
+    /**
+     * @return A list of Windows Events to log.
+     * 
+     */
     public Optional<Output<List<ApplicationWindowsEventArgs>>> windowsEvents() {
         return Optional.ofNullable(this.windowsEvents);
     }
@@ -81,41 +93,95 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends com.p
             $ = new ApplicationSubComponentConfigurationDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmMetrics A list of metrics to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmMetrics(@Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics) {
             $.alarmMetrics = alarmMetrics;
             return this;
         }
 
+        /**
+         * @param alarmMetrics A list of metrics to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmMetrics(List<ApplicationAlarmMetricArgs> alarmMetrics) {
             return alarmMetrics(Output.of(alarmMetrics));
         }
 
+        /**
+         * @param alarmMetrics A list of metrics to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmMetrics(ApplicationAlarmMetricArgs... alarmMetrics) {
             return alarmMetrics(List.of(alarmMetrics));
         }
 
+        /**
+         * @param logs A list of logs to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(@Nullable Output<List<ApplicationLogArgs>> logs) {
             $.logs = logs;
             return this;
         }
 
+        /**
+         * @param logs A list of logs to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(List<ApplicationLogArgs> logs) {
             return logs(Output.of(logs));
         }
 
+        /**
+         * @param logs A list of logs to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(ApplicationLogArgs... logs) {
             return logs(List.of(logs));
         }
 
+        /**
+         * @param windowsEvents A list of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEvents(@Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents) {
             $.windowsEvents = windowsEvents;
             return this;
         }
 
+        /**
+         * @param windowsEvents A list of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEvents(List<ApplicationWindowsEventArgs> windowsEvents) {
             return windowsEvents(Output.of(windowsEvents));
         }
 
+        /**
+         * @param windowsEvents A list of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEvents(ApplicationWindowsEventArgs... windowsEvents) {
             return windowsEvents(List.of(windowsEvents));
         }

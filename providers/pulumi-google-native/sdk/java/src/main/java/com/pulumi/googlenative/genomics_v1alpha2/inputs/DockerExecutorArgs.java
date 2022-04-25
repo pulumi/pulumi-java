@@ -24,6 +24,10 @@ public final class DockerExecutorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="cmd", required=true)
     private Output<String> cmd;
 
+    /**
+     * @return The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation&#39;s `error` field will be populated. Maximum command string length is 16384.
+     * 
+     */
     public Output<String> cmd() {
         return this.cmd;
     }
@@ -35,6 +39,10 @@ public final class DockerExecutorArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="imageName", required=true)
     private Output<String> imageName;
 
+    /**
+     * @return Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.
+     * 
+     */
     public Output<String> imageName() {
         return this.imageName;
     }
@@ -64,20 +72,44 @@ public final class DockerExecutorArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DockerExecutorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cmd The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation&#39;s `error` field will be populated. Maximum command string length is 16384.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmd(Output<String> cmd) {
             $.cmd = cmd;
             return this;
         }
 
+        /**
+         * @param cmd The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation&#39;s `error` field will be populated. Maximum command string length is 16384.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmd(String cmd) {
             return cmd(Output.of(cmd));
         }
 
+        /**
+         * @param imageName Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(Output<String> imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageName Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             return imageName(Output.of(imageName));
         }

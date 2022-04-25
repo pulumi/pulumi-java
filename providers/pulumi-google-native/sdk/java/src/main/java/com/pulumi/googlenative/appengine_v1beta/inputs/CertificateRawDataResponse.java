@@ -23,6 +23,10 @@ public final class CertificateRawDataResponse extends com.pulumi.resources.Invok
     @Import(name="privateKey", required=true)
     private String privateKey;
 
+    /**
+     * @return Unencrypted PEM encoded RSA private key. This field is set once on certificate creation and then encrypted. The key size must be 2048 bits or fewer. Must include the header and footer. Example: -----BEGIN RSA PRIVATE KEY----- -----END RSA PRIVATE KEY----- @InputOnly
+     * 
+     */
     public String privateKey() {
         return this.privateKey;
     }
@@ -34,6 +38,10 @@ public final class CertificateRawDataResponse extends com.pulumi.resources.Invok
     @Import(name="publicCertificate", required=true)
     private String publicCertificate;
 
+    /**
+     * @return PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
+     * 
+     */
     public String publicCertificate() {
         return this.publicCertificate;
     }
@@ -63,11 +71,23 @@ public final class CertificateRawDataResponse extends com.pulumi.resources.Invok
             $ = new CertificateRawDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateKey Unencrypted PEM encoded RSA private key. This field is set once on certificate creation and then encrypted. The key size must be 2048 bits or fewer. Must include the header and footer. Example: -----BEGIN RSA PRIVATE KEY----- -----END RSA PRIVATE KEY----- @InputOnly
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param publicCertificate PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicCertificate(String publicCertificate) {
             $.publicCertificate = publicCertificate;
             return this;

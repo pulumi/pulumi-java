@@ -24,6 +24,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateName")
     private @Nullable Output<String> certificateName;
 
+    /**
+     * @return The name for the certificate.
+     * 
+     */
     public Optional<Output<String>> certificateName() {
         return Optional.ofNullable(this.certificateName);
     }
@@ -35,6 +39,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The domain name (e.g., example.com ) for the certificate.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -46,6 +54,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subjectAlternativeNames")
     private @Nullable Output<List<String>> subjectAlternativeNames;
 
+    /**
+     * @return An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
+     * 
+     */
     public Optional<Output<List<String>>> subjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
@@ -57,6 +69,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<CertificateTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<CertificateTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,46 +104,106 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName The name for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(@Nullable Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param certificateName The name for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param domainName The domain name (e.g., example.com ) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name (e.g., example.com ) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param subjectAlternativeNames An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
             $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
+        /**
+         * @param subjectAlternativeNames An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param subjectAlternativeNames An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<CertificateTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<CertificateTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(CertificateTagArgs... tags) {
             return tags(List.of(tags));
         }

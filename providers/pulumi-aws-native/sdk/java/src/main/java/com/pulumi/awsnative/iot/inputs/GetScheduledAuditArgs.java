@@ -19,6 +19,10 @@ public final class GetScheduledAuditArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="scheduledAuditName", required=true)
     private String scheduledAuditName;
 
+    /**
+     * @return The name you want to give to the scheduled audit.
+     * 
+     */
     public String scheduledAuditName() {
         return this.scheduledAuditName;
     }
@@ -47,6 +51,12 @@ public final class GetScheduledAuditArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetScheduledAuditArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduledAuditName The name you want to give to the scheduled audit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledAuditName(String scheduledAuditName) {
             $.scheduledAuditName = scheduledAuditName;
             return this;

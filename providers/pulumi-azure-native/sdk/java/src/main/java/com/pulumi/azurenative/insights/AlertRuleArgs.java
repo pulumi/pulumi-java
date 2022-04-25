@@ -32,6 +32,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action;
 
+    /**
+     * @return action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     public Optional<Output<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -43,6 +47,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions;
 
+    /**
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     public Optional<Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -54,6 +62,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="condition", required=true)
     private Output<Object> condition;
 
+    /**
+     * @return the condition that results in the alert rule being activated.
+     * 
+     */
     public Output<Object> condition() {
         return this.condition;
     }
@@ -65,6 +77,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return the description of the alert rule that will be included in the alert email.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -76,6 +92,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return the flag that indicates whether the alert rule is enabled.
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -87,6 +107,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -98,6 +122,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return the name of the alert rule.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -109,6 +137,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return the provisioning state.
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -120,6 +152,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -131,6 +167,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return The name of the rule.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -142,6 +182,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -180,113 +224,263 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<RuleEmailActionArgs,RuleWebhookActionArgs> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RuleEmailActionArgs action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RuleWebhookActionArgs action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Either<RuleEmailActionArgs,RuleWebhookActionArgs>... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param condition the condition that results in the alert rule being activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(Output<Object> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition the condition that results in the alert rule being activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(Object condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param description the description of the alert rule that will be included in the alert email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description the description of the alert rule that will be included in the alert email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param isEnabled the flag that indicates whether the alert rule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled the flag that indicates whether the alert rule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name the name of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name the name of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param provisioningState the provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState the provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

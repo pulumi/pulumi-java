@@ -28,6 +28,10 @@ public final class RuntimeClassSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="overhead")
     private @Nullable Output<OverheadArgs> overhead;
 
+    /**
+     * @return Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.
+     * 
+     */
     public Optional<Output<OverheadArgs>> overhead() {
         return Optional.ofNullable(this.overhead);
     }
@@ -39,6 +43,10 @@ public final class RuntimeClassSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="runtimeHandler", required=true)
     private Output<String> runtimeHandler;
 
+    /**
+     * @return RuntimeHandler specifies the underlying runtime and configuration that the CRI implementation will use to handle pods of this class. The possible values are specific to the node &amp; CRI configuration.  It is assumed that all handlers are available on every node, and handlers of the same name are equivalent on every node. For example, a handler called &#34;runc&#34; might specify that the runc OCI runtime (using native Linux containers) will be used to run the containers in a pod. The RuntimeHandler must be lowercase, conform to the DNS Label (RFC 1123) requirements, and is immutable.
+     * 
+     */
     public Output<String> runtimeHandler() {
         return this.runtimeHandler;
     }
@@ -50,6 +58,10 @@ public final class RuntimeClassSpecArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scheduling")
     private @Nullable Output<SchedulingArgs> scheduling;
 
+    /**
+     * @return Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.
+     * 
+     */
     public Optional<Output<SchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
@@ -80,29 +92,65 @@ public final class RuntimeClassSpecArgs extends com.pulumi.resources.ResourceArg
             $ = new RuntimeClassSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param overhead Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overhead(@Nullable Output<OverheadArgs> overhead) {
             $.overhead = overhead;
             return this;
         }
 
+        /**
+         * @param overhead Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overhead(OverheadArgs overhead) {
             return overhead(Output.of(overhead));
         }
 
+        /**
+         * @param runtimeHandler RuntimeHandler specifies the underlying runtime and configuration that the CRI implementation will use to handle pods of this class. The possible values are specific to the node &amp; CRI configuration.  It is assumed that all handlers are available on every node, and handlers of the same name are equivalent on every node. For example, a handler called &#34;runc&#34; might specify that the runc OCI runtime (using native Linux containers) will be used to run the containers in a pod. The RuntimeHandler must be lowercase, conform to the DNS Label (RFC 1123) requirements, and is immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeHandler(Output<String> runtimeHandler) {
             $.runtimeHandler = runtimeHandler;
             return this;
         }
 
+        /**
+         * @param runtimeHandler RuntimeHandler specifies the underlying runtime and configuration that the CRI implementation will use to handle pods of this class. The possible values are specific to the node &amp; CRI configuration.  It is assumed that all handlers are available on every node, and handlers of the same name are equivalent on every node. For example, a handler called &#34;runc&#34; might specify that the runc OCI runtime (using native Linux containers) will be used to run the containers in a pod. The RuntimeHandler must be lowercase, conform to the DNS Label (RFC 1123) requirements, and is immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeHandler(String runtimeHandler) {
             return runtimeHandler(Output.of(runtimeHandler));
         }
 
+        /**
+         * @param scheduling Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param scheduling Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(SchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }

@@ -19,6 +19,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return A unique primary identifier for a Resource
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -30,6 +34,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The ID of the RestApi resource in which you want to create this resource..
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -59,11 +67,23 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId A unique primary identifier for a Resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of the RestApi resource in which you want to create this resource..
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;

@@ -20,6 +20,10 @@ public final class TableColumnFamilyGetArgs extends com.pulumi.resources.Resourc
     @Import(name="family", required=true)
     private Output<String> family;
 
+    /**
+     * @return The name of the column family.
+     * 
+     */
     public Output<String> family() {
         return this.family;
     }
@@ -48,11 +52,23 @@ public final class TableColumnFamilyGetArgs extends com.pulumi.resources.Resourc
             $ = new TableColumnFamilyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family The name of the column family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family The name of the column family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }

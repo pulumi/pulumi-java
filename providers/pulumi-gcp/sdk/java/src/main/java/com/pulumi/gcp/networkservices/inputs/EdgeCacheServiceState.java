@@ -27,6 +27,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description of the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="disableQuic")
     private @Nullable Output<Boolean> disableQuic;
 
+    /**
+     * @return HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
+     * 
+     */
     public Optional<Output<Boolean>> disableQuic() {
         return Optional.ofNullable(this.disableQuic);
     }
@@ -49,6 +57,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="edgeSecurityPolicy")
     private @Nullable Output<String> edgeSecurityPolicy;
 
+    /**
+     * @return Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
+     * 
+     */
     public Optional<Output<String>> edgeSecurityPolicy() {
         return Optional.ofNullable(this.edgeSecurityPolicy);
     }
@@ -61,6 +73,11 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="edgeSslCertificates")
     private @Nullable Output<List<String>> edgeSslCertificates;
 
+    /**
+     * @return URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
+     * Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService.
+     * 
+     */
     public Optional<Output<List<String>>> edgeSslCertificates() {
         return Optional.ofNullable(this.edgeSslCertificates);
     }
@@ -72,6 +89,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv4Addresses")
     private @Nullable Output<List<String>> ipv4Addresses;
 
+    /**
+     * @return The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
+     * 
+     */
     public Optional<Output<List<String>>> ipv4Addresses() {
         return Optional.ofNullable(this.ipv4Addresses);
     }
@@ -83,6 +104,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6Addresses")
     private @Nullable Output<List<String>> ipv6Addresses;
 
+    /**
+     * @return The IPv6 addresses associated with this service. Addresses are static for the lifetime of the service.
+     * 
+     */
     public Optional<Output<List<String>>> ipv6Addresses() {
         return Optional.ofNullable(this.ipv6Addresses);
     }
@@ -94,6 +119,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Set of label tags associated with the EdgeCache resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -106,6 +135,11 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="logConfig")
     private @Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig;
 
+    /**
+     * @return Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EdgeCacheServiceLogConfigGetArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
@@ -117,6 +151,10 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -129,6 +167,11 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -142,6 +185,12 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="requireTls")
     private @Nullable Output<Boolean> requireTls;
 
+    /**
+     * @return Require TLS (HTTPS) for all clients connecting to this service.
+     * Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
+     * You must have at least one (1) edgeSslCertificate specified to enable this.
+     * 
+     */
     public Optional<Output<Boolean>> requireTls() {
         return Optional.ofNullable(this.requireTls);
     }
@@ -154,6 +203,11 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="routing")
     private @Nullable Output<EdgeCacheServiceRoutingGetArgs> routing;
 
+    /**
+     * @return Defines how requests are routed, modified, cached and/or which origin content is filled from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EdgeCacheServiceRoutingGetArgs>> routing() {
         return Optional.ofNullable(this.routing);
     }
@@ -166,6 +220,11 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
     @Import(name="sslPolicy")
     private @Nullable Output<String> sslPolicy;
 
+    /**
+     * @return URL of the SslPolicy resource that will be associated with the EdgeCacheService.
+     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy.
+     * 
+     */
     public Optional<Output<String>> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
@@ -206,131 +265,320 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
             $ = new EdgeCacheServiceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param disableQuic HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableQuic(@Nullable Output<Boolean> disableQuic) {
             $.disableQuic = disableQuic;
             return this;
         }
 
+        /**
+         * @param disableQuic HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableQuic(Boolean disableQuic) {
             return disableQuic(Output.of(disableQuic));
         }
 
+        /**
+         * @param edgeSecurityPolicy Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeSecurityPolicy(@Nullable Output<String> edgeSecurityPolicy) {
             $.edgeSecurityPolicy = edgeSecurityPolicy;
             return this;
         }
 
+        /**
+         * @param edgeSecurityPolicy Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeSecurityPolicy(String edgeSecurityPolicy) {
             return edgeSecurityPolicy(Output.of(edgeSecurityPolicy));
         }
 
+        /**
+         * @param edgeSslCertificates URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
+         * Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeSslCertificates(@Nullable Output<List<String>> edgeSslCertificates) {
             $.edgeSslCertificates = edgeSslCertificates;
             return this;
         }
 
+        /**
+         * @param edgeSslCertificates URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
+         * Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeSslCertificates(List<String> edgeSslCertificates) {
             return edgeSslCertificates(Output.of(edgeSslCertificates));
         }
 
+        /**
+         * @param edgeSslCertificates URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
+         * Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeSslCertificates(String... edgeSslCertificates) {
             return edgeSslCertificates(List.of(edgeSslCertificates));
         }
 
+        /**
+         * @param ipv4Addresses The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
             $.ipv4Addresses = ipv4Addresses;
             return this;
         }
 
+        /**
+         * @param ipv4Addresses The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Addresses(List<String> ipv4Addresses) {
             return ipv4Addresses(Output.of(ipv4Addresses));
         }
 
+        /**
+         * @param ipv4Addresses The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
 
+        /**
+         * @param ipv6Addresses The IPv6 addresses associated with this service. Addresses are static for the lifetime of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             $.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
+        /**
+         * @param ipv6Addresses The IPv6 addresses associated with this service. Addresses are static for the lifetime of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(List<String> ipv6Addresses) {
             return ipv6Addresses(Output.of(ipv6Addresses));
         }
 
+        /**
+         * @param ipv6Addresses The IPv6 addresses associated with this service. Addresses are static for the lifetime of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
 
+        /**
+         * @param labels Set of label tags associated with the EdgeCache resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Set of label tags associated with the EdgeCache resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param logConfig Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(@Nullable Output<EdgeCacheServiceLogConfigGetArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(EdgeCacheServiceLogConfigGetArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requireTls Require TLS (HTTPS) for all clients connecting to this service.
+         * Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
+         * You must have at least one (1) edgeSslCertificate specified to enable this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireTls(@Nullable Output<Boolean> requireTls) {
             $.requireTls = requireTls;
             return this;
         }
 
+        /**
+         * @param requireTls Require TLS (HTTPS) for all clients connecting to this service.
+         * Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
+         * You must have at least one (1) edgeSslCertificate specified to enable this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireTls(Boolean requireTls) {
             return requireTls(Output.of(requireTls));
         }
 
+        /**
+         * @param routing Defines how requests are routed, modified, cached and/or which origin content is filled from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routing(@Nullable Output<EdgeCacheServiceRoutingGetArgs> routing) {
             $.routing = routing;
             return this;
         }
 
+        /**
+         * @param routing Defines how requests are routed, modified, cached and/or which origin content is filled from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routing(EdgeCacheServiceRoutingGetArgs routing) {
             return routing(Output.of(routing));
         }
 
+        /**
+         * @param sslPolicy URL of the SslPolicy resource that will be associated with the EdgeCacheService.
+         * If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             $.sslPolicy = sslPolicy;
             return this;
         }
 
+        /**
+         * @param sslPolicy URL of the SslPolicy resource that will be associated with the EdgeCacheService.
+         * If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(String sslPolicy) {
             return sslPolicy(Output.of(sslPolicy));
         }

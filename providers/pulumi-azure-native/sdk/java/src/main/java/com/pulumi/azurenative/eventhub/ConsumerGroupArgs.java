@@ -22,6 +22,10 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consumerGroupName")
     private @Nullable Output<String> consumerGroupName;
 
+    /**
+     * @return The consumer group name
+     * 
+     */
     public Optional<Output<String>> consumerGroupName() {
         return Optional.ofNullable(this.consumerGroupName);
     }
@@ -33,6 +37,10 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventHubName", required=true)
     private Output<String> eventHubName;
 
+    /**
+     * @return The Event Hub name
+     * 
+     */
     public Output<String> eventHubName() {
         return this.eventHubName;
     }
@@ -44,6 +52,10 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -55,6 +67,10 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userMetadata")
     private @Nullable Output<String> userMetadata;
 
+    /**
+     * @return User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
+     * 
+     */
     public Optional<Output<String>> userMetadata() {
         return Optional.ofNullable(this.userMetadata);
     }
@@ -98,47 +118,107 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConsumerGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerGroupName The consumer group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroupName(@Nullable Output<String> consumerGroupName) {
             $.consumerGroupName = consumerGroupName;
             return this;
         }
 
+        /**
+         * @param consumerGroupName The consumer group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroupName(String consumerGroupName) {
             return consumerGroupName(Output.of(consumerGroupName));
         }
 
+        /**
+         * @param eventHubName The Event Hub name
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(Output<String> eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param eventHubName The Event Hub name
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(String eventHubName) {
             return eventHubName(Output.of(eventHubName));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param userMetadata User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMetadata(@Nullable Output<String> userMetadata) {
             $.userMetadata = userMetadata;
             return this;
         }
 
+        /**
+         * @param userMetadata User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMetadata(String userMetadata) {
             return userMetadata(Output.of(userMetadata));
         }

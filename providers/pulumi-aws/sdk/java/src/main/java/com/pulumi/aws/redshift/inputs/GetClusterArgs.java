@@ -22,6 +22,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterIdentifier", required=true)
     private String clusterIdentifier;
 
+    /**
+     * @return The cluster identifier
+     * 
+     */
     public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
@@ -33,6 +37,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The tags associated to the cluster
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterIdentifier The cluster identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIdentifier(String clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
+        /**
+         * @param tags The tags associated to the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

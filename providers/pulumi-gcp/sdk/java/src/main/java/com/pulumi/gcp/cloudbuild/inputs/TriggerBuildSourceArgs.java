@@ -24,6 +24,11 @@ public final class TriggerBuildSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="repoSource")
     private @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource;
 
+    /**
+     * @return Location of the source in a Google Cloud Source Repository.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerBuildSourceRepoSourceArgs>> repoSource() {
         return Optional.ofNullable(this.repoSource);
     }
@@ -36,6 +41,11 @@ public final class TriggerBuildSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="storageSource")
     private @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource;
 
+    /**
+     * @return Location of the source in an archive file in Google Cloud Storage.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<TriggerBuildSourceStorageSourceArgs>> storageSource() {
         return Optional.ofNullable(this.storageSource);
     }
@@ -65,20 +75,48 @@ public final class TriggerBuildSourceArgs extends com.pulumi.resources.ResourceA
             $ = new TriggerBuildSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repoSource Location of the source in a Google Cloud Source Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoSource(@Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource) {
             $.repoSource = repoSource;
             return this;
         }
 
+        /**
+         * @param repoSource Location of the source in a Google Cloud Source Repository.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoSource(TriggerBuildSourceRepoSourceArgs repoSource) {
             return repoSource(Output.of(repoSource));
         }
 
+        /**
+         * @param storageSource Location of the source in an archive file in Google Cloud Storage.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSource(@Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource) {
             $.storageSource = storageSource;
             return this;
         }
 
+        /**
+         * @param storageSource Location of the source in an archive file in Google Cloud Storage.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSource(TriggerBuildSourceStorageSourceArgs storageSource) {
             return storageSource(Output.of(storageSource));
         }

@@ -24,6 +24,10 @@ public final class IncidentLabelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labelName", required=true)
     private Output<String> labelName;
 
+    /**
+     * @return The name of the label
+     * 
+     */
     public Output<String> labelName() {
         return this.labelName;
     }
@@ -52,11 +56,23 @@ public final class IncidentLabelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IncidentLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labelName The name of the label
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(Output<String> labelName) {
             $.labelName = labelName;
             return this;
         }
 
+        /**
+         * @param labelName The name of the label
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(String labelName) {
             return labelName(Output.of(labelName));
         }

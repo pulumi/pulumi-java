@@ -26,6 +26,10 @@ public final class AccessPolicyIamUserArgs extends com.pulumi.resources.Resource
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the IAM user.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -54,11 +58,23 @@ public final class AccessPolicyIamUserArgs extends com.pulumi.resources.Resource
             $ = new AccessPolicyIamUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the IAM user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the IAM user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }

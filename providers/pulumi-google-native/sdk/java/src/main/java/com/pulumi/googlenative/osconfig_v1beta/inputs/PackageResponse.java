@@ -23,6 +23,10 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="desiredState", required=true)
     private String desiredState;
 
+    /**
+     * @return The desired_state the agent should maintain for this package. The default is to ensure the package is installed.
+     * 
+     */
     public String desiredState() {
         return this.desiredState;
     }
@@ -34,6 +38,10 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="manager", required=true)
     private String manager;
 
+    /**
+     * @return Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.
+     * 
+     */
     public String manager() {
         return this.manager;
     }
@@ -45,6 +53,10 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -75,16 +87,34 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PackageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param desiredState The desired_state the agent should maintain for this package. The default is to ensure the package is installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(String desiredState) {
             $.desiredState = desiredState;
             return this;
         }
 
+        /**
+         * @param manager Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manager(String manager) {
             $.manager = manager;
             return this;
         }
 
+        /**
+         * @param name The name of the package. A package is uniquely identified for conflict validation by checking the package name and the manager(s) that the package targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

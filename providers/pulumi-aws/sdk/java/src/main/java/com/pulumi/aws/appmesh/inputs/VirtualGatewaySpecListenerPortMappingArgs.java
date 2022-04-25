@@ -21,6 +21,10 @@ public final class VirtualGatewaySpecListenerPortMappingArgs extends com.pulumi.
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port used for the port mapping.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -32,6 +36,10 @@ public final class VirtualGatewaySpecListenerPortMappingArgs extends com.pulumi.
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
+    /**
+     * @return The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
+     * 
+     */
     public Output<String> protocol() {
         return this.protocol;
     }
@@ -61,20 +69,44 @@ public final class VirtualGatewaySpecListenerPortMappingArgs extends com.pulumi.
             $ = new VirtualGatewaySpecListenerPortMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The port used for the port mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port used for the port mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped {
     /**
-     * A 128/192/256 bit key.
+     * @return A 128/192/256 bit key.
      * A base64-encoded string.
      * 
      */
@@ -22,10 +22,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     /**
-     * A 128/192/256 bit key.
+     * @return A 128/192/256 bit key.
      * A base64-encoded string.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }

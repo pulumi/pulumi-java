@@ -26,6 +26,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="creationTime")
     private @Nullable String creationTime;
 
+    /**
+     * @return Gets or sets the creation time of the runbook draft.
+     * 
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -37,6 +41,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="draftContentLink")
     private @Nullable ContentLinkResponse draftContentLink;
 
+    /**
+     * @return Gets or sets the draft runbook content link.
+     * 
+     */
     public Optional<ContentLinkResponse> draftContentLink() {
         return Optional.ofNullable(this.draftContentLink);
     }
@@ -48,6 +56,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="inEdit")
     private @Nullable Boolean inEdit;
 
+    /**
+     * @return Gets or sets whether runbook is in edit mode.
+     * 
+     */
     public Optional<Boolean> inEdit() {
         return Optional.ofNullable(this.inEdit);
     }
@@ -59,6 +71,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="lastModifiedTime")
     private @Nullable String lastModifiedTime;
 
+    /**
+     * @return Gets or sets the last modified time of the runbook draft.
+     * 
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
@@ -70,6 +86,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="outputTypes")
     private @Nullable List<String> outputTypes;
 
+    /**
+     * @return Gets or sets the runbook output types.
+     * 
+     */
     public Optional<List<String>> outputTypes() {
         return Optional.ofNullable(this.outputTypes);
     }
@@ -81,6 +101,10 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="parameters")
     private @Nullable Map<String,RunbookParameterResponse> parameters;
 
+    /**
+     * @return Gets or sets the runbook draft parameters.
+     * 
+     */
     public Optional<Map<String,RunbookParameterResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -114,35 +138,77 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RunbookDraftResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime Gets or sets the creation time of the runbook draft.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(@Nullable String creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param draftContentLink Gets or sets the draft runbook content link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder draftContentLink(@Nullable ContentLinkResponse draftContentLink) {
             $.draftContentLink = draftContentLink;
             return this;
         }
 
+        /**
+         * @param inEdit Gets or sets whether runbook is in edit mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inEdit(@Nullable Boolean inEdit) {
             $.inEdit = inEdit;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime Gets or sets the last modified time of the runbook draft.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param outputTypes Gets or sets the runbook output types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputTypes(@Nullable List<String> outputTypes) {
             $.outputTypes = outputTypes;
             return this;
         }
 
+        /**
+         * @param outputTypes Gets or sets the runbook output types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputTypes(String... outputTypes) {
             return outputTypes(List.of(outputTypes));
         }
 
+        /**
+         * @param parameters Gets or sets the runbook draft parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,RunbookParameterResponse> parameters) {
             $.parameters = parameters;
             return this;

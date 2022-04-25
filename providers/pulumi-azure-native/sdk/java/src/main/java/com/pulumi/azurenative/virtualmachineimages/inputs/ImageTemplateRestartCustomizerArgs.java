@@ -27,6 +27,10 @@ public final class ImageTemplateRestartCustomizerArgs extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Friendly Name to provide context on what this customization step does
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class ImageTemplateRestartCustomizerArgs extends com.pulumi.resourc
     @Import(name="restartCheckCommand")
     private @Nullable Output<String> restartCheckCommand;
 
+    /**
+     * @return Command to check if restart succeeded [Default: &#39;&#39;]
+     * 
+     */
     public Optional<Output<String>> restartCheckCommand() {
         return Optional.ofNullable(this.restartCheckCommand);
     }
@@ -49,6 +57,10 @@ public final class ImageTemplateRestartCustomizerArgs extends com.pulumi.resourc
     @Import(name="restartCommand")
     private @Nullable Output<String> restartCommand;
 
+    /**
+     * @return Command to execute the restart [Default: &#39;shutdown /r /f /t 0 /c &#34;packer restart&#34;&#39;]
+     * 
+     */
     public Optional<Output<String>> restartCommand() {
         return Optional.ofNullable(this.restartCommand);
     }
@@ -60,6 +72,10 @@ public final class ImageTemplateRestartCustomizerArgs extends com.pulumi.resourc
     @Import(name="restartTimeout")
     private @Nullable Output<String> restartTimeout;
 
+    /**
+     * @return Restart timeout specified as a string of magnitude and unit, e.g. &#39;5m&#39; (5 minutes) or &#39;2h&#39; (2 hours) [Default: &#39;5m&#39;]
+     * 
+     */
     public Optional<Output<String>> restartTimeout() {
         return Optional.ofNullable(this.restartTimeout);
     }
@@ -72,6 +88,11 @@ public final class ImageTemplateRestartCustomizerArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;WindowsRestart&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -104,47 +125,109 @@ public final class ImageTemplateRestartCustomizerArgs extends com.pulumi.resourc
             $ = new ImageTemplateRestartCustomizerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Friendly Name to provide context on what this customization step does
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Friendly Name to provide context on what this customization step does
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param restartCheckCommand Command to check if restart succeeded [Default: &#39;&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCheckCommand(@Nullable Output<String> restartCheckCommand) {
             $.restartCheckCommand = restartCheckCommand;
             return this;
         }
 
+        /**
+         * @param restartCheckCommand Command to check if restart succeeded [Default: &#39;&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCheckCommand(String restartCheckCommand) {
             return restartCheckCommand(Output.of(restartCheckCommand));
         }
 
+        /**
+         * @param restartCommand Command to execute the restart [Default: &#39;shutdown /r /f /t 0 /c &#34;packer restart&#34;&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCommand(@Nullable Output<String> restartCommand) {
             $.restartCommand = restartCommand;
             return this;
         }
 
+        /**
+         * @param restartCommand Command to execute the restart [Default: &#39;shutdown /r /f /t 0 /c &#34;packer restart&#34;&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartCommand(String restartCommand) {
             return restartCommand(Output.of(restartCommand));
         }
 
+        /**
+         * @param restartTimeout Restart timeout specified as a string of magnitude and unit, e.g. &#39;5m&#39; (5 minutes) or &#39;2h&#39; (2 hours) [Default: &#39;5m&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartTimeout(@Nullable Output<String> restartTimeout) {
             $.restartTimeout = restartTimeout;
             return this;
         }
 
+        /**
+         * @param restartTimeout Restart timeout specified as a string of magnitude and unit, e.g. &#39;5m&#39; (5 minutes) or &#39;2h&#39; (2 hours) [Default: &#39;5m&#39;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartTimeout(String restartTimeout) {
             return restartTimeout(Output.of(restartTimeout));
         }
 
+        /**
+         * @param type The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;WindowsRestart&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;WindowsRestart&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

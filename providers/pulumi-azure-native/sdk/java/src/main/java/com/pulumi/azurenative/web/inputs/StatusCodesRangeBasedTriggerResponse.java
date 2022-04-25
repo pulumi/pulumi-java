@@ -26,6 +26,10 @@ public final class StatusCodesRangeBasedTriggerResponse extends com.pulumi.resou
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return Request Count.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -44,6 +48,10 @@ public final class StatusCodesRangeBasedTriggerResponse extends com.pulumi.resou
     @Import(name="statusCodes")
     private @Nullable String statusCodes;
 
+    /**
+     * @return HTTP status code.
+     * 
+     */
     public Optional<String> statusCodes() {
         return Optional.ofNullable(this.statusCodes);
     }
@@ -55,6 +63,10 @@ public final class StatusCodesRangeBasedTriggerResponse extends com.pulumi.resou
     @Import(name="timeInterval")
     private @Nullable String timeInterval;
 
+    /**
+     * @return Time interval.
+     * 
+     */
     public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -86,6 +98,12 @@ public final class StatusCodesRangeBasedTriggerResponse extends com.pulumi.resou
             $ = new StatusCodesRangeBasedTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
@@ -96,11 +114,23 @@ public final class StatusCodesRangeBasedTriggerResponse extends com.pulumi.resou
             return this;
         }
 
+        /**
+         * @param statusCodes HTTP status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(@Nullable String statusCodes) {
             $.statusCodes = statusCodes;
             return this;
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(@Nullable String timeInterval) {
             $.timeInterval = timeInterval;
             return this;

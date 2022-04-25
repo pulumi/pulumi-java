@@ -23,6 +23,10 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="acl", required=true)
     private String acl;
 
+    /**
+     * @return Specifies how each object&#39;s ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+     * 
+     */
     public String acl() {
         return this.acl;
     }
@@ -34,6 +38,10 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="gid", required=true)
     private String gid;
 
+    /**
+     * @return Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+     * 
+     */
     public String gid() {
         return this.gid;
     }
@@ -45,6 +53,10 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="kmsKey", required=true)
     private String kmsKey;
 
+    /**
+     * @return Specifies how each object&#39;s Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+     * 
+     */
     public String kmsKey() {
         return this.kmsKey;
     }
@@ -56,6 +68,10 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -67,6 +83,10 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="storageClass", required=true)
     private String storageClass;
 
+    /**
+     * @return Specifies the storage class to set on objects being transferred to Google Cloud Storage buckets. If unspecified, the default behavior is the same as STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
+     * 
+     */
     public String storageClass() {
         return this.storageClass;
     }
@@ -78,6 +98,10 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="symlink", required=true)
     private String symlink;
 
+    /**
+     * @return Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+     * 
+     */
     public String symlink() {
         return this.symlink;
     }
@@ -89,6 +113,10 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="temporaryHold", required=true)
     private String temporaryHold;
 
+    /**
+     * @return Specifies how each object&#39;s temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
+     * 
+     */
     public String temporaryHold() {
         return this.temporaryHold;
     }
@@ -100,6 +128,10 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uid", required=true)
     private String uid;
 
+    /**
+     * @return Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+     * 
+     */
     public String uid() {
         return this.uid;
     }
@@ -135,41 +167,89 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
             $ = new MetadataOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acl Specifies how each object&#39;s ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(String acl) {
             $.acl = acl;
             return this;
         }
 
+        /**
+         * @param gid Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gid(String gid) {
             $.gid = gid;
             return this;
         }
 
+        /**
+         * @param kmsKey Specifies how each object&#39;s Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param mode Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param storageClass Specifies the storage class to set on objects being transferred to Google Cloud Storage buckets. If unspecified, the default behavior is the same as STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param symlink Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder symlink(String symlink) {
             $.symlink = symlink;
             return this;
         }
 
+        /**
+         * @param temporaryHold Specifies how each object&#39;s temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryHold(String temporaryHold) {
             $.temporaryHold = temporaryHold;
             return this;
         }
 
+        /**
+         * @param uid Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             $.uid = uid;
             return this;

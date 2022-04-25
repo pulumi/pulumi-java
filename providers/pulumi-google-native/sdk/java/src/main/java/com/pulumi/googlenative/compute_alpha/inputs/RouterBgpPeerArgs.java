@@ -30,6 +30,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertiseMode")
     private @Nullable Output<RouterBgpPeerAdvertiseMode> advertiseMode;
 
+    /**
+     * @return User-specified flag to indicate which mode to use for advertisement.
+     * 
+     */
     public Optional<Output<RouterBgpPeerAdvertiseMode>> advertiseMode() {
         return Optional.ofNullable(this.advertiseMode);
     }
@@ -41,6 +45,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertisedGroups")
     private @Nullable Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
 
+    /**
+     * @return User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+     * 
+     */
     public Optional<Output<List<RouterBgpPeerAdvertisedGroupsItem>>> advertisedGroups() {
         return Optional.ofNullable(this.advertisedGroups);
     }
@@ -52,6 +60,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertisedIpRanges")
     private @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
+    /**
+     * @return User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+     * 
+     */
     public Optional<Output<List<RouterAdvertisedIpRangeArgs>>> advertisedIpRanges() {
         return Optional.ofNullable(this.advertisedIpRanges);
     }
@@ -63,6 +75,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertisedRoutePriority")
     private @Nullable Output<Integer> advertisedRoutePriority;
 
+    /**
+     * @return The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.
+     * 
+     */
     public Optional<Output<Integer>> advertisedRoutePriority() {
         return Optional.ofNullable(this.advertisedRoutePriority);
     }
@@ -74,6 +90,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bfd")
     private @Nullable Output<RouterBgpPeerBfdArgs> bfd;
 
+    /**
+     * @return BFD configuration for the BGP peering.
+     * 
+     */
     public Optional<Output<RouterBgpPeerBfdArgs>> bfd() {
         return Optional.ofNullable(this.bfd);
     }
@@ -85,6 +105,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enable")
     private @Nullable Output<RouterBgpPeerEnable> enable;
 
+    /**
+     * @return The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
+     * 
+     */
     public Optional<Output<RouterBgpPeerEnable>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -96,6 +120,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableIpv6")
     private @Nullable Output<Boolean> enableIpv6;
 
+    /**
+     * @return Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+     * 
+     */
     public Optional<Output<Boolean>> enableIpv6() {
         return Optional.ofNullable(this.enableIpv6);
     }
@@ -107,6 +135,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interfaceName")
     private @Nullable Output<String> interfaceName;
 
+    /**
+     * @return Name of the interface the BGP peer is associated with.
+     * 
+     */
     public Optional<Output<String>> interfaceName() {
         return Optional.ofNullable(this.interfaceName);
     }
@@ -118,6 +150,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -129,6 +165,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipv6NexthopAddress")
     private @Nullable Output<String> ipv6NexthopAddress;
 
+    /**
+     * @return IPv6 address of the interface inside Google Cloud Platform.
+     * 
+     */
     public Optional<Output<String>> ipv6NexthopAddress() {
         return Optional.ofNullable(this.ipv6NexthopAddress);
     }
@@ -140,6 +180,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="md5AuthenticationKeyName")
     private @Nullable Output<String> md5AuthenticationKeyName;
 
+    /**
+     * @return Present if MD5 authentication is enabled for the peering. Must be the name of one of the entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
+     * 
+     */
     public Optional<Output<String>> md5AuthenticationKeyName() {
         return Optional.ofNullable(this.md5AuthenticationKeyName);
     }
@@ -151,6 +195,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -162,6 +210,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerAsn")
     private @Nullable Output<Integer> peerAsn;
 
+    /**
+     * @return Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+     * 
+     */
     public Optional<Output<Integer>> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
@@ -173,6 +225,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerIpAddress")
     private @Nullable Output<String> peerIpAddress;
 
+    /**
+     * @return IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+     * 
+     */
     public Optional<Output<String>> peerIpAddress() {
         return Optional.ofNullable(this.peerIpAddress);
     }
@@ -184,6 +240,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerIpv6NexthopAddress")
     private @Nullable Output<String> peerIpv6NexthopAddress;
 
+    /**
+     * @return IPv6 address of the BGP interface outside Google Cloud Platform.
+     * 
+     */
     public Optional<Output<String>> peerIpv6NexthopAddress() {
         return Optional.ofNullable(this.peerIpv6NexthopAddress);
     }
@@ -195,6 +255,10 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routerApplianceInstance")
     private @Nullable Output<String> routerApplianceInstance;
 
+    /**
+     * @return URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.
+     * 
+     */
     public Optional<Output<String>> routerApplianceInstance() {
         return Optional.ofNullable(this.routerApplianceInstance);
     }
@@ -238,154 +302,358 @@ public final class RouterBgpPeerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouterBgpPeerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advertiseMode User-specified flag to indicate which mode to use for advertisement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertiseMode(@Nullable Output<RouterBgpPeerAdvertiseMode> advertiseMode) {
             $.advertiseMode = advertiseMode;
             return this;
         }
 
+        /**
+         * @param advertiseMode User-specified flag to indicate which mode to use for advertisement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertiseMode(RouterBgpPeerAdvertiseMode advertiseMode) {
             return advertiseMode(Output.of(advertiseMode));
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(@Nullable Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups) {
             $.advertisedGroups = advertisedGroups;
             return this;
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(List<RouterBgpPeerAdvertisedGroupsItem> advertisedGroups) {
             return advertisedGroups(Output.of(advertisedGroups));
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router&#39;s own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(RouterBgpPeerAdvertisedGroupsItem... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(@Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
             $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
             return advertisedIpRanges(Output.of(advertisedIpRanges));
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the &#34;bgp&#34; message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(RouterAdvertisedIpRangeArgs... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
 
+        /**
+         * @param advertisedRoutePriority The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedRoutePriority(@Nullable Output<Integer> advertisedRoutePriority) {
             $.advertisedRoutePriority = advertisedRoutePriority;
             return this;
         }
 
+        /**
+         * @param advertisedRoutePriority The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedRoutePriority(Integer advertisedRoutePriority) {
             return advertisedRoutePriority(Output.of(advertisedRoutePriority));
         }
 
+        /**
+         * @param bfd BFD configuration for the BGP peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bfd(@Nullable Output<RouterBgpPeerBfdArgs> bfd) {
             $.bfd = bfd;
             return this;
         }
 
+        /**
+         * @param bfd BFD configuration for the BGP peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bfd(RouterBgpPeerBfdArgs bfd) {
             return bfd(Output.of(bfd));
         }
 
+        /**
+         * @param enable The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<RouterBgpPeerEnable> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(RouterBgpPeerEnable enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param enableIpv6 Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIpv6(@Nullable Output<Boolean> enableIpv6) {
             $.enableIpv6 = enableIpv6;
             return this;
         }
 
+        /**
+         * @param enableIpv6 Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIpv6(Boolean enableIpv6) {
             return enableIpv6(Output.of(enableIpv6));
         }
 
+        /**
+         * @param interfaceName Name of the interface the BGP peer is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceName(@Nullable Output<String> interfaceName) {
             $.interfaceName = interfaceName;
             return this;
         }
 
+        /**
+         * @param interfaceName Name of the interface the BGP peer is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interfaceName(String interfaceName) {
             return interfaceName(Output.of(interfaceName));
         }
 
+        /**
+         * @param ipAddress IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param ipv6NexthopAddress IPv6 address of the interface inside Google Cloud Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6NexthopAddress(@Nullable Output<String> ipv6NexthopAddress) {
             $.ipv6NexthopAddress = ipv6NexthopAddress;
             return this;
         }
 
+        /**
+         * @param ipv6NexthopAddress IPv6 address of the interface inside Google Cloud Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6NexthopAddress(String ipv6NexthopAddress) {
             return ipv6NexthopAddress(Output.of(ipv6NexthopAddress));
         }
 
+        /**
+         * @param md5AuthenticationKeyName Present if MD5 authentication is enabled for the peering. Must be the name of one of the entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5AuthenticationKeyName(@Nullable Output<String> md5AuthenticationKeyName) {
             $.md5AuthenticationKeyName = md5AuthenticationKeyName;
             return this;
         }
 
+        /**
+         * @param md5AuthenticationKeyName Present if MD5 authentication is enabled for the peering. Must be the name of one of the entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5AuthenticationKeyName(String md5AuthenticationKeyName) {
             return md5AuthenticationKeyName(Output.of(md5AuthenticationKeyName));
         }
 
+        /**
+         * @param name Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param peerAsn Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(@Nullable Output<Integer> peerAsn) {
             $.peerAsn = peerAsn;
             return this;
         }
 
+        /**
+         * @param peerAsn Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(Integer peerAsn) {
             return peerAsn(Output.of(peerAsn));
         }
 
+        /**
+         * @param peerIpAddress IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIpAddress(@Nullable Output<String> peerIpAddress) {
             $.peerIpAddress = peerIpAddress;
             return this;
         }
 
+        /**
+         * @param peerIpAddress IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIpAddress(String peerIpAddress) {
             return peerIpAddress(Output.of(peerIpAddress));
         }
 
+        /**
+         * @param peerIpv6NexthopAddress IPv6 address of the BGP interface outside Google Cloud Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIpv6NexthopAddress(@Nullable Output<String> peerIpv6NexthopAddress) {
             $.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
             return this;
         }
 
+        /**
+         * @param peerIpv6NexthopAddress IPv6 address of the BGP interface outside Google Cloud Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
             return peerIpv6NexthopAddress(Output.of(peerIpv6NexthopAddress));
         }
 
+        /**
+         * @param routerApplianceInstance URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routerApplianceInstance(@Nullable Output<String> routerApplianceInstance) {
             $.routerApplianceInstance = routerApplianceInstance;
             return this;
         }
 
+        /**
+         * @param routerApplianceInstance URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routerApplianceInstance(String routerApplianceInstance) {
             return routerApplianceInstance(Output.of(routerApplianceInstance));
         }

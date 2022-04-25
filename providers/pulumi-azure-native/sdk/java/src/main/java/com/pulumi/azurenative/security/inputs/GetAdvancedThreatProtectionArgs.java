@@ -19,6 +19,10 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -30,6 +34,10 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
     @Import(name="settingName", required=true)
     private String settingName;
 
+    /**
+     * @return Advanced Threat Protection setting name.
+     * 
+     */
     public String settingName() {
         return this.settingName;
     }
@@ -59,11 +67,23 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
             $ = new GetAdvancedThreatProtectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param settingName Advanced Threat Protection setting name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingName(String settingName) {
             $.settingName = settingName;
             return this;

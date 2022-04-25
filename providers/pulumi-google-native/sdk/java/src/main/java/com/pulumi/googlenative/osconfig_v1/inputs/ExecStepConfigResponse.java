@@ -26,6 +26,10 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="allowedSuccessCodes", required=true)
     private List<Integer> allowedSuccessCodes;
 
+    /**
+     * @return Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+     * 
+     */
     public List<Integer> allowedSuccessCodes() {
         return this.allowedSuccessCodes;
     }
@@ -37,6 +41,10 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="gcsObject", required=true)
     private GcsObjectResponse gcsObject;
 
+    /**
+     * @return A Cloud Storage object containing the executable.
+     * 
+     */
     public GcsObjectResponse gcsObject() {
         return this.gcsObject;
     }
@@ -48,6 +56,10 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="interpreter", required=true)
     private String interpreter;
 
+    /**
+     * @return The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+     * 
+     */
     public String interpreter() {
         return this.interpreter;
     }
@@ -59,6 +71,10 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="localPath", required=true)
     private String localPath;
 
+    /**
+     * @return An absolute path to the executable on the VM.
+     * 
+     */
     public String localPath() {
         return this.localPath;
     }
@@ -90,25 +106,55 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new ExecStepConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedSuccessCodes Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSuccessCodes(List<Integer> allowedSuccessCodes) {
             $.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
 
+        /**
+         * @param allowedSuccessCodes Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
             return allowedSuccessCodes(List.of(allowedSuccessCodes));
         }
 
+        /**
+         * @param gcsObject A Cloud Storage object containing the executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsObject(GcsObjectResponse gcsObject) {
             $.gcsObject = gcsObject;
             return this;
         }
 
+        /**
+         * @param interpreter The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(String interpreter) {
             $.interpreter = interpreter;
             return this;
         }
 
+        /**
+         * @param localPath An absolute path to the executable on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             $.localPath = localPath;
             return this;

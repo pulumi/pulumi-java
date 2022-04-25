@@ -26,7 +26,7 @@ public final class GetLoadBalancerResult {
     private final String dnsName;
     private final GetLoadBalancerHealthCheck healthCheck;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -116,9 +116,9 @@ public final class GetLoadBalancerResult {
         return this.healthCheck;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

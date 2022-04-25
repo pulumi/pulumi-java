@@ -19,6 +19,10 @@ public final class GetKeyspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyspaceName", required=true)
     private String keyspaceName;
 
+    /**
+     * @return Name for Cassandra keyspace
+     * 
+     */
     public String keyspaceName() {
         return this.keyspaceName;
     }
@@ -47,6 +51,12 @@ public final class GetKeyspaceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyspaceName Name for Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(String keyspaceName) {
             $.keyspaceName = keyspaceName;
             return this;

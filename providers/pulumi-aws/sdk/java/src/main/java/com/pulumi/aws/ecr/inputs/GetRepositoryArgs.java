@@ -22,6 +22,10 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the ECR Repository.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="registryId")
     private @Nullable String registryId;
 
+    /**
+     * @return The registry ID where the repository was created.
+     * 
+     */
     public Optional<String> registryId() {
         return Optional.ofNullable(this.registryId);
     }
@@ -44,6 +52,10 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags assigned to the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -74,16 +86,34 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the ECR Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param registryId The registry ID where the repository was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(@Nullable String registryId) {
             $.registryId = registryId;
             return this;
         }
 
+        /**
+         * @param tags A map of tags assigned to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

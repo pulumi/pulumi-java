@@ -27,6 +27,10 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse extends com.pul
     @Import(name="dateFormat")
     private @Nullable Object dateFormat;
 
+    /**
+     * @return Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> dateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
@@ -38,6 +42,10 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse extends com.pul
     @Import(name="timestampFormat")
     private @Nullable Object timestampFormat;
 
+    /**
+     * @return Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> timestampFormat() {
         return Optional.ofNullable(this.timestampFormat);
     }
@@ -50,6 +58,11 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse extends com.pul
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The export setting type.
+     * Expected value is &#39;AzureDatabricksDeltaLakeExportCommand&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -80,16 +93,35 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse extends com.pul
             $ = new AzureDatabricksDeltaLakeExportCommandResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dateFormat Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(@Nullable Object dateFormat) {
             $.dateFormat = dateFormat;
             return this;
         }
 
+        /**
+         * @param timestampFormat Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampFormat(@Nullable Object timestampFormat) {
             $.timestampFormat = timestampFormat;
             return this;
         }
 
+        /**
+         * @param type The export setting type.
+         * Expected value is &#39;AzureDatabricksDeltaLakeExportCommand&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

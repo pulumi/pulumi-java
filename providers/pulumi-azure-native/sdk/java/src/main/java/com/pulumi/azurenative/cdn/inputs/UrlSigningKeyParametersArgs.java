@@ -28,6 +28,10 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
     @Import(name="keyId", required=true)
     private Output<String> keyId;
 
+    /**
+     * @return Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+     * 
+     */
     public Output<String> keyId() {
         return this.keyId;
     }
@@ -39,6 +43,10 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
     @Import(name="secretSource", required=true)
     private Output<ResourceReferenceArgs> secretSource;
 
+    /**
+     * @return Resource reference to the KV secret
+     * 
+     */
     public Output<ResourceReferenceArgs> secretSource() {
         return this.secretSource;
     }
@@ -50,6 +58,10 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
     @Import(name="secretVersion")
     private @Nullable Output<String> secretVersion;
 
+    /**
+     * @return Version of the secret to be used
+     * 
+     */
     public Optional<Output<String>> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -62,6 +74,11 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the Secret to create.
+     * Expected value is &#39;UrlSigningKey&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -93,38 +110,88 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
             $ = new UrlSigningKeyParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }
 
+        /**
+         * @param secretSource Resource reference to the KV secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretSource(Output<ResourceReferenceArgs> secretSource) {
             $.secretSource = secretSource;
             return this;
         }
 
+        /**
+         * @param secretSource Resource reference to the KV secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretSource(ResourceReferenceArgs secretSource) {
             return secretSource(Output.of(secretSource));
         }
 
+        /**
+         * @param secretVersion Version of the secret to be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param secretVersion Version of the secret to be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(String secretVersion) {
             return secretVersion(Output.of(secretVersion));
         }
 
+        /**
+         * @param type The type of the Secret to create.
+         * Expected value is &#39;UrlSigningKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the Secret to create.
+         * Expected value is &#39;UrlSigningKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

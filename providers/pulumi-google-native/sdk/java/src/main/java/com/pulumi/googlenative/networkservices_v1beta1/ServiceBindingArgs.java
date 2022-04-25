@@ -23,6 +23,10 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. A free-text description of the resource. Max length 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpointFilter")
     private @Nullable Output<String> endpointFilter;
 
+    /**
+     * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
+     * 
+     */
     public Optional<Output<String>> endpointFilter() {
         return Optional.ofNullable(this.endpointFilter);
     }
@@ -45,6 +53,10 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Set of label tags associated with the ServiceBinding resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -63,6 +75,10 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +97,10 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -123,29 +143,65 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ServiceBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. A free-text description of the resource. Max length 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. A free-text description of the resource. Max length 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param endpointFilter Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointFilter(@Nullable Output<String> endpointFilter) {
             $.endpointFilter = endpointFilter;
             return this;
         }
 
+        /**
+         * @param endpointFilter Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointFilter(String endpointFilter) {
             return endpointFilter(Output.of(endpointFilter));
         }
 
+        /**
+         * @param labels Optional. Set of label tags associated with the ServiceBinding resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Set of label tags associated with the ServiceBinding resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -159,11 +215,23 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name&gt;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -177,11 +245,23 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
             return project(Output.of(project));
         }
 
+        /**
+         * @param service The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

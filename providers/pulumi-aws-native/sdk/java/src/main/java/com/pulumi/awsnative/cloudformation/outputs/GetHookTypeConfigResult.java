@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetHookTypeConfigResult {
     /**
-     * The configuration data for the extension, in this account and region.
+     * @return The configuration data for the extension, in this account and region.
      * 
      */
     private final @Nullable String configuration;
     /**
-     * The Amazon Resource Name (ARN) for the configuration data, in this account and region.
+     * @return The Amazon Resource Name (ARN) for the configuration data, in this account and region.
      * 
      */
     private final @Nullable String configurationArn;
     /**
-     * The name of the type being registered.
+     * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
@@ -40,25 +40,25 @@ public final class GetHookTypeConfigResult {
     }
 
     /**
-     * The configuration data for the extension, in this account and region.
+     * @return The configuration data for the extension, in this account and region.
      * 
-    */
+     */
     public Optional<String> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * The Amazon Resource Name (ARN) for the configuration data, in this account and region.
+     * @return The Amazon Resource Name (ARN) for the configuration data, in this account and region.
      * 
-    */
+     */
     public Optional<String> configurationArn() {
         return Optional.ofNullable(this.configurationArn);
     }
     /**
-     * The name of the type being registered.
+     * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
-    */
+     */
     public Optional<String> typeName() {
         return Optional.ofNullable(this.typeName);
     }

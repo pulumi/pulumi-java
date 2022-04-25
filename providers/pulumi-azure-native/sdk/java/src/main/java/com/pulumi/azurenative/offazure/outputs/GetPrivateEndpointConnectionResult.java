@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class GetPrivateEndpointConnectionResult {
     /**
-     * Gets the tag for optimistic concurrency control.
+     * @return Gets the tag for optimistic concurrency control.
      * 
      */
     private final String eTag;
     /**
-     * Relative URL to get this Sites.
+     * @return Relative URL to get this Sites.
      * 
      */
     private final String id;
     /**
-     * Gets the name of the resource.
+     * @return Gets the name of the resource.
      * 
      */
     private final String name;
     /**
-     * Gets the properties of the object.
+     * @return Gets the properties of the object.
      * 
      */
     private final PrivateEndpointConnectionPropertiesResponse properties;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
      */
     private final String type;
@@ -59,44 +59,44 @@ public final class GetPrivateEndpointConnectionResult {
     }
 
     /**
-     * Gets the tag for optimistic concurrency control.
+     * @return Gets the tag for optimistic concurrency control.
      * 
-    */
+     */
     public String eTag() {
         return this.eTag;
     }
     /**
-     * Relative URL to get this Sites.
+     * @return Relative URL to get this Sites.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets the name of the resource.
+     * @return Gets the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the properties of the object.
+     * @return Gets the properties of the object.
      * 
-    */
+     */
     public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

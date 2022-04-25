@@ -26,6 +26,10 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends com.pulumi.resourc
     @Import(name="secretKeyRef")
     private @Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
 
+    /**
+     * @return Selects a secret and a specific version from Cloud Secret Manager.
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2SecretKeySelectorArgs>> secretKeyRef() {
         return Optional.ofNullable(this.secretKeyRef);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends com.pulumi.resourc
             $ = new GoogleCloudRunOpV2EnvVarSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretKeyRef Selects a secret and a specific version from Cloud Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKeyRef(@Nullable Output<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef) {
             $.secretKeyRef = secretKeyRef;
             return this;
         }
 
+        /**
+         * @param secretKeyRef Selects a secret and a specific version from Cloud Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKeyRef(GoogleCloudRunOpV2SecretKeySelectorArgs secretKeyRef) {
             return secretKeyRef(Output.of(secretKeyRef));
         }

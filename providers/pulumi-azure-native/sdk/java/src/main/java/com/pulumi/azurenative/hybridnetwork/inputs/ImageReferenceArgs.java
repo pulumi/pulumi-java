@@ -26,6 +26,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exactVersion")
     private @Nullable Output<String> exactVersion;
 
+    /**
+     * @return Specifies in decimal numbers, the exact version of image used to create the virtual machine.
+     * 
+     */
     public Optional<Output<String>> exactVersion() {
         return Optional.ofNullable(this.exactVersion);
     }
@@ -37,6 +41,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="offer")
     private @Nullable Output<String> offer;
 
+    /**
+     * @return Specifies the offer of the image used to create the virtual machine.
+     * 
+     */
     public Optional<Output<String>> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -48,6 +56,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return The image publisher.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -59,6 +71,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return The image SKU.
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -70,6 +86,10 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -102,47 +122,107 @@ public final class ImageReferenceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ImageReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exactVersion Specifies in decimal numbers, the exact version of image used to create the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactVersion(@Nullable Output<String> exactVersion) {
             $.exactVersion = exactVersion;
             return this;
         }
 
+        /**
+         * @param exactVersion Specifies in decimal numbers, the exact version of image used to create the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactVersion(String exactVersion) {
             return exactVersion(Output.of(exactVersion));
         }
 
+        /**
+         * @param offer Specifies the offer of the image used to create the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable Output<String> offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param offer Specifies the offer of the image used to create the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(String offer) {
             return offer(Output.of(offer));
         }
 
+        /**
+         * @param publisher The image publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The image publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param sku The image SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The image SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param version Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

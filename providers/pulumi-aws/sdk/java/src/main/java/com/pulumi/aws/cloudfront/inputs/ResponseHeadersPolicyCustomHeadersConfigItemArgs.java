@@ -21,6 +21,10 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemArgs extends com.
     @Import(name="header", required=true)
     private Output<String> header;
 
+    /**
+     * @return The HTTP response header name.
+     * 
+     */
     public Output<String> header() {
         return this.header;
     }
@@ -32,6 +36,10 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemArgs extends com.
     @Import(name="override", required=true)
     private Output<Boolean> override;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+     * 
+     */
     public Output<Boolean> override() {
         return this.override;
     }
@@ -43,6 +51,10 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemArgs extends com.
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value for the HTTP response header.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -73,29 +85,65 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemArgs extends com.
             $ = new ResponseHeadersPolicyCustomHeadersConfigItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header The HTTP response header name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(Output<String> header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param header The HTTP response header name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(String header) {
             return header(Output.of(header));
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Output<Boolean> override) {
             $.override = override;
             return this;
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Boolean override) {
             return override(Output.of(override));
         }
 
+        /**
+         * @param value The value for the HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value for the HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

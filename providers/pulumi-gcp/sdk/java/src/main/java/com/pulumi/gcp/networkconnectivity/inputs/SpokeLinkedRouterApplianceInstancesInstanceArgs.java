@@ -22,6 +22,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceArgs extends com.p
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The IP address on the VM to use for peering.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -33,6 +37,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceArgs extends com.p
     @Import(name="virtualMachine")
     private @Nullable Output<String> virtualMachine;
 
+    /**
+     * @return The URI of the virtual machine resource
+     * 
+     */
     public Optional<Output<String>> virtualMachine() {
         return Optional.ofNullable(this.virtualMachine);
     }
@@ -62,20 +70,44 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceArgs extends com.p
             $ = new SpokeLinkedRouterApplianceInstancesInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress The IP address on the VM to use for peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address on the VM to use for peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param virtualMachine The URI of the virtual machine resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
             $.virtualMachine = virtualMachine;
             return this;
         }
 
+        /**
+         * @param virtualMachine The URI of the virtual machine resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachine(String virtualMachine) {
             return virtualMachine(Output.of(virtualMachine));
         }

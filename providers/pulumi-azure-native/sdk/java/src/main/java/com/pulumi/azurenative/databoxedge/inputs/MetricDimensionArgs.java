@@ -24,6 +24,10 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceName", required=true)
     private Output<String> sourceName;
 
+    /**
+     * @return The dimension value.
+     * 
+     */
     public Output<String> sourceName() {
         return this.sourceName;
     }
@@ -35,6 +39,10 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceType", required=true)
     private Output<String> sourceType;
 
+    /**
+     * @return The dimension type.
+     * 
+     */
     public Output<String> sourceType() {
         return this.sourceType;
     }
@@ -64,20 +72,44 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
             $ = new MetricDimensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceName The dimension value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceName(Output<String> sourceName) {
             $.sourceName = sourceName;
             return this;
         }
 
+        /**
+         * @param sourceName The dimension value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceName(String sourceName) {
             return sourceName(Output.of(sourceName));
         }
 
+        /**
+         * @param sourceType The dimension type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(Output<String> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
 
+        /**
+         * @param sourceType The dimension type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             return sourceType(Output.of(sourceType));
         }

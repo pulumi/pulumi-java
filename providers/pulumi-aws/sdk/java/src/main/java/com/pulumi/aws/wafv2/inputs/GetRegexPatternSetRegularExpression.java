@@ -19,6 +19,10 @@ public final class GetRegexPatternSetRegularExpression extends com.pulumi.resour
     @Import(name="regexString", required=true)
     private String regexString;
 
+    /**
+     * @return (Required) The string representing the regular expression, see the AWS WAF [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/waf-regex-pattern-set-creating.html) for more information.
+     * 
+     */
     public String regexString() {
         return this.regexString;
     }
@@ -47,6 +51,12 @@ public final class GetRegexPatternSetRegularExpression extends com.pulumi.resour
             $ = new GetRegexPatternSetRegularExpression(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regexString (Required) The string representing the regular expression, see the AWS WAF [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/waf-regex-pattern-set-creating.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexString(String regexString) {
             $.regexString = regexString;
             return this;

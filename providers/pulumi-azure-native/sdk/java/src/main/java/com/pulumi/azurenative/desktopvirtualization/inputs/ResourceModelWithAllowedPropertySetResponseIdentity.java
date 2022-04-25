@@ -21,6 +21,10 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends c
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal ID of resource identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -32,6 +36,10 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends c
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant ID of resource.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -43,6 +51,10 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends c
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -73,16 +85,34 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends c
             $ = new ResourceModelWithAllowedPropertySetResponseIdentity(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal ID of resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant ID of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

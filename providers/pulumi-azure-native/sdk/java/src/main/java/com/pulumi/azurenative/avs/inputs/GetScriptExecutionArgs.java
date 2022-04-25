@@ -19,6 +19,10 @@ public final class GetScriptExecutionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="privateCloudName", required=true)
     private String privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
@@ -30,6 +34,10 @@ public final class GetScriptExecutionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetScriptExecutionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scriptExecutionName", required=true)
     private String scriptExecutionName;
 
+    /**
+     * @return Name of the user-invoked script execution resource
+     * 
+     */
     public String scriptExecutionName() {
         return this.scriptExecutionName;
     }
@@ -71,16 +83,34 @@ public final class GetScriptExecutionArgs extends com.pulumi.resources.InvokeArg
             $ = new GetScriptExecutionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param scriptExecutionName Name of the user-invoked script execution resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptExecutionName(String scriptExecutionName) {
             $.scriptExecutionName = scriptExecutionName;
             return this;

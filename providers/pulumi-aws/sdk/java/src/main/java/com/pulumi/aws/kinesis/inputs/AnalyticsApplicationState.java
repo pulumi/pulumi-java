@@ -30,6 +30,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the Kinesis Analytics Appliation.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -42,6 +46,11 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="cloudwatchLoggingOptions")
     private @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
+    /**
+     * @return The CloudWatch log stream options to monitor application errors.
+     * See CloudWatch Logging Options below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs>> cloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
@@ -53,6 +62,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="code")
     private @Nullable Output<String> code;
 
+    /**
+     * @return SQL Code to transform input data, and generate output.
+     * 
+     */
     public Optional<Output<String>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -64,6 +77,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="createTimestamp")
     private @Nullable Output<String> createTimestamp;
 
+    /**
+     * @return The Timestamp when the application version was created.
+     * 
+     */
     public Optional<Output<String>> createTimestamp() {
         return Optional.ofNullable(this.createTimestamp);
     }
@@ -75,6 +92,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the application.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -86,6 +107,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="inputs")
     private @Nullable Output<AnalyticsApplicationInputsGetArgs> inputs;
 
+    /**
+     * @return Input configuration of the application. See Inputs below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationInputsGetArgs>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -97,6 +122,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="lastUpdateTimestamp")
     private @Nullable Output<String> lastUpdateTimestamp;
 
+    /**
+     * @return The Timestamp when the application was last updated.
+     * 
+     */
     public Optional<Output<String>> lastUpdateTimestamp() {
         return Optional.ofNullable(this.lastUpdateTimestamp);
     }
@@ -108,6 +137,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Kinesis Analytics Application.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -119,6 +152,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="outputs")
     private @Nullable Output<List<AnalyticsApplicationOutputGetArgs>> outputs;
 
+    /**
+     * @return Output destination configuration of the application. See Outputs below for more details.
+     * 
+     */
     public Optional<Output<List<AnalyticsApplicationOutputGetArgs>>> outputs() {
         return Optional.ofNullable(this.outputs);
     }
@@ -131,6 +168,11 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="referenceDataSources")
     private @Nullable Output<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources;
 
+    /**
+     * @return An S3 Reference Data Source for the application.
+     * See Reference Data Sources below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationReferenceDataSourcesGetArgs>> referenceDataSources() {
         return Optional.ofNullable(this.referenceDataSources);
     }
@@ -143,6 +185,11 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="startApplication")
     private @Nullable Output<Boolean> startApplication;
 
+    /**
+     * @return Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+     * To modify an application&#39;s starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+     * 
+     */
     public Optional<Output<Boolean>> startApplication() {
         return Optional.ofNullable(this.startApplication);
     }
@@ -154,6 +201,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The Status of the application.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -165,6 +216,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of tags for the Kinesis Analytics Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -176,6 +231,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -187,6 +246,10 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
     @Import(name="version")
     private @Nullable Output<Integer> version;
 
+    /**
+     * @return The Version of the application.
+     * 
+     */
     public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -229,141 +292,333 @@ public final class AnalyticsApplicationState extends com.pulumi.resources.Resour
             $ = new AnalyticsApplicationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the Kinesis Analytics Appliation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the Kinesis Analytics Appliation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param cloudwatchLoggingOptions The CloudWatch log stream options to monitor application errors.
+         * See CloudWatch Logging Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLoggingOptions(@Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
             $.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
+        /**
+         * @param cloudwatchLoggingOptions The CloudWatch log stream options to monitor application errors.
+         * See CloudWatch Logging Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLoggingOptions(AnalyticsApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
             return cloudwatchLoggingOptions(Output.of(cloudwatchLoggingOptions));
         }
 
+        /**
+         * @param code SQL Code to transform input data, and generate output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<String> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code SQL Code to transform input data, and generate output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param createTimestamp The Timestamp when the application version was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTimestamp(@Nullable Output<String> createTimestamp) {
             $.createTimestamp = createTimestamp;
             return this;
         }
 
+        /**
+         * @param createTimestamp The Timestamp when the application version was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTimestamp(String createTimestamp) {
             return createTimestamp(Output.of(createTimestamp));
         }
 
+        /**
+         * @param description Description of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param inputs Input configuration of the application. See Inputs below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable Output<AnalyticsApplicationInputsGetArgs> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs Input configuration of the application. See Inputs below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(AnalyticsApplicationInputsGetArgs inputs) {
             return inputs(Output.of(inputs));
         }
 
+        /**
+         * @param lastUpdateTimestamp The Timestamp when the application was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateTimestamp(@Nullable Output<String> lastUpdateTimestamp) {
             $.lastUpdateTimestamp = lastUpdateTimestamp;
             return this;
         }
 
+        /**
+         * @param lastUpdateTimestamp The Timestamp when the application was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateTimestamp(String lastUpdateTimestamp) {
             return lastUpdateTimestamp(Output.of(lastUpdateTimestamp));
         }
 
+        /**
+         * @param name Name of the Kinesis Analytics Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Kinesis Analytics Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputs Output destination configuration of the application. See Outputs below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputGetArgs>> outputs) {
             $.outputs = outputs;
             return this;
         }
 
+        /**
+         * @param outputs Output destination configuration of the application. See Outputs below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(List<AnalyticsApplicationOutputGetArgs> outputs) {
             return outputs(Output.of(outputs));
         }
 
+        /**
+         * @param outputs Output destination configuration of the application. See Outputs below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(AnalyticsApplicationOutputGetArgs... outputs) {
             return outputs(List.of(outputs));
         }
 
+        /**
+         * @param referenceDataSources An S3 Reference Data Source for the application.
+         * See Reference Data Sources below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceDataSources(@Nullable Output<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources) {
             $.referenceDataSources = referenceDataSources;
             return this;
         }
 
+        /**
+         * @param referenceDataSources An S3 Reference Data Source for the application.
+         * See Reference Data Sources below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceDataSources(AnalyticsApplicationReferenceDataSourcesGetArgs referenceDataSources) {
             return referenceDataSources(Output.of(referenceDataSources));
         }
 
+        /**
+         * @param startApplication Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+         * To modify an application&#39;s starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
             $.startApplication = startApplication;
             return this;
         }
 
+        /**
+         * @param startApplication Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
+         * To modify an application&#39;s starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startApplication(Boolean startApplication) {
             return startApplication(Output.of(startApplication));
         }
 
+        /**
+         * @param status The Status of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The Status of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags Key-value map of tags for the Kinesis Analytics Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of tags for the Kinesis Analytics Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param version The Version of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The Version of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

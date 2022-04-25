@@ -22,6 +22,10 @@ public final class MongoDBCollectionGetPropertiesResponseOptions extends com.pul
     @Import(name="autoscaleSettings")
     private @Nullable AutoscaleSettingsResponse autoscaleSettings;
 
+    /**
+     * @return Specifies the Autoscale settings.
+     * 
+     */
     public Optional<AutoscaleSettingsResponse> autoscaleSettings() {
         return Optional.ofNullable(this.autoscaleSettings);
     }
@@ -33,6 +37,10 @@ public final class MongoDBCollectionGetPropertiesResponseOptions extends com.pul
     @Import(name="throughput")
     private @Nullable Integer throughput;
 
+    /**
+     * @return Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+     * 
+     */
     public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
@@ -62,11 +70,23 @@ public final class MongoDBCollectionGetPropertiesResponseOptions extends com.pul
             $ = new MongoDBCollectionGetPropertiesResponseOptions(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaleSettings Specifies the Autoscale settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleSettings(@Nullable AutoscaleSettingsResponse autoscaleSettings) {
             $.autoscaleSettings = autoscaleSettings;
             return this;
         }
 
+        /**
+         * @param throughput Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(@Nullable Integer throughput) {
             $.throughput = throughput;
             return this;

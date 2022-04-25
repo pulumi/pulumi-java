@@ -23,6 +23,10 @@ public final class ContainerImageResponse extends com.pulumi.resources.InvokeArg
     @Import(name="repository", required=true)
     private String repository;
 
+    /**
+     * @return The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
+     * 
+     */
     public String repository() {
         return this.repository;
     }
@@ -34,6 +38,10 @@ public final class ContainerImageResponse extends com.pulumi.resources.InvokeArg
     @Import(name="tag", required=true)
     private String tag;
 
+    /**
+     * @return The tag of the container image. If not specified, this defaults to the latest tag.
+     * 
+     */
     public String tag() {
         return this.tag;
     }
@@ -63,11 +71,23 @@ public final class ContainerImageResponse extends com.pulumi.resources.InvokeArg
             $ = new ContainerImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repository The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param tag The tag of the container image. If not specified, this defaults to the latest tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             $.tag = tag;
             return this;

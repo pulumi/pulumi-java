@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ListAccountKeysResult {
     /**
-     * The full Azure resource identifier of the Maps Account.
+     * @return The full Azure resource identifier of the Maps Account.
      * 
      */
     private final String id;
     /**
-     * The primary key for accessing the Maps REST APIs.
+     * @return The primary key for accessing the Maps REST APIs.
      * 
      */
     private final String primaryKey;
     /**
-     * The secondary key for accessing the Maps REST APIs.
+     * @return The secondary key for accessing the Maps REST APIs.
      * 
      */
     private final String secondaryKey;
@@ -36,23 +36,23 @@ public final class ListAccountKeysResult {
     }
 
     /**
-     * The full Azure resource identifier of the Maps Account.
+     * @return The full Azure resource identifier of the Maps Account.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The primary key for accessing the Maps REST APIs.
+     * @return The primary key for accessing the Maps REST APIs.
      * 
-    */
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
     /**
-     * The secondary key for accessing the Maps REST APIs.
+     * @return The secondary key for accessing the Maps REST APIs.
      * 
-    */
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }

@@ -31,6 +31,10 @@ public final class FrontDoorManagedRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="exclusions")
     private @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
+    /**
+     * @return Describes the exclusions that are applied to all rules in the set.
+     * 
+     */
     public Optional<Output<List<ManagedRuleExclusionArgs>>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
@@ -42,6 +46,10 @@ public final class FrontDoorManagedRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="ruleGroupOverrides")
     private @Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
+    /**
+     * @return Defines the rule group overrides to apply to the rule set.
+     * 
+     */
     public Optional<Output<List<FrontDoorManagedRuleGroupOverrideArgs>>> ruleGroupOverrides() {
         return Optional.ofNullable(this.ruleGroupOverrides);
     }
@@ -53,6 +61,10 @@ public final class FrontDoorManagedRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="ruleSetAction")
     private @Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction;
 
+    /**
+     * @return Defines the action to take when a managed rule set score threshold is met.
+     * 
+     */
     public Optional<Output<Either<String,ManagedRuleSetActionType>>> ruleSetAction() {
         return Optional.ofNullable(this.ruleSetAction);
     }
@@ -64,6 +76,10 @@ public final class FrontDoorManagedRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="ruleSetType", required=true)
     private Output<String> ruleSetType;
 
+    /**
+     * @return Defines the rule set type to use.
+     * 
+     */
     public Output<String> ruleSetType() {
         return this.ruleSetType;
     }
@@ -75,6 +91,10 @@ public final class FrontDoorManagedRuleSetArgs extends com.pulumi.resources.Reso
     @Import(name="ruleSetVersion", required=true)
     private Output<String> ruleSetVersion;
 
+    /**
+     * @return Defines the version of the rule set to use.
+     * 
+     */
     public Output<String> ruleSetVersion() {
         return this.ruleSetVersion;
     }
@@ -107,63 +127,147 @@ public final class FrontDoorManagedRuleSetArgs extends com.pulumi.resources.Reso
             $ = new FrontDoorManagedRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to all rules in the set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(@Nullable Output<List<ManagedRuleExclusionArgs>> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to all rules in the set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(List<ManagedRuleExclusionArgs> exclusions) {
             return exclusions(Output.of(exclusions));
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to all rules in the set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(ManagedRuleExclusionArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
 
+        /**
+         * @param ruleGroupOverrides Defines the rule group overrides to apply to the rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupOverrides(@Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
             $.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
+        /**
+         * @param ruleGroupOverrides Defines the rule group overrides to apply to the rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupOverrides(List<FrontDoorManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
             return ruleGroupOverrides(Output.of(ruleGroupOverrides));
         }
 
+        /**
+         * @param ruleGroupOverrides Defines the rule group overrides to apply to the rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupOverrides(FrontDoorManagedRuleGroupOverrideArgs... ruleGroupOverrides) {
             return ruleGroupOverrides(List.of(ruleGroupOverrides));
         }
 
+        /**
+         * @param ruleSetAction Defines the action to take when a managed rule set score threshold is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetAction(@Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction) {
             $.ruleSetAction = ruleSetAction;
             return this;
         }
 
+        /**
+         * @param ruleSetAction Defines the action to take when a managed rule set score threshold is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetAction(Either<String,ManagedRuleSetActionType> ruleSetAction) {
             return ruleSetAction(Output.of(ruleSetAction));
         }
 
+        /**
+         * @param ruleSetAction Defines the action to take when a managed rule set score threshold is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetAction(String ruleSetAction) {
             return ruleSetAction(Either.ofLeft(ruleSetAction));
         }
 
+        /**
+         * @param ruleSetAction Defines the action to take when a managed rule set score threshold is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetAction(ManagedRuleSetActionType ruleSetAction) {
             return ruleSetAction(Either.ofRight(ruleSetAction));
         }
 
+        /**
+         * @param ruleSetType Defines the rule set type to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetType(Output<String> ruleSetType) {
             $.ruleSetType = ruleSetType;
             return this;
         }
 
+        /**
+         * @param ruleSetType Defines the rule set type to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetType(String ruleSetType) {
             return ruleSetType(Output.of(ruleSetType));
         }
 
+        /**
+         * @param ruleSetVersion Defines the version of the rule set to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetVersion(Output<String> ruleSetVersion) {
             $.ruleSetVersion = ruleSetVersion;
             return this;
         }
 
+        /**
+         * @param ruleSetVersion Defines the version of the rule set to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetVersion(String ruleSetVersion) {
             return ruleSetVersion(Output.of(ruleSetVersion));
         }

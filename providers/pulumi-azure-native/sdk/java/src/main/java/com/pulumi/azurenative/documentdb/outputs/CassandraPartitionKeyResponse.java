@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CassandraPartitionKeyResponse {
     /**
-     * Name of the Cosmos DB Cassandra table partition key
+     * @return Name of the Cosmos DB Cassandra table partition key
      * 
      */
     private final @Nullable String name;
@@ -23,9 +23,9 @@ public final class CassandraPartitionKeyResponse {
     }
 
     /**
-     * Name of the Cosmos DB Cassandra table partition key
+     * @return Name of the Cosmos DB Cassandra table partition key
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

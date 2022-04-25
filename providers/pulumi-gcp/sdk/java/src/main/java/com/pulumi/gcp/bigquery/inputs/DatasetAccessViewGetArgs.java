@@ -20,6 +20,10 @@ public final class DatasetAccessViewGetArgs extends com.pulumi.resources.Resourc
     @Import(name="datasetId", required=true)
     private Output<String> datasetId;
 
+    /**
+     * @return The ID of the dataset containing this table.
+     * 
+     */
     public Output<String> datasetId() {
         return this.datasetId;
     }
@@ -31,6 +35,10 @@ public final class DatasetAccessViewGetArgs extends com.pulumi.resources.Resourc
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return The ID of the project containing this table.
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -44,6 +52,12 @@ public final class DatasetAccessViewGetArgs extends com.pulumi.resources.Resourc
     @Import(name="tableId", required=true)
     private Output<String> tableId;
 
+    /**
+     * @return The ID of the table. The ID must contain only letters (a-z,
+     * A-Z), numbers (0-9), or underscores (_). The maximum length
+     * is 1,024 characters.
+     * 
+     */
     public Output<String> tableId() {
         return this.tableId;
     }
@@ -74,29 +88,69 @@ public final class DatasetAccessViewGetArgs extends com.pulumi.resources.Resourc
             $ = new DatasetAccessViewGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param projectId The ID of the project containing this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The ID of the project containing this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param tableId The ID of the table. The ID must contain only letters (a-z,
+         * A-Z), numbers (0-9), or underscores (_). The maximum length
+         * is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(Output<String> tableId) {
             $.tableId = tableId;
             return this;
         }
 
+        /**
+         * @param tableId The ID of the table. The ID must contain only letters (a-z,
+         * A-Z), numbers (0-9), or underscores (_). The maximum length
+         * is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableId(String tableId) {
             return tableId(Output.of(tableId));
         }

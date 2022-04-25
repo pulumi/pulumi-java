@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RouteFilterRuleResponse {
     /**
-     * The access type of the rule.
+     * @return The access type of the rule.
      * 
      */
     private final String access;
     /**
-     * The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+     * @return The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
      * 
      */
     private final List<String> communities;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the route filter rule resource.
+     * @return The provisioning state of the route filter rule resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The rule type of the rule.
+     * @return The rule type of the rule.
      * 
      */
     private final String routeFilterRuleType;
@@ -74,58 +74,58 @@ public final class RouteFilterRuleResponse {
     }
 
     /**
-     * The access type of the rule.
+     * @return The access type of the rule.
      * 
-    */
+     */
     public String access() {
         return this.access;
     }
     /**
-     * The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+     * @return The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
      * 
-    */
+     */
     public List<String> communities() {
         return this.communities;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the route filter rule resource.
+     * @return The provisioning state of the route filter rule resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The rule type of the rule.
+     * @return The rule type of the rule.
      * 
-    */
+     */
     public String routeFilterRuleType() {
         return this.routeFilterRuleType;
     }

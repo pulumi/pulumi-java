@@ -22,6 +22,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="bucketAccountId")
     private @Nullable Output<String> bucketAccountId;
 
+    /**
+     * @return The account ID that owns the destination bucket.
+     * 
+     */
     public Optional<Output<String>> bucketAccountId() {
         return Optional.ofNullable(this.bucketAccountId);
     }
@@ -33,6 +37,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="bucketArn", required=true)
     private Output<String> bucketArn;
 
+    /**
+     * @return The ARN of the destination bucket.
+     * 
+     */
     public Output<String> bucketArn() {
         return this.bucketArn;
     }
@@ -44,6 +52,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="format")
     private @Nullable Output<String> format;
 
+    /**
+     * @return The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
+     * 
+     */
     public Optional<Output<String>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -55,6 +67,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return Object prefix for filtering.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -86,38 +102,86 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
             $ = new AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketAccountId The account ID that owns the destination bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketAccountId(@Nullable Output<String> bucketAccountId) {
             $.bucketAccountId = bucketAccountId;
             return this;
         }
 
+        /**
+         * @param bucketAccountId The account ID that owns the destination bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketAccountId(String bucketAccountId) {
             return bucketAccountId(Output.of(bucketAccountId));
         }
 
+        /**
+         * @param bucketArn The ARN of the destination bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketArn(Output<String> bucketArn) {
             $.bucketArn = bucketArn;
             return this;
         }
 
+        /**
+         * @param bucketArn The ARN of the destination bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketArn(String bucketArn) {
             return bucketArn(Output.of(bucketArn));
         }
 
+        /**
+         * @param format The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param prefix Object prefix for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Object prefix for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

@@ -26,6 +26,10 @@ public final class KeyVaultKeyResponseAttributes extends com.pulumi.resources.In
     @Import(name="created")
     private @Nullable Double created;
 
+    /**
+     * @return When the key was created.
+     * 
+     */
     public Optional<Double> created() {
         return Optional.ofNullable(this.created);
     }
@@ -37,6 +41,10 @@ public final class KeyVaultKeyResponseAttributes extends com.pulumi.resources.In
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Whether the key is enabled or not.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -48,6 +56,10 @@ public final class KeyVaultKeyResponseAttributes extends com.pulumi.resources.In
     @Import(name="updated")
     private @Nullable Double updated;
 
+    /**
+     * @return When the key was updated.
+     * 
+     */
     public Optional<Double> updated() {
         return Optional.ofNullable(this.updated);
     }
@@ -78,16 +90,34 @@ public final class KeyVaultKeyResponseAttributes extends com.pulumi.resources.In
             $ = new KeyVaultKeyResponseAttributes(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param created When the key was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(@Nullable Double created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param enabled Whether the key is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param updated When the key was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(@Nullable Double updated) {
             $.updated = updated;
             return this;

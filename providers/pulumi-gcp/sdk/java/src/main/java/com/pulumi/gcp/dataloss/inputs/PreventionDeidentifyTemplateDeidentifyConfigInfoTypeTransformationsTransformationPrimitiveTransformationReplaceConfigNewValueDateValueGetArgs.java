@@ -23,6 +23,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="day")
     private @Nullable Output<Integer> day;
 
+    /**
+     * @return Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+     * year by itself or a year and month where the day is not significant.
+     * 
+     */
     public Optional<Output<Integer>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -34,6 +39,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="month")
     private @Nullable Output<Integer> month;
 
+    /**
+     * @return Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+     * 
+     */
     public Optional<Output<Integer>> month() {
         return Optional.ofNullable(this.month);
     }
@@ -45,6 +54,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="year")
     private @Nullable Output<Integer> year;
 
+    /**
+     * @return Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+     * 
+     */
     public Optional<Output<Integer>> year() {
         return Optional.ofNullable(this.year);
     }
@@ -75,29 +88,67 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         * year by itself or a year and month where the day is not significant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<Integer> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         * year by itself or a year and month where the day is not significant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Integer day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param month Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder month(@Nullable Output<Integer> month) {
             $.month = month;
             return this;
         }
 
+        /**
+         * @param month Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder month(Integer month) {
             return month(Output.of(month));
         }
 
+        /**
+         * @param year Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+         * 
+         * @return builder
+         * 
+         */
         public Builder year(@Nullable Output<Integer> year) {
             $.year = year;
             return this;
         }
 
+        /**
+         * @param year Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+         * 
+         * @return builder
+         * 
+         */
         public Builder year(Integer year) {
             return year(Output.of(year));
         }

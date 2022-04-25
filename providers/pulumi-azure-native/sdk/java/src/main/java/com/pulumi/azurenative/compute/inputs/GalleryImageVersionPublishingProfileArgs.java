@@ -32,6 +32,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends com.pulumi.r
     @Import(name="endOfLifeDate")
     private @Nullable Output<String> endOfLifeDate;
 
+    /**
+     * @return The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
+     * 
+     */
     public Optional<Output<String>> endOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
@@ -43,6 +47,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends com.pulumi.r
     @Import(name="excludeFromLatest")
     private @Nullable Output<Boolean> excludeFromLatest;
 
+    /**
+     * @return If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
+     * 
+     */
     public Optional<Output<Boolean>> excludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
@@ -54,6 +62,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends com.pulumi.r
     @Import(name="replicaCount")
     private @Nullable Output<Integer> replicaCount;
 
+    /**
+     * @return The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
+     * 
+     */
     public Optional<Output<Integer>> replicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
@@ -65,6 +77,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends com.pulumi.r
     @Import(name="storageAccountType")
     private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
+    /**
+     * @return Specifies the storage account type to be used to store the image. This property is not updatable.
+     * 
+     */
     public Optional<Output<Either<String,StorageAccountType>>> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -76,6 +92,10 @@ public final class GalleryImageVersionPublishingProfileArgs extends com.pulumi.r
     @Import(name="targetRegions")
     private @Nullable Output<List<TargetRegionArgs>> targetRegions;
 
+    /**
+     * @return The target regions where the Image Version is going to be replicated to. This property is updatable.
+     * 
+     */
     public Optional<Output<List<TargetRegionArgs>>> targetRegions() {
         return Optional.ofNullable(this.targetRegions);
     }
@@ -108,59 +128,137 @@ public final class GalleryImageVersionPublishingProfileArgs extends com.pulumi.r
             $ = new GalleryImageVersionPublishingProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endOfLifeDate The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
             $.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
+        /**
+         * @param endOfLifeDate The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endOfLifeDate(String endOfLifeDate) {
             return endOfLifeDate(Output.of(endOfLifeDate));
         }
 
+        /**
+         * @param excludeFromLatest If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
             $.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
+        /**
+         * @param excludeFromLatest If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeFromLatest(Boolean excludeFromLatest) {
             return excludeFromLatest(Output.of(excludeFromLatest));
         }
 
+        /**
+         * @param replicaCount The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             $.replicaCount = replicaCount;
             return this;
         }
 
+        /**
+         * @param replicaCount The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaCount(Integer replicaCount) {
             return replicaCount(Output.of(replicaCount));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(Either<String,StorageAccountType> storageAccountType) {
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(String storageAccountType) {
             return storageAccountType(Either.ofLeft(storageAccountType));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(StorageAccountType storageAccountType) {
             return storageAccountType(Either.ofRight(storageAccountType));
         }
 
+        /**
+         * @param targetRegions The target regions where the Image Version is going to be replicated to. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRegions(@Nullable Output<List<TargetRegionArgs>> targetRegions) {
             $.targetRegions = targetRegions;
             return this;
         }
 
+        /**
+         * @param targetRegions The target regions where the Image Version is going to be replicated to. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRegions(List<TargetRegionArgs> targetRegions) {
             return targetRegions(Output.of(targetRegions));
         }
 
+        /**
+         * @param targetRegions The target regions where the Image Version is going to be replicated to. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRegions(TargetRegionArgs... targetRegions) {
             return targetRegions(List.of(targetRegions));
         }

@@ -27,6 +27,10 @@ public final class EndpointGroupEndpointConfiguration extends com.pulumi.resourc
     @Import(name="clientIPPreservationEnabled")
     private @Nullable Boolean clientIPPreservationEnabled;
 
+    /**
+     * @return true if client ip should be preserved
+     * 
+     */
     public Optional<Boolean> clientIPPreservationEnabled() {
         return Optional.ofNullable(this.clientIPPreservationEnabled);
     }
@@ -38,6 +42,10 @@ public final class EndpointGroupEndpointConfiguration extends com.pulumi.resourc
     @Import(name="endpointId", required=true)
     private String endpointId;
 
+    /**
+     * @return Id of the endpoint. For Network/Application Load Balancer this value is the ARN.  For EIP, this value is the allocation ID.  For EC2 instances, this is the EC2 instance ID
+     * 
+     */
     public String endpointId() {
         return this.endpointId;
     }
@@ -49,6 +57,10 @@ public final class EndpointGroupEndpointConfiguration extends com.pulumi.resourc
     @Import(name="weight")
     private @Nullable Integer weight;
 
+    /**
+     * @return The weight for the endpoint.
+     * 
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -79,16 +91,34 @@ public final class EndpointGroupEndpointConfiguration extends com.pulumi.resourc
             $ = new EndpointGroupEndpointConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientIPPreservationEnabled true if client ip should be preserved
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientIPPreservationEnabled(@Nullable Boolean clientIPPreservationEnabled) {
             $.clientIPPreservationEnabled = clientIPPreservationEnabled;
             return this;
         }
 
+        /**
+         * @param endpointId Id of the endpoint. For Network/Application Load Balancer this value is the ARN.  For EIP, this value is the allocation ID.  For EC2 instances, this is the EC2 instance ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointId(String endpointId) {
             $.endpointId = endpointId;
             return this;
         }
 
+        /**
+         * @param weight The weight for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Integer weight) {
             $.weight = weight;
             return this;

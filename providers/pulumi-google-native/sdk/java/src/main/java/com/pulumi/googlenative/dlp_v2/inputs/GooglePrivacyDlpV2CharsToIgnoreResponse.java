@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends com.pulumi.re
     @Import(name="charactersToSkip", required=true)
     private String charactersToSkip;
 
+    /**
+     * @return Characters to not transform when masking.
+     * 
+     */
     public String charactersToSkip() {
         return this.charactersToSkip;
     }
@@ -34,6 +38,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends com.pulumi.re
     @Import(name="commonCharactersToIgnore", required=true)
     private String commonCharactersToIgnore;
 
+    /**
+     * @return Common characters to not transform when masking. Useful to avoid removing punctuation.
+     * 
+     */
     public String commonCharactersToIgnore() {
         return this.commonCharactersToIgnore;
     }
@@ -63,11 +71,23 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2CharsToIgnoreResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param charactersToSkip Characters to not transform when masking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charactersToSkip(String charactersToSkip) {
             $.charactersToSkip = charactersToSkip;
             return this;
         }
 
+        /**
+         * @param commonCharactersToIgnore Common characters to not transform when masking. Useful to avoid removing punctuation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonCharactersToIgnore(String commonCharactersToIgnore) {
             $.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;

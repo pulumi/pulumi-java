@@ -25,6 +25,10 @@ public final class GroupMembersItemResponse extends com.pulumi.resources.InvokeA
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -53,6 +57,12 @@ public final class GroupMembersItemResponse extends com.pulumi.resources.InvokeA
             $ = new GroupMembersItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

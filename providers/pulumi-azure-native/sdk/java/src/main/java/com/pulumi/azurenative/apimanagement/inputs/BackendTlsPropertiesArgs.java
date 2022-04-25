@@ -27,6 +27,10 @@ public final class BackendTlsPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="validateCertificateChain")
     private @Nullable Output<Boolean> validateCertificateChain;
 
+    /**
+     * @return Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
+     * 
+     */
     public Optional<Output<Boolean>> validateCertificateChain() {
         return Optional.ofNullable(this.validateCertificateChain);
     }
@@ -38,6 +42,10 @@ public final class BackendTlsPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="validateCertificateName")
     private @Nullable Output<Boolean> validateCertificateName;
 
+    /**
+     * @return Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+     * 
+     */
     public Optional<Output<Boolean>> validateCertificateName() {
         return Optional.ofNullable(this.validateCertificateName);
     }
@@ -67,20 +75,44 @@ public final class BackendTlsPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new BackendTlsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param validateCertificateChain Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCertificateChain(@Nullable Output<Boolean> validateCertificateChain) {
             $.validateCertificateChain = validateCertificateChain;
             return this;
         }
 
+        /**
+         * @param validateCertificateChain Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCertificateChain(Boolean validateCertificateChain) {
             return validateCertificateChain(Output.of(validateCertificateChain));
         }
 
+        /**
+         * @param validateCertificateName Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCertificateName(@Nullable Output<Boolean> validateCertificateName) {
             $.validateCertificateName = validateCertificateName;
             return this;
         }
 
+        /**
+         * @param validateCertificateName Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCertificateName(Boolean validateCertificateName) {
             return validateCertificateName(Output.of(validateCertificateName));
         }

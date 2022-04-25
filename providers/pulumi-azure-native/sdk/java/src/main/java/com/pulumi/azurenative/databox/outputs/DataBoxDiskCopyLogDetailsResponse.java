@@ -10,23 +10,23 @@ import java.util.Objects;
 @CustomType
 public final class DataBoxDiskCopyLogDetailsResponse {
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     private final String copyLogDetailsType;
     /**
-     * Disk Serial Number.
+     * @return Disk Serial Number.
      * 
      */
     private final String diskSerialNumber;
     /**
-     * Link for copy error logs.
+     * @return Link for copy error logs.
      * 
      */
     private final String errorLogLink;
     /**
-     * Link for copy verbose logs.
+     * @return Link for copy verbose logs.
      * 
      */
     private final String verboseLogLink;
@@ -44,31 +44,31 @@ public final class DataBoxDiskCopyLogDetailsResponse {
     }
 
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBoxDisk&#39;.
      * 
-    */
+     */
     public String copyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
-     * Disk Serial Number.
+     * @return Disk Serial Number.
      * 
-    */
+     */
     public String diskSerialNumber() {
         return this.diskSerialNumber;
     }
     /**
-     * Link for copy error logs.
+     * @return Link for copy error logs.
      * 
-    */
+     */
     public String errorLogLink() {
         return this.errorLogLink;
     }
     /**
-     * Link for copy verbose logs.
+     * @return Link for copy verbose logs.
      * 
-    */
+     */
     public String verboseLogLink() {
         return this.verboseLogLink;
     }

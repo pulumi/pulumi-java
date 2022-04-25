@@ -22,6 +22,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionId")
     private @Nullable Output<String> actionId;
 
+    /**
+     * @return Action ID
+     * 
+     */
     public Optional<Output<String>> actionId() {
         return Optional.ofNullable(this.actionId);
     }
@@ -33,6 +37,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logicAppResourceId", required=true)
     private Output<String> logicAppResourceId;
 
+    /**
+     * @return Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
+     * 
+     */
     public Output<String> logicAppResourceId() {
         return this.logicAppResourceId;
     }
@@ -44,6 +52,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleId", required=true)
     private Output<String> ruleId;
 
+    /**
+     * @return Alert rule ID
+     * 
+     */
     public Output<String> ruleId() {
         return this.ruleId;
     }
@@ -66,6 +82,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggerUri", required=true)
     private Output<String> triggerUri;
 
+    /**
+     * @return Logic App Callback URL for this specific workflow.
+     * 
+     */
     public Output<String> triggerUri() {
         return this.triggerUri;
     }
@@ -77,6 +97,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -110,56 +134,128 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionId Action ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionId(@Nullable Output<String> actionId) {
             $.actionId = actionId;
             return this;
         }
 
+        /**
+         * @param actionId Action ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionId(String actionId) {
             return actionId(Output.of(actionId));
         }
 
+        /**
+         * @param logicAppResourceId Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicAppResourceId(Output<String> logicAppResourceId) {
             $.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
+        /**
+         * @param logicAppResourceId Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicAppResourceId(String logicAppResourceId) {
             return logicAppResourceId(Output.of(logicAppResourceId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param triggerUri Logic App Callback URL for this specific workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerUri(Output<String> triggerUri) {
             $.triggerUri = triggerUri;
             return this;
         }
 
+        /**
+         * @param triggerUri Logic App Callback URL for this specific workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerUri(String triggerUri) {
             return triggerUri(Output.of(triggerUri));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentityResponse {
     /**
-     * Service principal object Id
+     * @return Service principal object Id
      * 
      */
     private final String principalId;
     /**
-     * Tenant Id
+     * @return Tenant Id
      * 
      */
     private final String tenantId;
     /**
-     * Identity Type
+     * @return Identity Type
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class IdentityResponse {
     }
 
     /**
-     * Service principal object Id
+     * @return Service principal object Id
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * Tenant Id
+     * @return Tenant Id
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Identity Type
+     * @return Identity Type
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

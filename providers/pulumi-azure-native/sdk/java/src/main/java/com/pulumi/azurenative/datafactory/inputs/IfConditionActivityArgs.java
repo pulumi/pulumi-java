@@ -69,6 +69,10 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -80,6 +84,10 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -91,6 +99,10 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
     @Import(name="expression", required=true)
     private Output<ExpressionArgs> expression;
 
+    /**
+     * @return An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
+     * 
+     */
     public Output<ExpressionArgs> expression() {
         return this.expression;
     }
@@ -102,6 +114,10 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
     @Import(name="ifFalseActivities")
     private @Nullable Output<List<Object>> ifFalseActivities;
 
+    /**
+     * @return List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+     * 
+     */
     public Optional<Output<List<Object>>> ifFalseActivities() {
         return Optional.ofNullable(this.ifFalseActivities);
     }
@@ -113,6 +129,10 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
     @Import(name="ifTrueActivities")
     private @Nullable Output<List<Object>> ifTrueActivities;
 
+    /**
+     * @return List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
+     * 
+     */
     public Optional<Output<List<Object>>> ifTrueActivities() {
         return Optional.ofNullable(this.ifTrueActivities);
     }
@@ -124,6 +144,10 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -136,6 +160,11 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;IfCondition&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -147,6 +176,10 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -182,90 +215,212 @@ public final class IfConditionActivityArgs extends com.pulumi.resources.Resource
             $ = new IfConditionActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expression An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<ExpressionArgs> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(ExpressionArgs expression) {
             return expression(Output.of(expression));
         }
 
+        /**
+         * @param ifFalseActivities List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifFalseActivities(@Nullable Output<List<Object>> ifFalseActivities) {
             $.ifFalseActivities = ifFalseActivities;
             return this;
         }
 
+        /**
+         * @param ifFalseActivities List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifFalseActivities(List<Object> ifFalseActivities) {
             return ifFalseActivities(Output.of(ifFalseActivities));
         }
 
+        /**
+         * @param ifFalseActivities List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifFalseActivities(Object... ifFalseActivities) {
             return ifFalseActivities(List.of(ifFalseActivities));
         }
 
+        /**
+         * @param ifTrueActivities List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifTrueActivities(@Nullable Output<List<Object>> ifTrueActivities) {
             $.ifTrueActivities = ifTrueActivities;
             return this;
         }
 
+        /**
+         * @param ifTrueActivities List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifTrueActivities(List<Object> ifTrueActivities) {
             return ifTrueActivities(Output.of(ifTrueActivities));
         }
 
+        /**
+         * @param ifTrueActivities List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifTrueActivities(Object... ifTrueActivities) {
             return ifTrueActivities(List.of(ifTrueActivities));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;IfCondition&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;IfCondition&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

@@ -24,6 +24,10 @@ public final class TargetOSInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="osUpdateType", required=true)
     private String osUpdateType;
 
+    /**
+     * @return Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
+     * 
+     */
     public String osUpdateType() {
         return this.osUpdateType;
     }
@@ -35,6 +39,10 @@ public final class TargetOSInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="targetOSs", required=true)
     private List<String> targetOSs;
 
+    /**
+     * @return Specifies the target OSs to be tested.
+     * 
+     */
     public List<String> targetOSs() {
         return this.targetOSs;
     }
@@ -64,16 +72,34 @@ public final class TargetOSInfoResponse extends com.pulumi.resources.InvokeArgs 
             $ = new TargetOSInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osUpdateType Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osUpdateType(String osUpdateType) {
             $.osUpdateType = osUpdateType;
             return this;
         }
 
+        /**
+         * @param targetOSs Specifies the target OSs to be tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOSs(List<String> targetOSs) {
             $.targetOSs = targetOSs;
             return this;
         }
 
+        /**
+         * @param targetOSs Specifies the target OSs to be tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOSs(String... targetOSs) {
             return targetOSs(List.of(targetOSs));
         }

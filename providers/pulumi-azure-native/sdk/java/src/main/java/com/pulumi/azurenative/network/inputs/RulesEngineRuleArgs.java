@@ -32,6 +32,10 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="action", required=true)
     private Output<RulesEngineActionArgs> action;
 
+    /**
+     * @return Actions to perform on the request and response if all of the match conditions are met.
+     * 
+     */
     public Output<RulesEngineActionArgs> action() {
         return this.action;
     }
@@ -43,6 +47,10 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="matchConditions")
     private @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
 
+    /**
+     * @return A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
+     * 
+     */
     public Optional<Output<List<RulesEngineMatchConditionArgs>>> matchConditions() {
         return Optional.ofNullable(this.matchConditions);
     }
@@ -54,6 +62,10 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="matchProcessingBehavior")
     private @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
+    /**
+     * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+     * 
+     */
     public Optional<Output<Either<String,MatchProcessingBehavior>>> matchProcessingBehavior() {
         return Optional.ofNullable(this.matchProcessingBehavior);
     }
@@ -65,6 +77,10 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A name to refer to this specific rule.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -76,6 +92,10 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return A priority assigned to this rule.
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -108,59 +128,137 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new RulesEngineRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Actions to perform on the request and response if all of the match conditions are met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<RulesEngineActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Actions to perform on the request and response if all of the match conditions are met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RulesEngineActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param matchConditions A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(@Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions) {
             $.matchConditions = matchConditions;
             return this;
         }
 
+        /**
+         * @param matchConditions A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(List<RulesEngineMatchConditionArgs> matchConditions) {
             return matchConditions(Output.of(matchConditions));
         }
 
+        /**
+         * @param matchConditions A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(RulesEngineMatchConditionArgs... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
 
+        /**
+         * @param matchProcessingBehavior If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchProcessingBehavior(@Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
             $.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
 
+        /**
+         * @param matchProcessingBehavior If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchProcessingBehavior(Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
             return matchProcessingBehavior(Output.of(matchProcessingBehavior));
         }
 
+        /**
+         * @param matchProcessingBehavior If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchProcessingBehavior(String matchProcessingBehavior) {
             return matchProcessingBehavior(Either.ofLeft(matchProcessingBehavior));
         }
 
+        /**
+         * @param matchProcessingBehavior If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchProcessingBehavior(MatchProcessingBehavior matchProcessingBehavior) {
             return matchProcessingBehavior(Either.ofRight(matchProcessingBehavior));
         }
 
+        /**
+         * @param name A name to refer to this specific rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name to refer to this specific rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority A priority assigned to this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority A priority assigned to this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }

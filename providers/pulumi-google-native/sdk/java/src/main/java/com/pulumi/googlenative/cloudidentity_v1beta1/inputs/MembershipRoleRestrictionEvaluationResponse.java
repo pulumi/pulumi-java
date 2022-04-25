@@ -23,6 +23,10 @@ public final class MembershipRoleRestrictionEvaluationResponse extends com.pulum
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the restriction
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -51,6 +55,12 @@ public final class MembershipRoleRestrictionEvaluationResponse extends com.pulum
             $ = new MembershipRoleRestrictionEvaluationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state The current state of the restriction
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

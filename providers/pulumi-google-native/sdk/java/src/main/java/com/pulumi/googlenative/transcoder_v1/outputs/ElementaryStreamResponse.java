@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class ElementaryStreamResponse {
     /**
-     * Encoding of an audio stream.
+     * @return Encoding of an audio stream.
      * 
      */
     private final AudioStreamResponse audioStream;
     /**
-     * A unique key for this elementary stream.
+     * @return A unique key for this elementary stream.
      * 
      */
     private final String key;
     /**
-     * Encoding of a text stream. For example, closed captions or subtitles.
+     * @return Encoding of a text stream. For example, closed captions or subtitles.
      * 
      */
     private final TextStreamResponse textStream;
     /**
-     * Encoding of a video stream.
+     * @return Encoding of a video stream.
      * 
      */
     private final VideoStreamResponse videoStream;
@@ -46,30 +46,30 @@ public final class ElementaryStreamResponse {
     }
 
     /**
-     * Encoding of an audio stream.
+     * @return Encoding of an audio stream.
      * 
-    */
+     */
     public AudioStreamResponse audioStream() {
         return this.audioStream;
     }
     /**
-     * A unique key for this elementary stream.
+     * @return A unique key for this elementary stream.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Encoding of a text stream. For example, closed captions or subtitles.
+     * @return Encoding of a text stream. For example, closed captions or subtitles.
      * 
-    */
+     */
     public TextStreamResponse textStream() {
         return this.textStream;
     }
     /**
-     * Encoding of a video stream.
+     * @return Encoding of a video stream.
      * 
-    */
+     */
     public VideoStreamResponse videoStream() {
         return this.videoStream;
     }

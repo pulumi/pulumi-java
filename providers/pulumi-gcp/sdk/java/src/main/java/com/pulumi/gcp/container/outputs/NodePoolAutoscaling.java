@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class NodePoolAutoscaling {
     /**
-     * Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.
+     * @return Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.
      * 
      */
     private final Integer maxNodeCount;
     /**
-     * Minimum number of nodes in the NodePool. Must be &gt;=0 and
+     * @return Minimum number of nodes in the NodePool. Must be &gt;=0 and
      * &lt;= `max_node_count`.
      * 
      */
@@ -30,17 +30,17 @@ public final class NodePoolAutoscaling {
     }
 
     /**
-     * Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.
+     * @return Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.
      * 
-    */
+     */
     public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
     /**
-     * Minimum number of nodes in the NodePool. Must be &gt;=0 and
+     * @return Minimum number of nodes in the NodePool. Must be &gt;=0 and
      * &lt;= `max_node_count`.
      * 
-    */
+     */
     public Integer minNodeCount() {
         return this.minNodeCount;
     }

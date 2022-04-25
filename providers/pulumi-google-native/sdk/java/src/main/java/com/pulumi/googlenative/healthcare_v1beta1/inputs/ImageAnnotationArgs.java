@@ -28,6 +28,10 @@ public final class ImageAnnotationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="boundingPolys")
     private @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
+    /**
+     * @return The list of polygons outlining the sensitive regions in the image.
+     * 
+     */
     public Optional<Output<List<BoundingPolyArgs>>> boundingPolys() {
         return Optional.ofNullable(this.boundingPolys);
     }
@@ -39,6 +43,10 @@ public final class ImageAnnotationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="frameIndex")
     private @Nullable Output<Integer> frameIndex;
 
+    /**
+     * @return 0-based index of the image frame. For example, an image frame in a DICOM instance.
+     * 
+     */
     public Optional<Output<Integer>> frameIndex() {
         return Optional.ofNullable(this.frameIndex);
     }
@@ -68,24 +76,54 @@ public final class ImageAnnotationArgs extends com.pulumi.resources.ResourceArgs
             $ = new ImageAnnotationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param boundingPolys The list of polygons outlining the sensitive regions in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolys(@Nullable Output<List<BoundingPolyArgs>> boundingPolys) {
             $.boundingPolys = boundingPolys;
             return this;
         }
 
+        /**
+         * @param boundingPolys The list of polygons outlining the sensitive regions in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolys(List<BoundingPolyArgs> boundingPolys) {
             return boundingPolys(Output.of(boundingPolys));
         }
 
+        /**
+         * @param boundingPolys The list of polygons outlining the sensitive regions in the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boundingPolys(BoundingPolyArgs... boundingPolys) {
             return boundingPolys(List.of(boundingPolys));
         }
 
+        /**
+         * @param frameIndex 0-based index of the image frame. For example, an image frame in a DICOM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameIndex(@Nullable Output<Integer> frameIndex) {
             $.frameIndex = frameIndex;
             return this;
         }
 
+        /**
+         * @param frameIndex 0-based index of the image frame. For example, an image frame in a DICOM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameIndex(Integer frameIndex) {
             return frameIndex(Output.of(frameIndex));
         }

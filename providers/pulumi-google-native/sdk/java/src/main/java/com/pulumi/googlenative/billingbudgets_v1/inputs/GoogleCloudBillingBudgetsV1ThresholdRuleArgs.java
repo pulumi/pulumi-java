@@ -27,6 +27,10 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends com.pulu
     @Import(name="spendBasis")
     private @Nullable Output<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis> spendBasis;
 
+    /**
+     * @return Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
+     * 
+     */
     public Optional<Output<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis>> spendBasis() {
         return Optional.ofNullable(this.spendBasis);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends com.pulu
     @Import(name="thresholdPercent", required=true)
     private Output<Double> thresholdPercent;
 
+    /**
+     * @return Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
+     * 
+     */
     public Output<Double> thresholdPercent() {
         return this.thresholdPercent;
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleArgs extends com.pulu
             $ = new GoogleCloudBillingBudgetsV1ThresholdRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param spendBasis Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spendBasis(@Nullable Output<GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis> spendBasis) {
             $.spendBasis = spendBasis;
             return this;
         }
 
+        /**
+         * @param spendBasis Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spendBasis(GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis spendBasis) {
             return spendBasis(Output.of(spendBasis));
         }
 
+        /**
+         * @param thresholdPercent Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdPercent(Output<Double> thresholdPercent) {
             $.thresholdPercent = thresholdPercent;
             return this;
         }
 
+        /**
+         * @param thresholdPercent Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdPercent(Double thresholdPercent) {
             return thresholdPercent(Output.of(thresholdPercent));
         }

@@ -23,6 +23,10 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return A comment to describe the key group..
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -34,6 +38,10 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The identifier for this version of the key group.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -45,6 +53,10 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="items")
     private @Nullable Output<List<String>> items;
 
+    /**
+     * @return A list of the identifiers of the public keys in the key group.
+     * 
+     */
     public Optional<Output<List<String>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -56,6 +68,10 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name to identify the key group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,42 +103,96 @@ public final class KeyGroupState extends com.pulumi.resources.ResourceArgs {
             $ = new KeyGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comment A comment to describe the key group..
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment A comment to describe the key group..
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param etag The identifier for this version of the key group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The identifier for this version of the key group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param items A list of the identifiers of the public keys in the key group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<String>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items A list of the identifiers of the public keys in the key group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<String> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items A list of the identifiers of the public keys in the key group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(String... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param name A name to identify the key group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name to identify the key group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

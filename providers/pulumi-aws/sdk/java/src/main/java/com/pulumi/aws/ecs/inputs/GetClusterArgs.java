@@ -19,6 +19,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the ECS Cluster
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -47,6 +51,12 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the ECS Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;

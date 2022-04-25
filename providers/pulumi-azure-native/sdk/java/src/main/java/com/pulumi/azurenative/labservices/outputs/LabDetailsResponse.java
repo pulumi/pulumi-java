@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LabDetailsResponse {
     /**
-     * The Id of the lab.
+     * @return The Id of the lab.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the lab
+     * @return Name of the lab
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the lab.
+     * @return The provisioning state of the lab.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * The maximum duration a user can use a VM in this lab.
+     * @return The maximum duration a user can use a VM in this lab.
      * 
      */
     private final String usageQuota;
@@ -45,30 +45,30 @@ public final class LabDetailsResponse {
     }
 
     /**
-     * The Id of the lab.
+     * @return The Id of the lab.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the lab
+     * @return Name of the lab
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the lab.
+     * @return The provisioning state of the lab.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The maximum duration a user can use a VM in this lab.
+     * @return The maximum duration a user can use a VM in this lab.
      * 
-    */
+     */
     public String usageQuota() {
         return this.usageQuota;
     }

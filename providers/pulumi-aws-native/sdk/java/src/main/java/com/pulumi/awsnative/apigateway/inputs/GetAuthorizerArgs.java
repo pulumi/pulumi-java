@@ -26,6 +26,10 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The identifier of the API.
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -60,6 +64,12 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param restApiId The identifier of the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;

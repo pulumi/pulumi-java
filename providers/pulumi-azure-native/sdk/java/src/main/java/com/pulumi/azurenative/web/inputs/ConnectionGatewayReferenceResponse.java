@@ -25,6 +25,10 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource reference id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource reference location
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource reference name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Resource reference type
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -89,21 +105,45 @@ public final class ConnectionGatewayReferenceResponse extends com.pulumi.resourc
             $ = new ConnectionGatewayReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource reference id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Resource reference location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource reference name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Resource reference type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

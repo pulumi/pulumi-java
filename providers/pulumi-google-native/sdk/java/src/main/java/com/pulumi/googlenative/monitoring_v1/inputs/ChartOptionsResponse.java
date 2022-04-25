@@ -23,6 +23,10 @@ public final class ChartOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return The chart mode.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -51,6 +55,12 @@ public final class ChartOptionsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ChartOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode The chart mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;

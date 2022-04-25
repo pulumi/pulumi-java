@@ -24,6 +24,10 @@ public final class AttachedVolumeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="devicePath", required=true)
     private Output<String> devicePath;
 
+    /**
+     * @return DevicePath represents the device path where the volume should be available
+     * 
+     */
     public Output<String> devicePath() {
         return this.devicePath;
     }
@@ -35,6 +39,10 @@ public final class AttachedVolumeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the attached volume
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -64,20 +72,44 @@ public final class AttachedVolumeArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AttachedVolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param devicePath DevicePath represents the device path where the volume should be available
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePath(Output<String> devicePath) {
             $.devicePath = devicePath;
             return this;
         }
 
+        /**
+         * @param devicePath DevicePath represents the device path where the volume should be available
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePath(String devicePath) {
             return devicePath(Output.of(devicePath));
         }
 
+        /**
+         * @param name Name of the attached volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the attached volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

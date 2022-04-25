@@ -27,6 +27,10 @@ public final class SensitiveTextAnnotationArgs extends com.pulumi.resources.Reso
     @Import(name="details")
     private @Nullable Output<Map<String,String>> details;
 
+    /**
+     * @return Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
+     * 
+     */
     public Optional<Output<Map<String,String>>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -55,11 +59,23 @@ public final class SensitiveTextAnnotationArgs extends com.pulumi.resources.Reso
             $ = new SensitiveTextAnnotationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable Output<Map<String,String>> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --&gt; {findings_1, findings_2, findings_3}
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(Map<String,String> details) {
             return details(Output.of(details));
         }

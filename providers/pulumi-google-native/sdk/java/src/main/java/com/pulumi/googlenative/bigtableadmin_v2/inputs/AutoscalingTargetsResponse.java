@@ -23,6 +23,10 @@ public final class AutoscalingTargetsResponse extends com.pulumi.resources.Invok
     @Import(name="cpuUtilizationPercent", required=true)
     private Integer cpuUtilizationPercent;
 
+    /**
+     * @return The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+     * 
+     */
     public Integer cpuUtilizationPercent() {
         return this.cpuUtilizationPercent;
     }
@@ -51,6 +55,12 @@ public final class AutoscalingTargetsResponse extends com.pulumi.resources.Invok
             $ = new AutoscalingTargetsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuUtilizationPercent The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilizationPercent(Integer cpuUtilizationPercent) {
             $.cpuUtilizationPercent = cpuUtilizationPercent;
             return this;

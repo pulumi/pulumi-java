@@ -25,6 +25,10 @@ public final class MatchVariableResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="selector")
     private @Nullable String selector;
 
+    /**
+     * @return The selector of match variable.
+     * 
+     */
     public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -36,6 +40,10 @@ public final class MatchVariableResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="variableName", required=true)
     private String variableName;
 
+    /**
+     * @return Match Variable.
+     * 
+     */
     public String variableName() {
         return this.variableName;
     }
@@ -65,11 +73,23 @@ public final class MatchVariableResponse extends com.pulumi.resources.InvokeArgs
             $ = new MatchVariableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selector The selector of match variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable String selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param variableName Match Variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(String variableName) {
             $.variableName = variableName;
             return this;

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ParentGroupInfoResponse {
     /**
-     * The friendly name of the parent management group.
+     * @return The friendly name of the parent management group.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * @return The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the parent management group
+     * @return The name of the parent management group
      * 
      */
     private final @Nullable String name;
@@ -38,23 +38,23 @@ public final class ParentGroupInfoResponse {
     }
 
     /**
-     * The friendly name of the parent management group.
+     * @return The friendly name of the parent management group.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * @return The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the parent management group
+     * @return The name of the parent management group
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

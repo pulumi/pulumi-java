@@ -23,6 +23,10 @@ public final class SecurityContextResponse extends com.pulumi.resources.InvokeAr
     @Import(name="runAsUser", required=true)
     private Integer runAsUser;
 
+    /**
+     * @return (Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+     * 
+     */
     public Integer runAsUser() {
         return this.runAsUser;
     }
@@ -51,6 +55,12 @@ public final class SecurityContextResponse extends com.pulumi.resources.InvokeAr
             $ = new SecurityContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param runAsUser (Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsUser(Integer runAsUser) {
             $.runAsUser = runAsUser;
             return this;

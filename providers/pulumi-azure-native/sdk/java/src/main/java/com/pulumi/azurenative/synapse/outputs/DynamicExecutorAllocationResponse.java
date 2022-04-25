@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DynamicExecutorAllocationResponse {
     /**
-     * Indicates whether Dynamic Executor Allocation is enabled or not.
+     * @return Indicates whether Dynamic Executor Allocation is enabled or not.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -23,9 +23,9 @@ public final class DynamicExecutorAllocationResponse {
     }
 
     /**
-     * Indicates whether Dynamic Executor Allocation is enabled or not.
+     * @return Indicates whether Dynamic Executor Allocation is enabled or not.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

@@ -20,6 +20,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="executionCount", required=true)
     private Integer executionCount;
 
+    /**
+     * @return Gets the number of times this job has executed.
+     * 
+     */
     public Integer executionCount() {
         return this.executionCount;
     }
@@ -31,6 +35,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="failureCount", required=true)
     private Integer failureCount;
 
+    /**
+     * @return Gets the number of times this job has failed.
+     * 
+     */
     public Integer failureCount() {
         return this.failureCount;
     }
@@ -42,6 +50,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="faultedCount", required=true)
     private Integer faultedCount;
 
+    /**
+     * @return Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
+     * 
+     */
     public Integer faultedCount() {
         return this.faultedCount;
     }
@@ -53,6 +65,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastExecutionTime", required=true)
     private String lastExecutionTime;
 
+    /**
+     * @return Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
+     * 
+     */
     public String lastExecutionTime() {
         return this.lastExecutionTime;
     }
@@ -64,6 +80,10 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextExecutionTime", required=true)
     private String nextExecutionTime;
 
+    /**
+     * @return Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
+     * 
+     */
     public String nextExecutionTime() {
         return this.nextExecutionTime;
     }
@@ -96,26 +116,56 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionCount Gets the number of times this job has executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionCount(Integer executionCount) {
             $.executionCount = executionCount;
             return this;
         }
 
+        /**
+         * @param failureCount Gets the number of times this job has failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureCount(Integer failureCount) {
             $.failureCount = failureCount;
             return this;
         }
 
+        /**
+         * @param faultedCount Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultedCount(Integer faultedCount) {
             $.faultedCount = faultedCount;
             return this;
         }
 
+        /**
+         * @param lastExecutionTime Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExecutionTime(String lastExecutionTime) {
             $.lastExecutionTime = lastExecutionTime;
             return this;
         }
 
+        /**
+         * @param nextExecutionTime Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextExecutionTime(String nextExecutionTime) {
             $.nextExecutionTime = nextExecutionTime;
             return this;

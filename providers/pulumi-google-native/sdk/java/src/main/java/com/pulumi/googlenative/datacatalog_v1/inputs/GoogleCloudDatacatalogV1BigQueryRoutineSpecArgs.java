@@ -27,6 +27,10 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends com.p
     @Import(name="importedLibraries")
     private @Nullable Output<List<String>> importedLibraries;
 
+    /**
+     * @return Paths of the imported libraries.
+     * 
+     */
     public Optional<Output<List<String>>> importedLibraries() {
         return Optional.ofNullable(this.importedLibraries);
     }
@@ -55,15 +59,33 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends com.p
             $ = new GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param importedLibraries Paths of the imported libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
             $.importedLibraries = importedLibraries;
             return this;
         }
 
+        /**
+         * @param importedLibraries Paths of the imported libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(List<String> importedLibraries) {
             return importedLibraries(Output.of(importedLibraries));
         }
 
+        /**
+         * @param importedLibraries Paths of the imported libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(String... importedLibraries) {
             return importedLibraries(List.of(importedLibraries));
         }

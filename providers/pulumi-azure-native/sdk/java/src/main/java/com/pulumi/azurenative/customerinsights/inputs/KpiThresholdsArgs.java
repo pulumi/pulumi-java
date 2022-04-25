@@ -25,6 +25,10 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="increasingKpi", required=true)
     private Output<Boolean> increasingKpi;
 
+    /**
+     * @return Whether or not the KPI is an increasing KPI.
+     * 
+     */
     public Output<Boolean> increasingKpi() {
         return this.increasingKpi;
     }
@@ -36,6 +40,10 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lowerLimit", required=true)
     private Output<Double> lowerLimit;
 
+    /**
+     * @return The lower threshold limit.
+     * 
+     */
     public Output<Double> lowerLimit() {
         return this.lowerLimit;
     }
@@ -47,6 +55,10 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upperLimit", required=true)
     private Output<Double> upperLimit;
 
+    /**
+     * @return The upper threshold limit.
+     * 
+     */
     public Output<Double> upperLimit() {
         return this.upperLimit;
     }
@@ -77,29 +89,65 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KpiThresholdsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param increasingKpi Whether or not the KPI is an increasing KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder increasingKpi(Output<Boolean> increasingKpi) {
             $.increasingKpi = increasingKpi;
             return this;
         }
 
+        /**
+         * @param increasingKpi Whether or not the KPI is an increasing KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder increasingKpi(Boolean increasingKpi) {
             return increasingKpi(Output.of(increasingKpi));
         }
 
+        /**
+         * @param lowerLimit The lower threshold limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerLimit(Output<Double> lowerLimit) {
             $.lowerLimit = lowerLimit;
             return this;
         }
 
+        /**
+         * @param lowerLimit The lower threshold limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerLimit(Double lowerLimit) {
             return lowerLimit(Output.of(lowerLimit));
         }
 
+        /**
+         * @param upperLimit The upper threshold limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperLimit(Output<Double> upperLimit) {
             $.upperLimit = upperLimit;
             return this;
         }
 
+        /**
+         * @param upperLimit The upper threshold limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperLimit(Double upperLimit) {
             return upperLimit(Output.of(upperLimit));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SubnetPropertiesResponse {
     /**
-     * Subnet name.
+     * @return Subnet name.
      * 
      */
     private final @Nullable String name;
@@ -23,9 +23,9 @@ public final class SubnetPropertiesResponse {
     }
 
     /**
-     * Subnet name.
+     * @return Subnet name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

@@ -22,6 +22,10 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="latest")
     private @Nullable Boolean latest;
 
+    /**
+     * @return sort results by expiration date. returns the certificate with expiration date in furthest in the future.
+     * 
+     */
     public Optional<Boolean> latest() {
         return Optional.ofNullable(this.latest);
     }
@@ -33,6 +37,10 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return exact name of the cert to lookup
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="namePrefix")
     private @Nullable String namePrefix;
 
+    /**
+     * @return prefix of cert to filter by
+     * 
+     */
     public Optional<String> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -55,6 +67,10 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
     @Import(name="pathPrefix")
     private @Nullable String pathPrefix;
 
+    /**
+     * @return prefix of path to filter by
+     * 
+     */
     public Optional<String> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
@@ -86,21 +102,45 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
             $ = new GetServerCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param latest sort results by expiration date. returns the certificate with expiration date in furthest in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latest(@Nullable Boolean latest) {
             $.latest = latest;
             return this;
         }
 
+        /**
+         * @param name exact name of the cert to lookup
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param namePrefix prefix of cert to filter by
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable String namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param pathPrefix prefix of path to filter by
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathPrefix(@Nullable String pathPrefix) {
             $.pathPrefix = pathPrefix;
             return this;

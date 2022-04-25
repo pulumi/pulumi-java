@@ -30,6 +30,10 @@ public final class DevicePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedDeviceManagementLevels")
     private @Nullable Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
 
+    /**
+     * @return Allowed device management levels, an empty list allows all management levels.
+     * 
+     */
     public Optional<Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>>> allowedDeviceManagementLevels() {
         return Optional.ofNullable(this.allowedDeviceManagementLevels);
     }
@@ -41,6 +45,10 @@ public final class DevicePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedEncryptionStatuses")
     private @Nullable Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
 
+    /**
+     * @return Allowed encryptions statuses, an empty list allows all statuses.
+     * 
+     */
     public Optional<Output<List<DevicePolicyAllowedEncryptionStatusesItem>>> allowedEncryptionStatuses() {
         return Optional.ofNullable(this.allowedEncryptionStatuses);
     }
@@ -52,6 +60,10 @@ public final class DevicePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osConstraints")
     private @Nullable Output<List<OsConstraintArgs>> osConstraints;
 
+    /**
+     * @return Allowed OS versions, an empty list allows all types and all versions.
+     * 
+     */
     public Optional<Output<List<OsConstraintArgs>>> osConstraints() {
         return Optional.ofNullable(this.osConstraints);
     }
@@ -63,6 +75,10 @@ public final class DevicePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireAdminApproval")
     private @Nullable Output<Boolean> requireAdminApproval;
 
+    /**
+     * @return Whether the device needs to be approved by the customer admin.
+     * 
+     */
     public Optional<Output<Boolean>> requireAdminApproval() {
         return Optional.ofNullable(this.requireAdminApproval);
     }
@@ -74,6 +90,10 @@ public final class DevicePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireCorpOwned")
     private @Nullable Output<Boolean> requireCorpOwned;
 
+    /**
+     * @return Whether the device needs to be corp owned.
+     * 
+     */
     public Optional<Output<Boolean>> requireCorpOwned() {
         return Optional.ofNullable(this.requireCorpOwned);
     }
@@ -85,6 +105,10 @@ public final class DevicePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireScreenlock")
     private @Nullable Output<Boolean> requireScreenlock;
 
+    /**
+     * @return Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> requireScreenlock() {
         return Optional.ofNullable(this.requireScreenlock);
     }
@@ -118,68 +142,158 @@ public final class DevicePolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DevicePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedDeviceManagementLevels Allowed device management levels, an empty list allows all management levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDeviceManagementLevels(@Nullable Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels) {
             $.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
 
+        /**
+         * @param allowedDeviceManagementLevels Allowed device management levels, an empty list allows all management levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDeviceManagementLevels(List<DevicePolicyAllowedDeviceManagementLevelsItem> allowedDeviceManagementLevels) {
             return allowedDeviceManagementLevels(Output.of(allowedDeviceManagementLevels));
         }
 
+        /**
+         * @param allowedDeviceManagementLevels Allowed device management levels, an empty list allows all management levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDeviceManagementLevels(DevicePolicyAllowedDeviceManagementLevelsItem... allowedDeviceManagementLevels) {
             return allowedDeviceManagementLevels(List.of(allowedDeviceManagementLevels));
         }
 
+        /**
+         * @param allowedEncryptionStatuses Allowed encryptions statuses, an empty list allows all statuses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedEncryptionStatuses(@Nullable Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses) {
             $.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
 
+        /**
+         * @param allowedEncryptionStatuses Allowed encryptions statuses, an empty list allows all statuses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedEncryptionStatuses(List<DevicePolicyAllowedEncryptionStatusesItem> allowedEncryptionStatuses) {
             return allowedEncryptionStatuses(Output.of(allowedEncryptionStatuses));
         }
 
+        /**
+         * @param allowedEncryptionStatuses Allowed encryptions statuses, an empty list allows all statuses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedEncryptionStatuses(DevicePolicyAllowedEncryptionStatusesItem... allowedEncryptionStatuses) {
             return allowedEncryptionStatuses(List.of(allowedEncryptionStatuses));
         }
 
+        /**
+         * @param osConstraints Allowed OS versions, an empty list allows all types and all versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osConstraints(@Nullable Output<List<OsConstraintArgs>> osConstraints) {
             $.osConstraints = osConstraints;
             return this;
         }
 
+        /**
+         * @param osConstraints Allowed OS versions, an empty list allows all types and all versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osConstraints(List<OsConstraintArgs> osConstraints) {
             return osConstraints(Output.of(osConstraints));
         }
 
+        /**
+         * @param osConstraints Allowed OS versions, an empty list allows all types and all versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osConstraints(OsConstraintArgs... osConstraints) {
             return osConstraints(List.of(osConstraints));
         }
 
+        /**
+         * @param requireAdminApproval Whether the device needs to be approved by the customer admin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAdminApproval(@Nullable Output<Boolean> requireAdminApproval) {
             $.requireAdminApproval = requireAdminApproval;
             return this;
         }
 
+        /**
+         * @param requireAdminApproval Whether the device needs to be approved by the customer admin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAdminApproval(Boolean requireAdminApproval) {
             return requireAdminApproval(Output.of(requireAdminApproval));
         }
 
+        /**
+         * @param requireCorpOwned Whether the device needs to be corp owned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireCorpOwned(@Nullable Output<Boolean> requireCorpOwned) {
             $.requireCorpOwned = requireCorpOwned;
             return this;
         }
 
+        /**
+         * @param requireCorpOwned Whether the device needs to be corp owned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireCorpOwned(Boolean requireCorpOwned) {
             return requireCorpOwned(Output.of(requireCorpOwned));
         }
 
+        /**
+         * @param requireScreenlock Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireScreenlock(@Nullable Output<Boolean> requireScreenlock) {
             $.requireScreenlock = requireScreenlock;
             return this;
         }
 
+        /**
+         * @param requireScreenlock Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireScreenlock(Boolean requireScreenlock) {
             return requireScreenlock(Output.of(requireScreenlock));
         }

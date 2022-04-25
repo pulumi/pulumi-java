@@ -23,6 +23,10 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
     @Import(name="excludeObjects", required=true)
     private OracleRdbmsResponse excludeObjects;
 
+    /**
+     * @return Oracle objects to exclude from the stream.
+     * 
+     */
     public OracleRdbmsResponse excludeObjects() {
         return this.excludeObjects;
     }
@@ -34,6 +38,10 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
     @Import(name="includeObjects", required=true)
     private OracleRdbmsResponse includeObjects;
 
+    /**
+     * @return Oracle objects to include in the stream.
+     * 
+     */
     public OracleRdbmsResponse includeObjects() {
         return this.includeObjects;
     }
@@ -63,11 +71,23 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
             $ = new OracleSourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludeObjects Oracle objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeObjects(OracleRdbmsResponse excludeObjects) {
             $.excludeObjects = excludeObjects;
             return this;
         }
 
+        /**
+         * @param includeObjects Oracle objects to include in the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeObjects(OracleRdbmsResponse includeObjects) {
             $.includeObjects = includeObjects;
             return this;

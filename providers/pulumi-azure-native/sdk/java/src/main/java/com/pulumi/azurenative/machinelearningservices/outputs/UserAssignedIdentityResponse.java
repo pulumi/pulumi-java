@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class UserAssignedIdentityResponse {
     /**
-     * The clientId(aka appId) of the user assigned identity.
+     * @return The clientId(aka appId) of the user assigned identity.
      * 
      */
     private final String clientId;
     /**
-     * The principal ID of the user assigned identity.
+     * @return The principal ID of the user assigned identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant ID of the user assigned identity.
+     * @return The tenant ID of the user assigned identity.
      * 
      */
     private final String tenantId;
@@ -36,23 +36,23 @@ public final class UserAssignedIdentityResponse {
     }
 
     /**
-     * The clientId(aka appId) of the user assigned identity.
+     * @return The clientId(aka appId) of the user assigned identity.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The principal ID of the user assigned identity.
+     * @return The principal ID of the user assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of the user assigned identity.
+     * @return The tenant ID of the user assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

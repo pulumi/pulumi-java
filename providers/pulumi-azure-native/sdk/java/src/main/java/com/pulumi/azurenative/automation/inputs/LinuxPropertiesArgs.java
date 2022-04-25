@@ -29,6 +29,10 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="excludedPackageNameMasks")
     private @Nullable Output<List<String>> excludedPackageNameMasks;
 
+    /**
+     * @return packages excluded from the software update configuration.
+     * 
+     */
     public Optional<Output<List<String>>> excludedPackageNameMasks() {
         return Optional.ofNullable(this.excludedPackageNameMasks);
     }
@@ -40,6 +44,10 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="includedPackageClassifications")
     private @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
 
+    /**
+     * @return Update classifications included in the software update configuration.
+     * 
+     */
     public Optional<Output<Either<String,LinuxUpdateClasses>>> includedPackageClassifications() {
         return Optional.ofNullable(this.includedPackageClassifications);
     }
@@ -51,6 +59,10 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="includedPackageNameMasks")
     private @Nullable Output<List<String>> includedPackageNameMasks;
 
+    /**
+     * @return packages included from the software update configuration.
+     * 
+     */
     public Optional<Output<List<String>>> includedPackageNameMasks() {
         return Optional.ofNullable(this.includedPackageNameMasks);
     }
@@ -62,6 +74,10 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="rebootSetting")
     private @Nullable Output<String> rebootSetting;
 
+    /**
+     * @return Reboot setting for the software update configuration.
+     * 
+     */
     public Optional<Output<String>> rebootSetting() {
         return Optional.ofNullable(this.rebootSetting);
     }
@@ -93,54 +109,126 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
             $ = new LinuxPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedPackageNameMasks packages excluded from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPackageNameMasks(@Nullable Output<List<String>> excludedPackageNameMasks) {
             $.excludedPackageNameMasks = excludedPackageNameMasks;
             return this;
         }
 
+        /**
+         * @param excludedPackageNameMasks packages excluded from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPackageNameMasks(List<String> excludedPackageNameMasks) {
             return excludedPackageNameMasks(Output.of(excludedPackageNameMasks));
         }
 
+        /**
+         * @param excludedPackageNameMasks packages excluded from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPackageNameMasks(String... excludedPackageNameMasks) {
             return excludedPackageNameMasks(List.of(excludedPackageNameMasks));
         }
 
+        /**
+         * @param includedPackageClassifications Update classifications included in the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPackageClassifications(@Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications) {
             $.includedPackageClassifications = includedPackageClassifications;
             return this;
         }
 
+        /**
+         * @param includedPackageClassifications Update classifications included in the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPackageClassifications(Either<String,LinuxUpdateClasses> includedPackageClassifications) {
             return includedPackageClassifications(Output.of(includedPackageClassifications));
         }
 
+        /**
+         * @param includedPackageClassifications Update classifications included in the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPackageClassifications(String includedPackageClassifications) {
             return includedPackageClassifications(Either.ofLeft(includedPackageClassifications));
         }
 
+        /**
+         * @param includedPackageClassifications Update classifications included in the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPackageClassifications(LinuxUpdateClasses includedPackageClassifications) {
             return includedPackageClassifications(Either.ofRight(includedPackageClassifications));
         }
 
+        /**
+         * @param includedPackageNameMasks packages included from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPackageNameMasks(@Nullable Output<List<String>> includedPackageNameMasks) {
             $.includedPackageNameMasks = includedPackageNameMasks;
             return this;
         }
 
+        /**
+         * @param includedPackageNameMasks packages included from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPackageNameMasks(List<String> includedPackageNameMasks) {
             return includedPackageNameMasks(Output.of(includedPackageNameMasks));
         }
 
+        /**
+         * @param includedPackageNameMasks packages included from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPackageNameMasks(String... includedPackageNameMasks) {
             return includedPackageNameMasks(List.of(includedPackageNameMasks));
         }
 
+        /**
+         * @param rebootSetting Reboot setting for the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootSetting(@Nullable Output<String> rebootSetting) {
             $.rebootSetting = rebootSetting;
             return this;
         }
 
+        /**
+         * @param rebootSetting Reboot setting for the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootSetting(String rebootSetting) {
             return rebootSetting(Output.of(rebootSetting));
         }

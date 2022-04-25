@@ -39,6 +39,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateTemplate")
     private @Nullable Output<String> certificateTemplate;
 
+    /**
+     * @return Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
+     * 
+     */
     public Optional<Output<String>> certificateTemplate() {
         return Optional.ofNullable(this.certificateTemplate);
     }
@@ -50,6 +54,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<CertificateConfigArgs> config;
 
+    /**
+     * @return Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
+     * 
+     */
     public Optional<Output<CertificateConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -68,6 +76,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Labels with user-defined metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -79,6 +91,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifetime", required=true)
     private Output<String> lifetime;
 
+    /**
+     * @return Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+     * 
+     */
     public Output<String> lifetime() {
         return this.lifetime;
     }
@@ -97,6 +113,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pemCsr")
     private @Nullable Output<String> pemCsr;
 
+    /**
+     * @return Immutable. A pem-encoded X.509 certificate signing request (CSR).
+     * 
+     */
     public Optional<Output<String>> pemCsr() {
         return Optional.ofNullable(this.pemCsr);
     }
@@ -122,6 +142,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subjectMode")
     private @Nullable Output<CertificateSubjectMode> subjectMode;
 
+    /**
+     * @return Immutable. Specifies how the Certificate&#39;s identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
+     * 
+     */
     public Optional<Output<CertificateSubjectMode>> subjectMode() {
         return Optional.ofNullable(this.subjectMode);
     }
@@ -187,20 +211,44 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             return certificateId(Output.of(certificateId));
         }
 
+        /**
+         * @param certificateTemplate Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateTemplate(@Nullable Output<String> certificateTemplate) {
             $.certificateTemplate = certificateTemplate;
             return this;
         }
 
+        /**
+         * @param certificateTemplate Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateTemplate(String certificateTemplate) {
             return certificateTemplate(Output.of(certificateTemplate));
         }
 
+        /**
+         * @param config Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<CertificateConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(CertificateConfigArgs config) {
             return config(Output.of(config));
         }
@@ -214,20 +262,44 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             return issuingCertificateAuthorityId(Output.of(issuingCertificateAuthorityId));
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lifetime Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(Output<String> lifetime) {
             $.lifetime = lifetime;
             return this;
         }
 
+        /**
+         * @param lifetime Immutable. The desired lifetime of a certificate. Used to create the &#34;not_before_time&#34; and &#34;not_after_time&#34; fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifetime(String lifetime) {
             return lifetime(Output.of(lifetime));
         }
@@ -241,11 +313,23 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param pemCsr Immutable. A pem-encoded X.509 certificate signing request (CSR).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemCsr(@Nullable Output<String> pemCsr) {
             $.pemCsr = pemCsr;
             return this;
         }
 
+        /**
+         * @param pemCsr Immutable. A pem-encoded X.509 certificate signing request (CSR).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemCsr(String pemCsr) {
             return pemCsr(Output.of(pemCsr));
         }
@@ -268,11 +352,23 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param subjectMode Immutable. Specifies how the Certificate&#39;s identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectMode(@Nullable Output<CertificateSubjectMode> subjectMode) {
             $.subjectMode = subjectMode;
             return this;
         }
 
+        /**
+         * @param subjectMode Immutable. Specifies how the Certificate&#39;s identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectMode(CertificateSubjectMode subjectMode) {
             return subjectMode(Output.of(subjectMode));
         }

@@ -25,6 +25,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userAltSecId")
     private @Nullable String userAltSecId;
 
+    /**
+     * @return A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
+     * 
+     */
     public Optional<String> userAltSecId() {
         return Optional.ofNullable(this.userAltSecId);
     }
@@ -36,6 +40,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userIdp")
     private @Nullable String userIdp;
 
+    /**
+     * @return A user identity provider. Eg live.com
+     * 
+     */
     public Optional<String> userIdp() {
         return Optional.ofNullable(this.userIdp);
     }
@@ -47,6 +55,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userIss")
     private @Nullable String userIss;
 
+    /**
+     * @return The issuer which issued the token for this user.
+     * 
+     */
     public Optional<String> userIss() {
         return Optional.ofNullable(this.userIss);
     }
@@ -58,6 +70,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return  A user&#39;s full name or a service principal&#39;s app ID.
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -69,6 +85,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userObjectId")
     private @Nullable String userObjectId;
 
+    /**
+     * @return A user or service principal&#39;s object ID..
+     * 
+     */
     public Optional<String> userObjectId() {
         return Optional.ofNullable(this.userObjectId);
     }
@@ -80,6 +100,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userPuId")
     private @Nullable String userPuId;
 
+    /**
+     * @return A user or service principal&#39;s PuID.
+     * 
+     */
     public Optional<String> userPuId() {
         return Optional.ofNullable(this.userPuId);
     }
@@ -91,6 +115,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userTenantId")
     private @Nullable String userTenantId;
 
+    /**
+     * @return A user or service principal&#39;s tenant ID.
+     * 
+     */
     public Optional<String> userTenantId() {
         return Optional.ofNullable(this.userTenantId);
     }
@@ -125,36 +153,78 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userAltSecId A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAltSecId(@Nullable String userAltSecId) {
             $.userAltSecId = userAltSecId;
             return this;
         }
 
+        /**
+         * @param userIdp A user identity provider. Eg live.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIdp(@Nullable String userIdp) {
             $.userIdp = userIdp;
             return this;
         }
 
+        /**
+         * @param userIss The issuer which issued the token for this user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIss(@Nullable String userIss) {
             $.userIss = userIss;
             return this;
         }
 
+        /**
+         * @param userName  A user&#39;s full name or a service principal&#39;s app ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userObjectId A user or service principal&#39;s object ID..
+         * 
+         * @return builder
+         * 
+         */
         public Builder userObjectId(@Nullable String userObjectId) {
             $.userObjectId = userObjectId;
             return this;
         }
 
+        /**
+         * @param userPuId A user or service principal&#39;s PuID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPuId(@Nullable String userPuId) {
             $.userPuId = userPuId;
             return this;
         }
 
+        /**
+         * @param userTenantId A user or service principal&#39;s tenant ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userTenantId(@Nullable String userTenantId) {
             $.userTenantId = userTenantId;
             return this;

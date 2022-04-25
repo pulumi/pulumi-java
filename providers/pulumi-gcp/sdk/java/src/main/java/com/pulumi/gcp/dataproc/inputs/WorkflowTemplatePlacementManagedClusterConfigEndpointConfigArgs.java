@@ -24,6 +24,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigAr
     @Import(name="enableHttpPortAccess")
     private @Nullable Output<Boolean> enableHttpPortAccess;
 
+    /**
+     * @return Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> enableHttpPortAccess() {
         return Optional.ofNullable(this.enableHttpPortAccess);
     }
@@ -36,6 +40,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigAr
     @Import(name="httpPorts")
     private @Nullable Output<Map<String,String>> httpPorts;
 
+    /**
+     * @return -
+     * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+     * 
+     */
     public Optional<Output<Map<String,String>>> httpPorts() {
         return Optional.ofNullable(this.httpPorts);
     }
@@ -65,20 +74,46 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigAr
             $ = new WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableHttpPortAccess Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpPortAccess(@Nullable Output<Boolean> enableHttpPortAccess) {
             $.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
 
+        /**
+         * @param enableHttpPortAccess Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
             return enableHttpPortAccess(Output.of(enableHttpPortAccess));
         }
 
+        /**
+         * @param httpPorts -
+         * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPorts(@Nullable Output<Map<String,String>> httpPorts) {
             $.httpPorts = httpPorts;
             return this;
         }
 
+        /**
+         * @param httpPorts -
+         * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPorts(Map<String,String> httpPorts) {
             return httpPorts(Output.of(httpPorts));
         }

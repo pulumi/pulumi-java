@@ -28,6 +28,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessEndpoints")
     private @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
 
+    /**
+     * @return Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
+     * 
+     */
     public Optional<Output<List<ImageBuilderAccessEndpointGetArgs>>> accessEndpoints() {
         return Optional.ofNullable(this.accessEndpoints);
     }
@@ -39,6 +43,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="appstreamAgentVersion")
     private @Nullable Output<String> appstreamAgentVersion;
 
+    /**
+     * @return The version of the AppStream 2.0 agent to use for this image builder.
+     * 
+     */
     public Optional<Output<String>> appstreamAgentVersion() {
         return Optional.ofNullable(this.appstreamAgentVersion);
     }
@@ -50,6 +58,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the appstream image builder.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -61,6 +73,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
     private @Nullable Output<String> createdTime;
 
+    /**
+     * @return Date and time, in UTC and extended RFC 3339 format, when the image builder was created.
+     * 
+     */
     public Optional<Output<String>> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -72,6 +88,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description to display.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -83,6 +103,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Human-readable friendly name for the AppStream image builder.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -94,6 +118,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainJoinInfo")
     private @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
 
+    /**
+     * @return Configuration block for the name of the directory and organizational unit (OU) to use to join the image builder to a Microsoft Active Directory domain. See below.
+     * 
+     */
     public Optional<Output<ImageBuilderDomainJoinInfoGetArgs>> domainJoinInfo() {
         return Optional.ofNullable(this.domainJoinInfo);
     }
@@ -105,6 +133,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDefaultInternetAccess")
     private @Nullable Output<Boolean> enableDefaultInternetAccess;
 
+    /**
+     * @return Enables or disables default internet access for the image builder.
+     * 
+     */
     public Optional<Output<Boolean>> enableDefaultInternetAccess() {
         return Optional.ofNullable(this.enableDefaultInternetAccess);
     }
@@ -116,6 +148,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
     private @Nullable Output<String> iamRoleArn;
 
+    /**
+     * @return ARN of the IAM role to apply to the image builder.
+     * 
+     */
     public Optional<Output<String>> iamRoleArn() {
         return Optional.ofNullable(this.iamRoleArn);
     }
@@ -127,6 +163,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageArn")
     private @Nullable Output<String> imageArn;
 
+    /**
+     * @return ARN of the public, private, or shared image to use.
+     * 
+     */
     public Optional<Output<String>> imageArn() {
         return Optional.ofNullable(this.imageArn);
     }
@@ -138,6 +178,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageName")
     private @Nullable Output<String> imageName;
 
+    /**
+     * @return Name of the image used to create the image builder.
+     * 
+     */
     public Optional<Output<String>> imageName() {
         return Optional.ofNullable(this.imageName);
     }
@@ -149,6 +193,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The instance type to use when launching the image builder.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -160,6 +208,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name for the image builder.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -171,6 +223,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return State of the image builder. Can be: `PENDING`, `UPDATING_AGENT`, `RUNNING`, `STOPPING`, `STOPPED`, `REBOOTING`, `SNAPSHOTTING`, `DELETING`, `FAILED`, `UPDATING`, `PENDING_QUALIFICATION`
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -182,6 +238,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -193,6 +253,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -204,6 +268,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
     private @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig;
 
+    /**
+     * @return Configuration block for the VPC configuration for the image builder. See below.
+     * 
+     */
     public Optional<Output<ImageBuilderVpcConfigGetArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
@@ -248,159 +316,369 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
             $ = new ImageBuilderState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessEndpoints Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessEndpoints(@Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints) {
             $.accessEndpoints = accessEndpoints;
             return this;
         }
 
+        /**
+         * @param accessEndpoints Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessEndpoints(List<ImageBuilderAccessEndpointGetArgs> accessEndpoints) {
             return accessEndpoints(Output.of(accessEndpoints));
         }
 
+        /**
+         * @param accessEndpoints Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessEndpoints(ImageBuilderAccessEndpointGetArgs... accessEndpoints) {
             return accessEndpoints(List.of(accessEndpoints));
         }
 
+        /**
+         * @param appstreamAgentVersion The version of the AppStream 2.0 agent to use for this image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appstreamAgentVersion(@Nullable Output<String> appstreamAgentVersion) {
             $.appstreamAgentVersion = appstreamAgentVersion;
             return this;
         }
 
+        /**
+         * @param appstreamAgentVersion The version of the AppStream 2.0 agent to use for this image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appstreamAgentVersion(String appstreamAgentVersion) {
             return appstreamAgentVersion(Output.of(appstreamAgentVersion));
         }
 
+        /**
+         * @param arn ARN of the appstream image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the appstream image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param createdTime Date and time, in UTC and extended RFC 3339 format, when the image builder was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable Output<String> createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param createdTime Date and time, in UTC and extended RFC 3339 format, when the image builder was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             return createdTime(Output.of(createdTime));
         }
 
+        /**
+         * @param description Description to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Human-readable friendly name for the AppStream image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Human-readable friendly name for the AppStream image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param domainJoinInfo Configuration block for the name of the directory and organizational unit (OU) to use to join the image builder to a Microsoft Active Directory domain. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainJoinInfo(@Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo) {
             $.domainJoinInfo = domainJoinInfo;
             return this;
         }
 
+        /**
+         * @param domainJoinInfo Configuration block for the name of the directory and organizational unit (OU) to use to join the image builder to a Microsoft Active Directory domain. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainJoinInfo(ImageBuilderDomainJoinInfoGetArgs domainJoinInfo) {
             return domainJoinInfo(Output.of(domainJoinInfo));
         }
 
+        /**
+         * @param enableDefaultInternetAccess Enables or disables default internet access for the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
             $.enableDefaultInternetAccess = enableDefaultInternetAccess;
             return this;
         }
 
+        /**
+         * @param enableDefaultInternetAccess Enables or disables default internet access for the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDefaultInternetAccess(Boolean enableDefaultInternetAccess) {
             return enableDefaultInternetAccess(Output.of(enableDefaultInternetAccess));
         }
 
+        /**
+         * @param iamRoleArn ARN of the IAM role to apply to the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             $.iamRoleArn = iamRoleArn;
             return this;
         }
 
+        /**
+         * @param iamRoleArn ARN of the IAM role to apply to the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleArn(String iamRoleArn) {
             return iamRoleArn(Output.of(iamRoleArn));
         }
 
+        /**
+         * @param imageArn ARN of the public, private, or shared image to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageArn(@Nullable Output<String> imageArn) {
             $.imageArn = imageArn;
             return this;
         }
 
+        /**
+         * @param imageArn ARN of the public, private, or shared image to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageArn(String imageArn) {
             return imageArn(Output.of(imageArn));
         }
 
+        /**
+         * @param imageName Name of the image used to create the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(@Nullable Output<String> imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageName Name of the image used to create the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             return imageName(Output.of(imageName));
         }
 
+        /**
+         * @param instanceType The instance type to use when launching the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The instance type to use when launching the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param name Unique name for the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name for the image builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param state State of the image builder. Can be: `PENDING`, `UPDATING_AGENT`, `RUNNING`, `STOPPING`, `STOPPED`, `REBOOTING`, `SNAPSHOTTING`, `DELETING`, `FAILED`, `UPDATING`, `PENDING_QUALIFICATION`
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state State of the image builder. Can be: `PENDING`, `UPDATING_AGENT`, `RUNNING`, `STOPPING`, `STOPPED`, `REBOOTING`, `SNAPSHOTTING`, `DELETING`, `FAILED`, `UPDATING`, `PENDING_QUALIFICATION`
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param vpcConfig Configuration block for the VPC configuration for the image builder. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfig(@Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
 
+        /**
+         * @param vpcConfig Configuration block for the VPC configuration for the image builder. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfig(ImageBuilderVpcConfigGetArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }

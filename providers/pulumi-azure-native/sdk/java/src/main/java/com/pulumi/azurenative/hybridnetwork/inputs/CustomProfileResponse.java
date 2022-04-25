@@ -25,6 +25,10 @@ public final class CustomProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metadataConfigurationPath")
     private @Nullable String metadataConfigurationPath;
 
+    /**
+     * @return Path for metadata configuration.
+     * 
+     */
     public Optional<String> metadataConfigurationPath() {
         return Optional.ofNullable(this.metadataConfigurationPath);
     }
@@ -53,6 +57,12 @@ public final class CustomProfileResponse extends com.pulumi.resources.InvokeArgs
             $ = new CustomProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadataConfigurationPath Path for metadata configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
             $.metadataConfigurationPath = metadataConfigurationPath;
             return this;

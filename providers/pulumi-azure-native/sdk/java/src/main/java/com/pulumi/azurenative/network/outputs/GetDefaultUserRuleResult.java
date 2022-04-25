@@ -15,83 +15,83 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDefaultUserRuleResult {
     /**
-     * A description for this rule. Restricted to 140 chars.
+     * @return A description for this rule. Restricted to 140 chars.
      * 
      */
     private final String description;
     /**
-     * The destination port ranges.
+     * @return The destination port ranges.
      * 
      */
     private final List<String> destinationPortRanges;
     /**
-     * The destination address prefixes. CIDR or destination IP ranges.
+     * @return The destination address prefixes. CIDR or destination IP ranges.
      * 
      */
     private final List<AddressPrefixItemResponse> destinations;
     /**
-     * Indicates if the traffic matched against the rule in inbound or outbound.
+     * @return Indicates if the traffic matched against the rule in inbound or outbound.
      * 
      */
     private final String direction;
     /**
-     * A friendly name for the rule.
+     * @return A friendly name for the rule.
      * 
      */
     private final String displayName;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Default rule flag.
+     * @return Default rule flag.
      * 
      */
     private final @Nullable String flag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Whether the rule is custom or default.
+     * @return Whether the rule is custom or default.
      * Expected value is &#39;Default&#39;.
      * 
      */
     private final String kind;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Network protocol this rule applies to.
+     * @return Network protocol this rule applies to.
      * 
      */
     private final String protocol;
     /**
-     * The provisioning state of the security configuration user rule resource.
+     * @return The provisioning state of the security configuration user rule resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The source port ranges.
+     * @return The source port ranges.
      * 
      */
     private final List<String> sourcePortRanges;
     /**
-     * The CIDR or source IP ranges.
+     * @return The CIDR or source IP ranges.
      * 
      */
     private final List<AddressPrefixItemResponse> sources;
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -133,115 +133,115 @@ public final class GetDefaultUserRuleResult {
     }
 
     /**
-     * A description for this rule. Restricted to 140 chars.
+     * @return A description for this rule. Restricted to 140 chars.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The destination port ranges.
+     * @return The destination port ranges.
      * 
-    */
+     */
     public List<String> destinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
-     * The destination address prefixes. CIDR or destination IP ranges.
+     * @return The destination address prefixes. CIDR or destination IP ranges.
      * 
-    */
+     */
     public List<AddressPrefixItemResponse> destinations() {
         return this.destinations;
     }
     /**
-     * Indicates if the traffic matched against the rule in inbound or outbound.
+     * @return Indicates if the traffic matched against the rule in inbound or outbound.
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * A friendly name for the rule.
+     * @return A friendly name for the rule.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Default rule flag.
+     * @return Default rule flag.
      * 
-    */
+     */
     public Optional<String> flag() {
         return Optional.ofNullable(this.flag);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Whether the rule is custom or default.
+     * @return Whether the rule is custom or default.
      * Expected value is &#39;Default&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network protocol this rule applies to.
+     * @return Network protocol this rule applies to.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The provisioning state of the security configuration user rule resource.
+     * @return The provisioning state of the security configuration user rule resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The source port ranges.
+     * @return The source port ranges.
      * 
-    */
+     */
     public List<String> sourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
-     * The CIDR or source IP ranges.
+     * @return The CIDR or source IP ranges.
      * 
-    */
+     */
     public List<AddressPrefixItemResponse> sources() {
         return this.sources;
     }
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

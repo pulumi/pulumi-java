@@ -22,6 +22,10 @@ public final class DomainTopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return Name of the domain.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -33,6 +37,10 @@ public final class DomainTopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainTopicName")
     private @Nullable Output<String> domainTopicName;
 
+    /**
+     * @return Name of the domain topic.
+     * 
+     */
     public Optional<Output<String>> domainTopicName() {
         return Optional.ofNullable(this.domainTopicName);
     }
@@ -44,6 +52,10 @@ public final class DomainTopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,29 +86,65 @@ public final class DomainTopicArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainTopicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainTopicName Name of the domain topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainTopicName(@Nullable Output<String> domainTopicName) {
             $.domainTopicName = domainTopicName;
             return this;
         }
 
+        /**
+         * @param domainTopicName Name of the domain topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainTopicName(String domainTopicName) {
             return domainTopicName(Output.of(domainTopicName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

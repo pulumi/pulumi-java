@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ShieldedNodesResponse {
     /**
-     * Whether Shielded Nodes features are enabled on all nodes in this cluster.
+     * @return Whether Shielded Nodes features are enabled on all nodes in this cluster.
      * 
      */
     private final Boolean enabled;
@@ -21,9 +21,9 @@ public final class ShieldedNodesResponse {
     }
 
     /**
-     * Whether Shielded Nodes features are enabled on all nodes in this cluster.
+     * @return Whether Shielded Nodes features are enabled on all nodes in this cluster.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

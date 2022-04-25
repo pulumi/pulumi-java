@@ -30,6 +30,10 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
     @Import(name="healthProbeSettings")
     private @Nullable HealthProbeParametersResponse healthProbeSettings;
 
+    /**
+     * @return Health probe settings to the origin that is used to determine the health of the origin.
+     * 
+     */
     public Optional<HealthProbeParametersResponse> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
@@ -41,6 +45,10 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Origin group name which must be unique within the endpoint.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -52,6 +60,10 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
     @Import(name="origins", required=true)
     private List<ResourceReferenceResponse> origins;
 
+    /**
+     * @return The source of the content being delivered via CDN within given origin group.
+     * 
+     */
     public List<ResourceReferenceResponse> origins() {
         return this.origins;
     }
@@ -63,6 +75,10 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
     @Import(name="responseBasedOriginErrorDetectionSettings")
     private @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
 
+    /**
+     * @return The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
+     * 
+     */
     public Optional<ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
@@ -74,6 +90,10 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
     private @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
+    /**
+     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * 
+     */
     public Optional<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
@@ -106,30 +126,66 @@ public final class DeepCreatedOriginGroupResponse extends com.pulumi.resources.I
             $ = new DeepCreatedOriginGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthProbeSettings Health probe settings to the origin that is used to determine the health of the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(@Nullable HealthProbeParametersResponse healthProbeSettings) {
             $.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
+        /**
+         * @param name Origin group name which must be unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param origins The source of the content being delivered via CDN within given origin group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(List<ResourceReferenceResponse> origins) {
             $.origins = origins;
             return this;
         }
 
+        /**
+         * @param origins The source of the content being delivered via CDN within given origin group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(ResourceReferenceResponse... origins) {
             return origins(List.of(origins));
         }
 
+        /**
+         * @param responseBasedOriginErrorDetectionSettings The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings) {
             $.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
 
+        /**
+         * @param trafficRestorationTimeToHealedOrNewEndpointsInMinutes Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             $.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;

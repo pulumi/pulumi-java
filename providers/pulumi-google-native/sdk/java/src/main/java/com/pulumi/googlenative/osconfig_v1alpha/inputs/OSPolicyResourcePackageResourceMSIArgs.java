@@ -28,6 +28,10 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends com.pulumi.res
     @Import(name="properties")
     private @Nullable Output<List<String>> properties;
 
+    /**
+     * @return Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+     * 
+     */
     public Optional<Output<List<String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -39,6 +43,10 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends com.pulumi.res
     @Import(name="source", required=true)
     private Output<OSPolicyResourceFileArgs> source;
 
+    /**
+     * @return The MSI package.
+     * 
+     */
     public Output<OSPolicyResourceFileArgs> source() {
         return this.source;
     }
@@ -68,24 +76,54 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends com.pulumi.res
             $ = new OSPolicyResourcePackageResourceMSIArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<List<String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(List<String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(String... properties) {
             return properties(List.of(properties));
         }
 
+        /**
+         * @param source The MSI package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<OSPolicyResourceFileArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The MSI package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(OSPolicyResourceFileArgs source) {
             return source(Output.of(source));
         }

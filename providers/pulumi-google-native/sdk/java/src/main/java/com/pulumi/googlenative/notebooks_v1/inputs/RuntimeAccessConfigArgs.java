@@ -27,6 +27,10 @@ public final class RuntimeAccessConfigArgs extends com.pulumi.resources.Resource
     @Import(name="accessType")
     private @Nullable Output<RuntimeAccessConfigAccessType> accessType;
 
+    /**
+     * @return The type of access mode this instance.
+     * 
+     */
     public Optional<Output<RuntimeAccessConfigAccessType>> accessType() {
         return Optional.ofNullable(this.accessType);
     }
@@ -38,6 +42,10 @@ public final class RuntimeAccessConfigArgs extends com.pulumi.resources.Resource
     @Import(name="runtimeOwner")
     private @Nullable Output<String> runtimeOwner;
 
+    /**
+     * @return The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
+     * 
+     */
     public Optional<Output<String>> runtimeOwner() {
         return Optional.ofNullable(this.runtimeOwner);
     }
@@ -67,20 +75,44 @@ public final class RuntimeAccessConfigArgs extends com.pulumi.resources.Resource
             $ = new RuntimeAccessConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessType The type of access mode this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(@Nullable Output<RuntimeAccessConfigAccessType> accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param accessType The type of access mode this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(RuntimeAccessConfigAccessType accessType) {
             return accessType(Output.of(accessType));
         }
 
+        /**
+         * @param runtimeOwner The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeOwner(@Nullable Output<String> runtimeOwner) {
             $.runtimeOwner = runtimeOwner;
             return this;
         }
 
+        /**
+         * @param runtimeOwner The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeOwner(String runtimeOwner) {
             return runtimeOwner(Output.of(runtimeOwner));
         }

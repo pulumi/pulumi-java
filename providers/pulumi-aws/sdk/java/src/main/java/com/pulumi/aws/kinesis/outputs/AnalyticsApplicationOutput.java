@@ -16,34 +16,34 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AnalyticsApplicationOutput {
     /**
-     * The ARN of the Kinesis Analytics Application.
+     * @return The ARN of the Kinesis Analytics Application.
      * 
      */
     private final @Nullable String id;
     /**
-     * The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+     * @return The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
      * See Kinesis Firehose below for more details.
      * 
      */
     private final @Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose;
     /**
-     * The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+     * @return The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
      * See Kinesis Stream below for more details.
      * 
      */
     private final @Nullable AnalyticsApplicationOutputKinesisStream kinesisStream;
     /**
-     * The Lambda function destination. See Lambda below for more details.
+     * @return The Lambda function destination. See Lambda below for more details.
      * 
      */
     private final @Nullable AnalyticsApplicationOutputLambda lambda;
     /**
-     * The Name of the in-application stream.
+     * @return The Name of the in-application stream.
      * 
      */
     private final String name;
     /**
-     * The Schema format of the data written to the destination. See Destination Schema below for more details.
+     * @return The Schema format of the data written to the destination. See Destination Schema below for more details.
      * 
      */
     private final AnalyticsApplicationOutputSchema schema;
@@ -65,46 +65,46 @@ public final class AnalyticsApplicationOutput {
     }
 
     /**
-     * The ARN of the Kinesis Analytics Application.
+     * @return The ARN of the Kinesis Analytics Application.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+     * @return The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
      * See Kinesis Firehose below for more details.
      * 
-    */
+     */
     public Optional<AnalyticsApplicationOutputKinesisFirehose> kinesisFirehose() {
         return Optional.ofNullable(this.kinesisFirehose);
     }
     /**
-     * The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+     * @return The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
      * See Kinesis Stream below for more details.
      * 
-    */
+     */
     public Optional<AnalyticsApplicationOutputKinesisStream> kinesisStream() {
         return Optional.ofNullable(this.kinesisStream);
     }
     /**
-     * The Lambda function destination. See Lambda below for more details.
+     * @return The Lambda function destination. See Lambda below for more details.
      * 
-    */
+     */
     public Optional<AnalyticsApplicationOutputLambda> lambda() {
         return Optional.ofNullable(this.lambda);
     }
     /**
-     * The Name of the in-application stream.
+     * @return The Name of the in-application stream.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Schema format of the data written to the destination. See Destination Schema below for more details.
+     * @return The Schema format of the data written to the destination. See Destination Schema below for more details.
      * 
-    */
+     */
     public AnalyticsApplicationOutputSchema schema() {
         return this.schema;
     }

@@ -25,6 +25,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
     @Import(name="fhirDestinationName")
     private @Nullable Output<String> fhirDestinationName;
 
+    /**
+     * @return The name of IoT Connector FHIR destination resource.
+     * 
+     */
     public Optional<Output<String>> fhirDestinationName() {
         return Optional.ofNullable(this.fhirDestinationName);
     }
@@ -36,6 +40,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
     @Import(name="fhirMapping", required=true)
     private Output<IotMappingPropertiesArgs> fhirMapping;
 
+    /**
+     * @return FHIR Mappings
+     * 
+     */
     public Output<IotMappingPropertiesArgs> fhirMapping() {
         return this.fhirMapping;
     }
@@ -47,6 +55,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
     @Import(name="fhirServiceResourceId", required=true)
     private Output<String> fhirServiceResourceId;
 
+    /**
+     * @return Fully qualified resource id of the FHIR service to connect to.
+     * 
+     */
     public Output<String> fhirServiceResourceId() {
         return this.fhirServiceResourceId;
     }
@@ -58,6 +70,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
     @Import(name="iotConnectorName", required=true)
     private Output<String> iotConnectorName;
 
+    /**
+     * @return The name of IoT Connector resource.
+     * 
+     */
     public Output<String> iotConnectorName() {
         return this.iotConnectorName;
     }
@@ -69,6 +85,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -80,6 +100,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the service instance.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
     @Import(name="resourceIdentityResolutionType", required=true)
     private Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
 
+    /**
+     * @return Determines how resource identity is resolved on the destination.
+     * 
+     */
     public Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
     }
@@ -102,6 +130,10 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of workspace resource.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -137,82 +169,190 @@ public final class IotConnectorFhirDestinationArgs extends com.pulumi.resources.
             $ = new IotConnectorFhirDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fhirDestinationName The name of IoT Connector FHIR destination resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirDestinationName(@Nullable Output<String> fhirDestinationName) {
             $.fhirDestinationName = fhirDestinationName;
             return this;
         }
 
+        /**
+         * @param fhirDestinationName The name of IoT Connector FHIR destination resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirDestinationName(String fhirDestinationName) {
             return fhirDestinationName(Output.of(fhirDestinationName));
         }
 
+        /**
+         * @param fhirMapping FHIR Mappings
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirMapping(Output<IotMappingPropertiesArgs> fhirMapping) {
             $.fhirMapping = fhirMapping;
             return this;
         }
 
+        /**
+         * @param fhirMapping FHIR Mappings
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirMapping(IotMappingPropertiesArgs fhirMapping) {
             return fhirMapping(Output.of(fhirMapping));
         }
 
+        /**
+         * @param fhirServiceResourceId Fully qualified resource id of the FHIR service to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirServiceResourceId(Output<String> fhirServiceResourceId) {
             $.fhirServiceResourceId = fhirServiceResourceId;
             return this;
         }
 
+        /**
+         * @param fhirServiceResourceId Fully qualified resource id of the FHIR service to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fhirServiceResourceId(String fhirServiceResourceId) {
             return fhirServiceResourceId(Output.of(fhirServiceResourceId));
         }
 
+        /**
+         * @param iotConnectorName The name of IoT Connector resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotConnectorName(Output<String> iotConnectorName) {
             $.iotConnectorName = iotConnectorName;
             return this;
         }
 
+        /**
+         * @param iotConnectorName The name of IoT Connector resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotConnectorName(String iotConnectorName) {
             return iotConnectorName(Output.of(iotConnectorName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceIdentityResolutionType Determines how resource identity is resolved on the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceIdentityResolutionType(Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType) {
             $.resourceIdentityResolutionType = resourceIdentityResolutionType;
             return this;
         }
 
+        /**
+         * @param resourceIdentityResolutionType Determines how resource identity is resolved on the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceIdentityResolutionType(Either<String,IotIdentityResolutionType> resourceIdentityResolutionType) {
             return resourceIdentityResolutionType(Output.of(resourceIdentityResolutionType));
         }
 
+        /**
+         * @param resourceIdentityResolutionType Determines how resource identity is resolved on the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceIdentityResolutionType(String resourceIdentityResolutionType) {
             return resourceIdentityResolutionType(Either.ofLeft(resourceIdentityResolutionType));
         }
 
+        /**
+         * @param resourceIdentityResolutionType Determines how resource identity is resolved on the destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceIdentityResolutionType(IotIdentityResolutionType resourceIdentityResolutionType) {
             return resourceIdentityResolutionType(Either.ofRight(resourceIdentityResolutionType));
         }
 
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

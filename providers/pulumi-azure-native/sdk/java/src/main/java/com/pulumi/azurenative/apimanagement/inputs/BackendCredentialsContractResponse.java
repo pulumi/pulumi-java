@@ -28,6 +28,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
     @Import(name="authorization")
     private @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
 
+    /**
+     * @return Authorization header authentication
+     * 
+     */
     public Optional<BackendAuthorizationHeaderCredentialsResponse> authorization() {
         return Optional.ofNullable(this.authorization);
     }
@@ -39,6 +43,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
     @Import(name="certificate")
     private @Nullable List<String> certificate;
 
+    /**
+     * @return List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+     * 
+     */
     public Optional<List<String>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -50,6 +58,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
     @Import(name="certificateIds")
     private @Nullable List<String> certificateIds;
 
+    /**
+     * @return List of Client Certificate Ids.
+     * 
+     */
     public Optional<List<String>> certificateIds() {
         return Optional.ofNullable(this.certificateIds);
     }
@@ -61,6 +73,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
     @Import(name="header")
     private @Nullable Map<String,List<String>> header;
 
+    /**
+     * @return Header Parameter description.
+     * 
+     */
     public Optional<Map<String,List<String>>> header() {
         return Optional.ofNullable(this.header);
     }
@@ -72,6 +88,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
     @Import(name="query")
     private @Nullable Map<String,List<String>> query;
 
+    /**
+     * @return Query Parameter description.
+     * 
+     */
     public Optional<Map<String,List<String>>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -104,34 +124,76 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
             $ = new BackendCredentialsContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorization Authorization header authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(@Nullable BackendAuthorizationHeaderCredentialsResponse authorization) {
             $.authorization = authorization;
             return this;
         }
 
+        /**
+         * @param certificate List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable List<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String... certificate) {
             return certificate(List.of(certificate));
         }
 
+        /**
+         * @param certificateIds List of Client Certificate Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIds(@Nullable List<String> certificateIds) {
             $.certificateIds = certificateIds;
             return this;
         }
 
+        /**
+         * @param certificateIds List of Client Certificate Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIds(String... certificateIds) {
             return certificateIds(List.of(certificateIds));
         }
 
+        /**
+         * @param header Header Parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(@Nullable Map<String,List<String>> header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param query Query Parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Map<String,List<String>> query) {
             $.query = query;
             return this;

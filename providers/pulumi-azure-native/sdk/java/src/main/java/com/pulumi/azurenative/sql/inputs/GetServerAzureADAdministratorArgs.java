@@ -19,6 +19,10 @@ public final class GetServerAzureADAdministratorArgs extends com.pulumi.resource
     @Import(name="administratorName", required=true)
     private String administratorName;
 
+    /**
+     * @return The name of server active directory administrator.
+     * 
+     */
     public String administratorName() {
         return this.administratorName;
     }
@@ -30,6 +34,10 @@ public final class GetServerAzureADAdministratorArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetServerAzureADAdministratorArgs extends com.pulumi.resource
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -71,16 +83,34 @@ public final class GetServerAzureADAdministratorArgs extends com.pulumi.resource
             $ = new GetServerAzureADAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administratorName The name of server active directory administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorName(String administratorName) {
             $.administratorName = administratorName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

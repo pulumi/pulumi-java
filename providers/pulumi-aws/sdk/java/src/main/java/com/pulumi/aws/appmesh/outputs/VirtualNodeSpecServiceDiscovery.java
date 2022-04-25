@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNodeSpecServiceDiscovery {
     /**
-     * Specifies any AWS Cloud Map information for the virtual node.
+     * @return Specifies any AWS Cloud Map information for the virtual node.
      * 
      */
     private final @Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap;
     /**
-     * Specifies the DNS service name for the virtual node.
+     * @return Specifies the DNS service name for the virtual node.
      * 
      */
     private final @Nullable VirtualNodeSpecServiceDiscoveryDns dns;
@@ -32,16 +32,16 @@ public final class VirtualNodeSpecServiceDiscovery {
     }
 
     /**
-     * Specifies any AWS Cloud Map information for the virtual node.
+     * @return Specifies any AWS Cloud Map information for the virtual node.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecServiceDiscoveryAwsCloudMap> awsCloudMap() {
         return Optional.ofNullable(this.awsCloudMap);
     }
     /**
-     * Specifies the DNS service name for the virtual node.
+     * @return Specifies the DNS service name for the virtual node.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecServiceDiscoveryDns> dns() {
         return Optional.ofNullable(this.dns);
     }

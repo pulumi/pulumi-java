@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DomainValidationPropertiesResponse {
     /**
-     * The date time that the token expires
+     * @return The date time that the token expires
      * 
      */
     private final String expirationDate;
     /**
-     * Challenge used for DNS TXT record or file based validation
+     * @return Challenge used for DNS TXT record or file based validation
      * 
      */
     private final String validationToken;
@@ -29,16 +29,16 @@ public final class DomainValidationPropertiesResponse {
     }
 
     /**
-     * The date time that the token expires
+     * @return The date time that the token expires
      * 
-    */
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
     /**
-     * Challenge used for DNS TXT record or file based validation
+     * @return Challenge used for DNS TXT record or file based validation
      * 
-    */
+     */
     public String validationToken() {
         return this.validationToken;
     }

@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApiReleaseResult {
     /**
-     * Identifier of the API the release belongs to.
+     * @return Identifier of the API the release belongs to.
      * 
      */
     private final @Nullable String apiId;
     /**
-     * The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
+     * @return The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
      * 
      */
     private final String createdDateTime;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Release Notes
+     * @return Release Notes
      * 
      */
     private final @Nullable String notes;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
     /**
-     * The time the API release was updated.
+     * @return The time the API release was updated.
      * 
      */
     private final String updatedDateTime;
@@ -66,51 +66,51 @@ public final class GetApiReleaseResult {
     }
 
     /**
-     * Identifier of the API the release belongs to.
+     * @return Identifier of the API the release belongs to.
      * 
-    */
+     */
     public Optional<String> apiId() {
         return Optional.ofNullable(this.apiId);
     }
     /**
-     * The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
+     * @return The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public String createdDateTime() {
         return this.createdDateTime;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Release Notes
+     * @return Release Notes
      * 
-    */
+     */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The time the API release was updated.
+     * @return The time the API release was updated.
      * 
-    */
+     */
     public String updatedDateTime() {
         return this.updatedDateTime;
     }

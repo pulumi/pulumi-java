@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput {
     /**
-     * The ARN of the input Kinesis data stream to read.
+     * @return The ARN of the input Kinesis data stream to read.
      * 
      */
     private final String resourceArn;
@@ -21,9 +21,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * The ARN of the input Kinesis data stream to read.
+     * @return The ARN of the input Kinesis data stream to read.
      * 
-    */
+     */
     public String resourceArn() {
         return this.resourceArn;
     }

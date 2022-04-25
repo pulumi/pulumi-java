@@ -33,6 +33,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="agentConfiguration")
     private @Nullable AgentPropertiesResponse agentConfiguration;
 
+    /**
+     * @return The machine configuration of the run agent.
+     * 
+     */
     public Optional<AgentPropertiesResponse> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
@@ -44,6 +48,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="agentPoolName")
     private @Nullable String agentPoolName;
 
+    /**
+     * @return The dedicated agent pool for the run.
+     * 
+     */
     public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
@@ -55,6 +63,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="arguments")
     private @Nullable List<ArgumentResponse> arguments;
 
+    /**
+     * @return The collection of override arguments to be used when executing the run.
+     * 
+     */
     public Optional<List<ArgumentResponse>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -66,6 +78,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="credentials")
     private @Nullable CredentialsResponse credentials;
 
+    /**
+     * @return The properties that describes a set of credentials that will be used when this run is invoked.
+     * 
+     */
     public Optional<CredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -77,6 +93,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="dockerFilePath", required=true)
     private String dockerFilePath;
 
+    /**
+     * @return The Docker file path relative to the source location.
+     * 
+     */
     public String dockerFilePath() {
         return this.dockerFilePath;
     }
@@ -88,6 +108,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="imageNames")
     private @Nullable List<String> imageNames;
 
+    /**
+     * @return The fully qualified image names including the repository and tag.
+     * 
+     */
     public Optional<List<String>> imageNames() {
         return Optional.ofNullable(this.imageNames);
     }
@@ -99,6 +123,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="isArchiveEnabled")
     private @Nullable Boolean isArchiveEnabled;
 
+    /**
+     * @return The value that indicates whether archiving is enabled for the run or not.
+     * 
+     */
     public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
@@ -110,6 +138,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="isPushEnabled")
     private @Nullable Boolean isPushEnabled;
 
+    /**
+     * @return The value of this property indicates whether the image built should be pushed to the registry or not.
+     * 
+     */
     public Optional<Boolean> isPushEnabled() {
         return Optional.ofNullable(this.isPushEnabled);
     }
@@ -121,6 +153,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="logTemplate")
     private @Nullable String logTemplate;
 
+    /**
+     * @return The template that describes the repository and tag information for run log artifact.
+     * 
+     */
     public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
@@ -132,6 +168,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="noCache")
     private @Nullable Boolean noCache;
 
+    /**
+     * @return The value of this property indicates whether the image cache is enabled or not.
+     * 
+     */
     public Optional<Boolean> noCache() {
         return Optional.ofNullable(this.noCache);
     }
@@ -143,6 +183,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="platform", required=true)
     private PlatformPropertiesResponse platform;
 
+    /**
+     * @return The platform properties against which the run has to happen.
+     * 
+     */
     public PlatformPropertiesResponse platform() {
         return this.platform;
     }
@@ -155,6 +199,11 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="sourceLocation")
     private @Nullable String sourceLocation;
 
+    /**
+     * @return The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+     * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+     * 
+     */
     public Optional<String> sourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
@@ -166,6 +215,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The name of the target build stage for the docker build.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -177,6 +230,10 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="timeout")
     private @Nullable Integer timeout;
 
+    /**
+     * @return Run timeout in seconds.
+     * 
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -189,6 +246,11 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the run request.
+     * Expected value is &#39;DockerBuildRequest&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -231,84 +293,188 @@ public final class DockerBuildRequestResponse extends com.pulumi.resources.Invok
             $ = new DockerBuildRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentConfiguration The machine configuration of the run agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
             $.agentConfiguration = agentConfiguration;
             return this;
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(@Nullable String agentPoolName) {
             $.agentPoolName = agentPoolName;
             return this;
         }
 
+        /**
+         * @param arguments The collection of override arguments to be used when executing the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments The collection of override arguments to be used when executing the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(ArgumentResponse... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param credentials The properties that describes a set of credentials that will be used when this run is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable CredentialsResponse credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param dockerFilePath The Docker file path relative to the source location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerFilePath(String dockerFilePath) {
             $.dockerFilePath = dockerFilePath;
             return this;
         }
 
+        /**
+         * @param imageNames The fully qualified image names including the repository and tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageNames(@Nullable List<String> imageNames) {
             $.imageNames = imageNames;
             return this;
         }
 
+        /**
+         * @param imageNames The fully qualified image names including the repository and tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageNames(String... imageNames) {
             return imageNames(List.of(imageNames));
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
+        /**
+         * @param isPushEnabled The value of this property indicates whether the image built should be pushed to the registry or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             $.isPushEnabled = isPushEnabled;
             return this;
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(@Nullable String logTemplate) {
             $.logTemplate = logTemplate;
             return this;
         }
 
+        /**
+         * @param noCache The value of this property indicates whether the image cache is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noCache(@Nullable Boolean noCache) {
             $.noCache = noCache;
             return this;
         }
 
+        /**
+         * @param platform The platform properties against which the run has to happen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(PlatformPropertiesResponse platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param sourceLocation The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+         * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocation(@Nullable String sourceLocation) {
             $.sourceLocation = sourceLocation;
             return this;
         }
 
+        /**
+         * @param target The name of the target build stage for the docker build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param timeout Run timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Integer timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;DockerBuildRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

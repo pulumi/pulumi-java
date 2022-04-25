@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RelationshipLinkFieldMappingResponse {
     /**
-     * The field name on the Interaction Type.
+     * @return The field name on the Interaction Type.
      * 
      */
     private final String interactionFieldName;
     /**
-     * Link type.
+     * @return Link type.
      * 
      */
     private final @Nullable String linkType;
     /**
-     * The field name on the Relationship metadata.
+     * @return The field name on the Relationship metadata.
      * 
      */
     private final String relationshipFieldName;
@@ -38,23 +38,23 @@ public final class RelationshipLinkFieldMappingResponse {
     }
 
     /**
-     * The field name on the Interaction Type.
+     * @return The field name on the Interaction Type.
      * 
-    */
+     */
     public String interactionFieldName() {
         return this.interactionFieldName;
     }
     /**
-     * Link type.
+     * @return Link type.
      * 
-    */
+     */
     public Optional<String> linkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
-     * The field name on the Relationship metadata.
+     * @return The field name on the Relationship metadata.
      * 
-    */
+     */
     public String relationshipFieldName() {
         return this.relationshipFieldName;
     }

@@ -26,6 +26,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailAddress")
     private @Nullable Output<String> emailAddress;
 
+    /**
+     * @return Email of the user used by Datadog for contacting them if needed
+     * 
+     */
     public Optional<Output<String>> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -37,6 +41,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the user
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phoneNumber")
     private @Nullable Output<String> phoneNumber;
 
+    /**
+     * @return Phone number of the user used by Datadog for contacting them if needed
+     * 
+     */
     public Optional<Output<String>> phoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }
@@ -78,29 +90,65 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress Email of the user used by Datadog for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress Email of the user used by Datadog for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
+        /**
+         * @param name Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param phoneNumber Phone number of the user used by Datadog for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param phoneNumber Phone number of the user used by Datadog for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             return phoneNumber(Output.of(phoneNumber));
         }

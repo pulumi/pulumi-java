@@ -26,6 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
     @Import(name="isMultiLabel")
     private @Nullable Output<Boolean> isMultiLabel;
 
+    /**
+     * @return Whether the classification task is multi-label or not.
+     * 
+     */
     public Optional<Output<Boolean>> isMultiLabel() {
         return Optional.ofNullable(this.isMultiLabel);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
             $ = new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isMultiLabel Whether the classification task is multi-label or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isMultiLabel(@Nullable Output<Boolean> isMultiLabel) {
             $.isMultiLabel = isMultiLabel;
             return this;
         }
 
+        /**
+         * @param isMultiLabel Whether the classification task is multi-label or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isMultiLabel(Boolean isMultiLabel) {
             return isMultiLabel(Output.of(isMultiLabel));
         }

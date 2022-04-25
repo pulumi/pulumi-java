@@ -22,6 +22,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="eventDeliveryFailureTopicArn")
     private @Nullable Output<String> eventDeliveryFailureTopicArn;
 
+    /**
+     * @return SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
+     * 
+     */
     public Optional<Output<String>> eventDeliveryFailureTopicArn() {
         return Optional.ofNullable(this.eventDeliveryFailureTopicArn);
     }
@@ -33,6 +37,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="eventEndpointCreatedTopicArn")
     private @Nullable Output<String> eventEndpointCreatedTopicArn;
 
+    /**
+     * @return SNS Topic triggered when a new platform endpoint is added to your platform application.
+     * 
+     */
     public Optional<Output<String>> eventEndpointCreatedTopicArn() {
         return Optional.ofNullable(this.eventEndpointCreatedTopicArn);
     }
@@ -44,6 +52,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="eventEndpointDeletedTopicArn")
     private @Nullable Output<String> eventEndpointDeletedTopicArn;
 
+    /**
+     * @return SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
+     * 
+     */
     public Optional<Output<String>> eventEndpointDeletedTopicArn() {
         return Optional.ofNullable(this.eventEndpointDeletedTopicArn);
     }
@@ -55,6 +67,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="eventEndpointUpdatedTopicArn")
     private @Nullable Output<String> eventEndpointUpdatedTopicArn;
 
+    /**
+     * @return SNS Topic triggered when an existing platform endpoint is changed from your platform application.
+     * 
+     */
     public Optional<Output<String>> eventEndpointUpdatedTopicArn() {
         return Optional.ofNullable(this.eventEndpointUpdatedTopicArn);
     }
@@ -66,6 +82,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="failureFeedbackRoleArn")
     private @Nullable Output<String> failureFeedbackRoleArn;
 
+    /**
+     * @return The IAM role permitted to receive failure feedback for this application.
+     * 
+     */
     public Optional<Output<String>> failureFeedbackRoleArn() {
         return Optional.ofNullable(this.failureFeedbackRoleArn);
     }
@@ -77,6 +97,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The friendly name for the SNS platform application
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -88,6 +112,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="platform", required=true)
     private Output<String> platform;
 
+    /**
+     * @return The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
+     * 
+     */
     public Output<String> platform() {
         return this.platform;
     }
@@ -99,6 +127,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="platformCredential", required=true)
     private Output<String> platformCredential;
 
+    /**
+     * @return Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
+     * 
+     */
     public Output<String> platformCredential() {
         return this.platformCredential;
     }
@@ -110,6 +142,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="platformPrincipal")
     private @Nullable Output<String> platformPrincipal;
 
+    /**
+     * @return Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
+     * 
+     */
     public Optional<Output<String>> platformPrincipal() {
         return Optional.ofNullable(this.platformPrincipal);
     }
@@ -121,6 +157,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="successFeedbackRoleArn")
     private @Nullable Output<String> successFeedbackRoleArn;
 
+    /**
+     * @return The IAM role permitted to receive success feedback for this application.
+     * 
+     */
     public Optional<Output<String>> successFeedbackRoleArn() {
         return Optional.ofNullable(this.successFeedbackRoleArn);
     }
@@ -132,6 +172,10 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
     @Import(name="successFeedbackSampleRate")
     private @Nullable Output<String> successFeedbackSampleRate;
 
+    /**
+     * @return The percentage of success to sample (0-100)
+     * 
+     */
     public Optional<Output<String>> successFeedbackSampleRate() {
         return Optional.ofNullable(this.successFeedbackSampleRate);
     }
@@ -170,101 +214,233 @@ public final class PlatformApplicationArgs extends com.pulumi.resources.Resource
             $ = new PlatformApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventDeliveryFailureTopicArn SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliveryFailureTopicArn(@Nullable Output<String> eventDeliveryFailureTopicArn) {
             $.eventDeliveryFailureTopicArn = eventDeliveryFailureTopicArn;
             return this;
         }
 
+        /**
+         * @param eventDeliveryFailureTopicArn SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDeliveryFailureTopicArn(String eventDeliveryFailureTopicArn) {
             return eventDeliveryFailureTopicArn(Output.of(eventDeliveryFailureTopicArn));
         }
 
+        /**
+         * @param eventEndpointCreatedTopicArn SNS Topic triggered when a new platform endpoint is added to your platform application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventEndpointCreatedTopicArn(@Nullable Output<String> eventEndpointCreatedTopicArn) {
             $.eventEndpointCreatedTopicArn = eventEndpointCreatedTopicArn;
             return this;
         }
 
+        /**
+         * @param eventEndpointCreatedTopicArn SNS Topic triggered when a new platform endpoint is added to your platform application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventEndpointCreatedTopicArn(String eventEndpointCreatedTopicArn) {
             return eventEndpointCreatedTopicArn(Output.of(eventEndpointCreatedTopicArn));
         }
 
+        /**
+         * @param eventEndpointDeletedTopicArn SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventEndpointDeletedTopicArn(@Nullable Output<String> eventEndpointDeletedTopicArn) {
             $.eventEndpointDeletedTopicArn = eventEndpointDeletedTopicArn;
             return this;
         }
 
+        /**
+         * @param eventEndpointDeletedTopicArn SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventEndpointDeletedTopicArn(String eventEndpointDeletedTopicArn) {
             return eventEndpointDeletedTopicArn(Output.of(eventEndpointDeletedTopicArn));
         }
 
+        /**
+         * @param eventEndpointUpdatedTopicArn SNS Topic triggered when an existing platform endpoint is changed from your platform application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventEndpointUpdatedTopicArn(@Nullable Output<String> eventEndpointUpdatedTopicArn) {
             $.eventEndpointUpdatedTopicArn = eventEndpointUpdatedTopicArn;
             return this;
         }
 
+        /**
+         * @param eventEndpointUpdatedTopicArn SNS Topic triggered when an existing platform endpoint is changed from your platform application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventEndpointUpdatedTopicArn(String eventEndpointUpdatedTopicArn) {
             return eventEndpointUpdatedTopicArn(Output.of(eventEndpointUpdatedTopicArn));
         }
 
+        /**
+         * @param failureFeedbackRoleArn The IAM role permitted to receive failure feedback for this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureFeedbackRoleArn(@Nullable Output<String> failureFeedbackRoleArn) {
             $.failureFeedbackRoleArn = failureFeedbackRoleArn;
             return this;
         }
 
+        /**
+         * @param failureFeedbackRoleArn The IAM role permitted to receive failure feedback for this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureFeedbackRoleArn(String failureFeedbackRoleArn) {
             return failureFeedbackRoleArn(Output.of(failureFeedbackRoleArn));
         }
 
+        /**
+         * @param name The friendly name for the SNS platform application
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The friendly name for the SNS platform application
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param platform The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(Output<String> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param platformCredential Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformCredential(Output<String> platformCredential) {
             $.platformCredential = platformCredential;
             return this;
         }
 
+        /**
+         * @param platformCredential Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformCredential(String platformCredential) {
             return platformCredential(Output.of(platformCredential));
         }
 
+        /**
+         * @param platformPrincipal Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformPrincipal(@Nullable Output<String> platformPrincipal) {
             $.platformPrincipal = platformPrincipal;
             return this;
         }
 
+        /**
+         * @param platformPrincipal Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformPrincipal(String platformPrincipal) {
             return platformPrincipal(Output.of(platformPrincipal));
         }
 
+        /**
+         * @param successFeedbackRoleArn The IAM role permitted to receive success feedback for this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successFeedbackRoleArn(@Nullable Output<String> successFeedbackRoleArn) {
             $.successFeedbackRoleArn = successFeedbackRoleArn;
             return this;
         }
 
+        /**
+         * @param successFeedbackRoleArn The IAM role permitted to receive success feedback for this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successFeedbackRoleArn(String successFeedbackRoleArn) {
             return successFeedbackRoleArn(Output.of(successFeedbackRoleArn));
         }
 
+        /**
+         * @param successFeedbackSampleRate The percentage of success to sample (0-100)
+         * 
+         * @return builder
+         * 
+         */
         public Builder successFeedbackSampleRate(@Nullable Output<String> successFeedbackSampleRate) {
             $.successFeedbackSampleRate = successFeedbackSampleRate;
             return this;
         }
 
+        /**
+         * @param successFeedbackSampleRate The percentage of success to sample (0-100)
+         * 
+         * @return builder
+         * 
+         */
         public Builder successFeedbackSampleRate(String successFeedbackSampleRate) {
             return successFeedbackSampleRate(Output.of(successFeedbackSampleRate));
         }

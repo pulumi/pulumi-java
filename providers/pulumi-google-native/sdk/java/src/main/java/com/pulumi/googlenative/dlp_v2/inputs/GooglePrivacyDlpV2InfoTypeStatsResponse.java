@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends com.pulumi.re
     @Import(name="count", required=true)
     private String count;
 
+    /**
+     * @return Number of findings for this infoType.
+     * 
+     */
     public String count() {
         return this.count;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends com.pulumi.re
     @Import(name="infoType", required=true)
     private GooglePrivacyDlpV2InfoTypeResponse infoType;
 
+    /**
+     * @return The type of finding this stat is for.
+     * 
+     */
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends com.pulumi.re
             $ = new GooglePrivacyDlpV2InfoTypeStatsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Number of findings for this infoType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(String count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param infoType The type of finding this stat is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             $.infoType = infoType;
             return this;

@@ -20,6 +20,10 @@ public final class ReplicationConfigurationReplicationConfigurationArgs extends 
     @Import(name="rule", required=true)
     private Output<ReplicationConfigurationReplicationConfigurationRuleArgs> rule;
 
+    /**
+     * @return The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
+     * 
+     */
     public Output<ReplicationConfigurationReplicationConfigurationRuleArgs> rule() {
         return this.rule;
     }
@@ -48,11 +52,23 @@ public final class ReplicationConfigurationReplicationConfigurationArgs extends 
             $ = new ReplicationConfigurationReplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rule The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(Output<ReplicationConfigurationReplicationConfigurationRuleArgs> rule) {
             $.rule = rule;
             return this;
         }
 
+        /**
+         * @param rule The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(ReplicationConfigurationReplicationConfigurationRuleArgs rule) {
             return rule(Output.of(rule));
         }

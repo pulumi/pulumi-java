@@ -23,6 +23,10 @@ public final class BucketIAMMemberArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -35,6 +39,11 @@ public final class BucketIAMMemberArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="condition")
     private @Nullable Output<BucketIAMMemberConditionArgs> condition;
 
+    /**
+     * @return ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BucketIAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -55,6 +64,12 @@ public final class BucketIAMMemberArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.storage.BucketIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -86,20 +101,46 @@ public final class BucketIAMMemberArgs extends com.pulumi.resources.ResourceArgs
             $ = new BucketIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<BucketIAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition ) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(BucketIAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
@@ -113,11 +154,27 @@ public final class BucketIAMMemberArgs extends com.pulumi.resources.ResourceArgs
             return member(Output.of(member));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.storage.BucketIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.storage.BucketIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

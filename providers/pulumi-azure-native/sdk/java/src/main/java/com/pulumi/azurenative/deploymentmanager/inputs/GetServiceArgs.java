@@ -19,6 +19,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the service resource.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -41,6 +49,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceTopologyName", required=true)
     private String serviceTopologyName;
 
+    /**
+     * @return The name of the service topology .
+     * 
+     */
     public String serviceTopologyName() {
         return this.serviceTopologyName;
     }
@@ -71,16 +83,34 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceTopologyName The name of the service topology .
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTopologyName(String serviceTopologyName) {
             $.serviceTopologyName = serviceTopologyName;
             return this;

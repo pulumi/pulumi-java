@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DockerImagePlatformResponse {
     /**
-     * The OS type the Environment.
+     * @return The OS type the Environment.
      * 
      */
     private final @Nullable String operatingSystemType;
@@ -23,9 +23,9 @@ public final class DockerImagePlatformResponse {
     }
 
     /**
-     * The OS type the Environment.
+     * @return The OS type the Environment.
      * 
-    */
+     */
     public Optional<String> operatingSystemType() {
         return Optional.ofNullable(this.operatingSystemType);
     }

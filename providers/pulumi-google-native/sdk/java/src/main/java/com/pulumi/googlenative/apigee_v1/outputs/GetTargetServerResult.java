@@ -13,37 +13,37 @@ import java.util.Objects;
 @CustomType
 public final class GetTargetServerResult {
     /**
-     * Optional. A human-readable description of this TargetServer.
+     * @return Optional. A human-readable description of this TargetServer.
      * 
      */
     private final String description;
     /**
-     * The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
+     * @return The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
      * 
      */
     private final String host;
     /**
-     * Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
+     * @return Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The resource id of this target server. Values must match the regular expression
+     * @return The resource id of this target server. Values must match the regular expression
      * 
      */
     private final String name;
     /**
-     * The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
+     * @return The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
      * 
      */
     private final Integer port;
     /**
-     * Immutable. The protocol used by this TargetServer.
+     * @return Immutable. The protocol used by this TargetServer.
      * 
      */
     private final String protocol;
     /**
-     * Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
+     * @return Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
      * 
      */
     private final GoogleCloudApigeeV1TlsInfoResponse sSLInfo;
@@ -67,51 +67,51 @@ public final class GetTargetServerResult {
     }
 
     /**
-     * Optional. A human-readable description of this TargetServer.
+     * @return Optional. A human-readable description of this TargetServer.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
+     * @return The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
+     * @return Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The resource id of this target server. Values must match the regular expression
+     * @return The resource id of this target server. Values must match the regular expression
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
+     * @return The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Immutable. The protocol used by this TargetServer.
+     * @return Immutable. The protocol used by this TargetServer.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
+     * @return Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
      * 
-    */
+     */
     public GoogleCloudApigeeV1TlsInfoResponse sSLInfo() {
         return this.sSLInfo;
     }

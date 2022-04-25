@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse {
     /**
-     * A list of sequential transcript segments that comprise the conversation.
+     * @return A list of sequential transcript segments that comprise the conversation.
      * 
      */
     private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
@@ -22,9 +22,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
     }
 
     /**
-     * A list of sequential transcript segments that comprise the conversation.
+     * @return A list of sequential transcript segments that comprise the conversation.
      * 
-    */
+     */
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments() {
         return this.transcriptSegments;
     }

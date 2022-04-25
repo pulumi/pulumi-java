@@ -19,6 +19,10 @@ public final class GetDBProxyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dBProxyName", required=true)
     private String dBProxyName;
 
+    /**
+     * @return The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+     * 
+     */
     public String dBProxyName() {
         return this.dBProxyName;
     }
@@ -47,6 +51,12 @@ public final class GetDBProxyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDBProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dBProxyName The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dBProxyName(String dBProxyName) {
             $.dBProxyName = dBProxyName;
             return this;

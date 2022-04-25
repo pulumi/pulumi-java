@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeleteCertificateErrorResponse {
     /**
-     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
      */
     private final String code;
     /**
-     * A list of additional details about the error.
+     * @return A list of additional details about the error.
      * 
      */
     private final @Nullable List<DeleteCertificateErrorResponse> details;
     /**
-     * A message describing the error, intended to be suitable for display in a user interface.
+     * @return A message describing the error, intended to be suitable for display in a user interface.
      * 
      */
     private final String message;
     /**
-     * The target of the particular error. For example, the name of the property in error.
+     * @return The target of the particular error. For example, the name of the property in error.
      * 
      */
     private final @Nullable String target;
@@ -46,30 +46,30 @@ public final class DeleteCertificateErrorResponse {
     }
 
     /**
-     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * A list of additional details about the error.
+     * @return A list of additional details about the error.
      * 
-    */
+     */
     public List<DeleteCertificateErrorResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
-     * A message describing the error, intended to be suitable for display in a user interface.
+     * @return A message describing the error, intended to be suitable for display in a user interface.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The target of the particular error. For example, the name of the property in error.
+     * @return The target of the particular error. For example, the name of the property in error.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

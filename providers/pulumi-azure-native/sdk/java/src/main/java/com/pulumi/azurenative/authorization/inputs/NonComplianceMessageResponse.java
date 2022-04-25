@@ -25,6 +25,10 @@ public final class NonComplianceMessageResponse extends com.pulumi.resources.Inv
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -36,6 +40,10 @@ public final class NonComplianceMessageResponse extends com.pulumi.resources.Inv
     @Import(name="policyDefinitionReferenceId")
     private @Nullable String policyDefinitionReferenceId;
 
+    /**
+     * @return The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
+     * 
+     */
     public Optional<String> policyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
@@ -65,11 +73,23 @@ public final class NonComplianceMessageResponse extends com.pulumi.resources.Inv
             $ = new NonComplianceMessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param policyDefinitionReferenceId The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;

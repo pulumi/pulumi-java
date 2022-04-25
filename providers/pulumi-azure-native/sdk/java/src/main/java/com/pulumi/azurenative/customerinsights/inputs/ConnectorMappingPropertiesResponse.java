@@ -32,6 +32,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
     @Import(name="availability", required=true)
     private ConnectorMappingAvailabilityResponse availability;
 
+    /**
+     * @return The availability of mapping property.
+     * 
+     */
     public ConnectorMappingAvailabilityResponse availability() {
         return this.availability;
     }
@@ -43,6 +47,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
     @Import(name="completeOperation", required=true)
     private ConnectorMappingCompleteOperationResponse completeOperation;
 
+    /**
+     * @return The operation after import is done.
+     * 
+     */
     public ConnectorMappingCompleteOperationResponse completeOperation() {
         return this.completeOperation;
     }
@@ -54,6 +62,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
     @Import(name="errorManagement", required=true)
     private ConnectorMappingErrorManagementResponse errorManagement;
 
+    /**
+     * @return The error management setting for the mapping.
+     * 
+     */
     public ConnectorMappingErrorManagementResponse errorManagement() {
         return this.errorManagement;
     }
@@ -65,6 +77,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
     @Import(name="fileFilter")
     private @Nullable String fileFilter;
 
+    /**
+     * @return The file filter for the mapping.
+     * 
+     */
     public Optional<String> fileFilter() {
         return Optional.ofNullable(this.fileFilter);
     }
@@ -76,6 +92,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
     @Import(name="folderPath")
     private @Nullable String folderPath;
 
+    /**
+     * @return The folder path for the mapping.
+     * 
+     */
     public Optional<String> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -87,6 +107,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
     @Import(name="format", required=true)
     private ConnectorMappingFormatResponse format;
 
+    /**
+     * @return The format of mapping property.
+     * 
+     */
     public ConnectorMappingFormatResponse format() {
         return this.format;
     }
@@ -98,6 +122,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
     @Import(name="hasHeader")
     private @Nullable Boolean hasHeader;
 
+    /**
+     * @return If the file contains a header or not.
+     * 
+     */
     public Optional<Boolean> hasHeader() {
         return Optional.ofNullable(this.hasHeader);
     }
@@ -109,6 +137,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
     @Import(name="structure", required=true)
     private List<ConnectorMappingStructureResponse> structure;
 
+    /**
+     * @return Ingestion mapping information at property level.
+     * 
+     */
     public List<ConnectorMappingStructureResponse> structure() {
         return this.structure;
     }
@@ -144,46 +176,100 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
             $ = new ConnectorMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availability The availability of mapping property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availability(ConnectorMappingAvailabilityResponse availability) {
             $.availability = availability;
             return this;
         }
 
+        /**
+         * @param completeOperation The operation after import is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completeOperation(ConnectorMappingCompleteOperationResponse completeOperation) {
             $.completeOperation = completeOperation;
             return this;
         }
 
+        /**
+         * @param errorManagement The error management setting for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorManagement(ConnectorMappingErrorManagementResponse errorManagement) {
             $.errorManagement = errorManagement;
             return this;
         }
 
+        /**
+         * @param fileFilter The file filter for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileFilter(@Nullable String fileFilter) {
             $.fileFilter = fileFilter;
             return this;
         }
 
+        /**
+         * @param folderPath The folder path for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable String folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param format The format of mapping property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(ConnectorMappingFormatResponse format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param hasHeader If the file contains a header or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasHeader(@Nullable Boolean hasHeader) {
             $.hasHeader = hasHeader;
             return this;
         }
 
+        /**
+         * @param structure Ingestion mapping information at property level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(List<ConnectorMappingStructureResponse> structure) {
             $.structure = structure;
             return this;
         }
 
+        /**
+         * @param structure Ingestion mapping information at property level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(ConnectorMappingStructureResponse... structure) {
             return structure(List.of(structure));
         }

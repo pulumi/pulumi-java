@@ -19,6 +19,10 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dashboardName", required=true)
     private String dashboardName;
 
+    /**
+     * @return The name of the dashboard.
+     * 
+     */
     public String dashboardName() {
         return this.dashboardName;
     }
@@ -30,6 +34,10 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDashboardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dashboardName The name of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardName(String dashboardName) {
             $.dashboardName = dashboardName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

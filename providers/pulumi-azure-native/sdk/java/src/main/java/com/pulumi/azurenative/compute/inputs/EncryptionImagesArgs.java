@@ -28,6 +28,10 @@ public final class EncryptionImagesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataDiskImages")
     private @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
 
+    /**
+     * @return A list of encryption specifications for data disk images.
+     * 
+     */
     public Optional<Output<List<DataDiskImageEncryptionArgs>>> dataDiskImages() {
         return Optional.ofNullable(this.dataDiskImages);
     }
@@ -39,6 +43,10 @@ public final class EncryptionImagesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="osDiskImage")
     private @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;
 
+    /**
+     * @return Contains encryption settings for an OS disk image.
+     * 
+     */
     public Optional<Output<OSDiskImageEncryptionArgs>> osDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }
@@ -68,24 +76,54 @@ public final class EncryptionImagesArgs extends com.pulumi.resources.ResourceArg
             $ = new EncryptionImagesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDiskImages A list of encryption specifications for data disk images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskImages(@Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages) {
             $.dataDiskImages = dataDiskImages;
             return this;
         }
 
+        /**
+         * @param dataDiskImages A list of encryption specifications for data disk images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskImages(List<DataDiskImageEncryptionArgs> dataDiskImages) {
             return dataDiskImages(Output.of(dataDiskImages));
         }
 
+        /**
+         * @param dataDiskImages A list of encryption specifications for data disk images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskImages(DataDiskImageEncryptionArgs... dataDiskImages) {
             return dataDiskImages(List.of(dataDiskImages));
         }
 
+        /**
+         * @param osDiskImage Contains encryption settings for an OS disk image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskImage(@Nullable Output<OSDiskImageEncryptionArgs> osDiskImage) {
             $.osDiskImage = osDiskImage;
             return this;
         }
 
+        /**
+         * @param osDiskImage Contains encryption settings for an OS disk image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskImage(OSDiskImageEncryptionArgs osDiskImage) {
             return osDiskImage(Output.of(osDiskImage));
         }

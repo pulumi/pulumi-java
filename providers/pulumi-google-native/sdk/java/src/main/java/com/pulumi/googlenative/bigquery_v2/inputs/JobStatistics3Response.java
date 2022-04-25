@@ -19,6 +19,10 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
     @Import(name="badRecords", required=true)
     private String badRecords;
 
+    /**
+     * @return The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
+     * 
+     */
     public String badRecords() {
         return this.badRecords;
     }
@@ -30,6 +34,10 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
     @Import(name="inputFileBytes", required=true)
     private String inputFileBytes;
 
+    /**
+     * @return Number of bytes of source data in a load job.
+     * 
+     */
     public String inputFileBytes() {
         return this.inputFileBytes;
     }
@@ -41,6 +49,10 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
     @Import(name="inputFiles", required=true)
     private String inputFiles;
 
+    /**
+     * @return Number of source files in a load job.
+     * 
+     */
     public String inputFiles() {
         return this.inputFiles;
     }
@@ -52,6 +64,10 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
     @Import(name="outputBytes", required=true)
     private String outputBytes;
 
+    /**
+     * @return Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
+     * 
+     */
     public String outputBytes() {
         return this.outputBytes;
     }
@@ -63,6 +79,10 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
     @Import(name="outputRows", required=true)
     private String outputRows;
 
+    /**
+     * @return Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
+     * 
+     */
     public String outputRows() {
         return this.outputRows;
     }
@@ -95,26 +115,56 @@ public final class JobStatistics3Response extends com.pulumi.resources.InvokeArg
             $ = new JobStatistics3Response(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param badRecords The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder badRecords(String badRecords) {
             $.badRecords = badRecords;
             return this;
         }
 
+        /**
+         * @param inputFileBytes Number of bytes of source data in a load job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputFileBytes(String inputFileBytes) {
             $.inputFileBytes = inputFileBytes;
             return this;
         }
 
+        /**
+         * @param inputFiles Number of source files in a load job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputFiles(String inputFiles) {
             $.inputFiles = inputFiles;
             return this;
         }
 
+        /**
+         * @param outputBytes Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputBytes(String outputBytes) {
             $.outputBytes = outputBytes;
             return this;
         }
 
+        /**
+         * @param outputRows Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputRows(String outputRows) {
             $.outputRows = outputRows;
             return this;

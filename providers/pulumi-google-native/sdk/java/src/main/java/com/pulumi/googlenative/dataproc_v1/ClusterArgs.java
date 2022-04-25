@@ -31,6 +31,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -42,6 +46,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<ClusterConfigArgs> config;
 
+    /**
+     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * 
+     */
     public Optional<Output<ClusterConfigArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -53,6 +61,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -64,6 +76,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The Google Cloud Platform project ID that the cluster belongs to.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -121,38 +137,86 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return actionOnFailedPrimaryWorkers(Output.of(actionOnFailedPrimaryWorkers));
         }
 
+        /**
+         * @param clusterName The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param config Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<ClusterConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(ClusterConfigArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param project The Google Cloud Platform project ID that the cluster belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The Google Cloud Platform project ID that the cluster belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

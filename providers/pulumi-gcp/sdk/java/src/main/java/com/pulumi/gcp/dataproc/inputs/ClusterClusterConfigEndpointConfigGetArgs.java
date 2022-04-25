@@ -26,6 +26,11 @@ public final class ClusterClusterConfigEndpointConfigGetArgs extends com.pulumi.
     @Import(name="enableHttpPortAccess", required=true)
     private Output<Boolean> enableHttpPortAccess;
 
+    /**
+     * @return The flag to enable http access to specific ports
+     * on the cluster from external sources (aka Component Gateway). Defaults to false.
+     * 
+     */
     public Output<Boolean> enableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
@@ -62,11 +67,25 @@ public final class ClusterClusterConfigEndpointConfigGetArgs extends com.pulumi.
             $ = new ClusterClusterConfigEndpointConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableHttpPortAccess The flag to enable http access to specific ports
+         * on the cluster from external sources (aka Component Gateway). Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpPortAccess(Output<Boolean> enableHttpPortAccess) {
             $.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
 
+        /**
+         * @param enableHttpPortAccess The flag to enable http access to specific ports
+         * on the cluster from external sources (aka Component Gateway). Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
             return enableHttpPortAccess(Output.of(enableHttpPortAccess));
         }

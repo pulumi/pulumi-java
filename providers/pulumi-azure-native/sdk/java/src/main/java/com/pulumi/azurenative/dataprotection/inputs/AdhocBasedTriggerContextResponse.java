@@ -26,6 +26,11 @@ public final class AdhocBasedTriggerContextResponse extends com.pulumi.resources
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;AdhocBasedTriggerContext&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -37,6 +42,10 @@ public final class AdhocBasedTriggerContextResponse extends com.pulumi.resources
     @Import(name="taggingCriteria", required=true)
     private AdhocBasedTaggingCriteriaResponse taggingCriteria;
 
+    /**
+     * @return Tagging Criteria containing retention tag for adhoc backup.
+     * 
+     */
     public AdhocBasedTaggingCriteriaResponse taggingCriteria() {
         return this.taggingCriteria;
     }
@@ -66,11 +75,24 @@ public final class AdhocBasedTriggerContextResponse extends com.pulumi.resources
             $ = new AdhocBasedTriggerContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AdhocBasedTriggerContext&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param taggingCriteria Tagging Criteria containing retention tag for adhoc backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taggingCriteria(AdhocBasedTaggingCriteriaResponse taggingCriteria) {
             $.taggingCriteria = taggingCriteria;
             return this;

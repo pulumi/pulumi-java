@@ -29,6 +29,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return The name of KeyVault key.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -40,6 +44,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySource")
     private @Nullable Output<Either<String,KeySource>> keySource;
 
+    /**
+     * @return The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+     * 
+     */
     public Optional<Output<Either<String,KeySource>>> keySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -51,6 +59,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultUri")
     private @Nullable Output<String> keyVaultUri;
 
+    /**
+     * @return The Uri of KeyVault.
+     * 
+     */
     public Optional<Output<String>> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
@@ -62,6 +74,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVersion")
     private @Nullable Output<String> keyVersion;
 
+    /**
+     * @return The version of KeyVault key.
+     * 
+     */
     public Optional<Output<String>> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -93,46 +109,106 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of KeyVault key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The name of KeyVault key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(@Nullable Output<Either<String,KeySource>> keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(Either<String,KeySource> keySource) {
             return keySource(Output.of(keySource));
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(String keySource) {
             return keySource(Either.ofLeft(keySource));
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(KeySource keySource) {
             return keySource(Either.ofRight(keySource));
         }
 
+        /**
+         * @param keyVaultUri The Uri of KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param keyVaultUri The Uri of KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(String keyVaultUri) {
             return keyVaultUri(Output.of(keyVaultUri));
         }
 
+        /**
+         * @param keyVersion The version of KeyVault key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param keyVersion The version of KeyVault key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             return keyVersion(Output.of(keyVersion));
         }

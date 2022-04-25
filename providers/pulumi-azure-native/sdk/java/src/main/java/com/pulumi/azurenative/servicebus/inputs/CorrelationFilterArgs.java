@@ -29,6 +29,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return Content type of the message.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -40,6 +44,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="correlationId")
     private @Nullable Output<String> correlationId;
 
+    /**
+     * @return Identifier of the correlation.
+     * 
+     */
     public Optional<Output<String>> correlationId() {
         return Optional.ofNullable(this.correlationId);
     }
@@ -51,6 +59,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return Application specific label.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -62,6 +74,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="messageId")
     private @Nullable Output<String> messageId;
 
+    /**
+     * @return Identifier of the message.
+     * 
+     */
     public Optional<Output<String>> messageId() {
         return Optional.ofNullable(this.messageId);
     }
@@ -73,6 +89,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return dictionary object for custom filters
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -84,6 +104,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replyTo")
     private @Nullable Output<String> replyTo;
 
+    /**
+     * @return Address of the queue to reply to.
+     * 
+     */
     public Optional<Output<String>> replyTo() {
         return Optional.ofNullable(this.replyTo);
     }
@@ -95,6 +119,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replyToSessionId")
     private @Nullable Output<String> replyToSessionId;
 
+    /**
+     * @return Session identifier to reply to.
+     * 
+     */
     public Optional<Output<String>> replyToSessionId() {
         return Optional.ofNullable(this.replyToSessionId);
     }
@@ -106,6 +134,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="requiresPreprocessing")
     private @Nullable Output<Boolean> requiresPreprocessing;
 
+    /**
+     * @return Value that indicates whether the rule action requires preprocessing.
+     * 
+     */
     public Optional<Output<Boolean>> requiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
@@ -117,6 +149,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sessionId")
     private @Nullable Output<String> sessionId;
 
+    /**
+     * @return Session identifier.
+     * 
+     */
     public Optional<Output<String>> sessionId() {
         return Optional.ofNullable(this.sessionId);
     }
@@ -128,6 +164,10 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="to")
     private @Nullable Output<String> to;
 
+    /**
+     * @return Address to send to.
+     * 
+     */
     public Optional<Output<String>> to() {
         return Optional.ofNullable(this.to);
     }
@@ -165,92 +205,212 @@ public final class CorrelationFilterArgs extends com.pulumi.resources.ResourceAr
             $ = new CorrelationFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType Content type of the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType Content type of the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param correlationId Identifier of the correlation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationId(@Nullable Output<String> correlationId) {
             $.correlationId = correlationId;
             return this;
         }
 
+        /**
+         * @param correlationId Identifier of the correlation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationId(String correlationId) {
             return correlationId(Output.of(correlationId));
         }
 
+        /**
+         * @param label Application specific label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label Application specific label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param messageId Identifier of the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(@Nullable Output<String> messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageId Identifier of the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             return messageId(Output.of(messageId));
         }
 
+        /**
+         * @param properties dictionary object for custom filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties dictionary object for custom filters
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param replyTo Address of the queue to reply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replyTo(@Nullable Output<String> replyTo) {
             $.replyTo = replyTo;
             return this;
         }
 
+        /**
+         * @param replyTo Address of the queue to reply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replyTo(String replyTo) {
             return replyTo(Output.of(replyTo));
         }
 
+        /**
+         * @param replyToSessionId Session identifier to reply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replyToSessionId(@Nullable Output<String> replyToSessionId) {
             $.replyToSessionId = replyToSessionId;
             return this;
         }
 
+        /**
+         * @param replyToSessionId Session identifier to reply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replyToSessionId(String replyToSessionId) {
             return replyToSessionId(Output.of(replyToSessionId));
         }
 
+        /**
+         * @param requiresPreprocessing Value that indicates whether the rule action requires preprocessing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
             $.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
 
+        /**
+         * @param requiresPreprocessing Value that indicates whether the rule action requires preprocessing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresPreprocessing(Boolean requiresPreprocessing) {
             return requiresPreprocessing(Output.of(requiresPreprocessing));
         }
 
+        /**
+         * @param sessionId Session identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionId(@Nullable Output<String> sessionId) {
             $.sessionId = sessionId;
             return this;
         }
 
+        /**
+         * @param sessionId Session identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionId(String sessionId) {
             return sessionId(Output.of(sessionId));
         }
 
+        /**
+         * @param to Address to send to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(@Nullable Output<String> to) {
             $.to = to;
             return this;
         }
 
+        /**
+         * @param to Address to send to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(String to) {
             return to(Output.of(to));
         }

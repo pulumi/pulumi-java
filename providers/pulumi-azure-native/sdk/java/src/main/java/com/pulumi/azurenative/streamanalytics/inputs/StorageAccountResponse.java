@@ -25,6 +25,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="accountKey")
     private @Nullable String accountKey;
 
+    /**
+     * @return The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -36,6 +40,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="accountName")
     private @Nullable String accountName;
 
+    /**
+     * @return The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -65,11 +73,23 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable String accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable String accountName) {
             $.accountName = accountName;
             return this;

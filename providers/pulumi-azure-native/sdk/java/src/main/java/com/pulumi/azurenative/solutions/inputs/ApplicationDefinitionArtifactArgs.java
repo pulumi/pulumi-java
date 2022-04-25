@@ -27,6 +27,10 @@ public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private Output<Either<String,ApplicationDefinitionArtifactName>> name;
 
+    /**
+     * @return The managed application definition artifact name.
+     * 
+     */
     public Output<Either<String,ApplicationDefinitionArtifactName>> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resource
     @Import(name="type", required=true)
     private Output<ApplicationArtifactType> type;
 
+    /**
+     * @return The managed application definition artifact type.
+     * 
+     */
     public Output<ApplicationArtifactType> type() {
         return this.type;
     }
@@ -49,6 +57,10 @@ public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resource
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The managed application definition artifact blob uri.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -79,37 +91,85 @@ public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resource
             $ = new ApplicationDefinitionArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The managed application definition artifact name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,ApplicationDefinitionArtifactName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The managed application definition artifact name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,ApplicationDefinitionArtifactName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The managed application definition artifact name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The managed application definition artifact name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(ApplicationDefinitionArtifactName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param type The managed application definition artifact type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ApplicationArtifactType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The managed application definition artifact type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ApplicationArtifactType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param uri The managed application definition artifact blob uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The managed application definition artifact blob uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

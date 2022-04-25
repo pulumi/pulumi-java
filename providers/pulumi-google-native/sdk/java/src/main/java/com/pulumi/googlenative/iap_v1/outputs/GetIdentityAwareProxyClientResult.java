@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GetIdentityAwareProxyClientResult {
     /**
-     * Human-friendly name given to the OAuth client.
+     * @return Human-friendly name given to the OAuth client.
      * 
      */
     private final String displayName;
     /**
-     * Unique identifier of the OAuth client.
+     * @return Unique identifier of the OAuth client.
      * 
      */
     private final String name;
     /**
-     * Client secret of the OAuth client.
+     * @return Client secret of the OAuth client.
      * 
      */
     private final String secret;
@@ -36,23 +36,23 @@ public final class GetIdentityAwareProxyClientResult {
     }
 
     /**
-     * Human-friendly name given to the OAuth client.
+     * @return Human-friendly name given to the OAuth client.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Unique identifier of the OAuth client.
+     * @return Unique identifier of the OAuth client.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Client secret of the OAuth client.
+     * @return Client secret of the OAuth client.
      * 
-    */
+     */
     public String secret() {
         return this.secret;
     }

@@ -19,6 +19,10 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
     @Import(name="destinationCidrBlock", required=true)
     private String destinationCidrBlock;
 
+    /**
+     * @return The CIDR block used for destination matches.
+     * 
+     */
     public String destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
@@ -30,6 +34,10 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
     @Import(name="localGatewayRouteTableId", required=true)
     private String localGatewayRouteTableId;
 
+    /**
+     * @return The ID of the local gateway route table.
+     * 
+     */
     public String localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
@@ -59,11 +67,23 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
             $ = new GetLocalGatewayRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationCidrBlock The CIDR block used for destination matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
+        /**
+         * @param localGatewayRouteTableId The ID of the local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;

@@ -23,6 +23,10 @@ public final class ResourceGroupPropertiesResponse extends com.pulumi.resources.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -51,6 +55,12 @@ public final class ResourceGroupPropertiesResponse extends com.pulumi.resources.
             $ = new ResourceGroupPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

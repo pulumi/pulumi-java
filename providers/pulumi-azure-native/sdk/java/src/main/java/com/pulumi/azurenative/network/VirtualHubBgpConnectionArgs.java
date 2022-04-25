@@ -23,6 +23,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="connectionName")
     private @Nullable Output<String> connectionName;
 
+    /**
+     * @return The name of the connection.
+     * 
+     */
     public Optional<Output<String>> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
@@ -34,6 +38,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -45,6 +53,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the connection.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="peerAsn")
     private @Nullable Output<Double> peerAsn;
 
+    /**
+     * @return Peer ASN.
+     * 
+     */
     public Optional<Output<Double>> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
@@ -67,6 +83,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="peerIp")
     private @Nullable Output<String> peerIp;
 
+    /**
+     * @return Peer IP.
+     * 
+     */
     public Optional<Output<String>> peerIp() {
         return Optional.ofNullable(this.peerIp);
     }
@@ -78,6 +98,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name of the VirtualHub.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -89,6 +113,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
     @Import(name="virtualHubName", required=true)
     private Output<String> virtualHubName;
 
+    /**
+     * @return The name of the VirtualHub.
+     * 
+     */
     public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
@@ -123,65 +151,149 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
             $ = new VirtualHubBgpConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName The name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(@Nullable Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName The name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param peerAsn Peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(@Nullable Output<Double> peerAsn) {
             $.peerAsn = peerAsn;
             return this;
         }
 
+        /**
+         * @param peerAsn Peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(Double peerAsn) {
             return peerAsn(Output.of(peerAsn));
         }
 
+        /**
+         * @param peerIp Peer IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIp(@Nullable Output<String> peerIp) {
             $.peerIp = peerIp;
             return this;
         }
 
+        /**
+         * @param peerIp Peer IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIp(String peerIp) {
             return peerIp(Output.of(peerIp));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(Output<String> virtualHubName) {
             $.virtualHubName = virtualHubName;
             return this;
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(String virtualHubName) {
             return virtualHubName(Output.of(virtualHubName));
         }

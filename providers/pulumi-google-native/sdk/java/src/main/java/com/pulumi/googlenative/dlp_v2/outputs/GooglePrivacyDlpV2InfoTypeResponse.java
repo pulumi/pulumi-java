@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2InfoTypeResponse {
     /**
-     * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+     * @return Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
      * 
      */
     private final String name;
     /**
-     * Optional version name for this InfoType.
+     * @return Optional version name for this InfoType.
      * 
      */
     private final String version;
@@ -29,16 +29,16 @@ public final class GooglePrivacyDlpV2InfoTypeResponse {
     }
 
     /**
-     * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+     * @return Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional version name for this InfoType.
+     * @return Optional version name for this InfoType.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

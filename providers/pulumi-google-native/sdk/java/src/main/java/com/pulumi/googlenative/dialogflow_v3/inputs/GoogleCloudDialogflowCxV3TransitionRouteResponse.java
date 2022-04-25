@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends com.
     @Import(name="condition", required=true)
     private String condition;
 
+    /**
+     * @return The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     public String condition() {
         return this.condition;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends com.
     @Import(name="intent", required=true)
     private String intent;
 
+    /**
+     * @return The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+     * 
+     */
     public String intent() {
         return this.intent;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends com.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The unique identifier of this transition route.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -57,6 +69,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends com.
     @Import(name="targetFlow", required=true)
     private String targetFlow;
 
+    /**
+     * @return The target flow to transition to. Format: `projects//locations//agents//flows/`.
+     * 
+     */
     public String targetFlow() {
         return this.targetFlow;
     }
@@ -68,6 +84,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends com.
     @Import(name="targetPage", required=true)
     private String targetPage;
 
+    /**
+     * @return The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+     * 
+     */
     public String targetPage() {
         return this.targetPage;
     }
@@ -79,6 +99,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends com.
     @Import(name="triggerFulfillment", required=true)
     private GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
+    /**
+     * @return The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
+     * 
+     */
     public GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment() {
         return this.triggerFulfillment;
     }
@@ -112,31 +136,67 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends com.
             $ = new GoogleCloudDialogflowCxV3TransitionRouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param intent The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(String intent) {
             $.intent = intent;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of this transition route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param targetFlow The target flow to transition to. Format: `projects//locations//agents//flows/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(String targetFlow) {
             $.targetFlow = targetFlow;
             return this;
         }
 
+        /**
+         * @param targetPage The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(String targetPage) {
             $.targetPage = targetPage;
             return this;
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment) {
             $.triggerFulfillment = triggerFulfillment;
             return this;

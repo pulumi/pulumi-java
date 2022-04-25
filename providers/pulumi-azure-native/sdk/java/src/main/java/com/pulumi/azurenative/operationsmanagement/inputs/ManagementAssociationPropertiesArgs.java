@@ -24,6 +24,10 @@ public final class ManagementAssociationPropertiesArgs extends com.pulumi.resour
     @Import(name="applicationId", required=true)
     private Output<String> applicationId;
 
+    /**
+     * @return The applicationId of the appliance for this association.
+     * 
+     */
     public Output<String> applicationId() {
         return this.applicationId;
     }
@@ -52,11 +56,23 @@ public final class ManagementAssociationPropertiesArgs extends com.pulumi.resour
             $ = new ManagementAssociationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The applicationId of the appliance for this association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The applicationId of the appliance for this association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }

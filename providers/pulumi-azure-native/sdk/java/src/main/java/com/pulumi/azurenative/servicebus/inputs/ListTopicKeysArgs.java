@@ -19,6 +19,10 @@ public final class ListTopicKeysArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="authorizationRuleName", required=true)
     private String authorizationRuleName;
 
+    /**
+     * @return The authorization rule name.
+     * 
+     */
     public String authorizationRuleName() {
         return this.authorizationRuleName;
     }
@@ -30,6 +34,10 @@ public final class ListTopicKeysArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -41,6 +49,10 @@ public final class ListTopicKeysArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class ListTopicKeysArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="topicName", required=true)
     private String topicName;
 
+    /**
+     * @return The topic name.
+     * 
+     */
     public String topicName() {
         return this.topicName;
     }
@@ -83,21 +99,45 @@ public final class ListTopicKeysArgs extends com.pulumi.resources.InvokeArgs {
             $ = new ListTopicKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationRuleName The authorization rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(String authorizationRuleName) {
             $.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             $.topicName = topicName;
             return this;

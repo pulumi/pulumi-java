@@ -25,6 +25,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone", required=true)
     private Output<String> availabilityZone;
 
+    /**
+     * @return The AZ where the EBS volume will exist.
+     * 
+     */
     public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
@@ -36,6 +40,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
     private @Nullable Output<Boolean> encrypted;
 
+    /**
+     * @return If true, the disk will be encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -47,6 +55,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iops")
     private @Nullable Output<Integer> iops;
 
+    /**
+     * @return The amount of IOPS to provision for the disk. Only valid for `type` of `io1`, `io2` or `gp3`.
+     * 
+     */
     public Optional<Output<Integer>> iops() {
         return Optional.ofNullable(this.iops);
     }
@@ -65,6 +77,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="multiAttachEnabled")
     private @Nullable Output<Boolean> multiAttachEnabled;
 
+    /**
+     * @return Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
+     * 
+     */
     public Optional<Output<Boolean>> multiAttachEnabled() {
         return Optional.ofNullable(this.multiAttachEnabled);
     }
@@ -76,6 +92,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outpostArn")
     private @Nullable Output<String> outpostArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Outpost.
+     * 
+     */
     public Optional<Output<String>> outpostArn() {
         return Optional.ofNullable(this.outpostArn);
     }
@@ -87,6 +107,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<Integer> size;
 
+    /**
+     * @return The size of the drive in GiBs.
+     * 
+     */
     public Optional<Output<Integer>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -98,6 +122,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotId")
     private @Nullable Output<String> snapshotId;
 
+    /**
+     * @return A snapshot to base the EBS volume off of.
+     * 
+     */
     public Optional<Output<String>> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
@@ -109,6 +137,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -120,6 +152,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="throughput")
     private @Nullable Output<Integer> throughput;
 
+    /**
+     * @return The throughput that the volume supports, in MiB/s. Only valid for `type` of `gp3`.
+     * 
+     */
     public Optional<Output<Integer>> throughput() {
         return Optional.ofNullable(this.throughput);
     }
@@ -131,6 +167,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of EBS volume. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -169,29 +209,65 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone The AZ where the EBS volume will exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone The AZ where the EBS volume will exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param encrypted If true, the disk will be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param encrypted If true, the disk will be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             return encrypted(Output.of(encrypted));
         }
 
+        /**
+         * @param iops The amount of IOPS to provision for the disk. Only valid for `type` of `io1`, `io2` or `gp3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(@Nullable Output<Integer> iops) {
             $.iops = iops;
             return this;
         }
 
+        /**
+         * @param iops The amount of IOPS to provision for the disk. Only valid for `type` of `io1`, `io2` or `gp3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             return iops(Output.of(iops));
         }
@@ -205,65 +281,149 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param multiAttachEnabled Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiAttachEnabled(@Nullable Output<Boolean> multiAttachEnabled) {
             $.multiAttachEnabled = multiAttachEnabled;
             return this;
         }
 
+        /**
+         * @param multiAttachEnabled Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiAttachEnabled(Boolean multiAttachEnabled) {
             return multiAttachEnabled(Output.of(multiAttachEnabled));
         }
 
+        /**
+         * @param outpostArn The Amazon Resource Name (ARN) of the Outpost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
             $.outpostArn = outpostArn;
             return this;
         }
 
+        /**
+         * @param outpostArn The Amazon Resource Name (ARN) of the Outpost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostArn(String outpostArn) {
             return outpostArn(Output.of(outpostArn));
         }
 
+        /**
+         * @param size The size of the drive in GiBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<Integer> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The size of the drive in GiBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Integer size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param snapshotId A snapshot to base the EBS volume off of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
             $.snapshotId = snapshotId;
             return this;
         }
 
+        /**
+         * @param snapshotId A snapshot to base the EBS volume off of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(String snapshotId) {
             return snapshotId(Output.of(snapshotId));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param throughput The throughput that the volume supports, in MiB/s. Only valid for `type` of `gp3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(@Nullable Output<Integer> throughput) {
             $.throughput = throughput;
             return this;
         }
 
+        /**
+         * @param throughput The throughput that the volume supports, in MiB/s. Only valid for `type` of `gp3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(Integer throughput) {
             return throughput(Output.of(throughput));
         }
 
+        /**
+         * @param type The type of EBS volume. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of EBS volume. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

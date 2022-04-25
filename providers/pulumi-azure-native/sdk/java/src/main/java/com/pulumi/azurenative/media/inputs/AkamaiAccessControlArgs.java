@@ -27,6 +27,10 @@ public final class AkamaiAccessControlArgs extends com.pulumi.resources.Resource
     @Import(name="akamaiSignatureHeaderAuthenticationKeyList")
     private @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
 
+    /**
+     * @return authentication key list
+     * 
+     */
     public Optional<Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>>> akamaiSignatureHeaderAuthenticationKeyList() {
         return Optional.ofNullable(this.akamaiSignatureHeaderAuthenticationKeyList);
     }
@@ -55,15 +59,33 @@ public final class AkamaiAccessControlArgs extends com.pulumi.resources.Resource
             $ = new AkamaiAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param akamaiSignatureHeaderAuthenticationKeyList authentication key list
+         * 
+         * @return builder
+         * 
+         */
         public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList) {
             $.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
             return this;
         }
 
+        /**
+         * @param akamaiSignatureHeaderAuthenticationKeyList authentication key list
+         * 
+         * @return builder
+         * 
+         */
         public Builder akamaiSignatureHeaderAuthenticationKeyList(List<AkamaiSignatureHeaderAuthenticationKeyArgs> akamaiSignatureHeaderAuthenticationKeyList) {
             return akamaiSignatureHeaderAuthenticationKeyList(Output.of(akamaiSignatureHeaderAuthenticationKeyList));
         }
 
+        /**
+         * @param akamaiSignatureHeaderAuthenticationKeyList authentication key list
+         * 
+         * @return builder
+         * 
+         */
         public Builder akamaiSignatureHeaderAuthenticationKeyList(AkamaiSignatureHeaderAuthenticationKeyArgs... akamaiSignatureHeaderAuthenticationKeyList) {
             return akamaiSignatureHeaderAuthenticationKeyList(List.of(akamaiSignatureHeaderAuthenticationKeyList));
         }

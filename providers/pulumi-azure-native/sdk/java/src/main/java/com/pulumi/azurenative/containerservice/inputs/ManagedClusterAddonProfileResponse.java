@@ -28,6 +28,10 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
     @Import(name="config")
     private @Nullable Map<String,String> config;
 
+    /**
+     * @return Key-value pairs for configuring an add-on.
+     * 
+     */
     public Optional<Map<String,String>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -39,6 +43,10 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether the add-on is enabled or not.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -50,6 +58,10 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
     @Import(name="identity", required=true)
     private ManagedClusterAddonProfileResponseIdentity identity;
 
+    /**
+     * @return Information of user assigned identity used by this add-on.
+     * 
+     */
     public ManagedClusterAddonProfileResponseIdentity identity() {
         return this.identity;
     }
@@ -80,16 +92,34 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
             $ = new ManagedClusterAddonProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Key-value pairs for configuring an add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Map<String,String> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param enabled Whether the add-on is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param identity Information of user assigned identity used by this add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedClusterAddonProfileResponseIdentity identity) {
             $.identity = identity;
             return this;

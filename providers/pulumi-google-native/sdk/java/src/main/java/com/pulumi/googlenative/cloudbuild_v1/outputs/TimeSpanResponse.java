@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class TimeSpanResponse {
     /**
-     * End of time span.
+     * @return End of time span.
      * 
      */
     private final String endTime;
     /**
-     * Start of time span.
+     * @return Start of time span.
      * 
      */
     private final String startTime;
@@ -29,16 +29,16 @@ public final class TimeSpanResponse {
     }
 
     /**
-     * End of time span.
+     * @return End of time span.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Start of time span.
+     * @return Start of time span.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

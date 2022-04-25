@@ -24,6 +24,11 @@ public final class SecretReplicationUserManagedReplicaArgs extends com.pulumi.re
     @Import(name="customerManagedEncryption")
     private @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption;
 
+    /**
+     * @return Customer Managed Encryption for the secret.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs>> customerManagedEncryption() {
         return Optional.ofNullable(this.customerManagedEncryption);
     }
@@ -35,6 +40,10 @@ public final class SecretReplicationUserManagedReplicaArgs extends com.pulumi.re
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The canonical IDs of the location to replicate data. For example: &#34;us-east1&#34;.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -64,20 +73,46 @@ public final class SecretReplicationUserManagedReplicaArgs extends com.pulumi.re
             $ = new SecretReplicationUserManagedReplicaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerManagedEncryption Customer Managed Encryption for the secret.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryption(@Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption) {
             $.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
+        /**
+         * @param customerManagedEncryption Customer Managed Encryption for the secret.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryption(SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs customerManagedEncryption) {
             return customerManagedEncryption(Output.of(customerManagedEncryption));
         }
 
+        /**
+         * @param location The canonical IDs of the location to replicate data. For example: &#34;us-east1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The canonical IDs of the location to replicate data. For example: &#34;us-east1&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

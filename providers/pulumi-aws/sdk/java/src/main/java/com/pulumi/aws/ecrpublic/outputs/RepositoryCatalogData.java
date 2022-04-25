@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RepositoryCatalogData {
     /**
-     * A detailed description of the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The text must be in markdown format.
+     * @return A detailed description of the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The text must be in markdown format.
      * 
      */
     private final @Nullable String aboutText;
     /**
-     * The system architecture that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported architectures will appear as badges on the repository and are used as search filters: `ARM`, `ARM 64`, `x86`, `x86-64`
+     * @return The system architecture that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported architectures will appear as badges on the repository and are used as search filters: `ARM`, `ARM 64`, `x86`, `x86-64`
      * 
      */
     private final @Nullable List<String> architectures;
     /**
-     * A short description of the contents of the repository. This text appears in both the image details and also when searching for repositories on the Amazon ECR Public Gallery.
+     * @return A short description of the contents of the repository. This text appears in both the image details and also when searching for repositories on the Amazon ECR Public Gallery.
      * 
      */
     private final @Nullable String description;
     /**
-     * The base64-encoded repository logo payload. (Only visible for verified accounts) Note that drift detection is disabled for this attribute.
+     * @return The base64-encoded repository logo payload. (Only visible for verified accounts) Note that drift detection is disabled for this attribute.
      * 
      */
     private final @Nullable String logoImageBlob;
     /**
-     * The operating systems that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported operating systems will appear as badges on the repository and are used as search filters: `Linux`, `Windows`
+     * @return The operating systems that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported operating systems will appear as badges on the repository and are used as search filters: `Linux`, `Windows`
      * 
      */
     private final @Nullable List<String> operatingSystems;
     /**
-     * Detailed information on how to use the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The usage text provides context, support information, and additional usage details for users of the repository. The text must be in markdown format.
+     * @return Detailed information on how to use the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The usage text provides context, support information, and additional usage details for users of the repository. The text must be in markdown format.
      * 
      */
     private final @Nullable String usageText;
@@ -60,44 +60,44 @@ public final class RepositoryCatalogData {
     }
 
     /**
-     * A detailed description of the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The text must be in markdown format.
+     * @return A detailed description of the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The text must be in markdown format.
      * 
-    */
+     */
     public Optional<String> aboutText() {
         return Optional.ofNullable(this.aboutText);
     }
     /**
-     * The system architecture that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported architectures will appear as badges on the repository and are used as search filters: `ARM`, `ARM 64`, `x86`, `x86-64`
+     * @return The system architecture that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported architectures will appear as badges on the repository and are used as search filters: `ARM`, `ARM 64`, `x86`, `x86-64`
      * 
-    */
+     */
     public List<String> architectures() {
         return this.architectures == null ? List.of() : this.architectures;
     }
     /**
-     * A short description of the contents of the repository. This text appears in both the image details and also when searching for repositories on the Amazon ECR Public Gallery.
+     * @return A short description of the contents of the repository. This text appears in both the image details and also when searching for repositories on the Amazon ECR Public Gallery.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The base64-encoded repository logo payload. (Only visible for verified accounts) Note that drift detection is disabled for this attribute.
+     * @return The base64-encoded repository logo payload. (Only visible for verified accounts) Note that drift detection is disabled for this attribute.
      * 
-    */
+     */
     public Optional<String> logoImageBlob() {
         return Optional.ofNullable(this.logoImageBlob);
     }
     /**
-     * The operating systems that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported operating systems will appear as badges on the repository and are used as search filters: `Linux`, `Windows`
+     * @return The operating systems that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported operating systems will appear as badges on the repository and are used as search filters: `Linux`, `Windows`
      * 
-    */
+     */
     public List<String> operatingSystems() {
         return this.operatingSystems == null ? List.of() : this.operatingSystems;
     }
     /**
-     * Detailed information on how to use the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The usage text provides context, support information, and additional usage details for users of the repository. The text must be in markdown format.
+     * @return Detailed information on how to use the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The usage text provides context, support information, and additional usage details for users of the repository. The text must be in markdown format.
      * 
-    */
+     */
     public Optional<String> usageText() {
         return Optional.ofNullable(this.usageText);
     }

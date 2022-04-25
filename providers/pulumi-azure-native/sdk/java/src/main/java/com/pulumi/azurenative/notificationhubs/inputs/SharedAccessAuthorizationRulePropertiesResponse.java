@@ -27,6 +27,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="claimType", required=true)
     private String claimType;
 
+    /**
+     * @return A string that describes the claim type
+     * 
+     */
     public String claimType() {
         return this.claimType;
     }
@@ -38,6 +42,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="claimValue", required=true)
     private String claimValue;
 
+    /**
+     * @return A string that describes the claim value
+     * 
+     */
     public String claimValue() {
         return this.claimValue;
     }
@@ -49,6 +57,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="createdTime", required=true)
     private String createdTime;
 
+    /**
+     * @return The created time for this rule
+     * 
+     */
     public String createdTime() {
         return this.createdTime;
     }
@@ -60,6 +72,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return A string that describes the authorization rule.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -71,6 +87,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="modifiedTime", required=true)
     private String modifiedTime;
 
+    /**
+     * @return The last modified time for this rule
+     * 
+     */
     public String modifiedTime() {
         return this.modifiedTime;
     }
@@ -82,6 +102,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="primaryKey", required=true)
     private String primaryKey;
 
+    /**
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
@@ -93,6 +117,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="revision", required=true)
     private Integer revision;
 
+    /**
+     * @return The revision number for the rule
+     * 
+     */
     public Integer revision() {
         return this.revision;
     }
@@ -104,6 +132,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="rights")
     private @Nullable List<String> rights;
 
+    /**
+     * @return The rights associated with the rule.
+     * 
+     */
     public Optional<List<String>> rights() {
         return Optional.ofNullable(this.rights);
     }
@@ -115,6 +147,10 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
     @Import(name="secondaryKey", required=true)
     private String secondaryKey;
 
+    /**
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * 
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }
@@ -151,50 +187,110 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends com.p
             $ = new SharedAccessAuthorizationRulePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claimType A string that describes the claim type
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimType(String claimType) {
             $.claimType = claimType;
             return this;
         }
 
+        /**
+         * @param claimValue A string that describes the claim value
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimValue(String claimValue) {
             $.claimValue = claimValue;
             return this;
         }
 
+        /**
+         * @param createdTime The created time for this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param keyName A string that describes the authorization rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param modifiedTime The last modified time for this rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedTime(String modifiedTime) {
             $.modifiedTime = modifiedTime;
             return this;
         }
 
+        /**
+         * @param primaryKey A base64-encoded 256-bit primary key for signing and validating the SAS token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(String primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param revision The revision number for the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Integer revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(@Nullable List<String> rights) {
             $.rights = rights;
             return this;
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(String... rights) {
             return rights(List.of(rights));
         }
 
+        /**
+         * @param secondaryKey A base64-encoded 256-bit primary key for signing and validating the SAS token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(String secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;

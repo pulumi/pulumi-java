@@ -23,6 +23,10 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="asn")
     private @Nullable Output<Integer> asn;
 
+    /**
+     * @return The customer&#39;s ASN from which traffic originates.
+     * 
+     */
     public Optional<Output<Integer>> asn() {
         return Optional.ofNullable(this.asn);
     }
@@ -34,6 +38,10 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringName", required=true)
     private Output<String> peeringName;
 
+    /**
+     * @return The name of the peering.
+     * 
+     */
     public Output<String> peeringName() {
         return this.peeringName;
     }
@@ -45,6 +53,10 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registeredAsnName")
     private @Nullable Output<String> registeredAsnName;
 
+    /**
+     * @return The name of the ASN.
+     * 
+     */
     public Optional<Output<String>> registeredAsnName() {
         return Optional.ofNullable(this.registeredAsnName);
     }
@@ -56,6 +68,10 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RegisteredAsnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asn The customer&#39;s ASN from which traffic originates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(@Nullable Output<Integer> asn) {
             $.asn = asn;
             return this;
         }
 
+        /**
+         * @param asn The customer&#39;s ASN from which traffic originates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(Integer asn) {
             return asn(Output.of(asn));
         }
 
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(Output<String> peeringName) {
             $.peeringName = peeringName;
             return this;
         }
 
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(String peeringName) {
             return peeringName(Output.of(peeringName));
         }
 
+        /**
+         * @param registeredAsnName The name of the ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredAsnName(@Nullable Output<String> registeredAsnName) {
             $.registeredAsnName = registeredAsnName;
             return this;
         }
 
+        /**
+         * @param registeredAsnName The name of the ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredAsnName(String registeredAsnName) {
             return registeredAsnName(Output.of(registeredAsnName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

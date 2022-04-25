@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class GetClusterAuthResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String name;
     /**
-     * The token to use to authenticate with the cluster.
+     * @return The token to use to authenticate with the cluster.
      * 
      */
     private final String token;
@@ -32,9 +32,9 @@ public final class GetClusterAuthResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -42,9 +42,9 @@ public final class GetClusterAuthResult {
         return this.name;
     }
     /**
-     * The token to use to authenticate with the cluster.
+     * @return The token to use to authenticate with the cluster.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }

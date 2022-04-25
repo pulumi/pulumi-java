@@ -19,6 +19,10 @@ public final class SubResourceReadOnlyResponse extends com.pulumi.resources.Invo
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class SubResourceReadOnlyResponse extends com.pulumi.resources.Invo
             $ = new SubResourceReadOnlyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

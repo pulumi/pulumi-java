@@ -42,6 +42,10 @@ public final class GetServiceTemplateMetadata extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Cloud Run Service.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -120,6 +124,12 @@ public final class GetServiceTemplateMetadata extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param name The name of the Cloud Run Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -28,6 +28,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -39,6 +43,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<Either<String,StorageAccountType>> type;
 
+    /**
+     * @return The type of the storage account.
+     * 
+     */
     public Output<Either<String,StorageAccountType>> type() {
         return this.type;
     }
@@ -68,28 +76,64 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param type The type of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,StorageAccountType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,StorageAccountType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(StorageAccountType type) {
             return type(Either.ofRight(type));
         }

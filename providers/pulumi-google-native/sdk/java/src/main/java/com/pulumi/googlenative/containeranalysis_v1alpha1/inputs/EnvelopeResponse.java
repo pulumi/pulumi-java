@@ -25,6 +25,10 @@ public final class EnvelopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="payload", required=true)
     private String payload;
 
+    /**
+     * @return The bytes being signed
+     * 
+     */
     public String payload() {
         return this.payload;
     }
@@ -36,6 +40,10 @@ public final class EnvelopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="payloadType", required=true)
     private String payloadType;
 
+    /**
+     * @return The type of payload being signed
+     * 
+     */
     public String payloadType() {
         return this.payloadType;
     }
@@ -47,6 +55,10 @@ public final class EnvelopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="signatures", required=true)
     private List<EnvelopeSignatureResponse> signatures;
 
+    /**
+     * @return The signatures over the payload
+     * 
+     */
     public List<EnvelopeSignatureResponse> signatures() {
         return this.signatures;
     }
@@ -77,21 +89,45 @@ public final class EnvelopeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EnvelopeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param payload The bytes being signed
+         * 
+         * @return builder
+         * 
+         */
         public Builder payload(String payload) {
             $.payload = payload;
             return this;
         }
 
+        /**
+         * @param payloadType The type of payload being signed
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadType(String payloadType) {
             $.payloadType = payloadType;
             return this;
         }
 
+        /**
+         * @param signatures The signatures over the payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(List<EnvelopeSignatureResponse> signatures) {
             $.signatures = signatures;
             return this;
         }
 
+        /**
+         * @param signatures The signatures over the payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(EnvelopeSignatureResponse... signatures) {
             return signatures(List.of(signatures));
         }

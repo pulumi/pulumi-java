@@ -26,6 +26,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxPrefixesAdvertisedV4")
     private @Nullable Integer maxPrefixesAdvertisedV4;
 
+    /**
+     * @return The maximum number of prefixes advertised over the IPv4 session.
+     * 
+     */
     public Optional<Integer> maxPrefixesAdvertisedV4() {
         return Optional.ofNullable(this.maxPrefixesAdvertisedV4);
     }
@@ -37,6 +41,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxPrefixesAdvertisedV6")
     private @Nullable Integer maxPrefixesAdvertisedV6;
 
+    /**
+     * @return The maximum number of prefixes advertised over the IPv6 session.
+     * 
+     */
     public Optional<Integer> maxPrefixesAdvertisedV6() {
         return Optional.ofNullable(this.maxPrefixesAdvertisedV6);
     }
@@ -48,6 +56,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="md5AuthenticationKey")
     private @Nullable String md5AuthenticationKey;
 
+    /**
+     * @return The MD5 authentication key of the session.
+     * 
+     */
     public Optional<String> md5AuthenticationKey() {
         return Optional.ofNullable(this.md5AuthenticationKey);
     }
@@ -59,6 +71,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="microsoftSessionIPv4Address")
     private @Nullable String microsoftSessionIPv4Address;
 
+    /**
+     * @return The IPv4 session address on Microsoft&#39;s end.
+     * 
+     */
     public Optional<String> microsoftSessionIPv4Address() {
         return Optional.ofNullable(this.microsoftSessionIPv4Address);
     }
@@ -70,6 +86,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="microsoftSessionIPv6Address")
     private @Nullable String microsoftSessionIPv6Address;
 
+    /**
+     * @return The IPv6 session address on Microsoft&#39;s end.
+     * 
+     */
     public Optional<String> microsoftSessionIPv6Address() {
         return Optional.ofNullable(this.microsoftSessionIPv6Address);
     }
@@ -81,6 +101,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="peerSessionIPv4Address")
     private @Nullable String peerSessionIPv4Address;
 
+    /**
+     * @return The IPv4 session address on peer&#39;s end.
+     * 
+     */
     public Optional<String> peerSessionIPv4Address() {
         return Optional.ofNullable(this.peerSessionIPv4Address);
     }
@@ -92,6 +116,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="peerSessionIPv6Address")
     private @Nullable String peerSessionIPv6Address;
 
+    /**
+     * @return The IPv6 session address on peer&#39;s end.
+     * 
+     */
     public Optional<String> peerSessionIPv6Address() {
         return Optional.ofNullable(this.peerSessionIPv6Address);
     }
@@ -103,6 +131,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sessionPrefixV4")
     private @Nullable String sessionPrefixV4;
 
+    /**
+     * @return The IPv4 prefix that contains both ends&#39; IPv4 addresses.
+     * 
+     */
     public Optional<String> sessionPrefixV4() {
         return Optional.ofNullable(this.sessionPrefixV4);
     }
@@ -114,6 +146,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sessionPrefixV6")
     private @Nullable String sessionPrefixV6;
 
+    /**
+     * @return The IPv6 prefix that contains both ends&#39; IPv6 addresses.
+     * 
+     */
     public Optional<String> sessionPrefixV6() {
         return Optional.ofNullable(this.sessionPrefixV6);
     }
@@ -125,6 +161,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sessionStateV4", required=true)
     private String sessionStateV4;
 
+    /**
+     * @return The state of the IPv4 session.
+     * 
+     */
     public String sessionStateV4() {
         return this.sessionStateV4;
     }
@@ -136,6 +176,10 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sessionStateV6", required=true)
     private String sessionStateV6;
 
+    /**
+     * @return The state of the IPv6 session.
+     * 
+     */
     public String sessionStateV6() {
         return this.sessionStateV6;
     }
@@ -174,56 +218,122 @@ public final class BgpSessionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BgpSessionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPrefixesAdvertisedV4 The maximum number of prefixes advertised over the IPv4 session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrefixesAdvertisedV4(@Nullable Integer maxPrefixesAdvertisedV4) {
             $.maxPrefixesAdvertisedV4 = maxPrefixesAdvertisedV4;
             return this;
         }
 
+        /**
+         * @param maxPrefixesAdvertisedV6 The maximum number of prefixes advertised over the IPv6 session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrefixesAdvertisedV6(@Nullable Integer maxPrefixesAdvertisedV6) {
             $.maxPrefixesAdvertisedV6 = maxPrefixesAdvertisedV6;
             return this;
         }
 
+        /**
+         * @param md5AuthenticationKey The MD5 authentication key of the session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5AuthenticationKey(@Nullable String md5AuthenticationKey) {
             $.md5AuthenticationKey = md5AuthenticationKey;
             return this;
         }
 
+        /**
+         * @param microsoftSessionIPv4Address The IPv4 session address on Microsoft&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftSessionIPv4Address(@Nullable String microsoftSessionIPv4Address) {
             $.microsoftSessionIPv4Address = microsoftSessionIPv4Address;
             return this;
         }
 
+        /**
+         * @param microsoftSessionIPv6Address The IPv6 session address on Microsoft&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftSessionIPv6Address(@Nullable String microsoftSessionIPv6Address) {
             $.microsoftSessionIPv6Address = microsoftSessionIPv6Address;
             return this;
         }
 
+        /**
+         * @param peerSessionIPv4Address The IPv4 session address on peer&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerSessionIPv4Address(@Nullable String peerSessionIPv4Address) {
             $.peerSessionIPv4Address = peerSessionIPv4Address;
             return this;
         }
 
+        /**
+         * @param peerSessionIPv6Address The IPv6 session address on peer&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerSessionIPv6Address(@Nullable String peerSessionIPv6Address) {
             $.peerSessionIPv6Address = peerSessionIPv6Address;
             return this;
         }
 
+        /**
+         * @param sessionPrefixV4 The IPv4 prefix that contains both ends&#39; IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPrefixV4(@Nullable String sessionPrefixV4) {
             $.sessionPrefixV4 = sessionPrefixV4;
             return this;
         }
 
+        /**
+         * @param sessionPrefixV6 The IPv6 prefix that contains both ends&#39; IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPrefixV6(@Nullable String sessionPrefixV6) {
             $.sessionPrefixV6 = sessionPrefixV6;
             return this;
         }
 
+        /**
+         * @param sessionStateV4 The state of the IPv4 session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionStateV4(String sessionStateV4) {
             $.sessionStateV4 = sessionStateV4;
             return this;
         }
 
+        /**
+         * @param sessionStateV6 The state of the IPv6 session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionStateV6(String sessionStateV6) {
             $.sessionStateV6 = sessionStateV6;
             return this;

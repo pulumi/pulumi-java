@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class CloudTieringSpaceSavingsResponse {
     /**
-     * Cached content size on the server
+     * @return Cached content size on the server
      * 
      */
     private final Double cachedSizeBytes;
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
      */
     private final String lastUpdatedTimestamp;
     /**
-     * Count of bytes saved on the server
+     * @return Count of bytes saved on the server
      * 
      */
     private final Double spaceSavingsBytes;
     /**
-     * Percentage of cached size over total size
+     * @return Percentage of cached size over total size
      * 
      */
     private final Integer spaceSavingsPercent;
     /**
-     * Total size of content in the azure file share
+     * @return Total size of content in the azure file share
      * 
      */
     private final Double totalSizeCloudBytes;
     /**
-     * Volume size
+     * @return Volume size
      * 
      */
     private final Double volumeSizeBytes;
@@ -59,44 +59,44 @@ public final class CloudTieringSpaceSavingsResponse {
     }
 
     /**
-     * Cached content size on the server
+     * @return Cached content size on the server
      * 
-    */
+     */
     public Double cachedSizeBytes() {
         return this.cachedSizeBytes;
     }
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
-    */
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
-     * Count of bytes saved on the server
+     * @return Count of bytes saved on the server
      * 
-    */
+     */
     public Double spaceSavingsBytes() {
         return this.spaceSavingsBytes;
     }
     /**
-     * Percentage of cached size over total size
+     * @return Percentage of cached size over total size
      * 
-    */
+     */
     public Integer spaceSavingsPercent() {
         return this.spaceSavingsPercent;
     }
     /**
-     * Total size of content in the azure file share
+     * @return Total size of content in the azure file share
      * 
-    */
+     */
     public Double totalSizeCloudBytes() {
         return this.totalSizeCloudBytes;
     }
     /**
-     * Volume size
+     * @return Volume size
      * 
-    */
+     */
     public Double volumeSizeBytes() {
         return this.volumeSizeBytes;
     }

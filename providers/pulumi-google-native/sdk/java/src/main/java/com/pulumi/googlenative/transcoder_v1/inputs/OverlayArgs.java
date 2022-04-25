@@ -28,6 +28,10 @@ public final class OverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="animations")
     private @Nullable Output<List<AnimationArgs>> animations;
 
+    /**
+     * @return List of Animations. The list should be chronological, without any time overlap.
+     * 
+     */
     public Optional<Output<List<AnimationArgs>>> animations() {
         return Optional.ofNullable(this.animations);
     }
@@ -39,6 +43,10 @@ public final class OverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image")
     private @Nullable Output<ImageArgs> image;
 
+    /**
+     * @return Image overlay.
+     * 
+     */
     public Optional<Output<ImageArgs>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -68,24 +76,54 @@ public final class OverlayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OverlayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param animations List of Animations. The list should be chronological, without any time overlap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animations(@Nullable Output<List<AnimationArgs>> animations) {
             $.animations = animations;
             return this;
         }
 
+        /**
+         * @param animations List of Animations. The list should be chronological, without any time overlap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animations(List<AnimationArgs> animations) {
             return animations(Output.of(animations));
         }
 
+        /**
+         * @param animations List of Animations. The list should be chronological, without any time overlap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder animations(AnimationArgs... animations) {
             return animations(List.of(animations));
         }
 
+        /**
+         * @param image Image overlay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<ImageArgs> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Image overlay.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(ImageArgs image) {
             return image(Output.of(image));
         }

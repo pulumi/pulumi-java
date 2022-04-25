@@ -27,6 +27,10 @@ public final class FirewallPolicySNATArgs extends com.pulumi.resources.ResourceA
     @Import(name="privateRanges")
     private @Nullable Output<List<String>> privateRanges;
 
+    /**
+     * @return List of private IP addresses/IP address ranges to not be SNAT.
+     * 
+     */
     public Optional<Output<List<String>>> privateRanges() {
         return Optional.ofNullable(this.privateRanges);
     }
@@ -55,15 +59,33 @@ public final class FirewallPolicySNATArgs extends com.pulumi.resources.ResourceA
             $ = new FirewallPolicySNATArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateRanges List of private IP addresses/IP address ranges to not be SNAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateRanges(@Nullable Output<List<String>> privateRanges) {
             $.privateRanges = privateRanges;
             return this;
         }
 
+        /**
+         * @param privateRanges List of private IP addresses/IP address ranges to not be SNAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateRanges(List<String> privateRanges) {
             return privateRanges(Output.of(privateRanges));
         }
 
+        /**
+         * @param privateRanges List of private IP addresses/IP address ranges to not be SNAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateRanges(String... privateRanges) {
             return privateRanges(List.of(privateRanges));
         }

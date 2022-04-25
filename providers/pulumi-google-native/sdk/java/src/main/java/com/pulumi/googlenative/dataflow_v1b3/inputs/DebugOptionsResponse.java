@@ -23,6 +23,10 @@ public final class DebugOptionsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enableHotKeyLogging", required=true)
     private Boolean enableHotKeyLogging;
 
+    /**
+     * @return When true, enables the logging of the literal hot key to the user&#39;s Cloud Logging.
+     * 
+     */
     public Boolean enableHotKeyLogging() {
         return this.enableHotKeyLogging;
     }
@@ -51,6 +55,12 @@ public final class DebugOptionsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DebugOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableHotKeyLogging When true, enables the logging of the literal hot key to the user&#39;s Cloud Logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHotKeyLogging(Boolean enableHotKeyLogging) {
             $.enableHotKeyLogging = enableHotKeyLogging;
             return this;

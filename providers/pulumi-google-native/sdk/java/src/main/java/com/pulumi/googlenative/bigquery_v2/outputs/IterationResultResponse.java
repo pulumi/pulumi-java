@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class IterationResultResponse {
     /**
-     * Time taken to run the iteration in milliseconds.
+     * @return Time taken to run the iteration in milliseconds.
      * 
      */
     private final String durationMs;
     /**
-     * Loss computed on the eval data at the end of iteration.
+     * @return Loss computed on the eval data at the end of iteration.
      * 
      */
     private final Double evalLoss;
     /**
-     * Index of the iteration, 0 based.
+     * @return Index of the iteration, 0 based.
      * 
      */
     private final Integer index;
     /**
-     * Learn rate used for this iteration.
+     * @return Learn rate used for this iteration.
      * 
      */
     private final Double learnRate;
     /**
-     * Loss computed on the training data at the end of iteration.
+     * @return Loss computed on the training data at the end of iteration.
      * 
      */
     private final Double trainingLoss;
@@ -52,37 +52,37 @@ public final class IterationResultResponse {
     }
 
     /**
-     * Time taken to run the iteration in milliseconds.
+     * @return Time taken to run the iteration in milliseconds.
      * 
-    */
+     */
     public String durationMs() {
         return this.durationMs;
     }
     /**
-     * Loss computed on the eval data at the end of iteration.
+     * @return Loss computed on the eval data at the end of iteration.
      * 
-    */
+     */
     public Double evalLoss() {
         return this.evalLoss;
     }
     /**
-     * Index of the iteration, 0 based.
+     * @return Index of the iteration, 0 based.
      * 
-    */
+     */
     public Integer index() {
         return this.index;
     }
     /**
-     * Learn rate used for this iteration.
+     * @return Learn rate used for this iteration.
      * 
-    */
+     */
     public Double learnRate() {
         return this.learnRate;
     }
     /**
-     * Loss computed on the training data at the end of iteration.
+     * @return Loss computed on the training data at the end of iteration.
      * 
-    */
+     */
     public Double trainingLoss() {
         return this.trainingLoss;
     }

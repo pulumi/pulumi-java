@@ -20,6 +20,10 @@ public final class GatewayRouteTableAssociationArgs extends com.pulumi.resources
     @Import(name="gatewayId", required=true)
     private Output<String> gatewayId;
 
+    /**
+     * @return The ID of the gateway.
+     * 
+     */
     public Output<String> gatewayId() {
         return this.gatewayId;
     }
@@ -31,6 +35,10 @@ public final class GatewayRouteTableAssociationArgs extends com.pulumi.resources
     @Import(name="routeTableId", required=true)
     private Output<String> routeTableId;
 
+    /**
+     * @return The ID of the route table.
+     * 
+     */
     public Output<String> routeTableId() {
         return this.routeTableId;
     }
@@ -60,20 +68,44 @@ public final class GatewayRouteTableAssociationArgs extends com.pulumi.resources
             $ = new GatewayRouteTableAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayId The ID of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId The ID of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }
 
+        /**
+         * @param routeTableId The ID of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableId(Output<String> routeTableId) {
             $.routeTableId = routeTableId;
             return this;
         }
 
+        /**
+         * @param routeTableId The ID of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableId(String routeTableId) {
             return routeTableId(Output.of(routeTableId));
         }

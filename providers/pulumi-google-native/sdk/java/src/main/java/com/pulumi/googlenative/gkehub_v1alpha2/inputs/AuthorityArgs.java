@@ -26,6 +26,10 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="issuer")
     private @Nullable Output<String> issuer;
 
+    /**
+     * @return Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length &lt;2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer, unless `oidc_jwks` is set. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).
+     * 
+     */
     public Optional<Output<String>> issuer() {
         return Optional.ofNullable(this.issuer);
     }
@@ -37,6 +41,10 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oidcJwks")
     private @Nullable Output<String> oidcJwks;
 
+    /**
+     * @return Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.
+     * 
+     */
     public Optional<Output<String>> oidcJwks() {
         return Optional.ofNullable(this.oidcJwks);
     }
@@ -66,20 +74,44 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issuer Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length &lt;2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer, unless `oidc_jwks` is set. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(@Nullable Output<String> issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param issuer Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length &lt;2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer, unless `oidc_jwks` is set. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             return issuer(Output.of(issuer));
         }
 
+        /**
+         * @param oidcJwks Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcJwks(@Nullable Output<String> oidcJwks) {
             $.oidcJwks = oidcJwks;
             return this;
         }
 
+        /**
+         * @param oidcJwks Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcJwks(String oidcJwks) {
             return oidcJwks(Output.of(oidcJwks));
         }

@@ -23,6 +23,10 @@ public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.R
     @Import(name="maxNodes")
     private @Nullable Output<Integer> maxNodes;
 
+    /**
+     * @return The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
+     * 
+     */
     public Optional<Output<Integer>> maxNodes() {
         return Optional.ofNullable(this.maxNodes);
     }
@@ -34,6 +38,10 @@ public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.R
     @Import(name="minNodes")
     private @Nullable Output<Integer> minNodes;
 
+    /**
+     * @return The minimum number of nodes that the group should have.
+     * 
+     */
     public Optional<Output<Integer>> minNodes() {
         return Optional.ofNullable(this.minNodes);
     }
@@ -45,6 +53,10 @@ public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.R
     @Import(name="mode")
     private @Nullable Output<NodeGroupAutoscalingPolicyMode> mode;
 
+    /**
+     * @return The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
+     * 
+     */
     public Optional<Output<NodeGroupAutoscalingPolicyMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -75,29 +87,65 @@ public final class NodeGroupAutoscalingPolicyArgs extends com.pulumi.resources.R
             $ = new NodeGroupAutoscalingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxNodes The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodes(@Nullable Output<Integer> maxNodes) {
             $.maxNodes = maxNodes;
             return this;
         }
 
+        /**
+         * @param maxNodes The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodes(Integer maxNodes) {
             return maxNodes(Output.of(maxNodes));
         }
 
+        /**
+         * @param minNodes The minimum number of nodes that the group should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodes(@Nullable Output<Integer> minNodes) {
             $.minNodes = minNodes;
             return this;
         }
 
+        /**
+         * @param minNodes The minimum number of nodes that the group should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodes(Integer minNodes) {
             return minNodes(Output.of(minNodes));
         }
 
+        /**
+         * @param mode The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<NodeGroupAutoscalingPolicyMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(NodeGroupAutoscalingPolicyMode mode) {
             return mode(Output.of(mode));
         }

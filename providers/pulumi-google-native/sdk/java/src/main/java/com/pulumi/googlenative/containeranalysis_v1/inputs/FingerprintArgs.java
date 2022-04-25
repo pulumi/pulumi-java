@@ -25,6 +25,10 @@ public final class FingerprintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="v1Name", required=true)
     private Output<String> v1Name;
 
+    /**
+     * @return The layer ID of the final layer in the Docker image&#39;s v1 representation.
+     * 
+     */
     public Output<String> v1Name() {
         return this.v1Name;
     }
@@ -36,6 +40,10 @@ public final class FingerprintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="v2Blob", required=true)
     private Output<List<String>> v2Blob;
 
+    /**
+     * @return The ordered list of v2 blobs that represent a given image.
+     * 
+     */
     public Output<List<String>> v2Blob() {
         return this.v2Blob;
     }
@@ -65,24 +73,54 @@ public final class FingerprintArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FingerprintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param v1Name The layer ID of the final layer in the Docker image&#39;s v1 representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v1Name(Output<String> v1Name) {
             $.v1Name = v1Name;
             return this;
         }
 
+        /**
+         * @param v1Name The layer ID of the final layer in the Docker image&#39;s v1 representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v1Name(String v1Name) {
             return v1Name(Output.of(v1Name));
         }
 
+        /**
+         * @param v2Blob The ordered list of v2 blobs that represent a given image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v2Blob(Output<List<String>> v2Blob) {
             $.v2Blob = v2Blob;
             return this;
         }
 
+        /**
+         * @param v2Blob The ordered list of v2 blobs that represent a given image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v2Blob(List<String> v2Blob) {
             return v2Blob(Output.of(v2Blob));
         }
 
+        /**
+         * @param v2Blob The ordered list of v2 blobs that represent a given image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder v2Blob(String... v2Blob) {
             return v2Blob(List.of(v2Blob));
         }

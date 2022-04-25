@@ -21,6 +21,10 @@ public final class RouteRequestParameterGetArgs extends com.pulumi.resources.Res
     @Import(name="requestParameterKey", required=true)
     private Output<String> requestParameterKey;
 
+    /**
+     * @return Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
+     * 
+     */
     public Output<String> requestParameterKey() {
         return this.requestParameterKey;
     }
@@ -32,6 +36,10 @@ public final class RouteRequestParameterGetArgs extends com.pulumi.resources.Res
     @Import(name="required", required=true)
     private Output<Boolean> required;
 
+    /**
+     * @return Boolean whether or not the parameter is required.
+     * 
+     */
     public Output<Boolean> required() {
         return this.required;
     }
@@ -61,20 +69,44 @@ public final class RouteRequestParameterGetArgs extends com.pulumi.resources.Res
             $ = new RouteRequestParameterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestParameterKey Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestParameterKey(Output<String> requestParameterKey) {
             $.requestParameterKey = requestParameterKey;
             return this;
         }
 
+        /**
+         * @param requestParameterKey Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestParameterKey(String requestParameterKey) {
             return requestParameterKey(Output.of(requestParameterKey));
         }
 
+        /**
+         * @param required Boolean whether or not the parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder required(Output<Boolean> required) {
             $.required = required;
             return this;
         }
 
+        /**
+         * @param required Boolean whether or not the parameter is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder required(Boolean required) {
             return required(Output.of(required));
         }

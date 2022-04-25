@@ -24,6 +24,11 @@ public final class RuntimeVirtualMachineArgs extends com.pulumi.resources.Resour
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return -
+     * The unique identifier of the Managed Compute Engine instance.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -36,6 +41,11 @@ public final class RuntimeVirtualMachineArgs extends com.pulumi.resources.Resour
     @Import(name="instanceName")
     private @Nullable Output<String> instanceName;
 
+    /**
+     * @return -
+     * The user-friendly name of the Managed Compute Engine instance.
+     * 
+     */
     public Optional<Output<String>> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -48,6 +58,11 @@ public final class RuntimeVirtualMachineArgs extends com.pulumi.resources.Resour
     @Import(name="virtualMachineConfig")
     private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig;
 
+    /**
+     * @return Virtual Machine configuration settings.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RuntimeVirtualMachineVirtualMachineConfigArgs>> virtualMachineConfig() {
         return Optional.ofNullable(this.virtualMachineConfig);
     }
@@ -78,29 +93,71 @@ public final class RuntimeVirtualMachineArgs extends com.pulumi.resources.Resour
             $ = new RuntimeVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceId -
+         * The unique identifier of the Managed Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId -
+         * The unique identifier of the Managed Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param instanceName -
+         * The user-friendly name of the Managed Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(@Nullable Output<String> instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param instanceName -
+         * The user-friendly name of the Managed Compute Engine instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             return instanceName(Output.of(instanceName));
         }
 
+        /**
+         * @param virtualMachineConfig Virtual Machine configuration settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig) {
             $.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
 
+        /**
+         * @param virtualMachineConfig Virtual Machine configuration settings.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineConfig(RuntimeVirtualMachineVirtualMachineConfigArgs virtualMachineConfig) {
             return virtualMachineConfig(Output.of(virtualMachineConfig));
         }

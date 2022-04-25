@@ -23,6 +23,10 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID of the virtual machine that is linked to this policy
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
     @Import(name="ports", required=true)
     private List<JitNetworkAccessPortRuleResponse> ports;
 
+    /**
+     * @return Port configurations for the virtual machine
+     * 
+     */
     public List<JitNetworkAccessPortRuleResponse> ports() {
         return this.ports;
     }
@@ -45,6 +53,10 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
     @Import(name="publicIpAddress")
     private @Nullable String publicIpAddress;
 
+    /**
+     * @return Public IP address of the Azure Firewall that is linked to this policy, if applicable
+     * 
+     */
     public Optional<String> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
@@ -75,20 +87,44 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
             $ = new JitNetworkAccessPolicyVirtualMachineResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of the virtual machine that is linked to this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ports Port configurations for the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<JitNetworkAccessPortRuleResponse> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Port configurations for the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(JitNetworkAccessPortRuleResponse... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param publicIpAddress Public IP address of the Azure Firewall that is linked to this policy, if applicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;

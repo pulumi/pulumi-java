@@ -27,6 +27,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
     @Import(name="charactersToIgnore", required=true)
     private List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore;
 
+    /**
+     * @return When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.
+     * 
+     */
     public List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore() {
         return this.charactersToIgnore;
     }
@@ -38,6 +42,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
     @Import(name="maskingCharacter", required=true)
     private String maskingCharacter;
 
+    /**
+     * @return Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as a name, or `0` for a numeric string such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for digits.
+     * 
+     */
     public String maskingCharacter() {
         return this.maskingCharacter;
     }
@@ -49,6 +57,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
     @Import(name="numberToMask", required=true)
     private Integer numberToMask;
 
+    /**
+     * @return Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
+     * 
+     */
     public Integer numberToMask() {
         return this.numberToMask;
     }
@@ -60,6 +72,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
     @Import(name="reverseOrder", required=true)
     private Boolean reverseOrder;
 
+    /**
+     * @return Mask characters in reverse order. For example, if `masking_character` is `0`, `number_to_mask` is `14`, and `reverse_order` is `false`, then the input string `1234-5678-9012-3456` is masked as `00000000000000-3456`. If `masking_character` is `*`, `number_to_mask` is `3`, and `reverse_order` is `true`, then the string `12345` is masked as `12***`.
+     * 
+     */
     public Boolean reverseOrder() {
         return this.reverseOrder;
     }
@@ -91,25 +107,55 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends com.pul
             $ = new GooglePrivacyDlpV2CharacterMaskConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param charactersToIgnore When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charactersToIgnore(List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore) {
             $.charactersToIgnore = charactersToIgnore;
             return this;
         }
 
+        /**
+         * @param charactersToIgnore When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder charactersToIgnore(GooglePrivacyDlpV2CharsToIgnoreResponse... charactersToIgnore) {
             return charactersToIgnore(List.of(charactersToIgnore));
         }
 
+        /**
+         * @param maskingCharacter Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as a name, or `0` for a numeric string such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maskingCharacter(String maskingCharacter) {
             $.maskingCharacter = maskingCharacter;
             return this;
         }
 
+        /**
+         * @param numberToMask Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberToMask(Integer numberToMask) {
             $.numberToMask = numberToMask;
             return this;
         }
 
+        /**
+         * @param reverseOrder Mask characters in reverse order. For example, if `masking_character` is `0`, `number_to_mask` is `14`, and `reverse_order` is `false`, then the input string `1234-5678-9012-3456` is masked as `00000000000000-3456`. If `masking_character` is `*`, `number_to_mask` is `3`, and `reverse_order` is `true`, then the string `12345` is masked as `12***`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseOrder(Boolean reverseOrder) {
             $.reverseOrder = reverseOrder;
             return this;

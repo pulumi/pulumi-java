@@ -25,6 +25,10 @@ public final class X509ExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="critical", required=true)
     private Boolean critical;
 
+    /**
+     * @return Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+     * 
+     */
     public Boolean critical() {
         return this.critical;
     }
@@ -36,6 +40,10 @@ public final class X509ExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="objectId", required=true)
     private ObjectIdResponse objectId;
 
+    /**
+     * @return The OID for this X.509 extension.
+     * 
+     */
     public ObjectIdResponse objectId() {
         return this.objectId;
     }
@@ -47,6 +55,10 @@ public final class X509ExtensionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of this X.509 extension.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -77,16 +89,34 @@ public final class X509ExtensionResponse extends com.pulumi.resources.InvokeArgs
             $ = new X509ExtensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param critical Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
+         * 
+         * @return builder
+         * 
+         */
         public Builder critical(Boolean critical) {
             $.critical = critical;
             return this;
         }
 
+        /**
+         * @param objectId The OID for this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(ObjectIdResponse objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param value The value of this X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

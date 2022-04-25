@@ -13,48 +13,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SqlConnectionInfoResponse {
     /**
-     * Additional connection settings
+     * @return Additional connection settings
      * 
      */
     private final @Nullable String additionalSettings;
     /**
-     * Authentication type to use for connection
+     * @return Authentication type to use for connection
      * 
      */
     private final @Nullable String authentication;
     /**
-     * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+     * @return Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
      * 
      */
     private final String dataSource;
     /**
-     * Whether to encrypt the connection
+     * @return Whether to encrypt the connection
      * 
      */
     private final @Nullable Boolean encryptConnection;
     /**
-     * Password credential.
+     * @return Password credential.
      * 
      */
     private final @Nullable String password;
     /**
-     * Server platform type for connection
+     * @return Server platform type for connection
      * 
      */
     private final @Nullable String platform;
     /**
-     * Whether to trust the server certificate
+     * @return Whether to trust the server certificate
      * 
      */
     private final @Nullable Boolean trustServerCertificate;
     /**
-     * Type of connection info
+     * @return Type of connection info
      * Expected value is &#39;SqlConnectionInfo&#39;.
      * 
      */
     private final String type;
     /**
-     * User name
+     * @return User name
      * 
      */
     private final @Nullable String userName;
@@ -82,66 +82,66 @@ public final class SqlConnectionInfoResponse {
     }
 
     /**
-     * Additional connection settings
+     * @return Additional connection settings
      * 
-    */
+     */
     public Optional<String> additionalSettings() {
         return Optional.ofNullable(this.additionalSettings);
     }
     /**
-     * Authentication type to use for connection
+     * @return Authentication type to use for connection
      * 
-    */
+     */
     public Optional<String> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
-     * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+     * @return Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
      * 
-    */
+     */
     public String dataSource() {
         return this.dataSource;
     }
     /**
-     * Whether to encrypt the connection
+     * @return Whether to encrypt the connection
      * 
-    */
+     */
     public Optional<Boolean> encryptConnection() {
         return Optional.ofNullable(this.encryptConnection);
     }
     /**
-     * Password credential.
+     * @return Password credential.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Server platform type for connection
+     * @return Server platform type for connection
      * 
-    */
+     */
     public Optional<String> platform() {
         return Optional.ofNullable(this.platform);
     }
     /**
-     * Whether to trust the server certificate
+     * @return Whether to trust the server certificate
      * 
-    */
+     */
     public Optional<Boolean> trustServerCertificate() {
         return Optional.ofNullable(this.trustServerCertificate);
     }
     /**
-     * Type of connection info
+     * @return Type of connection info
      * Expected value is &#39;SqlConnectionInfo&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * User name
+     * @return User name
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

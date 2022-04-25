@@ -29,6 +29,10 @@ public final class DashboardPartsPositionArgs extends com.pulumi.resources.Resou
     @Import(name="colSpan", required=true)
     private Output<Integer> colSpan;
 
+    /**
+     * @return The dashboard&#39;s part column span.
+     * 
+     */
     public Output<Integer> colSpan() {
         return this.colSpan;
     }
@@ -40,6 +44,10 @@ public final class DashboardPartsPositionArgs extends com.pulumi.resources.Resou
     @Import(name="metadata")
     private @Nullable Output<Map<String,Object>> metadata;
 
+    /**
+     * @return The dashboard part&#39;s metadata.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -51,6 +59,10 @@ public final class DashboardPartsPositionArgs extends com.pulumi.resources.Resou
     @Import(name="rowSpan", required=true)
     private Output<Integer> rowSpan;
 
+    /**
+     * @return The dashboard&#39;s part row span.
+     * 
+     */
     public Output<Integer> rowSpan() {
         return this.rowSpan;
     }
@@ -62,6 +74,10 @@ public final class DashboardPartsPositionArgs extends com.pulumi.resources.Resou
     @Import(name="x", required=true)
     private Output<Integer> x;
 
+    /**
+     * @return The dashboard&#39;s part x coordinate.
+     * 
+     */
     public Output<Integer> x() {
         return this.x;
     }
@@ -73,6 +89,10 @@ public final class DashboardPartsPositionArgs extends com.pulumi.resources.Resou
     @Import(name="y", required=true)
     private Output<Integer> y;
 
+    /**
+     * @return The dashboard&#39;s part y coordinate.
+     * 
+     */
     public Output<Integer> y() {
         return this.y;
     }
@@ -105,47 +125,107 @@ public final class DashboardPartsPositionArgs extends com.pulumi.resources.Resou
             $ = new DashboardPartsPositionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param colSpan The dashboard&#39;s part column span.
+         * 
+         * @return builder
+         * 
+         */
         public Builder colSpan(Output<Integer> colSpan) {
             $.colSpan = colSpan;
             return this;
         }
 
+        /**
+         * @param colSpan The dashboard&#39;s part column span.
+         * 
+         * @return builder
+         * 
+         */
         public Builder colSpan(Integer colSpan) {
             return colSpan(Output.of(colSpan));
         }
 
+        /**
+         * @param metadata The dashboard part&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The dashboard part&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,Object> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param rowSpan The dashboard&#39;s part row span.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowSpan(Output<Integer> rowSpan) {
             $.rowSpan = rowSpan;
             return this;
         }
 
+        /**
+         * @param rowSpan The dashboard&#39;s part row span.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowSpan(Integer rowSpan) {
             return rowSpan(Output.of(rowSpan));
         }
 
+        /**
+         * @param x The dashboard&#39;s part x coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(Output<Integer> x) {
             $.x = x;
             return this;
         }
 
+        /**
+         * @param x The dashboard&#39;s part x coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(Integer x) {
             return x(Output.of(x));
         }
 
+        /**
+         * @param y The dashboard&#39;s part y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(Output<Integer> y) {
             $.y = y;
             return this;
         }
 
+        /**
+         * @param y The dashboard&#39;s part y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(Integer y) {
             return y(Output.of(y));
         }

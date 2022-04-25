@@ -26,6 +26,10 @@ public final class CnameRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cname")
     private @Nullable Output<String> cname;
 
+    /**
+     * @return The canonical name for this CNAME record.
+     * 
+     */
     public Optional<Output<String>> cname() {
         return Optional.ofNullable(this.cname);
     }
@@ -54,11 +58,23 @@ public final class CnameRecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CnameRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cname The canonical name for this CNAME record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(@Nullable Output<String> cname) {
             $.cname = cname;
             return this;
         }
 
+        /**
+         * @param cname The canonical name for this CNAME record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(String cname) {
             return cname(Output.of(cname));
         }

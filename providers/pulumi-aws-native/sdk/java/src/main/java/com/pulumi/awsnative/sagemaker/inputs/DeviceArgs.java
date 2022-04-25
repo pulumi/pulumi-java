@@ -26,6 +26,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the device
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The name of the device
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -48,6 +56,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iotThingName")
     private @Nullable Output<String> iotThingName;
 
+    /**
+     * @return AWS Internet of Things (IoT) object name.
+     * 
+     */
     public Optional<Output<String>> iotThingName() {
         return Optional.ofNullable(this.iotThingName);
     }
@@ -78,29 +90,65 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the device
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the device
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param deviceName The name of the device
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The name of the device
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param iotThingName AWS Internet of Things (IoT) object name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotThingName(@Nullable Output<String> iotThingName) {
             $.iotThingName = iotThingName;
             return this;
         }
 
+        /**
+         * @param iotThingName AWS Internet of Things (IoT) object name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotThingName(String iotThingName) {
             return iotThingName(Output.of(iotThingName));
         }

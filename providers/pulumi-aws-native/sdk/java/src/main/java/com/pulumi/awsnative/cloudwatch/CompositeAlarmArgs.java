@@ -24,6 +24,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="actionsEnabled")
     private @Nullable Output<Boolean> actionsEnabled;
 
+    /**
+     * @return Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
+     * 
+     */
     public Optional<Output<Boolean>> actionsEnabled() {
         return Optional.ofNullable(this.actionsEnabled);
     }
@@ -35,6 +39,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="alarmActions")
     private @Nullable Output<List<String>> alarmActions;
 
+    /**
+     * @return The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<Output<List<String>>> alarmActions() {
         return Optional.ofNullable(this.alarmActions);
     }
@@ -46,6 +54,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="alarmDescription")
     private @Nullable Output<String> alarmDescription;
 
+    /**
+     * @return The description of the alarm
+     * 
+     */
     public Optional<Output<String>> alarmDescription() {
         return Optional.ofNullable(this.alarmDescription);
     }
@@ -57,6 +69,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="alarmName", required=true)
     private Output<String> alarmName;
 
+    /**
+     * @return The name of the Composite Alarm
+     * 
+     */
     public Output<String> alarmName() {
         return this.alarmName;
     }
@@ -68,6 +84,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="alarmRule", required=true)
     private Output<String> alarmRule;
 
+    /**
+     * @return Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
+     * 
+     */
     public Output<String> alarmRule() {
         return this.alarmRule;
     }
@@ -79,6 +99,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="insufficientDataActions")
     private @Nullable Output<List<String>> insufficientDataActions;
 
+    /**
+     * @return The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<Output<List<String>>> insufficientDataActions() {
         return Optional.ofNullable(this.insufficientDataActions);
     }
@@ -90,6 +114,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="oKActions")
     private @Nullable Output<List<String>> oKActions;
 
+    /**
+     * @return The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+     * 
+     */
     public Optional<Output<List<String>>> oKActions() {
         return Optional.ofNullable(this.oKActions);
     }
@@ -124,77 +152,179 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CompositeAlarmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsEnabled Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsEnabled(@Nullable Output<Boolean> actionsEnabled) {
             $.actionsEnabled = actionsEnabled;
             return this;
         }
 
+        /**
+         * @param actionsEnabled Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsEnabled(Boolean actionsEnabled) {
             return actionsEnabled(Output.of(actionsEnabled));
         }
 
+        /**
+         * @param alarmActions The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
             $.alarmActions = alarmActions;
             return this;
         }
 
+        /**
+         * @param alarmActions The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmActions(List<String> alarmActions) {
             return alarmActions(Output.of(alarmActions));
         }
 
+        /**
+         * @param alarmActions The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmActions(String... alarmActions) {
             return alarmActions(List.of(alarmActions));
         }
 
+        /**
+         * @param alarmDescription The description of the alarm
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
             $.alarmDescription = alarmDescription;
             return this;
         }
 
+        /**
+         * @param alarmDescription The description of the alarm
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmDescription(String alarmDescription) {
             return alarmDescription(Output.of(alarmDescription));
         }
 
+        /**
+         * @param alarmName The name of the Composite Alarm
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmName(Output<String> alarmName) {
             $.alarmName = alarmName;
             return this;
         }
 
+        /**
+         * @param alarmName The name of the Composite Alarm
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmName(String alarmName) {
             return alarmName(Output.of(alarmName));
         }
 
+        /**
+         * @param alarmRule Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmRule(Output<String> alarmRule) {
             $.alarmRule = alarmRule;
             return this;
         }
 
+        /**
+         * @param alarmRule Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmRule(String alarmRule) {
             return alarmRule(Output.of(alarmRule));
         }
 
+        /**
+         * @param insufficientDataActions The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
             $.insufficientDataActions = insufficientDataActions;
             return this;
         }
 
+        /**
+         * @param insufficientDataActions The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder insufficientDataActions(List<String> insufficientDataActions) {
             return insufficientDataActions(Output.of(insufficientDataActions));
         }
 
+        /**
+         * @param insufficientDataActions The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder insufficientDataActions(String... insufficientDataActions) {
             return insufficientDataActions(List.of(insufficientDataActions));
         }
 
+        /**
+         * @param oKActions The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder oKActions(@Nullable Output<List<String>> oKActions) {
             $.oKActions = oKActions;
             return this;
         }
 
+        /**
+         * @param oKActions The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder oKActions(List<String> oKActions) {
             return oKActions(Output.of(oKActions));
         }
 
+        /**
+         * @param oKActions The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder oKActions(String... oKActions) {
             return oKActions(List.of(oKActions));
         }

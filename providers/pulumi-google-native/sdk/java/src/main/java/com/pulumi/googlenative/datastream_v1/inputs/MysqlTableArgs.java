@@ -28,6 +28,10 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mysqlColumns")
     private @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
 
+    /**
+     * @return MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * 
+     */
     public Optional<Output<List<MysqlColumnArgs>>> mysqlColumns() {
         return Optional.ofNullable(this.mysqlColumns);
     }
@@ -39,6 +43,10 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="table")
     private @Nullable Output<String> table;
 
+    /**
+     * @return Table name.
+     * 
+     */
     public Optional<Output<String>> table() {
         return Optional.ofNullable(this.table);
     }
@@ -68,24 +76,54 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MysqlTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlColumns(@Nullable Output<List<MysqlColumnArgs>> mysqlColumns) {
             $.mysqlColumns = mysqlColumns;
             return this;
         }
 
+        /**
+         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlColumns(List<MysqlColumnArgs> mysqlColumns) {
             return mysqlColumns(Output.of(mysqlColumns));
         }
 
+        /**
+         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlColumns(MysqlColumnArgs... mysqlColumns) {
             return mysqlColumns(List.of(mysqlColumns));
         }
 
+        /**
+         * @param table Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable Output<String> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             return table(Output.of(table));
         }

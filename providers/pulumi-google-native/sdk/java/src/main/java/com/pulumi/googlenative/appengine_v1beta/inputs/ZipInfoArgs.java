@@ -27,6 +27,10 @@ public final class ZipInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filesCount")
     private @Nullable Output<Integer> filesCount;
 
+    /**
+     * @return An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
+     * 
+     */
     public Optional<Output<Integer>> filesCount() {
         return Optional.ofNullable(this.filesCount);
     }
@@ -38,6 +42,10 @@ public final class ZipInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceUrl")
     private @Nullable Output<String> sourceUrl;
 
+    /**
+     * @return URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form &#39;http(s)://storage.googleapis.com//&#39;.
+     * 
+     */
     public Optional<Output<String>> sourceUrl() {
         return Optional.ofNullable(this.sourceUrl);
     }
@@ -67,20 +75,44 @@ public final class ZipInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ZipInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filesCount An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesCount(@Nullable Output<Integer> filesCount) {
             $.filesCount = filesCount;
             return this;
         }
 
+        /**
+         * @param filesCount An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesCount(Integer filesCount) {
             return filesCount(Output.of(filesCount));
         }
 
+        /**
+         * @param sourceUrl URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form &#39;http(s)://storage.googleapis.com//&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrl(@Nullable Output<String> sourceUrl) {
             $.sourceUrl = sourceUrl;
             return this;
         }
 
+        /**
+         * @param sourceUrl URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form &#39;http(s)://storage.googleapis.com//&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrl(String sourceUrl) {
             return sourceUrl(Output.of(sourceUrl));
         }

@@ -19,6 +19,10 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="jobName", required=true)
     private String jobName;
 
+    /**
+     * @return The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     public String jobName() {
         return this.jobName;
     }
@@ -30,6 +34,10 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
             $ = new ListJobCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobName The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

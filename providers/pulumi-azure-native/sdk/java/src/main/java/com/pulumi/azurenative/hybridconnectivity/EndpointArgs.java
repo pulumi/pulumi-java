@@ -25,6 +25,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
     private @Nullable Output<String> createdAt;
 
+    /**
+     * @return The timestamp of resource creation (UTC).
+     * 
+     */
     public Optional<Output<String>> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -36,6 +40,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
     private @Nullable Output<String> createdBy;
 
+    /**
+     * @return The identity that created the resource.
+     * 
+     */
     public Optional<Output<String>> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -47,6 +55,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
     private @Nullable Output<Either<String,CreatedByType>> createdByType;
 
+    /**
+     * @return The type of identity that created the resource.
+     * 
+     */
     public Optional<Output<Either<String,CreatedByType>>> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
@@ -58,6 +70,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointName")
     private @Nullable Output<String> endpointName;
 
+    /**
+     * @return The endpoint name.
+     * 
+     */
     public Optional<Output<String>> endpointName() {
         return Optional.ofNullable(this.endpointName);
     }
@@ -69,6 +85,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
     private @Nullable Output<String> lastModifiedAt;
 
+    /**
+     * @return The timestamp of resource last modification (UTC)
+     * 
+     */
     public Optional<Output<String>> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
@@ -80,6 +100,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
     private @Nullable Output<String> lastModifiedBy;
 
+    /**
+     * @return The identity that last modified the resource.
+     * 
+     */
     public Optional<Output<String>> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
@@ -91,6 +115,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
     private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
+    /**
+     * @return The type of identity that last modified the resource.
+     * 
+     */
     public Optional<Output<Either<String,CreatedByType>>> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
@@ -102,6 +130,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The resource Id of the connectivity endpoint (optional).
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -113,6 +145,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
     private Output<String> resourceUri;
 
+    /**
+     * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
+     * 
+     */
     public Output<String> resourceUri() {
         return this.resourceUri;
     }
@@ -124,6 +160,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<Either<String,Type>> type;
 
+    /**
+     * @return The type of endpoint.
+     * 
+     */
     public Output<Either<String,Type>> type() {
         return this.type;
     }
@@ -161,116 +201,272 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable Output<String> createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             return createdAt(Output.of(createdAt));
         }
 
+        /**
+         * @param createdBy The identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable Output<String> createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdBy The identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(String createdBy) {
             return createdBy(Output.of(createdBy));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             $.createdByType = createdByType;
             return this;
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(Either<String,CreatedByType> createdByType) {
             return createdByType(Output.of(createdByType));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(String createdByType) {
             return createdByType(Either.ofLeft(createdByType));
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(CreatedByType createdByType) {
             return createdByType(Either.ofRight(createdByType));
         }
 
+        /**
+         * @param endpointName The endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(@Nullable Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointName The endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(String lastModifiedAt) {
             return lastModifiedAt(Output.of(lastModifiedAt));
         }
 
+        /**
+         * @param lastModifiedBy The identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy The identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(String lastModifiedBy) {
             return lastModifiedBy(Output.of(lastModifiedBy));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             $.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(Either<String,CreatedByType> lastModifiedByType) {
             return lastModifiedByType(Output.of(lastModifiedByType));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(String lastModifiedByType) {
             return lastModifiedByType(Either.ofLeft(lastModifiedByType));
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(CreatedByType lastModifiedByType) {
             return lastModifiedByType(Either.ofRight(lastModifiedByType));
         }
 
+        /**
+         * @param resourceId The resource Id of the connectivity endpoint (optional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource Id of the connectivity endpoint (optional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(Output<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             return resourceUri(Output.of(resourceUri));
         }
 
+        /**
+         * @param type The type of endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,Type>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,Type> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Type type) {
             return type(Either.ofRight(type));
         }

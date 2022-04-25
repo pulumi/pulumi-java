@@ -23,6 +23,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationStrategy")
     private @Nullable Output<String> authenticationStrategy;
 
+    /**
+     * @return Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
+     * 
+     */
     public Optional<Output<String>> authenticationStrategy() {
         return Optional.ofNullable(this.authenticationStrategy);
     }
@@ -34,6 +38,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="data", required=true)
     private Output<String> data;
 
+    /**
+     * @return Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
+     * 
+     */
     public Output<String> data() {
         return this.data;
     }
@@ -45,6 +53,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -56,6 +68,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineType", required=true)
     private Output<String> engineType;
 
+    /**
+     * @return Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
+     * 
+     */
     public Output<String> engineType() {
         return this.engineType;
     }
@@ -67,6 +83,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion", required=true)
     private Output<String> engineVersion;
 
+    /**
+     * @return Version of the broker engine.
+     * 
+     */
     public Output<String> engineVersion() {
         return this.engineVersion;
     }
@@ -78,6 +98,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -89,6 +113,10 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -123,65 +151,149 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationStrategy Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationStrategy(@Nullable Output<String> authenticationStrategy) {
             $.authenticationStrategy = authenticationStrategy;
             return this;
         }
 
+        /**
+         * @param authenticationStrategy Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationStrategy(String authenticationStrategy) {
             return authenticationStrategy(Output.of(authenticationStrategy));
         }
 
+        /**
+         * @param data Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param description Description of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param engineType Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(Output<String> engineType) {
             $.engineType = engineType;
             return this;
         }
 
+        /**
+         * @param engineType Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(String engineType) {
             return engineType(Output.of(engineType));
         }
 
+        /**
+         * @param engineVersion Version of the broker engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion Version of the broker engine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param name Name of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

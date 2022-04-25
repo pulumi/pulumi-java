@@ -24,6 +24,10 @@ public final class CanaryVisualReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="baseCanaryRunId", required=true)
     private Output<String> baseCanaryRunId;
 
+    /**
+     * @return Canary run id to be used as base reference for visual testing
+     * 
+     */
     public Output<String> baseCanaryRunId() {
         return this.baseCanaryRunId;
     }
@@ -35,6 +39,10 @@ public final class CanaryVisualReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="baseScreenshots")
     private @Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots;
 
+    /**
+     * @return List of screenshots used as base reference for visual testing
+     * 
+     */
     public Optional<Output<List<CanaryBaseScreenshotArgs>>> baseScreenshots() {
         return Optional.ofNullable(this.baseScreenshots);
     }
@@ -64,24 +72,54 @@ public final class CanaryVisualReferenceArgs extends com.pulumi.resources.Resour
             $ = new CanaryVisualReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseCanaryRunId Canary run id to be used as base reference for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseCanaryRunId(Output<String> baseCanaryRunId) {
             $.baseCanaryRunId = baseCanaryRunId;
             return this;
         }
 
+        /**
+         * @param baseCanaryRunId Canary run id to be used as base reference for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseCanaryRunId(String baseCanaryRunId) {
             return baseCanaryRunId(Output.of(baseCanaryRunId));
         }
 
+        /**
+         * @param baseScreenshots List of screenshots used as base reference for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseScreenshots(@Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots) {
             $.baseScreenshots = baseScreenshots;
             return this;
         }
 
+        /**
+         * @param baseScreenshots List of screenshots used as base reference for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseScreenshots(List<CanaryBaseScreenshotArgs> baseScreenshots) {
             return baseScreenshots(Output.of(baseScreenshots));
         }
 
+        /**
+         * @param baseScreenshots List of screenshots used as base reference for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseScreenshots(CanaryBaseScreenshotArgs... baseScreenshots) {
             return baseScreenshots(List.of(baseScreenshots));
         }

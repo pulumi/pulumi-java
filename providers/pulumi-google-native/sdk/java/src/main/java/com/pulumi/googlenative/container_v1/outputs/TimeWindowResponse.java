@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class TimeWindowResponse {
     /**
-     * The time that the window ends. The end time should take place after the start time.
+     * @return The time that the window ends. The end time should take place after the start time.
      * 
      */
     private final String endTime;
     /**
-     * MaintenanceExclusionOptions provides maintenance exclusion related options.
+     * @return MaintenanceExclusionOptions provides maintenance exclusion related options.
      * 
      */
     private final MaintenanceExclusionOptionsResponse maintenanceExclusionOptions;
     /**
-     * The time that the window first starts.
+     * @return The time that the window first starts.
      * 
      */
     private final String startTime;
@@ -37,23 +37,23 @@ public final class TimeWindowResponse {
     }
 
     /**
-     * The time that the window ends. The end time should take place after the start time.
+     * @return The time that the window ends. The end time should take place after the start time.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * MaintenanceExclusionOptions provides maintenance exclusion related options.
+     * @return MaintenanceExclusionOptions provides maintenance exclusion related options.
      * 
-    */
+     */
     public MaintenanceExclusionOptionsResponse maintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions;
     }
     /**
-     * The time that the window first starts.
+     * @return The time that the window first starts.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

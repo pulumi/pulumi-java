@@ -21,6 +21,10 @@ public final class InboundIpRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return Action to perform based on the match or no match of the IpMask.
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -32,6 +36,10 @@ public final class InboundIpRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipMask")
     private @Nullable String ipMask;
 
+    /**
+     * @return IP Address in CIDR notation e.g., 10.0.0.0/8.
+     * 
+     */
     public Optional<String> ipMask() {
         return Optional.ofNullable(this.ipMask);
     }
@@ -61,11 +69,23 @@ public final class InboundIpRuleResponse extends com.pulumi.resources.InvokeArgs
             $ = new InboundIpRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action to perform based on the match or no match of the IpMask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param ipMask IP Address in CIDR notation e.g., 10.0.0.0/8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(@Nullable String ipMask) {
             $.ipMask = ipMask;
             return this;

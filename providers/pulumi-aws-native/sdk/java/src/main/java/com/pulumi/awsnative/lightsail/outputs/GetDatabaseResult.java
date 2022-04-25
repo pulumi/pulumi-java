@@ -15,33 +15,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDatabaseResult {
     /**
-     * When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
+     * @return When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
      * 
      */
     private final @Nullable Boolean backupRetention;
     /**
-     * Indicates the certificate that needs to be associated with the database.
+     * @return Indicates the certificate that needs to be associated with the database.
      * 
      */
     private final @Nullable String caCertificateIdentifier;
     private final @Nullable String databaseArn;
     /**
-     * The daily time range during which automated backups are created for your new database if automated backups are enabled.
+     * @return The daily time range during which automated backups are created for your new database if automated backups are enabled.
      * 
      */
     private final @Nullable String preferredBackupWindow;
     /**
-     * The weekly time range during which system maintenance can occur on your new database.
+     * @return The weekly time range during which system maintenance can occur on your new database.
      * 
      */
     private final @Nullable String preferredMaintenanceWindow;
     /**
-     * Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
+     * @return Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
      * 
      */
     private final @Nullable Boolean publiclyAccessible;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<DatabaseTag> tags;
@@ -65,16 +65,16 @@ public final class GetDatabaseResult {
     }
 
     /**
-     * When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
+     * @return When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
      * 
-    */
+     */
     public Optional<Boolean> backupRetention() {
         return Optional.ofNullable(this.backupRetention);
     }
     /**
-     * Indicates the certificate that needs to be associated with the database.
+     * @return Indicates the certificate that needs to be associated with the database.
      * 
-    */
+     */
     public Optional<String> caCertificateIdentifier() {
         return Optional.ofNullable(this.caCertificateIdentifier);
     }
@@ -82,30 +82,30 @@ public final class GetDatabaseResult {
         return Optional.ofNullable(this.databaseArn);
     }
     /**
-     * The daily time range during which automated backups are created for your new database if automated backups are enabled.
+     * @return The daily time range during which automated backups are created for your new database if automated backups are enabled.
      * 
-    */
+     */
     public Optional<String> preferredBackupWindow() {
         return Optional.ofNullable(this.preferredBackupWindow);
     }
     /**
-     * The weekly time range during which system maintenance can occur on your new database.
+     * @return The weekly time range during which system maintenance can occur on your new database.
      * 
-    */
+     */
     public Optional<String> preferredMaintenanceWindow() {
         return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
     /**
-     * Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
+     * @return Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
      * 
-    */
+     */
     public Optional<Boolean> publiclyAccessible() {
         return Optional.ofNullable(this.publiclyAccessible);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<DatabaseTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

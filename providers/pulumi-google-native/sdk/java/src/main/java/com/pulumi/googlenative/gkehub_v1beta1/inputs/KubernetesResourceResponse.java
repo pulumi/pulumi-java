@@ -26,6 +26,10 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
     @Import(name="connectResources", required=true)
     private List<ResourceManifestResponse> connectResources;
 
+    /**
+     * @return The Kubernetes resources for installing the GKE Connect agent This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.
+     * 
+     */
     public List<ResourceManifestResponse> connectResources() {
         return this.connectResources;
     }
@@ -37,6 +41,10 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
     @Import(name="membershipCrManifest", required=true)
     private String membershipCrManifest;
 
+    /**
+     * @return Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.
+     * 
+     */
     public String membershipCrManifest() {
         return this.membershipCrManifest;
     }
@@ -48,6 +56,10 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
     @Import(name="membershipResources", required=true)
     private List<ResourceManifestResponse> membershipResources;
 
+    /**
+     * @return Additional Kubernetes resources that need to be applied to the cluster after Membership creation, and after every update. This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.
+     * 
+     */
     public List<ResourceManifestResponse> membershipResources() {
         return this.membershipResources;
     }
@@ -59,6 +71,10 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
     @Import(name="resourceOptions", required=true)
     private ResourceOptionsResponse resourceOptions;
 
+    /**
+     * @return Optional. Options for Kubernetes resource generation.
+     * 
+     */
     public ResourceOptionsResponse resourceOptions() {
         return this.resourceOptions;
     }
@@ -90,29 +106,65 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
             $ = new KubernetesResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectResources The Kubernetes resources for installing the GKE Connect agent This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectResources(List<ResourceManifestResponse> connectResources) {
             $.connectResources = connectResources;
             return this;
         }
 
+        /**
+         * @param connectResources The Kubernetes resources for installing the GKE Connect agent This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectResources(ResourceManifestResponse... connectResources) {
             return connectResources(List.of(connectResources));
         }
 
+        /**
+         * @param membershipCrManifest Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipCrManifest(String membershipCrManifest) {
             $.membershipCrManifest = membershipCrManifest;
             return this;
         }
 
+        /**
+         * @param membershipResources Additional Kubernetes resources that need to be applied to the cluster after Membership creation, and after every update. This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipResources(List<ResourceManifestResponse> membershipResources) {
             $.membershipResources = membershipResources;
             return this;
         }
 
+        /**
+         * @param membershipResources Additional Kubernetes resources that need to be applied to the cluster after Membership creation, and after every update. This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipResources(ResourceManifestResponse... membershipResources) {
             return membershipResources(List.of(membershipResources));
         }
 
+        /**
+         * @param resourceOptions Optional. Options for Kubernetes resource generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceOptions(ResourceOptionsResponse resourceOptions) {
             $.resourceOptions = resourceOptions;
             return this;

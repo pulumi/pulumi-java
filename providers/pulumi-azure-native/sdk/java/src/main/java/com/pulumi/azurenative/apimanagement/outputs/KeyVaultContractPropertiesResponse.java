@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KeyVaultContractPropertiesResponse {
     /**
-     * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     * @return SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
      * 
      */
     private final @Nullable String identityClientId;
     /**
-     * Last time sync and refresh status of secret from key vault.
+     * @return Last time sync and refresh status of secret from key vault.
      * 
      */
     private final @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus;
     /**
-     * Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+     * @return Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
      * 
      */
     private final @Nullable String secretIdentifier;
@@ -39,23 +39,23 @@ public final class KeyVaultContractPropertiesResponse {
     }
 
     /**
-     * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     * @return SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
      * 
-    */
+     */
     public Optional<String> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
     /**
-     * Last time sync and refresh status of secret from key vault.
+     * @return Last time sync and refresh status of secret from key vault.
      * 
-    */
+     */
     public Optional<KeyVaultLastAccessStatusContractPropertiesResponse> lastStatus() {
         return Optional.ofNullable(this.lastStatus);
     }
     /**
-     * Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+     * @return Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
      * 
-    */
+     */
     public Optional<String> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }

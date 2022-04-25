@@ -23,6 +23,10 @@ public final class InstanceMessageArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="code")
     private @Nullable Output<InstanceMessageCode> code;
 
+    /**
+     * @return A code that correspond to one type of user-facing message.
+     * 
+     */
     public Optional<Output<InstanceMessageCode>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -34,6 +38,10 @@ public final class InstanceMessageArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Message on memcached instance which will be exposed to users.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -63,20 +71,44 @@ public final class InstanceMessageArgs extends com.pulumi.resources.ResourceArgs
             $ = new InstanceMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code A code that correspond to one type of user-facing message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<InstanceMessageCode> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code A code that correspond to one type of user-facing message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(InstanceMessageCode code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param message Message on memcached instance which will be exposed to users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Message on memcached instance which will be exposed to users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }

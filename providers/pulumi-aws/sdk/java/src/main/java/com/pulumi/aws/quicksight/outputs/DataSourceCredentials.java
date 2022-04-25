@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSourceCredentials {
     /**
-     * - The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to use.
-     *   When the value is not null, the `credential_pair` from the data source in the ARN is used.
+     * @return - The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to use.
+     * When the value is not null, the `credential_pair` from the data source in the ARN is used.
      * 
      */
     private final @Nullable String copySourceArn;
     /**
-     * - Credential pair. See Credential Pair below for more details.
+     * @return - Credential pair. See Credential Pair below for more details.
      * 
      */
     private final @Nullable DataSourceCredentialsCredentialPair credentialPair;
@@ -33,17 +33,17 @@ public final class DataSourceCredentials {
     }
 
     /**
-     * - The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to use.
-     *   When the value is not null, the `credential_pair` from the data source in the ARN is used.
+     * @return - The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to use.
+     * When the value is not null, the `credential_pair` from the data source in the ARN is used.
      * 
-    */
+     */
     public Optional<String> copySourceArn() {
         return Optional.ofNullable(this.copySourceArn);
     }
     /**
-     * - Credential pair. See Credential Pair below for more details.
+     * @return - Credential pair. See Credential Pair below for more details.
      * 
-    */
+     */
     public Optional<DataSourceCredentialsCredentialPair> credentialPair() {
         return Optional.ofNullable(this.credentialPair);
     }

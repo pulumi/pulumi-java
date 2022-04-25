@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DependencyResponse {
     /**
-     * The list of dependencies.
+     * @return The list of dependencies.
      * 
      */
     private final @Nullable List<BasicDependencyResponse> dependsOn;
     /**
-     * The ID of the dependency.
+     * @return The ID of the dependency.
      * 
      */
     private final @Nullable String id;
     /**
-     * The dependency resource name.
+     * @return The dependency resource name.
      * 
      */
     private final @Nullable String resourceName;
     /**
-     * The dependency resource type.
+     * @return The dependency resource type.
      * 
      */
     private final @Nullable String resourceType;
@@ -47,30 +47,30 @@ public final class DependencyResponse {
     }
 
     /**
-     * The list of dependencies.
+     * @return The list of dependencies.
      * 
-    */
+     */
     public List<BasicDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * The ID of the dependency.
+     * @return The ID of the dependency.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The dependency resource name.
+     * @return The dependency resource name.
      * 
-    */
+     */
     public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
-     * The dependency resource type.
+     * @return The dependency resource type.
      * 
-    */
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }

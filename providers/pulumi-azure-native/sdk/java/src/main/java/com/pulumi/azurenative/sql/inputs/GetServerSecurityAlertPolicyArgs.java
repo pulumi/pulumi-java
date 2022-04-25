@@ -19,6 +19,10 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
     @Import(name="securityAlertPolicyName", required=true)
     private String securityAlertPolicyName;
 
+    /**
+     * @return The name of the security alert policy.
+     * 
+     */
     public String securityAlertPolicyName() {
         return this.securityAlertPolicyName;
     }
@@ -41,6 +49,10 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -71,16 +83,34 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
             $ = new GetServerSecurityAlertPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param securityAlertPolicyName The name of the security alert policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityAlertPolicyName(String securityAlertPolicyName) {
             $.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

@@ -35,6 +35,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="aadResourceId", required=true)
     private Output<Object> aadResourceId;
 
+    /**
+     * @return Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> aadResourceId() {
         return this.aadResourceId;
     }
@@ -46,6 +50,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +65,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -68,6 +80,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -79,6 +95,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -90,6 +110,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -101,6 +125,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="servicePrincipalId", required=true)
     private Output<Object> servicePrincipalId;
 
+    /**
+     * @return Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId;
     }
@@ -112,6 +140,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="servicePrincipalKey", required=true)
     private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
+    /**
+     * @return Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey;
     }
@@ -123,6 +155,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="tenant", required=true)
     private Output<Object> tenant;
 
+    /**
+     * @return Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> tenant() {
         return this.tenant;
     }
@@ -135,6 +171,11 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;DynamicsAX&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -146,6 +187,10 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="url", required=true)
     private Output<Object> url;
 
+    /**
+     * @return The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
+     * 
+     */
     public Output<Object> url() {
         return this.url;
     }
@@ -184,113 +229,265 @@ public final class DynamicsAXLinkedServiceArgs extends com.pulumi.resources.Reso
             $ = new DynamicsAXLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadResourceId Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadResourceId(Output<Object> aadResourceId) {
             $.aadResourceId = aadResourceId;
             return this;
         }
 
+        /**
+         * @param aadResourceId Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadResourceId(Object aadResourceId) {
             return aadResourceId(Output.of(aadResourceId));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param servicePrincipalId Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(Output<Object> servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalId Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(Object servicePrincipalId) {
             return servicePrincipalId(Output.of(servicePrincipalId));
         }
 
+        /**
+         * @param servicePrincipalKey Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
+        /**
+         * @param tenant Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(Output<Object> tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param tenant Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(Object tenant) {
             return tenant(Output.of(tenant));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;DynamicsAX&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;DynamicsAX&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param url The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<Object> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             return url(Output.of(url));
         }

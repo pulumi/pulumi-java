@@ -27,6 +27,10 @@ public final class OnPremClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminCluster")
     private @Nullable Output<Boolean> adminCluster;
 
+    /**
+     * @return Immutable. Whether the cluster is an admin cluster.
+     * 
+     */
     public Optional<Output<Boolean>> adminCluster() {
         return Optional.ofNullable(this.adminCluster);
     }
@@ -38,6 +42,10 @@ public final class OnPremClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceLink")
     private @Nullable Output<String> resourceLink;
 
+    /**
+     * @return Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+     * 
+     */
     public Optional<Output<String>> resourceLink() {
         return Optional.ofNullable(this.resourceLink);
     }
@@ -67,20 +75,44 @@ public final class OnPremClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OnPremClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminCluster Immutable. Whether the cluster is an admin cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminCluster(@Nullable Output<Boolean> adminCluster) {
             $.adminCluster = adminCluster;
             return this;
         }
 
+        /**
+         * @param adminCluster Immutable. Whether the cluster is an admin cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminCluster(Boolean adminCluster) {
             return adminCluster(Output.of(adminCluster));
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
             $.resourceLink = resourceLink;
             return this;
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(String resourceLink) {
             return resourceLink(Output.of(resourceLink));
         }

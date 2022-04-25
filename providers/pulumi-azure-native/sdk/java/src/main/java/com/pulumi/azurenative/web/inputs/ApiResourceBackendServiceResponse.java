@@ -25,6 +25,10 @@ public final class ApiResourceBackendServiceResponse extends com.pulumi.resource
     @Import(name="serviceUrl")
     private @Nullable String serviceUrl;
 
+    /**
+     * @return The service URL
+     * 
+     */
     public Optional<String> serviceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
@@ -53,6 +57,12 @@ public final class ApiResourceBackendServiceResponse extends com.pulumi.resource
             $ = new ApiResourceBackendServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serviceUrl The service URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUrl(@Nullable String serviceUrl) {
             $.serviceUrl = serviceUrl;
             return this;

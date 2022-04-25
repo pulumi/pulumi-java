@@ -26,6 +26,10 @@ public final class SsisEnvironmentReferenceResponse extends com.pulumi.resources
     @Import(name="environmentFolderName")
     private @Nullable String environmentFolderName;
 
+    /**
+     * @return Environment folder name.
+     * 
+     */
     public Optional<String> environmentFolderName() {
         return Optional.ofNullable(this.environmentFolderName);
     }
@@ -37,6 +41,10 @@ public final class SsisEnvironmentReferenceResponse extends com.pulumi.resources
     @Import(name="environmentName")
     private @Nullable String environmentName;
 
+    /**
+     * @return Environment name.
+     * 
+     */
     public Optional<String> environmentName() {
         return Optional.ofNullable(this.environmentName);
     }
@@ -48,6 +56,10 @@ public final class SsisEnvironmentReferenceResponse extends com.pulumi.resources
     @Import(name="id")
     private @Nullable Double id;
 
+    /**
+     * @return Environment reference id.
+     * 
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
@@ -59,6 +71,10 @@ public final class SsisEnvironmentReferenceResponse extends com.pulumi.resources
     @Import(name="referenceType")
     private @Nullable String referenceType;
 
+    /**
+     * @return Reference type
+     * 
+     */
     public Optional<String> referenceType() {
         return Optional.ofNullable(this.referenceType);
     }
@@ -90,21 +106,45 @@ public final class SsisEnvironmentReferenceResponse extends com.pulumi.resources
             $ = new SsisEnvironmentReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentFolderName Environment folder name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentFolderName(@Nullable String environmentFolderName) {
             $.environmentFolderName = environmentFolderName;
             return this;
         }
 
+        /**
+         * @param environmentName Environment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(@Nullable String environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param id Environment reference id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Double id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param referenceType Reference type
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(@Nullable String referenceType) {
             $.referenceType = referenceType;
             return this;

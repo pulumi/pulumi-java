@@ -26,6 +26,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -37,6 +41,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the instance.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -61,6 +73,12 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileShares")
     private @Nullable Output<InstanceFileSharesGetArgs> fileShares;
 
+    /**
+     * @return File system shares on the instance. For this version, only a
+     * single file share is supported.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<InstanceFileSharesGetArgs>> fileShares() {
         return Optional.ofNullable(this.fileShares);
     }
@@ -72,6 +90,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user-provided metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -83,6 +105,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -94,6 +120,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the fileshare (16 characters or less)
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -107,6 +137,12 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networks")
     private @Nullable Output<List<InstanceNetworkGetArgs>> networks;
 
+    /**
+     * @return VPC networks to which the instance is connected. For this version,
+     * only a single network is supported.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<InstanceNetworkGetArgs>>> networks() {
         return Optional.ofNullable(this.networks);
     }
@@ -119,6 +155,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -131,6 +172,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return The service tier of the instance.
+     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -148,6 +194,15 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return -
+     * (Optional, Deprecated)
+     * The name of the Filestore zone of the instance.
+     * 
+     * @deprecated
+     * Deprecated in favor of location.
+     * 
+     */
     @Deprecated /* Deprecated in favor of location. */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
@@ -187,105 +242,269 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param description A description of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param fileShares File system shares on the instance. For this version, only a
+         * single file share is supported.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShares(@Nullable Output<InstanceFileSharesGetArgs> fileShares) {
             $.fileShares = fileShares;
             return this;
         }
 
+        /**
+         * @param fileShares File system shares on the instance. For this version, only a
+         * single file share is supported.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShares(InstanceFileSharesGetArgs fileShares) {
             return fileShares(Output.of(fileShares));
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the fileshare (16 characters or less)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the fileshare (16 characters or less)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networks VPC networks to which the instance is connected. For this version,
+         * only a single network is supported.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(@Nullable Output<List<InstanceNetworkGetArgs>> networks) {
             $.networks = networks;
             return this;
         }
 
+        /**
+         * @param networks VPC networks to which the instance is connected. For this version,
+         * only a single network is supported.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(List<InstanceNetworkGetArgs> networks) {
             return networks(Output.of(networks));
         }
 
+        /**
+         * @param networks VPC networks to which the instance is connected. For this version,
+         * only a single network is supported.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(InstanceNetworkGetArgs... networks) {
             return networks(List.of(networks));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param tier The service tier of the instance.
+         * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The service tier of the instance.
+         * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param zone -
+         * (Optional, Deprecated)
+         * The name of the Filestore zone of the instance.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of location.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of location. */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone -
+         * (Optional, Deprecated)
+         * The name of the Filestore zone of the instance.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of location.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of location. */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

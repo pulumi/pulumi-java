@@ -27,6 +27,11 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse extends c
     @Import(name="endpointType", required=true)
     private String endpointType;
 
+    /**
+     * @return Type of the endpoint for the event subscription destination.
+     * Expected value is &#39;ServiceBusTopic&#39;.
+     * 
+     */
     public String endpointType() {
         return this.endpointType;
     }
@@ -38,6 +43,10 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse extends c
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -67,11 +76,24 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse extends c
             $ = new ServiceBusTopicEventSubscriptionDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;ServiceBusTopic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param resourceId The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

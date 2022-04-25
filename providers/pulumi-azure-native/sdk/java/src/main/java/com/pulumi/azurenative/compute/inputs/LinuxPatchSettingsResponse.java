@@ -25,6 +25,10 @@ public final class LinuxPatchSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="assessmentMode")
     private @Nullable String assessmentMode;
 
+    /**
+     * @return Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+     * 
+     */
     public Optional<String> assessmentMode() {
         return Optional.ofNullable(this.assessmentMode);
     }
@@ -36,6 +40,10 @@ public final class LinuxPatchSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="patchMode")
     private @Nullable String patchMode;
 
+    /**
+     * @return Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - The virtual machine&#39;s default patching configuration is used. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
+     * 
+     */
     public Optional<String> patchMode() {
         return Optional.ofNullable(this.patchMode);
     }
@@ -65,11 +73,23 @@ public final class LinuxPatchSettingsResponse extends com.pulumi.resources.Invok
             $ = new LinuxPatchSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentMode Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - You control the timing of patch assessments on a virtual machine. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentMode(@Nullable String assessmentMode) {
             $.assessmentMode = assessmentMode;
             return this;
         }
 
+        /**
+         * @param patchMode Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.&lt;br /&gt;&lt;br /&gt; Possible values are:&lt;br /&gt;&lt;br /&gt; **ImageDefault** - The virtual machine&#39;s default patching configuration is used. &lt;br /&gt;&lt;br /&gt; **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchMode(@Nullable String patchMode) {
             $.patchMode = patchMode;
             return this;

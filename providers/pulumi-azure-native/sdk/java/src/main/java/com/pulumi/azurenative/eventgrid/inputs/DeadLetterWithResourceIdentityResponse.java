@@ -27,6 +27,11 @@ public final class DeadLetterWithResourceIdentityResponse extends com.pulumi.res
     @Import(name="deadLetterDestination")
     private @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination;
 
+    /**
+     * @return Information about the destination where events have to be delivered for the event subscription.
+     * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     public Optional<StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
@@ -38,6 +43,10 @@ public final class DeadLetterWithResourceIdentityResponse extends com.pulumi.res
     @Import(name="identity")
     private @Nullable EventSubscriptionIdentityResponse identity;
 
+    /**
+     * @return The identity to use when dead-lettering events.
+     * 
+     */
     public Optional<EventSubscriptionIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -67,11 +76,24 @@ public final class DeadLetterWithResourceIdentityResponse extends com.pulumi.res
             $ = new DeadLetterWithResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deadLetterDestination Information about the destination where events have to be delivered for the event subscription.
+         * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination) {
             $.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
+        /**
+         * @param identity The identity to use when dead-lettering events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
             $.identity = identity;
             return this;

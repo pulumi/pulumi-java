@@ -26,6 +26,10 @@ public final class HttpRouteConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="destination", required=true)
     private Output<GatewayDestinationArgs> destination;
 
+    /**
+     * @return Describes destination endpoint for routing traffic.
+     * 
+     */
     public Output<GatewayDestinationArgs> destination() {
         return this.destination;
     }
@@ -37,6 +41,10 @@ public final class HttpRouteConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="match", required=true)
     private Output<HttpRouteMatchRuleArgs> match;
 
+    /**
+     * @return Describes a rule for http route matching.
+     * 
+     */
     public Output<HttpRouteMatchRuleArgs> match() {
         return this.match;
     }
@@ -48,6 +56,10 @@ public final class HttpRouteConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return http route name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -78,29 +90,65 @@ public final class HttpRouteConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new HttpRouteConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Describes destination endpoint for routing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<GatewayDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Describes destination endpoint for routing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(GatewayDestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param match Describes a rule for http route matching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(Output<HttpRouteMatchRuleArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match Describes a rule for http route matching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(HttpRouteMatchRuleArgs match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param name http route name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name http route name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

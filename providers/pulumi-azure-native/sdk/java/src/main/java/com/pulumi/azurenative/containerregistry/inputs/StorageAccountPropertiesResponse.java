@@ -23,6 +23,10 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource ID of the storage account.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
             $ = new StorageAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource ID of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

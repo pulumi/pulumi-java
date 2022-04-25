@@ -24,6 +24,10 @@ public final class NetworkInterfaceSubInterfaceArgs extends com.pulumi.resources
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return An IPv4 internal IP address to assign to the instance for this subinterface. If specified, ip_allocation_mode should be set to ALLOCATE_IP.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -42,6 +46,10 @@ public final class NetworkInterfaceSubInterfaceArgs extends com.pulumi.resources
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return If specified, this subnetwork must belong to the same network as that of the network interface. If not specified the subnet of network interface will be used. If you specify this property, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -53,6 +61,10 @@ public final class NetworkInterfaceSubInterfaceArgs extends com.pulumi.resources
     @Import(name="vlan")
     private @Nullable Output<Integer> vlan;
 
+    /**
+     * @return VLAN tag. Should match the VLAN(s) supported by the subnetwork to which this subinterface is connecting.
+     * 
+     */
     public Optional<Output<Integer>> vlan() {
         return Optional.ofNullable(this.vlan);
     }
@@ -84,11 +96,23 @@ public final class NetworkInterfaceSubInterfaceArgs extends com.pulumi.resources
             $ = new NetworkInterfaceSubInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress An IPv4 internal IP address to assign to the instance for this subinterface. If specified, ip_allocation_mode should be set to ALLOCATE_IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress An IPv4 internal IP address to assign to the instance for this subinterface. If specified, ip_allocation_mode should be set to ALLOCATE_IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
@@ -102,20 +126,44 @@ public final class NetworkInterfaceSubInterfaceArgs extends com.pulumi.resources
             return ipAllocationMode(Output.of(ipAllocationMode));
         }
 
+        /**
+         * @param subnetwork If specified, this subnetwork must belong to the same network as that of the network interface. If not specified the subnet of network interface will be used. If you specify this property, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork If specified, this subnetwork must belong to the same network as that of the network interface. If not specified the subnet of network interface will be used. If you specify this property, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }
 
+        /**
+         * @param vlan VLAN tag. Should match the VLAN(s) supported by the subnetwork to which this subinterface is connecting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlan(@Nullable Output<Integer> vlan) {
             $.vlan = vlan;
             return this;
         }
 
+        /**
+         * @param vlan VLAN tag. Should match the VLAN(s) supported by the subnetwork to which this subinterface is connecting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlan(Integer vlan) {
             return vlan(Output.of(vlan));
         }

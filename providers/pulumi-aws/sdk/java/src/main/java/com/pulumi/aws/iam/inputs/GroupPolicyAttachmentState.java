@@ -22,6 +22,10 @@ public final class GroupPolicyAttachmentState extends com.pulumi.resources.Resou
     @Import(name="group")
     private @Nullable Output<String> group;
 
+    /**
+     * @return The group the policy should be applied to
+     * 
+     */
     public Optional<Output<String>> group() {
         return Optional.ofNullable(this.group);
     }
@@ -33,6 +37,10 @@ public final class GroupPolicyAttachmentState extends com.pulumi.resources.Resou
     @Import(name="policyArn")
     private @Nullable Output<String> policyArn;
 
+    /**
+     * @return The ARN of the policy you want to apply
+     * 
+     */
     public Optional<Output<String>> policyArn() {
         return Optional.ofNullable(this.policyArn);
     }
@@ -62,20 +70,44 @@ public final class GroupPolicyAttachmentState extends com.pulumi.resources.Resou
             $ = new GroupPolicyAttachmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param group The group the policy should be applied to
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(@Nullable Output<String> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group The group the policy should be applied to
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param policyArn The ARN of the policy you want to apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArn(@Nullable Output<String> policyArn) {
             $.policyArn = policyArn;
             return this;
         }
 
+        /**
+         * @param policyArn The ARN of the policy you want to apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyArn(String policyArn) {
             return policyArn(Output.of(policyArn));
         }

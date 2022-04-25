@@ -27,6 +27,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of application gateway private link ip configuration.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="primary")
     private @Nullable Boolean primary;
 
+    /**
+     * @return Whether the ip configuration is primary or not.
+     * 
+     */
     public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
@@ -71,6 +87,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="privateIPAddress")
     private @Nullable String privateIPAddress;
 
+    /**
+     * @return The private IP address of the IP configuration.
+     * 
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -82,6 +102,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="privateIPAllocationMethod")
     private @Nullable String privateIPAllocationMethod;
 
+    /**
+     * @return The private IP address allocation method.
+     * 
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -93,6 +117,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the application gateway private link IP configuration.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -104,6 +132,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="subnet")
     private @Nullable SubResourceResponse subnet;
 
+    /**
+     * @return Reference to the subnet resource.
+     * 
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -115,6 +147,10 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -151,46 +187,100 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
             $ = new ApplicationGatewayPrivateLinkIpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of application gateway private link ip configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param primary Whether the ip configuration is primary or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(@Nullable Boolean primary) {
             $.primary = primary;
             return this;
         }
 
+        /**
+         * @param privateIPAddress The private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the application gateway private link IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param subnet Reference to the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

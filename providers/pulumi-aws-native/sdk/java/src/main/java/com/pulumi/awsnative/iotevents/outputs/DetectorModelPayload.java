@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DetectorModelPayload {
     /**
-     * The content of the payload. You can use a string expression that includes quoted strings (`&#39;&lt;string&gt;&#39;`), variables (`$variable.&lt;variable-name&gt;`), input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
+     * @return The content of the payload. You can use a string expression that includes quoted strings (`&#39;&lt;string&gt;&#39;`), variables (`$variable.&lt;variable-name&gt;`), input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
      * 
      */
     private final String contentExpression;
     /**
-     * The value of the payload type can be either `STRING` or `JSON`.
+     * @return The value of the payload type can be either `STRING` or `JSON`.
      * 
      */
     private final String type;
@@ -29,16 +29,16 @@ public final class DetectorModelPayload {
     }
 
     /**
-     * The content of the payload. You can use a string expression that includes quoted strings (`&#39;&lt;string&gt;&#39;`), variables (`$variable.&lt;variable-name&gt;`), input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
+     * @return The content of the payload. You can use a string expression that includes quoted strings (`&#39;&lt;string&gt;&#39;`), variables (`$variable.&lt;variable-name&gt;`), input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
      * 
-    */
+     */
     public String contentExpression() {
         return this.contentExpression;
     }
     /**
-     * The value of the payload type can be either `STRING` or `JSON`.
+     * @return The value of the payload type can be either `STRING` or `JSON`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

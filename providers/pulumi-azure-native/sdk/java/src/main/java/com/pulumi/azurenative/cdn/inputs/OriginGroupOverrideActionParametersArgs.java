@@ -32,6 +32,10 @@ public final class OriginGroupOverrideActionParametersArgs extends com.pulumi.re
     @Import(name="originGroup", required=true)
     private Output<ResourceReferenceArgs> originGroup;
 
+    /**
+     * @return defines the OriginGroup that would override the DefaultOriginGroup.
+     * 
+     */
     public Output<ResourceReferenceArgs> originGroup() {
         return this.originGroup;
     }
@@ -70,11 +74,23 @@ public final class OriginGroupOverrideActionParametersArgs extends com.pulumi.re
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param originGroup defines the OriginGroup that would override the DefaultOriginGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroup(Output<ResourceReferenceArgs> originGroup) {
             $.originGroup = originGroup;
             return this;
         }
 
+        /**
+         * @param originGroup defines the OriginGroup that would override the DefaultOriginGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroup(ResourceReferenceArgs originGroup) {
             return originGroup(Output.of(originGroup));
         }

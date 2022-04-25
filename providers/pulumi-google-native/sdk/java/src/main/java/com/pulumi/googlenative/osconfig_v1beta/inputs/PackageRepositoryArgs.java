@@ -29,6 +29,10 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="apt")
     private @Nullable Output<AptRepositoryArgs> apt;
 
+    /**
+     * @return An Apt Repository.
+     * 
+     */
     public Optional<Output<AptRepositoryArgs>> apt() {
         return Optional.ofNullable(this.apt);
     }
@@ -40,6 +44,10 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="goo")
     private @Nullable Output<GooRepositoryArgs> goo;
 
+    /**
+     * @return A Goo Repository.
+     * 
+     */
     public Optional<Output<GooRepositoryArgs>> goo() {
         return Optional.ofNullable(this.goo);
     }
@@ -51,6 +59,10 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="yum")
     private @Nullable Output<YumRepositoryArgs> yum;
 
+    /**
+     * @return A Yum Repository.
+     * 
+     */
     public Optional<Output<YumRepositoryArgs>> yum() {
         return Optional.ofNullable(this.yum);
     }
@@ -62,6 +74,10 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="zypper")
     private @Nullable Output<ZypperRepositoryArgs> zypper;
 
+    /**
+     * @return A Zypper Repository.
+     * 
+     */
     public Optional<Output<ZypperRepositoryArgs>> zypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -93,38 +109,86 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
             $ = new PackageRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(@Nullable Output<AptRepositoryArgs> apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(AptRepositoryArgs apt) {
             return apt(Output.of(apt));
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(@Nullable Output<GooRepositoryArgs> goo) {
             $.goo = goo;
             return this;
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(GooRepositoryArgs goo) {
             return goo(Output.of(goo));
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(@Nullable Output<YumRepositoryArgs> yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(YumRepositoryArgs yum) {
             return yum(Output.of(yum));
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(@Nullable Output<ZypperRepositoryArgs> zypper) {
             $.zypper = zypper;
             return this;
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(ZypperRepositoryArgs zypper) {
             return zypper(Output.of(zypper));
         }

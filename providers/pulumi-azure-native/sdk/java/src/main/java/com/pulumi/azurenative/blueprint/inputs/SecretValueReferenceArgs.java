@@ -27,6 +27,10 @@ public final class SecretValueReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVault", required=true)
     private Output<KeyVaultReferenceArgs> keyVault;
 
+    /**
+     * @return Specifies the reference to a given Azure Key Vault.
+     * 
+     */
     public Output<KeyVaultReferenceArgs> keyVault() {
         return this.keyVault;
     }
@@ -38,6 +42,10 @@ public final class SecretValueReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="secretName", required=true)
     private Output<String> secretName;
 
+    /**
+     * @return Name of the secret.
+     * 
+     */
     public Output<String> secretName() {
         return this.secretName;
     }
@@ -49,6 +57,10 @@ public final class SecretValueReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="secretVersion")
     private @Nullable Output<String> secretVersion;
 
+    /**
+     * @return The version of the secret to use. If left blank, the latest version of the secret is used.
+     * 
+     */
     public Optional<Output<String>> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -79,29 +91,65 @@ public final class SecretValueReferenceArgs extends com.pulumi.resources.Resourc
             $ = new SecretValueReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVault Specifies the reference to a given Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(Output<KeyVaultReferenceArgs> keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param keyVault Specifies the reference to a given Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(KeyVaultReferenceArgs keyVault) {
             return keyVault(Output.of(keyVault));
         }
 
+        /**
+         * @param secretName Name of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(Output<String> secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretName Name of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             return secretName(Output.of(secretName));
         }
 
+        /**
+         * @param secretVersion The version of the secret to use. If left blank, the latest version of the secret is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param secretVersion The version of the secret to use. If left blank, the latest version of the secret is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(String secretVersion) {
             return secretVersion(Output.of(secretVersion));
         }

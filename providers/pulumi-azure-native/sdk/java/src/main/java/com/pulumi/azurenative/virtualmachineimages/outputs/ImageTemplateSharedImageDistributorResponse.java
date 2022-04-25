@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageTemplateSharedImageDistributorResponse {
     /**
-     * Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
      */
     private final @Nullable Map<String,String> artifactTags;
     /**
-     * Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
+     * @return Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
      * 
      */
     private final @Nullable Boolean excludeFromLatest;
     /**
-     * Resource Id of the Shared Image Gallery image
+     * @return Resource Id of the Shared Image Gallery image
      * 
      */
     private final String galleryImageId;
     /**
-     * A list of regions that the image will be replicated to
+     * @return A list of regions that the image will be replicated to
      * 
      */
     private final List<String> replicationRegions;
     /**
-     * The name to be used for the associated RunOutput.
+     * @return The name to be used for the associated RunOutput.
      * 
      */
     private final String runOutputName;
     /**
-     * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+     * @return Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
      * 
      */
     private final @Nullable String storageAccountType;
     /**
-     * Type of distribution.
+     * @return Type of distribution.
      * Expected value is &#39;SharedImage&#39;.
      * 
      */
@@ -70,52 +70,52 @@ public final class ImageTemplateSharedImageDistributorResponse {
     }
 
     /**
-     * Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
-    */
+     */
     public Map<String,String> artifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
     /**
-     * Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
+     * @return Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
      * 
-    */
+     */
     public Optional<Boolean> excludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
     /**
-     * Resource Id of the Shared Image Gallery image
+     * @return Resource Id of the Shared Image Gallery image
      * 
-    */
+     */
     public String galleryImageId() {
         return this.galleryImageId;
     }
     /**
-     * A list of regions that the image will be replicated to
+     * @return A list of regions that the image will be replicated to
      * 
-    */
+     */
     public List<String> replicationRegions() {
         return this.replicationRegions;
     }
     /**
-     * The name to be used for the associated RunOutput.
+     * @return The name to be used for the associated RunOutput.
      * 
-    */
+     */
     public String runOutputName() {
         return this.runOutputName;
     }
     /**
-     * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+     * @return Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
      * 
-    */
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
-     * Type of distribution.
+     * @return Type of distribution.
      * Expected value is &#39;SharedImage&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

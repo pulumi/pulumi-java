@@ -25,6 +25,10 @@ public final class NatGatewaySkuResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of Nat Gateway SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class NatGatewaySkuResponse extends com.pulumi.resources.InvokeArgs
             $ = new NatGatewaySkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of Nat Gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

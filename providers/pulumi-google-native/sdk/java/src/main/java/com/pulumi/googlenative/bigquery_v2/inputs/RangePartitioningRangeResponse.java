@@ -23,6 +23,10 @@ public final class RangePartitioningRangeResponse extends com.pulumi.resources.I
     @Import(name="end", required=true)
     private String end;
 
+    /**
+     * @return [TrustedTester] [Required] The end of range partitioning, exclusive.
+     * 
+     */
     public String end() {
         return this.end;
     }
@@ -34,6 +38,10 @@ public final class RangePartitioningRangeResponse extends com.pulumi.resources.I
     @Import(name="interval", required=true)
     private String interval;
 
+    /**
+     * @return [TrustedTester] [Required] The width of each interval.
+     * 
+     */
     public String interval() {
         return this.interval;
     }
@@ -45,6 +53,10 @@ public final class RangePartitioningRangeResponse extends com.pulumi.resources.I
     @Import(name="start", required=true)
     private String start;
 
+    /**
+     * @return [TrustedTester] [Required] The start of range partitioning, inclusive.
+     * 
+     */
     public String start() {
         return this.start;
     }
@@ -75,16 +87,34 @@ public final class RangePartitioningRangeResponse extends com.pulumi.resources.I
             $ = new RangePartitioningRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end [TrustedTester] [Required] The end of range partitioning, exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(String end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param interval [TrustedTester] [Required] The width of each interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(String interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param start [TrustedTester] [Required] The start of range partitioning, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             $.start = start;
             return this;

@@ -26,6 +26,10 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends com.pulumi.resou
     @Import(name="killChainName")
     private @Nullable Output<String> killChainName;
 
+    /**
+     * @return Kill chainName name
+     * 
+     */
     public Optional<Output<String>> killChainName() {
         return Optional.ofNullable(this.killChainName);
     }
@@ -37,6 +41,10 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends com.pulumi.resou
     @Import(name="phaseName")
     private @Nullable Output<String> phaseName;
 
+    /**
+     * @return Phase name
+     * 
+     */
     public Optional<Output<String>> phaseName() {
         return Optional.ofNullable(this.phaseName);
     }
@@ -66,20 +74,44 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends com.pulumi.resou
             $ = new ThreatIntelligenceKillChainPhaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param killChainName Kill chainName name
+         * 
+         * @return builder
+         * 
+         */
         public Builder killChainName(@Nullable Output<String> killChainName) {
             $.killChainName = killChainName;
             return this;
         }
 
+        /**
+         * @param killChainName Kill chainName name
+         * 
+         * @return builder
+         * 
+         */
         public Builder killChainName(String killChainName) {
             return killChainName(Output.of(killChainName));
         }
 
+        /**
+         * @param phaseName Phase name
+         * 
+         * @return builder
+         * 
+         */
         public Builder phaseName(@Nullable Output<String> phaseName) {
             $.phaseName = phaseName;
             return this;
         }
 
+        /**
+         * @param phaseName Phase name
+         * 
+         * @return builder
+         * 
+         */
         public Builder phaseName(String phaseName) {
             return phaseName(Output.of(phaseName));
         }

@@ -22,6 +22,10 @@ public final class DatabaseEncryptionConfigurationGetArgs extends com.pulumi.res
     @Import(name="encryptionOption", required=true)
     private Output<String> encryptionOption;
 
+    /**
+     * @return The type of key; one of `SSE_S3`, `SSE_KMS`, `CSE_KMS`
+     * 
+     */
     public Output<String> encryptionOption() {
         return this.encryptionOption;
     }
@@ -33,6 +37,10 @@ public final class DatabaseEncryptionConfigurationGetArgs extends com.pulumi.res
     @Import(name="kmsKey")
     private @Nullable Output<String> kmsKey;
 
+    /**
+     * @return The KMS key ARN or ID; required for key types `SSE_KMS` and `CSE_KMS`.
+     * 
+     */
     public Optional<Output<String>> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -62,20 +70,44 @@ public final class DatabaseEncryptionConfigurationGetArgs extends com.pulumi.res
             $ = new DatabaseEncryptionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionOption The type of key; one of `SSE_S3`, `SSE_KMS`, `CSE_KMS`
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionOption(Output<String> encryptionOption) {
             $.encryptionOption = encryptionOption;
             return this;
         }
 
+        /**
+         * @param encryptionOption The type of key; one of `SSE_S3`, `SSE_KMS`, `CSE_KMS`
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionOption(String encryptionOption) {
             return encryptionOption(Output.of(encryptionOption));
         }
 
+        /**
+         * @param kmsKey The KMS key ARN or ID; required for key types `SSE_KMS` and `CSE_KMS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey The KMS key ARN or ID; required for key types `SSE_KMS` and `CSE_KMS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }

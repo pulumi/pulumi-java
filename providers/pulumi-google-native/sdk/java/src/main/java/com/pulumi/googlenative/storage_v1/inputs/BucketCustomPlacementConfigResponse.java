@@ -24,6 +24,10 @@ public final class BucketCustomPlacementConfigResponse extends com.pulumi.resour
     @Import(name="dataLocations", required=true)
     private List<String> dataLocations;
 
+    /**
+     * @return The list of regional locations in which data is placed.
+     * 
+     */
     public List<String> dataLocations() {
         return this.dataLocations;
     }
@@ -52,11 +56,23 @@ public final class BucketCustomPlacementConfigResponse extends com.pulumi.resour
             $ = new BucketCustomPlacementConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataLocations The list of regional locations in which data is placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocations(List<String> dataLocations) {
             $.dataLocations = dataLocations;
             return this;
         }
 
+        /**
+         * @param dataLocations The list of regional locations in which data is placed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLocations(String... dataLocations) {
             return dataLocations(List.of(dataLocations));
         }

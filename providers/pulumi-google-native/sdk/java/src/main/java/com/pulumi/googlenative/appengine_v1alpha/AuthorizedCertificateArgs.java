@@ -30,6 +30,10 @@ public final class AuthorizedCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="certificateRawData")
     private @Nullable Output<CertificateRawDataArgs> certificateRawData;
 
+    /**
+     * @return The SSL certificate serving the AuthorizedCertificate resource. This must be obtained independently from a certificate authority.
+     * 
+     */
     public Optional<Output<CertificateRawDataArgs>> certificateRawData() {
         return Optional.ofNullable(this.certificateRawData);
     }
@@ -41,6 +45,10 @@ public final class AuthorizedCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The user-specified display name of the certificate. This is not guaranteed to be unique. Example: My Certificate.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -80,20 +88,44 @@ public final class AuthorizedCertificateArgs extends com.pulumi.resources.Resour
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param certificateRawData The SSL certificate serving the AuthorizedCertificate resource. This must be obtained independently from a certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateRawData(@Nullable Output<CertificateRawDataArgs> certificateRawData) {
             $.certificateRawData = certificateRawData;
             return this;
         }
 
+        /**
+         * @param certificateRawData The SSL certificate serving the AuthorizedCertificate resource. This must be obtained independently from a certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateRawData(CertificateRawDataArgs certificateRawData) {
             return certificateRawData(Output.of(certificateRawData));
         }
 
+        /**
+         * @param displayName The user-specified display name of the certificate. This is not guaranteed to be unique. Example: My Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The user-specified display name of the certificate. This is not guaranteed to be unique. Example: My Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }

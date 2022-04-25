@@ -22,6 +22,10 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
     @Import(name="apiProducts", required=true)
     private List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
 
+    /**
+     * @return List of API products this credential can be used for.
+     * 
+     */
     public List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts() {
         return this.apiProducts;
     }
@@ -33,6 +37,10 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
     @Import(name="attributes", required=true)
     private List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
+    /**
+     * @return List of attributes associated with this credential.
+     * 
+     */
     public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
@@ -44,6 +52,10 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
     @Import(name="consumerKey", required=true)
     private String consumerKey;
 
+    /**
+     * @return Consumer key.
+     * 
+     */
     public String consumerKey() {
         return this.consumerKey;
     }
@@ -55,6 +67,10 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
     @Import(name="consumerSecret", required=true)
     private String consumerSecret;
 
+    /**
+     * @return Secret key.
+     * 
+     */
     public String consumerSecret() {
         return this.consumerSecret;
     }
@@ -66,6 +82,10 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
     @Import(name="expiresAt", required=true)
     private String expiresAt;
 
+    /**
+     * @return Time the credential will expire in milliseconds since epoch.
+     * 
+     */
     public String expiresAt() {
         return this.expiresAt;
     }
@@ -77,6 +97,10 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
     @Import(name="issuedAt", required=true)
     private String issuedAt;
 
+    /**
+     * @return Time the credential was issued in milliseconds since epoch.
+     * 
+     */
     public String issuedAt() {
         return this.issuedAt;
     }
@@ -88,6 +112,10 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
     @Import(name="scopes", required=true)
     private List<String> scopes;
 
+    /**
+     * @return List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
+     * 
+     */
     public List<String> scopes() {
         return this.scopes;
     }
@@ -99,6 +127,10 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the credential. Valid values include `approved` or `revoked`.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -134,53 +166,119 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
             $ = new GoogleCloudApigeeV1CredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiProducts List of API products this credential can be used for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProducts(List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts) {
             $.apiProducts = apiProducts;
             return this;
         }
 
+        /**
+         * @param apiProducts List of API products this credential can be used for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProducts(GoogleCloudApigeeV1ApiProductRefResponse... apiProducts) {
             return apiProducts(List.of(apiProducts));
         }
 
+        /**
+         * @param attributes List of attributes associated with this credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes List of attributes associated with this credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(GoogleCloudApigeeV1AttributeResponse... attributes) {
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param consumerKey Consumer key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerKey(String consumerKey) {
             $.consumerKey = consumerKey;
             return this;
         }
 
+        /**
+         * @param consumerSecret Secret key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecret(String consumerSecret) {
             $.consumerSecret = consumerSecret;
             return this;
         }
 
+        /**
+         * @param expiresAt Time the credential will expire in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresAt(String expiresAt) {
             $.expiresAt = expiresAt;
             return this;
         }
 
+        /**
+         * @param issuedAt Time the credential was issued in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuedAt(String issuedAt) {
             $.issuedAt = issuedAt;
             return this;
         }
 
+        /**
+         * @param scopes List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
 
+        /**
+         * @param status Status of the credential. Valid values include `approved` or `revoked`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

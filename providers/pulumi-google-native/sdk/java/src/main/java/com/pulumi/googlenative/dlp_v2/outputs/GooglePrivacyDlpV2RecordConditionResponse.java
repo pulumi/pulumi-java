@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2RecordConditionResponse {
     /**
-     * An expression.
+     * @return An expression.
      * 
      */
     private final GooglePrivacyDlpV2ExpressionsResponse expressions;
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2RecordConditionResponse {
     }
 
     /**
-     * An expression.
+     * @return An expression.
      * 
-    */
+     */
     public GooglePrivacyDlpV2ExpressionsResponse expressions() {
         return this.expressions;
     }

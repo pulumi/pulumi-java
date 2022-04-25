@@ -27,6 +27,10 @@ public final class ForwardProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="convention")
     private @Nullable Output<ForwardProxyConvention> convention;
 
+    /**
+     * @return The convention used to determine the url of the request made.
+     * 
+     */
     public Optional<Output<ForwardProxyConvention>> convention() {
         return Optional.ofNullable(this.convention);
     }
@@ -38,6 +42,10 @@ public final class ForwardProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customHostHeaderName")
     private @Nullable Output<String> customHostHeaderName;
 
+    /**
+     * @return The name of the header containing the host of the request.
+     * 
+     */
     public Optional<Output<String>> customHostHeaderName() {
         return Optional.ofNullable(this.customHostHeaderName);
     }
@@ -49,6 +57,10 @@ public final class ForwardProxyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customProtoHeaderName")
     private @Nullable Output<String> customProtoHeaderName;
 
+    /**
+     * @return The name of the header containing the scheme of the request.
+     * 
+     */
     public Optional<Output<String>> customProtoHeaderName() {
         return Optional.ofNullable(this.customProtoHeaderName);
     }
@@ -79,29 +91,65 @@ public final class ForwardProxyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ForwardProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param convention The convention used to determine the url of the request made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder convention(@Nullable Output<ForwardProxyConvention> convention) {
             $.convention = convention;
             return this;
         }
 
+        /**
+         * @param convention The convention used to determine the url of the request made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder convention(ForwardProxyConvention convention) {
             return convention(Output.of(convention));
         }
 
+        /**
+         * @param customHostHeaderName The name of the header containing the host of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHostHeaderName(@Nullable Output<String> customHostHeaderName) {
             $.customHostHeaderName = customHostHeaderName;
             return this;
         }
 
+        /**
+         * @param customHostHeaderName The name of the header containing the host of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHostHeaderName(String customHostHeaderName) {
             return customHostHeaderName(Output.of(customHostHeaderName));
         }
 
+        /**
+         * @param customProtoHeaderName The name of the header containing the scheme of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customProtoHeaderName(@Nullable Output<String> customProtoHeaderName) {
             $.customProtoHeaderName = customProtoHeaderName;
             return this;
         }
 
+        /**
+         * @param customProtoHeaderName The name of the header containing the scheme of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customProtoHeaderName(String customProtoHeaderName) {
             return customProtoHeaderName(Output.of(customProtoHeaderName));
         }

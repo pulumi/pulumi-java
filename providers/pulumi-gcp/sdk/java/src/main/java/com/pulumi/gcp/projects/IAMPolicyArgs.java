@@ -22,6 +22,12 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyData", required=true)
     private Output<String> policyData;
 
+    /**
+     * @return The `gcp.organizations.getIAMPolicy` data source that represents
+     * the IAM policy that will be applied to the project. The policy will be
+     * merged with any existing policy applied to the project.
+     * 
+     */
     public Output<String> policyData() {
         return this.policyData;
     }
@@ -34,6 +40,11 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return The project id of the target project. This is not
+     * inferred from the provider.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -63,20 +74,50 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyData The `gcp.organizations.getIAMPolicy` data source that represents
+         * the IAM policy that will be applied to the project. The policy will be
+         * merged with any existing policy applied to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyData(Output<String> policyData) {
             $.policyData = policyData;
             return this;
         }
 
+        /**
+         * @param policyData The `gcp.organizations.getIAMPolicy` data source that represents
+         * the IAM policy that will be applied to the project. The policy will be
+         * merged with any existing policy applied to the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyData(String policyData) {
             return policyData(Output.of(policyData));
         }
 
+        /**
+         * @param project The project id of the target project. This is not
+         * inferred from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project id of the target project. This is not
+         * inferred from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

@@ -19,6 +19,10 @@ public final class ListServerGatewayStatusArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class ListServerGatewayStatusArgs extends com.pulumi.resources.Invo
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the Analysis Services server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -59,11 +67,23 @@ public final class ListServerGatewayStatusArgs extends com.pulumi.resources.Invo
             $ = new ListServerGatewayStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the Analysis Services server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

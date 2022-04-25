@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class DiagnosticsResponse {
     /**
-     * A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
+     * @return A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
      * 
      */
     private final List<DiagnosticConditionResponse> conditions;
@@ -22,9 +22,9 @@ public final class DiagnosticsResponse {
     }
 
     /**
-     * A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
+     * @return A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
      * 
-    */
+     */
     public List<DiagnosticConditionResponse> conditions() {
         return this.conditions;
     }

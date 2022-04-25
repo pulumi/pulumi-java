@@ -27,6 +27,10 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoUser")
     private @Nullable Output<AutoUserSpecificationArgs> autoUser;
 
+    /**
+     * @return The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+     * 
+     */
     public Optional<Output<AutoUserSpecificationArgs>> autoUser() {
         return Optional.ofNullable(this.autoUser);
     }
@@ -38,6 +42,10 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -67,20 +75,44 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUser The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUser(@Nullable Output<AutoUserSpecificationArgs> autoUser) {
             $.autoUser = autoUser;
             return this;
         }
 
+        /**
+         * @param autoUser The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUser(AutoUserSpecificationArgs autoUser) {
             return autoUser(Output.of(autoUser));
         }
 
+        /**
+         * @param userName The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

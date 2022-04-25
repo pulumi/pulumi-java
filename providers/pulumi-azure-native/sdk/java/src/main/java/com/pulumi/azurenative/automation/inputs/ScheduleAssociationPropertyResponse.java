@@ -25,6 +25,10 @@ public final class ScheduleAssociationPropertyResponse extends com.pulumi.resour
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the name of the Schedule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class ScheduleAssociationPropertyResponse extends com.pulumi.resour
             $ = new ScheduleAssociationPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the name of the Schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

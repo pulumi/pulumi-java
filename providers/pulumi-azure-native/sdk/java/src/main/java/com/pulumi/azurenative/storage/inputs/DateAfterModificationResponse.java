@@ -25,6 +25,10 @@ public final class DateAfterModificationResponse extends com.pulumi.resources.In
     @Import(name="daysAfterLastAccessTimeGreaterThan")
     private @Nullable Double daysAfterLastAccessTimeGreaterThan;
 
+    /**
+     * @return Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
+     * 
+     */
     public Optional<Double> daysAfterLastAccessTimeGreaterThan() {
         return Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
@@ -36,6 +40,10 @@ public final class DateAfterModificationResponse extends com.pulumi.resources.In
     @Import(name="daysAfterModificationGreaterThan")
     private @Nullable Double daysAfterModificationGreaterThan;
 
+    /**
+     * @return Value indicating the age in days after last modification
+     * 
+     */
     public Optional<Double> daysAfterModificationGreaterThan() {
         return Optional.ofNullable(this.daysAfterModificationGreaterThan);
     }
@@ -65,11 +73,23 @@ public final class DateAfterModificationResponse extends com.pulumi.resources.In
             $ = new DateAfterModificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysAfterLastAccessTimeGreaterThan Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
             $.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
             return this;
         }
 
+        /**
+         * @param daysAfterModificationGreaterThan Value indicating the age in days after last modification
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
             $.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;

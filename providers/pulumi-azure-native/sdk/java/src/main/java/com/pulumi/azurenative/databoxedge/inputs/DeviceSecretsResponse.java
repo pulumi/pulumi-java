@@ -25,6 +25,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="bmcDefaultUserPassword")
     private @Nullable SecretResponse bmcDefaultUserPassword;
 
+    /**
+     * @return Keyvault Id of BMCDefaultUserPassword
+     * 
+     */
     public Optional<SecretResponse> bmcDefaultUserPassword() {
         return Optional.ofNullable(this.bmcDefaultUserPassword);
     }
@@ -36,6 +40,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hcsDataVolumeBitLockerExternalKey")
     private @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
 
+    /**
+     * @return Keyvault Id of HcsDataVolumeBitLockerExternalKey
+     * 
+     */
     public Optional<SecretResponse> hcsDataVolumeBitLockerExternalKey() {
         return Optional.ofNullable(this.hcsDataVolumeBitLockerExternalKey);
     }
@@ -47,6 +55,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hcsInternalVolumeBitLockerExternalKey")
     private @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
 
+    /**
+     * @return Keyvault Id of HcsInternalVolumeBitLockerExternalKey
+     * 
+     */
     public Optional<SecretResponse> hcsInternalVolumeBitLockerExternalKey() {
         return Optional.ofNullable(this.hcsInternalVolumeBitLockerExternalKey);
     }
@@ -58,6 +70,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rotateKeyForDataVolumeBitlocker")
     private @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
 
+    /**
+     * @return Keyvault Id of RotateKeyForDataVolumeBitlocker
+     * 
+     */
     public Optional<SecretResponse> rotateKeyForDataVolumeBitlocker() {
         return Optional.ofNullable(this.rotateKeyForDataVolumeBitlocker);
     }
@@ -69,6 +85,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rotateKeysForSedDrivesSerialized")
     private @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
 
+    /**
+     * @return Keyvault Id of RotateKeysForSedDrivesSerialized
+     * 
+     */
     public Optional<SecretResponse> rotateKeysForSedDrivesSerialized() {
         return Optional.ofNullable(this.rotateKeysForSedDrivesSerialized);
     }
@@ -80,6 +100,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sedEncryptionExternalKey")
     private @Nullable SecretResponse sedEncryptionExternalKey;
 
+    /**
+     * @return Keyvault Id of SEDEncryptionExternalKey
+     * 
+     */
     public Optional<SecretResponse> sedEncryptionExternalKey() {
         return Optional.ofNullable(this.sedEncryptionExternalKey);
     }
@@ -91,6 +115,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sedEncryptionExternalKeyId")
     private @Nullable SecretResponse sedEncryptionExternalKeyId;
 
+    /**
+     * @return Keyvault Id of SEDEncryptionExternalKeyId
+     * 
+     */
     public Optional<SecretResponse> sedEncryptionExternalKeyId() {
         return Optional.ofNullable(this.sedEncryptionExternalKeyId);
     }
@@ -102,6 +130,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="systemVolumeBitLockerRecoveryKey")
     private @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 
+    /**
+     * @return Keyvault Id of SystemVolumeBitLockerRecoveryKey
+     * 
+     */
     public Optional<SecretResponse> systemVolumeBitLockerRecoveryKey() {
         return Optional.ofNullable(this.systemVolumeBitLockerRecoveryKey);
     }
@@ -137,41 +169,89 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
             $ = new DeviceSecretsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bmcDefaultUserPassword Keyvault Id of BMCDefaultUserPassword
+         * 
+         * @return builder
+         * 
+         */
         public Builder bmcDefaultUserPassword(@Nullable SecretResponse bmcDefaultUserPassword) {
             $.bmcDefaultUserPassword = bmcDefaultUserPassword;
             return this;
         }
 
+        /**
+         * @param hcsDataVolumeBitLockerExternalKey Keyvault Id of HcsDataVolumeBitLockerExternalKey
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcsDataVolumeBitLockerExternalKey(@Nullable SecretResponse hcsDataVolumeBitLockerExternalKey) {
             $.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
             return this;
         }
 
+        /**
+         * @param hcsInternalVolumeBitLockerExternalKey Keyvault Id of HcsInternalVolumeBitLockerExternalKey
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcsInternalVolumeBitLockerExternalKey(@Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey) {
             $.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;
             return this;
         }
 
+        /**
+         * @param rotateKeyForDataVolumeBitlocker Keyvault Id of RotateKeyForDataVolumeBitlocker
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotateKeyForDataVolumeBitlocker(@Nullable SecretResponse rotateKeyForDataVolumeBitlocker) {
             $.rotateKeyForDataVolumeBitlocker = rotateKeyForDataVolumeBitlocker;
             return this;
         }
 
+        /**
+         * @param rotateKeysForSedDrivesSerialized Keyvault Id of RotateKeysForSedDrivesSerialized
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotateKeysForSedDrivesSerialized(@Nullable SecretResponse rotateKeysForSedDrivesSerialized) {
             $.rotateKeysForSedDrivesSerialized = rotateKeysForSedDrivesSerialized;
             return this;
         }
 
+        /**
+         * @param sedEncryptionExternalKey Keyvault Id of SEDEncryptionExternalKey
+         * 
+         * @return builder
+         * 
+         */
         public Builder sedEncryptionExternalKey(@Nullable SecretResponse sedEncryptionExternalKey) {
             $.sedEncryptionExternalKey = sedEncryptionExternalKey;
             return this;
         }
 
+        /**
+         * @param sedEncryptionExternalKeyId Keyvault Id of SEDEncryptionExternalKeyId
+         * 
+         * @return builder
+         * 
+         */
         public Builder sedEncryptionExternalKeyId(@Nullable SecretResponse sedEncryptionExternalKeyId) {
             $.sedEncryptionExternalKeyId = sedEncryptionExternalKeyId;
             return this;
         }
 
+        /**
+         * @param systemVolumeBitLockerRecoveryKey Keyvault Id of SystemVolumeBitLockerRecoveryKey
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemVolumeBitLockerRecoveryKey(@Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
             $.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
             return this;

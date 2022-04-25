@@ -19,72 +19,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFactoryResult {
     /**
-     * Time the factory was created in ISO8601 format.
+     * @return Time the factory was created in ISO8601 format.
      * 
      */
     private final String createTime;
     /**
-     * Etag identifies change in the resource.
+     * @return Etag identifies change in the resource.
      * 
      */
     private final String eTag;
     /**
-     * Properties to enable Customer Managed Key for the factory.
+     * @return Properties to enable Customer Managed Key for the factory.
      * 
      */
     private final @Nullable EncryptionConfigurationResponse encryption;
     /**
-     * List of parameters for factory.
+     * @return List of parameters for factory.
      * 
      */
     private final @Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * Managed service identity of the factory.
+     * @return Managed service identity of the factory.
      * 
      */
     private final @Nullable FactoryIdentityResponse identity;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * Factory provisioning state, example Succeeded.
+     * @return Factory provisioning state, example Succeeded.
      * 
      */
     private final String provisioningState;
     /**
-     * Whether or not public network access is allowed for the data factory.
+     * @return Whether or not public network access is allowed for the data factory.
      * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
-     * Git repo information of the factory.
+     * @return Git repo information of the factory.
      * 
      */
     private final @Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
     /**
-     * Version of the factory.
+     * @return Version of the factory.
      * 
      */
     private final String version;
@@ -122,100 +122,100 @@ public final class GetFactoryResult {
     }
 
     /**
-     * Time the factory was created in ISO8601 format.
+     * @return Time the factory was created in ISO8601 format.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Etag identifies change in the resource.
+     * @return Etag identifies change in the resource.
      * 
-    */
+     */
     public String eTag() {
         return this.eTag;
     }
     /**
-     * Properties to enable Customer Managed Key for the factory.
+     * @return Properties to enable Customer Managed Key for the factory.
      * 
-    */
+     */
     public Optional<EncryptionConfigurationResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * List of parameters for factory.
+     * @return List of parameters for factory.
      * 
-    */
+     */
     public Map<String,GlobalParameterSpecificationResponse> globalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Managed service identity of the factory.
+     * @return Managed service identity of the factory.
      * 
-    */
+     */
     public Optional<FactoryIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Factory provisioning state, example Succeeded.
+     * @return Factory provisioning state, example Succeeded.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Whether or not public network access is allowed for the data factory.
+     * @return Whether or not public network access is allowed for the data factory.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * Git repo information of the factory.
+     * @return Git repo information of the factory.
      * 
-    */
+     */
     public Optional<Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> repoConfiguration() {
         return Optional.ofNullable(this.repoConfiguration);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of the factory.
+     * @return Version of the factory.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

@@ -19,6 +19,10 @@ public final class GetConnectorProfileArgs extends com.pulumi.resources.InvokeAr
     @Import(name="connectorProfileName", required=true)
     private String connectorProfileName;
 
+    /**
+     * @return The maximum number of items to retrieve in a single batch.
+     * 
+     */
     public String connectorProfileName() {
         return this.connectorProfileName;
     }
@@ -47,6 +51,12 @@ public final class GetConnectorProfileArgs extends com.pulumi.resources.InvokeAr
             $ = new GetConnectorProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorProfileName The maximum number of items to retrieve in a single batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorProfileName(String connectorProfileName) {
             $.connectorProfileName = connectorProfileName;
             return this;

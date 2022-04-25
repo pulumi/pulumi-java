@@ -27,6 +27,10 @@ public final class NodeSelectorTermArgs extends com.pulumi.resources.ResourceArg
     @Import(name="matchExpressions")
     private @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
 
+    /**
+     * @return A list of node selector requirements by node&#39;s labels.
+     * 
+     */
     public Optional<Output<List<NodeSelectorRequirementArgs>>> matchExpressions() {
         return Optional.ofNullable(this.matchExpressions);
     }
@@ -38,6 +42,10 @@ public final class NodeSelectorTermArgs extends com.pulumi.resources.ResourceArg
     @Import(name="matchFields")
     private @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;
 
+    /**
+     * @return A list of node selector requirements by node&#39;s fields.
+     * 
+     */
     public Optional<Output<List<NodeSelectorRequirementArgs>>> matchFields() {
         return Optional.ofNullable(this.matchFields);
     }
@@ -67,28 +75,64 @@ public final class NodeSelectorTermArgs extends com.pulumi.resources.ResourceArg
             $ = new NodeSelectorTermArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchExpressions A list of node selector requirements by node&#39;s labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(@Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions) {
             $.matchExpressions = matchExpressions;
             return this;
         }
 
+        /**
+         * @param matchExpressions A list of node selector requirements by node&#39;s labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(List<NodeSelectorRequirementArgs> matchExpressions) {
             return matchExpressions(Output.of(matchExpressions));
         }
 
+        /**
+         * @param matchExpressions A list of node selector requirements by node&#39;s labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchExpressions(NodeSelectorRequirementArgs... matchExpressions) {
             return matchExpressions(List.of(matchExpressions));
         }
 
+        /**
+         * @param matchFields A list of node selector requirements by node&#39;s fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchFields(@Nullable Output<List<NodeSelectorRequirementArgs>> matchFields) {
             $.matchFields = matchFields;
             return this;
         }
 
+        /**
+         * @param matchFields A list of node selector requirements by node&#39;s fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchFields(List<NodeSelectorRequirementArgs> matchFields) {
             return matchFields(Output.of(matchFields));
         }
 
+        /**
+         * @param matchFields A list of node selector requirements by node&#39;s fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchFields(NodeSelectorRequirementArgs... matchFields) {
             return matchFields(List.of(matchFields));
         }

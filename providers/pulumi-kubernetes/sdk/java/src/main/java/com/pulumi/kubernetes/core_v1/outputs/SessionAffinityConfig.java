@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SessionAffinityConfig {
     /**
-     * clientIP contains the configurations of Client IP based session affinity.
+     * @return clientIP contains the configurations of Client IP based session affinity.
      * 
      */
     private final @Nullable ClientIPConfig clientIP;
@@ -23,9 +23,9 @@ public final class SessionAffinityConfig {
     }
 
     /**
-     * clientIP contains the configurations of Client IP based session affinity.
+     * @return clientIP contains the configurations of Client IP based session affinity.
      * 
-    */
+     */
     public Optional<ClientIPConfig> clientIP() {
         return Optional.ofNullable(this.clientIP);
     }

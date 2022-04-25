@@ -16,87 +16,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SaasResourceResponseProperties {
     /**
-     * Whether the SaaS subscription will auto renew upon term end.
+     * @return Whether the SaaS subscription will auto renew upon term end.
      * 
      */
     private final @Nullable Boolean autoRenew;
     /**
-     * The created date of this resource.
+     * @return The created date of this resource.
      * 
      */
     private final String created;
     /**
-     * Whether the current term is a Free Trial term
+     * @return Whether the current term is a Free Trial term
      * 
      */
     private final @Nullable Boolean isFreeTrial;
     /**
-     * The last modifier date if this resource.
+     * @return The last modifier date if this resource.
      * 
      */
     private final @Nullable String lastModified;
     /**
-     * The offer id.
+     * @return The offer id.
      * 
      */
     private final @Nullable String offerId;
     /**
-     * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
+     * @return The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
      * 
      */
     private final @Nullable Map<String,String> paymentChannelMetadata;
     /**
-     * The Payment channel for the SaasSubscription.
+     * @return The Payment channel for the SaasSubscription.
      * 
      */
     private final @Nullable String paymentChannelType;
     /**
-     * The publisher id.
+     * @return The publisher id.
      * 
      */
     private final @Nullable String publisherId;
     /**
-     * The environment in the publisher side for this resource.
+     * @return The environment in the publisher side for this resource.
      * 
      */
     private final @Nullable String publisherTestEnvironment;
     /**
-     * The seat count.
+     * @return The seat count.
      * 
      */
     private final @Nullable Double quantity;
     /**
-     * The SaaS resource name.
+     * @return The SaaS resource name.
      * 
      */
     private final @Nullable String saasResourceName;
     /**
-     * The saas session id used for dev service migration request.
+     * @return The saas session id used for dev service migration request.
      * 
      */
     private final @Nullable String saasSessionId;
     /**
-     * The saas subscription id used for tenant to subscription level migration request.
+     * @return The saas subscription id used for tenant to subscription level migration request.
      * 
      */
     private final @Nullable String saasSubscriptionId;
     /**
-     * The plan id.
+     * @return The plan id.
      * 
      */
     private final @Nullable String skuId;
     /**
-     * The SaaS Subscription Status.
+     * @return The SaaS Subscription Status.
      * 
      */
     private final @Nullable String status;
     /**
-     * The current Term object.
+     * @return The current Term object.
      * 
      */
     private final @Nullable SaasPropertiesResponseTerm term;
     /**
-     * The current Term id.
+     * @return The current Term id.
      * 
      */
     private final @Nullable String termId;
@@ -140,121 +140,121 @@ public final class SaasResourceResponseProperties {
     }
 
     /**
-     * Whether the SaaS subscription will auto renew upon term end.
+     * @return Whether the SaaS subscription will auto renew upon term end.
      * 
-    */
+     */
     public Optional<Boolean> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
-     * The created date of this resource.
+     * @return The created date of this resource.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Whether the current term is a Free Trial term
+     * @return Whether the current term is a Free Trial term
      * 
-    */
+     */
     public Optional<Boolean> isFreeTrial() {
         return Optional.ofNullable(this.isFreeTrial);
     }
     /**
-     * The last modifier date if this resource.
+     * @return The last modifier date if this resource.
      * 
-    */
+     */
     public Optional<String> lastModified() {
         return Optional.ofNullable(this.lastModified);
     }
     /**
-     * The offer id.
+     * @return The offer id.
      * 
-    */
+     */
     public Optional<String> offerId() {
         return Optional.ofNullable(this.offerId);
     }
     /**
-     * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
+     * @return The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
      * 
-    */
+     */
     public Map<String,String> paymentChannelMetadata() {
         return this.paymentChannelMetadata == null ? Map.of() : this.paymentChannelMetadata;
     }
     /**
-     * The Payment channel for the SaasSubscription.
+     * @return The Payment channel for the SaasSubscription.
      * 
-    */
+     */
     public Optional<String> paymentChannelType() {
         return Optional.ofNullable(this.paymentChannelType);
     }
     /**
-     * The publisher id.
+     * @return The publisher id.
      * 
-    */
+     */
     public Optional<String> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
     /**
-     * The environment in the publisher side for this resource.
+     * @return The environment in the publisher side for this resource.
      * 
-    */
+     */
     public Optional<String> publisherTestEnvironment() {
         return Optional.ofNullable(this.publisherTestEnvironment);
     }
     /**
-     * The seat count.
+     * @return The seat count.
      * 
-    */
+     */
     public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
     /**
-     * The SaaS resource name.
+     * @return The SaaS resource name.
      * 
-    */
+     */
     public Optional<String> saasResourceName() {
         return Optional.ofNullable(this.saasResourceName);
     }
     /**
-     * The saas session id used for dev service migration request.
+     * @return The saas session id used for dev service migration request.
      * 
-    */
+     */
     public Optional<String> saasSessionId() {
         return Optional.ofNullable(this.saasSessionId);
     }
     /**
-     * The saas subscription id used for tenant to subscription level migration request.
+     * @return The saas subscription id used for tenant to subscription level migration request.
      * 
-    */
+     */
     public Optional<String> saasSubscriptionId() {
         return Optional.ofNullable(this.saasSubscriptionId);
     }
     /**
-     * The plan id.
+     * @return The plan id.
      * 
-    */
+     */
     public Optional<String> skuId() {
         return Optional.ofNullable(this.skuId);
     }
     /**
-     * The SaaS Subscription Status.
+     * @return The SaaS Subscription Status.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The current Term object.
+     * @return The current Term object.
      * 
-    */
+     */
     public Optional<SaasPropertiesResponseTerm> term() {
         return Optional.ofNullable(this.term);
     }
     /**
-     * The current Term id.
+     * @return The current Term id.
      * 
-    */
+     */
     public Optional<String> termId() {
         return Optional.ofNullable(this.termId);
     }

@@ -26,6 +26,10 @@ public final class ObjectReplicationPolicyFilterResponse extends com.pulumi.reso
     @Import(name="minCreationTime")
     private @Nullable String minCreationTime;
 
+    /**
+     * @return Blobs created after the time will be replicated to the destination. It must be in datetime format &#39;yyyy-MM-ddTHH:mm:ssZ&#39;. Example: 2020-02-19T16:05:00Z
+     * 
+     */
     public Optional<String> minCreationTime() {
         return Optional.ofNullable(this.minCreationTime);
     }
@@ -37,6 +41,10 @@ public final class ObjectReplicationPolicyFilterResponse extends com.pulumi.reso
     @Import(name="prefixMatch")
     private @Nullable List<String> prefixMatch;
 
+    /**
+     * @return Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
+     * 
+     */
     public Optional<List<String>> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -66,16 +74,34 @@ public final class ObjectReplicationPolicyFilterResponse extends com.pulumi.reso
             $ = new ObjectReplicationPolicyFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minCreationTime Blobs created after the time will be replicated to the destination. It must be in datetime format &#39;yyyy-MM-ddTHH:mm:ssZ&#39;. Example: 2020-02-19T16:05:00Z
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCreationTime(@Nullable String minCreationTime) {
             $.minCreationTime = minCreationTime;
             return this;
         }
 
+        /**
+         * @param prefixMatch Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             $.prefixMatch = prefixMatch;
             return this;
         }
 
+        /**
+         * @param prefixMatch Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
         }

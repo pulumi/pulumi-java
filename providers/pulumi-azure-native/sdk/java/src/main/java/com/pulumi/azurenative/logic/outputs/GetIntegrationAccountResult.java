@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIntegrationAccountResult {
     /**
-     * The resource id.
+     * @return The resource id.
      * 
      */
     private final String id;
     /**
-     * The integration service environment.
+     * @return The integration service environment.
      * 
      */
     private final @Nullable ResourceReferenceResponse integrationServiceEnvironment;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
      */
     private final String name;
     /**
-     * The sku.
+     * @return The sku.
      * 
      */
     private final @Nullable IntegrationAccountSkuResponse sku;
     /**
-     * The workflow state.
+     * @return The workflow state.
      * 
      */
     private final @Nullable String state;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
      */
     private final String type;
@@ -76,58 +76,58 @@ public final class GetIntegrationAccountResult {
     }
 
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The integration service environment.
+     * @return The integration service environment.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> integrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The sku.
+     * @return The sku.
      * 
-    */
+     */
     public Optional<IntegrationAccountSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The workflow state.
+     * @return The workflow state.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

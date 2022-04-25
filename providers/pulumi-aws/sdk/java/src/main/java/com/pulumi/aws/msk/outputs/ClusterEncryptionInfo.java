@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterEncryptionInfo {
     /**
-     * You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (&#39;aws/msk&#39; managed service) key will be used for encrypting the data at rest.
+     * @return You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (&#39;aws/msk&#39; managed service) key will be used for encrypting the data at rest.
      * 
      */
     private final @Nullable String encryptionAtRestKmsKeyArn;
     /**
-     * Configuration block to specify encryption in transit. See below.
+     * @return Configuration block to specify encryption in transit. See below.
      * 
      */
     private final @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit;
@@ -32,16 +32,16 @@ public final class ClusterEncryptionInfo {
     }
 
     /**
-     * You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (&#39;aws/msk&#39; managed service) key will be used for encrypting the data at rest.
+     * @return You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (&#39;aws/msk&#39; managed service) key will be used for encrypting the data at rest.
      * 
-    */
+     */
     public Optional<String> encryptionAtRestKmsKeyArn() {
         return Optional.ofNullable(this.encryptionAtRestKmsKeyArn);
     }
     /**
-     * Configuration block to specify encryption in transit. See below.
+     * @return Configuration block to specify encryption in transit. See below.
      * 
-    */
+     */
     public Optional<ClusterEncryptionInfoEncryptionInTransit> encryptionInTransit() {
         return Optional.ofNullable(this.encryptionInTransit);
     }

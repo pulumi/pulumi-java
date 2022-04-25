@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SecretResponse {
     /**
-     * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+     * @return The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
      * 
      */
     private final String secretVersion;
@@ -21,9 +21,9 @@ public final class SecretResponse {
     }
 
     /**
-     * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+     * @return The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
      * 
-    */
+     */
     public String secretVersion() {
         return this.secretVersion;
     }

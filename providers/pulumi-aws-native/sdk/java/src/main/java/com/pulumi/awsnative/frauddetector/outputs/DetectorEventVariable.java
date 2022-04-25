@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 public final class DetectorEventVariable {
     private final @Nullable String arn;
     /**
-     * The time when the event variable was created.
+     * @return The time when the event variable was created.
      * 
      */
     private final @Nullable String createdTime;
@@ -27,19 +27,19 @@ public final class DetectorEventVariable {
     private final @Nullable DetectorEventVariableDataType dataType;
     private final @Nullable String defaultValue;
     /**
-     * The description.
+     * @return The description.
      * 
      */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
     /**
-     * The time when the event variable was last updated.
+     * @return The time when the event variable was last updated.
      * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
     /**
-     * Tags associated with this event variable.
+     * @return Tags associated with this event variable.
      * 
      */
     private final @Nullable List<DetectorTag> tags;
@@ -75,9 +75,9 @@ public final class DetectorEventVariable {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The time when the event variable was created.
+     * @return The time when the event variable was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -91,9 +91,9 @@ public final class DetectorEventVariable {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -101,9 +101,9 @@ public final class DetectorEventVariable {
         return Optional.ofNullable(this.inline);
     }
     /**
-     * The time when the event variable was last updated.
+     * @return The time when the event variable was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -111,9 +111,9 @@ public final class DetectorEventVariable {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tags associated with this event variable.
+     * @return Tags associated with this event variable.
      * 
-    */
+     */
     public List<DetectorTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

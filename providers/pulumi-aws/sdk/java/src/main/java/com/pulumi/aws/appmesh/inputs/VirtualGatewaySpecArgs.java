@@ -24,6 +24,10 @@ public final class VirtualGatewaySpecArgs extends com.pulumi.resources.ResourceA
     @Import(name="backendDefaults")
     private @Nullable Output<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults;
 
+    /**
+     * @return The defaults for backends.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecBackendDefaultsArgs>> backendDefaults() {
         return Optional.ofNullable(this.backendDefaults);
     }
@@ -35,6 +39,10 @@ public final class VirtualGatewaySpecArgs extends com.pulumi.resources.ResourceA
     @Import(name="listener", required=true)
     private Output<VirtualGatewaySpecListenerArgs> listener;
 
+    /**
+     * @return The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
+     * 
+     */
     public Output<VirtualGatewaySpecListenerArgs> listener() {
         return this.listener;
     }
@@ -46,6 +54,10 @@ public final class VirtualGatewaySpecArgs extends com.pulumi.resources.ResourceA
     @Import(name="logging")
     private @Nullable Output<VirtualGatewaySpecLoggingArgs> logging;
 
+    /**
+     * @return The inbound and outbound access logging information for the virtual gateway.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecLoggingArgs>> logging() {
         return Optional.ofNullable(this.logging);
     }
@@ -76,29 +88,65 @@ public final class VirtualGatewaySpecArgs extends com.pulumi.resources.ResourceA
             $ = new VirtualGatewaySpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendDefaults The defaults for backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendDefaults(@Nullable Output<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults) {
             $.backendDefaults = backendDefaults;
             return this;
         }
 
+        /**
+         * @param backendDefaults The defaults for backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendDefaults(VirtualGatewaySpecBackendDefaultsArgs backendDefaults) {
             return backendDefaults(Output.of(backendDefaults));
         }
 
+        /**
+         * @param listener The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listener(Output<VirtualGatewaySpecListenerArgs> listener) {
             $.listener = listener;
             return this;
         }
 
+        /**
+         * @param listener The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listener(VirtualGatewaySpecListenerArgs listener) {
             return listener(Output.of(listener));
         }
 
+        /**
+         * @param logging The inbound and outbound access logging information for the virtual gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(@Nullable Output<VirtualGatewaySpecLoggingArgs> logging) {
             $.logging = logging;
             return this;
         }
 
+        /**
+         * @param logging The inbound and outbound access logging information for the virtual gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(VirtualGatewaySpecLoggingArgs logging) {
             return logging(Output.of(logging));
         }

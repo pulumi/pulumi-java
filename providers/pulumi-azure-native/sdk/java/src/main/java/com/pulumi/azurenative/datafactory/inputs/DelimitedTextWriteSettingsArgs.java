@@ -28,6 +28,10 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="fileExtension", required=true)
     private Output<Object> fileExtension;
 
+    /**
+     * @return The file extension used to create the files. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> fileExtension() {
         return this.fileExtension;
     }
@@ -39,6 +43,10 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="fileNamePrefix")
     private @Nullable Output<Object> fileNamePrefix;
 
+    /**
+     * @return Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> fileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
@@ -50,6 +58,10 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="maxRowsPerFile")
     private @Nullable Output<Object> maxRowsPerFile;
 
+    /**
+     * @return Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
@@ -61,6 +73,10 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="quoteAllText")
     private @Nullable Output<Object> quoteAllText;
 
+    /**
+     * @return Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> quoteAllText() {
         return Optional.ofNullable(this.quoteAllText);
     }
@@ -73,6 +89,11 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;DelimitedTextWriteSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -105,47 +126,109 @@ public final class DelimitedTextWriteSettingsArgs extends com.pulumi.resources.R
             $ = new DelimitedTextWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileExtension The file extension used to create the files. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileExtension(Output<Object> fileExtension) {
             $.fileExtension = fileExtension;
             return this;
         }
 
+        /**
+         * @param fileExtension The file extension used to create the files. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileExtension(Object fileExtension) {
             return fileExtension(Output.of(fileExtension));
         }
 
+        /**
+         * @param fileNamePrefix Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileNamePrefix(@Nullable Output<Object> fileNamePrefix) {
             $.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
+        /**
+         * @param fileNamePrefix Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileNamePrefix(Object fileNamePrefix) {
             return fileNamePrefix(Output.of(fileNamePrefix));
         }
 
+        /**
+         * @param maxRowsPerFile Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
             $.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
+        /**
+         * @param maxRowsPerFile Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRowsPerFile(Object maxRowsPerFile) {
             return maxRowsPerFile(Output.of(maxRowsPerFile));
         }
 
+        /**
+         * @param quoteAllText Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteAllText(@Nullable Output<Object> quoteAllText) {
             $.quoteAllText = quoteAllText;
             return this;
         }
 
+        /**
+         * @param quoteAllText Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteAllText(Object quoteAllText) {
             return quoteAllText(Output.of(quoteAllText));
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;DelimitedTextWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;DelimitedTextWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

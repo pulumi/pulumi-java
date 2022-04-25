@@ -23,6 +23,10 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse extends com.pul
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Flag that specifies whether the Monetization add-on is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse extends com.pul
             $ = new GoogleCloudApigeeV1MonetizationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag that specifies whether the Monetization add-on is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

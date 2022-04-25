@@ -23,6 +23,10 @@ public final class BucketObjectCustomerEncryptionResponse extends com.pulumi.res
     @Import(name="encryptionAlgorithm", required=true)
     private String encryptionAlgorithm;
 
+    /**
+     * @return The encryption algorithm.
+     * 
+     */
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
@@ -34,6 +38,10 @@ public final class BucketObjectCustomerEncryptionResponse extends com.pulumi.res
     @Import(name="keySha256", required=true)
     private String keySha256;
 
+    /**
+     * @return SHA256 hash value of the encryption key.
+     * 
+     */
     public String keySha256() {
         return this.keySha256;
     }
@@ -63,11 +71,23 @@ public final class BucketObjectCustomerEncryptionResponse extends com.pulumi.res
             $ = new BucketObjectCustomerEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionAlgorithm The encryption algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param keySha256 SHA256 hash value of the encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySha256(String keySha256) {
             $.keySha256 = keySha256;
             return this;

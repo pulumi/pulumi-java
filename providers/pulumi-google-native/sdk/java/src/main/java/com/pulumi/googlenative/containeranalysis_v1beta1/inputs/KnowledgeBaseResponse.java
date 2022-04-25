@@ -19,6 +19,10 @@ public final class KnowledgeBaseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The KB name (generally of the form KB[0-9]+ i.e. KB123456).
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class KnowledgeBaseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -59,11 +67,23 @@ public final class KnowledgeBaseResponse extends com.pulumi.resources.InvokeArgs
             $ = new KnowledgeBaseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The KB name (generally of the form KB[0-9]+ i.e. KB123456).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param url A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

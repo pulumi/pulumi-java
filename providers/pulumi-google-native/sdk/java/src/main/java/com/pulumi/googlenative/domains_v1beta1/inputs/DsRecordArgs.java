@@ -29,6 +29,10 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="algorithm")
     private @Nullable Output<DsRecordAlgorithm> algorithm;
 
+    /**
+     * @return The algorithm used to generate the referenced DNSKEY.
+     * 
+     */
     public Optional<Output<DsRecordAlgorithm>> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -40,6 +44,10 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="digest")
     private @Nullable Output<String> digest;
 
+    /**
+     * @return The digest generated from the referenced DNSKEY.
+     * 
+     */
     public Optional<Output<String>> digest() {
         return Optional.ofNullable(this.digest);
     }
@@ -51,6 +59,10 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="digestType")
     private @Nullable Output<DsRecordDigestType> digestType;
 
+    /**
+     * @return The hash function used to generate the digest of the referenced DNSKEY.
+     * 
+     */
     public Optional<Output<DsRecordDigestType>> digestType() {
         return Optional.ofNullable(this.digestType);
     }
@@ -62,6 +74,10 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyTag")
     private @Nullable Output<Integer> keyTag;
 
+    /**
+     * @return The key tag of the record. Must be set in range 0 -- 65535.
+     * 
+     */
     public Optional<Output<Integer>> keyTag() {
         return Optional.ofNullable(this.keyTag);
     }
@@ -93,38 +109,86 @@ public final class DsRecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DsRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm used to generate the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(@Nullable Output<DsRecordAlgorithm> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm The algorithm used to generate the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(DsRecordAlgorithm algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param digest The digest generated from the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(@Nullable Output<String> digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param digest The digest generated from the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(String digest) {
             return digest(Output.of(digest));
         }
 
+        /**
+         * @param digestType The hash function used to generate the digest of the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digestType(@Nullable Output<DsRecordDigestType> digestType) {
             $.digestType = digestType;
             return this;
         }
 
+        /**
+         * @param digestType The hash function used to generate the digest of the referenced DNSKEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digestType(DsRecordDigestType digestType) {
             return digestType(Output.of(digestType));
         }
 
+        /**
+         * @param keyTag The key tag of the record. Must be set in range 0 -- 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyTag(@Nullable Output<Integer> keyTag) {
             $.keyTag = keyTag;
             return this;
         }
 
+        /**
+         * @param keyTag The key tag of the record. Must be set in range 0 -- 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyTag(Integer keyTag) {
             return keyTag(Output.of(keyTag));
         }

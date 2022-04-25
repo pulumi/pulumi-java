@@ -23,6 +23,10 @@ public final class MetricStreamFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return Only metrics with Namespace matching this value will be streamed.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -51,6 +55,12 @@ public final class MetricStreamFilter extends com.pulumi.resources.InvokeArgs {
             $ = new MetricStreamFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespace Only metrics with Namespace matching this value will be streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;

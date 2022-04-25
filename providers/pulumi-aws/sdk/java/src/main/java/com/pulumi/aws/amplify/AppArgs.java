@@ -27,6 +27,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessToken")
     private @Nullable Output<String> accessToken;
 
+    /**
+     * @return The personal access token for a third-party source control system for an Amplify app. The personal access token is used to create a webhook and a read-only deploy key. The token is not stored.
+     * 
+     */
     public Optional<Output<String>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -38,6 +42,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoBranchCreationConfig")
     private @Nullable Output<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig;
 
+    /**
+     * @return The automated branch creation configuration for an Amplify app. An `auto_branch_creation_config` block is documented below.
+     * 
+     */
     public Optional<Output<AppAutoBranchCreationConfigArgs>> autoBranchCreationConfig() {
         return Optional.ofNullable(this.autoBranchCreationConfig);
     }
@@ -49,6 +57,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoBranchCreationPatterns")
     private @Nullable Output<List<String>> autoBranchCreationPatterns;
 
+    /**
+     * @return The automated branch creation glob patterns for an Amplify app.
+     * 
+     */
     public Optional<Output<List<String>>> autoBranchCreationPatterns() {
         return Optional.ofNullable(this.autoBranchCreationPatterns);
     }
@@ -60,6 +72,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="basicAuthCredentials")
     private @Nullable Output<String> basicAuthCredentials;
 
+    /**
+     * @return The credentials for basic authorization for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> basicAuthCredentials() {
         return Optional.ofNullable(this.basicAuthCredentials);
     }
@@ -71,6 +87,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildSpec")
     private @Nullable Output<String> buildSpec;
 
+    /**
+     * @return The [build specification](https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html) (build spec) for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> buildSpec() {
         return Optional.ofNullable(this.buildSpec);
     }
@@ -82,6 +102,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customRules")
     private @Nullable Output<List<AppCustomRuleArgs>> customRules;
 
+    /**
+     * @return The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
+     * 
+     */
     public Optional<Output<List<AppCustomRuleArgs>>> customRules() {
         return Optional.ofNullable(this.customRules);
     }
@@ -93,6 +117,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -104,6 +132,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableAutoBranchCreation")
     private @Nullable Output<Boolean> enableAutoBranchCreation;
 
+    /**
+     * @return Enables automated branch creation for an Amplify app.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutoBranchCreation() {
         return Optional.ofNullable(this.enableAutoBranchCreation);
     }
@@ -115,6 +147,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBasicAuth")
     private @Nullable Output<Boolean> enableBasicAuth;
 
+    /**
+     * @return Enables basic authorization for an Amplify app. This will apply to all branches that are part of this app.
+     * 
+     */
     public Optional<Output<Boolean>> enableBasicAuth() {
         return Optional.ofNullable(this.enableBasicAuth);
     }
@@ -126,6 +162,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBranchAutoBuild")
     private @Nullable Output<Boolean> enableBranchAutoBuild;
 
+    /**
+     * @return Enables auto-building of branches for the Amplify App.
+     * 
+     */
     public Optional<Output<Boolean>> enableBranchAutoBuild() {
         return Optional.ofNullable(this.enableBranchAutoBuild);
     }
@@ -137,6 +177,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBranchAutoDeletion")
     private @Nullable Output<Boolean> enableBranchAutoDeletion;
 
+    /**
+     * @return Automatically disconnects a branch in the Amplify Console when you delete a branch from your Git repository.
+     * 
+     */
     public Optional<Output<Boolean>> enableBranchAutoDeletion() {
         return Optional.ofNullable(this.enableBranchAutoDeletion);
     }
@@ -148,6 +192,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
     private @Nullable Output<Map<String,String>> environmentVariables;
 
+    /**
+     * @return The environment variables map for an Amplify app.
+     * 
+     */
     public Optional<Output<Map<String,String>>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -159,6 +207,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamServiceRoleArn")
     private @Nullable Output<String> iamServiceRoleArn;
 
+    /**
+     * @return The AWS Identity and Access Management (IAM) service role for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> iamServiceRoleArn() {
         return Optional.ofNullable(this.iamServiceRoleArn);
     }
@@ -170,6 +222,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -181,6 +237,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oauthToken")
     private @Nullable Output<String> oauthToken;
 
+    /**
+     * @return The OAuth token for a third-party source control system for an Amplify app. The OAuth token is used to create a webhook and a read-only deploy key. The OAuth token is not stored.
+     * 
+     */
     public Optional<Output<String>> oauthToken() {
         return Optional.ofNullable(this.oauthToken);
     }
@@ -192,6 +252,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform")
     private @Nullable Output<String> platform;
 
+    /**
+     * @return The platform or framework for an Amplify app. Valid values: `WEB`.
+     * 
+     */
     public Optional<Output<String>> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -203,6 +267,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repository")
     private @Nullable Output<String> repository;
 
+    /**
+     * @return The repository for an Amplify app.
+     * 
+     */
     public Optional<Output<String>> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -214,6 +282,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -259,172 +331,400 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The personal access token for a third-party source control system for an Amplify app. The personal access token is used to create a webhook and a read-only deploy key. The token is not stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<String> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken The personal access token for a third-party source control system for an Amplify app. The personal access token is used to create a webhook and a read-only deploy key. The token is not stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param autoBranchCreationConfig The automated branch creation configuration for an Amplify app. An `auto_branch_creation_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoBranchCreationConfig(@Nullable Output<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig) {
             $.autoBranchCreationConfig = autoBranchCreationConfig;
             return this;
         }
 
+        /**
+         * @param autoBranchCreationConfig The automated branch creation configuration for an Amplify app. An `auto_branch_creation_config` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoBranchCreationConfig(AppAutoBranchCreationConfigArgs autoBranchCreationConfig) {
             return autoBranchCreationConfig(Output.of(autoBranchCreationConfig));
         }
 
+        /**
+         * @param autoBranchCreationPatterns The automated branch creation glob patterns for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoBranchCreationPatterns(@Nullable Output<List<String>> autoBranchCreationPatterns) {
             $.autoBranchCreationPatterns = autoBranchCreationPatterns;
             return this;
         }
 
+        /**
+         * @param autoBranchCreationPatterns The automated branch creation glob patterns for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoBranchCreationPatterns(List<String> autoBranchCreationPatterns) {
             return autoBranchCreationPatterns(Output.of(autoBranchCreationPatterns));
         }
 
+        /**
+         * @param autoBranchCreationPatterns The automated branch creation glob patterns for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoBranchCreationPatterns(String... autoBranchCreationPatterns) {
             return autoBranchCreationPatterns(List.of(autoBranchCreationPatterns));
         }
 
+        /**
+         * @param basicAuthCredentials The credentials for basic authorization for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAuthCredentials(@Nullable Output<String> basicAuthCredentials) {
             $.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
+        /**
+         * @param basicAuthCredentials The credentials for basic authorization for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAuthCredentials(String basicAuthCredentials) {
             return basicAuthCredentials(Output.of(basicAuthCredentials));
         }
 
+        /**
+         * @param buildSpec The [build specification](https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html) (build spec) for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
             $.buildSpec = buildSpec;
             return this;
         }
 
+        /**
+         * @param buildSpec The [build specification](https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html) (build spec) for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildSpec(String buildSpec) {
             return buildSpec(Output.of(buildSpec));
         }
 
+        /**
+         * @param customRules The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRules(@Nullable Output<List<AppCustomRuleArgs>> customRules) {
             $.customRules = customRules;
             return this;
         }
 
+        /**
+         * @param customRules The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRules(List<AppCustomRuleArgs> customRules) {
             return customRules(Output.of(customRules));
         }
 
+        /**
+         * @param customRules The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRules(AppCustomRuleArgs... customRules) {
             return customRules(List.of(customRules));
         }
 
+        /**
+         * @param description The description for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableAutoBranchCreation Enables automated branch creation for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoBranchCreation(@Nullable Output<Boolean> enableAutoBranchCreation) {
             $.enableAutoBranchCreation = enableAutoBranchCreation;
             return this;
         }
 
+        /**
+         * @param enableAutoBranchCreation Enables automated branch creation for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoBranchCreation(Boolean enableAutoBranchCreation) {
             return enableAutoBranchCreation(Output.of(enableAutoBranchCreation));
         }
 
+        /**
+         * @param enableBasicAuth Enables basic authorization for an Amplify app. This will apply to all branches that are part of this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
             $.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
+        /**
+         * @param enableBasicAuth Enables basic authorization for an Amplify app. This will apply to all branches that are part of this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBasicAuth(Boolean enableBasicAuth) {
             return enableBasicAuth(Output.of(enableBasicAuth));
         }
 
+        /**
+         * @param enableBranchAutoBuild Enables auto-building of branches for the Amplify App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBranchAutoBuild(@Nullable Output<Boolean> enableBranchAutoBuild) {
             $.enableBranchAutoBuild = enableBranchAutoBuild;
             return this;
         }
 
+        /**
+         * @param enableBranchAutoBuild Enables auto-building of branches for the Amplify App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBranchAutoBuild(Boolean enableBranchAutoBuild) {
             return enableBranchAutoBuild(Output.of(enableBranchAutoBuild));
         }
 
+        /**
+         * @param enableBranchAutoDeletion Automatically disconnects a branch in the Amplify Console when you delete a branch from your Git repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBranchAutoDeletion(@Nullable Output<Boolean> enableBranchAutoDeletion) {
             $.enableBranchAutoDeletion = enableBranchAutoDeletion;
             return this;
         }
 
+        /**
+         * @param enableBranchAutoDeletion Automatically disconnects a branch in the Amplify Console when you delete a branch from your Git repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBranchAutoDeletion(Boolean enableBranchAutoDeletion) {
             return enableBranchAutoDeletion(Output.of(enableBranchAutoDeletion));
         }
 
+        /**
+         * @param environmentVariables The environment variables map for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables The environment variables map for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(Map<String,String> environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param iamServiceRoleArn The AWS Identity and Access Management (IAM) service role for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamServiceRoleArn(@Nullable Output<String> iamServiceRoleArn) {
             $.iamServiceRoleArn = iamServiceRoleArn;
             return this;
         }
 
+        /**
+         * @param iamServiceRoleArn The AWS Identity and Access Management (IAM) service role for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamServiceRoleArn(String iamServiceRoleArn) {
             return iamServiceRoleArn(Output.of(iamServiceRoleArn));
         }
 
+        /**
+         * @param name The name for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param oauthToken The OAuth token for a third-party source control system for an Amplify app. The OAuth token is used to create a webhook and a read-only deploy key. The OAuth token is not stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthToken(@Nullable Output<String> oauthToken) {
             $.oauthToken = oauthToken;
             return this;
         }
 
+        /**
+         * @param oauthToken The OAuth token for a third-party source control system for an Amplify app. The OAuth token is used to create a webhook and a read-only deploy key. The OAuth token is not stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthToken(String oauthToken) {
             return oauthToken(Output.of(oauthToken));
         }
 
+        /**
+         * @param platform The platform or framework for an Amplify app. Valid values: `WEB`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable Output<String> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform The platform or framework for an Amplify app. Valid values: `WEB`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param repository The repository for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable Output<String> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository The repository for an Amplify app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             return repository(Output.of(repository));
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

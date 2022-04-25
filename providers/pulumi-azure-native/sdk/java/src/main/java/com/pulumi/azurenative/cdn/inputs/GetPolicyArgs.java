@@ -19,6 +19,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyName", required=true)
     private String policyName;
 
+    /**
+     * @return The name of the CdnWebApplicationFirewallPolicy.
+     * 
+     */
     public String policyName() {
         return this.policyName;
     }
@@ -30,6 +34,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyName The name of the CdnWebApplicationFirewallPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

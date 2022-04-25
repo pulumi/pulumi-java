@@ -19,6 +19,10 @@ public final class GetCustomLocationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetCustomLocationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return Custom Locations name.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -59,11 +67,23 @@ public final class GetCustomLocationArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetCustomLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName Custom Locations name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

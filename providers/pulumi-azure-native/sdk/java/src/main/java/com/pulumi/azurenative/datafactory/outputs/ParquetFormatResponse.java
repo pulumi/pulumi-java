@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ParquetFormatResponse {
     /**
-     * Deserializer. Type: string (or Expression with resultType string).
+     * @return Deserializer. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object deserializer;
     /**
-     * Serializer. Type: string (or Expression with resultType string).
+     * @return Serializer. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object serializer;
     /**
-     * Type of dataset storage format.
+     * @return Type of dataset storage format.
      * Expected value is &#39;ParquetFormat&#39;.
      * 
      */
@@ -40,24 +40,24 @@ public final class ParquetFormatResponse {
     }
 
     /**
-     * Deserializer. Type: string (or Expression with resultType string).
+     * @return Deserializer. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> deserializer() {
         return Optional.ofNullable(this.deserializer);
     }
     /**
-     * Serializer. Type: string (or Expression with resultType string).
+     * @return Serializer. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> serializer() {
         return Optional.ofNullable(this.serializer);
     }
     /**
-     * Type of dataset storage format.
+     * @return Type of dataset storage format.
      * Expected value is &#39;ParquetFormat&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

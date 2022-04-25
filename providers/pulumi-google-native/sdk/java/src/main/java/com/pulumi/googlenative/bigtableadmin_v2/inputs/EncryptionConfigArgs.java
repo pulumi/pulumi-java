@@ -26,6 +26,10 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -54,11 +58,23 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new EncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }

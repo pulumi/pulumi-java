@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse {
     /**
-     * Whether to use speech adaptation for speech recognition.
+     * @return Whether to use speech adaptation for speech recognition.
      * 
      */
     private final Boolean enableSpeechAdaptation;
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse {
     }
 
     /**
-     * Whether to use speech adaptation for speech recognition.
+     * @return Whether to use speech adaptation for speech recognition.
      * 
-    */
+     */
     public Boolean enableSpeechAdaptation() {
         return this.enableSpeechAdaptation;
     }

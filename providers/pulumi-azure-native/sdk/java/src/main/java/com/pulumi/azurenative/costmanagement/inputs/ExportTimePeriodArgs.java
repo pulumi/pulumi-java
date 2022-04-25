@@ -24,6 +24,10 @@ public final class ExportTimePeriodArgs extends com.pulumi.resources.ResourceArg
     @Import(name="from", required=true)
     private Output<String> from;
 
+    /**
+     * @return The start date for export data.
+     * 
+     */
     public Output<String> from() {
         return this.from;
     }
@@ -35,6 +39,10 @@ public final class ExportTimePeriodArgs extends com.pulumi.resources.ResourceArg
     @Import(name="to", required=true)
     private Output<String> to;
 
+    /**
+     * @return The end date for export data.
+     * 
+     */
     public Output<String> to() {
         return this.to;
     }
@@ -64,20 +72,44 @@ public final class ExportTimePeriodArgs extends com.pulumi.resources.ResourceArg
             $ = new ExportTimePeriodArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param from The start date for export data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder from(Output<String> from) {
             $.from = from;
             return this;
         }
 
+        /**
+         * @param from The start date for export data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder from(String from) {
             return from(Output.of(from));
         }
 
+        /**
+         * @param to The end date for export data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(Output<String> to) {
             $.to = to;
             return this;
         }
 
+        /**
+         * @param to The end date for export data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(String to) {
             return to(Output.of(to));
         }

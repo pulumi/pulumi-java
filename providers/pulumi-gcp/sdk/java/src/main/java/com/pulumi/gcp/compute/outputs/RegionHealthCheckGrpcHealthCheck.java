@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionHealthCheckGrpcHealthCheck {
     /**
-     * The gRPC service name for the health check.
+     * @return The gRPC service name for the health check.
      * The value of grpcServiceName has the following meanings by convention:
      * * Empty serviceName means the overall status of all services at the backend.
      * * Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
@@ -22,20 +22,20 @@ public final class RegionHealthCheckGrpcHealthCheck {
      */
     private final @Nullable String grpcServiceName;
     /**
-     * The port number for the health check request.
+     * @return The port number for the health check request.
      * Must be specified if portName and portSpecification are not set
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
      */
     private final @Nullable Integer port;
     /**
-     * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and
      * port_name are defined, port takes precedence.
      * 
      */
     private final @Nullable String portName;
     /**
-     * Specifies how port is selected for health checking, can be one of the
+     * @return Specifies how port is selected for health checking, can be one of the
      * following values:
      * * `USE_FIXED_PORT`: The port number in `port` is used for health checking.
      * * `USE_NAMED_PORT`: The `portName` is used for health checking.
@@ -63,35 +63,35 @@ public final class RegionHealthCheckGrpcHealthCheck {
     }
 
     /**
-     * The gRPC service name for the health check.
+     * @return The gRPC service name for the health check.
      * The value of grpcServiceName has the following meanings by convention:
      * * Empty serviceName means the overall status of all services at the backend.
      * * Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
      *   The grpcServiceName can only be ASCII.
      * 
-    */
+     */
     public Optional<String> grpcServiceName() {
         return Optional.ofNullable(this.grpcServiceName);
     }
     /**
-     * The port number for the health check request.
+     * @return The port number for the health check request.
      * Must be specified if portName and portSpecification are not set
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Port name as defined in InstanceGroup#NamedPort#name. If both port and
+     * @return Port name as defined in InstanceGroup#NamedPort#name. If both port and
      * port_name are defined, port takes precedence.
      * 
-    */
+     */
     public Optional<String> portName() {
         return Optional.ofNullable(this.portName);
     }
     /**
-     * Specifies how port is selected for health checking, can be one of the
+     * @return Specifies how port is selected for health checking, can be one of the
      * following values:
      * * `USE_FIXED_PORT`: The port number in `port` is used for health checking.
      * * `USE_NAMED_PORT`: The `portName` is used for health checking.
@@ -103,7 +103,7 @@ public final class RegionHealthCheckGrpcHealthCheck {
      *   `portName` fields.
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
-    */
+     */
     public Optional<String> portSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }

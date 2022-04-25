@@ -17,38 +17,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIPAMScopeResult {
     /**
-     * The Amazon Resource Name (ARN) of the IPAM scope.
+     * @return The Amazon Resource Name (ARN) of the IPAM scope.
      * 
      */
     private final @Nullable String arn;
     private final @Nullable String description;
     /**
-     * The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
+     * @return The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
      * 
      */
     private final @Nullable String ipamArn;
     /**
-     * Id of the IPAM scope.
+     * @return Id of the IPAM scope.
      * 
      */
     private final @Nullable String ipamScopeId;
     /**
-     * Determines whether this scope contains publicly routable space or space for a private network
+     * @return Determines whether this scope contains publicly routable space or space for a private network
      * 
      */
     private final @Nullable IPAMScopeIpamScopeType ipamScopeType;
     /**
-     * Is this one of the default scopes created with the IPAM.
+     * @return Is this one of the default scopes created with the IPAM.
      * 
      */
     private final @Nullable Boolean isDefault;
     /**
-     * The number of pools that currently exist in this scope.
+     * @return The number of pools that currently exist in this scope.
      * 
      */
     private final @Nullable Integer poolCount;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<IPAMScopeTag> tags;
@@ -74,9 +74,9 @@ public final class GetIPAMScopeResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the IPAM scope.
+     * @return The Amazon Resource Name (ARN) of the IPAM scope.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -84,44 +84,44 @@ public final class GetIPAMScopeResult {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
+     * @return The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
      * 
-    */
+     */
     public Optional<String> ipamArn() {
         return Optional.ofNullable(this.ipamArn);
     }
     /**
-     * Id of the IPAM scope.
+     * @return Id of the IPAM scope.
      * 
-    */
+     */
     public Optional<String> ipamScopeId() {
         return Optional.ofNullable(this.ipamScopeId);
     }
     /**
-     * Determines whether this scope contains publicly routable space or space for a private network
+     * @return Determines whether this scope contains publicly routable space or space for a private network
      * 
-    */
+     */
     public Optional<IPAMScopeIpamScopeType> ipamScopeType() {
         return Optional.ofNullable(this.ipamScopeType);
     }
     /**
-     * Is this one of the default scopes created with the IPAM.
+     * @return Is this one of the default scopes created with the IPAM.
      * 
-    */
+     */
     public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
-     * The number of pools that currently exist in this scope.
+     * @return The number of pools that currently exist in this scope.
      * 
-    */
+     */
     public Optional<Integer> poolCount() {
         return Optional.ofNullable(this.poolCount);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<IPAMScopeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

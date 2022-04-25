@@ -27,6 +27,10 @@ public final class SingleClusterRoutingArgs extends com.pulumi.resources.Resourc
     @Import(name="allowTransactionalWrites")
     private @Nullable Output<Boolean> allowTransactionalWrites;
 
+    /**
+     * @return Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
+     * 
+     */
     public Optional<Output<Boolean>> allowTransactionalWrites() {
         return Optional.ofNullable(this.allowTransactionalWrites);
     }
@@ -38,6 +42,10 @@ public final class SingleClusterRoutingArgs extends com.pulumi.resources.Resourc
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return The cluster to which read/write requests should be routed.
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -67,20 +75,44 @@ public final class SingleClusterRoutingArgs extends com.pulumi.resources.Resourc
             $ = new SingleClusterRoutingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowTransactionalWrites Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowTransactionalWrites(@Nullable Output<Boolean> allowTransactionalWrites) {
             $.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
 
+        /**
+         * @param allowTransactionalWrites Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowTransactionalWrites(Boolean allowTransactionalWrites) {
             return allowTransactionalWrites(Output.of(allowTransactionalWrites));
         }
 
+        /**
+         * @param clusterId The cluster to which read/write requests should be routed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId The cluster to which read/write requests should be routed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }

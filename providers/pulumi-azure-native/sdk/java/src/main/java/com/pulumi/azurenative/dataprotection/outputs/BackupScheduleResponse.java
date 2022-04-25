@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class BackupScheduleResponse {
     /**
-     * ISO 8601 repeating time interval format
+     * @return ISO 8601 repeating time interval format
      * 
      */
     private final List<String> repeatingTimeIntervals;
@@ -22,9 +22,9 @@ public final class BackupScheduleResponse {
     }
 
     /**
-     * ISO 8601 repeating time interval format
+     * @return ISO 8601 repeating time interval format
      * 
-    */
+     */
     public List<String> repeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }

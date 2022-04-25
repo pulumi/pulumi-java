@@ -23,6 +23,10 @@ public final class MediaGraphTlsValidationOptionsResponse extends com.pulumi.res
     @Import(name="ignoreHostname", required=true)
     private Boolean ignoreHostname;
 
+    /**
+     * @return Ignore the host name (common name) during validation.
+     * 
+     */
     public Boolean ignoreHostname() {
         return this.ignoreHostname;
     }
@@ -34,6 +38,10 @@ public final class MediaGraphTlsValidationOptionsResponse extends com.pulumi.res
     @Import(name="ignoreSignature", required=true)
     private Boolean ignoreSignature;
 
+    /**
+     * @return Ignore the integrity of the certificate chain at the current time.
+     * 
+     */
     public Boolean ignoreSignature() {
         return this.ignoreSignature;
     }
@@ -63,11 +71,23 @@ public final class MediaGraphTlsValidationOptionsResponse extends com.pulumi.res
             $ = new MediaGraphTlsValidationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreHostname Ignore the host name (common name) during validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreHostname(Boolean ignoreHostname) {
             $.ignoreHostname = ignoreHostname;
             return this;
         }
 
+        /**
+         * @param ignoreSignature Ignore the integrity of the certificate chain at the current time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreSignature(Boolean ignoreSignature) {
             $.ignoreSignature = ignoreSignature;
             return this;

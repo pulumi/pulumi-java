@@ -26,6 +26,10 @@ public final class EncryptionConfigurationResponse extends com.pulumi.resources.
     @Import(name="identity")
     private @Nullable CMKIdentityDefinitionResponse identity;
 
+    /**
+     * @return User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
+     * 
+     */
     public Optional<CMKIdentityDefinitionResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -37,6 +41,10 @@ public final class EncryptionConfigurationResponse extends com.pulumi.resources.
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The name of the key in Azure Key Vault to use as Customer Managed Key.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -48,6 +56,10 @@ public final class EncryptionConfigurationResponse extends com.pulumi.resources.
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return The version of the key used for CMK. If not provided, latest version will be used.
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -59,6 +71,10 @@ public final class EncryptionConfigurationResponse extends com.pulumi.resources.
     @Import(name="vaultBaseUrl", required=true)
     private String vaultBaseUrl;
 
+    /**
+     * @return The url of the Azure Key Vault used for CMK.
+     * 
+     */
     public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
@@ -90,21 +106,45 @@ public final class EncryptionConfigurationResponse extends com.pulumi.resources.
             $ = new EncryptionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable CMKIdentityDefinitionResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param keyName The name of the key in Azure Key Vault to use as Customer Managed Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVersion The version of the key used for CMK. If not provided, latest version will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param vaultBaseUrl The url of the Azure Key Vault used for CMK.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             $.vaultBaseUrl = vaultBaseUrl;
             return this;

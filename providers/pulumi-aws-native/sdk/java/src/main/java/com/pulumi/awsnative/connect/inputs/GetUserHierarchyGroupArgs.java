@@ -19,6 +19,10 @@ public final class GetUserHierarchyGroupArgs extends com.pulumi.resources.Invoke
     @Import(name="userHierarchyGroupArn", required=true)
     private String userHierarchyGroupArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the user hierarchy group.
+     * 
+     */
     public String userHierarchyGroupArn() {
         return this.userHierarchyGroupArn;
     }
@@ -47,6 +51,12 @@ public final class GetUserHierarchyGroupArgs extends com.pulumi.resources.Invoke
             $ = new GetUserHierarchyGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userHierarchyGroupArn The Amazon Resource Name (ARN) for the user hierarchy group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userHierarchyGroupArn(String userHierarchyGroupArn) {
             $.userHierarchyGroupArn = userHierarchyGroupArn;
             return this;

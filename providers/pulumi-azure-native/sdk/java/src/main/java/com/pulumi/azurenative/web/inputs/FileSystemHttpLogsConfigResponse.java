@@ -26,6 +26,10 @@ public final class FileSystemHttpLogsConfigResponse extends com.pulumi.resources
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -39,6 +43,12 @@ public final class FileSystemHttpLogsConfigResponse extends com.pulumi.resources
     @Import(name="retentionInDays")
     private @Nullable Integer retentionInDays;
 
+    /**
+     * @return Retention in days.
+     * Remove files older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -52,6 +62,12 @@ public final class FileSystemHttpLogsConfigResponse extends com.pulumi.resources
     @Import(name="retentionInMb")
     private @Nullable Integer retentionInMb;
 
+    /**
+     * @return Maximum size in megabytes that http log files can use.
+     * When reached old log files will be removed to make space for new ones.
+     * Value can range between 25 and 100.
+     * 
+     */
     public Optional<Integer> retentionInMb() {
         return Optional.ofNullable(this.retentionInMb);
     }
@@ -82,16 +98,38 @@ public final class FileSystemHttpLogsConfigResponse extends com.pulumi.resources
             $ = new FileSystemHttpLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled True if configuration is enabled, false if it is disabled and null if configuration is not set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param retentionInDays Retention in days.
+         * Remove files older than X days.
+         * 0 or lower means no retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param retentionInMb Maximum size in megabytes that http log files can use.
+         * When reached old log files will be removed to make space for new ones.
+         * Value can range between 25 and 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInMb(@Nullable Integer retentionInMb) {
             $.retentionInMb = retentionInMb;
             return this;

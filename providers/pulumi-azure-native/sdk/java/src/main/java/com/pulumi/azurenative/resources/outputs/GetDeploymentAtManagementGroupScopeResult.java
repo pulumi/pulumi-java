@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDeploymentAtManagementGroupScopeResult {
     /**
-     * The ID of the deployment.
+     * @return The ID of the deployment.
      * 
      */
     private final String id;
     /**
-     * the location of the deployment.
+     * @return the location of the deployment.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the deployment.
+     * @return The name of the deployment.
      * 
      */
     private final String name;
     /**
-     * Deployment properties.
+     * @return Deployment properties.
      * 
      */
     private final DeploymentPropertiesExtendedResponse properties;
     /**
-     * Deployment tags
+     * @return Deployment tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the deployment.
+     * @return The type of the deployment.
      * 
      */
     private final String type;
@@ -61,44 +61,44 @@ public final class GetDeploymentAtManagementGroupScopeResult {
     }
 
     /**
-     * The ID of the deployment.
+     * @return The ID of the deployment.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * the location of the deployment.
+     * @return the location of the deployment.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the deployment.
+     * @return The name of the deployment.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Deployment properties.
+     * @return Deployment properties.
      * 
-    */
+     */
     public DeploymentPropertiesExtendedResponse properties() {
         return this.properties;
     }
     /**
-     * Deployment tags
+     * @return Deployment tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the deployment.
+     * @return The type of the deployment.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

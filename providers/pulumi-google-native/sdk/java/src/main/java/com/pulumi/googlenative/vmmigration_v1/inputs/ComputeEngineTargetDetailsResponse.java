@@ -29,6 +29,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="additionalLicenses", required=true)
     private List<String> additionalLicenses;
 
+    /**
+     * @return Additional licenses to assign to the VM.
+     * 
+     */
     public List<String> additionalLicenses() {
         return this.additionalLicenses;
     }
@@ -40,6 +44,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="appliedLicense", required=true)
     private AppliedLicenseResponse appliedLicense;
 
+    /**
+     * @return The OS license returned from the adaptation module report.
+     * 
+     */
     public AppliedLicenseResponse appliedLicense() {
         return this.appliedLicense;
     }
@@ -51,6 +59,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="bootOption", required=true)
     private String bootOption;
 
+    /**
+     * @return The VM Boot Option, as set in the source vm.
+     * 
+     */
     public String bootOption() {
         return this.bootOption;
     }
@@ -62,6 +74,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="computeScheduling", required=true)
     private ComputeSchedulingResponse computeScheduling;
 
+    /**
+     * @return Compute instance scheduling information (if empty default is used).
+     * 
+     */
     public ComputeSchedulingResponse computeScheduling() {
         return this.computeScheduling;
     }
@@ -73,6 +89,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return The disk type to use in the VM.
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -84,6 +104,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return A map of labels to associate with the VM.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -95,6 +119,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="licenseType", required=true)
     private String licenseType;
 
+    /**
+     * @return The license type to use in OS adaptation.
+     * 
+     */
     public String licenseType() {
         return this.licenseType;
     }
@@ -106,6 +134,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return The machine type to create the VM with.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -117,6 +149,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="machineTypeSeries", required=true)
     private String machineTypeSeries;
 
+    /**
+     * @return The machine type series to create the VM with.
+     * 
+     */
     public String machineTypeSeries() {
         return this.machineTypeSeries;
     }
@@ -128,6 +164,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return The metadata key/value pairs to assign to the VM.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -139,6 +179,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="networkInterfaces", required=true)
     private List<NetworkInterfaceResponse> networkInterfaces;
 
+    /**
+     * @return List of NICs connected to this VM.
+     * 
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
@@ -150,6 +194,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="networkTags", required=true)
     private List<String> networkTags;
 
+    /**
+     * @return A map of network tags to associate with the VM.
+     * 
+     */
     public List<String> networkTags() {
         return this.networkTags;
     }
@@ -161,6 +209,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The GCP target project ID or project name.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -172,6 +224,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="secureBoot", required=true)
     private Boolean secureBoot;
 
+    /**
+     * @return Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
+     * 
+     */
     public Boolean secureBoot() {
         return this.secureBoot;
     }
@@ -183,6 +239,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return The service account to associate the VM with.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -194,6 +254,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="vmName", required=true)
     private String vmName;
 
+    /**
+     * @return The name of the VM to create.
+     * 
+     */
     public String vmName() {
         return this.vmName;
     }
@@ -205,6 +269,10 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return The zone in which to create the VM.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -249,98 +317,218 @@ public final class ComputeEngineTargetDetailsResponse extends com.pulumi.resourc
             $ = new ComputeEngineTargetDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalLicenses Additional licenses to assign to the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLicenses(List<String> additionalLicenses) {
             $.additionalLicenses = additionalLicenses;
             return this;
         }
 
+        /**
+         * @param additionalLicenses Additional licenses to assign to the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLicenses(String... additionalLicenses) {
             return additionalLicenses(List.of(additionalLicenses));
         }
 
+        /**
+         * @param appliedLicense The OS license returned from the adaptation module report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliedLicense(AppliedLicenseResponse appliedLicense) {
             $.appliedLicense = appliedLicense;
             return this;
         }
 
+        /**
+         * @param bootOption The VM Boot Option, as set in the source vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootOption(String bootOption) {
             $.bootOption = bootOption;
             return this;
         }
 
+        /**
+         * @param computeScheduling Compute instance scheduling information (if empty default is used).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeScheduling(ComputeSchedulingResponse computeScheduling) {
             $.computeScheduling = computeScheduling;
             return this;
         }
 
+        /**
+         * @param diskType The disk type to use in the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param labels A map of labels to associate with the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param licenseType The license type to use in OS adaptation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param machineType The machine type to create the VM with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineTypeSeries The machine type series to create the VM with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineTypeSeries(String machineTypeSeries) {
             $.machineTypeSeries = machineTypeSeries;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key/value pairs to assign to the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param networkInterfaces List of NICs connected to this VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces List of NICs connected to this VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param networkTags A map of network tags to associate with the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(List<String> networkTags) {
             $.networkTags = networkTags;
             return this;
         }
 
+        /**
+         * @param networkTags A map of network tags to associate with the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(String... networkTags) {
             return networkTags(List.of(networkTags));
         }
 
+        /**
+         * @param project The GCP target project ID or project name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param secureBoot Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureBoot(Boolean secureBoot) {
             $.secureBoot = secureBoot;
             return this;
         }
 
+        /**
+         * @param serviceAccount The service account to associate the VM with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param vmName The name of the VM to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmName(String vmName) {
             $.vmName = vmName;
             return this;
         }
 
+        /**
+         * @param zone The zone in which to create the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

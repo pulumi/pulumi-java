@@ -26,6 +26,10 @@ public final class FormulaPropertiesFromVmArgs extends com.pulumi.resources.Reso
     @Import(name="labVmId")
     private @Nullable Output<String> labVmId;
 
+    /**
+     * @return The identifier of the VM from which a formula is to be created.
+     * 
+     */
     public Optional<Output<String>> labVmId() {
         return Optional.ofNullable(this.labVmId);
     }
@@ -54,11 +58,23 @@ public final class FormulaPropertiesFromVmArgs extends com.pulumi.resources.Reso
             $ = new FormulaPropertiesFromVmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labVmId The identifier of the VM from which a formula is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labVmId(@Nullable Output<String> labVmId) {
             $.labVmId = labVmId;
             return this;
         }
 
+        /**
+         * @param labVmId The identifier of the VM from which a formula is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labVmId(String labVmId) {
             return labVmId(Output.of(labVmId));
         }

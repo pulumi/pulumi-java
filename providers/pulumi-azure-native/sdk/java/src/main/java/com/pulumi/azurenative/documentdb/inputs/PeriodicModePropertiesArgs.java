@@ -26,6 +26,10 @@ public final class PeriodicModePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="backupIntervalInMinutes")
     private @Nullable Output<Integer> backupIntervalInMinutes;
 
+    /**
+     * @return An integer representing the interval in minutes between two backups
+     * 
+     */
     public Optional<Output<Integer>> backupIntervalInMinutes() {
         return Optional.ofNullable(this.backupIntervalInMinutes);
     }
@@ -37,6 +41,10 @@ public final class PeriodicModePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="backupRetentionIntervalInHours")
     private @Nullable Output<Integer> backupRetentionIntervalInHours;
 
+    /**
+     * @return An integer representing the time (in hours) that each backup is retained
+     * 
+     */
     public Optional<Output<Integer>> backupRetentionIntervalInHours() {
         return Optional.ofNullable(this.backupRetentionIntervalInHours);
     }
@@ -66,20 +74,44 @@ public final class PeriodicModePropertiesArgs extends com.pulumi.resources.Resou
             $ = new PeriodicModePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupIntervalInMinutes An integer representing the interval in minutes between two backups
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupIntervalInMinutes(@Nullable Output<Integer> backupIntervalInMinutes) {
             $.backupIntervalInMinutes = backupIntervalInMinutes;
             return this;
         }
 
+        /**
+         * @param backupIntervalInMinutes An integer representing the interval in minutes between two backups
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupIntervalInMinutes(Integer backupIntervalInMinutes) {
             return backupIntervalInMinutes(Output.of(backupIntervalInMinutes));
         }
 
+        /**
+         * @param backupRetentionIntervalInHours An integer representing the time (in hours) that each backup is retained
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionIntervalInHours(@Nullable Output<Integer> backupRetentionIntervalInHours) {
             $.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
             return this;
         }
 
+        /**
+         * @param backupRetentionIntervalInHours An integer representing the time (in hours) that each backup is retained
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionIntervalInHours(Integer backupRetentionIntervalInHours) {
             return backupRetentionIntervalInHours(Output.of(backupRetentionIntervalInHours));
         }

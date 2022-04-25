@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ServiceMeshAnalysisMessageBaseResponse {
     /**
-     * A url pointing to the Service Mesh or Istio documentation for this specific error type.
+     * @return A url pointing to the Service Mesh or Istio documentation for this specific error type.
      * 
      */
     private final String documentationUrl;
     /**
-     * Represents how severe a message is.
+     * @return Represents how severe a message is.
      * 
      */
     private final String level;
     /**
-     * Represents the specific type of a message.
+     * @return Represents the specific type of a message.
      * 
      */
     private final ServiceMeshTypeResponse type;
@@ -37,23 +37,23 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
     }
 
     /**
-     * A url pointing to the Service Mesh or Istio documentation for this specific error type.
+     * @return A url pointing to the Service Mesh or Istio documentation for this specific error type.
      * 
-    */
+     */
     public String documentationUrl() {
         return this.documentationUrl;
     }
     /**
-     * Represents how severe a message is.
+     * @return Represents how severe a message is.
      * 
-    */
+     */
     public String level() {
         return this.level;
     }
     /**
-     * Represents the specific type of a message.
+     * @return Represents the specific type of a message.
      * 
-    */
+     */
     public ServiceMeshTypeResponse type() {
         return this.type;
     }

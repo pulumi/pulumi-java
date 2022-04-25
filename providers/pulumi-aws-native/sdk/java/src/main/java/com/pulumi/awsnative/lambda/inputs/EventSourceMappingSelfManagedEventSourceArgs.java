@@ -26,6 +26,10 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends com.pulu
     @Import(name="endpoints")
     private @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
 
+    /**
+     * @return The endpoints for a self-managed event source.
+     * 
+     */
     public Optional<Output<EventSourceMappingEndpointsArgs>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -54,11 +58,23 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends com.pulu
             $ = new EventSourceMappingSelfManagedEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoints The endpoints for a self-managed event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable Output<EventSourceMappingEndpointsArgs> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints The endpoints for a self-managed event source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(EventSourceMappingEndpointsArgs endpoints) {
             return endpoints(Output.of(endpoints));
         }

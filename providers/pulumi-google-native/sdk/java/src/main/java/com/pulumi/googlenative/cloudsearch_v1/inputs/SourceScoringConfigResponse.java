@@ -23,6 +23,10 @@ public final class SourceScoringConfigResponse extends com.pulumi.resources.Invo
     @Import(name="sourceImportance", required=true)
     private String sourceImportance;
 
+    /**
+     * @return Importance of the source.
+     * 
+     */
     public String sourceImportance() {
         return this.sourceImportance;
     }
@@ -51,6 +55,12 @@ public final class SourceScoringConfigResponse extends com.pulumi.resources.Invo
             $ = new SourceScoringConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceImportance Importance of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImportance(String sourceImportance) {
             $.sourceImportance = sourceImportance;
             return this;

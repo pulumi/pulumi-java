@@ -27,6 +27,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastTransitionTime", required=true)
     private Output<String> lastTransitionTime;
 
+    /**
+     * @return lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
+     * 
+     */
     public Output<String> lastTransitionTime() {
         return this.lastTransitionTime;
     }
@@ -38,6 +42,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="message", required=true)
     private Output<String> message;
 
+    /**
+     * @return message is a human readable message indicating details about the transition. This may be an empty string.
+     * 
+     */
     public Output<String> message() {
         return this.message;
     }
@@ -49,6 +57,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="observedGeneration")
     private @Nullable Output<Integer> observedGeneration;
 
+    /**
+     * @return observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+     * 
+     */
     public Optional<Output<Integer>> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
@@ -60,6 +72,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reason", required=true)
     private Output<String> reason;
 
+    /**
+     * @return reason contains a programmatic identifier indicating the reason for the condition&#39;s last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.
+     * 
+     */
     public Output<String> reason() {
         return this.reason;
     }
@@ -71,6 +87,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
     private Output<String> status;
 
+    /**
+     * @return status of the condition, one of True, False, Unknown.
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
@@ -82,6 +102,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return type of condition in CamelCase or in foo.example.com/CamelCase.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -115,56 +139,128 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastTransitionTime lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(Output<String> lastTransitionTime) {
             $.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
+        /**
+         * @param lastTransitionTime lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(String lastTransitionTime) {
             return lastTransitionTime(Output.of(lastTransitionTime));
         }
 
+        /**
+         * @param message message is a human readable message indicating details about the transition. This may be an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message message is a human readable message indicating details about the transition. This may be an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param observedGeneration observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             $.observedGeneration = observedGeneration;
             return this;
         }
 
+        /**
+         * @param observedGeneration observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedGeneration(Integer observedGeneration) {
             return observedGeneration(Output.of(observedGeneration));
         }
 
+        /**
+         * @param reason reason contains a programmatic identifier indicating the reason for the condition&#39;s last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason reason contains a programmatic identifier indicating the reason for the condition&#39;s last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
 
+        /**
+         * @param status status of the condition, one of True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status status of the condition, one of True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param type type of condition in CamelCase or in foo.example.com/CamelCase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type type of condition in CamelCase or in foo.example.com/CamelCase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

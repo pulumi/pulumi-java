@@ -23,6 +23,10 @@ public final class AnalyticsConfigurationFilterGetArgs extends com.pulumi.resour
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return Object prefix for filtering.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -34,6 +38,10 @@ public final class AnalyticsConfigurationFilterGetArgs extends com.pulumi.resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Set of object tags for filtering.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -63,20 +71,44 @@ public final class AnalyticsConfigurationFilterGetArgs extends com.pulumi.resour
             $ = new AnalyticsConfigurationFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param prefix Object prefix for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Object prefix for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param tags Set of object tags for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Set of object tags for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

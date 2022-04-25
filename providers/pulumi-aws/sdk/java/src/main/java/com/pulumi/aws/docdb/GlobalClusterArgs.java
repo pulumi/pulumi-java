@@ -23,6 +23,10 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return Name for an automatically created database on cluster creation.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -34,6 +38,10 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
     private @Nullable Output<Boolean> deletionProtection;
 
+    /**
+     * @return If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> deletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }
@@ -53,6 +61,11 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
+    /**
+     * @return Engine version of the global database. Upgrading the engine version will result in all cluster members being immediately updated and will.
+     * * **NOTE:** Upgrading major versions is not supported.
+     * 
+     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -64,6 +77,10 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalClusterIdentifier", required=true)
     private Output<String> globalClusterIdentifier;
 
+    /**
+     * @return The global cluster identifier.
+     * 
+     */
     public Output<String> globalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
@@ -112,20 +129,44 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GlobalClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName Name for an automatically created database on cluster creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Name for an automatically created database on cluster creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param deletionProtection If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param deletionProtection If the Global Cluster should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             return deletionProtection(Output.of(deletionProtection));
         }
@@ -139,20 +180,46 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
             return engine(Output.of(engine));
         }
 
+        /**
+         * @param engineVersion Engine version of the global database. Upgrading the engine version will result in all cluster members being immediately updated and will.
+         * * **NOTE:** Upgrading major versions is not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion Engine version of the global database. Upgrading the engine version will result in all cluster members being immediately updated and will.
+         * * **NOTE:** Upgrading major versions is not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param globalClusterIdentifier The global cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterIdentifier(Output<String> globalClusterIdentifier) {
             $.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
 
+        /**
+         * @param globalClusterIdentifier The global cluster identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalClusterIdentifier(String globalClusterIdentifier) {
             return globalClusterIdentifier(Output.of(globalClusterIdentifier));
         }

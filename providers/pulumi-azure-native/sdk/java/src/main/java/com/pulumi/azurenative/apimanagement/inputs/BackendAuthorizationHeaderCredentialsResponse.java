@@ -23,6 +23,10 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends com.pul
     @Import(name="parameter", required=true)
     private String parameter;
 
+    /**
+     * @return Authentication Parameter value.
+     * 
+     */
     public String parameter() {
         return this.parameter;
     }
@@ -34,6 +38,10 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends com.pul
     @Import(name="scheme", required=true)
     private String scheme;
 
+    /**
+     * @return Authentication Scheme name.
+     * 
+     */
     public String scheme() {
         return this.scheme;
     }
@@ -63,11 +71,23 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends com.pul
             $ = new BackendAuthorizationHeaderCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameter Authentication Parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameter(String parameter) {
             $.parameter = parameter;
             return this;
         }
 
+        /**
+         * @param scheme Authentication Scheme name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             $.scheme = scheme;
             return this;

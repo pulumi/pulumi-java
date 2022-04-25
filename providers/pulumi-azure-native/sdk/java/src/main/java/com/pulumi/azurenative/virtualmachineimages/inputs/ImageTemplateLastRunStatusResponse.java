@@ -25,6 +25,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return End time of the last run (UTC)
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -36,6 +40,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Verbose information about the last run state
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -47,6 +55,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="runState")
     private @Nullable String runState;
 
+    /**
+     * @return State of the last run
+     * 
+     */
     public Optional<String> runState() {
         return Optional.ofNullable(this.runState);
     }
@@ -58,6 +70,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="runSubState")
     private @Nullable String runSubState;
 
+    /**
+     * @return Sub-state of the last run
+     * 
+     */
     public Optional<String> runSubState() {
         return Optional.ofNullable(this.runSubState);
     }
@@ -69,6 +85,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Start time of the last run (UTC)
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -101,26 +121,56 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
             $ = new ImageTemplateLastRunStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime End time of the last run (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param message Verbose information about the last run state
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param runState State of the last run
+         * 
+         * @return builder
+         * 
+         */
         public Builder runState(@Nullable String runState) {
             $.runState = runState;
             return this;
         }
 
+        /**
+         * @param runSubState Sub-state of the last run
+         * 
+         * @return builder
+         * 
+         */
         public Builder runSubState(@Nullable String runSubState) {
             $.runSubState = runSubState;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the last run (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;

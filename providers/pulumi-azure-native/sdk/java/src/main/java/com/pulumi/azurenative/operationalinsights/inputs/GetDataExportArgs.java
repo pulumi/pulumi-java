@@ -19,6 +19,10 @@ public final class GetDataExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataExportName", required=true)
     private String dataExportName;
 
+    /**
+     * @return The data export rule name.
+     * 
+     */
     public String dataExportName() {
         return this.dataExportName;
     }
@@ -30,6 +34,10 @@ public final class GetDataExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetDataExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetDataExportArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDataExportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataExportName The data export rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportName(String dataExportName) {
             $.dataExportName = dataExportName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

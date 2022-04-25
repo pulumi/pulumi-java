@@ -23,6 +23,10 @@ public final class AdBreakResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTimeOffset", required=true)
     private String startTimeOffset;
 
+    /**
+     * @return Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
+     * 
+     */
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
@@ -51,6 +55,12 @@ public final class AdBreakResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AdBreakResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startTimeOffset Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffset(String startTimeOffset) {
             $.startTimeOffset = startTimeOffset;
             return this;

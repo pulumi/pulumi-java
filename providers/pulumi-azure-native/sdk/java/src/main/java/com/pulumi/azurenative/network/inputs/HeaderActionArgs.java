@@ -28,6 +28,10 @@ public final class HeaderActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="headerActionType", required=true)
     private Output<Either<String,HeaderActionType>> headerActionType;
 
+    /**
+     * @return Which type of manipulation to apply to the header.
+     * 
+     */
     public Output<Either<String,HeaderActionType>> headerActionType() {
         return this.headerActionType;
     }
@@ -39,6 +43,10 @@ public final class HeaderActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="headerName", required=true)
     private Output<String> headerName;
 
+    /**
+     * @return The name of the header this action will apply to.
+     * 
+     */
     public Output<String> headerName() {
         return this.headerName;
     }
@@ -50,6 +58,10 @@ public final class HeaderActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value to update the given header name with. This value is not used if the actionType is Delete.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -80,37 +92,85 @@ public final class HeaderActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HeaderActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerActionType Which type of manipulation to apply to the header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerActionType(Output<Either<String,HeaderActionType>> headerActionType) {
             $.headerActionType = headerActionType;
             return this;
         }
 
+        /**
+         * @param headerActionType Which type of manipulation to apply to the header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerActionType(Either<String,HeaderActionType> headerActionType) {
             return headerActionType(Output.of(headerActionType));
         }
 
+        /**
+         * @param headerActionType Which type of manipulation to apply to the header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerActionType(String headerActionType) {
             return headerActionType(Either.ofLeft(headerActionType));
         }
 
+        /**
+         * @param headerActionType Which type of manipulation to apply to the header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerActionType(HeaderActionType headerActionType) {
             return headerActionType(Either.ofRight(headerActionType));
         }
 
+        /**
+         * @param headerName The name of the header this action will apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName The name of the header this action will apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }
 
+        /**
+         * @param value The value to update the given header name with. This value is not used if the actionType is Delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value to update the given header name with. This value is not used if the actionType is Delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

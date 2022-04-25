@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class KeyVaultSecretReferenceResponse {
     /**
-     * The URL referencing a secret in a Key Vault.
+     * @return The URL referencing a secret in a Key Vault.
      * 
      */
     private final String secretUrl;
     /**
-     * The relative URL of the Key Vault containing the secret.
+     * @return The relative URL of the Key Vault containing the secret.
      * 
      */
     private final SubResourceResponse sourceVault;
@@ -30,16 +30,16 @@ public final class KeyVaultSecretReferenceResponse {
     }
 
     /**
-     * The URL referencing a secret in a Key Vault.
+     * @return The URL referencing a secret in a Key Vault.
      * 
-    */
+     */
     public String secretUrl() {
         return this.secretUrl;
     }
     /**
-     * The relative URL of the Key Vault containing the secret.
+     * @return The relative URL of the Key Vault containing the secret.
      * 
-    */
+     */
     public SubResourceResponse sourceVault() {
         return this.sourceVault;
     }

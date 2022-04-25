@@ -29,6 +29,10 @@ public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datastoreId")
     private @Nullable Output<String> datastoreId;
 
+    /**
+     * @return ARM resource ID of the datastore where the asset is located.
+     * 
+     */
     public Optional<Output<String>> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
@@ -40,6 +44,10 @@ public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The asset description text.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flavors")
     private @Nullable Output<Map<String,FlavorDataArgs>> flavors;
 
+    /**
+     * @return Mapping of model flavors to their properties.
+     * 
+     */
     public Optional<Output<Map<String,FlavorDataArgs>>> flavors() {
         return Optional.ofNullable(this.flavors);
     }
@@ -62,6 +74,10 @@ public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isAnonymous")
     private @Nullable Output<Boolean> isAnonymous;
 
+    /**
+     * @return If the name version are system generated (anonymous registration).
+     * 
+     */
     public Optional<Output<Boolean>> isAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
@@ -73,6 +89,10 @@ public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return The path of the file/directory in the datastore.
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -84,6 +104,10 @@ public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return The asset property dictionary.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -95,6 +119,10 @@ public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -129,65 +157,149 @@ public final class ModelVersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ModelVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the asset is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
             $.datastoreId = datastoreId;
             return this;
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the asset is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(String datastoreId) {
             return datastoreId(Output.of(datastoreId));
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param flavors Mapping of model flavors to their properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flavors(@Nullable Output<Map<String,FlavorDataArgs>> flavors) {
             $.flavors = flavors;
             return this;
         }
 
+        /**
+         * @param flavors Mapping of model flavors to their properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flavors(Map<String,FlavorDataArgs> flavors) {
             return flavors(Output.of(flavors));
         }
 
+        /**
+         * @param isAnonymous If the name version are system generated (anonymous registration).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
             $.isAnonymous = isAnonymous;
             return this;
         }
 
+        /**
+         * @param isAnonymous If the name version are system generated (anonymous registration).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAnonymous(Boolean isAnonymous) {
             return isAnonymous(Output.of(isAnonymous));
         }
 
+        /**
+         * @param path The path of the file/directory in the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path of the file/directory in the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

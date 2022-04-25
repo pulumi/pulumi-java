@@ -22,6 +22,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainName")
     private @Nullable String domainName;
 
+    /**
+     * @return The domain name the desired resolver rule forwards DNS queries for. Conflicts with `resolver_rule_id`.
+     * 
+     */
     public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -33,6 +37,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The friendly name of the desired resolver rule. Conflicts with `resolver_rule_id`.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resolverEndpointId")
     private @Nullable String resolverEndpointId;
 
+    /**
+     * @return The ID of the outbound resolver endpoint of the desired resolver rule. Conflicts with `resolver_rule_id`.
+     * 
+     */
     public Optional<String> resolverEndpointId() {
         return Optional.ofNullable(this.resolverEndpointId);
     }
@@ -55,6 +67,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resolverRuleId")
     private @Nullable String resolverRuleId;
 
+    /**
+     * @return The ID of the desired resolver rule. Conflicts with `domain_name`, `name`, `resolver_endpoint_id` and `rule_type`.
+     * 
+     */
     public Optional<String> resolverRuleId() {
         return Optional.ofNullable(this.resolverRuleId);
     }
@@ -66,6 +82,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleType")
     private @Nullable String ruleType;
 
+    /**
+     * @return The rule type of the desired resolver rule. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`. Conflicts with `resolver_rule_id`.
+     * 
+     */
     public Optional<String> ruleType() {
         return Optional.ofNullable(this.ruleType);
     }
@@ -77,6 +97,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags assigned to the resolver rule.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -110,31 +134,67 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResolverRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The domain name the desired resolver rule forwards DNS queries for. Conflicts with `resolver_rule_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param name The friendly name of the desired resolver rule. Conflicts with `resolver_rule_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resolverEndpointId The ID of the outbound resolver endpoint of the desired resolver rule. Conflicts with `resolver_rule_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             $.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
+        /**
+         * @param resolverRuleId The ID of the desired resolver rule. Conflicts with `domain_name`, `name`, `resolver_endpoint_id` and `rule_type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverRuleId(@Nullable String resolverRuleId) {
             $.resolverRuleId = resolverRuleId;
             return this;
         }
 
+        /**
+         * @param ruleType The rule type of the desired resolver rule. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`. Conflicts with `resolver_rule_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(@Nullable String ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param tags A map of tags assigned to the resolver rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

@@ -27,6 +27,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerPort", required=true)
     private Output<Integer> containerPort;
 
+    /**
+     * @return Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
+     * 
+     */
     public Output<Integer> containerPort() {
         return this.containerPort;
     }
@@ -38,6 +42,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostIP")
     private @Nullable Output<String> hostIP;
 
+    /**
+     * @return What host IP to bind the external port to.
+     * 
+     */
     public Optional<Output<String>> hostIP() {
         return Optional.ofNullable(this.hostIP);
     }
@@ -49,6 +57,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPort")
     private @Nullable Output<Integer> hostPort;
 
+    /**
+     * @return Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
+     * 
+     */
     public Optional<Output<Integer>> hostPort() {
         return Optional.ofNullable(this.hostPort);
     }
@@ -60,6 +72,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -76,6 +92,15 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
+     * 
+     * Possible enum values:
+     *  - `&#34;SCTP&#34;` is the SCTP protocol.
+     *  - `&#34;TCP&#34;` is the TCP protocol.
+     *  - `&#34;UDP&#34;` is the UDP protocol.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -108,47 +133,117 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerPort Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Output<Integer> containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param containerPort Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             return containerPort(Output.of(containerPort));
         }
 
+        /**
+         * @param hostIP What host IP to bind the external port to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostIP(@Nullable Output<String> hostIP) {
             $.hostIP = hostIP;
             return this;
         }
 
+        /**
+         * @param hostIP What host IP to bind the external port to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostIP(String hostIP) {
             return hostIP(Output.of(hostIP));
         }
 
+        /**
+         * @param hostPort Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPort(@Nullable Output<Integer> hostPort) {
             $.hostPort = hostPort;
             return this;
         }
 
+        /**
+         * @param hostPort Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPort(Integer hostPort) {
             return hostPort(Output.of(hostPort));
         }
 
+        /**
+         * @param name If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param protocol Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
+         * 
+         * Possible enum values:
+         *  - `&#34;SCTP&#34;` is the SCTP protocol.
+         *  - `&#34;TCP&#34;` is the TCP protocol.
+         *  - `&#34;UDP&#34;` is the UDP protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
+         * 
+         * Possible enum values:
+         *  - `&#34;SCTP&#34;` is the SCTP protocol.
+         *  - `&#34;TCP&#34;` is the TCP protocol.
+         *  - `&#34;UDP&#34;` is the UDP protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

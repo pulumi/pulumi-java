@@ -28,6 +28,10 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="codeConfiguration")
     private @Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration;
 
+    /**
+     * @return GitHub Action code configuration.
+     * 
+     */
     public Optional<Output<GitHubActionCodeConfigurationArgs>> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
@@ -39,6 +43,10 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="containerConfiguration")
     private @Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration;
 
+    /**
+     * @return GitHub Action container configuration.
+     * 
+     */
     public Optional<Output<GitHubActionContainerConfigurationArgs>> containerConfiguration() {
         return Optional.ofNullable(this.containerConfiguration);
     }
@@ -50,6 +58,10 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="generateWorkflowFile")
     private @Nullable Output<Boolean> generateWorkflowFile;
 
+    /**
+     * @return Workflow option to determine whether the workflow file should be generated and written to the repository.
+     * 
+     */
     public Optional<Output<Boolean>> generateWorkflowFile() {
         return Optional.ofNullable(this.generateWorkflowFile);
     }
@@ -61,6 +73,10 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="isLinux")
     private @Nullable Output<Boolean> isLinux;
 
+    /**
+     * @return This will help determine the workflow configuration to select.
+     * 
+     */
     public Optional<Output<Boolean>> isLinux() {
         return Optional.ofNullable(this.isLinux);
     }
@@ -92,38 +108,86 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
             $ = new GitHubActionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeConfiguration GitHub Action code configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeConfiguration(@Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration) {
             $.codeConfiguration = codeConfiguration;
             return this;
         }
 
+        /**
+         * @param codeConfiguration GitHub Action code configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeConfiguration(GitHubActionCodeConfigurationArgs codeConfiguration) {
             return codeConfiguration(Output.of(codeConfiguration));
         }
 
+        /**
+         * @param containerConfiguration GitHub Action container configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerConfiguration(@Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration) {
             $.containerConfiguration = containerConfiguration;
             return this;
         }
 
+        /**
+         * @param containerConfiguration GitHub Action container configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerConfiguration(GitHubActionContainerConfigurationArgs containerConfiguration) {
             return containerConfiguration(Output.of(containerConfiguration));
         }
 
+        /**
+         * @param generateWorkflowFile Workflow option to determine whether the workflow file should be generated and written to the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generateWorkflowFile(@Nullable Output<Boolean> generateWorkflowFile) {
             $.generateWorkflowFile = generateWorkflowFile;
             return this;
         }
 
+        /**
+         * @param generateWorkflowFile Workflow option to determine whether the workflow file should be generated and written to the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generateWorkflowFile(Boolean generateWorkflowFile) {
             return generateWorkflowFile(Output.of(generateWorkflowFile));
         }
 
+        /**
+         * @param isLinux This will help determine the workflow configuration to select.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLinux(@Nullable Output<Boolean> isLinux) {
             $.isLinux = isLinux;
             return this;
         }
 
+        /**
+         * @param isLinux This will help determine the workflow configuration to select.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLinux(Boolean isLinux) {
             return isLinux(Output.of(isLinux));
         }

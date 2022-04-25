@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class CapacityReservationGroupInstanceViewResponse {
     /**
-     * List of instance view of the capacity reservations under the capacity reservation group.
+     * @return List of instance view of the capacity reservations under the capacity reservation group.
      * 
      */
     private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
@@ -22,9 +22,9 @@ public final class CapacityReservationGroupInstanceViewResponse {
     }
 
     /**
-     * List of instance view of the capacity reservations under the capacity reservation group.
+     * @return List of instance view of the capacity reservations under the capacity reservation group.
      * 
-    */
+     */
     public List<CapacityReservationInstanceViewWithNameResponse> capacityReservations() {
         return this.capacityReservations;
     }

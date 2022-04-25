@@ -24,6 +24,10 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
     @Import(name="backendService", required=true)
     private Output<String> backendService;
 
+    /**
+     * @return The full or partial URL to the BackendService resource being mirrored to.
+     * 
+     */
     public Output<String> backendService() {
         return this.backendService;
     }
@@ -39,6 +43,14 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
     @Import(name="headerAction")
     private @Nullable Output<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
 
+    /**
+     * @return Specifies changes to request and response headers that need to take effect for
+     * the selected backendService.
+     * headerAction specified here take effect before headerAction in the enclosing
+     * HttpRouteRule, PathMatcher and UrlMap.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs>> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -55,6 +67,15 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
     @Import(name="weight", required=true)
     private Output<Integer> weight;
 
+    /**
+     * @return Specifies the fraction of traffic sent to backendService, computed as
+     * weight / (sum of all weightedBackendService weights in routeAction) .
+     * The selection of a backend service is determined only for new traffic. Once a user&#39;s request
+     * has been directed to a backendService, subsequent requests will be sent to the same backendService
+     * as determined by the BackendService&#39;s session affinity policy.
+     * The value must be between 0 and 1000
+     * 
+     */
     public Output<Integer> weight() {
         return this.weight;
     }
@@ -85,29 +106,83 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
             $ = new URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendService The full or partial URL to the BackendService resource being mirrored to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(Output<String> backendService) {
             $.backendService = backendService;
             return this;
         }
 
+        /**
+         * @param backendService The full or partial URL to the BackendService resource being mirrored to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(String backendService) {
             return backendService(Output.of(backendService));
         }
 
+        /**
+         * @param headerAction Specifies changes to request and response headers that need to take effect for
+         * the selected backendService.
+         * headerAction specified here take effect before headerAction in the enclosing
+         * HttpRouteRule, PathMatcher and UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(@Nullable Output<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> headerAction) {
             $.headerAction = headerAction;
             return this;
         }
 
+        /**
+         * @param headerAction Specifies changes to request and response headers that need to take effect for
+         * the selected backendService.
+         * headerAction specified here take effect before headerAction in the enclosing
+         * HttpRouteRule, PathMatcher and UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs headerAction) {
             return headerAction(Output.of(headerAction));
         }
 
+        /**
+         * @param weight Specifies the fraction of traffic sent to backendService, computed as
+         * weight / (sum of all weightedBackendService weights in routeAction) .
+         * The selection of a backend service is determined only for new traffic. Once a user&#39;s request
+         * has been directed to a backendService, subsequent requests will be sent to the same backendService
+         * as determined by the BackendService&#39;s session affinity policy.
+         * The value must be between 0 and 1000
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight Specifies the fraction of traffic sent to backendService, computed as
+         * weight / (sum of all weightedBackendService weights in routeAction) .
+         * The selection of a backend service is determined only for new traffic. Once a user&#39;s request
+         * has been directed to a backendService, subsequent requests will be sent to the same backendService
+         * as determined by the BackendService&#39;s session affinity policy.
+         * The value must be between 0 and 1000
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

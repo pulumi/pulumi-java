@@ -22,6 +22,10 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
     @Import(name="alertRuleName", required=true)
     private String alertRuleName;
 
+    /**
+     * @return The name of the alert rule.
+     * 
+     */
     public String alertRuleName() {
         return this.alertRuleName;
     }
@@ -33,6 +37,10 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
     @Import(name="expandDetector")
     private @Nullable Boolean expandDetector;
 
+    /**
+     * @return Indicates if Smart Detector should be expanded.
+     * 
+     */
     public Optional<Boolean> expandDetector() {
         return Optional.ofNullable(this.expandDetector);
     }
@@ -44,6 +52,10 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,16 +86,34 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
             $ = new GetSmartDetectorAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertRuleName The name of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleName(String alertRuleName) {
             $.alertRuleName = alertRuleName;
             return this;
         }
 
+        /**
+         * @param expandDetector Indicates if Smart Detector should be expanded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expandDetector(@Nullable Boolean expandDetector) {
             $.expandDetector = expandDetector;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

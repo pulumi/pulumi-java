@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KeyVaultPropertiesResponse {
     /**
-     * The name of the key vault key.
+     * @return The name of the key vault key.
      * 
      */
     private final String keyName;
     /**
-     * The Uri of the key vault.
+     * @return The Uri of the key vault.
      * 
      */
     private final String keyVaultUri;
     /**
-     * The version of the key vault key.
+     * @return The version of the key vault key.
      * 
      */
     private final @Nullable String keyVersion;
     /**
-     * The user assigned identity (ARM resource id) that has access to the key.
+     * @return The user assigned identity (ARM resource id) that has access to the key.
      * 
      */
     private final @Nullable String userIdentity;
@@ -45,30 +45,30 @@ public final class KeyVaultPropertiesResponse {
     }
 
     /**
-     * The name of the key vault key.
+     * @return The name of the key vault key.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * The Uri of the key vault.
+     * @return The Uri of the key vault.
      * 
-    */
+     */
     public String keyVaultUri() {
         return this.keyVaultUri;
     }
     /**
-     * The version of the key vault key.
+     * @return The version of the key vault key.
      * 
-    */
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
-     * The user assigned identity (ARM resource id) that has access to the key.
+     * @return The user assigned identity (ARM resource id) that has access to the key.
      * 
-    */
+     */
     public Optional<String> userIdentity() {
         return Optional.ofNullable(this.userIdentity);
     }

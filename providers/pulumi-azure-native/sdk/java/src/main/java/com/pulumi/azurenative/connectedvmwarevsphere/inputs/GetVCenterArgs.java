@@ -19,6 +19,10 @@ public final class GetVCenterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVCenterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vcenterName", required=true)
     private String vcenterName;
 
+    /**
+     * @return Name of the vCenter.
+     * 
+     */
     public String vcenterName() {
         return this.vcenterName;
     }
@@ -59,11 +67,23 @@ public final class GetVCenterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVCenterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vcenterName Name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterName(String vcenterName) {
             $.vcenterName = vcenterName;
             return this;

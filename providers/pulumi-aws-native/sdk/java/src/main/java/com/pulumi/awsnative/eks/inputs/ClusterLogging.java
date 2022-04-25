@@ -24,6 +24,10 @@ public final class ClusterLogging extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterLogging")
     private @Nullable ClusterLogging clusterLogging;
 
+    /**
+     * @return The cluster control plane logging configuration for your cluster.
+     * 
+     */
     public Optional<ClusterLogging> clusterLogging() {
         return Optional.ofNullable(this.clusterLogging);
     }
@@ -52,6 +56,12 @@ public final class ClusterLogging extends com.pulumi.resources.InvokeArgs {
             $ = new ClusterLogging(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterLogging The cluster control plane logging configuration for your cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterLogging(@Nullable ClusterLogging clusterLogging) {
             $.clusterLogging = clusterLogging;
             return this;

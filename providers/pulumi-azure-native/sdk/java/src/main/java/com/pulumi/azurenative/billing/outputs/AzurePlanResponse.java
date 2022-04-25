@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzurePlanResponse {
     /**
-     * The sku description.
+     * @return The sku description.
      * 
      */
     private final String skuDescription;
     /**
-     * The sku id.
+     * @return The sku id.
      * 
      */
     private final @Nullable String skuId;
@@ -31,16 +31,16 @@ public final class AzurePlanResponse {
     }
 
     /**
-     * The sku description.
+     * @return The sku description.
      * 
-    */
+     */
     public String skuDescription() {
         return this.skuDescription;
     }
     /**
-     * The sku id.
+     * @return The sku id.
      * 
-    */
+     */
     public Optional<String> skuId() {
         return Optional.ofNullable(this.skuId);
     }

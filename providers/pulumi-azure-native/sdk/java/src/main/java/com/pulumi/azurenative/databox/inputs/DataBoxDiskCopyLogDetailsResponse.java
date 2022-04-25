@@ -25,6 +25,11 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
     @Import(name="copyLogDetailsType", required=true)
     private String copyLogDetailsType;
 
+    /**
+     * @return Indicates the type of job details.
+     * Expected value is &#39;DataBoxDisk&#39;.
+     * 
+     */
     public String copyLogDetailsType() {
         return this.copyLogDetailsType;
     }
@@ -36,6 +41,10 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
     @Import(name="diskSerialNumber", required=true)
     private String diskSerialNumber;
 
+    /**
+     * @return Disk Serial Number.
+     * 
+     */
     public String diskSerialNumber() {
         return this.diskSerialNumber;
     }
@@ -47,6 +56,10 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
     @Import(name="errorLogLink", required=true)
     private String errorLogLink;
 
+    /**
+     * @return Link for copy error logs.
+     * 
+     */
     public String errorLogLink() {
         return this.errorLogLink;
     }
@@ -58,6 +71,10 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
     @Import(name="verboseLogLink", required=true)
     private String verboseLogLink;
 
+    /**
+     * @return Link for copy verbose logs.
+     * 
+     */
     public String verboseLogLink() {
         return this.verboseLogLink;
     }
@@ -89,21 +106,46 @@ public final class DataBoxDiskCopyLogDetailsResponse extends com.pulumi.resource
             $ = new DataBoxDiskCopyLogDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyLogDetailsType Indicates the type of job details.
+         * Expected value is &#39;DataBoxDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogDetailsType(String copyLogDetailsType) {
             $.copyLogDetailsType = copyLogDetailsType;
             return this;
         }
 
+        /**
+         * @param diskSerialNumber Disk Serial Number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSerialNumber(String diskSerialNumber) {
             $.diskSerialNumber = diskSerialNumber;
             return this;
         }
 
+        /**
+         * @param errorLogLink Link for copy error logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorLogLink(String errorLogLink) {
             $.errorLogLink = errorLogLink;
             return this;
         }
 
+        /**
+         * @param verboseLogLink Link for copy verbose logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verboseLogLink(String verboseLogLink) {
             $.verboseLogLink = verboseLogLink;
             return this;

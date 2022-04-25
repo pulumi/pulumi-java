@@ -24,6 +24,10 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<IngressRuleAction> action;
 
+    /**
+     * @return The action to take on matched requests.
+     * 
+     */
     public Optional<Output<IngressRuleAction>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -42,6 +46,10 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional string description of this rule. This field has a maximum length of 400 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return A positive integer between 1, Int32.MaxValue-1 that defines the order of rule evaluation. Rules with the lowest priority are evaluated first.A default rule at priority Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action of this rule can be modified by the user.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -64,6 +76,10 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRange")
     private @Nullable Output<String> sourceRange;
 
+    /**
+     * @return IP address or range, defined using CIDR notation, of requests that this rule applies to. You can use the wildcard character &#34;*&#34; to match all IPs equivalent to &#34;0/0&#34; and &#34;::/0&#34; together. Examples: 192.168.1.1 or 192.168.0.0/16 or 2001:db8::/32 or 2001:0db8:0000:0042:0000:8a2e:0370:7334. Truncation will be silently performed on addresses which are not properly truncated. For example, 1.2.3.4/24 is accepted as the same address as 1.2.3.0/24. Similarly, for IPv6, 2001:db8::1/32 is accepted as the same address as 2001:db8::/32.
+     * 
+     */
     public Optional<Output<String>> sourceRange() {
         return Optional.ofNullable(this.sourceRange);
     }
@@ -96,11 +112,23 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IngressRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take on matched requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<IngressRuleAction> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take on matched requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(IngressRuleAction action) {
             return action(Output.of(action));
         }
@@ -114,29 +142,65 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param description An optional string description of this rule. This field has a maximum length of 400 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional string description of this rule. This field has a maximum length of 400 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param priority A positive integer between 1, Int32.MaxValue-1 that defines the order of rule evaluation. Rules with the lowest priority are evaluated first.A default rule at priority Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action of this rule can be modified by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority A positive integer between 1, Int32.MaxValue-1 that defines the order of rule evaluation. Rules with the lowest priority are evaluated first.A default rule at priority Int32.MaxValue matches all IPv4 and IPv6 traffic when no previous rule matches. Only the action of this rule can be modified by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param sourceRange IP address or range, defined using CIDR notation, of requests that this rule applies to. You can use the wildcard character &#34;*&#34; to match all IPs equivalent to &#34;0/0&#34; and &#34;::/0&#34; together. Examples: 192.168.1.1 or 192.168.0.0/16 or 2001:db8::/32 or 2001:0db8:0000:0042:0000:8a2e:0370:7334. Truncation will be silently performed on addresses which are not properly truncated. For example, 1.2.3.4/24 is accepted as the same address as 1.2.3.0/24. Similarly, for IPv6, 2001:db8::1/32 is accepted as the same address as 2001:db8::/32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRange(@Nullable Output<String> sourceRange) {
             $.sourceRange = sourceRange;
             return this;
         }
 
+        /**
+         * @param sourceRange IP address or range, defined using CIDR notation, of requests that this rule applies to. You can use the wildcard character &#34;*&#34; to match all IPs equivalent to &#34;0/0&#34; and &#34;::/0&#34; together. Examples: 192.168.1.1 or 192.168.0.0/16 or 2001:db8::/32 or 2001:0db8:0000:0042:0000:8a2e:0370:7334. Truncation will be silently performed on addresses which are not properly truncated. For example, 1.2.3.4/24 is accepted as the same address as 1.2.3.0/24. Similarly, for IPv6, 2001:db8::1/32 is accepted as the same address as 2001:db8::/32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRange(String sourceRange) {
             return sourceRange(Output.of(sourceRange));
         }

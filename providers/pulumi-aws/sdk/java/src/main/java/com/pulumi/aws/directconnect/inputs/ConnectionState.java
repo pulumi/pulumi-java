@@ -24,6 +24,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the connection.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsDevice")
     private @Nullable Output<String> awsDevice;
 
+    /**
+     * @return The Direct Connect endpoint on which the physical connection terminates.
+     * 
+     */
     public Optional<Output<String>> awsDevice() {
         return Optional.ofNullable(this.awsDevice);
     }
@@ -46,6 +54,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bandwidth")
     private @Nullable Output<String> bandwidth;
 
+    /**
+     * @return The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
+     * 
+     */
     public Optional<Output<String>> bandwidth() {
         return Optional.ofNullable(this.bandwidth);
     }
@@ -57,6 +69,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasLogicalRedundancy")
     private @Nullable Output<String> hasLogicalRedundancy;
 
+    /**
+     * @return Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
+     * 
+     */
     public Optional<Output<String>> hasLogicalRedundancy() {
         return Optional.ofNullable(this.hasLogicalRedundancy);
     }
@@ -68,6 +84,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jumboFrameCapable")
     private @Nullable Output<Boolean> jumboFrameCapable;
 
+    /**
+     * @return Boolean value representing if jumbo frames have been enabled for this connection.
+     * 
+     */
     public Optional<Output<Boolean>> jumboFrameCapable() {
         return Optional.ofNullable(this.jumboFrameCapable);
     }
@@ -79,6 +99,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -90,6 +114,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the connection.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -101,6 +129,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerAccountId")
     private @Nullable Output<String> ownerAccountId;
 
+    /**
+     * @return The ID of the AWS account that owns the connection.
+     * 
+     */
     public Optional<Output<String>> ownerAccountId() {
         return Optional.ofNullable(this.ownerAccountId);
     }
@@ -112,6 +144,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerName")
     private @Nullable Output<String> providerName;
 
+    /**
+     * @return The name of the service provider associated with the connection.
+     * 
+     */
     public Optional<Output<String>> providerName() {
         return Optional.ofNullable(this.providerName);
     }
@@ -123,6 +159,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -134,6 +174,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -172,101 +216,233 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param awsDevice The Direct Connect endpoint on which the physical connection terminates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsDevice(@Nullable Output<String> awsDevice) {
             $.awsDevice = awsDevice;
             return this;
         }
 
+        /**
+         * @param awsDevice The Direct Connect endpoint on which the physical connection terminates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsDevice(String awsDevice) {
             return awsDevice(Output.of(awsDevice));
         }
 
+        /**
+         * @param bandwidth The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
             $.bandwidth = bandwidth;
             return this;
         }
 
+        /**
+         * @param bandwidth The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidth(String bandwidth) {
             return bandwidth(Output.of(bandwidth));
         }
 
+        /**
+         * @param hasLogicalRedundancy Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
             $.hasLogicalRedundancy = hasLogicalRedundancy;
             return this;
         }
 
+        /**
+         * @param hasLogicalRedundancy Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasLogicalRedundancy(String hasLogicalRedundancy) {
             return hasLogicalRedundancy(Output.of(hasLogicalRedundancy));
         }
 
+        /**
+         * @param jumboFrameCapable Boolean value representing if jumbo frames have been enabled for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
             $.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
 
+        /**
+         * @param jumboFrameCapable Boolean value representing if jumbo frames have been enabled for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jumboFrameCapable(Boolean jumboFrameCapable) {
             return jumboFrameCapable(Output.of(jumboFrameCapable));
         }
 
+        /**
+         * @param location The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ownerAccountId The ID of the AWS account that owns the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
             $.ownerAccountId = ownerAccountId;
             return this;
         }
 
+        /**
+         * @param ownerAccountId The ID of the AWS account that owns the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerAccountId(String ownerAccountId) {
             return ownerAccountId(Output.of(ownerAccountId));
         }
 
+        /**
+         * @param providerName The name of the service provider associated with the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(@Nullable Output<String> providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param providerName The name of the service provider associated with the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             return providerName(Output.of(providerName));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

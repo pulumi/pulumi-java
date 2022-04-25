@@ -27,6 +27,10 @@ public final class TimestampArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nanos")
     private @Nullable Output<Integer> nanos;
 
+    /**
+     * @return Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.
+     * 
+     */
     public Optional<Output<Integer>> nanos() {
         return Optional.ofNullable(this.nanos);
     }
@@ -38,6 +42,10 @@ public final class TimestampArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="seconds")
     private @Nullable Output<String> seconds;
 
+    /**
+     * @return Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.
+     * 
+     */
     public Optional<Output<String>> seconds() {
         return Optional.ofNullable(this.seconds);
     }
@@ -67,20 +75,44 @@ public final class TimestampArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TimestampArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nanos Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(@Nullable Output<Integer> nanos) {
             $.nanos = nanos;
             return this;
         }
 
+        /**
+         * @param nanos Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(Integer nanos) {
             return nanos(Output.of(nanos));
         }
 
+        /**
+         * @param seconds Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(@Nullable Output<String> seconds) {
             $.seconds = seconds;
             return this;
         }
 
+        /**
+         * @param seconds Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(String seconds) {
             return seconds(Output.of(seconds));
         }

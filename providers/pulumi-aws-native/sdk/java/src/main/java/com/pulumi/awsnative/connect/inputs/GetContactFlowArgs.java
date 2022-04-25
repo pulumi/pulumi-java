@@ -19,6 +19,10 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="contactFlowArn", required=true)
     private String contactFlowArn;
 
+    /**
+     * @return The identifier of the contact flow (ARN).
+     * 
+     */
     public String contactFlowArn() {
         return this.contactFlowArn;
     }
@@ -47,6 +51,12 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContactFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactFlowArn The identifier of the contact flow (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowArn(String contactFlowArn) {
             $.contactFlowArn = contactFlowArn;
             return this;

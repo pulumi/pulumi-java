@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CencDrmConfigurationResponse {
     /**
-     * PlayReady configurations
+     * @return PlayReady configurations
      * 
      */
     private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
     /**
-     * Widevine configurations
+     * @return Widevine configurations
      * 
      */
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
@@ -32,16 +32,16 @@ public final class CencDrmConfigurationResponse {
     }
 
     /**
-     * PlayReady configurations
+     * @return PlayReady configurations
      * 
-    */
+     */
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> playReady() {
         return Optional.ofNullable(this.playReady);
     }
     /**
-     * Widevine configurations
+     * @return Widevine configurations
      * 
-    */
+     */
     public Optional<StreamingPolicyWidevineConfigurationResponse> widevine() {
         return Optional.ofNullable(this.widevine);
     }

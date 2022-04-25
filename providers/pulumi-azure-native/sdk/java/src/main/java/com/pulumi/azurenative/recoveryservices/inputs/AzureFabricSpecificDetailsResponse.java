@@ -27,6 +27,10 @@ public final class AzureFabricSpecificDetailsResponse extends com.pulumi.resourc
     @Import(name="containerIds")
     private @Nullable List<String> containerIds;
 
+    /**
+     * @return The container Ids for the Azure fabric.
+     * 
+     */
     public Optional<List<String>> containerIds() {
         return Optional.ofNullable(this.containerIds);
     }
@@ -39,6 +43,11 @@ public final class AzureFabricSpecificDetailsResponse extends com.pulumi.resourc
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;Azure&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -50,6 +59,10 @@ public final class AzureFabricSpecificDetailsResponse extends com.pulumi.resourc
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The Location for the Azure fabric.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -80,20 +93,45 @@ public final class AzureFabricSpecificDetailsResponse extends com.pulumi.resourc
             $ = new AzureFabricSpecificDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerIds The container Ids for the Azure fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerIds(@Nullable List<String> containerIds) {
             $.containerIds = containerIds;
             return this;
         }
 
+        /**
+         * @param containerIds The container Ids for the Azure fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerIds(String... containerIds) {
             return containerIds(List.of(containerIds));
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;Azure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param location The Location for the Azure fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;

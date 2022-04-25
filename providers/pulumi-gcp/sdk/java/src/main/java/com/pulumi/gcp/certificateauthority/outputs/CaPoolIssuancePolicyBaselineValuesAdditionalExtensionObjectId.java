@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId {
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * 
      */
     private final List<Integer> objectIdPaths;
@@ -22,9 +22,9 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
     }
 
     /**
-     * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * 
-    */
+     */
     public List<Integer> objectIdPaths() {
         return this.objectIdPaths;
     }

@@ -23,6 +23,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="peeredNetwork", required=true)
     private String peeredNetwork;
 
+    /**
+     * @return Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to WorkerPool.project_id on the default network. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number, such as `12345`, and {network} is the name of a VPC network in the project.
+     * 
+     */
     public String peeredNetwork() {
         return this.peeredNetwork;
     }
@@ -51,6 +55,12 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peeredNetwork Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to WorkerPool.project_id on the default network. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number, such as `12345`, and {network} is the name of a VPC network in the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeredNetwork(String peeredNetwork) {
             $.peeredNetwork = peeredNetwork;
             return this;

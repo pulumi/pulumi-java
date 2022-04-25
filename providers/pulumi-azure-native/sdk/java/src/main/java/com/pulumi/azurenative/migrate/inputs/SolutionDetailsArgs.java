@@ -28,6 +28,10 @@ public final class SolutionDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="assessmentCount")
     private @Nullable Output<Integer> assessmentCount;
 
+    /**
+     * @return Gets or sets the count of assessments reported by the solution.
+     * 
+     */
     public Optional<Output<Integer>> assessmentCount() {
         return Optional.ofNullable(this.assessmentCount);
     }
@@ -39,6 +43,10 @@ public final class SolutionDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="extendedDetails")
     private @Nullable Output<Map<String,String>> extendedDetails;
 
+    /**
+     * @return Gets or sets the extended details reported by the solution.
+     * 
+     */
     public Optional<Output<Map<String,String>>> extendedDetails() {
         return Optional.ofNullable(this.extendedDetails);
     }
@@ -50,6 +58,10 @@ public final class SolutionDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="groupCount")
     private @Nullable Output<Integer> groupCount;
 
+    /**
+     * @return Gets or sets the count of groups reported by the solution.
+     * 
+     */
     public Optional<Output<Integer>> groupCount() {
         return Optional.ofNullable(this.groupCount);
     }
@@ -80,29 +92,65 @@ public final class SolutionDetailsArgs extends com.pulumi.resources.ResourceArgs
             $ = new SolutionDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentCount Gets or sets the count of assessments reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentCount(@Nullable Output<Integer> assessmentCount) {
             $.assessmentCount = assessmentCount;
             return this;
         }
 
+        /**
+         * @param assessmentCount Gets or sets the count of assessments reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentCount(Integer assessmentCount) {
             return assessmentCount(Output.of(assessmentCount));
         }
 
+        /**
+         * @param extendedDetails Gets or sets the extended details reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedDetails(@Nullable Output<Map<String,String>> extendedDetails) {
             $.extendedDetails = extendedDetails;
             return this;
         }
 
+        /**
+         * @param extendedDetails Gets or sets the extended details reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedDetails(Map<String,String> extendedDetails) {
             return extendedDetails(Output.of(extendedDetails));
         }
 
+        /**
+         * @param groupCount Gets or sets the count of groups reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupCount(@Nullable Output<Integer> groupCount) {
             $.groupCount = groupCount;
             return this;
         }
 
+        /**
+         * @param groupCount Gets or sets the count of groups reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupCount(Integer groupCount) {
             return groupCount(Output.of(groupCount));
         }

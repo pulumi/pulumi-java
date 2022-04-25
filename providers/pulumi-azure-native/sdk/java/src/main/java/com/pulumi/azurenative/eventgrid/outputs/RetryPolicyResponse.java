@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RetryPolicyResponse {
     /**
-     * Time To Live (in minutes) for events.
+     * @return Time To Live (in minutes) for events.
      * 
      */
     private final @Nullable Integer eventTimeToLiveInMinutes;
     /**
-     * Maximum number of delivery retry attempts for events.
+     * @return Maximum number of delivery retry attempts for events.
      * 
      */
     private final @Nullable Integer maxDeliveryAttempts;
@@ -31,16 +31,16 @@ public final class RetryPolicyResponse {
     }
 
     /**
-     * Time To Live (in minutes) for events.
+     * @return Time To Live (in minutes) for events.
      * 
-    */
+     */
     public Optional<Integer> eventTimeToLiveInMinutes() {
         return Optional.ofNullable(this.eventTimeToLiveInMinutes);
     }
     /**
-     * Maximum number of delivery retry attempts for events.
+     * @return Maximum number of delivery retry attempts for events.
      * 
-    */
+     */
     public Optional<Integer> maxDeliveryAttempts() {
         return Optional.ofNullable(this.maxDeliveryAttempts);
     }

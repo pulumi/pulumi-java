@@ -25,6 +25,10 @@ public final class MonitorConfigResponseCustomHeaders extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Header name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class MonitorConfigResponseCustomHeaders extends com.pulumi.resourc
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Header value.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class MonitorConfigResponseCustomHeaders extends com.pulumi.resourc
             $ = new MonitorConfigResponseCustomHeaders(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Header name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Header value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

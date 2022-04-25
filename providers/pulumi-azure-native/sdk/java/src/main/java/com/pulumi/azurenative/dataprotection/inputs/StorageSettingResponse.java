@@ -25,6 +25,10 @@ public final class StorageSettingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="datastoreType")
     private @Nullable String datastoreType;
 
+    /**
+     * @return Gets or sets the type of the datastore.
+     * 
+     */
     public Optional<String> datastoreType() {
         return Optional.ofNullable(this.datastoreType);
     }
@@ -36,6 +40,10 @@ public final class StorageSettingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Gets or sets the type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,11 +73,23 @@ public final class StorageSettingResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageSettingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreType Gets or sets the type of the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreType(@Nullable String datastoreType) {
             $.datastoreType = datastoreType;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -27,6 +27,10 @@ public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.Resou
     @Import(name="mode")
     private @Nullable Output<WorkloadMetadataConfigMode> mode;
 
+    /**
+     * @return Mode is the configuration for how to expose metadata to workloads running on the node pool.
+     * 
+     */
     public Optional<Output<WorkloadMetadataConfigMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -38,6 +42,10 @@ public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.Resou
     @Import(name="nodeMetadata")
     private @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
 
+    /**
+     * @return NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
+     * 
+     */
     public Optional<Output<WorkloadMetadataConfigNodeMetadata>> nodeMetadata() {
         return Optional.ofNullable(this.nodeMetadata);
     }
@@ -67,20 +75,44 @@ public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.Resou
             $ = new WorkloadMetadataConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Mode is the configuration for how to expose metadata to workloads running on the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<WorkloadMetadataConfigMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Mode is the configuration for how to expose metadata to workloads running on the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(WorkloadMetadataConfigMode mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param nodeMetadata NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeMetadata(@Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
             $.nodeMetadata = nodeMetadata;
             return this;
         }
 
+        /**
+         * @param nodeMetadata NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeMetadata(WorkloadMetadataConfigNodeMetadata nodeMetadata) {
             return nodeMetadata(Output.of(nodeMetadata));
         }

@@ -35,6 +35,10 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
     @Import(name="imageIdentifier", required=true)
     private Output<String> imageIdentifier;
 
+    /**
+     * @return Image Identifier
+     * 
+     */
     public Output<String> imageIdentifier() {
         return this.imageIdentifier;
     }
@@ -46,6 +50,10 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
     @Import(name="imageRepositoryType", required=true)
     private Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
 
+    /**
+     * @return Image Repository Type
+     * 
+     */
     public Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType() {
         return this.imageRepositoryType;
     }
@@ -85,20 +93,44 @@ public final class ServiceImageRepositoryArgs extends com.pulumi.resources.Resou
             return imageConfiguration(Output.of(imageConfiguration));
         }
 
+        /**
+         * @param imageIdentifier Image Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageIdentifier(Output<String> imageIdentifier) {
             $.imageIdentifier = imageIdentifier;
             return this;
         }
 
+        /**
+         * @param imageIdentifier Image Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageIdentifier(String imageIdentifier) {
             return imageIdentifier(Output.of(imageIdentifier));
         }
 
+        /**
+         * @param imageRepositoryType Image Repository Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepositoryType(Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType) {
             $.imageRepositoryType = imageRepositoryType;
             return this;
         }
 
+        /**
+         * @param imageRepositoryType Image Repository Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepositoryType(ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
             return imageRepositoryType(Output.of(imageRepositoryType));
         }

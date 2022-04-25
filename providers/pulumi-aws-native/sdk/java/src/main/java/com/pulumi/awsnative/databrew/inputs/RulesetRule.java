@@ -51,6 +51,10 @@ public final class RulesetRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the rule
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -117,6 +121,12 @@ public final class RulesetRule extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param name Name of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

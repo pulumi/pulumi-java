@@ -25,6 +25,10 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="activeDeadlineSeconds", required=true)
     private String activeDeadlineSeconds;
 
+    /**
+     * @return Optional. Not supported. Specifies the duration in seconds relative to the startTime that the job may be active before the system tries to terminate it. If set to zero, the system will never attempt to terminate the job based on time. Otherwise, the value must be positive integer. +optional
+     * 
+     */
     public String activeDeadlineSeconds() {
         return this.activeDeadlineSeconds;
     }
@@ -36,6 +40,10 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backoffLimit", required=true)
     private Integer backoffLimit;
 
+    /**
+     * @return Optional. Specifies the number of retries per instance, before marking this job failed. If set to zero, instances will never retry on failure. +optional
+     * 
+     */
     public Integer backoffLimit() {
         return this.backoffLimit;
     }
@@ -47,6 +55,10 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="completions", required=true)
     private Integer completions;
 
+    /**
+     * @return Optional. Specifies the desired number of successfully finished instances the job should be run with. Setting to 1 means that parallelism is limited to 1 and the success of that instance signals the success of the job. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * 
+     */
     public Integer completions() {
         return this.completions;
     }
@@ -58,6 +70,10 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parallelism", required=true)
     private Integer parallelism;
 
+    /**
+     * @return Optional. Specifies the maximum desired number of instances the job should run at any given time. Must be &lt;= completions. The actual number of instances running in steady state will be less than this number when ((.spec.completions - .status.successful) &lt; .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+     * 
+     */
     public Integer parallelism() {
         return this.parallelism;
     }
@@ -69,6 +85,10 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="template", required=true)
     private InstanceTemplateSpecResponse template;
 
+    /**
+     * @return Optional. Describes the instance that will be created when executing a job.
+     * 
+     */
     public InstanceTemplateSpecResponse template() {
         return this.template;
     }
@@ -80,6 +100,10 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ttlSecondsAfterFinished", required=true)
     private Integer ttlSecondsAfterFinished;
 
+    /**
+     * @return Optional. Not supported. ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the Job finishes, it is eligible to be automatically deleted. When the Job is being deleted, its lifecycle guarantees (e.g. finalizers) will be honored. If this field is set to zero, the Job won&#39;t be automatically deleted. +optional
+     * 
+     */
     public Integer ttlSecondsAfterFinished() {
         return this.ttlSecondsAfterFinished;
     }
@@ -113,31 +137,67 @@ public final class JobSpecResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDeadlineSeconds Optional. Not supported. Specifies the duration in seconds relative to the startTime that the job may be active before the system tries to terminate it. If set to zero, the system will never attempt to terminate the job based on time. Otherwise, the value must be positive integer. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDeadlineSeconds(String activeDeadlineSeconds) {
             $.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
+        /**
+         * @param backoffLimit Optional. Specifies the number of retries per instance, before marking this job failed. If set to zero, instances will never retry on failure. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder backoffLimit(Integer backoffLimit) {
             $.backoffLimit = backoffLimit;
             return this;
         }
 
+        /**
+         * @param completions Optional. Specifies the desired number of successfully finished instances the job should be run with. Setting to 1 means that parallelism is limited to 1 and the success of that instance signals the success of the job. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder completions(Integer completions) {
             $.completions = completions;
             return this;
         }
 
+        /**
+         * @param parallelism Optional. Specifies the maximum desired number of instances the job should run at any given time. Must be &lt;= completions. The actual number of instances running in steady state will be less than this number when ((.spec.completions - .status.successful) &lt; .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder parallelism(Integer parallelism) {
             $.parallelism = parallelism;
             return this;
         }
 
+        /**
+         * @param template Optional. Describes the instance that will be created when executing a job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(InstanceTemplateSpecResponse template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param ttlSecondsAfterFinished Optional. Not supported. ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the Job finishes, it is eligible to be automatically deleted. When the Job is being deleted, its lifecycle guarantees (e.g. finalizers) will be honored. If this field is set to zero, the Job won&#39;t be automatically deleted. +optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
             $.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;

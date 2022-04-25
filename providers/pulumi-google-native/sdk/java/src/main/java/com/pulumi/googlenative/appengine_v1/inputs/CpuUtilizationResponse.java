@@ -24,6 +24,10 @@ public final class CpuUtilizationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="aggregationWindowLength", required=true)
     private String aggregationWindowLength;
 
+    /**
+     * @return Period of time over which CPU utilization is calculated.
+     * 
+     */
     public String aggregationWindowLength() {
         return this.aggregationWindowLength;
     }
@@ -35,6 +39,10 @@ public final class CpuUtilizationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="targetUtilization", required=true)
     private Double targetUtilization;
 
+    /**
+     * @return Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+     * 
+     */
     public Double targetUtilization() {
         return this.targetUtilization;
     }
@@ -64,11 +72,23 @@ public final class CpuUtilizationResponse extends com.pulumi.resources.InvokeArg
             $ = new CpuUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregationWindowLength Period of time over which CPU utilization is calculated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregationWindowLength(String aggregationWindowLength) {
             $.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
 
+        /**
+         * @param targetUtilization Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(Double targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;

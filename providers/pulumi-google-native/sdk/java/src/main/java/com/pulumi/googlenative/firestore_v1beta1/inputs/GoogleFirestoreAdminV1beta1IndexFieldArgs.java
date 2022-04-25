@@ -27,6 +27,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends com.pulumi.
     @Import(name="fieldPath")
     private @Nullable Output<String> fieldPath;
 
+    /**
+     * @return The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+     * 
+     */
     public Optional<Output<String>> fieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
@@ -38,6 +42,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends com.pulumi.
     @Import(name="mode")
     private @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 
+    /**
+     * @return The field&#39;s mode.
+     * 
+     */
     public Optional<Output<GoogleFirestoreAdminV1beta1IndexFieldMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -67,20 +75,44 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends com.pulumi.
             $ = new GoogleFirestoreAdminV1beta1IndexFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldPath The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
             $.fieldPath = fieldPath;
             return this;
         }
 
+        /**
+         * @param fieldPath The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(String fieldPath) {
             return fieldPath(Output.of(fieldPath));
         }
 
+        /**
+         * @param mode The field&#39;s mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode The field&#39;s mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(GoogleFirestoreAdminV1beta1IndexFieldMode mode) {
             return mode(Output.of(mode));
         }

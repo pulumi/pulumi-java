@@ -31,6 +31,10 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends com.pulumi.
     @Import(name="namespace", required=true)
     private ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
+    /**
+     * @return Contains information about the namespace associated with the zone.
+     * 
+     */
     public ManagedZoneServiceDirectoryConfigNamespaceResponse namespace() {
         return this.namespace;
     }
@@ -65,6 +69,12 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends com.pulumi.
             return this;
         }
 
+        /**
+         * @param namespace Contains information about the namespace associated with the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
             $.namespace = namespace;
             return this;

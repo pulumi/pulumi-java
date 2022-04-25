@@ -23,6 +23,10 @@ public final class DetectorModelLambdaArgs extends com.pulumi.resources.Resource
     @Import(name="functionArn", required=true)
     private Output<String> functionArn;
 
+    /**
+     * @return The ARN of the Lambda function that is executed.
+     * 
+     */
     public Output<String> functionArn() {
         return this.functionArn;
     }
@@ -59,11 +63,23 @@ public final class DetectorModelLambdaArgs extends com.pulumi.resources.Resource
             $ = new DetectorModelLambdaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionArn The ARN of the Lambda function that is executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionArn(Output<String> functionArn) {
             $.functionArn = functionArn;
             return this;
         }
 
+        /**
+         * @param functionArn The ARN of the Lambda function that is executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionArn(String functionArn) {
             return functionArn(Output.of(functionArn));
         }

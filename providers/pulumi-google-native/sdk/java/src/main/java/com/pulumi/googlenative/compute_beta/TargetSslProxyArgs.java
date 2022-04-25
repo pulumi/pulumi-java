@@ -24,6 +24,10 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificateMap")
     private @Nullable Output<String> certificateMap;
 
+    /**
+     * @return URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+     * 
+     */
     public Optional<Output<String>> certificateMap() {
         return Optional.ofNullable(this.certificateMap);
     }
@@ -35,6 +39,10 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,6 +76,10 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="proxyHeader")
     private @Nullable Output<TargetSslProxyProxyHeader> proxyHeader;
 
+    /**
+     * @return Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+     * 
+     */
     public Optional<Output<TargetSslProxyProxyHeader>> proxyHeader() {
         return Optional.ofNullable(this.proxyHeader);
     }
@@ -82,6 +98,10 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return URL to the BackendService resource.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -93,6 +113,10 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sslCertificates")
     private @Nullable Output<List<String>> sslCertificates;
 
+    /**
+     * @return URLs to SslCertificate resources that are used to authenticate connections to Backends. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Optional<Output<List<String>>> sslCertificates() {
         return Optional.ofNullable(this.sslCertificates);
     }
@@ -104,6 +128,10 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sslPolicy")
     private @Nullable Output<String> sslPolicy;
 
+    /**
+     * @return URL of SslPolicy resource that will be associated with the TargetSslProxy resource. If not set, the TargetSslProxy resource will not have any SSL policy configured.
+     * 
+     */
     public Optional<Output<String>> sslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
@@ -140,29 +168,65 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TargetSslProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateMap URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateMap(@Nullable Output<String> certificateMap) {
             $.certificateMap = certificateMap;
             return this;
         }
 
+        /**
+         * @param certificateMap URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateMap(String certificateMap) {
             return certificateMap(Output.of(certificateMap));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -176,11 +240,23 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
             return project(Output.of(project));
         }
 
+        /**
+         * @param proxyHeader Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyHeader(@Nullable Output<TargetSslProxyProxyHeader> proxyHeader) {
             $.proxyHeader = proxyHeader;
             return this;
         }
 
+        /**
+         * @param proxyHeader Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyHeader(TargetSslProxyProxyHeader proxyHeader) {
             return proxyHeader(Output.of(proxyHeader));
         }
@@ -194,33 +270,75 @@ public final class TargetSslProxyArgs extends com.pulumi.resources.ResourceArgs 
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param service URL to the BackendService resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service URL to the BackendService resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param sslCertificates URLs to SslCertificate resources that are used to authenticate connections to Backends. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
             $.sslCertificates = sslCertificates;
             return this;
         }
 
+        /**
+         * @param sslCertificates URLs to SslCertificate resources that are used to authenticate connections to Backends. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(List<String> sslCertificates) {
             return sslCertificates(Output.of(sslCertificates));
         }
 
+        /**
+         * @param sslCertificates URLs to SslCertificate resources that are used to authenticate connections to Backends. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificates(String... sslCertificates) {
             return sslCertificates(List.of(sslCertificates));
         }
 
+        /**
+         * @param sslPolicy URL of SslPolicy resource that will be associated with the TargetSslProxy resource. If not set, the TargetSslProxy resource will not have any SSL policy configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             $.sslPolicy = sslPolicy;
             return this;
         }
 
+        /**
+         * @param sslPolicy URL of SslPolicy resource that will be associated with the TargetSslProxy resource. If not set, the TargetSslProxy resource will not have any SSL policy configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPolicy(String sslPolicy) {
             return sslPolicy(Output.of(sslPolicy));
         }

@@ -27,6 +27,10 @@ public final class AccessReviewScopeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="expandNestedMemberships")
     private @Nullable Output<Boolean> expandNestedMemberships;
 
+    /**
+     * @return Flag to indicate whether to expand nested memberships or not.
+     * 
+     */
     public Optional<Output<Boolean>> expandNestedMemberships() {
         return Optional.ofNullable(this.expandNestedMemberships);
     }
@@ -38,6 +42,10 @@ public final class AccessReviewScopeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="inactiveDuration")
     private @Nullable Output<String> inactiveDuration;
 
+    /**
+     * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+     * 
+     */
     public Optional<Output<String>> inactiveDuration() {
         return Optional.ofNullable(this.inactiveDuration);
     }
@@ -67,20 +75,44 @@ public final class AccessReviewScopeArgs extends com.pulumi.resources.ResourceAr
             $ = new AccessReviewScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expandNestedMemberships Flag to indicate whether to expand nested memberships or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expandNestedMemberships(@Nullable Output<Boolean> expandNestedMemberships) {
             $.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
 
+        /**
+         * @param expandNestedMemberships Flag to indicate whether to expand nested memberships or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expandNestedMemberships(Boolean expandNestedMemberships) {
             return expandNestedMemberships(Output.of(expandNestedMemberships));
         }
 
+        /**
+         * @param inactiveDuration Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+         * 
+         * @return builder
+         * 
+         */
         public Builder inactiveDuration(@Nullable Output<String> inactiveDuration) {
             $.inactiveDuration = inactiveDuration;
             return this;
         }
 
+        /**
+         * @param inactiveDuration Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+         * 
+         * @return builder
+         * 
+         */
         public Builder inactiveDuration(String inactiveDuration) {
             return inactiveDuration(Output.of(inactiveDuration));
         }

@@ -23,6 +23,10 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends com.
     @Import(name="updateStatus", required=true)
     private String updateStatus;
 
+    /**
+     * @return The state of compliance, which only appears in the response.
+     * 
+     */
     public String updateStatus() {
         return this.updateStatus;
     }
@@ -51,6 +55,12 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends com.
             $ = new ConfigurationProfileAssignmentComplianceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param updateStatus The state of compliance, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateStatus(String updateStatus) {
             $.updateStatus = updateStatus;
             return this;

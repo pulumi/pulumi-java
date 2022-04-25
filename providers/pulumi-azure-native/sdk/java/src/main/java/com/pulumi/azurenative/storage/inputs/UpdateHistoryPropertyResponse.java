@@ -24,6 +24,10 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
     @Import(name="immutabilityPeriodSinceCreationInDays", required=true)
     private Integer immutabilityPeriodSinceCreationInDays;
 
+    /**
+     * @return The immutability period for the blobs in the container since the policy creation, in days.
+     * 
+     */
     public Integer immutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays;
     }
@@ -35,6 +39,10 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
     @Import(name="objectIdentifier", required=true)
     private String objectIdentifier;
 
+    /**
+     * @return Returns the Object ID of the user who updated the ImmutabilityPolicy.
+     * 
+     */
     public String objectIdentifier() {
         return this.objectIdentifier;
     }
@@ -46,6 +54,10 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -57,6 +69,10 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
     @Import(name="timestamp", required=true)
     private String timestamp;
 
+    /**
+     * @return Returns the date and time the ImmutabilityPolicy was updated.
+     * 
+     */
     public String timestamp() {
         return this.timestamp;
     }
@@ -68,6 +84,10 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
     @Import(name="update", required=true)
     private String update;
 
+    /**
+     * @return The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
+     * 
+     */
     public String update() {
         return this.update;
     }
@@ -79,6 +99,10 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
     @Import(name="upn", required=true)
     private String upn;
 
+    /**
+     * @return Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
+     * 
+     */
     public String upn() {
         return this.upn;
     }
@@ -112,31 +136,67 @@ public final class UpdateHistoryPropertyResponse extends com.pulumi.resources.In
             $ = new UpdateHistoryPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param immutabilityPeriodSinceCreationInDays The immutability period for the blobs in the container since the policy creation, in days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutabilityPeriodSinceCreationInDays(Integer immutabilityPeriodSinceCreationInDays) {
             $.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
 
+        /**
+         * @param objectIdentifier Returns the Object ID of the user who updated the ImmutabilityPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIdentifier(String objectIdentifier) {
             $.objectIdentifier = objectIdentifier;
             return this;
         }
 
+        /**
+         * @param tenantId Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param timestamp Returns the date and time the ImmutabilityPolicy was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(String timestamp) {
             $.timestamp = timestamp;
             return this;
         }
 
+        /**
+         * @param update The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(String update) {
             $.update = update;
             return this;
         }
 
+        /**
+         * @param upn Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upn(String upn) {
             $.upn = upn;
             return this;

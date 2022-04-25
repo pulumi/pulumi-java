@@ -28,6 +28,10 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -39,6 +43,10 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
     @Import(name="login")
     private @Nullable Output<OpenIdConnectLoginArgs> login;
 
+    /**
+     * @return The configuration settings of the login flow of the custom Open ID Connect provider.
+     * 
+     */
     public Optional<Output<OpenIdConnectLoginArgs>> login() {
         return Optional.ofNullable(this.login);
     }
@@ -50,6 +58,10 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
     @Import(name="registration")
     private @Nullable Output<OpenIdConnectRegistrationArgs> registration;
 
+    /**
+     * @return The configuration settings of the app registration for the custom Open ID Connect provider.
+     * 
+     */
     public Optional<Output<OpenIdConnectRegistrationArgs>> registration() {
         return Optional.ofNullable(this.registration);
     }
@@ -80,29 +92,65 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
             $ = new CustomOpenIdConnectProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param login The configuration settings of the login flow of the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable Output<OpenIdConnectLoginArgs> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login The configuration settings of the login flow of the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(OpenIdConnectLoginArgs login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param registration The configuration settings of the app registration for the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registration(@Nullable Output<OpenIdConnectRegistrationArgs> registration) {
             $.registration = registration;
             return this;
         }
 
+        /**
+         * @param registration The configuration settings of the app registration for the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registration(OpenIdConnectRegistrationArgs registration) {
             return registration(Output.of(registration));
         }

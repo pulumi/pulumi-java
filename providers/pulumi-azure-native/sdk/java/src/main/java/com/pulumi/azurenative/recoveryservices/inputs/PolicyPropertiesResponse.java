@@ -37,6 +37,10 @@ public final class PolicyPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return The FriendlyName.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -48,6 +52,10 @@ public final class PolicyPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="providerSpecificDetails")
     private @Nullable Object providerSpecificDetails;
 
+    /**
+     * @return The ReplicationChannelSetting.
+     * 
+     */
     public Optional<Object> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
@@ -77,11 +85,23 @@ public final class PolicyPropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new PolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param friendlyName The FriendlyName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails The ReplicationChannelSetting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
             $.providerSpecificDetails = providerSpecificDetails;
             return this;

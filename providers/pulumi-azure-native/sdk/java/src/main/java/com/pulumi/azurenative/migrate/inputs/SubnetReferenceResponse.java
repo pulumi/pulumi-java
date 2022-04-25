@@ -25,6 +25,10 @@ public final class SubnetReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets the name of the proxy resource on the target side.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class SubnetReferenceResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sourceArmResourceId", required=true)
     private String sourceArmResourceId;
 
+    /**
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
+     * 
+     */
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
@@ -65,11 +73,23 @@ public final class SubnetReferenceResponse extends com.pulumi.resources.InvokeAr
             $ = new SubnetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets the name of the proxy resource on the target side.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sourceArmResourceId Gets the ARM resource ID of the tracked resource being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             $.sourceArmResourceId = sourceArmResourceId;
             return this;

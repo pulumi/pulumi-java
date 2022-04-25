@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ExtendedLocationResponse {
     /**
-     * The name of the extended location.
+     * @return The name of the extended location.
      * 
      */
     private final String name;
     /**
-     * The type of the extended location.
+     * @return The type of the extended location.
      * 
      */
     private final String type;
@@ -29,16 +29,16 @@ public final class ExtendedLocationResponse {
     }
 
     /**
-     * The name of the extended location.
+     * @return The name of the extended location.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the extended location.
+     * @return The type of the extended location.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

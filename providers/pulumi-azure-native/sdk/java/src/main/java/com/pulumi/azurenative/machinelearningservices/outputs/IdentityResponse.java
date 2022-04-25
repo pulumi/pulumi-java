@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentityResponse {
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
      */
     private final String tenantId;
     /**
-     * The identity type.
+     * @return The identity type.
      * 
      */
     private final @Nullable String type;
     /**
-     * The user assigned identities associated with the resource.
+     * @return The user assigned identities associated with the resource.
      * 
      */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
@@ -47,30 +47,30 @@ public final class IdentityResponse {
     }
 
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The user assigned identities associated with the resource.
+     * @return The user assigned identities associated with the resource.
      * 
-    */
+     */
     public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

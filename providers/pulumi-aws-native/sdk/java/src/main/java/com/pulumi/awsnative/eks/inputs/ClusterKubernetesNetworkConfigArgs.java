@@ -27,6 +27,10 @@ public final class ClusterKubernetesNetworkConfigArgs extends com.pulumi.resourc
     @Import(name="ipFamily")
     private @Nullable Output<ClusterKubernetesNetworkConfigIpFamily> ipFamily;
 
+    /**
+     * @return Ipv4 or Ipv6. You can only specify ipv6 for 1.21 and later clusters that use version 1.10.1 or later of the Amazon VPC CNI add-on
+     * 
+     */
     public Optional<Output<ClusterKubernetesNetworkConfigIpFamily>> ipFamily() {
         return Optional.ofNullable(this.ipFamily);
     }
@@ -38,6 +42,10 @@ public final class ClusterKubernetesNetworkConfigArgs extends com.pulumi.resourc
     @Import(name="serviceIpv4Cidr")
     private @Nullable Output<String> serviceIpv4Cidr;
 
+    /**
+     * @return The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
+     * 
+     */
     public Optional<Output<String>> serviceIpv4Cidr() {
         return Optional.ofNullable(this.serviceIpv4Cidr);
     }
@@ -49,6 +57,10 @@ public final class ClusterKubernetesNetworkConfigArgs extends com.pulumi.resourc
     @Import(name="serviceIpv6Cidr")
     private @Nullable Output<String> serviceIpv6Cidr;
 
+    /**
+     * @return The CIDR block to assign Kubernetes service IP addresses from.
+     * 
+     */
     public Optional<Output<String>> serviceIpv6Cidr() {
         return Optional.ofNullable(this.serviceIpv6Cidr);
     }
@@ -79,29 +91,65 @@ public final class ClusterKubernetesNetworkConfigArgs extends com.pulumi.resourc
             $ = new ClusterKubernetesNetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipFamily Ipv4 or Ipv6. You can only specify ipv6 for 1.21 and later clusters that use version 1.10.1 or later of the Amazon VPC CNI add-on
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamily(@Nullable Output<ClusterKubernetesNetworkConfigIpFamily> ipFamily) {
             $.ipFamily = ipFamily;
             return this;
         }
 
+        /**
+         * @param ipFamily Ipv4 or Ipv6. You can only specify ipv6 for 1.21 and later clusters that use version 1.10.1 or later of the Amazon VPC CNI add-on
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamily(ClusterKubernetesNetworkConfigIpFamily ipFamily) {
             return ipFamily(Output.of(ipFamily));
         }
 
+        /**
+         * @param serviceIpv4Cidr The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceIpv4Cidr(@Nullable Output<String> serviceIpv4Cidr) {
             $.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }
 
+        /**
+         * @param serviceIpv4Cidr The CIDR block to assign Kubernetes service IP addresses from. If you don&#39;t specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceIpv4Cidr(String serviceIpv4Cidr) {
             return serviceIpv4Cidr(Output.of(serviceIpv4Cidr));
         }
 
+        /**
+         * @param serviceIpv6Cidr The CIDR block to assign Kubernetes service IP addresses from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceIpv6Cidr(@Nullable Output<String> serviceIpv6Cidr) {
             $.serviceIpv6Cidr = serviceIpv6Cidr;
             return this;
         }
 
+        /**
+         * @param serviceIpv6Cidr The CIDR block to assign Kubernetes service IP addresses from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceIpv6Cidr(String serviceIpv6Cidr) {
             return serviceIpv6Cidr(Output.of(serviceIpv6Cidr));
         }

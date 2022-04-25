@@ -25,6 +25,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the Environment
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -36,6 +40,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="environmentState", required=true)
     private String environmentState;
 
+    /**
+     * @return Publishing state of the environment setting Possible values are Creating, Created, Failed
+     * 
+     */
     public String environmentState() {
         return this.environmentState;
     }
@@ -47,6 +55,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id of the environment
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -58,6 +70,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="latestOperationResult", required=true)
     private LatestOperationResultResponse latestOperationResult;
 
+    /**
+     * @return The details of the latest operation. ex: status, error
+     * 
+     */
     public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
@@ -69,6 +85,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the Environment
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -80,6 +100,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="passwordLastReset", required=true)
     private String passwordLastReset;
 
+    /**
+     * @return When the password was last reset on the environment.
+     * 
+     */
     public String passwordLastReset() {
         return this.passwordLastReset;
     }
@@ -91,6 +115,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -102,6 +130,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="totalUsage", required=true)
     private String totalUsage;
 
+    /**
+     * @return How long the environment has been used by a lab user
+     * 
+     */
     public String totalUsage() {
         return this.totalUsage;
     }
@@ -113,6 +145,10 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="virtualMachineDetails", required=true)
     private VirtualMachineDetailsResponse virtualMachineDetails;
 
+    /**
+     * @return Details of backing DTL virtual machine with compute and network details.
+     * 
+     */
     public VirtualMachineDetailsResponse virtualMachineDetails() {
         return this.virtualMachineDetails;
     }
@@ -149,46 +185,100 @@ public final class EnvironmentDetailsResponse extends com.pulumi.resources.Invok
             $ = new EnvironmentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param environmentState Publishing state of the environment setting Possible values are Creating, Created, Failed
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentState(String environmentState) {
             $.environmentState = environmentState;
             return this;
         }
 
+        /**
+         * @param id Resource Id of the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param latestOperationResult The details of the latest operation. ex: status, error
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             $.latestOperationResult = latestOperationResult;
             return this;
         }
 
+        /**
+         * @param name Name of the Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param passwordLastReset When the password was last reset on the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordLastReset(String passwordLastReset) {
             $.passwordLastReset = passwordLastReset;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the environment. This also includes LabIsFull and NotYetProvisioned status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param totalUsage How long the environment has been used by a lab user
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalUsage(String totalUsage) {
             $.totalUsage = totalUsage;
             return this;
         }
 
+        /**
+         * @param virtualMachineDetails Details of backing DTL virtual machine with compute and network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineDetails(VirtualMachineDetailsResponse virtualMachineDetails) {
             $.virtualMachineDetails = virtualMachineDetails;
             return this;

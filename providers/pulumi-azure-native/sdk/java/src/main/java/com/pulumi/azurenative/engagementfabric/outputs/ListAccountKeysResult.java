@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class ListAccountKeysResult {
     /**
-     * Account keys
+     * @return Account keys
      * 
      */
     private final List<KeyDescriptionResponse> value;
@@ -22,9 +22,9 @@ public final class ListAccountKeysResult {
     }
 
     /**
-     * Account keys
+     * @return Account keys
      * 
-    */
+     */
     public List<KeyDescriptionResponse> value() {
         return this.value;
     }

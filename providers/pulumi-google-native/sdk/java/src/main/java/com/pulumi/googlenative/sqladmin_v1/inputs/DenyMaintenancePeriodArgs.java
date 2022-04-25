@@ -26,6 +26,10 @@ public final class DenyMaintenancePeriodArgs extends com.pulumi.resources.Resour
     @Import(name="endDate")
     private @Nullable Output<String> endDate;
 
+    /**
+     * @return &#34;deny maintenance period&#34; end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
+     * 
+     */
     public Optional<Output<String>> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -37,6 +41,10 @@ public final class DenyMaintenancePeriodArgs extends com.pulumi.resources.Resour
     @Import(name="startDate")
     private @Nullable Output<String> startDate;
 
+    /**
+     * @return &#34;deny maintenance period&#34; start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
+     * 
+     */
     public Optional<Output<String>> startDate() {
         return Optional.ofNullable(this.startDate);
     }
@@ -48,6 +56,10 @@ public final class DenyMaintenancePeriodArgs extends com.pulumi.resources.Resour
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return Time in UTC when the &#34;deny maintenance period&#34; starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -78,29 +90,65 @@ public final class DenyMaintenancePeriodArgs extends com.pulumi.resources.Resour
             $ = new DenyMaintenancePeriodArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDate &#34;deny maintenance period&#34; end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable Output<String> endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param endDate &#34;deny maintenance period&#34; end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(String endDate) {
             return endDate(Output.of(endDate));
         }
 
+        /**
+         * @param startDate &#34;deny maintenance period&#34; start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(@Nullable Output<String> startDate) {
             $.startDate = startDate;
             return this;
         }
 
+        /**
+         * @param startDate &#34;deny maintenance period&#34; start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(String startDate) {
             return startDate(Output.of(startDate));
         }
 
+        /**
+         * @param time Time in UTC when the &#34;deny maintenance period&#34; starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time Time in UTC when the &#34;deny maintenance period&#34; starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }

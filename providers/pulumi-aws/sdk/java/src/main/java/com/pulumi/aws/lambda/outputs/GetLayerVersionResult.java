@@ -14,70 +14,70 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLayerVersionResult {
     /**
-     * The Amazon Resource Name (ARN) of the Lambda Layer with version.
+     * @return The Amazon Resource Name (ARN) of the Lambda Layer with version.
      * 
      */
     private final String arn;
     private final @Nullable String compatibleArchitecture;
     /**
-     * A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
+     * @return A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
      * 
      */
     private final List<String> compatibleArchitectures;
     private final @Nullable String compatibleRuntime;
     /**
-     * A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleRuntimes) the specific Lambda Layer version is compatible with.
+     * @return A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleRuntimes) the specific Lambda Layer version is compatible with.
      * 
      */
     private final List<String> compatibleRuntimes;
     /**
-     * The date this resource was created.
+     * @return The date this resource was created.
      * 
      */
     private final String createdDate;
     /**
-     * Description of the specific Lambda Layer version.
+     * @return Description of the specific Lambda Layer version.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The Amazon Resource Name (ARN) of the Lambda Layer without version.
+     * @return The Amazon Resource Name (ARN) of the Lambda Layer without version.
      * 
      */
     private final String layerArn;
     private final String layerName;
     /**
-     * License info associated with the specific Lambda Layer version.
+     * @return License info associated with the specific Lambda Layer version.
      * 
      */
     private final String licenseInfo;
     /**
-     * The Amazon Resource Name (ARN) of a signing job.
+     * @return The Amazon Resource Name (ARN) of a signing job.
      * 
      */
     private final String signingJobArn;
     /**
-     * The Amazon Resource Name (ARN) for a signing profile version.
+     * @return The Amazon Resource Name (ARN) for a signing profile version.
      * 
      */
     private final String signingProfileVersionArn;
     /**
-     * Base64-encoded representation of raw SHA-256 sum of the zip file.
+     * @return Base64-encoded representation of raw SHA-256 sum of the zip file.
      * 
      */
     private final String sourceCodeHash;
     /**
-     * The size in bytes of the function .zip file.
+     * @return The size in bytes of the function .zip file.
      * 
      */
     private final Integer sourceCodeSize;
     /**
-     * This Lamba Layer version.
+     * @return This Lamba Layer version.
      * 
      */
     private final Integer version;
@@ -119,9 +119,9 @@ public final class GetLayerVersionResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Lambda Layer with version.
+     * @return The Amazon Resource Name (ARN) of the Lambda Layer with version.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -129,9 +129,9 @@ public final class GetLayerVersionResult {
         return Optional.ofNullable(this.compatibleArchitecture);
     }
     /**
-     * A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
+     * @return A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
      * 
-    */
+     */
     public List<String> compatibleArchitectures() {
         return this.compatibleArchitectures;
     }
@@ -139,37 +139,37 @@ public final class GetLayerVersionResult {
         return Optional.ofNullable(this.compatibleRuntime);
     }
     /**
-     * A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleRuntimes) the specific Lambda Layer version is compatible with.
+     * @return A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleRuntimes) the specific Lambda Layer version is compatible with.
      * 
-    */
+     */
     public List<String> compatibleRuntimes() {
         return this.compatibleRuntimes;
     }
     /**
-     * The date this resource was created.
+     * @return The date this resource was created.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * Description of the specific Lambda Layer version.
+     * @return Description of the specific Lambda Layer version.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Amazon Resource Name (ARN) of the Lambda Layer without version.
+     * @return The Amazon Resource Name (ARN) of the Lambda Layer without version.
      * 
-    */
+     */
     public String layerArn() {
         return this.layerArn;
     }
@@ -177,44 +177,44 @@ public final class GetLayerVersionResult {
         return this.layerName;
     }
     /**
-     * License info associated with the specific Lambda Layer version.
+     * @return License info associated with the specific Lambda Layer version.
      * 
-    */
+     */
     public String licenseInfo() {
         return this.licenseInfo;
     }
     /**
-     * The Amazon Resource Name (ARN) of a signing job.
+     * @return The Amazon Resource Name (ARN) of a signing job.
      * 
-    */
+     */
     public String signingJobArn() {
         return this.signingJobArn;
     }
     /**
-     * The Amazon Resource Name (ARN) for a signing profile version.
+     * @return The Amazon Resource Name (ARN) for a signing profile version.
      * 
-    */
+     */
     public String signingProfileVersionArn() {
         return this.signingProfileVersionArn;
     }
     /**
-     * Base64-encoded representation of raw SHA-256 sum of the zip file.
+     * @return Base64-encoded representation of raw SHA-256 sum of the zip file.
      * 
-    */
+     */
     public String sourceCodeHash() {
         return this.sourceCodeHash;
     }
     /**
-     * The size in bytes of the function .zip file.
+     * @return The size in bytes of the function .zip file.
      * 
-    */
+     */
     public Integer sourceCodeSize() {
         return this.sourceCodeSize;
     }
     /**
-     * This Lamba Layer version.
+     * @return This Lamba Layer version.
      * 
-    */
+     */
     public Integer version() {
         return this.version;
     }

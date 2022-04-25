@@ -26,6 +26,10 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends com
     @Import(name="enableLabelSentimentSelection")
     private @Nullable Output<Boolean> enableLabelSentimentSelection;
 
+    /**
+     * @return If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
+     * 
+     */
     public Optional<Output<Boolean>> enableLabelSentimentSelection() {
         return Optional.ofNullable(this.enableLabelSentimentSelection);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends com
             $ = new GoogleCloudDatalabelingV1beta1SentimentConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableLabelSentimentSelection If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLabelSentimentSelection(@Nullable Output<Boolean> enableLabelSentimentSelection) {
             $.enableLabelSentimentSelection = enableLabelSentimentSelection;
             return this;
         }
 
+        /**
+         * @param enableLabelSentimentSelection If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableLabelSentimentSelection(Boolean enableLabelSentimentSelection) {
             return enableLabelSentimentSelection(Output.of(enableLabelSentimentSelection));
         }

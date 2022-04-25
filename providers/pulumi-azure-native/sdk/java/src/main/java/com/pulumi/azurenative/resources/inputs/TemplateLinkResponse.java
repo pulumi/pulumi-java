@@ -25,6 +25,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="contentVersion")
     private @Nullable String contentVersion;
 
+    /**
+     * @return If included, must match the ContentVersion in the template.
+     * 
+     */
     public Optional<String> contentVersion() {
         return Optional.ofNullable(this.contentVersion);
     }
@@ -36,6 +40,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The resource id of a Template Spec. Use either the id or uri property, but not both.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -47,6 +55,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="queryString")
     private @Nullable String queryString;
 
+    /**
+     * @return The query string (for example, a SAS token) to be used with the templateLink URI.
+     * 
+     */
     public Optional<String> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -58,6 +70,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="relativePath")
     private @Nullable String relativePath;
 
+    /**
+     * @return The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs
+     * 
+     */
     public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
@@ -69,6 +85,10 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return The URI of the template to deploy. Use either the uri or id property, but not both.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -101,26 +121,56 @@ public final class TemplateLinkResponse extends com.pulumi.resources.InvokeArgs 
             $ = new TemplateLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentVersion If included, must match the ContentVersion in the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentVersion(@Nullable String contentVersion) {
             $.contentVersion = contentVersion;
             return this;
         }
 
+        /**
+         * @param id The resource id of a Template Spec. Use either the id or uri property, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param queryString The query string (for example, a SAS token) to be used with the templateLink URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable String queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param relativePath The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(@Nullable String relativePath) {
             $.relativePath = relativePath;
             return this;
         }
 
+        /**
+         * @param uri The URI of the template to deploy. Use either the uri or id property, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

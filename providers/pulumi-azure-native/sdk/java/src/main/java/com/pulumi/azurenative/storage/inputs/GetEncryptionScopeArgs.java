@@ -19,6 +19,10 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
     @Import(name="encryptionScopeName", required=true)
     private String encryptionScopeName;
 
+    /**
+     * @return The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+     * 
+     */
     public String encryptionScopeName() {
         return this.encryptionScopeName;
     }
@@ -41,6 +49,10 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetEncryptionScopeArgs extends com.pulumi.resources.InvokeArg
             $ = new GetEncryptionScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param encryptionScopeName The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionScopeName(String encryptionScopeName) {
             $.encryptionScopeName = encryptionScopeName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

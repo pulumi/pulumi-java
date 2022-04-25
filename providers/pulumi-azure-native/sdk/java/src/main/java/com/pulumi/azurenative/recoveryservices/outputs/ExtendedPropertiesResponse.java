@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExtendedPropertiesResponse {
     /**
-     * Extended Properties for Disk Exclusion.
+     * @return Extended Properties for Disk Exclusion.
      * 
      */
     private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
@@ -23,9 +23,9 @@ public final class ExtendedPropertiesResponse {
     }
 
     /**
-     * Extended Properties for Disk Exclusion.
+     * @return Extended Properties for Disk Exclusion.
      * 
-    */
+     */
     public Optional<DiskExclusionPropertiesResponse> diskExclusionProperties() {
         return Optional.ofNullable(this.diskExclusionProperties);
     }

@@ -23,6 +23,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecu
     @Import(name="accessControlMaxAgeSec", required=true)
     private Output<Integer> accessControlMaxAgeSec;
 
+    /**
+     * @return A number that CloudFront uses as the value for the `max-age` directive in the `Strict-Transport-Security` HTTP response header.
+     * 
+     */
     public Output<Integer> accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
@@ -34,6 +38,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecu
     @Import(name="includeSubdomains")
     private @Nullable Output<Boolean> includeSubdomains;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront includes the `includeSubDomains` directive in the `Strict-Transport-Security` HTTP response header.
+     * 
+     */
     public Optional<Output<Boolean>> includeSubdomains() {
         return Optional.ofNullable(this.includeSubdomains);
     }
@@ -45,6 +53,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecu
     @Import(name="override", required=true)
     private Output<Boolean> override;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+     * 
+     */
     public Output<Boolean> override() {
         return this.override;
     }
@@ -56,6 +68,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecu
     @Import(name="preload")
     private @Nullable Output<Boolean> preload;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront includes the `preload` directive in the `Strict-Transport-Security` HTTP response header.
+     * 
+     */
     public Optional<Output<Boolean>> preload() {
         return Optional.ofNullable(this.preload);
     }
@@ -87,38 +103,86 @@ public final class ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecu
             $ = new ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessControlMaxAgeSec A number that CloudFront uses as the value for the `max-age` directive in the `Strict-Transport-Security` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlMaxAgeSec(Output<Integer> accessControlMaxAgeSec) {
             $.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
 
+        /**
+         * @param accessControlMaxAgeSec A number that CloudFront uses as the value for the `max-age` directive in the `Strict-Transport-Security` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             return accessControlMaxAgeSec(Output.of(accessControlMaxAgeSec));
         }
 
+        /**
+         * @param includeSubdomains A Boolean value that determines whether CloudFront includes the `includeSubDomains` directive in the `Strict-Transport-Security` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeSubdomains(@Nullable Output<Boolean> includeSubdomains) {
             $.includeSubdomains = includeSubdomains;
             return this;
         }
 
+        /**
+         * @param includeSubdomains A Boolean value that determines whether CloudFront includes the `includeSubDomains` directive in the `Strict-Transport-Security` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeSubdomains(Boolean includeSubdomains) {
             return includeSubdomains(Output.of(includeSubdomains));
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Output<Boolean> override) {
             $.override = override;
             return this;
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Boolean override) {
             return override(Output.of(override));
         }
 
+        /**
+         * @param preload A Boolean value that determines whether CloudFront includes the `preload` directive in the `Strict-Transport-Security` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preload(@Nullable Output<Boolean> preload) {
             $.preload = preload;
             return this;
         }
 
+        /**
+         * @param preload A Boolean value that determines whether CloudFront includes the `preload` directive in the `Strict-Transport-Security` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preload(Boolean preload) {
             return preload(Output.of(preload));
         }

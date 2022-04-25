@@ -29,6 +29,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="categories")
     private @Nullable Output<List<CategoryArgs>> categories;
 
+    /**
+     * @return The list of categories to which the update belongs.
+     * 
+     */
     public Optional<Output<List<CategoryArgs>>> categories() {
         return Optional.ofNullable(this.categories);
     }
@@ -40,6 +44,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The localized description of the update.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return Required - The unique identifier for the update.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -62,6 +74,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kbArticleIds")
     private @Nullable Output<List<String>> kbArticleIds;
 
+    /**
+     * @return The Microsoft Knowledge Base article IDs that are associated with the update.
+     * 
+     */
     public Optional<Output<List<String>>> kbArticleIds() {
         return Optional.ofNullable(this.kbArticleIds);
     }
@@ -73,6 +89,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastPublishedTimestamp")
     private @Nullable Output<String> lastPublishedTimestamp;
 
+    /**
+     * @return The last published timestamp of the update.
+     * 
+     */
     public Optional<Output<String>> lastPublishedTimestamp() {
         return Optional.ofNullable(this.lastPublishedTimestamp);
     }
@@ -84,6 +104,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportUrl")
     private @Nullable Output<String> supportUrl;
 
+    /**
+     * @return The hyperlink to the support information for the update.
+     * 
+     */
     public Optional<Output<String>> supportUrl() {
         return Optional.ofNullable(this.supportUrl);
     }
@@ -95,6 +119,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return The localized title of the update.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -129,73 +157,169 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WindowsUpdateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categories The list of categories to which the update belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(@Nullable Output<List<CategoryArgs>> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories The list of categories to which the update belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(List<CategoryArgs> categories) {
             return categories(Output.of(categories));
         }
 
+        /**
+         * @param categories The list of categories to which the update belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(CategoryArgs... categories) {
             return categories(List.of(categories));
         }
 
+        /**
+         * @param description The localized description of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The localized description of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param identity Required - The unique identifier for the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Required - The unique identifier for the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kbArticleIds The Microsoft Knowledge Base article IDs that are associated with the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kbArticleIds(@Nullable Output<List<String>> kbArticleIds) {
             $.kbArticleIds = kbArticleIds;
             return this;
         }
 
+        /**
+         * @param kbArticleIds The Microsoft Knowledge Base article IDs that are associated with the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kbArticleIds(List<String> kbArticleIds) {
             return kbArticleIds(Output.of(kbArticleIds));
         }
 
+        /**
+         * @param kbArticleIds The Microsoft Knowledge Base article IDs that are associated with the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kbArticleIds(String... kbArticleIds) {
             return kbArticleIds(List.of(kbArticleIds));
         }
 
+        /**
+         * @param lastPublishedTimestamp The last published timestamp of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPublishedTimestamp(@Nullable Output<String> lastPublishedTimestamp) {
             $.lastPublishedTimestamp = lastPublishedTimestamp;
             return this;
         }
 
+        /**
+         * @param lastPublishedTimestamp The last published timestamp of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPublishedTimestamp(String lastPublishedTimestamp) {
             return lastPublishedTimestamp(Output.of(lastPublishedTimestamp));
         }
 
+        /**
+         * @param supportUrl The hyperlink to the support information for the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
             $.supportUrl = supportUrl;
             return this;
         }
 
+        /**
+         * @param supportUrl The hyperlink to the support information for the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportUrl(String supportUrl) {
             return supportUrl(Output.of(supportUrl));
         }
 
+        /**
+         * @param title The localized title of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The localized title of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

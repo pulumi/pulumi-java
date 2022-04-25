@@ -22,6 +22,10 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringServiceName", required=true)
     private Output<String> peeringServiceName;
 
+    /**
+     * @return The name of the peering service.
+     * 
+     */
     public Output<String> peeringServiceName() {
         return this.peeringServiceName;
     }
@@ -33,6 +37,10 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringServicePrefixKey")
     private @Nullable Output<String> peeringServicePrefixKey;
 
+    /**
+     * @return The peering service prefix key
+     * 
+     */
     public Optional<Output<String>> peeringServicePrefixKey() {
         return Optional.ofNullable(this.peeringServicePrefixKey);
     }
@@ -44,6 +52,10 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The prefix from which your traffic originates.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -55,6 +67,10 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefixName")
     private @Nullable Output<String> prefixName;
 
+    /**
+     * @return The name of the prefix.
+     * 
+     */
     public Optional<Output<String>> prefixName() {
         return Optional.ofNullable(this.prefixName);
     }
@@ -66,6 +82,10 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -98,47 +118,107 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PrefixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceName(Output<String> peeringServiceName) {
             $.peeringServiceName = peeringServiceName;
             return this;
         }
 
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceName(String peeringServiceName) {
             return peeringServiceName(Output.of(peeringServiceName));
         }
 
+        /**
+         * @param peeringServicePrefixKey The peering service prefix key
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServicePrefixKey(@Nullable Output<String> peeringServicePrefixKey) {
             $.peeringServicePrefixKey = peeringServicePrefixKey;
             return this;
         }
 
+        /**
+         * @param peeringServicePrefixKey The peering service prefix key
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServicePrefixKey(String peeringServicePrefixKey) {
             return peeringServicePrefixKey(Output.of(peeringServicePrefixKey));
         }
 
+        /**
+         * @param prefix The prefix from which your traffic originates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The prefix from which your traffic originates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param prefixName The name of the prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixName(@Nullable Output<String> prefixName) {
             $.prefixName = prefixName;
             return this;
         }
 
+        /**
+         * @param prefixName The name of the prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixName(String prefixName) {
             return prefixName(Output.of(prefixName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

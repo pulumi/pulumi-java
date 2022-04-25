@@ -24,6 +24,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-provided metadata to be stored with this product. Must be at most 4096 characters long.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The user-provided name for this Product. Must not be empty. Must be at most 4096 characters long.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -53,6 +61,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the product. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating a product.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,6 +76,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productCategory")
     private @Nullable Output<String> productCategory;
 
+    /**
+     * @return Immutable. The category for the product identified by the reference image. This should be one of &#34;homegoods-v2&#34;, &#34;apparel-v2&#34;, &#34;toys-v2&#34;, &#34;packagedgoods-v1&#34; or &#34;general-v1&#34;. The legacy categories &#34;homegoods&#34;, &#34;apparel&#34;, and &#34;toys&#34; are still supported, but these should not be used for new products.
+     * 
+     */
     public Optional<Output<String>> productCategory() {
         return Optional.ofNullable(this.productCategory);
     }
@@ -82,6 +98,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productLabels")
     private @Nullable Output<List<KeyValueArgs>> productLabels;
 
+    /**
+     * @return Key-value pairs that can be attached to a product. At query time, constraints can be specified based on the product_labels. Note that integer values can be provided as strings, e.g. &#34;1199&#34;. Only strings with integer values can match a range-based restriction which is to be supported soon. Multiple values can be assigned to the same key. One product may have up to 500 product_labels. Notice that the total number of distinct product_labels over all products in one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for that ProductSet.
+     * 
+     */
     public Optional<Output<List<KeyValueArgs>>> productLabels() {
         return Optional.ofNullable(this.productLabels);
     }
@@ -124,20 +144,44 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProductArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-provided metadata to be stored with this product. Must be at most 4096 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-provided metadata to be stored with this product. Must be at most 4096 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The user-provided name for this Product. Must not be empty. Must be at most 4096 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The user-provided name for this Product. Must not be empty. Must be at most 4096 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -151,20 +195,44 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the product. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating a product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the product. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating a product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param productCategory Immutable. The category for the product identified by the reference image. This should be one of &#34;homegoods-v2&#34;, &#34;apparel-v2&#34;, &#34;toys-v2&#34;, &#34;packagedgoods-v1&#34; or &#34;general-v1&#34;. The legacy categories &#34;homegoods&#34;, &#34;apparel&#34;, and &#34;toys&#34; are still supported, but these should not be used for new products.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productCategory(@Nullable Output<String> productCategory) {
             $.productCategory = productCategory;
             return this;
         }
 
+        /**
+         * @param productCategory Immutable. The category for the product identified by the reference image. This should be one of &#34;homegoods-v2&#34;, &#34;apparel-v2&#34;, &#34;toys-v2&#34;, &#34;packagedgoods-v1&#34; or &#34;general-v1&#34;. The legacy categories &#34;homegoods&#34;, &#34;apparel&#34;, and &#34;toys&#34; are still supported, but these should not be used for new products.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productCategory(String productCategory) {
             return productCategory(Output.of(productCategory));
         }
@@ -178,15 +246,33 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
             return productId(Output.of(productId));
         }
 
+        /**
+         * @param productLabels Key-value pairs that can be attached to a product. At query time, constraints can be specified based on the product_labels. Note that integer values can be provided as strings, e.g. &#34;1199&#34;. Only strings with integer values can match a range-based restriction which is to be supported soon. Multiple values can be assigned to the same key. One product may have up to 500 product_labels. Notice that the total number of distinct product_labels over all products in one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for that ProductSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productLabels(@Nullable Output<List<KeyValueArgs>> productLabels) {
             $.productLabels = productLabels;
             return this;
         }
 
+        /**
+         * @param productLabels Key-value pairs that can be attached to a product. At query time, constraints can be specified based on the product_labels. Note that integer values can be provided as strings, e.g. &#34;1199&#34;. Only strings with integer values can match a range-based restriction which is to be supported soon. Multiple values can be assigned to the same key. One product may have up to 500 product_labels. Notice that the total number of distinct product_labels over all products in one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for that ProductSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productLabels(List<KeyValueArgs> productLabels) {
             return productLabels(Output.of(productLabels));
         }
 
+        /**
+         * @param productLabels Key-value pairs that can be attached to a product. At query time, constraints can be specified based on the product_labels. Note that integer values can be provided as strings, e.g. &#34;1199&#34;. Only strings with integer values can match a range-based restriction which is to be supported soon. Multiple values can be assigned to the same key. One product may have up to 500 product_labels. Notice that the total number of distinct product_labels over all products in one ProductSet cannot exceed 1M, otherwise the product search pipeline will refuse to work for that ProductSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productLabels(KeyValueArgs... productLabels) {
             return productLabels(List.of(productLabels));
         }

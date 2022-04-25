@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends com.pu
     @Import(name="maxValue", required=true)
     private GooglePrivacyDlpV2ValueResponse maxValue;
 
+    /**
+     * @return Maximum value appearing in the column.
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse maxValue() {
         return this.maxValue;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends com.pu
     @Import(name="minValue", required=true)
     private GooglePrivacyDlpV2ValueResponse minValue;
 
+    /**
+     * @return Minimum value appearing in the column.
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse minValue() {
         return this.minValue;
     }
@@ -46,6 +54,10 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends com.pu
     @Import(name="quantileValues", required=true)
     private List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
+    /**
+     * @return List of 99 values that partition the set of field values into 100 equal sized buckets.
+     * 
+     */
     public List<GooglePrivacyDlpV2ValueResponse> quantileValues() {
         return this.quantileValues;
     }
@@ -76,21 +88,45 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends com.pu
             $ = new GooglePrivacyDlpV2NumericalStatsResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxValue Maximum value appearing in the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxValue(GooglePrivacyDlpV2ValueResponse maxValue) {
             $.maxValue = maxValue;
             return this;
         }
 
+        /**
+         * @param minValue Minimum value appearing in the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minValue(GooglePrivacyDlpV2ValueResponse minValue) {
             $.minValue = minValue;
             return this;
         }
 
+        /**
+         * @param quantileValues List of 99 values that partition the set of field values into 100 equal sized buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quantileValues(List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
             $.quantileValues = quantileValues;
             return this;
         }
 
+        /**
+         * @param quantileValues List of 99 values that partition the set of field values into 100 equal sized buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quantileValues(GooglePrivacyDlpV2ValueResponse... quantileValues) {
             return quantileValues(List.of(quantileValues));
         }

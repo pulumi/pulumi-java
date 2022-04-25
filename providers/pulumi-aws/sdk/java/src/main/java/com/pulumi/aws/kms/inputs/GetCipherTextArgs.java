@@ -22,6 +22,10 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="context")
     private @Nullable Map<String,String> context;
 
+    /**
+     * @return An optional mapping that makes up the encryption context.
+     * 
+     */
     public Optional<Map<String,String>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -33,6 +37,10 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
     private String keyId;
 
+    /**
+     * @return Globally unique key ID for the customer master key.
+     * 
+     */
     public String keyId() {
         return this.keyId;
     }
@@ -44,6 +52,10 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="plaintext", required=true)
     private String plaintext;
 
+    /**
+     * @return Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
+     * 
+     */
     public String plaintext() {
         return this.plaintext;
     }
@@ -74,16 +86,34 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCipherTextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context An optional mapping that makes up the encryption context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Map<String,String> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param keyId Globally unique key ID for the customer master key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param plaintext Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plaintext(String plaintext) {
             $.plaintext = plaintext;
             return this;

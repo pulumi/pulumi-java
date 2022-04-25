@@ -16,7 +16,7 @@ public final class GetClusterIstioServiceResult {
     private final String clusterName;
     private final String displayName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -59,9 +59,9 @@ public final class GetClusterIstioServiceResult {
         return this.displayName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

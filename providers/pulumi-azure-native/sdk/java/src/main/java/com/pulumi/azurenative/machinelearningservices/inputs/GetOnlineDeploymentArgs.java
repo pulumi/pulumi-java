@@ -19,6 +19,10 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="deploymentName", required=true)
     private String deploymentName;
 
+    /**
+     * @return Inference Endpoint Deployment name.
+     * 
+     */
     public String deploymentName() {
         return this.deploymentName;
     }
@@ -30,6 +34,10 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return Inference endpoint name.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -41,6 +49,10 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetOnlineDeploymentArgs extends com.pulumi.resources.InvokeAr
             $ = new GetOnlineDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentName Inference Endpoint Deployment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param endpointName Inference endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

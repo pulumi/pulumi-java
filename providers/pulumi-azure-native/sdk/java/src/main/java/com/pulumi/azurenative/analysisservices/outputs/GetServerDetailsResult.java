@@ -18,82 +18,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetServerDetailsResult {
     /**
-     * A collection of AS server administrators
+     * @return A collection of AS server administrators
      * 
      */
     private final @Nullable ServerAdministratorsResponse asAdministrators;
     /**
-     * The SAS container URI to the backup container.
+     * @return The SAS container URI to the backup container.
      * 
      */
     private final @Nullable String backupBlobContainerUri;
     /**
-     * The gateway details configured for the AS server.
+     * @return The gateway details configured for the AS server.
      * 
      */
     private final @Nullable GatewayDetailsResponse gatewayDetails;
     /**
-     * An identifier that represents the Analysis Services resource.
+     * @return An identifier that represents the Analysis Services resource.
      * 
      */
     private final String id;
     /**
-     * The firewall settings for the AS server.
+     * @return The firewall settings for the AS server.
      * 
      */
     private final @Nullable IPv4FirewallSettingsResponse ipV4FirewallSettings;
     /**
-     * Location of the Analysis Services resource.
+     * @return Location of the Analysis Services resource.
      * 
      */
     private final String location;
     /**
-     * The managed mode of the server (0 = not managed, 1 = managed).
+     * @return The managed mode of the server (0 = not managed, 1 = managed).
      * 
      */
     private final @Nullable Integer managedMode;
     /**
-     * The name of the Analysis Services resource.
+     * @return The name of the Analysis Services resource.
      * 
      */
     private final String name;
     /**
-     * The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
+     * @return The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
     private final String provisioningState;
     /**
-     * How the read-write server&#39;s participation in the query pool is controlled.&lt;br/&gt;It can have the following values: &lt;ul&gt;&lt;li&gt;readOnly - indicates that the read-write server is intended not to participate in query operations&lt;/li&gt;&lt;li&gt;all - indicates that the read-write server can participate in query operations&lt;/li&gt;&lt;/ul&gt;Specifying readOnly when capacity is 1 results in error.
+     * @return How the read-write server&#39;s participation in the query pool is controlled.&lt;br/&gt;It can have the following values: &lt;ul&gt;&lt;li&gt;readOnly - indicates that the read-write server is intended not to participate in query operations&lt;/li&gt;&lt;li&gt;all - indicates that the read-write server can participate in query operations&lt;/li&gt;&lt;/ul&gt;Specifying readOnly when capacity is 1 results in error.
      * 
      */
     private final @Nullable String querypoolConnectionMode;
     /**
-     * The full name of the Analysis Services resource.
+     * @return The full name of the Analysis Services resource.
      * 
      */
     private final String serverFullName;
     /**
-     * The server monitor mode for AS server
+     * @return The server monitor mode for AS server
      * 
      */
     private final @Nullable Integer serverMonitorMode;
     /**
-     * The SKU of the Analysis Services resource.
+     * @return The SKU of the Analysis Services resource.
      * 
      */
     private final ResourceSkuResponse sku;
     /**
-     * The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
+     * @return The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
      * 
      */
     private final String state;
     /**
-     * Key-value pairs of additional resource provisioning properties.
+     * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the Analysis Services resource.
+     * @return The type of the Analysis Services resource.
      * 
      */
     private final String type;
@@ -135,114 +135,114 @@ public final class GetServerDetailsResult {
     }
 
     /**
-     * A collection of AS server administrators
+     * @return A collection of AS server administrators
      * 
-    */
+     */
     public Optional<ServerAdministratorsResponse> asAdministrators() {
         return Optional.ofNullable(this.asAdministrators);
     }
     /**
-     * The SAS container URI to the backup container.
+     * @return The SAS container URI to the backup container.
      * 
-    */
+     */
     public Optional<String> backupBlobContainerUri() {
         return Optional.ofNullable(this.backupBlobContainerUri);
     }
     /**
-     * The gateway details configured for the AS server.
+     * @return The gateway details configured for the AS server.
      * 
-    */
+     */
     public Optional<GatewayDetailsResponse> gatewayDetails() {
         return Optional.ofNullable(this.gatewayDetails);
     }
     /**
-     * An identifier that represents the Analysis Services resource.
+     * @return An identifier that represents the Analysis Services resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The firewall settings for the AS server.
+     * @return The firewall settings for the AS server.
      * 
-    */
+     */
     public Optional<IPv4FirewallSettingsResponse> ipV4FirewallSettings() {
         return Optional.ofNullable(this.ipV4FirewallSettings);
     }
     /**
-     * Location of the Analysis Services resource.
+     * @return Location of the Analysis Services resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The managed mode of the server (0 = not managed, 1 = managed).
+     * @return The managed mode of the server (0 = not managed, 1 = managed).
      * 
-    */
+     */
     public Optional<Integer> managedMode() {
         return Optional.ofNullable(this.managedMode);
     }
     /**
-     * The name of the Analysis Services resource.
+     * @return The name of the Analysis Services resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
+     * @return The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * How the read-write server&#39;s participation in the query pool is controlled.&lt;br/&gt;It can have the following values: &lt;ul&gt;&lt;li&gt;readOnly - indicates that the read-write server is intended not to participate in query operations&lt;/li&gt;&lt;li&gt;all - indicates that the read-write server can participate in query operations&lt;/li&gt;&lt;/ul&gt;Specifying readOnly when capacity is 1 results in error.
+     * @return How the read-write server&#39;s participation in the query pool is controlled.&lt;br/&gt;It can have the following values: &lt;ul&gt;&lt;li&gt;readOnly - indicates that the read-write server is intended not to participate in query operations&lt;/li&gt;&lt;li&gt;all - indicates that the read-write server can participate in query operations&lt;/li&gt;&lt;/ul&gt;Specifying readOnly when capacity is 1 results in error.
      * 
-    */
+     */
     public Optional<String> querypoolConnectionMode() {
         return Optional.ofNullable(this.querypoolConnectionMode);
     }
     /**
-     * The full name of the Analysis Services resource.
+     * @return The full name of the Analysis Services resource.
      * 
-    */
+     */
     public String serverFullName() {
         return this.serverFullName;
     }
     /**
-     * The server monitor mode for AS server
+     * @return The server monitor mode for AS server
      * 
-    */
+     */
     public Optional<Integer> serverMonitorMode() {
         return Optional.ofNullable(this.serverMonitorMode);
     }
     /**
-     * The SKU of the Analysis Services resource.
+     * @return The SKU of the Analysis Services resource.
      * 
-    */
+     */
     public ResourceSkuResponse sku() {
         return this.sku;
     }
     /**
-     * The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
+     * @return The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Key-value pairs of additional resource provisioning properties.
+     * @return Key-value pairs of additional resource provisioning properties.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the Analysis Services resource.
+     * @return The type of the Analysis Services resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -25,6 +25,10 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges extends com.pul
     @Import(name="max")
     private @Nullable Integer max;
 
+    /**
+     * @return Max status code.
+     * 
+     */
     public Optional<Integer> max() {
         return Optional.ofNullable(this.max);
     }
@@ -36,6 +40,10 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges extends com.pul
     @Import(name="min")
     private @Nullable Integer min;
 
+    /**
+     * @return Min status code.
+     * 
+     */
     public Optional<Integer> min() {
         return Optional.ofNullable(this.min);
     }
@@ -65,11 +73,23 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges extends com.pul
             $ = new MonitorConfigResponseExpectedStatusCodeRanges(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max Max status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Integer max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param min Min status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Integer min) {
             $.min = min;
             return this;

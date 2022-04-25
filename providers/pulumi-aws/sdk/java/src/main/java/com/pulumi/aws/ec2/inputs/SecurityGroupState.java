@@ -28,6 +28,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the security group.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -39,6 +43,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this egress rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="egress")
     private @Nullable Output<List<SecurityGroupEgressGetArgs>> egress;
 
+    /**
+     * @return Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
+     * 
+     */
     public Optional<Output<List<SecurityGroupEgressGetArgs>>> egress() {
         return Optional.ofNullable(this.egress);
     }
@@ -61,6 +73,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="ingress")
     private @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
 
+    /**
+     * @return Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
+     * 
+     */
     public Optional<Output<List<SecurityGroupIngressGetArgs>>> ingress() {
         return Optional.ofNullable(this.ingress);
     }
@@ -72,6 +88,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the security group. If omitted, this provider will assign a random, unique name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -94,6 +118,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return Owner ID.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -105,6 +133,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="revokeRulesOnDelete")
     private @Nullable Output<Boolean> revokeRulesOnDelete;
 
+    /**
+     * @return Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
+     * 
+     */
     public Optional<Output<Boolean>> revokeRulesOnDelete() {
         return Optional.ofNullable(this.revokeRulesOnDelete);
     }
@@ -116,6 +148,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -127,6 +163,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -138,6 +178,10 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return VPC ID.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -176,109 +220,253 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
             $ = new SecurityGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description Description of this egress rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this egress rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param egress Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(@Nullable Output<List<SecurityGroupEgressGetArgs>> egress) {
             $.egress = egress;
             return this;
         }
 
+        /**
+         * @param egress Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(List<SecurityGroupEgressGetArgs> egress) {
             return egress(Output.of(egress));
         }
 
+        /**
+         * @param egress Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(SecurityGroupEgressGetArgs... egress) {
             return egress(List.of(egress));
         }
 
+        /**
+         * @param ingress Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(@Nullable Output<List<SecurityGroupIngressGetArgs>> ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param ingress Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(List<SecurityGroupIngressGetArgs> ingress) {
             return ingress(Output.of(ingress));
         }
 
+        /**
+         * @param ingress Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(SecurityGroupIngressGetArgs... ingress) {
             return ingress(List.of(ingress));
         }
 
+        /**
+         * @param name Name of the security group. If omitted, this provider will assign a random, unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the security group. If omitted, this provider will assign a random, unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param ownerId Owner ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId Owner ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param revokeRulesOnDelete Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revokeRulesOnDelete(@Nullable Output<Boolean> revokeRulesOnDelete) {
             $.revokeRulesOnDelete = revokeRulesOnDelete;
             return this;
         }
 
+        /**
+         * @param revokeRulesOnDelete Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revokeRulesOnDelete(Boolean revokeRulesOnDelete) {
             return revokeRulesOnDelete(Output.of(revokeRulesOnDelete));
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param vpcId VPC ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId VPC ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

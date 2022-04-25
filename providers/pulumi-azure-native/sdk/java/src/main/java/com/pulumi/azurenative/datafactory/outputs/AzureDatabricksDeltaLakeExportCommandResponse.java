@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureDatabricksDeltaLakeExportCommandResponse {
     /**
-     * Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * @return Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object dateFormat;
     /**
-     * Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * @return Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object timestampFormat;
     /**
-     * The export setting type.
+     * @return The export setting type.
      * Expected value is &#39;AzureDatabricksDeltaLakeExportCommand&#39;.
      * 
      */
@@ -40,24 +40,24 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
     }
 
     /**
-     * Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * @return Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> dateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
     /**
-     * Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * @return Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> timestampFormat() {
         return Optional.ofNullable(this.timestampFormat);
     }
     /**
-     * The export setting type.
+     * @return The export setting type.
      * Expected value is &#39;AzureDatabricksDeltaLakeExportCommand&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -34,6 +34,15 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="concurrencyPolicy")
     private @Nullable Output<String> concurrencyPolicy;
 
+    /**
+     * @return Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
+     * 
+     * Possible enum values:
+     *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
+     *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
+     *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
+     * 
+     */
     public Optional<Output<String>> concurrencyPolicy() {
         return Optional.ofNullable(this.concurrencyPolicy);
     }
@@ -45,6 +54,10 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failedJobsHistoryLimit")
     private @Nullable Output<Integer> failedJobsHistoryLimit;
 
+    /**
+     * @return The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
+     * 
+     */
     public Optional<Output<Integer>> failedJobsHistoryLimit() {
         return Optional.ofNullable(this.failedJobsHistoryLimit);
     }
@@ -56,6 +69,10 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobTemplate", required=true)
     private Output<JobTemplateSpecArgs> jobTemplate;
 
+    /**
+     * @return Specifies the job that will be created when executing a CronJob.
+     * 
+     */
     public Output<JobTemplateSpecArgs> jobTemplate() {
         return this.jobTemplate;
     }
@@ -67,6 +84,10 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
     private Output<String> schedule;
 
+    /**
+     * @return The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
+     * 
+     */
     public Output<String> schedule() {
         return this.schedule;
     }
@@ -78,6 +99,10 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startingDeadlineSeconds")
     private @Nullable Output<Integer> startingDeadlineSeconds;
 
+    /**
+     * @return Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
+     * 
+     */
     public Optional<Output<Integer>> startingDeadlineSeconds() {
         return Optional.ofNullable(this.startingDeadlineSeconds);
     }
@@ -89,6 +114,10 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successfulJobsHistoryLimit")
     private @Nullable Output<Integer> successfulJobsHistoryLimit;
 
+    /**
+     * @return The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
+     * 
+     */
     public Optional<Output<Integer>> successfulJobsHistoryLimit() {
         return Optional.ofNullable(this.successfulJobsHistoryLimit);
     }
@@ -100,6 +129,10 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suspend")
     private @Nullable Output<Boolean> suspend;
 
+    /**
+     * @return This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> suspend() {
         return Optional.ofNullable(this.suspend);
     }
@@ -134,65 +167,159 @@ public final class CronJobSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CronJobSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param concurrencyPolicy Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
+         * 
+         * Possible enum values:
+         *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
+         *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
+         *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrencyPolicy(@Nullable Output<String> concurrencyPolicy) {
             $.concurrencyPolicy = concurrencyPolicy;
             return this;
         }
 
+        /**
+         * @param concurrencyPolicy Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
+         * 
+         * Possible enum values:
+         *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
+         *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
+         *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrencyPolicy(String concurrencyPolicy) {
             return concurrencyPolicy(Output.of(concurrencyPolicy));
         }
 
+        /**
+         * @param failedJobsHistoryLimit The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedJobsHistoryLimit(@Nullable Output<Integer> failedJobsHistoryLimit) {
             $.failedJobsHistoryLimit = failedJobsHistoryLimit;
             return this;
         }
 
+        /**
+         * @param failedJobsHistoryLimit The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedJobsHistoryLimit(Integer failedJobsHistoryLimit) {
             return failedJobsHistoryLimit(Output.of(failedJobsHistoryLimit));
         }
 
+        /**
+         * @param jobTemplate Specifies the job that will be created when executing a CronJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTemplate(Output<JobTemplateSpecArgs> jobTemplate) {
             $.jobTemplate = jobTemplate;
             return this;
         }
 
+        /**
+         * @param jobTemplate Specifies the job that will be created when executing a CronJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTemplate(JobTemplateSpecArgs jobTemplate) {
             return jobTemplate(Output.of(jobTemplate));
         }
 
+        /**
+         * @param schedule The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param startingDeadlineSeconds Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingDeadlineSeconds(@Nullable Output<Integer> startingDeadlineSeconds) {
             $.startingDeadlineSeconds = startingDeadlineSeconds;
             return this;
         }
 
+        /**
+         * @param startingDeadlineSeconds Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startingDeadlineSeconds(Integer startingDeadlineSeconds) {
             return startingDeadlineSeconds(Output.of(startingDeadlineSeconds));
         }
 
+        /**
+         * @param successfulJobsHistoryLimit The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulJobsHistoryLimit(@Nullable Output<Integer> successfulJobsHistoryLimit) {
             $.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
             return this;
         }
 
+        /**
+         * @param successfulJobsHistoryLimit The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulJobsHistoryLimit(Integer successfulJobsHistoryLimit) {
             return successfulJobsHistoryLimit(Output.of(successfulJobsHistoryLimit));
         }
 
+        /**
+         * @param suspend This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspend(@Nullable Output<Boolean> suspend) {
             $.suspend = suspend;
             return this;
         }
 
+        /**
+         * @param suspend This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspend(Boolean suspend) {
             return suspend(Output.of(suspend));
         }

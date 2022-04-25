@@ -22,6 +22,10 @@ public final class ContainerPolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="containerName")
     private @Nullable Output<String> containerName;
 
+    /**
+     * @return The name of the container.
+     * 
+     */
     public Optional<Output<String>> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -33,6 +37,10 @@ public final class ContainerPolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return The contents of the policy.
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -62,20 +70,44 @@ public final class ContainerPolicyState extends com.pulumi.resources.ResourceArg
             $ = new ContainerPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName The name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName The name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param policy The contents of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The contents of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

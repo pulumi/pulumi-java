@@ -29,6 +29,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the data source
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -40,6 +44,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId")
     private @Nullable Output<String> awsAccountId;
 
+    /**
+     * @return The ID for the AWS account that the data source is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
+     * 
+     */
     public Optional<Output<String>> awsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
@@ -51,6 +59,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<DataSourceCredentialsGetArgs> credentials;
 
+    /**
+     * @return The credentials Amazon QuickSight uses to connect to your underlying source. Currently, only credentials based on user name and password are supported. See Credentials below for more details.
+     * 
+     */
     public Optional<Output<DataSourceCredentialsGetArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -62,6 +74,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceId")
     private @Nullable Output<String> dataSourceId;
 
+    /**
+     * @return An identifier for the data source.
+     * 
+     */
     public Optional<Output<String>> dataSourceId() {
         return Optional.ofNullable(this.dataSourceId);
     }
@@ -73,6 +89,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name for the data source, maximum of 128 characters.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +104,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<DataSourceParametersGetArgs> parameters;
 
+    /**
+     * @return The parameters used to connect to this data source (exactly one).
+     * 
+     */
     public Optional<Output<DataSourceParametersGetArgs>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -95,6 +119,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<List<DataSourcePermissionGetArgs>> permissions;
 
+    /**
+     * @return A set of resource permissions on the data source. Maximum of 64 items. See Permission below for more details.
+     * 
+     */
     public Optional<Output<List<DataSourcePermissionGetArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -106,6 +134,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslProperties")
     private @Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties;
 
+    /**
+     * @return Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source. See SSL Properties below for more details.
+     * 
+     */
     public Optional<Output<DataSourceSslPropertiesGetArgs>> sslProperties() {
         return Optional.ofNullable(this.sslProperties);
     }
@@ -117,6 +149,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -128,6 +164,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -139,6 +179,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the data source. See the [AWS Documentation](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateDataSource.html#QS-CreateDataSource-request-Type) for the complete list of valid values.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -150,6 +194,10 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConnectionProperties")
     private @Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties;
 
+    /**
+     * @return Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your underlying source. See VPC Connection Properties below for more details.
+     * 
+     */
     public Optional<Output<DataSourceVpcConnectionPropertiesGetArgs>> vpcConnectionProperties() {
         return Optional.ofNullable(this.vpcConnectionProperties);
     }
@@ -189,114 +237,264 @@ public final class DataSourceState extends com.pulumi.resources.ResourceArgs {
             $ = new DataSourceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the data source
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the data source
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param awsAccountId The ID for the AWS account that the data source is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             $.awsAccountId = awsAccountId;
             return this;
         }
 
+        /**
+         * @param awsAccountId The ID for the AWS account that the data source is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccountId(String awsAccountId) {
             return awsAccountId(Output.of(awsAccountId));
         }
 
+        /**
+         * @param credentials The credentials Amazon QuickSight uses to connect to your underlying source. Currently, only credentials based on user name and password are supported. See Credentials below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<DataSourceCredentialsGetArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials The credentials Amazon QuickSight uses to connect to your underlying source. Currently, only credentials based on user name and password are supported. See Credentials below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(DataSourceCredentialsGetArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param dataSourceId An identifier for the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
             $.dataSourceId = dataSourceId;
             return this;
         }
 
+        /**
+         * @param dataSourceId An identifier for the data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(String dataSourceId) {
             return dataSourceId(Output.of(dataSourceId));
         }
 
+        /**
+         * @param name A name for the data source, maximum of 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for the data source, maximum of 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters The parameters used to connect to this data source (exactly one).
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<DataSourceParametersGetArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters used to connect to this data source (exactly one).
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(DataSourceParametersGetArgs parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param permissions A set of resource permissions on the data source. Maximum of 64 items. See Permission below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<DataSourcePermissionGetArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions A set of resource permissions on the data source. Maximum of 64 items. See Permission below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<DataSourcePermissionGetArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions A set of resource permissions on the data source. Maximum of 64 items. See Permission below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(DataSourcePermissionGetArgs... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param sslProperties Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source. See SSL Properties below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslProperties(@Nullable Output<DataSourceSslPropertiesGetArgs> sslProperties) {
             $.sslProperties = sslProperties;
             return this;
         }
 
+        /**
+         * @param sslProperties Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source. See SSL Properties below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslProperties(DataSourceSslPropertiesGetArgs sslProperties) {
             return sslProperties(Output.of(sslProperties));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param type The type of the data source. See the [AWS Documentation](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateDataSource.html#QS-CreateDataSource-request-Type) for the complete list of valid values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the data source. See the [AWS Documentation](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateDataSource.html#QS-CreateDataSource-request-Type) for the complete list of valid values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param vpcConnectionProperties Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your underlying source. See VPC Connection Properties below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConnectionProperties(@Nullable Output<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
             $.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
 
+        /**
+         * @param vpcConnectionProperties Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your underlying source. See VPC Connection Properties below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConnectionProperties(DataSourceVpcConnectionPropertiesGetArgs vpcConnectionProperties) {
             return vpcConnectionProperties(Output.of(vpcConnectionProperties));
         }

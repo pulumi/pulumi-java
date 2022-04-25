@@ -27,6 +27,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The content of this item
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -38,6 +42,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Internally assigned unique id of the item definition.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The user-defined name of the item.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="overrideItem")
     private @Nullable Output<Boolean> overrideItem;
 
+    /**
+     * @return Flag indicating whether or not to force save an item. This allows overriding an item if it already exists.
+     * 
+     */
     public Optional<Output<Boolean>> overrideItem() {
         return Optional.ofNullable(this.overrideItem);
     }
@@ -71,6 +87,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
 
+    /**
+     * @return A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
+     * 
+     */
     public Optional<Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -82,6 +102,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -104,6 +132,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<Either<String,ItemScope>> scope;
 
+    /**
+     * @return Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     * 
+     */
     public Optional<Output<Either<String,ItemScope>>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -115,6 +147,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopePath", required=true)
     private Output<String> scopePath;
 
+    /**
+     * @return Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     * 
+     */
     public Output<String> scopePath() {
         return this.scopePath;
     }
@@ -126,6 +162,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,ItemType>> type;
 
+    /**
+     * @return Enum indicating the type of the Analytics item.
+     * 
+     */
     public Optional<Output<Either<String,ItemType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -163,108 +203,252 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AnalyticsItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The content of this item
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The content of this item
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param id Internally assigned unique id of the item definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Internally assigned unique id of the item definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The user-defined name of the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The user-defined name of the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param overrideItem Flag indicating whether or not to force save an item. This allows overriding an item if it already exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideItem(@Nullable Output<Boolean> overrideItem) {
             $.overrideItem = overrideItem;
             return this;
         }
 
+        /**
+         * @param overrideItem Flag indicating whether or not to force save an item. This allows overriding an item if it already exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideItem(Boolean overrideItem) {
             return overrideItem(Output.of(overrideItem));
         }
 
+        /**
+         * @param properties A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ApplicationInsightsComponentAnalyticsItemPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param scope Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<Either<String,ItemScope>> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Either<String,ItemScope> scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param scope Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Either.ofLeft(scope));
         }
 
+        /**
+         * @param scope Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(ItemScope scope) {
             return scope(Either.ofRight(scope));
         }
 
+        /**
+         * @param scopePath Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopePath(Output<String> scopePath) {
             $.scopePath = scopePath;
             return this;
         }
 
+        /**
+         * @param scopePath Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopePath(String scopePath) {
             return scopePath(Output.of(scopePath));
         }
 
+        /**
+         * @param type Enum indicating the type of the Analytics item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ItemType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Enum indicating the type of the Analytics item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ItemType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Enum indicating the type of the Analytics item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Enum indicating the type of the Analytics item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ItemType type) {
             return type(Either.ofRight(type));
         }

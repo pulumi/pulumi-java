@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListMediaServiceKeysResult {
     /**
-     * The primary authorization endpoint.
+     * @return The primary authorization endpoint.
      * 
      */
     private final @Nullable String primaryAuthEndpoint;
     /**
-     * The primary key for the Media Service resource.
+     * @return The primary key for the Media Service resource.
      * 
      */
     private final @Nullable String primaryKey;
     /**
-     * The authorization scope.
+     * @return The authorization scope.
      * 
      */
     private final @Nullable String scope;
     /**
-     * The secondary authorization endpoint.
+     * @return The secondary authorization endpoint.
      * 
      */
     private final @Nullable String secondaryAuthEndpoint;
     /**
-     * The secondary key for the Media Service resource.
+     * @return The secondary key for the Media Service resource.
      * 
      */
     private final @Nullable String secondaryKey;
@@ -52,37 +52,37 @@ public final class ListMediaServiceKeysResult {
     }
 
     /**
-     * The primary authorization endpoint.
+     * @return The primary authorization endpoint.
      * 
-    */
+     */
     public Optional<String> primaryAuthEndpoint() {
         return Optional.ofNullable(this.primaryAuthEndpoint);
     }
     /**
-     * The primary key for the Media Service resource.
+     * @return The primary key for the Media Service resource.
      * 
-    */
+     */
     public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
-     * The authorization scope.
+     * @return The authorization scope.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * The secondary authorization endpoint.
+     * @return The secondary authorization endpoint.
      * 
-    */
+     */
     public Optional<String> secondaryAuthEndpoint() {
         return Optional.ofNullable(this.secondaryAuthEndpoint);
     }
     /**
-     * The secondary key for the Media Service resource.
+     * @return The secondary key for the Media Service resource.
      * 
-    */
+     */
     public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

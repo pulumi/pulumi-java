@@ -24,6 +24,10 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="customAccount", required=true)
     private CustomAccountResponse customAccount;
 
+    /**
+     * @return Authentication using a custom account.
+     * 
+     */
     public CustomAccountResponse customAccount() {
         return this.customAccount;
     }
@@ -35,6 +39,10 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="googleAccount", required=true)
     private GoogleAccountResponse googleAccount;
 
+    /**
+     * @return Authentication using a Google account.
+     * 
+     */
     public GoogleAccountResponse googleAccount() {
         return this.googleAccount;
     }
@@ -64,11 +72,23 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
             $ = new AuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customAccount Authentication using a custom account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAccount(CustomAccountResponse customAccount) {
             $.customAccount = customAccount;
             return this;
         }
 
+        /**
+         * @param googleAccount Authentication using a Google account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleAccount(GoogleAccountResponse googleAccount) {
             $.googleAccount = googleAccount;
             return this;

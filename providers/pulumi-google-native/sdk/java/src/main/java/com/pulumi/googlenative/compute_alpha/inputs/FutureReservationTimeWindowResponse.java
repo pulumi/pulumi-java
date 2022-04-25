@@ -34,6 +34,10 @@ public final class FutureReservationTimeWindowResponse extends com.pulumi.resour
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of the Future Reservation. The start_time is an RFC3339 string.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -74,6 +78,12 @@ public final class FutureReservationTimeWindowResponse extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param startTime Start time of the Future Reservation. The start_time is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

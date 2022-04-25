@@ -27,6 +27,10 @@ public final class OpenIdConnectLoginArgs extends com.pulumi.resources.ResourceA
     @Import(name="nameClaimType")
     private @Nullable Output<String> nameClaimType;
 
+    /**
+     * @return The name of the claim that contains the users name.
+     * 
+     */
     public Optional<Output<String>> nameClaimType() {
         return Optional.ofNullable(this.nameClaimType);
     }
@@ -38,6 +42,10 @@ public final class OpenIdConnectLoginArgs extends com.pulumi.resources.ResourceA
     @Import(name="scopes")
     private @Nullable Output<List<String>> scopes;
 
+    /**
+     * @return A list of the scopes that should be requested while authenticating.
+     * 
+     */
     public Optional<Output<List<String>>> scopes() {
         return Optional.ofNullable(this.scopes);
     }
@@ -67,24 +75,54 @@ public final class OpenIdConnectLoginArgs extends com.pulumi.resources.ResourceA
             $ = new OpenIdConnectLoginArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nameClaimType The name of the claim that contains the users name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameClaimType(@Nullable Output<String> nameClaimType) {
             $.nameClaimType = nameClaimType;
             return this;
         }
 
+        /**
+         * @param nameClaimType The name of the claim that contains the users name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameClaimType(String nameClaimType) {
             return nameClaimType(Output.of(nameClaimType));
         }
 
+        /**
+         * @param scopes A list of the scopes that should be requested while authenticating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes A list of the scopes that should be requested while authenticating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param scopes A list of the scopes that should be requested while authenticating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }

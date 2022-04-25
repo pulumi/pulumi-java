@@ -24,6 +24,11 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs exte
     @Import(name="egressFrom")
     private @Nullable Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs> egressFrom;
 
+    /**
+     * @return Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs>> egressFrom() {
         return Optional.ofNullable(this.egressFrom);
     }
@@ -37,6 +42,12 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs exte
     @Import(name="egressTo")
     private @Nullable Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToGetArgs> egressTo;
 
+    /**
+     * @return Defines the conditions on the `ApiOperation` and destination resources that
+     * cause this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToGetArgs>> egressTo() {
         return Optional.ofNullable(this.egressTo);
     }
@@ -66,20 +77,50 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs exte
             $ = new ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressFrom Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFrom(@Nullable Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs> egressFrom) {
             $.egressFrom = egressFrom;
             return this;
         }
 
+        /**
+         * @param egressFrom Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFrom(ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs egressFrom) {
             return egressFrom(Output.of(egressFrom));
         }
 
+        /**
+         * @param egressTo Defines the conditions on the `ApiOperation` and destination resources that
+         * cause this `EgressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressTo(@Nullable Output<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToGetArgs> egressTo) {
             $.egressTo = egressTo;
             return this;
         }
 
+        /**
+         * @param egressTo Defines the conditions on the `ApiOperation` and destination resources that
+         * cause this `EgressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressTo(ServicePerimetersServicePerimeterSpecEgressPolicyEgressToGetArgs egressTo) {
             return egressTo(Output.of(egressTo));
         }

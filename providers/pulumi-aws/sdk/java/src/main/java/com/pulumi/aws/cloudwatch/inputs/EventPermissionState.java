@@ -23,6 +23,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -34,6 +38,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
     @Import(name="condition")
     private @Nullable Output<EventPermissionConditionGetArgs> condition;
 
+    /**
+     * @return Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+     * 
+     */
     public Optional<Output<EventPermissionConditionGetArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -45,6 +53,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
     @Import(name="eventBusName")
     private @Nullable Output<String> eventBusName;
 
+    /**
+     * @return The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+     * 
+     */
     public Optional<Output<String>> eventBusName() {
         return Optional.ofNullable(this.eventBusName);
     }
@@ -56,6 +68,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
     @Import(name="principal")
     private @Nullable Output<String> principal;
 
+    /**
+     * @return The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
+     * 
+     */
     public Optional<Output<String>> principal() {
         return Optional.ofNullable(this.principal);
     }
@@ -67,6 +83,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
     @Import(name="statementId")
     private @Nullable Output<String> statementId;
 
+    /**
+     * @return An identifier string for the external account that you are granting permissions to.
+     * 
+     */
     public Optional<Output<String>> statementId() {
         return Optional.ofNullable(this.statementId);
     }
@@ -99,47 +119,107 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
             $ = new EventPermissionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param condition Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<EventPermissionConditionGetArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(EventPermissionConditionGetArgs condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param eventBusName The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
             $.eventBusName = eventBusName;
             return this;
         }
 
+        /**
+         * @param eventBusName The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBusName(String eventBusName) {
             return eventBusName(Output.of(eventBusName));
         }
 
+        /**
+         * @param principal The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(@Nullable Output<String> principal) {
             $.principal = principal;
             return this;
         }
 
+        /**
+         * @param principal The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             return principal(Output.of(principal));
         }
 
+        /**
+         * @param statementId An identifier string for the external account that you are granting permissions to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementId(@Nullable Output<String> statementId) {
             $.statementId = statementId;
             return this;
         }
 
+        /**
+         * @param statementId An identifier string for the external account that you are granting permissions to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementId(String statementId) {
             return statementId(Output.of(statementId));
         }

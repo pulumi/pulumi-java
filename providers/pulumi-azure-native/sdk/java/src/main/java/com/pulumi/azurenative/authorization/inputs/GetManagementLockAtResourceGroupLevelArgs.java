@@ -19,6 +19,10 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
     @Import(name="lockName", required=true)
     private String lockName;
 
+    /**
+     * @return The name of the lock to get.
+     * 
+     */
     public String lockName() {
         return this.lockName;
     }
@@ -30,6 +34,10 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the locked resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
             $ = new GetManagementLockAtResourceGroupLevelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lockName The name of the lock to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockName(String lockName) {
             $.lockName = lockName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the locked resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

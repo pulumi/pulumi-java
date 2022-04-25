@@ -26,6 +26,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefix")
     private @Nullable String addressPrefix;
 
+    /**
+     * @return The destination CIDR to which the route applies.
+     * 
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -37,6 +41,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -48,6 +56,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hasBgpOverride")
     private @Nullable Boolean hasBgpOverride;
 
+    /**
+     * @return A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
+     * 
+     */
     public Optional<Boolean> hasBgpOverride() {
         return Optional.ofNullable(this.hasBgpOverride);
     }
@@ -59,6 +71,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -70,6 +86,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +101,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextHopIpAddress")
     private @Nullable String nextHopIpAddress;
 
+    /**
+     * @return The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+     * 
+     */
     public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
@@ -92,6 +116,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextHopType", required=true)
     private String nextHopType;
 
+    /**
+     * @return The type of Azure hop the packet should be sent to.
+     * 
+     */
     public String nextHopType() {
         return this.nextHopType;
     }
@@ -103,6 +131,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the route resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -114,6 +146,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -150,46 +186,100 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix The destination CIDR to which the route applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable String addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param hasBgpOverride A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
             $.hasBgpOverride = hasBgpOverride;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param nextHopIpAddress The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             $.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
+        /**
+         * @param nextHopType The type of Azure hop the packet should be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(String nextHopType) {
             $.nextHopType = nextHopType;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the route resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

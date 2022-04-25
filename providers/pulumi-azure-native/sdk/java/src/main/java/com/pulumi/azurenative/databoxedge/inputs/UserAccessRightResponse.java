@@ -23,6 +23,10 @@ public final class UserAccessRightResponse extends com.pulumi.resources.InvokeAr
     @Import(name="accessType", required=true)
     private String accessType;
 
+    /**
+     * @return Type of access to be allowed for the user.
+     * 
+     */
     public String accessType() {
         return this.accessType;
     }
@@ -34,6 +38,10 @@ public final class UserAccessRightResponse extends com.pulumi.resources.InvokeAr
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return User ID (already existing in the device).
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -63,11 +71,23 @@ public final class UserAccessRightResponse extends com.pulumi.resources.InvokeAr
             $ = new UserAccessRightResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessType Type of access to be allowed for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(String accessType) {
             $.accessType = accessType;
             return this;
         }
 
+        /**
+         * @param userId User ID (already existing in the device).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;

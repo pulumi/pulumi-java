@@ -31,6 +31,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiproduct")
     private @Nullable Output<String> apiproduct;
 
+    /**
+     * @return Name of the API product that the rate plan is associated with.
+     * 
+     */
     public Optional<Output<String>> apiproduct() {
         return Optional.ofNullable(this.apiproduct);
     }
@@ -49,6 +53,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingPeriod")
     private @Nullable Output<RatePlanBillingPeriod> billingPeriod;
 
+    /**
+     * @return Frequency at which the customer will be billed.
+     * 
+     */
     public Optional<Output<RatePlanBillingPeriod>> billingPeriod() {
         return Optional.ofNullable(this.billingPeriod);
     }
@@ -60,6 +68,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consumptionPricingRates")
     private @Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
 
+    /**
+     * @return API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1RateRangeArgs>>> consumptionPricingRates() {
         return Optional.ofNullable(this.consumptionPricingRates);
     }
@@ -71,6 +83,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consumptionPricingType")
     private @Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType;
 
+    /**
+     * @return Pricing model used for consumption-based charges.
+     * 
+     */
     public Optional<Output<RatePlanConsumptionPricingType>> consumptionPricingType() {
         return Optional.ofNullable(this.consumptionPricingType);
     }
@@ -82,6 +98,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="currencyCode")
     private @Nullable Output<String> currencyCode;
 
+    /**
+     * @return Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
+     * 
+     */
     public Optional<Output<String>> currencyCode() {
         return Optional.ofNullable(this.currencyCode);
     }
@@ -93,6 +113,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the rate plan.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -104,6 +128,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the rate plan.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -115,6 +143,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -126,6 +158,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedFeeFrequency")
     private @Nullable Output<Integer> fixedFeeFrequency;
 
+    /**
+     * @return Frequency at which the fixed fee is charged.
+     * 
+     */
     public Optional<Output<Integer>> fixedFeeFrequency() {
         return Optional.ofNullable(this.fixedFeeFrequency);
     }
@@ -137,6 +173,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedRecurringFee")
     private @Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee;
 
+    /**
+     * @return Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
+     * 
+     */
     public Optional<Output<GoogleTypeMoneyArgs>> fixedRecurringFee() {
         return Optional.ofNullable(this.fixedRecurringFee);
     }
@@ -155,6 +195,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revenueShareRates")
     private @Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
 
+    /**
+     * @return Details of the revenue sharing model.
+     * 
+     */
     public Optional<Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>>> revenueShareRates() {
         return Optional.ofNullable(this.revenueShareRates);
     }
@@ -166,6 +210,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revenueShareType")
     private @Nullable Output<RatePlanRevenueShareType> revenueShareType;
 
+    /**
+     * @return Method used to calculate the revenue that is shared with developers.
+     * 
+     */
     public Optional<Output<RatePlanRevenueShareType>> revenueShareType() {
         return Optional.ofNullable(this.revenueShareType);
     }
@@ -177,6 +225,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="setupFee")
     private @Nullable Output<GoogleTypeMoneyArgs> setupFee;
 
+    /**
+     * @return Initial, one-time fee paid when purchasing the API product.
+     * 
+     */
     public Optional<Output<GoogleTypeMoneyArgs>> setupFee() {
         return Optional.ofNullable(this.setupFee);
     }
@@ -188,6 +240,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Time when the rate plan becomes active in milliseconds since epoch.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -199,6 +255,10 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<RatePlanState> state;
 
+    /**
+     * @return Current state of the rate plan (draft or published).
+     * 
+     */
     public Optional<Output<RatePlanState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -243,11 +303,23 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RatePlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiproduct Name of the API product that the rate plan is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiproduct(@Nullable Output<String> apiproduct) {
             $.apiproduct = apiproduct;
             return this;
         }
 
+        /**
+         * @param apiproduct Name of the API product that the rate plan is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiproduct(String apiproduct) {
             return apiproduct(Output.of(apiproduct));
         }
@@ -261,87 +333,201 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
             return apiproductId(Output.of(apiproductId));
         }
 
+        /**
+         * @param billingPeriod Frequency at which the customer will be billed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingPeriod(@Nullable Output<RatePlanBillingPeriod> billingPeriod) {
             $.billingPeriod = billingPeriod;
             return this;
         }
 
+        /**
+         * @param billingPeriod Frequency at which the customer will be billed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingPeriod(RatePlanBillingPeriod billingPeriod) {
             return billingPeriod(Output.of(billingPeriod));
         }
 
+        /**
+         * @param consumptionPricingRates API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumptionPricingRates(@Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates) {
             $.consumptionPricingRates = consumptionPricingRates;
             return this;
         }
 
+        /**
+         * @param consumptionPricingRates API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumptionPricingRates(List<GoogleCloudApigeeV1RateRangeArgs> consumptionPricingRates) {
             return consumptionPricingRates(Output.of(consumptionPricingRates));
         }
 
+        /**
+         * @param consumptionPricingRates API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ &#34;start&#34;: 1, &#34;end&#34;: 100, &#34;fee&#34;: 75 }, { &#34;start&#34;: 101, &#34;end&#34;: 200, &#34;fee&#34;: 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumptionPricingRates(GoogleCloudApigeeV1RateRangeArgs... consumptionPricingRates) {
             return consumptionPricingRates(List.of(consumptionPricingRates));
         }
 
+        /**
+         * @param consumptionPricingType Pricing model used for consumption-based charges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumptionPricingType(@Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType) {
             $.consumptionPricingType = consumptionPricingType;
             return this;
         }
 
+        /**
+         * @param consumptionPricingType Pricing model used for consumption-based charges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumptionPricingType(RatePlanConsumptionPricingType consumptionPricingType) {
             return consumptionPricingType(Output.of(consumptionPricingType));
         }
 
+        /**
+         * @param currencyCode Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
             $.currencyCode = currencyCode;
             return this;
         }
 
+        /**
+         * @param currencyCode Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currencyCode(String currencyCode) {
             return currencyCode(Output.of(currencyCode));
         }
 
+        /**
+         * @param description Description of the rate plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the rate plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display name of the rate plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the rate plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param endTime Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param fixedFeeFrequency Frequency at which the fixed fee is charged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedFeeFrequency(@Nullable Output<Integer> fixedFeeFrequency) {
             $.fixedFeeFrequency = fixedFeeFrequency;
             return this;
         }
 
+        /**
+         * @param fixedFeeFrequency Frequency at which the fixed fee is charged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedFeeFrequency(Integer fixedFeeFrequency) {
             return fixedFeeFrequency(Output.of(fixedFeeFrequency));
         }
 
+        /**
+         * @param fixedRecurringFee Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedRecurringFee(@Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee) {
             $.fixedRecurringFee = fixedRecurringFee;
             return this;
         }
 
+        /**
+         * @param fixedRecurringFee Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedRecurringFee(GoogleTypeMoneyArgs fixedRecurringFee) {
             return fixedRecurringFee(Output.of(fixedRecurringFee));
         }
@@ -355,51 +541,117 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param revenueShareRates Details of the revenue sharing model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revenueShareRates(@Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates) {
             $.revenueShareRates = revenueShareRates;
             return this;
         }
 
+        /**
+         * @param revenueShareRates Details of the revenue sharing model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revenueShareRates(List<GoogleCloudApigeeV1RevenueShareRangeArgs> revenueShareRates) {
             return revenueShareRates(Output.of(revenueShareRates));
         }
 
+        /**
+         * @param revenueShareRates Details of the revenue sharing model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revenueShareRates(GoogleCloudApigeeV1RevenueShareRangeArgs... revenueShareRates) {
             return revenueShareRates(List.of(revenueShareRates));
         }
 
+        /**
+         * @param revenueShareType Method used to calculate the revenue that is shared with developers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revenueShareType(@Nullable Output<RatePlanRevenueShareType> revenueShareType) {
             $.revenueShareType = revenueShareType;
             return this;
         }
 
+        /**
+         * @param revenueShareType Method used to calculate the revenue that is shared with developers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revenueShareType(RatePlanRevenueShareType revenueShareType) {
             return revenueShareType(Output.of(revenueShareType));
         }
 
+        /**
+         * @param setupFee Initial, one-time fee paid when purchasing the API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setupFee(@Nullable Output<GoogleTypeMoneyArgs> setupFee) {
             $.setupFee = setupFee;
             return this;
         }
 
+        /**
+         * @param setupFee Initial, one-time fee paid when purchasing the API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setupFee(GoogleTypeMoneyArgs setupFee) {
             return setupFee(Output.of(setupFee));
         }
 
+        /**
+         * @param startTime Time when the rate plan becomes active in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Time when the rate plan becomes active in milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param state Current state of the rate plan (draft or published).
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<RatePlanState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Current state of the rate plan (draft or published).
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(RatePlanState state) {
             return state(Output.of(state));
         }

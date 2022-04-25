@@ -29,6 +29,10 @@ public final class GatewayCorsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="allowCredentials")
     private @Nullable Output<Boolean> allowCredentials;
 
+    /**
+     * @return Whether user credentials are supported on cross-site requests. Valid values: `true`, `false`.
+     * 
+     */
     public Optional<Output<Boolean>> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
@@ -40,6 +44,10 @@ public final class GatewayCorsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="allowedHeaders")
     private @Nullable Output<List<String>> allowedHeaders;
 
+    /**
+     * @return Allowed headers in cross-site requests. The special value `*` allows actual requests to send any header.
+     * 
+     */
     public Optional<Output<List<String>>> allowedHeaders() {
         return Optional.ofNullable(this.allowedHeaders);
     }
@@ -51,6 +59,10 @@ public final class GatewayCorsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="allowedMethods")
     private @Nullable Output<List<String>> allowedMethods;
 
+    /**
+     * @return Allowed HTTP methods on cross-site requests. The special value `*` allows all methods. If not set, `GET` and `HEAD` are allowed by default.
+     * 
+     */
     public Optional<Output<List<String>>> allowedMethods() {
         return Optional.ofNullable(this.allowedMethods);
     }
@@ -62,6 +74,10 @@ public final class GatewayCorsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="allowedOrigins")
     private @Nullable Output<List<String>> allowedOrigins;
 
+    /**
+     * @return Allowed origins to make cross-site requests. The special value `*` allows all domains.
+     * 
+     */
     public Optional<Output<List<String>>> allowedOrigins() {
         return Optional.ofNullable(this.allowedOrigins);
     }
@@ -73,6 +89,10 @@ public final class GatewayCorsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="exposedHeaders")
     private @Nullable Output<List<String>> exposedHeaders;
 
+    /**
+     * @return HTTP response headers to expose for cross-site requests.
+     * 
+     */
     public Optional<Output<List<String>>> exposedHeaders() {
         return Optional.ofNullable(this.exposedHeaders);
     }
@@ -84,6 +104,10 @@ public final class GatewayCorsPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="maxAge")
     private @Nullable Output<Integer> maxAge;
 
+    /**
+     * @return How long, in seconds, the response from a pre-flight request can be cached by clients.
+     * 
+     */
     public Optional<Output<Integer>> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
@@ -117,72 +141,168 @@ public final class GatewayCorsPropertiesArgs extends com.pulumi.resources.Resour
             $ = new GatewayCorsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCredentials Whether user credentials are supported on cross-site requests. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(@Nullable Output<Boolean> allowCredentials) {
             $.allowCredentials = allowCredentials;
             return this;
         }
 
+        /**
+         * @param allowCredentials Whether user credentials are supported on cross-site requests. Valid values: `true`, `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(Boolean allowCredentials) {
             return allowCredentials(Output.of(allowCredentials));
         }
 
+        /**
+         * @param allowedHeaders Allowed headers in cross-site requests. The special value `*` allows actual requests to send any header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(@Nullable Output<List<String>> allowedHeaders) {
             $.allowedHeaders = allowedHeaders;
             return this;
         }
 
+        /**
+         * @param allowedHeaders Allowed headers in cross-site requests. The special value `*` allows actual requests to send any header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(List<String> allowedHeaders) {
             return allowedHeaders(Output.of(allowedHeaders));
         }
 
+        /**
+         * @param allowedHeaders Allowed headers in cross-site requests. The special value `*` allows actual requests to send any header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(String... allowedHeaders) {
             return allowedHeaders(List.of(allowedHeaders));
         }
 
+        /**
+         * @param allowedMethods Allowed HTTP methods on cross-site requests. The special value `*` allows all methods. If not set, `GET` and `HEAD` are allowed by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(@Nullable Output<List<String>> allowedMethods) {
             $.allowedMethods = allowedMethods;
             return this;
         }
 
+        /**
+         * @param allowedMethods Allowed HTTP methods on cross-site requests. The special value `*` allows all methods. If not set, `GET` and `HEAD` are allowed by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(List<String> allowedMethods) {
             return allowedMethods(Output.of(allowedMethods));
         }
 
+        /**
+         * @param allowedMethods Allowed HTTP methods on cross-site requests. The special value `*` allows all methods. If not set, `GET` and `HEAD` are allowed by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(String... allowedMethods) {
             return allowedMethods(List.of(allowedMethods));
         }
 
+        /**
+         * @param allowedOrigins Allowed origins to make cross-site requests. The special value `*` allows all domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
             $.allowedOrigins = allowedOrigins;
             return this;
         }
 
+        /**
+         * @param allowedOrigins Allowed origins to make cross-site requests. The special value `*` allows all domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(List<String> allowedOrigins) {
             return allowedOrigins(Output.of(allowedOrigins));
         }
 
+        /**
+         * @param allowedOrigins Allowed origins to make cross-site requests. The special value `*` allows all domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
 
+        /**
+         * @param exposedHeaders HTTP response headers to expose for cross-site requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(@Nullable Output<List<String>> exposedHeaders) {
             $.exposedHeaders = exposedHeaders;
             return this;
         }
 
+        /**
+         * @param exposedHeaders HTTP response headers to expose for cross-site requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(List<String> exposedHeaders) {
             return exposedHeaders(Output.of(exposedHeaders));
         }
 
+        /**
+         * @param exposedHeaders HTTP response headers to expose for cross-site requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(String... exposedHeaders) {
             return exposedHeaders(List.of(exposedHeaders));
         }
 
+        /**
+         * @param maxAge How long, in seconds, the response from a pre-flight request can be cached by clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(@Nullable Output<Integer> maxAge) {
             $.maxAge = maxAge;
             return this;
         }
 
+        /**
+         * @param maxAge How long, in seconds, the response from a pre-flight request can be cached by clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(Integer maxAge) {
             return maxAge(Output.of(maxAge));
         }

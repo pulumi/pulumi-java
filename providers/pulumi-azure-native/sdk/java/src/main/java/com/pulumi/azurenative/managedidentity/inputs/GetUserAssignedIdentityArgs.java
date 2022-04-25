@@ -19,6 +19,10 @@ public final class GetUserAssignedIdentityArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Resource Group to which the identity belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetUserAssignedIdentityArgs extends com.pulumi.resources.Invo
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the identity resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -59,11 +67,23 @@ public final class GetUserAssignedIdentityArgs extends com.pulumi.resources.Invo
             $ = new GetUserAssignedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the identity belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the identity resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

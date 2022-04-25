@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse {
     /**
-     * Migration error
+     * @return Migration error
      * 
      */
     private final ReportableExceptionResponse error;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;ErrorOutput&#39;.
      * 
      */
@@ -38,24 +38,24 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse {
     }
 
     /**
-     * Migration error
+     * @return Migration error
      * 
-    */
+     */
     public ReportableExceptionResponse error() {
         return this.error;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;ErrorOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }

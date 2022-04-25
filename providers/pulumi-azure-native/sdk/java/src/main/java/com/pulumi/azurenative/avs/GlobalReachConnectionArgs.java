@@ -22,6 +22,10 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="authorizationKey")
     private @Nullable Output<String> authorizationKey;
 
+    /**
+     * @return Authorization key from the peer express route used for the global reach connection
+     * 
+     */
     public Optional<Output<String>> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
@@ -33,6 +37,10 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="globalReachConnectionName")
     private @Nullable Output<String> globalReachConnectionName;
 
+    /**
+     * @return Name of the global reach connection in the private cloud
+     * 
+     */
     public Optional<Output<String>> globalReachConnectionName() {
         return Optional.ofNullable(this.globalReachConnectionName);
     }
@@ -44,6 +52,10 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="peerExpressRouteCircuit")
     private @Nullable Output<String> peerExpressRouteCircuit;
 
+    /**
+     * @return Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+     * 
+     */
     public Optional<Output<String>> peerExpressRouteCircuit() {
         return Optional.ofNullable(this.peerExpressRouteCircuit);
     }
@@ -55,6 +67,10 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return The name of the private cloud.
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -66,6 +82,10 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -98,47 +118,107 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
             $ = new GlobalReachConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationKey Authorization key from the peer express route used for the global reach connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
             $.authorizationKey = authorizationKey;
             return this;
         }
 
+        /**
+         * @param authorizationKey Authorization key from the peer express route used for the global reach connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(String authorizationKey) {
             return authorizationKey(Output.of(authorizationKey));
         }
 
+        /**
+         * @param globalReachConnectionName Name of the global reach connection in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReachConnectionName(@Nullable Output<String> globalReachConnectionName) {
             $.globalReachConnectionName = globalReachConnectionName;
             return this;
         }
 
+        /**
+         * @param globalReachConnectionName Name of the global reach connection in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalReachConnectionName(String globalReachConnectionName) {
             return globalReachConnectionName(Output.of(globalReachConnectionName));
         }
 
+        /**
+         * @param peerExpressRouteCircuit Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerExpressRouteCircuit(@Nullable Output<String> peerExpressRouteCircuit) {
             $.peerExpressRouteCircuit = peerExpressRouteCircuit;
             return this;
         }
 
+        /**
+         * @param peerExpressRouteCircuit Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerExpressRouteCircuit(String peerExpressRouteCircuit) {
             return peerExpressRouteCircuit(Output.of(peerExpressRouteCircuit));
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

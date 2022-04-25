@@ -27,6 +27,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessDirection")
     private @Nullable String accessDirection;
 
+    /**
+     * @return Access Direction for Protocol of the Instance(inbound/outbound).
+     * 
+     */
     public Optional<String> accessDirection() {
         return Optional.ofNullable(this.accessDirection);
     }
@@ -38,6 +42,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessFrom")
     private @Nullable String accessFrom;
 
+    /**
+     * @return Access From Protocol of the Instance.
+     * 
+     */
     public Optional<String> accessFrom() {
         return Optional.ofNullable(this.accessFrom);
     }
@@ -49,6 +57,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessType")
     private @Nullable String accessType;
 
+    /**
+     * @return Access Type Protocol of the Instance.
+     * 
+     */
     public Optional<String> accessType() {
         return Optional.ofNullable(this.accessType);
     }
@@ -74,6 +86,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="commonName")
     private @Nullable String commonName;
 
+    /**
+     * @return CommonName for Protocol of the Instance.
+     * 
+     */
     public Optional<String> commonName() {
         return Optional.ofNullable(this.commonName);
     }
@@ -85,6 +101,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="fromPort")
     private @Nullable Integer fromPort;
 
+    /**
+     * @return From Port of the Instance.
+     * 
+     */
     public Optional<Integer> fromPort() {
         return Optional.ofNullable(this.fromPort);
     }
@@ -103,6 +123,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return Port Protocol of the Instance.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -114,6 +138,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
     @Import(name="toPort")
     private @Nullable Integer toPort;
 
+    /**
+     * @return To Port of the Instance.
+     * 
+     */
     public Optional<Integer> toPort() {
         return Optional.ofNullable(this.toPort);
     }
@@ -151,16 +179,34 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
             $ = new InstancePort(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessDirection Access Direction for Protocol of the Instance(inbound/outbound).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessDirection(@Nullable String accessDirection) {
             $.accessDirection = accessDirection;
             return this;
         }
 
+        /**
+         * @param accessFrom Access From Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessFrom(@Nullable String accessFrom) {
             $.accessFrom = accessFrom;
             return this;
         }
 
+        /**
+         * @param accessType Access Type Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessType(@Nullable String accessType) {
             $.accessType = accessType;
             return this;
@@ -184,11 +230,23 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
             return cidrs(List.of(cidrs));
         }
 
+        /**
+         * @param commonName CommonName for Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(@Nullable String commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param fromPort From Port of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(@Nullable Integer fromPort) {
             $.fromPort = fromPort;
             return this;
@@ -203,11 +261,23 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
             return ipv6Cidrs(List.of(ipv6Cidrs));
         }
 
+        /**
+         * @param protocol Port Protocol of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param toPort To Port of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(@Nullable Integer toPort) {
             $.toPort = toPort;
             return this;

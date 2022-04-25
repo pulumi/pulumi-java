@@ -13,37 +13,37 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1FormParameterResponse {
     /**
-     * The default value of an optional parameter. If the parameter is required, the default value will be ignored.
+     * @return The default value of an optional parameter. If the parameter is required, the default value will be ignored.
      * 
      */
     private final Object defaultValue;
     /**
-     * The human-readable name of the parameter, unique within the form.
+     * @return The human-readable name of the parameter, unique within the form.
      * 
      */
     private final String displayName;
     /**
-     * The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
+     * @return The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
      * 
      */
     private final String entityType;
     /**
-     * Defines fill behavior for the parameter.
+     * @return Defines fill behavior for the parameter.
      * 
      */
     private final GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse fillBehavior;
     /**
-     * Indicates whether the parameter represents a list of values.
+     * @return Indicates whether the parameter represents a list of values.
      * 
      */
     private final Boolean isList;
     /**
-     * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+     * @return Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
      */
     private final Boolean redact;
     /**
-     * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.
+     * @return Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.
      * 
      */
     private final Boolean required;
@@ -67,51 +67,51 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterResponse {
     }
 
     /**
-     * The default value of an optional parameter. If the parameter is required, the default value will be ignored.
+     * @return The default value of an optional parameter. If the parameter is required, the default value will be ignored.
      * 
-    */
+     */
     public Object defaultValue() {
         return this.defaultValue;
     }
     /**
-     * The human-readable name of the parameter, unique within the form.
+     * @return The human-readable name of the parameter, unique within the form.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
+     * @return The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
      * 
-    */
+     */
     public String entityType() {
         return this.entityType;
     }
     /**
-     * Defines fill behavior for the parameter.
+     * @return Defines fill behavior for the parameter.
      * 
-    */
+     */
     public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse fillBehavior() {
         return this.fillBehavior;
     }
     /**
-     * Indicates whether the parameter represents a list of values.
+     * @return Indicates whether the parameter represents a list of values.
      * 
-    */
+     */
     public Boolean isList() {
         return this.isList;
     }
     /**
-     * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+     * @return Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
-    */
+     */
     public Boolean redact() {
         return this.redact;
     }
     /**
-     * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.
+     * @return Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.
      * 
-    */
+     */
     public Boolean required() {
         return this.required;
     }

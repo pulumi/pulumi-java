@@ -23,6 +23,10 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the reservation.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -35,6 +39,11 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -46,6 +55,10 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region of the pubsub lite reservation.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -59,6 +72,12 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="throughputCapacity", required=true)
     private Output<Integer> throughputCapacity;
 
+    /**
+     * @return The reserved throughput capacity. Every unit of throughput capacity is
+     * equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
+     * messages.
+     * 
+     */
     public Output<Integer> throughputCapacity() {
         return this.throughputCapacity;
     }
@@ -90,38 +109,92 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
             $ = new LiteReservationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region of the pubsub lite reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region of the pubsub lite reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param throughputCapacity The reserved throughput capacity. Every unit of throughput capacity is
+         * equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
+         * messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputCapacity(Output<Integer> throughputCapacity) {
             $.throughputCapacity = throughputCapacity;
             return this;
         }
 
+        /**
+         * @param throughputCapacity The reserved throughput capacity. Every unit of throughput capacity is
+         * equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
+         * messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputCapacity(Integer throughputCapacity) {
             return throughputCapacity(Output.of(throughputCapacity));
         }

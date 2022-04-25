@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class OSPolicyResourcePackageResourceZypperResponse {
     /**
-     * Package name.
+     * @return Package name.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class OSPolicyResourcePackageResourceZypperResponse {
     }
 
     /**
-     * Package name.
+     * @return Package name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

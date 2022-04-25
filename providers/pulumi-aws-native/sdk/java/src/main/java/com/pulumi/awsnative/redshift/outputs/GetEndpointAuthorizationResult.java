@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEndpointAuthorizationResult {
     /**
-     * Indicates whether all VPCs in the grantee account are allowed access to the cluster.
+     * @return Indicates whether all VPCs in the grantee account are allowed access to the cluster.
      * 
      */
     private final @Nullable Boolean allowedAllVPCs;
     /**
-     * The VPCs allowed access to the cluster.
+     * @return The VPCs allowed access to the cluster.
      * 
      */
     private final @Nullable List<String> allowedVPCs;
     /**
-     * The time (UTC) when the authorization was created.
+     * @return The time (UTC) when the authorization was created.
      * 
      */
     private final @Nullable String authorizeTime;
     /**
-     * The status of the cluster.
+     * @return The status of the cluster.
      * 
      */
     private final @Nullable String clusterStatus;
     /**
-     * The number of Redshift-managed VPC endpoints created for the authorization.
+     * @return The number of Redshift-managed VPC endpoints created for the authorization.
      * 
      */
     private final @Nullable Integer endpointCount;
     /**
-     * The AWS account ID of the grantee of the cluster.
+     * @return The AWS account ID of the grantee of the cluster.
      * 
      */
     private final @Nullable String grantee;
     /**
-     * The AWS account ID of the cluster owner.
+     * @return The AWS account ID of the cluster owner.
      * 
      */
     private final @Nullable String grantor;
     /**
-     * The status of the authorization action.
+     * @return The status of the authorization action.
      * 
      */
     private final @Nullable String status;
     /**
-     * The virtual private cloud (VPC) identifiers to grant or revoke access to.
+     * @return The virtual private cloud (VPC) identifiers to grant or revoke access to.
      * 
      */
     private final @Nullable List<String> vpcIds;
@@ -83,65 +83,65 @@ public final class GetEndpointAuthorizationResult {
     }
 
     /**
-     * Indicates whether all VPCs in the grantee account are allowed access to the cluster.
+     * @return Indicates whether all VPCs in the grantee account are allowed access to the cluster.
      * 
-    */
+     */
     public Optional<Boolean> allowedAllVPCs() {
         return Optional.ofNullable(this.allowedAllVPCs);
     }
     /**
-     * The VPCs allowed access to the cluster.
+     * @return The VPCs allowed access to the cluster.
      * 
-    */
+     */
     public List<String> allowedVPCs() {
         return this.allowedVPCs == null ? List.of() : this.allowedVPCs;
     }
     /**
-     * The time (UTC) when the authorization was created.
+     * @return The time (UTC) when the authorization was created.
      * 
-    */
+     */
     public Optional<String> authorizeTime() {
         return Optional.ofNullable(this.authorizeTime);
     }
     /**
-     * The status of the cluster.
+     * @return The status of the cluster.
      * 
-    */
+     */
     public Optional<String> clusterStatus() {
         return Optional.ofNullable(this.clusterStatus);
     }
     /**
-     * The number of Redshift-managed VPC endpoints created for the authorization.
+     * @return The number of Redshift-managed VPC endpoints created for the authorization.
      * 
-    */
+     */
     public Optional<Integer> endpointCount() {
         return Optional.ofNullable(this.endpointCount);
     }
     /**
-     * The AWS account ID of the grantee of the cluster.
+     * @return The AWS account ID of the grantee of the cluster.
      * 
-    */
+     */
     public Optional<String> grantee() {
         return Optional.ofNullable(this.grantee);
     }
     /**
-     * The AWS account ID of the cluster owner.
+     * @return The AWS account ID of the cluster owner.
      * 
-    */
+     */
     public Optional<String> grantor() {
         return Optional.ofNullable(this.grantor);
     }
     /**
-     * The status of the authorization action.
+     * @return The status of the authorization action.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The virtual private cloud (VPC) identifiers to grant or revoke access to.
+     * @return The virtual private cloud (VPC) identifiers to grant or revoke access to.
      * 
-    */
+     */
     public List<String> vpcIds() {
         return this.vpcIds == null ? List.of() : this.vpcIds;
     }

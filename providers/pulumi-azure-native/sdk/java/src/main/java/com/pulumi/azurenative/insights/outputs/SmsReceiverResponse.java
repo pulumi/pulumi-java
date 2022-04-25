@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class SmsReceiverResponse {
     /**
-     * The country code of the SMS receiver.
+     * @return The country code of the SMS receiver.
      * 
      */
     private final String countryCode;
     /**
-     * The name of the SMS receiver. Names must be unique across all receivers within an action group.
+     * @return The name of the SMS receiver. Names must be unique across all receivers within an action group.
      * 
      */
     private final String name;
     /**
-     * The phone number of the SMS receiver.
+     * @return The phone number of the SMS receiver.
      * 
      */
     private final String phoneNumber;
     /**
-     * The status of the receiver.
+     * @return The status of the receiver.
      * 
      */
     private final String status;
@@ -43,30 +43,30 @@ public final class SmsReceiverResponse {
     }
 
     /**
-     * The country code of the SMS receiver.
+     * @return The country code of the SMS receiver.
      * 
-    */
+     */
     public String countryCode() {
         return this.countryCode;
     }
     /**
-     * The name of the SMS receiver. Names must be unique across all receivers within an action group.
+     * @return The name of the SMS receiver. Names must be unique across all receivers within an action group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The phone number of the SMS receiver.
+     * @return The phone number of the SMS receiver.
      * 
-    */
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
     /**
-     * The status of the receiver.
+     * @return The status of the receiver.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

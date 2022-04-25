@@ -26,6 +26,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication", required=true)
     private Output<String> authentication;
 
+    /**
+     * @return The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
+     * 
+     */
     public Output<String> authentication() {
         return this.authentication;
     }
@@ -37,6 +41,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationConfiguration")
     private @Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
 
+    /**
+     * @return An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
+     * 
+     */
     public Optional<Output<WebhookAuthenticationConfigurationArgs>> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
@@ -48,6 +56,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filters", required=true)
     private Output<List<WebhookFilterArgs>> filters;
 
+    /**
+     * @return One or more `filter` blocks. Filter blocks are documented below.
+     * 
+     */
     public Output<List<WebhookFilterArgs>> filters() {
         return this.filters;
     }
@@ -59,6 +71,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the webhook.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -81,6 +101,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetAction", required=true)
     private Output<String> targetAction;
 
+    /**
+     * @return The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
+     * 
+     */
     public Output<String> targetAction() {
         return this.targetAction;
     }
@@ -92,6 +116,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetPipeline", required=true)
     private Output<String> targetPipeline;
 
+    /**
+     * @return The name of the pipeline.
+     * 
+     */
     public Output<String> targetPipeline() {
         return this.targetPipeline;
     }
@@ -126,69 +154,159 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Output<String> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(String authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param authenticationConfiguration An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(@Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration) {
             $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
+        /**
+         * @param authenticationConfiguration An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(WebhookAuthenticationConfigurationArgs authenticationConfiguration) {
             return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
 
+        /**
+         * @param filters One or more `filter` blocks. Filter blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(Output<List<WebhookFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more `filter` blocks. Filter blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<WebhookFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param filters One or more `filter` blocks. Filter blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(WebhookFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param name The name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetAction The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAction(Output<String> targetAction) {
             $.targetAction = targetAction;
             return this;
         }
 
+        /**
+         * @param targetAction The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAction(String targetAction) {
             return targetAction(Output.of(targetAction));
         }
 
+        /**
+         * @param targetPipeline The name of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPipeline(Output<String> targetPipeline) {
             $.targetPipeline = targetPipeline;
             return this;
         }
 
+        /**
+         * @param targetPipeline The name of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPipeline(String targetPipeline) {
             return targetPipeline(Output.of(targetPipeline));
         }

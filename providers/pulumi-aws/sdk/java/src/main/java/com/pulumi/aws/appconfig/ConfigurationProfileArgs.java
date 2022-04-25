@@ -25,6 +25,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="applicationId", required=true)
     private Output<String> applicationId;
 
+    /**
+     * @return The application ID. Must be between 4 and 7 characters in length.
+     * 
+     */
     public Output<String> applicationId() {
         return this.applicationId;
     }
@@ -36,6 +40,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the configuration profile. Can be at most 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="locationUri", required=true)
     private Output<String> locationUri;
 
+    /**
+     * @return A URI to locate the configuration. You can specify the AWS AppConfig hosted configuration store, Systems Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store, specify `hosted`. For an SSM document, specify either the document name in the format `ssm-document://&lt;Document_name&gt;` or the Amazon Resource Name (ARN). For a parameter, specify either the parameter name in the format `ssm-parameter://&lt;Parameter_name&gt;` or the ARN. For an Amazon S3 object, specify the URI in the following format: `s3://&lt;bucket&gt;/&lt;objectKey&gt;`.
+     * 
+     */
     public Output<String> locationUri() {
         return this.locationUri;
     }
@@ -58,6 +70,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the configuration profile. Must be between 1 and 64 characters in length.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="retrievalRoleArn")
     private @Nullable Output<String> retrievalRoleArn;
 
+    /**
+     * @return The ARN of an IAM role with permission to access the configuration at the specified `location_uri`. A retrieval role ARN is not required for configurations stored in the AWS AppConfig `hosted` configuration store. It is required for all other sources that store your configuration.
+     * 
+     */
     public Optional<Output<String>> retrievalRoleArn() {
         return Optional.ofNullable(this.retrievalRoleArn);
     }
@@ -80,6 +100,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     @Import(name="validators")
     private @Nullable Output<List<ConfigurationProfileValidatorArgs>> validators;
 
+    /**
+     * @return A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
+     * 
+     */
     public Optional<Output<List<ConfigurationProfileValidatorArgs>>> validators() {
         return Optional.ofNullable(this.validators);
     }
@@ -125,69 +153,159 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
             $ = new ConfigurationProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The application ID. Must be between 4 and 7 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param description The description of the configuration profile. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the configuration profile. Can be at most 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param locationUri A URI to locate the configuration. You can specify the AWS AppConfig hosted configuration store, Systems Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store, specify `hosted`. For an SSM document, specify either the document name in the format `ssm-document://&lt;Document_name&gt;` or the Amazon Resource Name (ARN). For a parameter, specify either the parameter name in the format `ssm-parameter://&lt;Parameter_name&gt;` or the ARN. For an Amazon S3 object, specify the URI in the following format: `s3://&lt;bucket&gt;/&lt;objectKey&gt;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationUri(Output<String> locationUri) {
             $.locationUri = locationUri;
             return this;
         }
 
+        /**
+         * @param locationUri A URI to locate the configuration. You can specify the AWS AppConfig hosted configuration store, Systems Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store, specify `hosted`. For an SSM document, specify either the document name in the format `ssm-document://&lt;Document_name&gt;` or the Amazon Resource Name (ARN). For a parameter, specify either the parameter name in the format `ssm-parameter://&lt;Parameter_name&gt;` or the ARN. For an Amazon S3 object, specify the URI in the following format: `s3://&lt;bucket&gt;/&lt;objectKey&gt;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationUri(String locationUri) {
             return locationUri(Output.of(locationUri));
         }
 
+        /**
+         * @param name The name for the configuration profile. Must be between 1 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the configuration profile. Must be between 1 and 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param retrievalRoleArn The ARN of an IAM role with permission to access the configuration at the specified `location_uri`. A retrieval role ARN is not required for configurations stored in the AWS AppConfig `hosted` configuration store. It is required for all other sources that store your configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retrievalRoleArn(@Nullable Output<String> retrievalRoleArn) {
             $.retrievalRoleArn = retrievalRoleArn;
             return this;
         }
 
+        /**
+         * @param retrievalRoleArn The ARN of an IAM role with permission to access the configuration at the specified `location_uri`. A retrieval role ARN is not required for configurations stored in the AWS AppConfig `hosted` configuration store. It is required for all other sources that store your configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retrievalRoleArn(String retrievalRoleArn) {
             return retrievalRoleArn(Output.of(retrievalRoleArn));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param validators A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorArgs>> validators) {
             $.validators = validators;
             return this;
         }
 
+        /**
+         * @param validators A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validators(List<ConfigurationProfileValidatorArgs> validators) {
             return validators(Output.of(validators));
         }
 
+        /**
+         * @param validators A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validators(ConfigurationProfileValidatorArgs... validators) {
             return validators(List.of(validators));
         }

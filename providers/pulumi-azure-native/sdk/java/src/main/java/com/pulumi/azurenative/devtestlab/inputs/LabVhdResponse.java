@@ -25,6 +25,10 @@ public final class LabVhdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The URI to the VHD.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class LabVhdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LabVhdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The URI to the VHD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

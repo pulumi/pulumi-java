@@ -28,6 +28,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="bootStrapConfigurationBlobs")
     private @Nullable Output<List<String>> bootStrapConfigurationBlobs;
 
+    /**
+     * @return BootStrapConfigurationBlobs storage URLs.
+     * 
+     */
     public Optional<Output<List<String>>> bootStrapConfigurationBlobs() {
         return Optional.ofNullable(this.bootStrapConfigurationBlobs);
     }
@@ -39,6 +43,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="cloudInitConfiguration")
     private @Nullable Output<String> cloudInitConfiguration;
 
+    /**
+     * @return CloudInitConfiguration string in plain text.
+     * 
+     */
     public Optional<Output<String>> cloudInitConfiguration() {
         return Optional.ofNullable(this.cloudInitConfiguration);
     }
@@ -50,6 +58,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="cloudInitConfigurationBlobs")
     private @Nullable Output<List<String>> cloudInitConfigurationBlobs;
 
+    /**
+     * @return CloudInitConfigurationBlob storage URLs.
+     * 
+     */
     public Optional<Output<List<String>>> cloudInitConfigurationBlobs() {
         return Optional.ofNullable(this.cloudInitConfigurationBlobs);
     }
@@ -61,6 +73,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -72,6 +88,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return The service principal that has read access to cloud-init and config blob.
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -83,6 +103,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -94,6 +118,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="networkVirtualApplianceName")
     private @Nullable Output<String> networkVirtualApplianceName;
 
+    /**
+     * @return The name of Network Virtual Appliance.
+     * 
+     */
     public Optional<Output<String>> networkVirtualApplianceName() {
         return Optional.ofNullable(this.networkVirtualApplianceName);
     }
@@ -105,6 +133,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="nvaSku")
     private @Nullable Output<VirtualApplianceSkuPropertiesArgs> nvaSku;
 
+    /**
+     * @return Network Virtual Appliance SKU.
+     * 
+     */
     public Optional<Output<VirtualApplianceSkuPropertiesArgs>> nvaSku() {
         return Optional.ofNullable(this.nvaSku);
     }
@@ -116,6 +148,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -127,6 +163,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -138,6 +178,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="virtualApplianceAsn")
     private @Nullable Output<Double> virtualApplianceAsn;
 
+    /**
+     * @return VirtualAppliance ASN.
+     * 
+     */
     public Optional<Output<Double>> virtualApplianceAsn() {
         return Optional.ofNullable(this.virtualApplianceAsn);
     }
@@ -149,6 +193,10 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
     @Import(name="virtualHub")
     private @Nullable Output<SubResourceArgs> virtualHub;
 
+    /**
+     * @return The Virtual Hub where Network Virtual Appliance is being deployed.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
@@ -188,118 +236,274 @@ public final class NetworkVirtualApplianceArgs extends com.pulumi.resources.Reso
             $ = new NetworkVirtualApplianceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootStrapConfigurationBlobs BootStrapConfigurationBlobs storage URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootStrapConfigurationBlobs(@Nullable Output<List<String>> bootStrapConfigurationBlobs) {
             $.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
             return this;
         }
 
+        /**
+         * @param bootStrapConfigurationBlobs BootStrapConfigurationBlobs storage URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootStrapConfigurationBlobs(List<String> bootStrapConfigurationBlobs) {
             return bootStrapConfigurationBlobs(Output.of(bootStrapConfigurationBlobs));
         }
 
+        /**
+         * @param bootStrapConfigurationBlobs BootStrapConfigurationBlobs storage URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootStrapConfigurationBlobs(String... bootStrapConfigurationBlobs) {
             return bootStrapConfigurationBlobs(List.of(bootStrapConfigurationBlobs));
         }
 
+        /**
+         * @param cloudInitConfiguration CloudInitConfiguration string in plain text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudInitConfiguration(@Nullable Output<String> cloudInitConfiguration) {
             $.cloudInitConfiguration = cloudInitConfiguration;
             return this;
         }
 
+        /**
+         * @param cloudInitConfiguration CloudInitConfiguration string in plain text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudInitConfiguration(String cloudInitConfiguration) {
             return cloudInitConfiguration(Output.of(cloudInitConfiguration));
         }
 
+        /**
+         * @param cloudInitConfigurationBlobs CloudInitConfigurationBlob storage URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudInitConfigurationBlobs(@Nullable Output<List<String>> cloudInitConfigurationBlobs) {
             $.cloudInitConfigurationBlobs = cloudInitConfigurationBlobs;
             return this;
         }
 
+        /**
+         * @param cloudInitConfigurationBlobs CloudInitConfigurationBlob storage URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudInitConfigurationBlobs(List<String> cloudInitConfigurationBlobs) {
             return cloudInitConfigurationBlobs(Output.of(cloudInitConfigurationBlobs));
         }
 
+        /**
+         * @param cloudInitConfigurationBlobs CloudInitConfigurationBlob storage URLs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudInitConfigurationBlobs(String... cloudInitConfigurationBlobs) {
             return cloudInitConfigurationBlobs(List.of(cloudInitConfigurationBlobs));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param identity The service principal that has read access to cloud-init and config blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The service principal that has read access to cloud-init and config blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkVirtualApplianceName The name of Network Virtual Appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkVirtualApplianceName(@Nullable Output<String> networkVirtualApplianceName) {
             $.networkVirtualApplianceName = networkVirtualApplianceName;
             return this;
         }
 
+        /**
+         * @param networkVirtualApplianceName The name of Network Virtual Appliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
             return networkVirtualApplianceName(Output.of(networkVirtualApplianceName));
         }
 
+        /**
+         * @param nvaSku Network Virtual Appliance SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nvaSku(@Nullable Output<VirtualApplianceSkuPropertiesArgs> nvaSku) {
             $.nvaSku = nvaSku;
             return this;
         }
 
+        /**
+         * @param nvaSku Network Virtual Appliance SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nvaSku(VirtualApplianceSkuPropertiesArgs nvaSku) {
             return nvaSku(Output.of(nvaSku));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualApplianceAsn VirtualAppliance ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualApplianceAsn(@Nullable Output<Double> virtualApplianceAsn) {
             $.virtualApplianceAsn = virtualApplianceAsn;
             return this;
         }
 
+        /**
+         * @param virtualApplianceAsn VirtualAppliance ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualApplianceAsn(Double virtualApplianceAsn) {
             return virtualApplianceAsn(Output.of(virtualApplianceAsn));
         }
 
+        /**
+         * @param virtualHub The Virtual Hub where Network Virtual Appliance is being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
             $.virtualHub = virtualHub;
             return this;
         }
 
+        /**
+         * @param virtualHub The Virtual Hub where Network Virtual Appliance is being deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(SubResourceArgs virtualHub) {
             return virtualHub(Output.of(virtualHub));
         }

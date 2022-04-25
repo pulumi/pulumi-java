@@ -21,6 +21,10 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
     @Import(name="durationMs", required=true)
     private String durationMs;
 
+    /**
+     * @return Time taken to run the iteration in milliseconds.
+     * 
+     */
     public String durationMs() {
         return this.durationMs;
     }
@@ -32,6 +36,10 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
     @Import(name="evalLoss", required=true)
     private Double evalLoss;
 
+    /**
+     * @return Loss computed on the eval data at the end of iteration.
+     * 
+     */
     public Double evalLoss() {
         return this.evalLoss;
     }
@@ -43,6 +51,10 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
     @Import(name="index", required=true)
     private Integer index;
 
+    /**
+     * @return Index of the iteration, 0 based.
+     * 
+     */
     public Integer index() {
         return this.index;
     }
@@ -54,6 +66,10 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
     @Import(name="learnRate", required=true)
     private Double learnRate;
 
+    /**
+     * @return Learn rate used for this iteration.
+     * 
+     */
     public Double learnRate() {
         return this.learnRate;
     }
@@ -65,6 +81,10 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
     @Import(name="trainingLoss", required=true)
     private Double trainingLoss;
 
+    /**
+     * @return Loss computed on the training data at the end of iteration.
+     * 
+     */
     public Double trainingLoss() {
         return this.trainingLoss;
     }
@@ -97,26 +117,56 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
             $ = new IterationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param durationMs Time taken to run the iteration in milliseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationMs(String durationMs) {
             $.durationMs = durationMs;
             return this;
         }
 
+        /**
+         * @param evalLoss Loss computed on the eval data at the end of iteration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evalLoss(Double evalLoss) {
             $.evalLoss = evalLoss;
             return this;
         }
 
+        /**
+         * @param index Index of the iteration, 0 based.
+         * 
+         * @return builder
+         * 
+         */
         public Builder index(Integer index) {
             $.index = index;
             return this;
         }
 
+        /**
+         * @param learnRate Learn rate used for this iteration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder learnRate(Double learnRate) {
             $.learnRate = learnRate;
             return this;
         }
 
+        /**
+         * @param trainingLoss Loss computed on the training data at the end of iteration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingLoss(Double trainingLoss) {
             $.trainingLoss = trainingLoss;
             return this;

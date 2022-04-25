@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BlobOutputDataSourceResponse {
     /**
-     * The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
+     * @return The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String container;
     /**
-     * The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
+     * @return The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
      * 
      */
     private final @Nullable String dateFormat;
     /**
-     * The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
+     * @return The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
      * 
      */
     private final @Nullable String pathPattern;
     /**
-     * A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
+     * @return A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable List<StorageAccountResponse> storageAccounts;
     /**
-     * The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
+     * @return The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
      * 
      */
     private final @Nullable String timeFormat;
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.Storage/Blob&#39;.
      * 
      */
@@ -62,45 +62,45 @@ public final class BlobOutputDataSourceResponse {
     }
 
     /**
-     * The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
+     * @return The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> container() {
         return Optional.ofNullable(this.container);
     }
     /**
-     * The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
+     * @return The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
      * 
-    */
+     */
     public Optional<String> dateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
     /**
-     * The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
+     * @return The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
      * 
-    */
+     */
     public Optional<String> pathPattern() {
         return Optional.ofNullable(this.pathPattern);
     }
     /**
-     * A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
+     * @return A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public List<StorageAccountResponse> storageAccounts() {
         return this.storageAccounts == null ? List.of() : this.storageAccounts;
     }
     /**
-     * The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
+     * @return The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
      * 
-    */
+     */
     public Optional<String> timeFormat() {
         return Optional.ofNullable(this.timeFormat);
     }
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.Storage/Blob&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

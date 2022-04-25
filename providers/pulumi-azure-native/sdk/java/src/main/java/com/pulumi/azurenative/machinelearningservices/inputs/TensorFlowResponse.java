@@ -28,6 +28,11 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="distributionType", required=true)
     private String distributionType;
 
+    /**
+     * @return Enum to determine the job distribution type.
+     * Expected value is &#39;TensorFlow&#39;.
+     * 
+     */
     public String distributionType() {
         return this.distributionType;
     }
@@ -39,6 +44,10 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameterServerCount")
     private @Nullable Integer parameterServerCount;
 
+    /**
+     * @return Number of parameter server tasks.
+     * 
+     */
     public Optional<Integer> parameterServerCount() {
         return Optional.ofNullable(this.parameterServerCount);
     }
@@ -50,6 +59,10 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="workerCount")
     private @Nullable Integer workerCount;
 
+    /**
+     * @return Number of workers. Overwrites the node count in compute binding.
+     * 
+     */
     public Optional<Integer> workerCount() {
         return Optional.ofNullable(this.workerCount);
     }
@@ -80,16 +93,35 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TensorFlowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;TensorFlow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(String distributionType) {
             $.distributionType = distributionType;
             return this;
         }
 
+        /**
+         * @param parameterServerCount Number of parameter server tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterServerCount(@Nullable Integer parameterServerCount) {
             $.parameterServerCount = parameterServerCount;
             return this;
         }
 
+        /**
+         * @param workerCount Number of workers. Overwrites the node count in compute binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(@Nullable Integer workerCount) {
             $.workerCount = workerCount;
             return this;

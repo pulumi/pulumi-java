@@ -28,6 +28,10 @@ public final class CounterOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="customFields")
     private @Nullable Output<List<CustomFieldArgs>> customFields;
 
+    /**
+     * @return Custom fields.
+     * 
+     */
     public Optional<Output<List<CustomFieldArgs>>> customFields() {
         return Optional.ofNullable(this.customFields);
     }
@@ -39,6 +43,10 @@ public final class CounterOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return The field value to attribute.
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -50,6 +58,10 @@ public final class CounterOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="metric")
     private @Nullable Output<String> metric;
 
+    /**
+     * @return The metric to update.
+     * 
+     */
     public Optional<Output<String>> metric() {
         return Optional.ofNullable(this.metric);
     }
@@ -80,33 +92,75 @@ public final class CounterOptionsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CounterOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customFields Custom fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(@Nullable Output<List<CustomFieldArgs>> customFields) {
             $.customFields = customFields;
             return this;
         }
 
+        /**
+         * @param customFields Custom fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(List<CustomFieldArgs> customFields) {
             return customFields(Output.of(customFields));
         }
 
+        /**
+         * @param customFields Custom fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(CustomFieldArgs... customFields) {
             return customFields(List.of(customFields));
         }
 
+        /**
+         * @param field The field value to attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field The field value to attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param metric The metric to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(@Nullable Output<String> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric The metric to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             return metric(Output.of(metric));
         }

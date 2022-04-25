@@ -26,6 +26,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hanaInstanceName")
     private @Nullable Output<String> hanaInstanceName;
 
+    /**
+     * @return Name of the SAP HANA on Azure instance.
+     * 
+     */
     public Optional<Output<String>> hanaInstanceName() {
         return Optional.ofNullable(this.hanaInstanceName);
     }
@@ -37,6 +41,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +56,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkProfile")
     private @Nullable Output<NetworkProfileArgs> networkProfile;
 
+    /**
+     * @return Specifies the network settings for the HANA instance.
+     * 
+     */
     public Optional<Output<NetworkProfileArgs>> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -59,6 +71,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osProfile")
     private @Nullable Output<OSProfileArgs> osProfile;
 
+    /**
+     * @return Specifies the operating system settings for the HANA instance.
+     * 
+     */
     public Optional<Output<OSProfileArgs>> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
@@ -70,6 +86,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnerNodeId")
     private @Nullable Output<String> partnerNodeId;
 
+    /**
+     * @return ARM ID of another HanaInstance that will share a network with this HanaInstance
+     * 
+     */
     public Optional<Output<String>> partnerNodeId() {
         return Optional.ofNullable(this.partnerNodeId);
     }
@@ -81,6 +101,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageProfile")
     private @Nullable Output<StorageProfileArgs> storageProfile;
 
+    /**
+     * @return Specifies the storage settings for the HANA instance disks.
+     * 
+     */
     public Optional<Output<StorageProfileArgs>> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
@@ -103,6 +131,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -138,74 +170,170 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HanaInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hanaInstanceName Name of the SAP HANA on Azure instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaInstanceName(@Nullable Output<String> hanaInstanceName) {
             $.hanaInstanceName = hanaInstanceName;
             return this;
         }
 
+        /**
+         * @param hanaInstanceName Name of the SAP HANA on Azure instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaInstanceName(String hanaInstanceName) {
             return hanaInstanceName(Output.of(hanaInstanceName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkProfile Specifies the network settings for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile Specifies the network settings for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(NetworkProfileArgs networkProfile) {
             return networkProfile(Output.of(networkProfile));
         }
 
+        /**
+         * @param osProfile Specifies the operating system settings for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(@Nullable Output<OSProfileArgs> osProfile) {
             $.osProfile = osProfile;
             return this;
         }
 
+        /**
+         * @param osProfile Specifies the operating system settings for the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(OSProfileArgs osProfile) {
             return osProfile(Output.of(osProfile));
         }
 
+        /**
+         * @param partnerNodeId ARM ID of another HanaInstance that will share a network with this HanaInstance
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNodeId(@Nullable Output<String> partnerNodeId) {
             $.partnerNodeId = partnerNodeId;
             return this;
         }
 
+        /**
+         * @param partnerNodeId ARM ID of another HanaInstance that will share a network with this HanaInstance
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNodeId(String partnerNodeId) {
             return partnerNodeId(Output.of(partnerNodeId));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageProfile Specifies the storage settings for the HANA instance disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             $.storageProfile = storageProfile;
             return this;
         }
 
+        /**
+         * @param storageProfile Specifies the storage settings for the HANA instance disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(StorageProfileArgs storageProfile) {
             return storageProfile(Output.of(storageProfile));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -22,6 +22,10 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkGroupName", required=true)
     private Output<String> networkGroupName;
 
+    /**
+     * @return The name of the network group.
+     * 
+     */
     public Output<String> networkGroupName() {
         return this.networkGroupName;
     }
@@ -33,6 +37,10 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkManagerName", required=true)
     private Output<String> networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
@@ -44,6 +52,10 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -66,6 +82,10 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="staticMemberName")
     private @Nullable Output<String> staticMemberName;
 
+    /**
+     * @return The name of the static member.
+     * 
+     */
     public Optional<Output<String>> staticMemberName() {
         return Optional.ofNullable(this.staticMemberName);
     }
@@ -98,47 +118,107 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StaticMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkGroupName The name of the network group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupName(Output<String> networkGroupName) {
             $.networkGroupName = networkGroupName;
             return this;
         }
 
+        /**
+         * @param networkGroupName The name of the network group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupName(String networkGroupName) {
             return networkGroupName(Output.of(networkGroupName));
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             return networkManagerName(Output.of(networkManagerName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceId Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param staticMemberName The name of the static member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticMemberName(@Nullable Output<String> staticMemberName) {
             $.staticMemberName = staticMemberName;
             return this;
         }
 
+        /**
+         * @param staticMemberName The name of the static member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticMemberName(String staticMemberName) {
             return staticMemberName(Output.of(staticMemberName));
         }

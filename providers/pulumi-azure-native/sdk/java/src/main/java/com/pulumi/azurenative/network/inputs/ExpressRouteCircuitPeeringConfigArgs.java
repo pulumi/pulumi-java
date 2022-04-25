@@ -28,6 +28,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="advertisedCommunities")
     private @Nullable Output<List<String>> advertisedCommunities;
 
+    /**
+     * @return The communities of bgp peering. Specified for microsoft peering.
+     * 
+     */
     public Optional<Output<List<String>>> advertisedCommunities() {
         return Optional.ofNullable(this.advertisedCommunities);
     }
@@ -39,6 +43,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="advertisedPublicPrefixes")
     private @Nullable Output<List<String>> advertisedPublicPrefixes;
 
+    /**
+     * @return The reference to AdvertisedPublicPrefixes.
+     * 
+     */
     public Optional<Output<List<String>>> advertisedPublicPrefixes() {
         return Optional.ofNullable(this.advertisedPublicPrefixes);
     }
@@ -50,6 +58,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="customerASN")
     private @Nullable Output<Integer> customerASN;
 
+    /**
+     * @return The CustomerASN of the peering.
+     * 
+     */
     public Optional<Output<Integer>> customerASN() {
         return Optional.ofNullable(this.customerASN);
     }
@@ -61,6 +73,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="legacyMode")
     private @Nullable Output<Integer> legacyMode;
 
+    /**
+     * @return The legacy mode of the peering.
+     * 
+     */
     public Optional<Output<Integer>> legacyMode() {
         return Optional.ofNullable(this.legacyMode);
     }
@@ -72,6 +88,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
     @Import(name="routingRegistryName")
     private @Nullable Output<String> routingRegistryName;
 
+    /**
+     * @return The RoutingRegistryName of the configuration.
+     * 
+     */
     public Optional<Output<String>> routingRegistryName() {
         return Optional.ofNullable(this.routingRegistryName);
     }
@@ -104,55 +124,127 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.resou
             $ = new ExpressRouteCircuitPeeringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advertisedCommunities The communities of bgp peering. Specified for microsoft peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedCommunities(@Nullable Output<List<String>> advertisedCommunities) {
             $.advertisedCommunities = advertisedCommunities;
             return this;
         }
 
+        /**
+         * @param advertisedCommunities The communities of bgp peering. Specified for microsoft peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedCommunities(List<String> advertisedCommunities) {
             return advertisedCommunities(Output.of(advertisedCommunities));
         }
 
+        /**
+         * @param advertisedCommunities The communities of bgp peering. Specified for microsoft peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedCommunities(String... advertisedCommunities) {
             return advertisedCommunities(List.of(advertisedCommunities));
         }
 
+        /**
+         * @param advertisedPublicPrefixes The reference to AdvertisedPublicPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedPublicPrefixes(@Nullable Output<List<String>> advertisedPublicPrefixes) {
             $.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
 
+        /**
+         * @param advertisedPublicPrefixes The reference to AdvertisedPublicPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedPublicPrefixes(List<String> advertisedPublicPrefixes) {
             return advertisedPublicPrefixes(Output.of(advertisedPublicPrefixes));
         }
 
+        /**
+         * @param advertisedPublicPrefixes The reference to AdvertisedPublicPrefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedPublicPrefixes(String... advertisedPublicPrefixes) {
             return advertisedPublicPrefixes(List.of(advertisedPublicPrefixes));
         }
 
+        /**
+         * @param customerASN The CustomerASN of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerASN(@Nullable Output<Integer> customerASN) {
             $.customerASN = customerASN;
             return this;
         }
 
+        /**
+         * @param customerASN The CustomerASN of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerASN(Integer customerASN) {
             return customerASN(Output.of(customerASN));
         }
 
+        /**
+         * @param legacyMode The legacy mode of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legacyMode(@Nullable Output<Integer> legacyMode) {
             $.legacyMode = legacyMode;
             return this;
         }
 
+        /**
+         * @param legacyMode The legacy mode of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legacyMode(Integer legacyMode) {
             return legacyMode(Output.of(legacyMode));
         }
 
+        /**
+         * @param routingRegistryName The RoutingRegistryName of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingRegistryName(@Nullable Output<String> routingRegistryName) {
             $.routingRegistryName = routingRegistryName;
             return this;
         }
 
+        /**
+         * @param routingRegistryName The RoutingRegistryName of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingRegistryName(String routingRegistryName) {
             return routingRegistryName(Output.of(routingRegistryName));
         }

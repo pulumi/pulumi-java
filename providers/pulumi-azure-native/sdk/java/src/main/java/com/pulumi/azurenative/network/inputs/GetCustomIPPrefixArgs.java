@@ -21,6 +21,10 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="customIpPrefixName", required=true)
     private String customIpPrefixName;
 
+    /**
+     * @return The name of the custom IP prefix.
+     * 
+     */
     public String customIpPrefixName() {
         return this.customIpPrefixName;
     }
@@ -32,6 +36,10 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -43,6 +51,10 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetCustomIPPrefixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customIpPrefixName The name of the custom IP prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customIpPrefixName(String customIpPrefixName) {
             $.customIpPrefixName = customIpPrefixName;
             return this;
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

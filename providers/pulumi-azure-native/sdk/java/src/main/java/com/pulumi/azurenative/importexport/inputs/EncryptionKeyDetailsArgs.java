@@ -29,6 +29,10 @@ public final class EncryptionKeyDetailsArgs extends com.pulumi.resources.Resourc
     @Import(name="kekType")
     private @Nullable Output<Either<String,EncryptionKekType>> kekType;
 
+    /**
+     * @return The type of kek encryption key
+     * 
+     */
     public Optional<Output<Either<String,EncryptionKekType>>> kekType() {
         return Optional.ofNullable(this.kekType);
     }
@@ -40,6 +44,10 @@ public final class EncryptionKeyDetailsArgs extends com.pulumi.resources.Resourc
     @Import(name="kekUrl")
     private @Nullable Output<String> kekUrl;
 
+    /**
+     * @return Specifies the url for kek encryption key.
+     * 
+     */
     public Optional<Output<String>> kekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
@@ -51,6 +59,10 @@ public final class EncryptionKeyDetailsArgs extends com.pulumi.resources.Resourc
     @Import(name="kekVaultResourceID")
     private @Nullable Output<String> kekVaultResourceID;
 
+    /**
+     * @return Specifies the keyvault resource id for kek encryption key.
+     * 
+     */
     public Optional<Output<String>> kekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }
@@ -81,37 +93,85 @@ public final class EncryptionKeyDetailsArgs extends com.pulumi.resources.Resourc
             $ = new EncryptionKeyDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kekType The type of kek encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(@Nullable Output<Either<String,EncryptionKekType>> kekType) {
             $.kekType = kekType;
             return this;
         }
 
+        /**
+         * @param kekType The type of kek encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(Either<String,EncryptionKekType> kekType) {
             return kekType(Output.of(kekType));
         }
 
+        /**
+         * @param kekType The type of kek encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(String kekType) {
             return kekType(Either.ofLeft(kekType));
         }
 
+        /**
+         * @param kekType The type of kek encryption key
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(EncryptionKekType kekType) {
             return kekType(Either.ofRight(kekType));
         }
 
+        /**
+         * @param kekUrl Specifies the url for kek encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekUrl(@Nullable Output<String> kekUrl) {
             $.kekUrl = kekUrl;
             return this;
         }
 
+        /**
+         * @param kekUrl Specifies the url for kek encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekUrl(String kekUrl) {
             return kekUrl(Output.of(kekUrl));
         }
 
+        /**
+         * @param kekVaultResourceID Specifies the keyvault resource id for kek encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekVaultResourceID(@Nullable Output<String> kekVaultResourceID) {
             $.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
 
+        /**
+         * @param kekVaultResourceID Specifies the keyvault resource id for kek encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekVaultResourceID(String kekVaultResourceID) {
             return kekVaultResourceID(Output.of(kekVaultResourceID));
         }

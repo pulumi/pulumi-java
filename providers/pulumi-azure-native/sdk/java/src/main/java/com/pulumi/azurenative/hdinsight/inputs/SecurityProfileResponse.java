@@ -26,6 +26,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="aaddsResourceId")
     private @Nullable String aaddsResourceId;
 
+    /**
+     * @return The resource ID of the user&#39;s Azure Active Directory Domain Service.
+     * 
+     */
     public Optional<String> aaddsResourceId() {
         return Optional.ofNullable(this.aaddsResourceId);
     }
@@ -37,6 +41,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="clusterUsersGroupDNs")
     private @Nullable List<String> clusterUsersGroupDNs;
 
+    /**
+     * @return Optional. The Distinguished Names for cluster user groups
+     * 
+     */
     public Optional<List<String>> clusterUsersGroupDNs() {
         return Optional.ofNullable(this.clusterUsersGroupDNs);
     }
@@ -48,6 +56,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="directoryType")
     private @Nullable String directoryType;
 
+    /**
+     * @return The directory type.
+     * 
+     */
     public Optional<String> directoryType() {
         return Optional.ofNullable(this.directoryType);
     }
@@ -59,6 +71,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="domain")
     private @Nullable String domain;
 
+    /**
+     * @return The organization&#39;s active directory domain.
+     * 
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -70,6 +86,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="domainUserPassword")
     private @Nullable String domainUserPassword;
 
+    /**
+     * @return The domain admin password.
+     * 
+     */
     public Optional<String> domainUserPassword() {
         return Optional.ofNullable(this.domainUserPassword);
     }
@@ -81,6 +101,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="domainUsername")
     private @Nullable String domainUsername;
 
+    /**
+     * @return The domain user account that will have admin privileges on the cluster.
+     * 
+     */
     public Optional<String> domainUsername() {
         return Optional.ofNullable(this.domainUsername);
     }
@@ -92,6 +116,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ldapsUrls")
     private @Nullable List<String> ldapsUrls;
 
+    /**
+     * @return The LDAPS protocol URLs to communicate with the Active Directory.
+     * 
+     */
     public Optional<List<String>> ldapsUrls() {
         return Optional.ofNullable(this.ldapsUrls);
     }
@@ -103,6 +131,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="msiResourceId")
     private @Nullable String msiResourceId;
 
+    /**
+     * @return User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
+     * 
+     */
     public Optional<String> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
@@ -114,6 +146,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="organizationalUnitDN")
     private @Nullable String organizationalUnitDN;
 
+    /**
+     * @return The organizational unit within the Active Directory to place the cluster and service accounts.
+     * 
+     */
     public Optional<String> organizationalUnitDN() {
         return Optional.ofNullable(this.organizationalUnitDN);
     }
@@ -150,54 +186,120 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
             $ = new SecurityProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aaddsResourceId The resource ID of the user&#39;s Azure Active Directory Domain Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
             $.aaddsResourceId = aaddsResourceId;
             return this;
         }
 
+        /**
+         * @param clusterUsersGroupDNs Optional. The Distinguished Names for cluster user groups
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
             $.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
 
+        /**
+         * @param clusterUsersGroupDNs Optional. The Distinguished Names for cluster user groups
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterUsersGroupDNs(String... clusterUsersGroupDNs) {
             return clusterUsersGroupDNs(List.of(clusterUsersGroupDNs));
         }
 
+        /**
+         * @param directoryType The directory type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryType(@Nullable String directoryType) {
             $.directoryType = directoryType;
             return this;
         }
 
+        /**
+         * @param domain The organization&#39;s active directory domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domainUserPassword The domain admin password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainUserPassword(@Nullable String domainUserPassword) {
             $.domainUserPassword = domainUserPassword;
             return this;
         }
 
+        /**
+         * @param domainUsername The domain user account that will have admin privileges on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainUsername(@Nullable String domainUsername) {
             $.domainUsername = domainUsername;
             return this;
         }
 
+        /**
+         * @param ldapsUrls The LDAPS protocol URLs to communicate with the Active Directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
             $.ldapsUrls = ldapsUrls;
             return this;
         }
 
+        /**
+         * @param ldapsUrls The LDAPS protocol URLs to communicate with the Active Directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ldapsUrls(String... ldapsUrls) {
             return ldapsUrls(List.of(ldapsUrls));
         }
 
+        /**
+         * @param msiResourceId User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiResourceId(@Nullable String msiResourceId) {
             $.msiResourceId = msiResourceId;
             return this;
         }
 
+        /**
+         * @param organizationalUnitDN The organizational unit within the Active Directory to place the cluster and service accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
             $.organizationalUnitDN = organizationalUnitDN;
             return this;

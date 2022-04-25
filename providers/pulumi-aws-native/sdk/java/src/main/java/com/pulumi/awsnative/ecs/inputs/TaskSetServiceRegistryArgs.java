@@ -23,6 +23,10 @@ public final class TaskSetServiceRegistryArgs extends com.pulumi.resources.Resou
     @Import(name="containerName")
     private @Nullable Output<String> containerName;
 
+    /**
+     * @return The container name value, already specified in the task definition, to be used for your service discovery service. If the task definition that your service task specifies uses the bridge or host network mode, you must specify a containerName and containerPort combination from the task definition. If the task definition that your service task specifies uses the awsvpc network mode and a type SRV DNS record is used, you must specify either a containerName and containerPort combination or a port value, but not both.
+     * 
+     */
     public Optional<Output<String>> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -34,6 +38,10 @@ public final class TaskSetServiceRegistryArgs extends com.pulumi.resources.Resou
     @Import(name="containerPort")
     private @Nullable Output<Integer> containerPort;
 
+    /**
+     * @return The port value, already specified in the task definition, to be used for your service discovery service. If the task definition your service task specifies uses the bridge or host network mode, you must specify a containerName and containerPort combination from the task definition. If the task definition your service task specifies uses the awsvpc network mode and a type SRV DNS record is used, you must specify either a containerName and containerPort combination or a port value, but not both.
+     * 
+     */
     public Optional<Output<Integer>> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
@@ -45,6 +53,10 @@ public final class TaskSetServiceRegistryArgs extends com.pulumi.resources.Resou
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port value used if your service discovery service specified an SRV record. This field may be used if both the awsvpc network mode and SRV records are used.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -56,6 +68,10 @@ public final class TaskSetServiceRegistryArgs extends com.pulumi.resources.Resou
     @Import(name="registryArn")
     private @Nullable Output<String> registryArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS Cloud Map. For more information, see https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html
+     * 
+     */
     public Optional<Output<String>> registryArn() {
         return Optional.ofNullable(this.registryArn);
     }
@@ -87,38 +103,86 @@ public final class TaskSetServiceRegistryArgs extends com.pulumi.resources.Resou
             $ = new TaskSetServiceRegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName The container name value, already specified in the task definition, to be used for your service discovery service. If the task definition that your service task specifies uses the bridge or host network mode, you must specify a containerName and containerPort combination from the task definition. If the task definition that your service task specifies uses the awsvpc network mode and a type SRV DNS record is used, you must specify either a containerName and containerPort combination or a port value, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName The container name value, already specified in the task definition, to be used for your service discovery service. If the task definition that your service task specifies uses the bridge or host network mode, you must specify a containerName and containerPort combination from the task definition. If the task definition that your service task specifies uses the awsvpc network mode and a type SRV DNS record is used, you must specify either a containerName and containerPort combination or a port value, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param containerPort The port value, already specified in the task definition, to be used for your service discovery service. If the task definition your service task specifies uses the bridge or host network mode, you must specify a containerName and containerPort combination from the task definition. If the task definition your service task specifies uses the awsvpc network mode and a type SRV DNS record is used, you must specify either a containerName and containerPort combination or a port value, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
+        /**
+         * @param containerPort The port value, already specified in the task definition, to be used for your service discovery service. If the task definition your service task specifies uses the bridge or host network mode, you must specify a containerName and containerPort combination from the task definition. If the task definition your service task specifies uses the awsvpc network mode and a type SRV DNS record is used, you must specify either a containerName and containerPort combination or a port value, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerPort(Integer containerPort) {
             return containerPort(Output.of(containerPort));
         }
 
+        /**
+         * @param port The port value used if your service discovery service specified an SRV record. This field may be used if both the awsvpc network mode and SRV records are used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port value used if your service discovery service specified an SRV record. This field may be used if both the awsvpc network mode and SRV records are used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param registryArn The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS Cloud Map. For more information, see https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryArn(@Nullable Output<String> registryArn) {
             $.registryArn = registryArn;
             return this;
         }
 
+        /**
+         * @param registryArn The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS Cloud Map. For more information, see https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryArn(String registryArn) {
             return registryArn(Output.of(registryArn));
         }

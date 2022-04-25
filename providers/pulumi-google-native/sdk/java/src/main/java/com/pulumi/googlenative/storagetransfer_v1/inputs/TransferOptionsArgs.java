@@ -27,6 +27,10 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deleteObjectsFromSourceAfterTransfer")
     private @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
 
+    /**
+     * @return Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
+     * 
+     */
     public Optional<Output<Boolean>> deleteObjectsFromSourceAfterTransfer() {
         return Optional.ofNullable(this.deleteObjectsFromSourceAfterTransfer);
     }
@@ -38,6 +42,10 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deleteObjectsUniqueInSink")
     private @Nullable Output<Boolean> deleteObjectsUniqueInSink;
 
+    /**
+     * @return Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
+     * 
+     */
     public Optional<Output<Boolean>> deleteObjectsUniqueInSink() {
         return Optional.ofNullable(this.deleteObjectsUniqueInSink);
     }
@@ -49,6 +57,10 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metadataOptions")
     private @Nullable Output<MetadataOptionsArgs> metadataOptions;
 
+    /**
+     * @return Represents the selected metadata options for a transfer job.
+     * 
+     */
     public Optional<Output<MetadataOptionsArgs>> metadataOptions() {
         return Optional.ofNullable(this.metadataOptions);
     }
@@ -60,6 +72,10 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="overwriteObjectsAlreadyExistingInSink")
     private @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
 
+    /**
+     * @return When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
+     * 
+     */
     public Optional<Output<Boolean>> overwriteObjectsAlreadyExistingInSink() {
         return Optional.ofNullable(this.overwriteObjectsAlreadyExistingInSink);
     }
@@ -91,38 +107,86 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
             $ = new TransferOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteObjectsFromSourceAfterTransfer Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer) {
             $.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
 
+        /**
+         * @param deleteObjectsFromSourceAfterTransfer Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
             return deleteObjectsFromSourceAfterTransfer(Output.of(deleteObjectsFromSourceAfterTransfer));
         }
 
+        /**
+         * @param deleteObjectsUniqueInSink Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsUniqueInSink(@Nullable Output<Boolean> deleteObjectsUniqueInSink) {
             $.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
 
+        /**
+         * @param deleteObjectsUniqueInSink Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
             return deleteObjectsUniqueInSink(Output.of(deleteObjectsUniqueInSink));
         }
 
+        /**
+         * @param metadataOptions Represents the selected metadata options for a transfer job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataOptions(@Nullable Output<MetadataOptionsArgs> metadataOptions) {
             $.metadataOptions = metadataOptions;
             return this;
         }
 
+        /**
+         * @param metadataOptions Represents the selected metadata options for a transfer job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataOptions(MetadataOptionsArgs metadataOptions) {
             return metadataOptions(Output.of(metadataOptions));
         }
 
+        /**
+         * @param overwriteObjectsAlreadyExistingInSink When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink) {
             $.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
         }
 
+        /**
+         * @param overwriteObjectsAlreadyExistingInSink When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
             return overwriteObjectsAlreadyExistingInSink(Output.of(overwriteObjectsAlreadyExistingInSink));
         }

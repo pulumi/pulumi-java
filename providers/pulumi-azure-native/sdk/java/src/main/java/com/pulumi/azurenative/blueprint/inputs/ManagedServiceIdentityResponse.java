@@ -27,6 +27,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="principalId")
     private @Nullable String principalId;
 
+    /**
+     * @return Azure Active Directory principal ID associated with this Identity.
+     * 
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -38,6 +42,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return ID of the Azure Active Directory.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -49,6 +57,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the managed identity.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -60,6 +72,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
+    /**
+     * @return The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+     * 
+     */
     public Optional<Map<String,UserAssignedIdentityResponse>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -91,21 +107,45 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
             $ = new ManagedServiceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Azure Active Directory principal ID associated with this Identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId ID of the Azure Active Directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

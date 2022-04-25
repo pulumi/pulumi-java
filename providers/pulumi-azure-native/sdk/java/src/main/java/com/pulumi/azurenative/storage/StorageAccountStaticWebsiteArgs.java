@@ -22,6 +22,10 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     @Import(name="error404Document")
     private @Nullable Output<String> error404Document;
 
+    /**
+     * @return The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
+     * 
+     */
     public Optional<Output<String>> error404Document() {
         return Optional.ofNullable(this.error404Document);
     }
@@ -44,6 +52,10 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     @Import(name="indexDocument")
     private @Nullable Output<String> indexDocument;
 
+    /**
+     * @return The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, &#39;index.html&#39;. The value is case-sensitive.
+     * 
+     */
     public Optional<Output<String>> indexDocument() {
         return Optional.ofNullable(this.indexDocument);
     }
@@ -55,6 +67,10 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -86,38 +102,86 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
             $ = new StorageAccountStaticWebsiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param error404Document The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error404Document(@Nullable Output<String> error404Document) {
             $.error404Document = error404Document;
             return this;
         }
 
+        /**
+         * @param error404Document The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error404Document(String error404Document) {
             return error404Document(Output.of(error404Document));
         }
 
+        /**
+         * @param indexDocument The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, &#39;index.html&#39;. The value is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
             $.indexDocument = indexDocument;
             return this;
         }
 
+        /**
+         * @param indexDocument The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, &#39;index.html&#39;. The value is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexDocument(String indexDocument) {
             return indexDocument(Output.of(indexDocument));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

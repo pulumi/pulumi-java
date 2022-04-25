@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet {
     /**
-     * The url, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard in the path is allowed.
+     * @return The url, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard in the path is allowed.
      * 
      */
     private final String url;
@@ -21,9 +21,9 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
     }
 
     /**
-     * The url, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard in the path is allowed.
+     * @return The url, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard in the path is allowed.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

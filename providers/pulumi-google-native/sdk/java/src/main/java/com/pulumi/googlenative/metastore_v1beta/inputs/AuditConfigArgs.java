@@ -28,6 +28,10 @@ public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="auditLogConfigs")
     private @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs;
 
+    /**
+     * @return The configuration for logging of each type of permission.
+     * 
+     */
     public Optional<Output<List<AuditLogConfigArgs>>> auditLogConfigs() {
         return Optional.ofNullable(this.auditLogConfigs);
     }
@@ -39,6 +43,10 @@ public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Specifies a service that will be enabled for audit logging. For example, storage.googleapis.com, cloudsql.googleapis.com. allServices is a special value that covers all services.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -68,24 +76,54 @@ public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(@Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs) {
             $.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(List<AuditLogConfigArgs> auditLogConfigs) {
             return auditLogConfigs(Output.of(auditLogConfigs));
         }
 
+        /**
+         * @param auditLogConfigs The configuration for logging of each type of permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogConfigs(AuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
 
+        /**
+         * @param service Specifies a service that will be enabled for audit logging. For example, storage.googleapis.com, cloudsql.googleapis.com. allServices is a special value that covers all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Specifies a service that will be enabled for audit logging. For example, storage.googleapis.com, cloudsql.googleapis.com. allServices is a special value that covers all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

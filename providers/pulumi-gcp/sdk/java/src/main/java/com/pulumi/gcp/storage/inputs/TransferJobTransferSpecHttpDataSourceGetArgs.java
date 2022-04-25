@@ -20,6 +20,10 @@ public final class TransferJobTransferSpecHttpDataSourceGetArgs extends com.pulu
     @Import(name="listUrl", required=true)
     private Output<String> listUrl;
 
+    /**
+     * @return The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+     * 
+     */
     public Output<String> listUrl() {
         return this.listUrl;
     }
@@ -48,11 +52,23 @@ public final class TransferJobTransferSpecHttpDataSourceGetArgs extends com.pulu
             $ = new TransferJobTransferSpecHttpDataSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param listUrl The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listUrl(Output<String> listUrl) {
             $.listUrl = listUrl;
             return this;
         }
 
+        /**
+         * @param listUrl The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listUrl(String listUrl) {
             return listUrl(Output.of(listUrl));
         }

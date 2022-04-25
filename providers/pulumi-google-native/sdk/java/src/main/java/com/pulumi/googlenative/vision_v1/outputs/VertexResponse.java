@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class VertexResponse {
     /**
-     * X coordinate.
+     * @return X coordinate.
      * 
      */
     private final Integer x;
     /**
-     * Y coordinate.
+     * @return Y coordinate.
      * 
      */
     private final Integer y;
@@ -29,16 +29,16 @@ public final class VertexResponse {
     }
 
     /**
-     * X coordinate.
+     * @return X coordinate.
      * 
-    */
+     */
     public Integer x() {
         return this.x;
     }
     /**
-     * Y coordinate.
+     * @return Y coordinate.
      * 
-    */
+     */
     public Integer y() {
         return this.y;
     }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class EncoderSystemPresetResponse {
     /**
-     * Name of the built-in encoding preset.
+     * @return Name of the built-in encoding preset.
      * 
      */
     private final String name;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderSystemPreset&#39;.
      * 
      */
@@ -30,17 +30,17 @@ public final class EncoderSystemPresetResponse {
     }
 
     /**
-     * Name of the built-in encoding preset.
+     * @return Name of the built-in encoding preset.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderSystemPreset&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

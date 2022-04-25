@@ -16,77 +16,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNotificationHubAuthorizationRuleResult {
     /**
-     * A string that describes the claim type
+     * @return A string that describes the claim type
      * 
      */
     private final String claimType;
     /**
-     * A string that describes the claim value
+     * @return A string that describes the claim value
      * 
      */
     private final String claimValue;
     /**
-     * The created time for this rule
+     * @return The created time for this rule
      * 
      */
     private final String createdTime;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * A string that describes the authorization rule.
+     * @return A string that describes the authorization rule.
      * 
      */
     private final String keyName;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final @Nullable String location;
     /**
-     * The last modified time for this rule
+     * @return The last modified time for this rule
      * 
      */
     private final String modifiedTime;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
     private final String primaryKey;
     /**
-     * The revision number for the rule
+     * @return The revision number for the rule
      * 
      */
     private final Integer revision;
     /**
-     * The rights associated with the rule.
+     * @return The rights associated with the rule.
      * 
      */
     private final @Nullable List<String> rights;
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
     private final String secondaryKey;
     /**
-     * The sku of the created namespace
+     * @return The sku of the created namespace
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -126,107 +126,107 @@ public final class GetNotificationHubAuthorizationRuleResult {
     }
 
     /**
-     * A string that describes the claim type
+     * @return A string that describes the claim type
      * 
-    */
+     */
     public String claimType() {
         return this.claimType;
     }
     /**
-     * A string that describes the claim value
+     * @return A string that describes the claim value
      * 
-    */
+     */
     public String claimValue() {
         return this.claimValue;
     }
     /**
-     * The created time for this rule
+     * @return The created time for this rule
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A string that describes the authorization rule.
+     * @return A string that describes the authorization rule.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The last modified time for this rule
+     * @return The last modified time for this rule
      * 
-    */
+     */
     public String modifiedTime() {
         return this.modifiedTime;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-    */
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
     /**
-     * The revision number for the rule
+     * @return The revision number for the rule
      * 
-    */
+     */
     public Integer revision() {
         return this.revision;
     }
     /**
-     * The rights associated with the rule.
+     * @return The rights associated with the rule.
      * 
-    */
+     */
     public List<String> rights() {
         return this.rights == null ? List.of() : this.rights;
     }
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-    */
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }
     /**
-     * The sku of the created namespace
+     * @return The sku of the created namespace
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

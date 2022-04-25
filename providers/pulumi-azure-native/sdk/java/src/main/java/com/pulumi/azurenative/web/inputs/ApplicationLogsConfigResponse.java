@@ -27,6 +27,10 @@ public final class ApplicationLogsConfigResponse extends com.pulumi.resources.In
     @Import(name="azureBlobStorage")
     private @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage;
 
+    /**
+     * @return Application logs to blob storage configuration.
+     * 
+     */
     public Optional<AzureBlobStorageApplicationLogsConfigResponse> azureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
@@ -38,6 +42,10 @@ public final class ApplicationLogsConfigResponse extends com.pulumi.resources.In
     @Import(name="azureTableStorage")
     private @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage;
 
+    /**
+     * @return Application logs to azure table storage configuration.
+     * 
+     */
     public Optional<AzureTableStorageApplicationLogsConfigResponse> azureTableStorage() {
         return Optional.ofNullable(this.azureTableStorage);
     }
@@ -49,6 +57,10 @@ public final class ApplicationLogsConfigResponse extends com.pulumi.resources.In
     @Import(name="fileSystem")
     private @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
 
+    /**
+     * @return Application logs to file system configuration.
+     * 
+     */
     public Optional<FileSystemApplicationLogsConfigResponse> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -79,16 +91,34 @@ public final class ApplicationLogsConfigResponse extends com.pulumi.resources.In
             $ = new ApplicationLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureBlobStorage Application logs to blob storage configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage) {
             $.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
+        /**
+         * @param azureTableStorage Application logs to azure table storage configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage) {
             $.azureTableStorage = azureTableStorage;
             return this;
         }
 
+        /**
+         * @param fileSystem Application logs to file system configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
             $.fileSystem = fileSystem;
             return this;

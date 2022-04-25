@@ -23,6 +23,10 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
     @Import(name="bindingSelector")
     private @Nullable Output<String> bindingSelector;
 
+    /**
+     * @return Binding selector to use for the AzureIdentityBinding resource.
+     * 
+     */
     public Optional<Output<String>> bindingSelector() {
         return Optional.ofNullable(this.bindingSelector);
     }
@@ -34,6 +38,10 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
     @Import(name="identity", required=true)
     private Output<UserAssignedIdentityArgs> identity;
 
+    /**
+     * @return Information of the user assigned identity.
+     * 
+     */
     public Output<UserAssignedIdentityArgs> identity() {
         return this.identity;
     }
@@ -45,6 +53,10 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the pod identity.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -56,6 +68,10 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return Namespace of the pod identity.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -87,38 +103,86 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
             $ = new ManagedClusterPodIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindingSelector Binding selector to use for the AzureIdentityBinding resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingSelector(@Nullable Output<String> bindingSelector) {
             $.bindingSelector = bindingSelector;
             return this;
         }
 
+        /**
+         * @param bindingSelector Binding selector to use for the AzureIdentityBinding resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingSelector(String bindingSelector) {
             return bindingSelector(Output.of(bindingSelector));
         }
 
+        /**
+         * @param identity Information of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(Output<UserAssignedIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Information of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(UserAssignedIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param name Name of the pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace Namespace of the pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace of the pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

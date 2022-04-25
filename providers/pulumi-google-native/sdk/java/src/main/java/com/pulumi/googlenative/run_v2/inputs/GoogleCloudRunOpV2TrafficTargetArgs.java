@@ -28,6 +28,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends com.pulumi.resour
     @Import(name="percent")
     private @Nullable Output<Integer> percent;
 
+    /**
+     * @return Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
+     * 
+     */
     public Optional<Output<Integer>> percent() {
         return Optional.ofNullable(this.percent);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends com.pulumi.resour
     @Import(name="revision")
     private @Nullable Output<String> revision;
 
+    /**
+     * @return Revision to which to send this portion of traffic, if traffic allocation is by revision.
+     * 
+     */
     public Optional<Output<String>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends com.pulumi.resour
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return Indicates a string to be part of the URI to exclusively reference this target.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends com.pulumi.resour
     @Import(name="type")
     private @Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type;
 
+    /**
+     * @return The allocation type for this traffic target.
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2TrafficTargetType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -92,38 +108,86 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends com.pulumi.resour
             $ = new GoogleCloudRunOpV2TrafficTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param percent Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(@Nullable Output<Integer> percent) {
             $.percent = percent;
             return this;
         }
 
+        /**
+         * @param percent Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             return percent(Output.of(percent));
         }
 
+        /**
+         * @param revision Revision to which to send this portion of traffic, if traffic allocation is by revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<String> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision Revision to which to send this portion of traffic, if traffic allocation is by revision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(String revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param tag Indicates a string to be part of the URI to exclusively reference this target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag Indicates a string to be part of the URI to exclusively reference this target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }
 
+        /**
+         * @param type The allocation type for this traffic target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The allocation type for this traffic target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(GoogleCloudRunOpV2TrafficTargetType type) {
             return type(Output.of(type));
         }

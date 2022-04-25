@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetArtifactResult {
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
      */
     private final String id;
     /**
-     * Specifies the kind of blueprint artifact.
+     * @return Specifies the kind of blueprint artifact.
      * 
      */
     private final String kind;
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
      */
     private final String name;
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
      */
     private final String type;
@@ -43,30 +43,30 @@ public final class GetArtifactResult {
     }
 
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the kind of blueprint artifact.
+     * @return Specifies the kind of blueprint artifact.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

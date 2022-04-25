@@ -25,6 +25,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly Name
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -36,6 +40,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="remoteDnsIps")
     private @Nullable String remoteDnsIps;
 
+    /**
+     * @return Remote Dns ips
+     * 
+     */
     public Optional<String> remoteDnsIps() {
         return Optional.ofNullable(this.remoteDnsIps);
     }
@@ -47,6 +55,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustDirection")
     private @Nullable String trustDirection;
 
+    /**
+     * @return Trust Direction
+     * 
+     */
     public Optional<String> trustDirection() {
         return Optional.ofNullable(this.trustDirection);
     }
@@ -58,6 +70,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustPassword")
     private @Nullable String trustPassword;
 
+    /**
+     * @return Trust Password
+     * 
+     */
     public Optional<String> trustPassword() {
         return Optional.ofNullable(this.trustPassword);
     }
@@ -69,6 +85,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustedDomainFqdn")
     private @Nullable String trustedDomainFqdn;
 
+    /**
+     * @return Trusted Domain FQDN
+     * 
+     */
     public Optional<String> trustedDomainFqdn() {
         return Optional.ofNullable(this.trustedDomainFqdn);
     }
@@ -101,26 +121,56 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ForestTrustResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param friendlyName Friendly Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param remoteDnsIps Remote Dns ips
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteDnsIps(@Nullable String remoteDnsIps) {
             $.remoteDnsIps = remoteDnsIps;
             return this;
         }
 
+        /**
+         * @param trustDirection Trust Direction
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustDirection(@Nullable String trustDirection) {
             $.trustDirection = trustDirection;
             return this;
         }
 
+        /**
+         * @param trustPassword Trust Password
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustPassword(@Nullable String trustPassword) {
             $.trustPassword = trustPassword;
             return this;
         }
 
+        /**
+         * @param trustedDomainFqdn Trusted Domain FQDN
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedDomainFqdn(@Nullable String trustedDomainFqdn) {
             $.trustedDomainFqdn = trustedDomainFqdn;
             return this;

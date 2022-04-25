@@ -24,6 +24,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     @Import(name="parameters")
     private @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
+    /**
+     * @return Array of processor parameters. More details are given below
+     * 
+     */
     public Optional<Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -35,6 +39,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of processor. Valid Values: `Lambda`
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -64,24 +72,54 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
             $ = new FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Array of processor parameters. More details are given below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Array of processor parameters. More details are given below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Array of processor parameters. More details are given below
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param type The type of processor. Valid Values: `Lambda`
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of processor. Valid Values: `Lambda`
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

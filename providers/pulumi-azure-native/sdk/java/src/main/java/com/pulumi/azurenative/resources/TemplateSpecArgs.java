@@ -24,6 +24,10 @@ public final class TemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Template Spec description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class TemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Template Spec display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -46,6 +54,10 @@ public final class TemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class TemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Object> metadata;
 
+    /**
+     * @return The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+     * 
+     */
     public Optional<Output<Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -68,6 +84,10 @@ public final class TemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class TemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -90,6 +114,10 @@ public final class TemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateSpecName")
     private @Nullable Output<String> templateSpecName;
 
+    /**
+     * @return Name of the Template Spec.
+     * 
+     */
     public Optional<Output<String>> templateSpecName() {
         return Optional.ofNullable(this.templateSpecName);
     }
@@ -124,65 +152,149 @@ public final class TemplateSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Template Spec description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Template Spec description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Template Spec display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Template Spec display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param location The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param templateSpecName Name of the Template Spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateSpecName(@Nullable Output<String> templateSpecName) {
             $.templateSpecName = templateSpecName;
             return this;
         }
 
+        /**
+         * @param templateSpecName Name of the Template Spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateSpecName(String templateSpecName) {
             return templateSpecName(Output.of(templateSpecName));
         }

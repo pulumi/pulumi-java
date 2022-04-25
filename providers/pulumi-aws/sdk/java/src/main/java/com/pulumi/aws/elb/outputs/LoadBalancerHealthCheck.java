@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class LoadBalancerHealthCheck {
     /**
-     * The number of checks before the instance is declared healthy.
+     * @return The number of checks before the instance is declared healthy.
      * 
      */
     private final Integer healthyThreshold;
     /**
-     * The interval between checks.
+     * @return The interval between checks.
      * 
      */
     private final Integer interval;
     /**
-     * The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
+     * @return The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
      * values are:
      * * `HTTP`, `HTTPS` - PORT and PATH are required
      * * `TCP`, `SSL` - PORT is required, PATH is not supported
@@ -29,12 +29,12 @@ public final class LoadBalancerHealthCheck {
      */
     private final String target;
     /**
-     * The length of time before the check times out.
+     * @return The length of time before the check times out.
      * 
      */
     private final Integer timeout;
     /**
-     * The number of checks before the instance is declared unhealthy.
+     * @return The number of checks before the instance is declared unhealthy.
      * 
      */
     private final Integer unhealthyThreshold;
@@ -54,40 +54,40 @@ public final class LoadBalancerHealthCheck {
     }
 
     /**
-     * The number of checks before the instance is declared healthy.
+     * @return The number of checks before the instance is declared healthy.
      * 
-    */
+     */
     public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
     /**
-     * The interval between checks.
+     * @return The interval between checks.
      * 
-    */
+     */
     public Integer interval() {
         return this.interval;
     }
     /**
-     * The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
+     * @return The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
      * values are:
      * * `HTTP`, `HTTPS` - PORT and PATH are required
      * * `TCP`, `SSL` - PORT is required, PATH is not supported
      * 
-    */
+     */
     public String target() {
         return this.target;
     }
     /**
-     * The length of time before the check times out.
+     * @return The length of time before the check times out.
      * 
-    */
+     */
     public Integer timeout() {
         return this.timeout;
     }
     /**
-     * The number of checks before the instance is declared unhealthy.
+     * @return The number of checks before the instance is declared unhealthy.
      * 
-    */
+     */
     public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }

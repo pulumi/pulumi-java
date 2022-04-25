@@ -26,6 +26,10 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends com.pu
     @Import(name="lastRefreshedAt")
     private @Nullable String lastRefreshedAt;
 
+    /**
+     * @return Last time when the agent data synced to service.
+     * 
+     */
     public Optional<String> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
@@ -37,6 +41,10 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends com.pu
     @Import(name="oldestRecoveryPoint")
     private @Nullable String oldestRecoveryPoint;
 
+    /**
+     * @return The oldest backup copy available.
+     * 
+     */
     public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
@@ -48,6 +56,10 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends com.pu
     @Import(name="recoveryPointCount")
     private @Nullable Integer recoveryPointCount;
 
+    /**
+     * @return Number of backup copies associated with the backup item.
+     * 
+     */
     public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -78,16 +90,34 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends com.pu
             $ = new MabFileFolderProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastRefreshedAt Last time when the agent data synced to service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param recoveryPointCount Number of backup copies associated with the backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             $.recoveryPointCount = recoveryPointCount;
             return this;

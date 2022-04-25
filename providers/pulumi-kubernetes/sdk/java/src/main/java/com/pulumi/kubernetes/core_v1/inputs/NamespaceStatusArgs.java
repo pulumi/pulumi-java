@@ -28,6 +28,10 @@ public final class NamespaceStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="conditions")
     private @Nullable Output<List<NamespaceConditionArgs>> conditions;
 
+    /**
+     * @return Represents the latest available observations of a namespace&#39;s current state.
+     * 
+     */
     public Optional<Output<List<NamespaceConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -43,6 +47,14 @@ public final class NamespaceStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="phase")
     private @Nullable Output<String> phase;
 
+    /**
+     * @return Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+     * 
+     * Possible enum values:
+     *  - `&#34;Active&#34;` means the namespace is available for use in the system
+     *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
+     * 
+     */
     public Optional<Output<String>> phase() {
         return Optional.ofNullable(this.phase);
     }
@@ -72,24 +84,62 @@ public final class NamespaceStatusArgs extends com.pulumi.resources.ResourceArgs
             $ = new NamespaceStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a namespace&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<NamespaceConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a namespace&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<NamespaceConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Represents the latest available observations of a namespace&#39;s current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(NamespaceConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param phase Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+         * 
+         * Possible enum values:
+         *  - `&#34;Active&#34;` means the namespace is available for use in the system
+         *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
+         * 
+         * @return builder
+         * 
+         */
         public Builder phase(@Nullable Output<String> phase) {
             $.phase = phase;
             return this;
         }
 
+        /**
+         * @param phase Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+         * 
+         * Possible enum values:
+         *  - `&#34;Active&#34;` means the namespace is available for use in the system
+         *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
+         * 
+         * @return builder
+         * 
+         */
         public Builder phase(String phase) {
             return phase(Output.of(phase));
         }

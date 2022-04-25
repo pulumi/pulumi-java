@@ -27,6 +27,10 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="apiBuildCommand")
     private @Nullable Output<String> apiBuildCommand;
 
+    /**
+     * @return A custom command to run during deployment of the Azure Functions API application.
+     * 
+     */
     public Optional<Output<String>> apiBuildCommand() {
         return Optional.ofNullable(this.apiBuildCommand);
     }
@@ -38,6 +42,10 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="apiLocation")
     private @Nullable Output<String> apiLocation;
 
+    /**
+     * @return The path to the api code within the repository.
+     * 
+     */
     public Optional<Output<String>> apiLocation() {
         return Optional.ofNullable(this.apiLocation);
     }
@@ -49,6 +57,10 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="appArtifactLocation")
     private @Nullable Output<String> appArtifactLocation;
 
+    /**
+     * @return Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
+     * 
+     */
     public Optional<Output<String>> appArtifactLocation() {
         return Optional.ofNullable(this.appArtifactLocation);
     }
@@ -60,6 +72,10 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="appBuildCommand")
     private @Nullable Output<String> appBuildCommand;
 
+    /**
+     * @return A custom command to run during deployment of the static content application.
+     * 
+     */
     public Optional<Output<String>> appBuildCommand() {
         return Optional.ofNullable(this.appBuildCommand);
     }
@@ -71,6 +87,10 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="appLocation")
     private @Nullable Output<String> appLocation;
 
+    /**
+     * @return The path to the app code within the repository.
+     * 
+     */
     public Optional<Output<String>> appLocation() {
         return Optional.ofNullable(this.appLocation);
     }
@@ -82,6 +102,10 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="githubActionSecretNameOverride")
     private @Nullable Output<String> githubActionSecretNameOverride;
 
+    /**
+     * @return Github Action secret name override.
+     * 
+     */
     public Optional<Output<String>> githubActionSecretNameOverride() {
         return Optional.ofNullable(this.githubActionSecretNameOverride);
     }
@@ -93,6 +117,10 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="outputLocation")
     private @Nullable Output<String> outputLocation;
 
+    /**
+     * @return The output path of the app after building.
+     * 
+     */
     public Optional<Output<String>> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
@@ -104,6 +132,10 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="skipGithubActionWorkflowGeneration")
     private @Nullable Output<Boolean> skipGithubActionWorkflowGeneration;
 
+    /**
+     * @return Skip Github Action workflow generation.
+     * 
+     */
     public Optional<Output<Boolean>> skipGithubActionWorkflowGeneration() {
         return Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
     }
@@ -139,74 +171,170 @@ public final class StaticSiteBuildPropertiesArgs extends com.pulumi.resources.Re
             $ = new StaticSiteBuildPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiBuildCommand A custom command to run during deployment of the Azure Functions API application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiBuildCommand(@Nullable Output<String> apiBuildCommand) {
             $.apiBuildCommand = apiBuildCommand;
             return this;
         }
 
+        /**
+         * @param apiBuildCommand A custom command to run during deployment of the Azure Functions API application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiBuildCommand(String apiBuildCommand) {
             return apiBuildCommand(Output.of(apiBuildCommand));
         }
 
+        /**
+         * @param apiLocation The path to the api code within the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiLocation(@Nullable Output<String> apiLocation) {
             $.apiLocation = apiLocation;
             return this;
         }
 
+        /**
+         * @param apiLocation The path to the api code within the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiLocation(String apiLocation) {
             return apiLocation(Output.of(apiLocation));
         }
 
+        /**
+         * @param appArtifactLocation Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
+         * 
+         * @return builder
+         * 
+         */
         public Builder appArtifactLocation(@Nullable Output<String> appArtifactLocation) {
             $.appArtifactLocation = appArtifactLocation;
             return this;
         }
 
+        /**
+         * @param appArtifactLocation Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
+         * 
+         * @return builder
+         * 
+         */
         public Builder appArtifactLocation(String appArtifactLocation) {
             return appArtifactLocation(Output.of(appArtifactLocation));
         }
 
+        /**
+         * @param appBuildCommand A custom command to run during deployment of the static content application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBuildCommand(@Nullable Output<String> appBuildCommand) {
             $.appBuildCommand = appBuildCommand;
             return this;
         }
 
+        /**
+         * @param appBuildCommand A custom command to run during deployment of the static content application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBuildCommand(String appBuildCommand) {
             return appBuildCommand(Output.of(appBuildCommand));
         }
 
+        /**
+         * @param appLocation The path to the app code within the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appLocation(@Nullable Output<String> appLocation) {
             $.appLocation = appLocation;
             return this;
         }
 
+        /**
+         * @param appLocation The path to the app code within the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appLocation(String appLocation) {
             return appLocation(Output.of(appLocation));
         }
 
+        /**
+         * @param githubActionSecretNameOverride Github Action secret name override.
+         * 
+         * @return builder
+         * 
+         */
         public Builder githubActionSecretNameOverride(@Nullable Output<String> githubActionSecretNameOverride) {
             $.githubActionSecretNameOverride = githubActionSecretNameOverride;
             return this;
         }
 
+        /**
+         * @param githubActionSecretNameOverride Github Action secret name override.
+         * 
+         * @return builder
+         * 
+         */
         public Builder githubActionSecretNameOverride(String githubActionSecretNameOverride) {
             return githubActionSecretNameOverride(Output.of(githubActionSecretNameOverride));
         }
 
+        /**
+         * @param outputLocation The output path of the app after building.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
             $.outputLocation = outputLocation;
             return this;
         }
 
+        /**
+         * @param outputLocation The output path of the app after building.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputLocation(String outputLocation) {
             return outputLocation(Output.of(outputLocation));
         }
 
+        /**
+         * @param skipGithubActionWorkflowGeneration Skip Github Action workflow generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipGithubActionWorkflowGeneration(@Nullable Output<Boolean> skipGithubActionWorkflowGeneration) {
             $.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
         }
 
+        /**
+         * @param skipGithubActionWorkflowGeneration Skip Github Action workflow generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipGithubActionWorkflowGeneration(Boolean skipGithubActionWorkflowGeneration) {
             return skipGithubActionWorkflowGeneration(Output.of(skipGithubActionWorkflowGeneration));
         }

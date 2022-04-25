@@ -30,6 +30,10 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authorization")
     private @Nullable Output<AuthorizationArgs> authorization;
 
+    /**
+     * @return Authorization info to access the code repository.
+     * 
+     */
     public Optional<Output<AuthorizationArgs>> authorization() {
         return Optional.ofNullable(this.authorization);
     }
@@ -41,6 +45,10 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="defaultBranch", required=true)
     private Output<String> defaultBranch;
 
+    /**
+     * @return Default branch used to configure Continuous Integration (CI) in the pipeline.
+     * 
+     */
     public Output<String> defaultBranch() {
         return this.defaultBranch;
     }
@@ -52,6 +60,10 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Unique immutable identifier of the code repository.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -63,6 +75,10 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Repository-specific properties.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -74,6 +90,10 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="repositoryType", required=true)
     private Output<Either<String,CodeRepositoryType>> repositoryType;
 
+    /**
+     * @return Type of code repository.
+     * 
+     */
     public Output<Either<String,CodeRepositoryType>> repositoryType() {
         return this.repositoryType;
     }
@@ -106,55 +126,127 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CodeRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorization Authorization info to access the code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(@Nullable Output<AuthorizationArgs> authorization) {
             $.authorization = authorization;
             return this;
         }
 
+        /**
+         * @param authorization Authorization info to access the code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(AuthorizationArgs authorization) {
             return authorization(Output.of(authorization));
         }
 
+        /**
+         * @param defaultBranch Default branch used to configure Continuous Integration (CI) in the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBranch(Output<String> defaultBranch) {
             $.defaultBranch = defaultBranch;
             return this;
         }
 
+        /**
+         * @param defaultBranch Default branch used to configure Continuous Integration (CI) in the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBranch(String defaultBranch) {
             return defaultBranch(Output.of(defaultBranch));
         }
 
+        /**
+         * @param id Unique immutable identifier of the code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique immutable identifier of the code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param properties Repository-specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Repository-specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param repositoryType Type of code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryType(Output<Either<String,CodeRepositoryType>> repositoryType) {
             $.repositoryType = repositoryType;
             return this;
         }
 
+        /**
+         * @param repositoryType Type of code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryType(Either<String,CodeRepositoryType> repositoryType) {
             return repositoryType(Output.of(repositoryType));
         }
 
+        /**
+         * @param repositoryType Type of code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryType(String repositoryType) {
             return repositoryType(Either.ofLeft(repositoryType));
         }
 
+        /**
+         * @param repositoryType Type of code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryType(CodeRepositoryType repositoryType) {
             return repositoryType(Either.ofRight(repositoryType));
         }

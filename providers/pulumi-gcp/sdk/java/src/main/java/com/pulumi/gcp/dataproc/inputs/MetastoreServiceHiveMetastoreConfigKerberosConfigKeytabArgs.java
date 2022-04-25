@@ -21,6 +21,11 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs e
     @Import(name="cloudSecret", required=true)
     private Output<String> cloudSecret;
 
+    /**
+     * @return The relative resource name of a Secret Manager secret version, in the following form:
+     * &#34;projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}&#34;.
+     * 
+     */
     public Output<String> cloudSecret() {
         return this.cloudSecret;
     }
@@ -49,11 +54,25 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs e
             $ = new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSecret The relative resource name of a Secret Manager secret version, in the following form:
+         * &#34;projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSecret(Output<String> cloudSecret) {
             $.cloudSecret = cloudSecret;
             return this;
         }
 
+        /**
+         * @param cloudSecret The relative resource name of a Secret Manager secret version, in the following form:
+         * &#34;projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSecret(String cloudSecret) {
             return cloudSecret(Output.of(cloudSecret));
         }

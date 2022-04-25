@@ -23,6 +23,10 @@ public final class ToolExitCodeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="number", required=true)
     private Integer number;
 
+    /**
+     * @return Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
+     * 
+     */
     public Integer number() {
         return this.number;
     }
@@ -51,6 +55,12 @@ public final class ToolExitCodeResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ToolExitCodeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param number Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Integer number) {
             $.number = number;
             return this;

@@ -27,6 +27,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the Config Remediation Configuration.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -38,6 +42,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="automatic")
     private @Nullable Output<Boolean> automatic;
 
+    /**
+     * @return Remediation is triggered automatically if `true`.
+     * 
+     */
     public Optional<Output<Boolean>> automatic() {
         return Optional.ofNullable(this.automatic);
     }
@@ -49,6 +57,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="configRuleName")
     private @Nullable Output<String> configRuleName;
 
+    /**
+     * @return Name of the AWS Config rule.
+     * 
+     */
     public Optional<Output<String>> configRuleName() {
         return Optional.ofNullable(this.configRuleName);
     }
@@ -60,6 +72,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="executionControls")
     private @Nullable Output<RemediationConfigurationExecutionControlsGetArgs> executionControls;
 
+    /**
+     * @return Configuration block for execution controls. See below.
+     * 
+     */
     public Optional<Output<RemediationConfigurationExecutionControlsGetArgs>> executionControls() {
         return Optional.ofNullable(this.executionControls);
     }
@@ -71,6 +87,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="maximumAutomaticAttempts")
     private @Nullable Output<Integer> maximumAutomaticAttempts;
 
+    /**
+     * @return Maximum number of failed attempts for auto-remediation. If you do not select a number, the default is 5.
+     * 
+     */
     public Optional<Output<Integer>> maximumAutomaticAttempts() {
         return Optional.ofNullable(this.maximumAutomaticAttempts);
     }
@@ -82,6 +102,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="parameters")
     private @Nullable Output<List<RemediationConfigurationParameterGetArgs>> parameters;
 
+    /**
+     * @return Can be specified multiple times for each parameter. Each parameter block supports arguments below.
+     * 
+     */
     public Optional<Output<List<RemediationConfigurationParameterGetArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -93,6 +117,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return Type of resource.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -104,6 +132,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="retryAttemptSeconds")
     private @Nullable Output<Integer> retryAttemptSeconds;
 
+    /**
+     * @return Maximum time in seconds that AWS Config runs auto-remediation. If you do not select a number, the default is 60 seconds.
+     * 
+     */
     public Optional<Output<Integer>> retryAttemptSeconds() {
         return Optional.ofNullable(this.retryAttemptSeconds);
     }
@@ -115,6 +147,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="targetId")
     private @Nullable Output<String> targetId;
 
+    /**
+     * @return Target ID is the name of the public document.
+     * 
+     */
     public Optional<Output<String>> targetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -126,6 +162,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="targetType")
     private @Nullable Output<String> targetType;
 
+    /**
+     * @return Type of the target. Target executes remediation. For example, SSM document.
+     * 
+     */
     public Optional<Output<String>> targetType() {
         return Optional.ofNullable(this.targetType);
     }
@@ -137,6 +177,10 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
     @Import(name="targetVersion")
     private @Nullable Output<String> targetVersion;
 
+    /**
+     * @return Version of the target. For example, version of the SSM document
+     * 
+     */
     public Optional<Output<String>> targetVersion() {
         return Optional.ofNullable(this.targetVersion);
     }
@@ -175,105 +219,243 @@ public final class RemediationConfigurationState extends com.pulumi.resources.Re
             $ = new RemediationConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the Config Remediation Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the Config Remediation Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param automatic Remediation is triggered automatically if `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(@Nullable Output<Boolean> automatic) {
             $.automatic = automatic;
             return this;
         }
 
+        /**
+         * @param automatic Remediation is triggered automatically if `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatic(Boolean automatic) {
             return automatic(Output.of(automatic));
         }
 
+        /**
+         * @param configRuleName Name of the AWS Config rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configRuleName(@Nullable Output<String> configRuleName) {
             $.configRuleName = configRuleName;
             return this;
         }
 
+        /**
+         * @param configRuleName Name of the AWS Config rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configRuleName(String configRuleName) {
             return configRuleName(Output.of(configRuleName));
         }
 
+        /**
+         * @param executionControls Configuration block for execution controls. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionControls(@Nullable Output<RemediationConfigurationExecutionControlsGetArgs> executionControls) {
             $.executionControls = executionControls;
             return this;
         }
 
+        /**
+         * @param executionControls Configuration block for execution controls. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionControls(RemediationConfigurationExecutionControlsGetArgs executionControls) {
             return executionControls(Output.of(executionControls));
         }
 
+        /**
+         * @param maximumAutomaticAttempts Maximum number of failed attempts for auto-remediation. If you do not select a number, the default is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumAutomaticAttempts(@Nullable Output<Integer> maximumAutomaticAttempts) {
             $.maximumAutomaticAttempts = maximumAutomaticAttempts;
             return this;
         }
 
+        /**
+         * @param maximumAutomaticAttempts Maximum number of failed attempts for auto-remediation. If you do not select a number, the default is 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumAutomaticAttempts(Integer maximumAutomaticAttempts) {
             return maximumAutomaticAttempts(Output.of(maximumAutomaticAttempts));
         }
 
+        /**
+         * @param parameters Can be specified multiple times for each parameter. Each parameter block supports arguments below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<RemediationConfigurationParameterGetArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Can be specified multiple times for each parameter. Each parameter block supports arguments below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<RemediationConfigurationParameterGetArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Can be specified multiple times for each parameter. Each parameter block supports arguments below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(RemediationConfigurationParameterGetArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param resourceType Type of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Type of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param retryAttemptSeconds Maximum time in seconds that AWS Config runs auto-remediation. If you do not select a number, the default is 60 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAttemptSeconds(@Nullable Output<Integer> retryAttemptSeconds) {
             $.retryAttemptSeconds = retryAttemptSeconds;
             return this;
         }
 
+        /**
+         * @param retryAttemptSeconds Maximum time in seconds that AWS Config runs auto-remediation. If you do not select a number, the default is 60 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryAttemptSeconds(Integer retryAttemptSeconds) {
             return retryAttemptSeconds(Output.of(retryAttemptSeconds));
         }
 
+        /**
+         * @param targetId Target ID is the name of the public document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
             return this;
         }
 
+        /**
+         * @param targetId Target ID is the name of the public document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
         }
 
+        /**
+         * @param targetType Type of the target. Target executes remediation. For example, SSM document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(@Nullable Output<String> targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param targetType Type of the target. Target executes remediation. For example, SSM document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(String targetType) {
             return targetType(Output.of(targetType));
         }
 
+        /**
+         * @param targetVersion Version of the target. For example, version of the SSM document
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
             $.targetVersion = targetVersion;
             return this;
         }
 
+        /**
+         * @param targetVersion Version of the target. For example, version of the SSM document
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVersion(String targetVersion) {
             return targetVersion(Output.of(targetVersion));
         }

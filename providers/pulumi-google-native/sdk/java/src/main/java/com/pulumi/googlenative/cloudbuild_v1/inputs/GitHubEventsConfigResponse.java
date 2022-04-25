@@ -25,6 +25,10 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     @Import(name="enterpriseConfigResourceName", required=true)
     private String enterpriseConfigResourceName;
 
+    /**
+     * @return Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
+     * 
+     */
     public String enterpriseConfigResourceName() {
         return this.enterpriseConfigResourceName;
     }
@@ -36,6 +40,10 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     @Import(name="installationId", required=true)
     private String installationId;
 
+    /**
+     * @return The installationID that emits the GitHub event.
+     * 
+     */
     public String installationId() {
         return this.installationId;
     }
@@ -47,6 +55,10 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -58,6 +70,10 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     @Import(name="owner", required=true)
     private String owner;
 
+    /**
+     * @return Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
+     * 
+     */
     public String owner() {
         return this.owner;
     }
@@ -69,6 +85,10 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     @Import(name="pullRequest", required=true)
     private PullRequestFilterResponse pullRequest;
 
+    /**
+     * @return filter to match changes in pull requests.
+     * 
+     */
     public PullRequestFilterResponse pullRequest() {
         return this.pullRequest;
     }
@@ -80,6 +100,10 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
     @Import(name="push", required=true)
     private PushFilterResponse push;
 
+    /**
+     * @return filter to match changes in refs like branches, tags.
+     * 
+     */
     public PushFilterResponse push() {
         return this.push;
     }
@@ -113,31 +137,67 @@ public final class GitHubEventsConfigResponse extends com.pulumi.resources.Invok
             $ = new GitHubEventsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enterpriseConfigResourceName Optional. The resource name of the github enterprise config that should be applied to this installation. For example: &#34;projects/{$project_id}/githubEnterpriseConfigs/{$config_id}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterpriseConfigResourceName(String enterpriseConfigResourceName) {
             $.enterpriseConfigResourceName = enterpriseConfigResourceName;
             return this;
         }
 
+        /**
+         * @param installationId The installationID that emits the GitHub event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installationId(String installationId) {
             $.installationId = installationId;
             return this;
         }
 
+        /**
+         * @param name Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param owner Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param pullRequest filter to match changes in pull requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullRequest(PullRequestFilterResponse pullRequest) {
             $.pullRequest = pullRequest;
             return this;
         }
 
+        /**
+         * @param push filter to match changes in refs like branches, tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder push(PushFilterResponse push) {
             $.push = push;
             return this;

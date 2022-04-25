@@ -26,6 +26,10 @@ public final class ComputeProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="roles")
     private @Nullable List<RoleResponse> roles;
 
+    /**
+     * @return The list of roles in the cluster.
+     * 
+     */
     public Optional<List<RoleResponse>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -54,11 +58,23 @@ public final class ComputeProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new ComputeProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roles The list of roles in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable List<RoleResponse> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The list of roles in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(RoleResponse... roles) {
             return roles(List.of(roles));
         }

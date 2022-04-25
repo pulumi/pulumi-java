@@ -28,6 +28,10 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
     @Import(name="bitrateKbps")
     private @Nullable Output<String> bitrateKbps;
 
+    /**
+     * @return The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
+     * 
+     */
     public Optional<Output<String>> bitrateKbps() {
         return Optional.ofNullable(this.bitrateKbps);
     }
@@ -39,6 +43,10 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
     @Import(name="frameRate")
     private @Nullable Output<String> frameRate;
 
+    /**
+     * @return The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
+     * 
+     */
     public Optional<Output<String>> frameRate() {
         return Optional.ofNullable(this.frameRate);
     }
@@ -50,6 +58,10 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
     @Import(name="scale")
     private @Nullable Output<VideoScaleArgs> scale;
 
+    /**
+     * @return Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
+     * 
+     */
     public Optional<Output<VideoScaleArgs>> scale() {
         return Optional.ofNullable(this.scale);
     }
@@ -62,6 +74,11 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoEncoderH264&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -93,38 +110,88 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
             $ = new VideoEncoderH264Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrateKbps The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateKbps(@Nullable Output<String> bitrateKbps) {
             $.bitrateKbps = bitrateKbps;
             return this;
         }
 
+        /**
+         * @param bitrateKbps The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateKbps(String bitrateKbps) {
             return bitrateKbps(Output.of(bitrateKbps));
         }
 
+        /**
+         * @param frameRate The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameRate(@Nullable Output<String> frameRate) {
             $.frameRate = frameRate;
             return this;
         }
 
+        /**
+         * @param frameRate The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameRate(String frameRate) {
             return frameRate(Output.of(frameRate));
         }
 
+        /**
+         * @param scale Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(@Nullable Output<VideoScaleArgs> scale) {
             $.scale = scale;
             return this;
         }
 
+        /**
+         * @param scale Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(VideoScaleArgs scale) {
             return scale(Output.of(scale));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoEncoderH264&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoEncoderH264&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

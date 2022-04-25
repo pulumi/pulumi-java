@@ -24,6 +24,10 @@ public final class TimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hours", required=true)
     private Output<Integer> hours;
 
+    /**
+     * @return The hour.
+     * 
+     */
     public Output<Integer> hours() {
         return this.hours;
     }
@@ -35,6 +39,10 @@ public final class TimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minutes", required=true)
     private Output<Integer> minutes;
 
+    /**
+     * @return The minute.
+     * 
+     */
     public Output<Integer> minutes() {
         return this.minutes;
     }
@@ -46,6 +54,10 @@ public final class TimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="seconds", required=true)
     private Output<Integer> seconds;
 
+    /**
+     * @return The second.
+     * 
+     */
     public Output<Integer> seconds() {
         return this.seconds;
     }
@@ -76,29 +88,65 @@ public final class TimeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours The hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Output<Integer> hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param hours The hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer hours) {
             return hours(Output.of(hours));
         }
 
+        /**
+         * @param minutes The minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Output<Integer> minutes) {
             $.minutes = minutes;
             return this;
         }
 
+        /**
+         * @param minutes The minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer minutes) {
             return minutes(Output.of(minutes));
         }
 
+        /**
+         * @param seconds The second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(Output<Integer> seconds) {
             $.seconds = seconds;
             return this;
         }
 
+        /**
+         * @param seconds The second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(Integer seconds) {
             return seconds(Output.of(seconds));
         }

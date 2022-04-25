@@ -17,42 +17,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentResourcePropertiesResponse {
     /**
-     * Indicates whether the Deployment is active
+     * @return Indicates whether the Deployment is active
      * 
      */
     private final Boolean active;
     /**
-     * App name of the deployment
+     * @return App name of the deployment
      * 
      */
     private final String appName;
     /**
-     * Date time when the resource is created
+     * @return Date time when the resource is created
      * 
      */
     private final String createdTime;
     /**
-     * Deployment settings of the Deployment
+     * @return Deployment settings of the Deployment
      * 
      */
     private final @Nullable DeploymentSettingsResponse deploymentSettings;
     /**
-     * Collection of instances belong to the Deployment
+     * @return Collection of instances belong to the Deployment
      * 
      */
     private final List<DeploymentInstanceResponse> instances;
     /**
-     * Provisioning state of the Deployment
+     * @return Provisioning state of the Deployment
      * 
      */
     private final String provisioningState;
     /**
-     * Uploaded source information of the deployment.
+     * @return Uploaded source information of the deployment.
      * 
      */
     private final @Nullable UserSourceInfoResponse source;
     /**
-     * Status of the Deployment
+     * @return Status of the Deployment
      * 
      */
     private final String status;
@@ -78,58 +78,58 @@ public final class DeploymentResourcePropertiesResponse {
     }
 
     /**
-     * Indicates whether the Deployment is active
+     * @return Indicates whether the Deployment is active
      * 
-    */
+     */
     public Boolean active() {
         return this.active;
     }
     /**
-     * App name of the deployment
+     * @return App name of the deployment
      * 
-    */
+     */
     public String appName() {
         return this.appName;
     }
     /**
-     * Date time when the resource is created
+     * @return Date time when the resource is created
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Deployment settings of the Deployment
+     * @return Deployment settings of the Deployment
      * 
-    */
+     */
     public Optional<DeploymentSettingsResponse> deploymentSettings() {
         return Optional.ofNullable(this.deploymentSettings);
     }
     /**
-     * Collection of instances belong to the Deployment
+     * @return Collection of instances belong to the Deployment
      * 
-    */
+     */
     public List<DeploymentInstanceResponse> instances() {
         return this.instances;
     }
     /**
-     * Provisioning state of the Deployment
+     * @return Provisioning state of the Deployment
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Uploaded source information of the deployment.
+     * @return Uploaded source information of the deployment.
      * 
-    */
+     */
     public Optional<UserSourceInfoResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * Status of the Deployment
+     * @return Status of the Deployment
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

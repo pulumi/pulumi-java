@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class GetPerfSampleSeriesResult {
     /**
-     * Basic series represented by a line chart
+     * @return Basic series represented by a line chart
      * 
      */
     private final BasicPerfSampleSeriesResponse basicPerfSampleSeries;
     /**
-     * A tool results execution ID.
+     * @return A tool results execution ID.
      * 
      */
     private final String executionId;
     /**
-     * A tool results history ID.
+     * @return A tool results history ID.
      * 
      */
     private final String historyId;
     /**
-     * The cloud project
+     * @return The cloud project
      * 
      */
     private final String project;
     /**
-     * A sample series id
+     * @return A sample series id
      * 
      */
     private final String sampleSeriesId;
     /**
-     * A tool results step ID.
+     * @return A tool results step ID.
      * 
      */
     private final String stepId;
@@ -58,44 +58,44 @@ public final class GetPerfSampleSeriesResult {
     }
 
     /**
-     * Basic series represented by a line chart
+     * @return Basic series represented by a line chart
      * 
-    */
+     */
     public BasicPerfSampleSeriesResponse basicPerfSampleSeries() {
         return this.basicPerfSampleSeries;
     }
     /**
-     * A tool results execution ID.
+     * @return A tool results execution ID.
      * 
-    */
+     */
     public String executionId() {
         return this.executionId;
     }
     /**
-     * A tool results history ID.
+     * @return A tool results history ID.
      * 
-    */
+     */
     public String historyId() {
         return this.historyId;
     }
     /**
-     * The cloud project
+     * @return The cloud project
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * A sample series id
+     * @return A sample series id
      * 
-    */
+     */
     public String sampleSeriesId() {
         return this.sampleSeriesId;
     }
     /**
-     * A tool results step ID.
+     * @return A tool results step ID.
      * 
-    */
+     */
     public String stepId() {
         return this.stepId;
     }

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig {
     /**
-     * An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
+     * @return An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
      * 
      */
     private final @Nullable String notificationArn;
     /**
-     * The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
+     * @return The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
      * 
      */
     private final @Nullable List<String> notificationEvents;
     /**
-     * When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
+     * @return When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
      * 
      */
     private final @Nullable String notificationType;
@@ -39,23 +39,23 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     }
 
     /**
-     * An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
+     * @return An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
      * 
-    */
+     */
     public Optional<String> notificationArn() {
         return Optional.ofNullable(this.notificationArn);
     }
     /**
-     * The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
+     * @return The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
      * 
-    */
+     */
     public List<String> notificationEvents() {
         return this.notificationEvents == null ? List.of() : this.notificationEvents;
     }
     /**
-     * When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
+     * @return When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
      * 
-    */
+     */
     public Optional<String> notificationType() {
         return Optional.ofNullable(this.notificationType);
     }

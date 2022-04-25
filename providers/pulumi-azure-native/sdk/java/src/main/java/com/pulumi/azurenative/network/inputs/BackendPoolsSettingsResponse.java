@@ -27,6 +27,10 @@ public final class BackendPoolsSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="enforceCertificateNameCheck")
     private @Nullable String enforceCertificateNameCheck;
 
+    /**
+     * @return Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
+     * 
+     */
     public Optional<String> enforceCertificateNameCheck() {
         return Optional.ofNullable(this.enforceCertificateNameCheck);
     }
@@ -38,6 +42,10 @@ public final class BackendPoolsSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="sendRecvTimeoutSeconds")
     private @Nullable Integer sendRecvTimeoutSeconds;
 
+    /**
+     * @return Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
+     * 
+     */
     public Optional<Integer> sendRecvTimeoutSeconds() {
         return Optional.ofNullable(this.sendRecvTimeoutSeconds);
     }
@@ -67,11 +75,23 @@ public final class BackendPoolsSettingsResponse extends com.pulumi.resources.Inv
             $ = new BackendPoolsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enforceCertificateNameCheck Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceCertificateNameCheck(@Nullable String enforceCertificateNameCheck) {
             $.enforceCertificateNameCheck = enforceCertificateNameCheck;
             return this;
         }
 
+        /**
+         * @param sendRecvTimeoutSeconds Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
             $.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;

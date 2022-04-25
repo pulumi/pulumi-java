@@ -40,6 +40,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelName")
     private @Nullable Output<String> channelName;
 
+    /**
+     * @return The name of the Channel resource.
+     * 
+     */
     public Optional<Output<String>> channelName() {
         return Optional.ofNullable(this.channelName);
     }
@@ -51,6 +55,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<Either<String,Kind>> kind;
 
+    /**
+     * @return Required. Gets or sets the Kind of the resource.
+     * 
+     */
     public Optional<Output<Either<String,Kind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -62,6 +70,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -73,6 +85,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Object> properties;
 
+    /**
+     * @return The set of properties specific to bot channel resource
+     * 
+     */
     public Optional<Output<Object>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -84,6 +100,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Bot resource group in the user subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -95,6 +115,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the Bot resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -106,6 +130,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Gets or sets the SKU of the resource.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -117,6 +145,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,82 +184,190 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelName The name of the Channel resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(@Nullable Output<String> channelName) {
             $.channelName = channelName;
             return this;
         }
 
+        /**
+         * @param channelName The name of the Channel resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(String channelName) {
             return channelName(Output.of(channelName));
         }
 
+        /**
+         * @param kind Required. Gets or sets the Kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Required. Gets or sets the Kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,Kind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Required. Gets or sets the Kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Required. Gets or sets the Kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The set of properties specific to bot channel resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The set of properties specific to bot channel resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the Bot resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Bot resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the Bot resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Bot resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sku Gets or sets the SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets the SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

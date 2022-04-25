@@ -25,6 +25,10 @@ public final class CassandraResourceCassandraKeyspaceArgs extends com.pulumi.res
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -36,6 +40,10 @@ public final class CassandraResourceCassandraKeyspaceArgs extends com.pulumi.res
     @Import(name="keyspaceName")
     private @Nullable Output<String> keyspaceName;
 
+    /**
+     * @return Cosmos DB keyspace name.
+     * 
+     */
     public Optional<Output<String>> keyspaceName() {
         return Optional.ofNullable(this.keyspaceName);
     }
@@ -47,6 +55,10 @@ public final class CassandraResourceCassandraKeyspaceArgs extends com.pulumi.res
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource group to which the resource belongs.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +70,10 @@ public final class CassandraResourceCassandraKeyspaceArgs extends com.pulumi.res
     @Import(name="options")
     private @Nullable Output<CreateUpdateOptionsArgs> options;
 
+    /**
+     * @return A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+     * 
+     */
     public Optional<Output<CreateUpdateOptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -69,6 +85,10 @@ public final class CassandraResourceCassandraKeyspaceArgs extends com.pulumi.res
     @Import(name="resource", required=true)
     private Output<CassandraKeyspaceResourceArgs> resource;
 
+    /**
+     * @return The standard JSON format of a Cassandra keyspace
+     * 
+     */
     public Output<CassandraKeyspaceResourceArgs> resource() {
         return this.resource;
     }
@@ -80,6 +100,10 @@ public final class CassandraResourceCassandraKeyspaceArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class CassandraResourceCassandraKeyspaceArgs extends com.pulumi.res
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with &#34;defaultExperience&#34;: &#34;Cassandra&#34;. Current &#34;defaultExperience&#34; values also include &#34;Table&#34;, &#34;Graph&#34;, &#34;DocumentDB&#34;, and &#34;MongoDB&#34;.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,65 +153,149 @@ public final class CassandraResourceCassandraKeyspaceArgs extends com.pulumi.res
             $ = new CassandraResourceCassandraKeyspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param keyspaceName Cosmos DB keyspace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(@Nullable Output<String> keyspaceName) {
             $.keyspaceName = keyspaceName;
             return this;
         }
 
+        /**
+         * @param keyspaceName Cosmos DB keyspace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(String keyspaceName) {
             return keyspaceName(Output.of(keyspaceName));
         }
 
+        /**
+         * @param location The location of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param options A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(CreateUpdateOptionsArgs options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param resource The standard JSON format of a Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(Output<CassandraKeyspaceResourceArgs> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource The standard JSON format of a Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(CassandraKeyspaceResourceArgs resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with &#34;defaultExperience&#34;: &#34;Cassandra&#34;. Current &#34;defaultExperience&#34; values also include &#34;Table&#34;, &#34;Graph&#34;, &#34;DocumentDB&#34;, and &#34;MongoDB&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with &#34;defaultExperience&#34;: &#34;Cassandra&#34;. Current &#34;defaultExperience&#34; values also include &#34;Table&#34;, &#34;Graph&#34;, &#34;DocumentDB&#34;, and &#34;MongoDB&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

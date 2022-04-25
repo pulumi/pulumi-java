@@ -28,6 +28,10 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="averageValue")
     private @Nullable Output<String> averageValue;
 
+    /**
+     * @return averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+     * 
+     */
     public Optional<Output<String>> averageValue() {
         return Optional.ofNullable(this.averageValue);
     }
@@ -39,6 +43,10 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return metricName is the name of the metric in question.
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -50,6 +58,10 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="selector")
     private @Nullable Output<LabelSelectorArgs> selector;
 
+    /**
+     * @return selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -61,6 +73,10 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="target", required=true)
     private Output<CrossVersionObjectReferenceArgs> target;
 
+    /**
+     * @return target is the described Kubernetes object.
+     * 
+     */
     public Output<CrossVersionObjectReferenceArgs> target() {
         return this.target;
     }
@@ -72,6 +88,10 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetValue", required=true)
     private Output<String> targetValue;
 
+    /**
+     * @return targetValue is the target value of the metric (as a quantity).
+     * 
+     */
     public Output<String> targetValue() {
         return this.targetValue;
     }
@@ -104,47 +124,107 @@ public final class ObjectMetricSourceArgs extends com.pulumi.resources.ResourceA
             $ = new ObjectMetricSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param averageValue averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageValue(@Nullable Output<String> averageValue) {
             $.averageValue = averageValue;
             return this;
         }
 
+        /**
+         * @param averageValue averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder averageValue(String averageValue) {
             return averageValue(Output.of(averageValue));
         }
 
+        /**
+         * @param metricName metricName is the name of the metric in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName metricName is the name of the metric in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param selector selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(LabelSelectorArgs selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param target target is the described Kubernetes object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<CrossVersionObjectReferenceArgs> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target target is the described Kubernetes object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(CrossVersionObjectReferenceArgs target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param targetValue targetValue is the target value of the metric (as a quantity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetValue(Output<String> targetValue) {
             $.targetValue = targetValue;
             return this;
         }
 
+        /**
+         * @param targetValue targetValue is the target value of the metric (as a quantity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetValue(String targetValue) {
             return targetValue(Output.of(targetValue));
         }

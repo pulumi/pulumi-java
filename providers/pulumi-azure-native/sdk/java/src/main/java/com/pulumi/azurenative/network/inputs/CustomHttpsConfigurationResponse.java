@@ -26,6 +26,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="certificateSource", required=true)
     private String certificateSource;
 
+    /**
+     * @return Defines the source of the SSL certificate
+     * 
+     */
     public String certificateSource() {
         return this.certificateSource;
     }
@@ -37,6 +41,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="certificateType")
     private @Nullable String certificateType;
 
+    /**
+     * @return Defines the type of the certificate used for secure connections to a frontendEndpoint
+     * 
+     */
     public Optional<String> certificateType() {
         return Optional.ofNullable(this.certificateType);
     }
@@ -48,6 +56,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="minimumTlsVersion", required=true)
     private String minimumTlsVersion;
 
+    /**
+     * @return The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
+     * 
+     */
     public String minimumTlsVersion() {
         return this.minimumTlsVersion;
     }
@@ -59,6 +71,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="protocolType", required=true)
     private String protocolType;
 
+    /**
+     * @return Defines the TLS extension protocol that is used for secure delivery
+     * 
+     */
     public String protocolType() {
         return this.protocolType;
     }
@@ -70,6 +86,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="secretName")
     private @Nullable String secretName;
 
+    /**
+     * @return The name of the Key Vault secret representing the full certificate PFX
+     * 
+     */
     public Optional<String> secretName() {
         return Optional.ofNullable(this.secretName);
     }
@@ -81,6 +101,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="secretVersion")
     private @Nullable String secretVersion;
 
+    /**
+     * @return The version of the Key Vault secret representing the full certificate PFX
+     * 
+     */
     public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -92,6 +116,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
     @Import(name="vault")
     private @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
+    /**
+     * @return The Key Vault containing the SSL certificate
+     * 
+     */
     public Optional<KeyVaultCertificateSourceParametersResponseVault> vault() {
         return Optional.ofNullable(this.vault);
     }
@@ -126,36 +154,78 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
             $ = new CustomHttpsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateSource Defines the source of the SSL certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSource(String certificateSource) {
             $.certificateSource = certificateSource;
             return this;
         }
 
+        /**
+         * @param certificateType Defines the type of the certificate used for secure connections to a frontendEndpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateType(@Nullable String certificateType) {
             $.certificateType = certificateType;
             return this;
         }
 
+        /**
+         * @param minimumTlsVersion The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(String minimumTlsVersion) {
             $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
+        /**
+         * @param protocolType Defines the TLS extension protocol that is used for secure delivery
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(String protocolType) {
             $.protocolType = protocolType;
             return this;
         }
 
+        /**
+         * @param secretName The name of the Key Vault secret representing the full certificate PFX
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(@Nullable String secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretVersion The version of the Key Vault secret representing the full certificate PFX
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable String secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param vault The Key Vault containing the SSL certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder vault(@Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
             $.vault = vault;
             return this;

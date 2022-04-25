@@ -23,6 +23,10 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Name of a Cloud SQL instance.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
     @Import(name="externalIp", required=true)
     private String externalIp;
 
+    /**
+     * @return External IP address of a Cloud SQL instance.
+     * 
+     */
     public String externalIp() {
         return this.externalIp;
     }
@@ -45,6 +53,10 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
     @Import(name="internalIp", required=true)
     private String internalIp;
 
+    /**
+     * @return Internal IP address of a Cloud SQL instance.
+     * 
+     */
     public String internalIp() {
         return this.internalIp;
     }
@@ -56,6 +68,10 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
     @Import(name="networkUri", required=true)
     private String networkUri;
 
+    /**
+     * @return URI of a Cloud SQL instance network or empty string if the instance does not have one.
+     * 
+     */
     public String networkUri() {
         return this.networkUri;
     }
@@ -67,6 +83,10 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return Region in which the Cloud SQL instance is running.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -78,6 +98,10 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of a Cloud SQL instance.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -111,31 +135,67 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
             $ = new CloudSQLInstanceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name of a Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param externalIp External IP address of a Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIp(String externalIp) {
             $.externalIp = externalIp;
             return this;
         }
 
+        /**
+         * @param internalIp Internal IP address of a Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIp(String internalIp) {
             $.internalIp = internalIp;
             return this;
         }
 
+        /**
+         * @param networkUri URI of a Cloud SQL instance network or empty string if the instance does not have one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param region Region in which the Cloud SQL instance is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param uri URI of a Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

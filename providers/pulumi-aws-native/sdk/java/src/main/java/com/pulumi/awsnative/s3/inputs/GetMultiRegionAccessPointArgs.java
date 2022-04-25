@@ -19,6 +19,10 @@ public final class GetMultiRegionAccessPointArgs extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name you want to assign to this Multi Region Access Point.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetMultiRegionAccessPointArgs extends com.pulumi.resources.In
             $ = new GetMultiRegionAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name you want to assign to this Multi Region Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

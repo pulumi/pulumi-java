@@ -27,6 +27,10 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends com.pulumi.reso
     @Import(name="colorFamilies")
     private @Nullable Output<List<String>> colorFamilies;
 
+    /**
+     * @return The standard color families. Strongly recommended to use the following standard color groups: &#34;Red&#34;, &#34;Pink&#34;, &#34;Orange&#34;, &#34;Yellow&#34;, &#34;Purple&#34;, &#34;Green&#34;, &#34;Cyan&#34;, &#34;Blue&#34;, &#34;Brown&#34;, &#34;White&#34;, &#34;Gray&#34;, &#34;Black&#34; and &#34;Mixed&#34;. Normally it is expected to have only 1 color family. May consider using single &#34;Mixed&#34; instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
+     * 
+     */
     public Optional<Output<List<String>>> colorFamilies() {
         return Optional.ofNullable(this.colorFamilies);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends com.pulumi.reso
     @Import(name="colors")
     private @Nullable Output<List<String>> colors;
 
+    /**
+     * @return The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single &#34;Mixed&#34; instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
+     * 
+     */
     public Optional<Output<List<String>>> colors() {
         return Optional.ofNullable(this.colors);
     }
@@ -67,28 +75,64 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends com.pulumi.reso
             $ = new GoogleCloudRetailV2alphaColorInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param colorFamilies The standard color families. Strongly recommended to use the following standard color groups: &#34;Red&#34;, &#34;Pink&#34;, &#34;Orange&#34;, &#34;Yellow&#34;, &#34;Purple&#34;, &#34;Green&#34;, &#34;Cyan&#34;, &#34;Blue&#34;, &#34;Brown&#34;, &#34;White&#34;, &#34;Gray&#34;, &#34;Black&#34; and &#34;Mixed&#34;. Normally it is expected to have only 1 color family. May consider using single &#34;Mixed&#34; instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
+         * 
+         * @return builder
+         * 
+         */
         public Builder colorFamilies(@Nullable Output<List<String>> colorFamilies) {
             $.colorFamilies = colorFamilies;
             return this;
         }
 
+        /**
+         * @param colorFamilies The standard color families. Strongly recommended to use the following standard color groups: &#34;Red&#34;, &#34;Pink&#34;, &#34;Orange&#34;, &#34;Yellow&#34;, &#34;Purple&#34;, &#34;Green&#34;, &#34;Cyan&#34;, &#34;Blue&#34;, &#34;Brown&#34;, &#34;White&#34;, &#34;Gray&#34;, &#34;Black&#34; and &#34;Mixed&#34;. Normally it is expected to have only 1 color family. May consider using single &#34;Mixed&#34; instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
+         * 
+         * @return builder
+         * 
+         */
         public Builder colorFamilies(List<String> colorFamilies) {
             return colorFamilies(Output.of(colorFamilies));
         }
 
+        /**
+         * @param colorFamilies The standard color families. Strongly recommended to use the following standard color groups: &#34;Red&#34;, &#34;Pink&#34;, &#34;Orange&#34;, &#34;Yellow&#34;, &#34;Purple&#34;, &#34;Green&#34;, &#34;Cyan&#34;, &#34;Blue&#34;, &#34;Brown&#34;, &#34;White&#34;, &#34;Gray&#34;, &#34;Black&#34; and &#34;Mixed&#34;. Normally it is expected to have only 1 color family. May consider using single &#34;Mixed&#34; instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
+         * 
+         * @return builder
+         * 
+         */
         public Builder colorFamilies(String... colorFamilies) {
             return colorFamilies(List.of(colorFamilies));
         }
 
+        /**
+         * @param colors The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single &#34;Mixed&#34; instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
+         * 
+         * @return builder
+         * 
+         */
         public Builder colors(@Nullable Output<List<String>> colors) {
             $.colors = colors;
             return this;
         }
 
+        /**
+         * @param colors The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single &#34;Mixed&#34; instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
+         * 
+         * @return builder
+         * 
+         */
         public Builder colors(List<String> colors) {
             return colors(Output.of(colors));
         }
 
+        /**
+         * @param colors The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single &#34;Mixed&#34; instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
+         * 
+         * @return builder
+         * 
+         */
         public Builder colors(String... colors) {
             return colors(List.of(colors));
         }

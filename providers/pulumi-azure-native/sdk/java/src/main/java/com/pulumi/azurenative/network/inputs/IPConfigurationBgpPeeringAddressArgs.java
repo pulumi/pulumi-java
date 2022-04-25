@@ -27,6 +27,10 @@ public final class IPConfigurationBgpPeeringAddressArgs extends com.pulumi.resou
     @Import(name="customBgpIpAddresses")
     private @Nullable Output<List<String>> customBgpIpAddresses;
 
+    /**
+     * @return The list of custom BGP peering addresses which belong to IP configuration.
+     * 
+     */
     public Optional<Output<List<String>>> customBgpIpAddresses() {
         return Optional.ofNullable(this.customBgpIpAddresses);
     }
@@ -38,6 +42,10 @@ public final class IPConfigurationBgpPeeringAddressArgs extends com.pulumi.resou
     @Import(name="ipconfigurationId")
     private @Nullable Output<String> ipconfigurationId;
 
+    /**
+     * @return The ID of IP configuration which belongs to gateway.
+     * 
+     */
     public Optional<Output<String>> ipconfigurationId() {
         return Optional.ofNullable(this.ipconfigurationId);
     }
@@ -67,24 +75,54 @@ public final class IPConfigurationBgpPeeringAddressArgs extends com.pulumi.resou
             $ = new IPConfigurationBgpPeeringAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customBgpIpAddresses The list of custom BGP peering addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBgpIpAddresses(@Nullable Output<List<String>> customBgpIpAddresses) {
             $.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
 
+        /**
+         * @param customBgpIpAddresses The list of custom BGP peering addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBgpIpAddresses(List<String> customBgpIpAddresses) {
             return customBgpIpAddresses(Output.of(customBgpIpAddresses));
         }
 
+        /**
+         * @param customBgpIpAddresses The list of custom BGP peering addresses which belong to IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBgpIpAddresses(String... customBgpIpAddresses) {
             return customBgpIpAddresses(List.of(customBgpIpAddresses));
         }
 
+        /**
+         * @param ipconfigurationId The ID of IP configuration which belongs to gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipconfigurationId(@Nullable Output<String> ipconfigurationId) {
             $.ipconfigurationId = ipconfigurationId;
             return this;
         }
 
+        /**
+         * @param ipconfigurationId The ID of IP configuration which belongs to gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipconfigurationId(String ipconfigurationId) {
             return ipconfigurationId(Output.of(ipconfigurationId));
         }

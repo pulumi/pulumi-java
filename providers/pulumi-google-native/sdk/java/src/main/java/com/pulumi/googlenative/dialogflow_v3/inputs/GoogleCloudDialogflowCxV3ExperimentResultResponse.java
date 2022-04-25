@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends com
     @Import(name="lastUpdateTime", required=true)
     private String lastUpdateTime;
 
+    /**
+     * @return The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
+     * 
+     */
     public String lastUpdateTime() {
         return this.lastUpdateTime;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends com
     @Import(name="versionMetrics", required=true)
     private List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
 
+    /**
+     * @return Version variants and metrics.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics() {
         return this.versionMetrics;
     }
@@ -65,16 +73,34 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends com
             $ = new GoogleCloudDialogflowCxV3ExperimentResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastUpdateTime The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateTime(String lastUpdateTime) {
             $.lastUpdateTime = lastUpdateTime;
             return this;
         }
 
+        /**
+         * @param versionMetrics Version variants and metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionMetrics(List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
             $.versionMetrics = versionMetrics;
             return this;
         }
 
+        /**
+         * @param versionMetrics Version variants and metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionMetrics(GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse... versionMetrics) {
             return versionMetrics(List.of(versionMetrics));
         }

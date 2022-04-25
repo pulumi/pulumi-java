@@ -24,6 +24,10 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
     @Import(name="mode", required=true)
     private Integer mode;
 
+    /**
+     * @return Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume&#39;s default mode will be used. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * 
+     */
     public Integer mode() {
         return this.mode;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The relative path of the secret in the container.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
             $ = new GoogleCloudRunOpV2VersionToPathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume&#39;s default mode will be used. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Integer mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param path The relative path of the secret in the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param version The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

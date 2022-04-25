@@ -21,6 +21,10 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pem")
     private @Nullable String pem;
 
+    /**
+     * @return PEM formatted public key.
+     * 
+     */
     public Optional<String> pem() {
         return Optional.ofNullable(this.pem);
     }
@@ -49,6 +53,12 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CertificateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pem PEM formatted public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pem(@Nullable String pem) {
             $.pem = pem;
             return this;

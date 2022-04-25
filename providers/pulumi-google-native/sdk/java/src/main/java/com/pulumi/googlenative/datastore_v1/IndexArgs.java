@@ -25,6 +25,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ancestor", required=true)
     private Output<IndexAncestor> ancestor;
 
+    /**
+     * @return The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     * 
+     */
     public Output<IndexAncestor> ancestor() {
         return this.ancestor;
     }
@@ -36,6 +40,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The entity kind to which this index applies.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -54,6 +62,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 
+    /**
+     * @return An ordered sequence of property names and their index attributes.
+     * 
+     */
     public Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties() {
         return this.properties;
     }
@@ -85,20 +97,44 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IndexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ancestor The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ancestor(Output<IndexAncestor> ancestor) {
             $.ancestor = ancestor;
             return this;
         }
 
+        /**
+         * @param ancestor The index&#39;s ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ancestor(IndexAncestor ancestor) {
             return ancestor(Output.of(ancestor));
         }
 
+        /**
+         * @param kind The entity kind to which this index applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The entity kind to which this index applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
@@ -112,15 +148,33 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param properties An ordered sequence of property names and their index attributes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties An ordered sequence of property names and their index attributes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(List<GoogleDatastoreAdminV1IndexedPropertyArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties An ordered sequence of property names and their index attributes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(GoogleDatastoreAdminV1IndexedPropertyArgs... properties) {
             return properties(List.of(properties));
         }

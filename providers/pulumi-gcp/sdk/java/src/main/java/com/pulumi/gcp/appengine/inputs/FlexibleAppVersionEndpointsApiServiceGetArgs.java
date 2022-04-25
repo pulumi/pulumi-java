@@ -28,6 +28,15 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
     @Import(name="configId")
     private @Nullable Output<String> configId;
 
+    /**
+     * @return Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.
+     * By default, the rollout strategy for Endpoints is &#34;FIXED&#34;. This means that Endpoints starts up with a particular configuration ID.
+     * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
+     * and is required in this case.
+     * Endpoints also has a rollout strategy called &#34;MANAGED&#34;. When using this, Endpoints fetches the latest configuration and does not need
+     * the configuration ID. In this case, configId must be omitted.
+     * 
+     */
     public Optional<Output<String>> configId() {
         return Optional.ofNullable(this.configId);
     }
@@ -39,6 +48,10 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
     @Import(name="disableTraceSampling")
     private @Nullable Output<Boolean> disableTraceSampling;
 
+    /**
+     * @return Enable or disable trace sampling. By default, this is set to false for enabled.
+     * 
+     */
     public Optional<Output<Boolean>> disableTraceSampling() {
         return Optional.ofNullable(this.disableTraceSampling);
     }
@@ -50,6 +63,10 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -63,6 +80,12 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
     @Import(name="rolloutStrategy")
     private @Nullable Output<String> rolloutStrategy;
 
+    /**
+     * @return Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+     * Default value is `FIXED`.
+     * Possible values are `FIXED` and `MANAGED`.
+     * 
+     */
     public Optional<Output<String>> rolloutStrategy() {
         return Optional.ofNullable(this.rolloutStrategy);
     }
@@ -94,38 +117,100 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends com.pulu
             $ = new FlexibleAppVersionEndpointsApiServiceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configId Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.
+         * By default, the rollout strategy for Endpoints is &#34;FIXED&#34;. This means that Endpoints starts up with a particular configuration ID.
+         * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
+         * and is required in this case.
+         * Endpoints also has a rollout strategy called &#34;MANAGED&#34;. When using this, Endpoints fetches the latest configuration and does not need
+         * the configuration ID. In this case, configId must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(@Nullable Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
+        /**
+         * @param configId Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.
+         * By default, the rollout strategy for Endpoints is &#34;FIXED&#34;. This means that Endpoints starts up with a particular configuration ID.
+         * When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
+         * and is required in this case.
+         * Endpoints also has a rollout strategy called &#34;MANAGED&#34;. When using this, Endpoints fetches the latest configuration and does not need
+         * the configuration ID. In this case, configId must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(String configId) {
             return configId(Output.of(configId));
         }
 
+        /**
+         * @param disableTraceSampling Enable or disable trace sampling. By default, this is set to false for enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
             $.disableTraceSampling = disableTraceSampling;
             return this;
         }
 
+        /**
+         * @param disableTraceSampling Enable or disable trace sampling. By default, this is set to false for enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTraceSampling(Boolean disableTraceSampling) {
             return disableTraceSampling(Output.of(disableTraceSampling));
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rolloutStrategy Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+         * Default value is `FIXED`.
+         * Possible values are `FIXED` and `MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutStrategy(@Nullable Output<String> rolloutStrategy) {
             $.rolloutStrategy = rolloutStrategy;
             return this;
         }
 
+        /**
+         * @param rolloutStrategy Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+         * Default value is `FIXED`.
+         * Possible values are `FIXED` and `MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutStrategy(String rolloutStrategy) {
             return rolloutStrategy(Output.of(rolloutStrategy));
         }

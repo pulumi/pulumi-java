@@ -22,6 +22,10 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return The full ARN of the target group.
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -33,6 +37,10 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The unique name of the target group.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,11 +78,23 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The full ARN of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param name The unique name of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

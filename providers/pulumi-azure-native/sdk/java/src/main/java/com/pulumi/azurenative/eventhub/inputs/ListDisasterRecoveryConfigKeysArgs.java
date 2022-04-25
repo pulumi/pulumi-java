@@ -19,6 +19,10 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
     @Import(name="alias", required=true)
     private String alias;
 
+    /**
+     * @return The Disaster Recovery configuration name
+     * 
+     */
     public String alias() {
         return this.alias;
     }
@@ -30,6 +34,10 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
     @Import(name="authorizationRuleName", required=true)
     private String authorizationRuleName;
 
+    /**
+     * @return The authorization rule name.
+     * 
+     */
     public String authorizationRuleName() {
         return this.authorizationRuleName;
     }
@@ -41,6 +49,10 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -52,6 +64,10 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class ListDisasterRecoveryConfigKeysArgs extends com.pulumi.resourc
             $ = new ListDisasterRecoveryConfigKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The Disaster Recovery configuration name
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param authorizationRuleName The authorization rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(String authorizationRuleName) {
             $.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

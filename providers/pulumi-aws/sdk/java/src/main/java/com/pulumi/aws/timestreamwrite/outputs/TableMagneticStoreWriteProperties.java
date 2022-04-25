@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TableMagneticStoreWriteProperties {
     /**
-     * A flag to enable magnetic store writes.
+     * @return A flag to enable magnetic store writes.
      * 
      */
     private final @Nullable Boolean enableMagneticStoreWrites;
     /**
-     * The location to write error reports for records rejected asynchronously during magnetic store writes. See Magnetic Store Rejected Data Location below for more details.
+     * @return The location to write error reports for records rejected asynchronously during magnetic store writes. See Magnetic Store Rejected Data Location below for more details.
      * 
      */
     private final @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation;
@@ -32,16 +32,16 @@ public final class TableMagneticStoreWriteProperties {
     }
 
     /**
-     * A flag to enable magnetic store writes.
+     * @return A flag to enable magnetic store writes.
      * 
-    */
+     */
     public Optional<Boolean> enableMagneticStoreWrites() {
         return Optional.ofNullable(this.enableMagneticStoreWrites);
     }
     /**
-     * The location to write error reports for records rejected asynchronously during magnetic store writes. See Magnetic Store Rejected Data Location below for more details.
+     * @return The location to write error reports for records rejected asynchronously during magnetic store writes. See Magnetic Store Rejected Data Location below for more details.
      * 
-    */
+     */
     public Optional<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation> magneticStoreRejectedDataLocation() {
         return Optional.ofNullable(this.magneticStoreRejectedDataLocation);
     }

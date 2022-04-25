@@ -27,6 +27,10 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
     @Import(name="principalId", required=true)
     private Output<String> principalId;
 
+    /**
+     * @return The principal id being assigned to.
+     * 
+     */
     public Output<String> principalId() {
         return this.principalId;
     }
@@ -38,6 +42,10 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
     @Import(name="principalMetadata")
     private @Nullable Output<Map<String,String>> principalMetadata;
 
+    /**
+     * @return Other metadata for the principal.
+     * 
+     */
     public Optional<Output<Map<String,String>>> principalMetadata() {
         return Optional.ofNullable(this.principalMetadata);
     }
@@ -49,6 +57,10 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
     @Import(name="principalType", required=true)
     private Output<String> principalType;
 
+    /**
+     * @return The Type of the principal ID.
+     * 
+     */
     public Output<String> principalType() {
         return this.principalType;
     }
@@ -79,29 +91,65 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
             $ = new AssignmentPrincipalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id being assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The principal id being assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param principalMetadata Other metadata for the principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalMetadata(@Nullable Output<Map<String,String>> principalMetadata) {
             $.principalMetadata = principalMetadata;
             return this;
         }
 
+        /**
+         * @param principalMetadata Other metadata for the principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalMetadata(Map<String,String> principalMetadata) {
             return principalMetadata(Output.of(principalMetadata));
         }
 
+        /**
+         * @param principalType The Type of the principal ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(Output<String> principalType) {
             $.principalType = principalType;
             return this;
         }
 
+        /**
+         * @param principalType The Type of the principal ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(String principalType) {
             return principalType(Output.of(principalType));
         }

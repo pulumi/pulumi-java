@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionUrlMapHostRule {
     /**
-     * Description of this test case.
+     * @return Description of this test case.
      * 
      */
     private final @Nullable String description;
     /**
-     * The list of host patterns to match. They must be valid
+     * @return The list of host patterns to match. They must be valid
      * hostnames, except * will match any string of ([a-z0-9-.]*). In
      * that case, * must be the first character and must be followed in
      * the pattern by either - or ..
@@ -26,7 +26,7 @@ public final class RegionUrlMapHostRule {
      */
     private final List<String> hosts;
     /**
-     * The name of the PathMatcher to use to match the path portion of
+     * @return The name of the PathMatcher to use to match the path portion of
      * the URL if the hostRule matches the URL&#39;s host portion.
      * 
      */
@@ -43,27 +43,27 @@ public final class RegionUrlMapHostRule {
     }
 
     /**
-     * Description of this test case.
+     * @return Description of this test case.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The list of host patterns to match. They must be valid
+     * @return The list of host patterns to match. They must be valid
      * hostnames, except * will match any string of ([a-z0-9-.]*). In
      * that case, * must be the first character and must be followed in
      * the pattern by either - or ..
      * 
-    */
+     */
     public List<String> hosts() {
         return this.hosts;
     }
     /**
-     * The name of the PathMatcher to use to match the path portion of
+     * @return The name of the PathMatcher to use to match the path portion of
      * the URL if the hostRule matches the URL&#39;s host portion.
      * 
-    */
+     */
     public String pathMatcher() {
         return this.pathMatcher;
     }

@@ -25,6 +25,10 @@ public final class ProductLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The description of the link.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class ProductLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return The URI corresponding to the link.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -65,11 +73,23 @@ public final class ProductLinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ProductLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The description of the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param uri The URI corresponding to the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

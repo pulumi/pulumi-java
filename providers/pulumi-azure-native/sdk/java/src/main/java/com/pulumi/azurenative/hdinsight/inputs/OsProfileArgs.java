@@ -26,6 +26,10 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linuxOperatingSystemProfile")
     private @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 
+    /**
+     * @return The Linux OS profile.
+     * 
+     */
     public Optional<Output<LinuxOperatingSystemProfileArgs>> linuxOperatingSystemProfile() {
         return Optional.ofNullable(this.linuxOperatingSystemProfile);
     }
@@ -54,11 +58,23 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OsProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxOperatingSystemProfile The Linux OS profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOperatingSystemProfile(@Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile) {
             $.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
         }
 
+        /**
+         * @param linuxOperatingSystemProfile The Linux OS profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOperatingSystemProfile(LinuxOperatingSystemProfileArgs linuxOperatingSystemProfile) {
             return linuxOperatingSystemProfile(Output.of(linuxOperatingSystemProfile));
         }

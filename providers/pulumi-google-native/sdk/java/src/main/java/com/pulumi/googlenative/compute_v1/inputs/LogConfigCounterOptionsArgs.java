@@ -28,6 +28,10 @@ public final class LogConfigCounterOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="customFields")
     private @Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<List<LogConfigCounterOptionsCustomFieldArgs>>> customFields() {
         return Optional.ofNullable(this.customFields);
     }
@@ -39,6 +43,10 @@ public final class LogConfigCounterOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -50,6 +58,10 @@ public final class LogConfigCounterOptionsArgs extends com.pulumi.resources.Reso
     @Import(name="metric")
     private @Nullable Output<String> metric;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<String>> metric() {
         return Optional.ofNullable(this.metric);
     }
@@ -80,33 +92,75 @@ public final class LogConfigCounterOptionsArgs extends com.pulumi.resources.Reso
             $ = new LogConfigCounterOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customFields This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(@Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields) {
             $.customFields = customFields;
             return this;
         }
 
+        /**
+         * @param customFields This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(List<LogConfigCounterOptionsCustomFieldArgs> customFields) {
             return customFields(Output.of(customFields));
         }
 
+        /**
+         * @param customFields This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFields(LogConfigCounterOptionsCustomFieldArgs... customFields) {
             return customFields(List.of(customFields));
         }
 
+        /**
+         * @param field This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param metric This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(@Nullable Output<String> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             return metric(Output.of(metric));
         }

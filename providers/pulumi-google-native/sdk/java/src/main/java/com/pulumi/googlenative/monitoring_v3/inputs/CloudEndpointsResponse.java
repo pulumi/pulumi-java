@@ -23,6 +23,10 @@ public final class CloudEndpointsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="service", required=true)
     private String service;
 
+    /**
+     * @return The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
+     * 
+     */
     public String service() {
         return this.service;
     }
@@ -51,6 +55,12 @@ public final class CloudEndpointsResponse extends com.pulumi.resources.InvokeArg
             $ = new CloudEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param service The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             $.service = service;
             return this;

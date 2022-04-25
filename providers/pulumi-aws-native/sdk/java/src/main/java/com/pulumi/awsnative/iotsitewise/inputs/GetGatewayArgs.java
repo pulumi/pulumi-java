@@ -19,6 +19,10 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayId", required=true)
     private String gatewayId;
 
+    /**
+     * @return The ID of the gateway device.
+     * 
+     */
     public String gatewayId() {
         return this.gatewayId;
     }
@@ -47,6 +51,12 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayId The ID of the gateway device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             $.gatewayId = gatewayId;
             return this;

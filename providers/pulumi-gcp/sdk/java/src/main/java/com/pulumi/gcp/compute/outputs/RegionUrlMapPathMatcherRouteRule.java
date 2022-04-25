@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionUrlMapPathMatcherRouteRule {
     /**
-     * Specifies changes to request and response headers that need to take effect for
+     * @return Specifies changes to request and response headers that need to take effect for
      * the selected backendService. headerAction specified here take effect before
      * headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
@@ -26,13 +26,13 @@ public final class RegionUrlMapPathMatcherRouteRule {
      */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction;
     /**
-     * The rules for determining a match.
+     * @return The rules for determining a match.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules;
     /**
-     * For routeRules within a given pathMatcher, priority determines the order
+     * @return For routeRules within a given pathMatcher, priority determines the order
      * in which load balancer will interpret routeRules. RouteRules are evaluated
      * in order of priority, from the lowest to highest number. The priority of
      * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
@@ -49,7 +49,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      */
     private final Integer priority;
     /**
-     * In response to a matching path, the load balancer performs advanced routing
+     * @return In response to a matching path, the load balancer performs advanced routing
      * actions like URL rewrites, header transformations, etc. prior to forwarding the
      * request to the selected backend. If routeAction specifies any
      * weightedBackendServices, service must not be set. Conversely if service is set,
@@ -60,12 +60,12 @@ public final class RegionUrlMapPathMatcherRouteRule {
      */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction;
     /**
-     * A reference to expected RegionBackendService resource the given URL should be mapped to.
+     * @return A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
      */
     private final @Nullable String service;
     /**
-     * When a path pattern is matched, the request is redirected to a URL specified
+     * @return When a path pattern is matched, the request is redirected to a URL specified
      * by urlRedirect. If urlRedirect is specified, service or routeAction must not
      * be set.
      * Structure is documented below.
@@ -90,25 +90,25 @@ public final class RegionUrlMapPathMatcherRouteRule {
     }
 
     /**
-     * Specifies changes to request and response headers that need to take effect for
+     * @return Specifies changes to request and response headers that need to take effect for
      * the selected backendService. headerAction specified here take effect before
      * headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherRouteRuleHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
-     * The rules for determining a match.
+     * @return The rules for determining a match.
      * Structure is documented below.
      * 
-    */
+     */
     public List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules() {
         return this.matchRules == null ? List.of() : this.matchRules;
     }
     /**
-     * For routeRules within a given pathMatcher, priority determines the order
+     * @return For routeRules within a given pathMatcher, priority determines the order
      * in which load balancer will interpret routeRules. RouteRules are evaluated
      * in order of priority, from the lowest to highest number. The priority of
      * a rule decreases as its number increases (1, 2, 3, N+1). The first rule
@@ -122,12 +122,12 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
      * future without any impact on existing rules.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * In response to a matching path, the load balancer performs advanced routing
+     * @return In response to a matching path, the load balancer performs advanced routing
      * actions like URL rewrites, header transformations, etc. prior to forwarding the
      * request to the selected backend. If routeAction specifies any
      * weightedBackendServices, service must not be set. Conversely if service is set,
@@ -135,24 +135,24 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * or urlRedirect must be set.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherRouteRuleRouteAction> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
-     * A reference to expected RegionBackendService resource the given URL should be mapped to.
+     * @return A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
-    */
+     */
     public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
-     * When a path pattern is matched, the request is redirected to a URL specified
+     * @return When a path pattern is matched, the request is redirected to a URL specified
      * by urlRedirect. If urlRedirect is specified, service or routeAction must not
      * be set.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherRouteRuleUrlRedirect> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }

@@ -26,6 +26,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountKey")
     private @Nullable Output<String> accountKey;
 
+    /**
+     * @return The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -37,6 +41,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -66,20 +74,44 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable Output<String> accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountKey The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(String accountKey) {
             return accountKey(Output.of(accountKey));
         }
 
+        /**
+         * @param accountName The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }

@@ -22,6 +22,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizationName")
     private @Nullable Output<String> authorizationName;
 
+    /**
+     * @return Name of the ExpressRoute Circuit Authorization in the private cloud
+     * 
+     */
     public Optional<Output<String>> authorizationName() {
         return Optional.ofNullable(this.authorizationName);
     }
@@ -33,6 +37,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return The name of the private cloud.
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -44,6 +52,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,29 +86,65 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationName Name of the ExpressRoute Circuit Authorization in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationName(@Nullable Output<String> authorizationName) {
             $.authorizationName = authorizationName;
             return this;
         }
 
+        /**
+         * @param authorizationName Name of the ExpressRoute Circuit Authorization in the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationName(String authorizationName) {
             return authorizationName(Output.of(authorizationName));
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

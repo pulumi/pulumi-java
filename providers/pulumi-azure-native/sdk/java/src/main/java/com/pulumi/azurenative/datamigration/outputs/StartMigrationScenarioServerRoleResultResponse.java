@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class StartMigrationScenarioServerRoleResultResponse {
     /**
-     * Migration exceptions and warnings.
+     * @return Migration exceptions and warnings.
      * 
      */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
     /**
-     * Name of server role.
+     * @return Name of server role.
      * 
      */
     private final String name;
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
      */
     private final String state;
@@ -38,23 +38,23 @@ public final class StartMigrationScenarioServerRoleResultResponse {
     }
 
     /**
-     * Migration exceptions and warnings.
+     * @return Migration exceptions and warnings.
      * 
-    */
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
-     * Name of server role.
+     * @return Name of server role.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

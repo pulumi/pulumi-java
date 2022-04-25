@@ -23,6 +23,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family", required=true)
     private String family;
 
+    /**
+     * @return SKU family name
+     * 
+     */
     public String family() {
         return this.family;
     }
@@ -34,6 +38,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return SKU name to specify whether the key vault is a standard vault or a premium vault.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family SKU family name
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name SKU name to specify whether the key vault is a standard vault or a premium vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

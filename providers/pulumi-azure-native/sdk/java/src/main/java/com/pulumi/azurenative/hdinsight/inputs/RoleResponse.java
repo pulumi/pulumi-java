@@ -35,6 +35,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="autoscaleConfiguration")
     private @Nullable AutoscaleResponse autoscaleConfiguration;
 
+    /**
+     * @return The autoscale configurations.
+     * 
+     */
     public Optional<AutoscaleResponse> autoscaleConfiguration() {
         return Optional.ofNullable(this.autoscaleConfiguration);
     }
@@ -46,6 +50,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataDisksGroups")
     private @Nullable List<DataDisksGroupsResponse> dataDisksGroups;
 
+    /**
+     * @return The data disks groups for the role.
+     * 
+     */
     public Optional<List<DataDisksGroupsResponse>> dataDisksGroups() {
         return Optional.ofNullable(this.dataDisksGroups);
     }
@@ -57,6 +65,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptDataDisks")
     private @Nullable Boolean encryptDataDisks;
 
+    /**
+     * @return Indicates whether encrypt the data disks.
+     * 
+     */
     public Optional<Boolean> encryptDataDisks() {
         return Optional.ofNullable(this.encryptDataDisks);
     }
@@ -68,6 +80,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hardwareProfile")
     private @Nullable HardwareProfileResponse hardwareProfile;
 
+    /**
+     * @return The hardware profile.
+     * 
+     */
     public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
@@ -79,6 +95,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minInstanceCount")
     private @Nullable Integer minInstanceCount;
 
+    /**
+     * @return The minimum instance count of the cluster.
+     * 
+     */
     public Optional<Integer> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
@@ -90,6 +110,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the role.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -101,6 +125,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osProfile")
     private @Nullable OsProfileResponse osProfile;
 
+    /**
+     * @return The operating system profile.
+     * 
+     */
     public Optional<OsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
@@ -112,6 +140,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scriptActions")
     private @Nullable List<ScriptActionResponse> scriptActions;
 
+    /**
+     * @return The list of script actions on the role.
+     * 
+     */
     public Optional<List<ScriptActionResponse>> scriptActions() {
         return Optional.ofNullable(this.scriptActions);
     }
@@ -123,6 +155,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetInstanceCount")
     private @Nullable Integer targetInstanceCount;
 
+    /**
+     * @return The instance count of the cluster.
+     * 
+     */
     public Optional<Integer> targetInstanceCount() {
         return Optional.ofNullable(this.targetInstanceCount);
     }
@@ -134,6 +170,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vMGroupName")
     private @Nullable String vMGroupName;
 
+    /**
+     * @return The name of the virtual machine group.
+     * 
+     */
     public Optional<String> vMGroupName() {
         return Optional.ofNullable(this.vMGroupName);
     }
@@ -145,6 +185,10 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualNetworkProfile")
     private @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
 
+    /**
+     * @return The virtual network profile.
+     * 
+     */
     public Optional<VirtualNetworkProfileResponse> virtualNetworkProfile() {
         return Optional.ofNullable(this.virtualNetworkProfile);
     }
@@ -183,64 +227,142 @@ public final class RoleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RoleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaleConfiguration The autoscale configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleConfiguration(@Nullable AutoscaleResponse autoscaleConfiguration) {
             $.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
 
+        /**
+         * @param dataDisksGroups The data disks groups for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisksGroups(@Nullable List<DataDisksGroupsResponse> dataDisksGroups) {
             $.dataDisksGroups = dataDisksGroups;
             return this;
         }
 
+        /**
+         * @param dataDisksGroups The data disks groups for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisksGroups(DataDisksGroupsResponse... dataDisksGroups) {
             return dataDisksGroups(List.of(dataDisksGroups));
         }
 
+        /**
+         * @param encryptDataDisks Indicates whether encrypt the data disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptDataDisks(@Nullable Boolean encryptDataDisks) {
             $.encryptDataDisks = encryptDataDisks;
             return this;
         }
 
+        /**
+         * @param hardwareProfile The hardware profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             $.hardwareProfile = hardwareProfile;
             return this;
         }
 
+        /**
+         * @param minInstanceCount The minimum instance count of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             $.minInstanceCount = minInstanceCount;
             return this;
         }
 
+        /**
+         * @param name The name of the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param osProfile The operating system profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(@Nullable OsProfileResponse osProfile) {
             $.osProfile = osProfile;
             return this;
         }
 
+        /**
+         * @param scriptActions The list of script actions on the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptActions(@Nullable List<ScriptActionResponse> scriptActions) {
             $.scriptActions = scriptActions;
             return this;
         }
 
+        /**
+         * @param scriptActions The list of script actions on the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptActions(ScriptActionResponse... scriptActions) {
             return scriptActions(List.of(scriptActions));
         }
 
+        /**
+         * @param targetInstanceCount The instance count of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetInstanceCount(@Nullable Integer targetInstanceCount) {
             $.targetInstanceCount = targetInstanceCount;
             return this;
         }
 
+        /**
+         * @param vMGroupName The name of the virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vMGroupName(@Nullable String vMGroupName) {
             $.vMGroupName = vMGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkProfile The virtual network profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
             $.virtualNetworkProfile = virtualNetworkProfile;
             return this;

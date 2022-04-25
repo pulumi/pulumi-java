@@ -26,6 +26,10 @@ public final class WebACLOverrideActionArgs extends com.pulumi.resources.Resourc
     @Import(name="count")
     private @Nullable Output<Object> count;
 
+    /**
+     * @return Count traffic towards application.
+     * 
+     */
     public Optional<Output<Object>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -37,6 +41,10 @@ public final class WebACLOverrideActionArgs extends com.pulumi.resources.Resourc
     @Import(name="none")
     private @Nullable Output<Object> none;
 
+    /**
+     * @return Keep the RuleGroup or ManagedRuleGroup behavior as is.
+     * 
+     */
     public Optional<Output<Object>> none() {
         return Optional.ofNullable(this.none);
     }
@@ -66,20 +74,44 @@ public final class WebACLOverrideActionArgs extends com.pulumi.resources.Resourc
             $ = new WebACLOverrideActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Count traffic towards application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Object> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Count traffic towards application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Object count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param none Keep the RuleGroup or ManagedRuleGroup behavior as is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder none(@Nullable Output<Object> none) {
             $.none = none;
             return this;
         }
 
+        /**
+         * @param none Keep the RuleGroup or ManagedRuleGroup behavior as is.
+         * 
+         * @return builder
+         * 
+         */
         public Builder none(Object none) {
             return none(Output.of(none));
         }

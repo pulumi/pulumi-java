@@ -23,6 +23,10 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="gatewayAuthMethod", required=true)
     private String gatewayAuthMethod;
 
+    /**
+     * @return Indicates how to authorize and/or authenticate devices to access the gateway.
+     * 
+     */
     public String gatewayAuthMethod() {
         return this.gatewayAuthMethod;
     }
@@ -34,6 +38,10 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="gatewayType", required=true)
     private String gatewayType;
 
+    /**
+     * @return Indicates whether the device is a gateway.
+     * 
+     */
     public String gatewayType() {
         return this.gatewayType;
     }
@@ -45,6 +53,10 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="lastAccessedGatewayId", required=true)
     private String lastAccessedGatewayId;
 
+    /**
+     * @return [Output only] The ID of the gateway the device accessed most recently.
+     * 
+     */
     public String lastAccessedGatewayId() {
         return this.lastAccessedGatewayId;
     }
@@ -56,6 +68,10 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="lastAccessedGatewayTime", required=true)
     private String lastAccessedGatewayTime;
 
+    /**
+     * @return [Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.
+     * 
+     */
     public String lastAccessedGatewayTime() {
         return this.lastAccessedGatewayTime;
     }
@@ -87,21 +103,45 @@ public final class GatewayConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new GatewayConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayAuthMethod Indicates how to authorize and/or authenticate devices to access the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayAuthMethod(String gatewayAuthMethod) {
             $.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
+        /**
+         * @param gatewayType Indicates whether the device is a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayType(String gatewayType) {
             $.gatewayType = gatewayType;
             return this;
         }
 
+        /**
+         * @param lastAccessedGatewayId [Output only] The ID of the gateway the device accessed most recently.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAccessedGatewayId(String lastAccessedGatewayId) {
             $.lastAccessedGatewayId = lastAccessedGatewayId;
             return this;
         }
 
+        /**
+         * @param lastAccessedGatewayTime [Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAccessedGatewayTime(String lastAccessedGatewayTime) {
             $.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;

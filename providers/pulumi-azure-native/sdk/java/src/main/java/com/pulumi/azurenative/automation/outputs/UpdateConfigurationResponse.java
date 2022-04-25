@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UpdateConfigurationResponse {
     /**
-     * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
+     * @return List of azure resource Ids for azure virtual machines targeted by the software update configuration.
      * 
      */
     private final @Nullable List<String> azureVirtualMachines;
     /**
-     * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
+     * @return Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
      * 
      */
     private final @Nullable String duration;
     /**
-     * Linux specific update configuration.
+     * @return Linux specific update configuration.
      * 
      */
     private final @Nullable LinuxPropertiesResponse linux;
     /**
-     * List of names of non-azure machines targeted by the software update configuration.
+     * @return List of names of non-azure machines targeted by the software update configuration.
      * 
      */
     private final @Nullable List<String> nonAzureComputerNames;
     /**
-     * operating system of target machines
+     * @return operating system of target machines
      * 
      */
     private final String operatingSystem;
     /**
-     * Group targets for the software update configuration.
+     * @return Group targets for the software update configuration.
      * 
      */
     private final @Nullable TargetPropertiesResponse targets;
     /**
-     * Windows specific update configuration.
+     * @return Windows specific update configuration.
      * 
      */
     private final @Nullable WindowsPropertiesResponse windows;
@@ -70,51 +70,51 @@ public final class UpdateConfigurationResponse {
     }
 
     /**
-     * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
+     * @return List of azure resource Ids for azure virtual machines targeted by the software update configuration.
      * 
-    */
+     */
     public List<String> azureVirtualMachines() {
         return this.azureVirtualMachines == null ? List.of() : this.azureVirtualMachines;
     }
     /**
-     * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
+     * @return Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
      * 
-    */
+     */
     public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
     /**
-     * Linux specific update configuration.
+     * @return Linux specific update configuration.
      * 
-    */
+     */
     public Optional<LinuxPropertiesResponse> linux() {
         return Optional.ofNullable(this.linux);
     }
     /**
-     * List of names of non-azure machines targeted by the software update configuration.
+     * @return List of names of non-azure machines targeted by the software update configuration.
      * 
-    */
+     */
     public List<String> nonAzureComputerNames() {
         return this.nonAzureComputerNames == null ? List.of() : this.nonAzureComputerNames;
     }
     /**
-     * operating system of target machines
+     * @return operating system of target machines
      * 
-    */
+     */
     public String operatingSystem() {
         return this.operatingSystem;
     }
     /**
-     * Group targets for the software update configuration.
+     * @return Group targets for the software update configuration.
      * 
-    */
+     */
     public Optional<TargetPropertiesResponse> targets() {
         return Optional.ofNullable(this.targets);
     }
     /**
-     * Windows specific update configuration.
+     * @return Windows specific update configuration.
      * 
-    */
+     */
     public Optional<WindowsPropertiesResponse> windows() {
         return Optional.ofNullable(this.windows);
     }

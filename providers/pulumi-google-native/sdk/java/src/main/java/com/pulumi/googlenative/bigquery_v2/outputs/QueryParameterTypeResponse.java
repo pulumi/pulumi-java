@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class QueryParameterTypeResponse {
     /**
-     * [Optional] The type of the array&#39;s elements, if this is an array.
+     * @return [Optional] The type of the array&#39;s elements, if this is an array.
      * 
      */
     private final QueryParameterTypeResponse arrayType;
     /**
-     * [Optional] The types of the fields of this struct, in order, if this is a struct.
+     * @return [Optional] The types of the fields of this struct, in order, if this is a struct.
      * 
      */
     private final List<QueryParameterTypeStructTypesItemResponse> structTypes;
     /**
-     * [Required] The top level type of this field.
+     * @return [Required] The top level type of this field.
      * 
      */
     private final String type;
@@ -38,23 +38,23 @@ public final class QueryParameterTypeResponse {
     }
 
     /**
-     * [Optional] The type of the array&#39;s elements, if this is an array.
+     * @return [Optional] The type of the array&#39;s elements, if this is an array.
      * 
-    */
+     */
     public QueryParameterTypeResponse arrayType() {
         return this.arrayType;
     }
     /**
-     * [Optional] The types of the fields of this struct, in order, if this is a struct.
+     * @return [Optional] The types of the fields of this struct, in order, if this is a struct.
      * 
-    */
+     */
     public List<QueryParameterTypeStructTypesItemResponse> structTypes() {
         return this.structTypes;
     }
     /**
-     * [Required] The top level type of this field.
+     * @return [Required] The top level type of this field.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

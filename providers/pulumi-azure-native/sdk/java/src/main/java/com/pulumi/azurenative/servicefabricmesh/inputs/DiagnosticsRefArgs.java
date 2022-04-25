@@ -28,6 +28,10 @@ public final class DiagnosticsRefArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Status of whether or not sinks are enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -39,6 +43,10 @@ public final class DiagnosticsRefArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sinkRefs")
     private @Nullable Output<List<String>> sinkRefs;
 
+    /**
+     * @return List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
+     * 
+     */
     public Optional<Output<List<String>>> sinkRefs() {
         return Optional.ofNullable(this.sinkRefs);
     }
@@ -68,24 +76,54 @@ public final class DiagnosticsRefArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DiagnosticsRefArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Status of whether or not sinks are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Status of whether or not sinks are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param sinkRefs List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRefs(@Nullable Output<List<String>> sinkRefs) {
             $.sinkRefs = sinkRefs;
             return this;
         }
 
+        /**
+         * @param sinkRefs List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRefs(List<String> sinkRefs) {
             return sinkRefs(Output.of(sinkRefs));
         }
 
+        /**
+         * @param sinkRefs List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRefs(String... sinkRefs) {
             return sinkRefs(List.of(sinkRefs));
         }

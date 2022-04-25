@@ -29,6 +29,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="admins")
     private @Nullable Output<List<PrincipalsArgs>> admins;
 
+    /**
+     * @return Azure data catalog admin list.
+     * 
+     */
     public Optional<Output<List<PrincipalsArgs>>> admins() {
         return Optional.ofNullable(this.admins);
     }
@@ -40,6 +44,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogName")
     private @Nullable Output<String> catalogName;
 
+    /**
+     * @return The name of the data catalog in the specified subscription and resource group.
+     * 
+     */
     public Optional<Output<String>> catalogName() {
         return Optional.ofNullable(this.catalogName);
     }
@@ -51,6 +59,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableAutomaticUnitAdjustment")
     private @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
 
+    /**
+     * @return Automatic unit adjustment enabled or not.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutomaticUnitAdjustment() {
         return Optional.ofNullable(this.enableAutomaticUnitAdjustment);
     }
@@ -62,6 +74,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -73,6 +89,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -84,6 +104,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<Either<String,SkuType>> sku;
 
+    /**
+     * @return Azure data catalog SKU.
+     * 
+     */
     public Optional<Output<Either<String,SkuType>>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -95,6 +119,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successfullyProvisioned")
     private @Nullable Output<Boolean> successfullyProvisioned;
 
+    /**
+     * @return Azure data catalog provision status.
+     * 
+     */
     public Optional<Output<Boolean>> successfullyProvisioned() {
         return Optional.ofNullable(this.successfullyProvisioned);
     }
@@ -106,6 +134,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -117,6 +149,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="units")
     private @Nullable Output<Integer> units;
 
+    /**
+     * @return Azure data catalog units.
+     * 
+     */
     public Optional<Output<Integer>> units() {
         return Optional.ofNullable(this.units);
     }
@@ -128,6 +164,10 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="users")
     private @Nullable Output<List<PrincipalsArgs>> users;
 
+    /**
+     * @return Azure data catalog user list.
+     * 
+     */
     public Optional<Output<List<PrincipalsArgs>>> users() {
         return Optional.ofNullable(this.users);
     }
@@ -165,108 +205,252 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ADCCatalogArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param admins Azure data catalog admin list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder admins(@Nullable Output<List<PrincipalsArgs>> admins) {
             $.admins = admins;
             return this;
         }
 
+        /**
+         * @param admins Azure data catalog admin list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder admins(List<PrincipalsArgs> admins) {
             return admins(Output.of(admins));
         }
 
+        /**
+         * @param admins Azure data catalog admin list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder admins(PrincipalsArgs... admins) {
             return admins(List.of(admins));
         }
 
+        /**
+         * @param catalogName The name of the data catalog in the specified subscription and resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogName(@Nullable Output<String> catalogName) {
             $.catalogName = catalogName;
             return this;
         }
 
+        /**
+         * @param catalogName The name of the data catalog in the specified subscription and resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogName(String catalogName) {
             return catalogName(Output.of(catalogName));
         }
 
+        /**
+         * @param enableAutomaticUnitAdjustment Automatic unit adjustment enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticUnitAdjustment(@Nullable Output<Boolean> enableAutomaticUnitAdjustment) {
             $.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
             return this;
         }
 
+        /**
+         * @param enableAutomaticUnitAdjustment Automatic unit adjustment enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticUnitAdjustment(Boolean enableAutomaticUnitAdjustment) {
             return enableAutomaticUnitAdjustment(Output.of(enableAutomaticUnitAdjustment));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Azure data catalog SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<Either<String,SkuType>> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Azure data catalog SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Either<String,SkuType> sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param sku Azure data catalog SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Either.ofLeft(sku));
         }
 
+        /**
+         * @param sku Azure data catalog SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuType sku) {
             return sku(Either.ofRight(sku));
         }
 
+        /**
+         * @param successfullyProvisioned Azure data catalog provision status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfullyProvisioned(@Nullable Output<Boolean> successfullyProvisioned) {
             $.successfullyProvisioned = successfullyProvisioned;
             return this;
         }
 
+        /**
+         * @param successfullyProvisioned Azure data catalog provision status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfullyProvisioned(Boolean successfullyProvisioned) {
             return successfullyProvisioned(Output.of(successfullyProvisioned));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param units Azure data catalog units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder units(@Nullable Output<Integer> units) {
             $.units = units;
             return this;
         }
 
+        /**
+         * @param units Azure data catalog units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder units(Integer units) {
             return units(Output.of(units));
         }
 
+        /**
+         * @param users Azure data catalog user list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(@Nullable Output<List<PrincipalsArgs>> users) {
             $.users = users;
             return this;
         }
 
+        /**
+         * @param users Azure data catalog user list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(List<PrincipalsArgs> users) {
             return users(Output.of(users));
         }
 
+        /**
+         * @param users Azure data catalog user list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(PrincipalsArgs... users) {
             return users(List.of(users));
         }

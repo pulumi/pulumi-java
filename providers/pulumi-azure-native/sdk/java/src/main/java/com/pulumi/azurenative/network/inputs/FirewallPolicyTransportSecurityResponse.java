@@ -25,6 +25,10 @@ public final class FirewallPolicyTransportSecurityResponse extends com.pulumi.re
     @Import(name="certificateAuthority")
     private @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
 
+    /**
+     * @return The CA used for intermediate CA generation.
+     * 
+     */
     public Optional<FirewallPolicyCertificateAuthorityResponse> certificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);
     }
@@ -53,6 +57,12 @@ public final class FirewallPolicyTransportSecurityResponse extends com.pulumi.re
             $ = new FirewallPolicyTransportSecurityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthority The CA used for intermediate CA generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthority(@Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
             $.certificateAuthority = certificateAuthority;
             return this;

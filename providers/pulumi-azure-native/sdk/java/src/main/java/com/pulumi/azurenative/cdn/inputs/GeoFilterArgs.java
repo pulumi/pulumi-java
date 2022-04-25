@@ -26,6 +26,10 @@ public final class GeoFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
     private Output<GeoFilterActions> action;
 
+    /**
+     * @return Action of the geo filter, i.e. allow or block access.
+     * 
+     */
     public Output<GeoFilterActions> action() {
         return this.action;
     }
@@ -37,6 +41,10 @@ public final class GeoFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="countryCodes", required=true)
     private Output<List<String>> countryCodes;
 
+    /**
+     * @return Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+     * 
+     */
     public Output<List<String>> countryCodes() {
         return this.countryCodes;
     }
@@ -48,6 +56,10 @@ public final class GeoFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relativePath", required=true)
     private Output<String> relativePath;
 
+    /**
+     * @return Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
+     * 
+     */
     public Output<String> relativePath() {
         return this.relativePath;
     }
@@ -78,33 +90,75 @@ public final class GeoFilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GeoFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action of the geo filter, i.e. allow or block access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<GeoFilterActions> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action of the geo filter, i.e. allow or block access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(GeoFilterActions action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param countryCodes Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCodes(Output<List<String>> countryCodes) {
             $.countryCodes = countryCodes;
             return this;
         }
 
+        /**
+         * @param countryCodes Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCodes(List<String> countryCodes) {
             return countryCodes(Output.of(countryCodes));
         }
 
+        /**
+         * @param countryCodes Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCodes(String... countryCodes) {
             return countryCodes(List.of(countryCodes));
         }
 
+        /**
+         * @param relativePath Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(Output<String> relativePath) {
             $.relativePath = relativePath;
             return this;
         }
 
+        /**
+         * @param relativePath Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(String relativePath) {
             return relativePath(Output.of(relativePath));
         }

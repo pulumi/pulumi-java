@@ -20,6 +20,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs extends
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return How many snapshots to keep. Must be an integer between 1 and 1000.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -48,11 +52,23 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs extends
             $ = new LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count How many snapshots to keep. Must be an integer between 1 and 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count How many snapshots to keep. Must be an integer between 1 and 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }

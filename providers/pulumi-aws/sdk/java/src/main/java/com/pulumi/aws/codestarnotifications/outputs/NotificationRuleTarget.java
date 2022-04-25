@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NotificationRuleTarget {
     /**
-     * The ARN of notification rule target. For example, a SNS Topic ARN.
+     * @return The ARN of notification rule target. For example, a SNS Topic ARN.
      * 
      */
     private final String address;
     /**
-     * The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
+     * @return The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
      * 
      */
     private final @Nullable String status;
     /**
-     * The type of the notification target. Default value is `SNS`.
+     * @return The type of the notification target. Default value is `SNS`.
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class NotificationRuleTarget {
     }
 
     /**
-     * The ARN of notification rule target. For example, a SNS Topic ARN.
+     * @return The ARN of notification rule target. For example, a SNS Topic ARN.
      * 
-    */
+     */
     public String address() {
         return this.address;
     }
     /**
-     * The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
+     * @return The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The type of the notification target. Default value is `SNS`.
+     * @return The type of the notification target. Default value is `SNS`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

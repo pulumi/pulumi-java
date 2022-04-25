@@ -26,6 +26,10 @@ public final class BuildpackBindingLaunchPropertiesResponse extends com.pulumi.r
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Non-sensitive properties for launchProperties
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -37,6 +41,10 @@ public final class BuildpackBindingLaunchPropertiesResponse extends com.pulumi.r
     @Import(name="secrets")
     private @Nullable Map<String,String> secrets;
 
+    /**
+     * @return Sensitive properties for launchProperties
+     * 
+     */
     public Optional<Map<String,String>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -66,11 +74,23 @@ public final class BuildpackBindingLaunchPropertiesResponse extends com.pulumi.r
             $ = new BuildpackBindingLaunchPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Non-sensitive properties for launchProperties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param secrets Sensitive properties for launchProperties
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable Map<String,String> secrets) {
             $.secrets = secrets;
             return this;

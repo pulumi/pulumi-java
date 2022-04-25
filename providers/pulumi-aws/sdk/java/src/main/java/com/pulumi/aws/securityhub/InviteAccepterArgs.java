@@ -20,6 +20,10 @@ public final class InviteAccepterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="masterId", required=true)
     private Output<String> masterId;
 
+    /**
+     * @return The account ID of the master Security Hub account whose invitation you&#39;re accepting.
+     * 
+     */
     public Output<String> masterId() {
         return this.masterId;
     }
@@ -48,11 +52,23 @@ public final class InviteAccepterArgs extends com.pulumi.resources.ResourceArgs 
             $ = new InviteAccepterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param masterId The account ID of the master Security Hub account whose invitation you&#39;re accepting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterId(Output<String> masterId) {
             $.masterId = masterId;
             return this;
         }
 
+        /**
+         * @param masterId The account ID of the master Security Hub account whose invitation you&#39;re accepting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterId(String masterId) {
             return masterId(Output.of(masterId));
         }

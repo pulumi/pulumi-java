@@ -27,6 +27,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="acceleratorCount")
     private @Nullable Output<Integer> acceleratorCount;
 
+    /**
+     * @return The number of the guest accelerator cards exposed to this instance.
+     * 
+     */
     public Optional<Output<Integer>> acceleratorCount() {
         return Optional.ofNullable(this.acceleratorCount);
     }
@@ -38,6 +42,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="acceleratorType")
     private @Nullable Output<String> acceleratorType;
 
+    /**
+     * @return Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
+     * 
+     */
     public Optional<Output<String>> acceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }
@@ -67,20 +75,44 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new AcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of the guest accelerator cards exposed to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(@Nullable Output<Integer> acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorCount The number of the guest accelerator cards exposed to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(Integer acceleratorCount) {
             return acceleratorCount(Output.of(acceleratorCount));
         }
 
+        /**
+         * @param acceleratorType Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }

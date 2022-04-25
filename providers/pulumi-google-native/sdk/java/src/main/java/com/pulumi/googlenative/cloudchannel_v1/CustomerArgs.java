@@ -31,6 +31,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alternateEmail")
     private @Nullable Output<String> alternateEmail;
 
+    /**
+     * @return Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
+     * 
+     */
     public Optional<Output<String>> alternateEmail() {
         return Optional.ofNullable(this.alternateEmail);
     }
@@ -42,6 +46,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelPartnerId")
     private @Nullable Output<String> channelPartnerId;
 
+    /**
+     * @return Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
+     * 
+     */
     public Optional<Output<String>> channelPartnerId() {
         return Optional.ofNullable(this.channelPartnerId);
     }
@@ -60,6 +68,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
     private Output<String> domain;
 
+    /**
+     * @return The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
+     * 
+     */
     public Output<String> domain() {
         return this.domain;
     }
@@ -71,6 +83,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
     private @Nullable Output<String> languageCode;
 
+    /**
+     * @return Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     * 
+     */
     public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
@@ -82,6 +98,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orgDisplayName", required=true)
     private Output<String> orgDisplayName;
 
+    /**
+     * @return Name of the organization that the customer entity represents.
+     * 
+     */
     public Output<String> orgDisplayName() {
         return this.orgDisplayName;
     }
@@ -93,6 +113,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orgPostalAddress", required=true)
     private Output<GoogleTypePostalAddressArgs> orgPostalAddress;
 
+    /**
+     * @return The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
+     * 
+     */
     public Output<GoogleTypePostalAddressArgs> orgPostalAddress() {
         return this.orgPostalAddress;
     }
@@ -104,6 +128,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryContactInfo")
     private @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
 
+    /**
+     * @return Primary contact info.
+     * 
+     */
     public Optional<Output<GoogleCloudChannelV1ContactInfoArgs>> primaryContactInfo() {
         return Optional.ofNullable(this.primaryContactInfo);
     }
@@ -149,20 +177,44 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param alternateEmail Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateEmail(@Nullable Output<String> alternateEmail) {
             $.alternateEmail = alternateEmail;
             return this;
         }
 
+        /**
+         * @param alternateEmail Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateEmail(String alternateEmail) {
             return alternateEmail(Output.of(alternateEmail));
         }
 
+        /**
+         * @param channelPartnerId Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelPartnerId(@Nullable Output<String> channelPartnerId) {
             $.channelPartnerId = channelPartnerId;
             return this;
         }
 
+        /**
+         * @param channelPartnerId Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelPartnerId(String channelPartnerId) {
             return channelPartnerId(Output.of(channelPartnerId));
         }
@@ -176,47 +228,107 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
             return channelPartnerLinkId(Output.of(channelPartnerLinkId));
         }
 
+        /**
+         * @param domain The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param languageCode Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }
 
+        /**
+         * @param orgDisplayName Name of the organization that the customer entity represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgDisplayName(Output<String> orgDisplayName) {
             $.orgDisplayName = orgDisplayName;
             return this;
         }
 
+        /**
+         * @param orgDisplayName Name of the organization that the customer entity represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgDisplayName(String orgDisplayName) {
             return orgDisplayName(Output.of(orgDisplayName));
         }
 
+        /**
+         * @param orgPostalAddress The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgPostalAddress(Output<GoogleTypePostalAddressArgs> orgPostalAddress) {
             $.orgPostalAddress = orgPostalAddress;
             return this;
         }
 
+        /**
+         * @param orgPostalAddress The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgPostalAddress(GoogleTypePostalAddressArgs orgPostalAddress) {
             return orgPostalAddress(Output.of(orgPostalAddress));
         }
 
+        /**
+         * @param primaryContactInfo Primary contact info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryContactInfo(@Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo) {
             $.primaryContactInfo = primaryContactInfo;
             return this;
         }
 
+        /**
+         * @param primaryContactInfo Primary contact info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryContactInfo(GoogleCloudChannelV1ContactInfoArgs primaryContactInfo) {
             return primaryContactInfo(Output.of(primaryContactInfo));
         }

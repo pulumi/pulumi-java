@@ -31,6 +31,10 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endGroupActions")
     private @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions;
 
+    /**
+     * @return The end group actions.
+     * 
+     */
     public Optional<Output<List<RecoveryPlanActionArgs>>> endGroupActions() {
         return Optional.ofNullable(this.endGroupActions);
     }
@@ -42,6 +46,10 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="groupType", required=true)
     private Output<Either<String,RecoveryPlanGroupType>> groupType;
 
+    /**
+     * @return The group type.
+     * 
+     */
     public Output<Either<String,RecoveryPlanGroupType>> groupType() {
         return this.groupType;
     }
@@ -53,6 +61,10 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="replicationProtectedItems")
     private @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
 
+    /**
+     * @return The list of protected items.
+     * 
+     */
     public Optional<Output<List<RecoveryPlanProtectedItemArgs>>> replicationProtectedItems() {
         return Optional.ofNullable(this.replicationProtectedItems);
     }
@@ -64,6 +76,10 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
     @Import(name="startGroupActions")
     private @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions;
 
+    /**
+     * @return The start group actions.
+     * 
+     */
     public Optional<Output<List<RecoveryPlanActionArgs>>> startGroupActions() {
         return Optional.ofNullable(this.startGroupActions);
     }
@@ -95,58 +111,136 @@ public final class RecoveryPlanGroupArgs extends com.pulumi.resources.ResourceAr
             $ = new RecoveryPlanGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endGroupActions The end group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endGroupActions(@Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions) {
             $.endGroupActions = endGroupActions;
             return this;
         }
 
+        /**
+         * @param endGroupActions The end group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endGroupActions(List<RecoveryPlanActionArgs> endGroupActions) {
             return endGroupActions(Output.of(endGroupActions));
         }
 
+        /**
+         * @param endGroupActions The end group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endGroupActions(RecoveryPlanActionArgs... endGroupActions) {
             return endGroupActions(List.of(endGroupActions));
         }
 
+        /**
+         * @param groupType The group type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(Output<Either<String,RecoveryPlanGroupType>> groupType) {
             $.groupType = groupType;
             return this;
         }
 
+        /**
+         * @param groupType The group type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(Either<String,RecoveryPlanGroupType> groupType) {
             return groupType(Output.of(groupType));
         }
 
+        /**
+         * @param groupType The group type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(String groupType) {
             return groupType(Either.ofLeft(groupType));
         }
 
+        /**
+         * @param groupType The group type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(RecoveryPlanGroupType groupType) {
             return groupType(Either.ofRight(groupType));
         }
 
+        /**
+         * @param replicationProtectedItems The list of protected items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationProtectedItems(@Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems) {
             $.replicationProtectedItems = replicationProtectedItems;
             return this;
         }
 
+        /**
+         * @param replicationProtectedItems The list of protected items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationProtectedItems(List<RecoveryPlanProtectedItemArgs> replicationProtectedItems) {
             return replicationProtectedItems(Output.of(replicationProtectedItems));
         }
 
+        /**
+         * @param replicationProtectedItems The list of protected items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationProtectedItems(RecoveryPlanProtectedItemArgs... replicationProtectedItems) {
             return replicationProtectedItems(List.of(replicationProtectedItems));
         }
 
+        /**
+         * @param startGroupActions The start group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startGroupActions(@Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions) {
             $.startGroupActions = startGroupActions;
             return this;
         }
 
+        /**
+         * @param startGroupActions The start group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startGroupActions(List<RecoveryPlanActionArgs> startGroupActions) {
             return startGroupActions(Output.of(startGroupActions));
         }
 
+        /**
+         * @param startGroupActions The start group actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startGroupActions(RecoveryPlanActionArgs... startGroupActions) {
             return startGroupActions(List.of(startGroupActions));
         }

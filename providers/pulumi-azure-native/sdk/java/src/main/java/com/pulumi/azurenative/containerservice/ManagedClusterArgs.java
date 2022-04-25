@@ -42,6 +42,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="aadProfile")
     private @Nullable Output<ManagedClusterAADProfileArgs> aadProfile;
 
+    /**
+     * @return Profile of Azure Active Directory configuration.
+     * 
+     */
     public Optional<Output<ManagedClusterAADProfileArgs>> aadProfile() {
         return Optional.ofNullable(this.aadProfile);
     }
@@ -53,6 +57,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="addonProfiles")
     private @Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
 
+    /**
+     * @return Profile of managed cluster add-on.
+     * 
+     */
     public Optional<Output<Map<String,ManagedClusterAddonProfileArgs>>> addonProfiles() {
         return Optional.ofNullable(this.addonProfiles);
     }
@@ -64,6 +72,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="agentPoolProfiles")
     private @Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
+    /**
+     * @return Properties of the agent pool.
+     * 
+     */
     public Optional<Output<List<ManagedClusterAgentPoolProfileArgs>>> agentPoolProfiles() {
         return Optional.ofNullable(this.agentPoolProfiles);
     }
@@ -75,6 +87,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="apiServerAccessProfile")
     private @Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
 
+    /**
+     * @return Access profile for managed cluster API server.
+     * 
+     */
     public Optional<Output<ManagedClusterAPIServerAccessProfileArgs>> apiServerAccessProfile() {
         return Optional.ofNullable(this.apiServerAccessProfile);
     }
@@ -86,6 +102,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoScalerProfile")
     private @Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
 
+    /**
+     * @return Parameters to be applied to the cluster-autoscaler when enabled
+     * 
+     */
     public Optional<Output<ManagedClusterPropertiesAutoScalerProfileArgs>> autoScalerProfile() {
         return Optional.ofNullable(this.autoScalerProfile);
     }
@@ -97,6 +117,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoUpgradeProfile")
     private @Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
 
+    /**
+     * @return Profile of auto upgrade configuration.
+     * 
+     */
     public Optional<Output<ManagedClusterAutoUpgradeProfileArgs>> autoUpgradeProfile() {
         return Optional.ofNullable(this.autoUpgradeProfile);
     }
@@ -108,6 +132,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disableLocalAccounts")
     private @Nullable Output<Boolean> disableLocalAccounts;
 
+    /**
+     * @return If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
+     * 
+     */
     public Optional<Output<Boolean>> disableLocalAccounts() {
         return Optional.ofNullable(this.disableLocalAccounts);
     }
@@ -119,6 +147,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="diskEncryptionSetID")
     private @Nullable Output<String> diskEncryptionSetID;
 
+    /**
+     * @return ResourceId of the disk encryption set to use for enabling encryption at rest.
+     * 
+     */
     public Optional<Output<String>> diskEncryptionSetID() {
         return Optional.ofNullable(this.diskEncryptionSetID);
     }
@@ -130,6 +162,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dnsPrefix")
     private @Nullable Output<String> dnsPrefix;
 
+    /**
+     * @return DNS prefix specified when creating the managed cluster.
+     * 
+     */
     public Optional<Output<String>> dnsPrefix() {
         return Optional.ofNullable(this.dnsPrefix);
     }
@@ -141,6 +177,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enablePodSecurityPolicy")
     private @Nullable Output<Boolean> enablePodSecurityPolicy;
 
+    /**
+     * @return (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
+     * 
+     */
     public Optional<Output<Boolean>> enablePodSecurityPolicy() {
         return Optional.ofNullable(this.enablePodSecurityPolicy);
     }
@@ -152,6 +192,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableRBAC")
     private @Nullable Output<Boolean> enableRBAC;
 
+    /**
+     * @return Whether to enable Kubernetes Role-Based Access Control.
+     * 
+     */
     public Optional<Output<Boolean>> enableRBAC() {
         return Optional.ofNullable(this.enableRBAC);
     }
@@ -163,6 +207,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location of the Virtual Machine.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -174,6 +222,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fqdnSubdomain")
     private @Nullable Output<String> fqdnSubdomain;
 
+    /**
+     * @return FQDN subdomain specified when creating private cluster with custom private dns zone.
+     * 
+     */
     public Optional<Output<String>> fqdnSubdomain() {
         return Optional.ofNullable(this.fqdnSubdomain);
     }
@@ -185,6 +237,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="httpProxyConfig")
     private @Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
 
+    /**
+     * @return Configurations for provisioning the cluster with HTTP proxy servers.
+     * 
+     */
     public Optional<Output<ManagedClusterHTTPProxyConfigArgs>> httpProxyConfig() {
         return Optional.ofNullable(this.httpProxyConfig);
     }
@@ -196,6 +252,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<ManagedClusterIdentityArgs> identity;
 
+    /**
+     * @return The identity of the managed cluster, if configured.
+     * 
+     */
     public Optional<Output<ManagedClusterIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -207,6 +267,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identityProfile")
     private @Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
 
+    /**
+     * @return Identities associated with the cluster.
+     * 
+     */
     public Optional<Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>>> identityProfile() {
         return Optional.ofNullable(this.identityProfile);
     }
@@ -218,6 +282,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubernetesVersion")
     private @Nullable Output<String> kubernetesVersion;
 
+    /**
+     * @return Version of Kubernetes specified when creating the managed cluster.
+     * 
+     */
     public Optional<Output<String>> kubernetesVersion() {
         return Optional.ofNullable(this.kubernetesVersion);
     }
@@ -229,6 +297,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="linuxProfile")
     private @Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile;
 
+    /**
+     * @return Profile for Linux VMs in the container service cluster.
+     * 
+     */
     public Optional<Output<ContainerServiceLinuxProfileArgs>> linuxProfile() {
         return Optional.ofNullable(this.linuxProfile);
     }
@@ -240,6 +312,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -251,6 +327,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkProfile")
     private @Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile;
 
+    /**
+     * @return Profile of network configuration.
+     * 
+     */
     public Optional<Output<ContainerServiceNetworkProfileArgs>> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -262,6 +342,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="nodeResourceGroup")
     private @Nullable Output<String> nodeResourceGroup;
 
+    /**
+     * @return Name of the resource group containing agent pool nodes.
+     * 
+     */
     public Optional<Output<String>> nodeResourceGroup() {
         return Optional.ofNullable(this.nodeResourceGroup);
     }
@@ -273,6 +357,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="podIdentityProfile")
     private @Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
 
+    /**
+     * @return Profile of managed cluster pod identity.
+     * 
+     */
     public Optional<Output<ManagedClusterPodIdentityProfileArgs>> podIdentityProfile() {
         return Optional.ofNullable(this.podIdentityProfile);
     }
@@ -284,6 +372,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="privateLinkResources")
     private @Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources;
 
+    /**
+     * @return Private link resources associated with the cluster.
+     * 
+     */
     public Optional<Output<List<PrivateLinkResourceArgs>>> privateLinkResources() {
         return Optional.ofNullable(this.privateLinkResources);
     }
@@ -295,6 +387,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -306,6 +402,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the managed cluster resource.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -317,6 +417,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="servicePrincipalProfile")
     private @Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
 
+    /**
+     * @return Information about a service principal identity for the cluster to use for manipulating Azure APIs.
+     * 
+     */
     public Optional<Output<ManagedClusterServicePrincipalProfileArgs>> servicePrincipalProfile() {
         return Optional.ofNullable(this.servicePrincipalProfile);
     }
@@ -328,6 +432,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
     private @Nullable Output<ManagedClusterSKUArgs> sku;
 
+    /**
+     * @return The managed cluster SKU.
+     * 
+     */
     public Optional<Output<ManagedClusterSKUArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -339,6 +447,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -350,6 +462,10 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="windowsProfile")
     private @Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile;
 
+    /**
+     * @return Profile for Windows VMs in the container service cluster.
+     * 
+     */
     public Optional<Output<ManagedClusterWindowsProfileArgs>> windowsProfile() {
         return Optional.ofNullable(this.windowsProfile);
     }
@@ -406,271 +522,631 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ManagedClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadProfile Profile of Azure Active Directory configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadProfile(@Nullable Output<ManagedClusterAADProfileArgs> aadProfile) {
             $.aadProfile = aadProfile;
             return this;
         }
 
+        /**
+         * @param aadProfile Profile of Azure Active Directory configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadProfile(ManagedClusterAADProfileArgs aadProfile) {
             return aadProfile(Output.of(aadProfile));
         }
 
+        /**
+         * @param addonProfiles Profile of managed cluster add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonProfiles(@Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles) {
             $.addonProfiles = addonProfiles;
             return this;
         }
 
+        /**
+         * @param addonProfiles Profile of managed cluster add-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonProfiles(Map<String,ManagedClusterAddonProfileArgs> addonProfiles) {
             return addonProfiles(Output.of(addonProfiles));
         }
 
+        /**
+         * @param agentPoolProfiles Properties of the agent pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolProfiles(@Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
             $.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
 
+        /**
+         * @param agentPoolProfiles Properties of the agent pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolProfiles(List<ManagedClusterAgentPoolProfileArgs> agentPoolProfiles) {
             return agentPoolProfiles(Output.of(agentPoolProfiles));
         }
 
+        /**
+         * @param agentPoolProfiles Properties of the agent pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolProfiles(ManagedClusterAgentPoolProfileArgs... agentPoolProfiles) {
             return agentPoolProfiles(List.of(agentPoolProfiles));
         }
 
+        /**
+         * @param apiServerAccessProfile Access profile for managed cluster API server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiServerAccessProfile(@Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile) {
             $.apiServerAccessProfile = apiServerAccessProfile;
             return this;
         }
 
+        /**
+         * @param apiServerAccessProfile Access profile for managed cluster API server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiServerAccessProfile(ManagedClusterAPIServerAccessProfileArgs apiServerAccessProfile) {
             return apiServerAccessProfile(Output.of(apiServerAccessProfile));
         }
 
+        /**
+         * @param autoScalerProfile Parameters to be applied to the cluster-autoscaler when enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalerProfile(@Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile) {
             $.autoScalerProfile = autoScalerProfile;
             return this;
         }
 
+        /**
+         * @param autoScalerProfile Parameters to be applied to the cluster-autoscaler when enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalerProfile(ManagedClusterPropertiesAutoScalerProfileArgs autoScalerProfile) {
             return autoScalerProfile(Output.of(autoScalerProfile));
         }
 
+        /**
+         * @param autoUpgradeProfile Profile of auto upgrade configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeProfile(@Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile) {
             $.autoUpgradeProfile = autoUpgradeProfile;
             return this;
         }
 
+        /**
+         * @param autoUpgradeProfile Profile of auto upgrade configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeProfile(ManagedClusterAutoUpgradeProfileArgs autoUpgradeProfile) {
             return autoUpgradeProfile(Output.of(autoUpgradeProfile));
         }
 
+        /**
+         * @param disableLocalAccounts If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAccounts(@Nullable Output<Boolean> disableLocalAccounts) {
             $.disableLocalAccounts = disableLocalAccounts;
             return this;
         }
 
+        /**
+         * @param disableLocalAccounts If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAccounts(Boolean disableLocalAccounts) {
             return disableLocalAccounts(Output.of(disableLocalAccounts));
         }
 
+        /**
+         * @param diskEncryptionSetID ResourceId of the disk encryption set to use for enabling encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetID(@Nullable Output<String> diskEncryptionSetID) {
             $.diskEncryptionSetID = diskEncryptionSetID;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSetID ResourceId of the disk encryption set to use for enabling encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetID(String diskEncryptionSetID) {
             return diskEncryptionSetID(Output.of(diskEncryptionSetID));
         }
 
+        /**
+         * @param dnsPrefix DNS prefix specified when creating the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsPrefix(@Nullable Output<String> dnsPrefix) {
             $.dnsPrefix = dnsPrefix;
             return this;
         }
 
+        /**
+         * @param dnsPrefix DNS prefix specified when creating the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsPrefix(String dnsPrefix) {
             return dnsPrefix(Output.of(dnsPrefix));
         }
 
+        /**
+         * @param enablePodSecurityPolicy (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePodSecurityPolicy(@Nullable Output<Boolean> enablePodSecurityPolicy) {
             $.enablePodSecurityPolicy = enablePodSecurityPolicy;
             return this;
         }
 
+        /**
+         * @param enablePodSecurityPolicy (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePodSecurityPolicy(Boolean enablePodSecurityPolicy) {
             return enablePodSecurityPolicy(Output.of(enablePodSecurityPolicy));
         }
 
+        /**
+         * @param enableRBAC Whether to enable Kubernetes Role-Based Access Control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRBAC(@Nullable Output<Boolean> enableRBAC) {
             $.enableRBAC = enableRBAC;
             return this;
         }
 
+        /**
+         * @param enableRBAC Whether to enable Kubernetes Role-Based Access Control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRBAC(Boolean enableRBAC) {
             return enableRBAC(Output.of(enableRBAC));
         }
 
+        /**
+         * @param extendedLocation The extended location of the Virtual Machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the Virtual Machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param fqdnSubdomain FQDN subdomain specified when creating private cluster with custom private dns zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdnSubdomain(@Nullable Output<String> fqdnSubdomain) {
             $.fqdnSubdomain = fqdnSubdomain;
             return this;
         }
 
+        /**
+         * @param fqdnSubdomain FQDN subdomain specified when creating private cluster with custom private dns zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdnSubdomain(String fqdnSubdomain) {
             return fqdnSubdomain(Output.of(fqdnSubdomain));
         }
 
+        /**
+         * @param httpProxyConfig Configurations for provisioning the cluster with HTTP proxy servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpProxyConfig(@Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig) {
             $.httpProxyConfig = httpProxyConfig;
             return this;
         }
 
+        /**
+         * @param httpProxyConfig Configurations for provisioning the cluster with HTTP proxy servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpProxyConfig(ManagedClusterHTTPProxyConfigArgs httpProxyConfig) {
             return httpProxyConfig(Output.of(httpProxyConfig));
         }
 
+        /**
+         * @param identity The identity of the managed cluster, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedClusterIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the managed cluster, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedClusterIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param identityProfile Identities associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProfile(@Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile) {
             $.identityProfile = identityProfile;
             return this;
         }
 
+        /**
+         * @param identityProfile Identities associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProfile(Map<String,ManagedClusterPropertiesIdentityProfileArgs> identityProfile) {
             return identityProfile(Output.of(identityProfile));
         }
 
+        /**
+         * @param kubernetesVersion Version of Kubernetes specified when creating the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesVersion(@Nullable Output<String> kubernetesVersion) {
             $.kubernetesVersion = kubernetesVersion;
             return this;
         }
 
+        /**
+         * @param kubernetesVersion Version of Kubernetes specified when creating the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesVersion(String kubernetesVersion) {
             return kubernetesVersion(Output.of(kubernetesVersion));
         }
 
+        /**
+         * @param linuxProfile Profile for Linux VMs in the container service cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxProfile(@Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile) {
             $.linuxProfile = linuxProfile;
             return this;
         }
 
+        /**
+         * @param linuxProfile Profile for Linux VMs in the container service cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxProfile(ContainerServiceLinuxProfileArgs linuxProfile) {
             return linuxProfile(Output.of(linuxProfile));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkProfile Profile of network configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile Profile of network configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(ContainerServiceNetworkProfileArgs networkProfile) {
             return networkProfile(Output.of(networkProfile));
         }
 
+        /**
+         * @param nodeResourceGroup Name of the resource group containing agent pool nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeResourceGroup(@Nullable Output<String> nodeResourceGroup) {
             $.nodeResourceGroup = nodeResourceGroup;
             return this;
         }
 
+        /**
+         * @param nodeResourceGroup Name of the resource group containing agent pool nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeResourceGroup(String nodeResourceGroup) {
             return nodeResourceGroup(Output.of(nodeResourceGroup));
         }
 
+        /**
+         * @param podIdentityProfile Profile of managed cluster pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podIdentityProfile(@Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile) {
             $.podIdentityProfile = podIdentityProfile;
             return this;
         }
 
+        /**
+         * @param podIdentityProfile Profile of managed cluster pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podIdentityProfile(ManagedClusterPodIdentityProfileArgs podIdentityProfile) {
             return podIdentityProfile(Output.of(podIdentityProfile));
         }
 
+        /**
+         * @param privateLinkResources Private link resources associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResources(@Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources) {
             $.privateLinkResources = privateLinkResources;
             return this;
         }
 
+        /**
+         * @param privateLinkResources Private link resources associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResources(List<PrivateLinkResourceArgs> privateLinkResources) {
             return privateLinkResources(Output.of(privateLinkResources));
         }
 
+        /**
+         * @param privateLinkResources Private link resources associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResources(PrivateLinkResourceArgs... privateLinkResources) {
             return privateLinkResources(List.of(privateLinkResources));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param servicePrincipalProfile Information about a service principal identity for the cluster to use for manipulating Azure APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalProfile(@Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile) {
             $.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
 
+        /**
+         * @param servicePrincipalProfile Information about a service principal identity for the cluster to use for manipulating Azure APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalProfile(ManagedClusterServicePrincipalProfileArgs servicePrincipalProfile) {
             return servicePrincipalProfile(Output.of(servicePrincipalProfile));
         }
 
+        /**
+         * @param sku The managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ManagedClusterSKUArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ManagedClusterSKUArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param windowsProfile Profile for Windows VMs in the container service cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsProfile(@Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile) {
             $.windowsProfile = windowsProfile;
             return this;
         }
 
+        /**
+         * @param windowsProfile Profile for Windows VMs in the container service cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsProfile(ManagedClusterWindowsProfileArgs windowsProfile) {
             return windowsProfile(Output.of(windowsProfile));
         }

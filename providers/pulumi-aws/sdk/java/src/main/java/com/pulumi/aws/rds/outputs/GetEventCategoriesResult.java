@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEventCategoriesResult {
     /**
-     * A list of the event categories.
+     * @return A list of the event categories.
      * 
      */
     private final List<String> eventCategories;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -35,16 +35,16 @@ public final class GetEventCategoriesResult {
     }
 
     /**
-     * A list of the event categories.
+     * @return A list of the event categories.
      * 
-    */
+     */
     public List<String> eventCategories() {
         return this.eventCategories;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

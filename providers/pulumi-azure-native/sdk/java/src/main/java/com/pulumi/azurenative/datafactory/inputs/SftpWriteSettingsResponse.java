@@ -27,6 +27,10 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="copyBehavior")
     private @Nullable Object copyBehavior;
 
+    /**
+     * @return The type of copy behavior for copy sink.
+     * 
+     */
     public Optional<Object> copyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
@@ -38,6 +42,10 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -49,6 +57,10 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -60,6 +72,10 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="operationTimeout")
     private @Nullable Object operationTimeout;
 
+    /**
+     * @return Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> operationTimeout() {
         return Optional.ofNullable(this.operationTimeout);
     }
@@ -72,6 +88,11 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;SftpWriteSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -83,6 +104,10 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="useTempFileRename")
     private @Nullable Object useTempFileRename;
 
+    /**
+     * @return Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn&#39;t support rename operation. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> useTempFileRename() {
         return Optional.ofNullable(this.useTempFileRename);
     }
@@ -116,31 +141,68 @@ public final class SftpWriteSettingsResponse extends com.pulumi.resources.Invoke
             $ = new SftpWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyBehavior The type of copy behavior for copy sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyBehavior(@Nullable Object copyBehavior) {
             $.copyBehavior = copyBehavior;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param operationTimeout Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationTimeout(@Nullable Object operationTimeout) {
             $.operationTimeout = operationTimeout;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;SftpWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param useTempFileRename Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn&#39;t support rename operation. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useTempFileRename(@Nullable Object useTempFileRename) {
             $.useTempFileRename = useTempFileRename;
             return this;

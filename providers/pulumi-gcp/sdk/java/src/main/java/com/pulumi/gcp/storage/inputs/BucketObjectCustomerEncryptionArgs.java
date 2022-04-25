@@ -22,6 +22,10 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
     @Import(name="encryptionAlgorithm")
     private @Nullable Output<String> encryptionAlgorithm;
 
+    /**
+     * @return Encryption algorithm. Default: AES256
+     * 
+     */
     public Optional<Output<String>> encryptionAlgorithm() {
         return Optional.ofNullable(this.encryptionAlgorithm);
     }
@@ -33,6 +37,10 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
     @Import(name="encryptionKey", required=true)
     private Output<String> encryptionKey;
 
+    /**
+     * @return Base64 encoded Customer-Supplied Encryption Key.
+     * 
+     */
     public Output<String> encryptionKey() {
         return this.encryptionKey;
     }
@@ -62,20 +70,44 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
             $ = new BucketObjectCustomerEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionAlgorithm Encryption algorithm. Default: AES256
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(@Nullable Output<String> encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param encryptionAlgorithm Encryption algorithm. Default: AES256
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
 
+        /**
+         * @param encryptionKey Base64 encoded Customer-Supplied Encryption Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(Output<String> encryptionKey) {
             $.encryptionKey = encryptionKey;
             return this;
         }
 
+        /**
+         * @param encryptionKey Base64 encoded Customer-Supplied Encryption Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(String encryptionKey) {
             return encryptionKey(Output.of(encryptionKey));
         }

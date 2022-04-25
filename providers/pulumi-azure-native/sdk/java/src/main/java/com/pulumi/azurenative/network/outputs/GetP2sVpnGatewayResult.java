@@ -19,72 +19,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetP2sVpnGatewayResult {
     /**
-     * List of all customer specified DNS servers IP addresses.
+     * @return List of all customer specified DNS servers IP addresses.
      * 
      */
     private final @Nullable List<String> customDnsServers;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
+     * @return Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
      * 
      */
     private final @Nullable Boolean isRoutingPreferenceInternet;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * List of all p2s connection configurations of the gateway.
+     * @return List of all p2s connection configurations of the gateway.
      * 
      */
     private final @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations;
     /**
-     * The provisioning state of the P2S VPN gateway resource.
+     * @return The provisioning state of the P2S VPN gateway resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The VirtualHub to which the gateway belongs.
+     * @return The VirtualHub to which the gateway belongs.
      * 
      */
     private final @Nullable SubResourceResponse virtualHub;
     /**
-     * All P2S VPN clients&#39; connection health status.
+     * @return All P2S VPN clients&#39; connection health status.
      * 
      */
     private final VpnClientConnectionHealthResponse vpnClientConnectionHealth;
     /**
-     * The scale unit for this p2s vpn gateway.
+     * @return The scale unit for this p2s vpn gateway.
      * 
      */
     private final @Nullable Integer vpnGatewayScaleUnit;
     /**
-     * The VpnServerConfiguration to which the p2sVpnGateway is attached to.
+     * @return The VpnServerConfiguration to which the p2sVpnGateway is attached to.
      * 
      */
     private final @Nullable SubResourceResponse vpnServerConfiguration;
@@ -122,100 +122,100 @@ public final class GetP2sVpnGatewayResult {
     }
 
     /**
-     * List of all customer specified DNS servers IP addresses.
+     * @return List of all customer specified DNS servers IP addresses.
      * 
-    */
+     */
     public List<String> customDnsServers() {
         return this.customDnsServers == null ? List.of() : this.customDnsServers;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
+     * @return Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
      * 
-    */
+     */
     public Optional<Boolean> isRoutingPreferenceInternet() {
         return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of all p2s connection configurations of the gateway.
+     * @return List of all p2s connection configurations of the gateway.
      * 
-    */
+     */
     public List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations() {
         return this.p2SConnectionConfigurations == null ? List.of() : this.p2SConnectionConfigurations;
     }
     /**
-     * The provisioning state of the P2S VPN gateway resource.
+     * @return The provisioning state of the P2S VPN gateway resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The VirtualHub to which the gateway belongs.
+     * @return The VirtualHub to which the gateway belongs.
      * 
-    */
+     */
     public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
     /**
-     * All P2S VPN clients&#39; connection health status.
+     * @return All P2S VPN clients&#39; connection health status.
      * 
-    */
+     */
     public VpnClientConnectionHealthResponse vpnClientConnectionHealth() {
         return this.vpnClientConnectionHealth;
     }
     /**
-     * The scale unit for this p2s vpn gateway.
+     * @return The scale unit for this p2s vpn gateway.
      * 
-    */
+     */
     public Optional<Integer> vpnGatewayScaleUnit() {
         return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }
     /**
-     * The VpnServerConfiguration to which the p2sVpnGateway is attached to.
+     * @return The VpnServerConfiguration to which the p2sVpnGateway is attached to.
      * 
-    */
+     */
     public Optional<SubResourceResponse> vpnServerConfiguration() {
         return Optional.ofNullable(this.vpnServerConfiguration);
     }

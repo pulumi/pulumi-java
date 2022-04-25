@@ -26,6 +26,10 @@ public final class SiteLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDiskSizeInMb")
     private @Nullable Output<Double> maxDiskSizeInMb;
 
+    /**
+     * @return Maximum allowed disk size usage in MB.
+     * 
+     */
     public Optional<Output<Double>> maxDiskSizeInMb() {
         return Optional.ofNullable(this.maxDiskSizeInMb);
     }
@@ -37,6 +41,10 @@ public final class SiteLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxMemoryInMb")
     private @Nullable Output<Double> maxMemoryInMb;
 
+    /**
+     * @return Maximum allowed memory usage in MB.
+     * 
+     */
     public Optional<Output<Double>> maxMemoryInMb() {
         return Optional.ofNullable(this.maxMemoryInMb);
     }
@@ -48,6 +56,10 @@ public final class SiteLimitsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxPercentageCpu")
     private @Nullable Output<Double> maxPercentageCpu;
 
+    /**
+     * @return Maximum allowed CPU usage percentage.
+     * 
+     */
     public Optional<Output<Double>> maxPercentageCpu() {
         return Optional.ofNullable(this.maxPercentageCpu);
     }
@@ -78,29 +90,65 @@ public final class SiteLimitsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SiteLimitsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxDiskSizeInMb Maximum allowed disk size usage in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDiskSizeInMb(@Nullable Output<Double> maxDiskSizeInMb) {
             $.maxDiskSizeInMb = maxDiskSizeInMb;
             return this;
         }
 
+        /**
+         * @param maxDiskSizeInMb Maximum allowed disk size usage in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDiskSizeInMb(Double maxDiskSizeInMb) {
             return maxDiskSizeInMb(Output.of(maxDiskSizeInMb));
         }
 
+        /**
+         * @param maxMemoryInMb Maximum allowed memory usage in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxMemoryInMb(@Nullable Output<Double> maxMemoryInMb) {
             $.maxMemoryInMb = maxMemoryInMb;
             return this;
         }
 
+        /**
+         * @param maxMemoryInMb Maximum allowed memory usage in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxMemoryInMb(Double maxMemoryInMb) {
             return maxMemoryInMb(Output.of(maxMemoryInMb));
         }
 
+        /**
+         * @param maxPercentageCpu Maximum allowed CPU usage percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentageCpu(@Nullable Output<Double> maxPercentageCpu) {
             $.maxPercentageCpu = maxPercentageCpu;
             return this;
         }
 
+        /**
+         * @param maxPercentageCpu Maximum allowed CPU usage percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentageCpu(Double maxPercentageCpu) {
             return maxPercentageCpu(Output.of(maxPercentageCpu));
         }

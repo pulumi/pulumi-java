@@ -28,6 +28,10 @@ public final class CbcsDrmConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="fairPlay")
     private @Nullable Output<StreamingPolicyFairPlayConfigurationArgs> fairPlay;
 
+    /**
+     * @return FairPlay configurations
+     * 
+     */
     public Optional<Output<StreamingPolicyFairPlayConfigurationArgs>> fairPlay() {
         return Optional.ofNullable(this.fairPlay);
     }
@@ -39,6 +43,10 @@ public final class CbcsDrmConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="playReady")
     private @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady;
 
+    /**
+     * @return PlayReady configurations
+     * 
+     */
     public Optional<Output<StreamingPolicyPlayReadyConfigurationArgs>> playReady() {
         return Optional.ofNullable(this.playReady);
     }
@@ -50,6 +58,10 @@ public final class CbcsDrmConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="widevine")
     private @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine;
 
+    /**
+     * @return Widevine configurations
+     * 
+     */
     public Optional<Output<StreamingPolicyWidevineConfigurationArgs>> widevine() {
         return Optional.ofNullable(this.widevine);
     }
@@ -80,29 +92,65 @@ public final class CbcsDrmConfigurationArgs extends com.pulumi.resources.Resourc
             $ = new CbcsDrmConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fairPlay FairPlay configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlay(@Nullable Output<StreamingPolicyFairPlayConfigurationArgs> fairPlay) {
             $.fairPlay = fairPlay;
             return this;
         }
 
+        /**
+         * @param fairPlay FairPlay configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder fairPlay(StreamingPolicyFairPlayConfigurationArgs fairPlay) {
             return fairPlay(Output.of(fairPlay));
         }
 
+        /**
+         * @param playReady PlayReady configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder playReady(@Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady) {
             $.playReady = playReady;
             return this;
         }
 
+        /**
+         * @param playReady PlayReady configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder playReady(StreamingPolicyPlayReadyConfigurationArgs playReady) {
             return playReady(Output.of(playReady));
         }
 
+        /**
+         * @param widevine Widevine configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder widevine(@Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine) {
             $.widevine = widevine;
             return this;
         }
 
+        /**
+         * @param widevine Widevine configurations
+         * 
+         * @return builder
+         * 
+         */
         public Builder widevine(StreamingPolicyWidevineConfigurationArgs widevine) {
             return widevine(Output.of(widevine));
         }

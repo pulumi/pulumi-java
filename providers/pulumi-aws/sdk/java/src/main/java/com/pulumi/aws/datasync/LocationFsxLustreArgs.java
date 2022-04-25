@@ -24,6 +24,10 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fsxFilesystemArn", required=true)
     private Output<String> fsxFilesystemArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the FSx for Lustre file system.
+     * 
+     */
     public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
@@ -35,6 +39,10 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
     @Import(name="securityGroupArns", required=true)
     private Output<List<String>> securityGroupArns;
 
+    /**
+     * @return The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Lustre file system.
+     * 
+     */
     public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
@@ -46,6 +54,10 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
     @Import(name="subdirectory")
     private @Nullable Output<String> subdirectory;
 
+    /**
+     * @return Subdirectory to perform actions as source or destination.
+     * 
+     */
     public Optional<Output<String>> subdirectory() {
         return Optional.ofNullable(this.subdirectory);
     }
@@ -57,6 +69,10 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -100,51 +120,117 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
             $ = new LocationFsxLustreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsxFilesystemArn The Amazon Resource Name (ARN) for the FSx for Lustre file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsxFilesystemArn(Output<String> fsxFilesystemArn) {
             $.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
 
+        /**
+         * @param fsxFilesystemArn The Amazon Resource Name (ARN) for the FSx for Lustre file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsxFilesystemArn(String fsxFilesystemArn) {
             return fsxFilesystemArn(Output.of(fsxFilesystemArn));
         }
 
+        /**
+         * @param securityGroupArns The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Lustre file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
             $.securityGroupArns = securityGroupArns;
             return this;
         }
 
+        /**
+         * @param securityGroupArns The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Lustre file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(List<String> securityGroupArns) {
             return securityGroupArns(Output.of(securityGroupArns));
         }
 
+        /**
+         * @param securityGroupArns The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Lustre file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(String... securityGroupArns) {
             return securityGroupArns(List.of(securityGroupArns));
         }
 
+        /**
+         * @param subdirectory Subdirectory to perform actions as source or destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
             $.subdirectory = subdirectory;
             return this;
         }
 
+        /**
+         * @param subdirectory Subdirectory to perform actions as source or destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdirectory(String subdirectory) {
             return subdirectory(Output.of(subdirectory));
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -26,6 +26,10 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="archiveUris", required=true)
     private List<String> archiveUris;
 
+    /**
+     * @return Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
+     * 
+     */
     public List<String> archiveUris() {
         return this.archiveUris;
     }
@@ -37,6 +41,10 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
     private List<String> args;
 
+    /**
+     * @return Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     * 
+     */
     public List<String> args() {
         return this.args;
     }
@@ -48,6 +56,10 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileUris", required=true)
     private List<String> fileUris;
 
+    /**
+     * @return Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+     * 
+     */
     public List<String> fileUris() {
         return this.fileUris;
     }
@@ -59,6 +71,10 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jarFileUris", required=true)
     private List<String> jarFileUris;
 
+    /**
+     * @return Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.
+     * 
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris;
     }
@@ -70,6 +86,10 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="loggingConfig", required=true)
     private LoggingConfigResponse loggingConfig;
 
+    /**
+     * @return Optional. The runtime log config for job execution.
+     * 
+     */
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
     }
@@ -81,6 +101,10 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mainClass", required=true)
     private String mainClass;
 
+    /**
+     * @return The name of the driver&#39;s main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.
+     * 
+     */
     public String mainClass() {
         return this.mainClass;
     }
@@ -92,6 +116,10 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mainJarFileUri", required=true)
     private String mainJarFileUri;
 
+    /**
+     * @return The HCFS URI of the jar file containing the main class. Examples: &#39;gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar&#39; &#39;hdfs:/tmp/test-samples/custom-wordcount.jar&#39; &#39;file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar&#39;
+     * 
+     */
     public String mainJarFileUri() {
         return this.mainJarFileUri;
     }
@@ -103,6 +131,10 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties", required=true)
     private Map<String,String> properties;
 
+    /**
+     * @return Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.
+     * 
+     */
     public Map<String,String> properties() {
         return this.properties;
     }
@@ -138,57 +170,129 @@ public final class HadoopJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HadoopJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(List<String> archiveUris) {
             $.archiveUris = archiveUris;
             return this;
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param fileUris Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(List<String> fileUris) {
             $.fileUris = fileUris;
             return this;
         }
 
+        /**
+         * @param fileUris Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
 
+        /**
+         * @param jarFileUris Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(List<String> jarFileUris) {
             $.jarFileUris = jarFileUris;
             return this;
         }
 
+        /**
+         * @param jarFileUris Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
 
+        /**
+         * @param loggingConfig Optional. The runtime log config for job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
 
+        /**
+         * @param mainClass The name of the driver&#39;s main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainClass(String mainClass) {
             $.mainClass = mainClass;
             return this;
         }
 
+        /**
+         * @param mainJarFileUri The HCFS URI of the jar file containing the main class. Examples: &#39;gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar&#39; &#39;hdfs:/tmp/test-samples/custom-wordcount.jar&#39; &#39;file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainJarFileUri(String mainJarFileUri) {
             $.mainJarFileUri = mainJarFileUri;
             return this;
         }
 
+        /**
+         * @param properties Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             $.properties = properties;
             return this;

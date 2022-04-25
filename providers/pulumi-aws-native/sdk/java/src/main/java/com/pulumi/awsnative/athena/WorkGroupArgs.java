@@ -28,6 +28,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The workgroup description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The workGroup name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recursiveDeleteOption")
     private @Nullable Output<Boolean> recursiveDeleteOption;
 
+    /**
+     * @return The option to delete the workgroup and its contents even if the workgroup contains any named queries.
+     * 
+     */
     public Optional<Output<Boolean>> recursiveDeleteOption() {
         return Optional.ofNullable(this.recursiveDeleteOption);
     }
@@ -61,6 +73,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<WorkGroupState> state;
 
+    /**
+     * @return The state of the workgroup: ENABLED or DISABLED.
+     * 
+     */
     public Optional<Output<WorkGroupState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -72,6 +88,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<WorkGroupTagArgs>> tags;
 
+    /**
+     * @return One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+     * 
+     */
     public Optional<Output<List<WorkGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -83,6 +103,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workGroupConfiguration")
     private @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration;
 
+    /**
+     * @return The workgroup configuration
+     * 
+     */
     public Optional<Output<WorkGroupConfigurationArgs>> workGroupConfiguration() {
         return Optional.ofNullable(this.workGroupConfiguration);
     }
@@ -94,6 +118,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workGroupConfigurationUpdates")
     private @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
 
+    /**
+     * @return The workgroup configuration update object
+     * 
+     */
     public Optional<Output<WorkGroupConfigurationUpdatesArgs>> workGroupConfigurationUpdates() {
         return Optional.ofNullable(this.workGroupConfigurationUpdates);
     }
@@ -128,69 +156,159 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The workgroup description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The workgroup description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The workGroup name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The workGroup name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param recursiveDeleteOption The option to delete the workgroup and its contents even if the workgroup contains any named queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursiveDeleteOption(@Nullable Output<Boolean> recursiveDeleteOption) {
             $.recursiveDeleteOption = recursiveDeleteOption;
             return this;
         }
 
+        /**
+         * @param recursiveDeleteOption The option to delete the workgroup and its contents even if the workgroup contains any named queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursiveDeleteOption(Boolean recursiveDeleteOption) {
             return recursiveDeleteOption(Output.of(recursiveDeleteOption));
         }
 
+        /**
+         * @param state The state of the workgroup: ENABLED or DISABLED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<WorkGroupState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the workgroup: ENABLED or DISABLED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(WorkGroupState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<WorkGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<WorkGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags One or more tags, separated by commas, that you want to attach to the workgroup as you create it
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(WorkGroupTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param workGroupConfiguration The workgroup configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroupConfiguration(@Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration) {
             $.workGroupConfiguration = workGroupConfiguration;
             return this;
         }
 
+        /**
+         * @param workGroupConfiguration The workgroup configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroupConfiguration(WorkGroupConfigurationArgs workGroupConfiguration) {
             return workGroupConfiguration(Output.of(workGroupConfiguration));
         }
 
+        /**
+         * @param workGroupConfigurationUpdates The workgroup configuration update object
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroupConfigurationUpdates(@Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates) {
             $.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
             return this;
         }
 
+        /**
+         * @param workGroupConfigurationUpdates The workgroup configuration update object
+         * 
+         * @return builder
+         * 
+         */
         public Builder workGroupConfigurationUpdates(WorkGroupConfigurationUpdatesArgs workGroupConfigurationUpdates) {
             return workGroupConfigurationUpdates(Output.of(workGroupConfigurationUpdates));
         }

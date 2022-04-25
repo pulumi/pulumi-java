@@ -27,6 +27,10 @@ public final class VirtualNetworkPropertiesListResponse extends com.pulumi.resou
     @Import(name="nextLink")
     private @Nullable String nextLink;
 
+    /**
+     * @return Next page link if any.
+     * 
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
@@ -38,6 +42,10 @@ public final class VirtualNetworkPropertiesListResponse extends com.pulumi.resou
     @Import(name="value")
     private @Nullable List<VirtualNetworkPropertiesResponse> value;
 
+    /**
+     * @return Array of virtual networks.
+     * 
+     */
     public Optional<List<VirtualNetworkPropertiesResponse>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,16 +75,34 @@ public final class VirtualNetworkPropertiesListResponse extends com.pulumi.resou
             $ = new VirtualNetworkPropertiesListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nextLink Next page link if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextLink(@Nullable String nextLink) {
             $.nextLink = nextLink;
             return this;
         }
 
+        /**
+         * @param value Array of virtual networks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable List<VirtualNetworkPropertiesResponse> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Array of virtual networks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(VirtualNetworkPropertiesResponse... value) {
             return value(List.of(value));
         }

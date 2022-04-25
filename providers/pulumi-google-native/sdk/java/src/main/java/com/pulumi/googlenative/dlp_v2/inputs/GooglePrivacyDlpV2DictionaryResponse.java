@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends com.pulumi.resou
     @Import(name="cloudStoragePath", required=true)
     private GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath;
 
+    /**
+     * @return Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * 
+     */
     public GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath() {
         return this.cloudStoragePath;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends com.pulumi.resou
     @Import(name="wordList", required=true)
     private GooglePrivacyDlpV2WordListResponse wordList;
 
+    /**
+     * @return List of words or phrases to search for.
+     * 
+     */
     public GooglePrivacyDlpV2WordListResponse wordList() {
         return this.wordList;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends com.pulumi.resou
             $ = new GooglePrivacyDlpV2DictionaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudStoragePath Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStoragePath(GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath) {
             $.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
+        /**
+         * @param wordList List of words or phrases to search for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
             $.wordList = wordList;
             return this;

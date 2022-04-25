@@ -28,6 +28,10 @@ public final class ImageStorageProfileResponse extends com.pulumi.resources.Invo
     @Import(name="dataDisks")
     private @Nullable List<ImageDataDiskResponse> dataDisks;
 
+    /**
+     * @return Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     * 
+     */
     public Optional<List<ImageDataDiskResponse>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -39,6 +43,10 @@ public final class ImageStorageProfileResponse extends com.pulumi.resources.Invo
     @Import(name="osDisk")
     private @Nullable ImageOSDiskResponse osDisk;
 
+    /**
+     * @return Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     * 
+     */
     public Optional<ImageOSDiskResponse> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -50,6 +58,10 @@ public final class ImageStorageProfileResponse extends com.pulumi.resources.Invo
     @Import(name="zoneResilient")
     private @Nullable Boolean zoneResilient;
 
+    /**
+     * @return Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
+     * 
+     */
     public Optional<Boolean> zoneResilient() {
         return Optional.ofNullable(this.zoneResilient);
     }
@@ -80,20 +92,44 @@ public final class ImageStorageProfileResponse extends com.pulumi.resources.Invo
             $ = new ImageStorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable List<ImageDataDiskResponse> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(ImageDataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(@Nullable ImageOSDiskResponse osDisk) {
             $.osDisk = osDisk;
             return this;
         }
 
+        /**
+         * @param zoneResilient Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneResilient(@Nullable Boolean zoneResilient) {
             $.zoneResilient = zoneResilient;
             return this;

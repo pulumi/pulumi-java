@@ -23,6 +23,10 @@ public final class SourceDiskEncryptionKeyArgs extends com.pulumi.resources.Reso
     @Import(name="diskEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> diskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
@@ -34,6 +38,10 @@ public final class SourceDiskEncryptionKeyArgs extends com.pulumi.resources.Reso
     @Import(name="sourceDisk")
     private @Nullable Output<String> sourceDisk;
 
+    /**
+     * @return URL of the disk attached to the source instance. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+     * 
+     */
     public Optional<Output<String>> sourceDisk() {
         return Optional.ofNullable(this.sourceDisk);
     }
@@ -63,20 +71,44 @@ public final class SourceDiskEncryptionKeyArgs extends com.pulumi.resources.Reso
             $ = new SourceDiskEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionKey The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKey The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKey(CustomerEncryptionKeyArgs diskEncryptionKey) {
             return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
 
+        /**
+         * @param sourceDisk URL of the disk attached to the source instance. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;
         }
 
+        /**
+         * @param sourceDisk URL of the disk attached to the source instance. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             return sourceDisk(Output.of(sourceDisk));
         }

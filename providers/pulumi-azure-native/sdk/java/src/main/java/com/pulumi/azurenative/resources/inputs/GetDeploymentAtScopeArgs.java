@@ -19,6 +19,10 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
     @Import(name="deploymentName", required=true)
     private String deploymentName;
 
+    /**
+     * @return The name of the deployment.
+     * 
+     */
     public String deploymentName() {
         return this.deploymentName;
     }
@@ -30,6 +34,10 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The resource scope.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
             $ = new GetDeploymentAtScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentName The name of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param scope The resource scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

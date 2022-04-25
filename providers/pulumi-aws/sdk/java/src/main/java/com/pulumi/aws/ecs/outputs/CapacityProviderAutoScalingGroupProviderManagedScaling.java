@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CapacityProviderAutoScalingGroupProviderManagedScaling {
     /**
-     * Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+     * @return Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
      * 
      */
     private final @Nullable Integer instanceWarmupPeriod;
     /**
-     * Maximum step adjustment size. A number between 1 and 10,000.
+     * @return Maximum step adjustment size. A number between 1 and 10,000.
      * 
      */
     private final @Nullable Integer maximumScalingStepSize;
     /**
-     * Minimum step adjustment size. A number between 1 and 10,000.
+     * @return Minimum step adjustment size. A number between 1 and 10,000.
      * 
      */
     private final @Nullable Integer minimumScalingStepSize;
     /**
-     * Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
+     * @return Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
      * 
      */
     private final @Nullable String status;
     /**
-     * Target utilization for the capacity provider. A number between 1 and 100.
+     * @return Target utilization for the capacity provider. A number between 1 and 100.
      * 
      */
     private final @Nullable Integer targetCapacity;
@@ -53,37 +53,37 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScaling {
     }
 
     /**
-     * Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
+     * @return Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
      * 
-    */
+     */
     public Optional<Integer> instanceWarmupPeriod() {
         return Optional.ofNullable(this.instanceWarmupPeriod);
     }
     /**
-     * Maximum step adjustment size. A number between 1 and 10,000.
+     * @return Maximum step adjustment size. A number between 1 and 10,000.
      * 
-    */
+     */
     public Optional<Integer> maximumScalingStepSize() {
         return Optional.ofNullable(this.maximumScalingStepSize);
     }
     /**
-     * Minimum step adjustment size. A number between 1 and 10,000.
+     * @return Minimum step adjustment size. A number between 1 and 10,000.
      * 
-    */
+     */
     public Optional<Integer> minimumScalingStepSize() {
         return Optional.ofNullable(this.minimumScalingStepSize);
     }
     /**
-     * Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
+     * @return Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Target utilization for the capacity provider. A number between 1 and 100.
+     * @return Target utilization for the capacity provider. A number between 1 and 100.
      * 
-    */
+     */
     public Optional<Integer> targetCapacity() {
         return Optional.ofNullable(this.targetCapacity);
     }

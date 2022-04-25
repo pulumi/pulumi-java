@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
     @Import(name="openUriAction", required=true)
     private Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
 
+    /**
+     * @return Action to take when a user taps on the button.
+     * 
+     */
     public Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction() {
         return this.openUriAction;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return The title of the button.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -65,20 +73,44 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
             $ = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param openUriAction Action to take when a user taps on the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openUriAction(Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction) {
             $.openUriAction = openUriAction;
             return this;
         }
 
+        /**
+         * @param openUriAction Action to take when a user taps on the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openUriAction(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs openUriAction) {
             return openUriAction(Output.of(openUriAction));
         }
 
+        /**
+         * @param title The title of the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The title of the button.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

@@ -25,6 +25,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
     @Import(name="selectedDatabases", required=true)
     private List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -36,6 +40,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
     @Import(name="sourceConnectionInfo", required=true)
     private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source PostgreSQL
+     * 
+     */
     public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -47,6 +55,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
     @Import(name="targetConnectionInfo", required=true)
     private PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Connection information for target Azure Database for PostgreSQL
+     * 
+     */
     public PostgreSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -77,20 +89,44 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
             $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source PostgreSQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for PostgreSQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

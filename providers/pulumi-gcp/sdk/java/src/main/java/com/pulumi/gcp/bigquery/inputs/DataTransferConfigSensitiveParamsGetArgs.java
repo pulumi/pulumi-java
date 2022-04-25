@@ -21,6 +21,11 @@ public final class DataTransferConfigSensitiveParamsGetArgs extends com.pulumi.r
     @Import(name="secretAccessKey", required=true)
     private Output<String> secretAccessKey;
 
+    /**
+     * @return The Secret Access Key of the AWS account transferring data from.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
@@ -49,11 +54,25 @@ public final class DataTransferConfigSensitiveParamsGetArgs extends com.pulumi.r
             $ = new DataTransferConfigSensitiveParamsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretAccessKey The Secret Access Key of the AWS account transferring data from.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(Output<String> secretAccessKey) {
             $.secretAccessKey = secretAccessKey;
             return this;
         }
 
+        /**
+         * @param secretAccessKey The Secret Access Key of the AWS account transferring data from.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(String secretAccessKey) {
             return secretAccessKey(Output.of(secretAccessKey));
         }

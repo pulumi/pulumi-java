@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind {
     /**
-     * The name of the Datastore kind.
+     * @return The name of the Datastore kind.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
     }
 
     /**
-     * The name of the Datastore kind.
+     * @return The name of the Datastore kind.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

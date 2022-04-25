@@ -23,92 +23,92 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobDetailsResponse {
     /**
-     * Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.
+     * @return Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.
      * 
      */
     private final @Nullable Boolean backupDriveManifest;
     /**
-     * Indicates whether a request has been submitted to cancel the job.
+     * @return Indicates whether a request has been submitted to cancel the job.
      * 
      */
     private final @Nullable Boolean cancelRequested;
     /**
-     * Contains information about the package being shipped by the customer to the Microsoft data center.
+     * @return Contains information about the package being shipped by the customer to the Microsoft data center.
      * 
      */
     private final @Nullable DeliveryPackageInformationResponse deliveryPackage;
     /**
-     * The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.
+     * @return The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.
      * 
      */
     private final @Nullable String diagnosticsPath;
     /**
-     * List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
+     * @return List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
      * 
      */
     private final @Nullable List<DriveStatusResponse> driveList;
     /**
-     * Contains information about the encryption key.
+     * @return Contains information about the encryption key.
      * 
      */
     private final @Nullable EncryptionKeyDetailsResponse encryptionKey;
     /**
-     * A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.
+     * @return A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.
      * 
      */
     private final @Nullable ExportResponse export;
     /**
-     * A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.
+     * @return A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.
      * 
      */
     private final @Nullable String incompleteBlobListUri;
     /**
-     * The type of job
+     * @return The type of job
      * 
      */
     private final @Nullable String jobType;
     /**
-     * Default value is Error. Indicates whether error logging or verbose logging will be enabled.
+     * @return Default value is Error. Indicates whether error logging or verbose logging will be enabled.
      * 
      */
     private final @Nullable String logLevel;
     /**
-     * Overall percentage completed for the job.
+     * @return Overall percentage completed for the job.
      * 
      */
     private final @Nullable Integer percentComplete;
     /**
-     * Specifies the provisioning state of the job.
+     * @return Specifies the provisioning state of the job.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * Specifies the return address information for the job.
+     * @return Specifies the return address information for the job.
      * 
      */
     private final @Nullable ReturnAddressResponse returnAddress;
     /**
-     * Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned.
+     * @return Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned.
      * 
      */
     private final @Nullable PackageInformationResponse returnPackage;
     /**
-     * Specifies the return carrier and customer&#39;s account with the carrier.
+     * @return Specifies the return carrier and customer&#39;s account with the carrier.
      * 
      */
     private final @Nullable ReturnShippingResponse returnShipping;
     /**
-     * Contains information about the Microsoft datacenter to which the drives should be shipped.
+     * @return Contains information about the Microsoft datacenter to which the drives should be shipped.
      * 
      */
     private final @Nullable ShippingInformationResponse shippingInformation;
     /**
-     * Current state of the job.
+     * @return Current state of the job.
      * 
      */
     private final @Nullable String state;
     /**
-     * The resource identifier of the storage account where data will be imported to or exported from.
+     * @return The resource identifier of the storage account where data will be imported to or exported from.
      * 
      */
     private final @Nullable String storageAccountId;
@@ -154,128 +154,128 @@ public final class JobDetailsResponse {
     }
 
     /**
-     * Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.
+     * @return Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.
      * 
-    */
+     */
     public Optional<Boolean> backupDriveManifest() {
         return Optional.ofNullable(this.backupDriveManifest);
     }
     /**
-     * Indicates whether a request has been submitted to cancel the job.
+     * @return Indicates whether a request has been submitted to cancel the job.
      * 
-    */
+     */
     public Optional<Boolean> cancelRequested() {
         return Optional.ofNullable(this.cancelRequested);
     }
     /**
-     * Contains information about the package being shipped by the customer to the Microsoft data center.
+     * @return Contains information about the package being shipped by the customer to the Microsoft data center.
      * 
-    */
+     */
     public Optional<DeliveryPackageInformationResponse> deliveryPackage() {
         return Optional.ofNullable(this.deliveryPackage);
     }
     /**
-     * The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.
+     * @return The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.
      * 
-    */
+     */
     public Optional<String> diagnosticsPath() {
         return Optional.ofNullable(this.diagnosticsPath);
     }
     /**
-     * List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
+     * @return List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
      * 
-    */
+     */
     public List<DriveStatusResponse> driveList() {
         return this.driveList == null ? List.of() : this.driveList;
     }
     /**
-     * Contains information about the encryption key.
+     * @return Contains information about the encryption key.
      * 
-    */
+     */
     public Optional<EncryptionKeyDetailsResponse> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
-     * A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.
+     * @return A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.
      * 
-    */
+     */
     public Optional<ExportResponse> export() {
         return Optional.ofNullable(this.export);
     }
     /**
-     * A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.
+     * @return A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.
      * 
-    */
+     */
     public Optional<String> incompleteBlobListUri() {
         return Optional.ofNullable(this.incompleteBlobListUri);
     }
     /**
-     * The type of job
+     * @return The type of job
      * 
-    */
+     */
     public Optional<String> jobType() {
         return Optional.ofNullable(this.jobType);
     }
     /**
-     * Default value is Error. Indicates whether error logging or verbose logging will be enabled.
+     * @return Default value is Error. Indicates whether error logging or verbose logging will be enabled.
      * 
-    */
+     */
     public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
-     * Overall percentage completed for the job.
+     * @return Overall percentage completed for the job.
      * 
-    */
+     */
     public Optional<Integer> percentComplete() {
         return Optional.ofNullable(this.percentComplete);
     }
     /**
-     * Specifies the provisioning state of the job.
+     * @return Specifies the provisioning state of the job.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Specifies the return address information for the job.
+     * @return Specifies the return address information for the job.
      * 
-    */
+     */
     public Optional<ReturnAddressResponse> returnAddress() {
         return Optional.ofNullable(this.returnAddress);
     }
     /**
-     * Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned.
+     * @return Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned.
      * 
-    */
+     */
     public Optional<PackageInformationResponse> returnPackage() {
         return Optional.ofNullable(this.returnPackage);
     }
     /**
-     * Specifies the return carrier and customer&#39;s account with the carrier.
+     * @return Specifies the return carrier and customer&#39;s account with the carrier.
      * 
-    */
+     */
     public Optional<ReturnShippingResponse> returnShipping() {
         return Optional.ofNullable(this.returnShipping);
     }
     /**
-     * Contains information about the Microsoft datacenter to which the drives should be shipped.
+     * @return Contains information about the Microsoft datacenter to which the drives should be shipped.
      * 
-    */
+     */
     public Optional<ShippingInformationResponse> shippingInformation() {
         return Optional.ofNullable(this.shippingInformation);
     }
     /**
-     * Current state of the job.
+     * @return Current state of the job.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The resource identifier of the storage account where data will be imported to or exported from.
+     * @return The resource identifier of the storage account where data will be imported to or exported from.
      * 
-    */
+     */
     public Optional<String> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }

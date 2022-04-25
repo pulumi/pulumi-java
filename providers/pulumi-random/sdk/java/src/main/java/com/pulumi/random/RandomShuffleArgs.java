@@ -26,6 +26,10 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputs", required=true)
     private Output<List<String>> inputs;
 
+    /**
+     * @return The list of strings to shuffle.
+     * 
+     */
     public Output<List<String>> inputs() {
         return this.inputs;
     }
@@ -37,6 +41,10 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> keepers() {
         return Optional.ofNullable(this.keepers);
     }
@@ -48,6 +56,10 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resultCount")
     private @Nullable Output<Integer> resultCount;
 
+    /**
+     * @return The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
+     * 
+     */
     public Optional<Output<Integer>> resultCount() {
         return Optional.ofNullable(this.resultCount);
     }
@@ -59,6 +71,10 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="seed")
     private @Nullable Output<String> seed;
 
+    /**
+     * @return Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
+     * 
+     */
     public Optional<Output<String>> seed() {
         return Optional.ofNullable(this.seed);
     }
@@ -90,42 +106,96 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RandomShuffleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs The list of strings to shuffle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(Output<List<String>> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs The list of strings to shuffle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<String> inputs) {
             return inputs(Output.of(inputs));
         }
 
+        /**
+         * @param inputs The list of strings to shuffle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(String... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             $.keepers = keepers;
             return this;
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(Map<String,Object> keepers) {
             return keepers(Output.of(keepers));
         }
 
+        /**
+         * @param resultCount The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultCount(@Nullable Output<Integer> resultCount) {
             $.resultCount = resultCount;
             return this;
         }
 
+        /**
+         * @param resultCount The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultCount(Integer resultCount) {
             return resultCount(Output.of(resultCount));
         }
 
+        /**
+         * @param seed Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seed(@Nullable Output<String> seed) {
             $.seed = seed;
             return this;
         }
 
+        /**
+         * @param seed Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seed(String seed) {
             return seed(Output.of(seed));
         }

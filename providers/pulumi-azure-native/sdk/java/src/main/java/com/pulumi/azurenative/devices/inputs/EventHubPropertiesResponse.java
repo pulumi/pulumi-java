@@ -28,6 +28,10 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="endpoint", required=true)
     private String endpoint;
 
+    /**
+     * @return The Event Hub-compatible endpoint.
+     * 
+     */
     public String endpoint() {
         return this.endpoint;
     }
@@ -39,6 +43,10 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="partitionCount")
     private @Nullable Integer partitionCount;
 
+    /**
+     * @return The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
+     * 
+     */
     public Optional<Integer> partitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
@@ -50,6 +58,10 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="partitionIds", required=true)
     private List<String> partitionIds;
 
+    /**
+     * @return The partition ids in the Event Hub-compatible endpoint.
+     * 
+     */
     public List<String> partitionIds() {
         return this.partitionIds;
     }
@@ -61,6 +73,10 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The Event Hub-compatible name.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -72,6 +88,10 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="retentionTimeInDays")
     private @Nullable Double retentionTimeInDays;
 
+    /**
+     * @return The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
+     * 
+     */
     public Optional<Double> retentionTimeInDays() {
         return Optional.ofNullable(this.retentionTimeInDays);
     }
@@ -104,30 +124,66 @@ public final class EventHubPropertiesResponse extends com.pulumi.resources.Invok
             $ = new EventHubPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint The Event Hub-compatible endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param partitionCount The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionCount(@Nullable Integer partitionCount) {
             $.partitionCount = partitionCount;
             return this;
         }
 
+        /**
+         * @param partitionIds The partition ids in the Event Hub-compatible endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIds(List<String> partitionIds) {
             $.partitionIds = partitionIds;
             return this;
         }
 
+        /**
+         * @param partitionIds The partition ids in the Event Hub-compatible endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionIds(String... partitionIds) {
             return partitionIds(List.of(partitionIds));
         }
 
+        /**
+         * @param path The Event Hub-compatible name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param retentionTimeInDays The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimeInDays(@Nullable Double retentionTimeInDays) {
             $.retentionTimeInDays = retentionTimeInDays;
             return this;

@@ -25,6 +25,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="availableFeatures", required=true)
     private List<String> availableFeatures;
 
+    /**
+     * @return Represents a list of available feature names for a given version.
+     * 
+     */
     public List<String> availableFeatures() {
         return this.availableFeatures;
     }
@@ -36,6 +40,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultVersion", required=true)
     private Boolean defaultVersion;
 
+    /**
+     * @return Whether this is currently the default version for Cloud Data Fusion
+     * 
+     */
     public Boolean defaultVersion() {
         return this.defaultVersion;
     }
@@ -47,6 +55,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type represents the release availability of the version
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -58,6 +70,10 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="versionNumber", required=true)
     private String versionNumber;
 
+    /**
+     * @return The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
+     * 
+     */
     public String versionNumber() {
         return this.versionNumber;
     }
@@ -89,25 +105,55 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableFeatures Represents a list of available feature names for a given version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableFeatures(List<String> availableFeatures) {
             $.availableFeatures = availableFeatures;
             return this;
         }
 
+        /**
+         * @param availableFeatures Represents a list of available feature names for a given version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableFeatures(String... availableFeatures) {
             return availableFeatures(List.of(availableFeatures));
         }
 
+        /**
+         * @param defaultVersion Whether this is currently the default version for Cloud Data Fusion
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(Boolean defaultVersion) {
             $.defaultVersion = defaultVersion;
             return this;
         }
 
+        /**
+         * @param type Type represents the release availability of the version
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param versionNumber The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionNumber(String versionNumber) {
             $.versionNumber = versionNumber;
             return this;

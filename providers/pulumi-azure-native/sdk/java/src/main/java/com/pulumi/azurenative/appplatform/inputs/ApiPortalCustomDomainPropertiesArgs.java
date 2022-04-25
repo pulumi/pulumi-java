@@ -26,6 +26,10 @@ public final class ApiPortalCustomDomainPropertiesArgs extends com.pulumi.resour
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return The thumbprint of bound certificate.
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -54,11 +58,23 @@ public final class ApiPortalCustomDomainPropertiesArgs extends com.pulumi.resour
             $ = new ApiPortalCustomDomainPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param thumbprint The thumbprint of bound certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint The thumbprint of bound certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

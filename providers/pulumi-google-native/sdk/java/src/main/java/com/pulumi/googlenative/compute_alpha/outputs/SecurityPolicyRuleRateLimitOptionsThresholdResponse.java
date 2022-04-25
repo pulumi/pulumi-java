@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
     /**
-     * Number of HTTP(S) requests for calculating the threshold.
+     * @return Number of HTTP(S) requests for calculating the threshold.
      * 
      */
     private final Integer count;
     /**
-     * Interval over which the threshold is computed.
+     * @return Interval over which the threshold is computed.
      * 
      */
     private final Integer intervalSec;
@@ -29,16 +29,16 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
     }
 
     /**
-     * Number of HTTP(S) requests for calculating the threshold.
+     * @return Number of HTTP(S) requests for calculating the threshold.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * Interval over which the threshold is computed.
+     * @return Interval over which the threshold is computed.
      * 
-    */
+     */
     public Integer intervalSec() {
         return this.intervalSec;
     }

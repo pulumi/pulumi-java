@@ -25,6 +25,10 @@ public final class BasicAutoscalingAlgorithmResponse extends com.pulumi.resource
     @Import(name="cooldownPeriod", required=true)
     private String cooldownPeriod;
 
+    /**
+     * @return Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
+     * 
+     */
     public String cooldownPeriod() {
         return this.cooldownPeriod;
     }
@@ -36,6 +40,10 @@ public final class BasicAutoscalingAlgorithmResponse extends com.pulumi.resource
     @Import(name="sparkStandaloneConfig", required=true)
     private SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig;
 
+    /**
+     * @return Optional. Spark Standalone autoscaling configuration
+     * 
+     */
     public SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig() {
         return this.sparkStandaloneConfig;
     }
@@ -47,6 +55,10 @@ public final class BasicAutoscalingAlgorithmResponse extends com.pulumi.resource
     @Import(name="yarnConfig", required=true)
     private BasicYarnAutoscalingConfigResponse yarnConfig;
 
+    /**
+     * @return Optional. YARN autoscaling configuration.
+     * 
+     */
     public BasicYarnAutoscalingConfigResponse yarnConfig() {
         return this.yarnConfig;
     }
@@ -77,16 +89,34 @@ public final class BasicAutoscalingAlgorithmResponse extends com.pulumi.resource
             $ = new BasicAutoscalingAlgorithmResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cooldownPeriod Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldownPeriod(String cooldownPeriod) {
             $.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
+        /**
+         * @param sparkStandaloneConfig Optional. Spark Standalone autoscaling configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkStandaloneConfig(SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig) {
             $.sparkStandaloneConfig = sparkStandaloneConfig;
             return this;
         }
 
+        /**
+         * @param yarnConfig Optional. YARN autoscaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yarnConfig(BasicYarnAutoscalingConfigResponse yarnConfig) {
             $.yarnConfig = yarnConfig;
             return this;

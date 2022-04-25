@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class ContainerPropertiesResponseInstanceView {
     /**
-     * Current container instance state.
+     * @return Current container instance state.
      * 
      */
     private final ContainerStateResponse currentState;
     /**
-     * The events of the container instance.
+     * @return The events of the container instance.
      * 
      */
     private final List<EventResponse> events;
     /**
-     * Previous container instance state.
+     * @return Previous container instance state.
      * 
      */
     private final ContainerStateResponse previousState;
     /**
-     * The number of times that the container instance has been restarted.
+     * @return The number of times that the container instance has been restarted.
      * 
      */
     private final Integer restartCount;
@@ -46,30 +46,30 @@ public final class ContainerPropertiesResponseInstanceView {
     }
 
     /**
-     * Current container instance state.
+     * @return Current container instance state.
      * 
-    */
+     */
     public ContainerStateResponse currentState() {
         return this.currentState;
     }
     /**
-     * The events of the container instance.
+     * @return The events of the container instance.
      * 
-    */
+     */
     public List<EventResponse> events() {
         return this.events;
     }
     /**
-     * Previous container instance state.
+     * @return Previous container instance state.
      * 
-    */
+     */
     public ContainerStateResponse previousState() {
         return this.previousState;
     }
     /**
-     * The number of times that the container instance has been restarted.
+     * @return The number of times that the container instance has been restarted.
      * 
-    */
+     */
     public Integer restartCount() {
         return this.restartCount;
     }

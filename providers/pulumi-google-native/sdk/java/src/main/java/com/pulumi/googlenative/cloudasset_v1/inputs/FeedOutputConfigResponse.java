@@ -23,6 +23,10 @@ public final class FeedOutputConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="pubsubDestination", required=true)
     private PubsubDestinationResponse pubsubDestination;
 
+    /**
+     * @return Destination on Pub/Sub.
+     * 
+     */
     public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
     }
@@ -51,6 +55,12 @@ public final class FeedOutputConfigResponse extends com.pulumi.resources.InvokeA
             $ = new FeedOutputConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubDestination Destination on Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             $.pubsubDestination = pubsubDestination;
             return this;

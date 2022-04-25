@@ -14,62 +14,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SsisParameterResponse {
     /**
-     * Parameter type.
+     * @return Parameter type.
      * 
      */
     private final @Nullable String dataType;
     /**
-     * Default value of parameter.
+     * @return Default value of parameter.
      * 
      */
     private final @Nullable String defaultValue;
     /**
-     * Parameter description.
+     * @return Parameter description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Design default value of parameter.
+     * @return Design default value of parameter.
      * 
      */
     private final @Nullable String designDefaultValue;
     /**
-     * Parameter id.
+     * @return Parameter id.
      * 
      */
     private final @Nullable Double id;
     /**
-     * Parameter name.
+     * @return Parameter name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Whether parameter is required.
+     * @return Whether parameter is required.
      * 
      */
     private final @Nullable Boolean required;
     /**
-     * Whether parameter is sensitive.
+     * @return Whether parameter is sensitive.
      * 
      */
     private final @Nullable Boolean sensitive;
     /**
-     * Default sensitive value of parameter.
+     * @return Default sensitive value of parameter.
      * 
      */
     private final @Nullable String sensitiveDefaultValue;
     /**
-     * Parameter value set.
+     * @return Parameter value set.
      * 
      */
     private final @Nullable Boolean valueSet;
     /**
-     * Parameter value type.
+     * @return Parameter value type.
      * 
      */
     private final @Nullable String valueType;
     /**
-     * Parameter reference variable.
+     * @return Parameter reference variable.
      * 
      */
     private final @Nullable String variable;
@@ -103,86 +103,86 @@ public final class SsisParameterResponse {
     }
 
     /**
-     * Parameter type.
+     * @return Parameter type.
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * Default value of parameter.
+     * @return Default value of parameter.
      * 
-    */
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * Parameter description.
+     * @return Parameter description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Design default value of parameter.
+     * @return Design default value of parameter.
      * 
-    */
+     */
     public Optional<String> designDefaultValue() {
         return Optional.ofNullable(this.designDefaultValue);
     }
     /**
-     * Parameter id.
+     * @return Parameter id.
      * 
-    */
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Parameter name.
+     * @return Parameter name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Whether parameter is required.
+     * @return Whether parameter is required.
      * 
-    */
+     */
     public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
     /**
-     * Whether parameter is sensitive.
+     * @return Whether parameter is sensitive.
      * 
-    */
+     */
     public Optional<Boolean> sensitive() {
         return Optional.ofNullable(this.sensitive);
     }
     /**
-     * Default sensitive value of parameter.
+     * @return Default sensitive value of parameter.
      * 
-    */
+     */
     public Optional<String> sensitiveDefaultValue() {
         return Optional.ofNullable(this.sensitiveDefaultValue);
     }
     /**
-     * Parameter value set.
+     * @return Parameter value set.
      * 
-    */
+     */
     public Optional<Boolean> valueSet() {
         return Optional.ofNullable(this.valueSet);
     }
     /**
-     * Parameter value type.
+     * @return Parameter value type.
      * 
-    */
+     */
     public Optional<String> valueType() {
         return Optional.ofNullable(this.valueType);
     }
     /**
-     * Parameter reference variable.
+     * @return Parameter reference variable.
      * 
-    */
+     */
     public Optional<String> variable() {
         return Optional.ofNullable(this.variable);
     }

@@ -26,6 +26,10 @@ public final class DhcpOptionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dnsServers")
     private @Nullable List<String> dnsServers;
 
+    /**
+     * @return The list of DNS servers IP addresses.
+     * 
+     */
     public Optional<List<String>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -54,11 +58,23 @@ public final class DhcpOptionsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DhcpOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServers The list of DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers The list of DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }

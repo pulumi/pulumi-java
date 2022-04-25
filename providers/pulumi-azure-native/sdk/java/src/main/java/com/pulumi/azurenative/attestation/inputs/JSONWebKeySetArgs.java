@@ -27,6 +27,14 @@ public final class JSONWebKeySetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
     private @Nullable Output<List<JSONWebKeyArgs>> keys;
 
+    /**
+     * @return The value of the &#34;keys&#34; parameter is an array of JWK values.  By
+     * default, the order of the JWK values within the array does not imply
+     * an order of preference among them, although applications of JWK Sets
+     * can choose to assign a meaning to the order for their purposes, if
+     * desired.
+     * 
+     */
     public Optional<Output<List<JSONWebKeyArgs>>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -55,15 +63,45 @@ public final class JSONWebKeySetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JSONWebKeySetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keys The value of the &#34;keys&#34; parameter is an array of JWK values.  By
+         * default, the order of the JWK values within the array does not imply
+         * an order of preference among them, although applications of JWK Sets
+         * can choose to assign a meaning to the order for their purposes, if
+         * desired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<List<JSONWebKeyArgs>> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys The value of the &#34;keys&#34; parameter is an array of JWK values.  By
+         * default, the order of the JWK values within the array does not imply
+         * an order of preference among them, although applications of JWK Sets
+         * can choose to assign a meaning to the order for their purposes, if
+         * desired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(List<JSONWebKeyArgs> keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param keys The value of the &#34;keys&#34; parameter is an array of JWK values.  By
+         * default, the order of the JWK values within the array does not imply
+         * an order of preference among them, although applications of JWK Sets
+         * can choose to assign a meaning to the order for their purposes, if
+         * desired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(JSONWebKeyArgs... keys) {
             return keys(List.of(keys));
         }

@@ -25,6 +25,10 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
     @Import(name="linkType")
     private @Nullable String linkType;
 
+    /**
+     * @return Link type.
+     * 
+     */
     public Optional<String> linkType() {
         return Optional.ofNullable(this.linkType);
     }
@@ -36,6 +40,10 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
     @Import(name="sourcePropertyName", required=true)
     private String sourcePropertyName;
 
+    /**
+     * @return  Property name on the source Entity Type.
+     * 
+     */
     public String sourcePropertyName() {
         return this.sourcePropertyName;
     }
@@ -47,6 +55,10 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
     @Import(name="targetPropertyName", required=true)
     private String targetPropertyName;
 
+    /**
+     * @return Property name on the target Entity Type.
+     * 
+     */
     public String targetPropertyName() {
         return this.targetPropertyName;
     }
@@ -77,16 +89,34 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
             $ = new TypePropertiesMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkType Link type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(@Nullable String linkType) {
             $.linkType = linkType;
             return this;
         }
 
+        /**
+         * @param sourcePropertyName  Property name on the source Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePropertyName(String sourcePropertyName) {
             $.sourcePropertyName = sourcePropertyName;
             return this;
         }
 
+        /**
+         * @param targetPropertyName Property name on the target Entity Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPropertyName(String targetPropertyName) {
             $.targetPropertyName = targetPropertyName;
             return this;

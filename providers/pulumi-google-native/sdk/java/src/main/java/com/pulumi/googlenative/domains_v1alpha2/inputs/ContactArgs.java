@@ -27,6 +27,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return Email address of the contact.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -38,6 +42,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="faxNumber")
     private @Nullable Output<String> faxNumber;
 
+    /**
+     * @return Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+     * 
+     */
     public Optional<Output<String>> faxNumber() {
         return Optional.ofNullable(this.faxNumber);
     }
@@ -49,6 +57,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phoneNumber", required=true)
     private Output<String> phoneNumber;
 
+    /**
+     * @return Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+     * 
+     */
     public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
@@ -60,6 +72,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postalAddress", required=true)
     private Output<PostalAddressArgs> postalAddress;
 
+    /**
+     * @return Postal address of the contact.
+     * 
+     */
     public Output<PostalAddressArgs> postalAddress() {
         return this.postalAddress;
     }
@@ -91,38 +107,86 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Email address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email Email address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param faxNumber Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faxNumber(@Nullable Output<String> faxNumber) {
             $.faxNumber = faxNumber;
             return this;
         }
 
+        /**
+         * @param faxNumber Fax number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faxNumber(String faxNumber) {
             return faxNumber(Output.of(faxNumber));
         }
 
+        /**
+         * @param phoneNumber Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(Output<String> phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param phoneNumber Phone number of the contact in international format. For example, `&#34;+1-800-555-0123&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             return phoneNumber(Output.of(phoneNumber));
         }
 
+        /**
+         * @param postalAddress Postal address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalAddress(Output<PostalAddressArgs> postalAddress) {
             $.postalAddress = postalAddress;
             return this;
         }
 
+        /**
+         * @param postalAddress Postal address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalAddress(PostalAddressArgs postalAddress) {
             return postalAddress(Output.of(postalAddress));
         }

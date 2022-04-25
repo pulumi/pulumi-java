@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse exte
     @Import(name="cells", required=true)
     private List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells;
 
+    /**
+     * @return Optional. List of cells that make up this row.
+     * 
+     */
     public List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells() {
         return this.cells;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse exte
     @Import(name="dividerAfter", required=true)
     private Boolean dividerAfter;
 
+    /**
+     * @return Optional. Whether to add a visual divider after this row.
+     * 
+     */
     public Boolean dividerAfter() {
         return this.dividerAfter;
     }
@@ -65,15 +73,33 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse exte
             $ = new GoogleCloudDialogflowV2IntentMessageTableCardRowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cells Optional. List of cells that make up this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells) {
             $.cells = cells;
             return this;
         }
 
+        /**
+         * @param cells Optional. List of cells that make up this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(GoogleCloudDialogflowV2IntentMessageTableCardCellResponse... cells) {
             return cells(List.of(cells));
         }
 
+        /**
+         * @param dividerAfter Optional. Whether to add a visual divider after this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dividerAfter(Boolean dividerAfter) {
             $.dividerAfter = dividerAfter;
             return this;

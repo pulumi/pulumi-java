@@ -17,37 +17,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccountFilterResult {
     /**
-     * The first quality.
+     * @return The first quality.
      * 
      */
     private final @Nullable FirstQualityResponse firstQuality;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The presentation time range.
+     * @return The presentation time range.
      * 
      */
     private final @Nullable PresentationTimeRangeResponse presentationTimeRange;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The tracks selection conditions.
+     * @return The tracks selection conditions.
      * 
      */
     private final @Nullable List<FilterTrackSelectionResponse> tracks;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -71,51 +71,51 @@ public final class GetAccountFilterResult {
     }
 
     /**
-     * The first quality.
+     * @return The first quality.
      * 
-    */
+     */
     public Optional<FirstQualityResponse> firstQuality() {
         return Optional.ofNullable(this.firstQuality);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The presentation time range.
+     * @return The presentation time range.
      * 
-    */
+     */
     public Optional<PresentationTimeRangeResponse> presentationTimeRange() {
         return Optional.ofNullable(this.presentationTimeRange);
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The tracks selection conditions.
+     * @return The tracks selection conditions.
      * 
-    */
+     */
     public List<FilterTrackSelectionResponse> tracks() {
         return this.tracks == null ? List.of() : this.tracks;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

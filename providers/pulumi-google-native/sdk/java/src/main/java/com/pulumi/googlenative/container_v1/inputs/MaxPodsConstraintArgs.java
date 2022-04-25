@@ -26,6 +26,10 @@ public final class MaxPodsConstraintArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxPodsPerNode")
     private @Nullable Output<String> maxPodsPerNode;
 
+    /**
+     * @return Constraint enforced on the max num of pods per node.
+     * 
+     */
     public Optional<Output<String>> maxPodsPerNode() {
         return Optional.ofNullable(this.maxPodsPerNode);
     }
@@ -54,11 +58,23 @@ public final class MaxPodsConstraintArgs extends com.pulumi.resources.ResourceAr
             $ = new MaxPodsConstraintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPodsPerNode Constraint enforced on the max num of pods per node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsPerNode(@Nullable Output<String> maxPodsPerNode) {
             $.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
+        /**
+         * @param maxPodsPerNode Constraint enforced on the max num of pods per node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsPerNode(String maxPodsPerNode) {
             return maxPodsPerNode(Output.of(maxPodsPerNode));
         }

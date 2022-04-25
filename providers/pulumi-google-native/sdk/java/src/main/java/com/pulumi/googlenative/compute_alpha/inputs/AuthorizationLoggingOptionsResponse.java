@@ -23,6 +23,10 @@ public final class AuthorizationLoggingOptionsResponse extends com.pulumi.resour
     @Import(name="permissionType", required=true)
     private String permissionType;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public String permissionType() {
         return this.permissionType;
     }
@@ -51,6 +55,12 @@ public final class AuthorizationLoggingOptionsResponse extends com.pulumi.resour
             $ = new AuthorizationLoggingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param permissionType This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionType(String permissionType) {
             $.permissionType = permissionType;
             return this;

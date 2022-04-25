@@ -21,6 +21,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="identityName", required=true)
     private Output<String> identityName;
 
+    /**
+     * @return The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
+     * 
+     */
     public Output<String> identityName() {
         return this.identityName;
     }
@@ -32,6 +36,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="identityType", required=true)
     private Output<StudioSessionMappingIdentityType> identityType;
 
+    /**
+     * @return Specifies whether the identity to map to the Studio is a user or a group.
+     * 
+     */
     public Output<StudioSessionMappingIdentityType> identityType() {
         return this.identityType;
     }
@@ -43,6 +51,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="sessionPolicyArn", required=true)
     private Output<String> sessionPolicyArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
+     * 
+     */
     public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn;
     }
@@ -54,6 +66,10 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
     @Import(name="studioId", required=true)
     private Output<String> studioId;
 
+    /**
+     * @return The ID of the Amazon EMR Studio to which the user or group will be mapped.
+     * 
+     */
     public Output<String> studioId() {
         return this.studioId;
     }
@@ -85,38 +101,86 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
             $ = new StudioSessionMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityName The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityName(Output<String> identityName) {
             $.identityName = identityName;
             return this;
         }
 
+        /**
+         * @param identityName The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityName(String identityName) {
             return identityName(Output.of(identityName));
         }
 
+        /**
+         * @param identityType Specifies whether the identity to map to the Studio is a user or a group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(Output<StudioSessionMappingIdentityType> identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param identityType Specifies whether the identity to map to the Studio is a user or a group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(StudioSessionMappingIdentityType identityType) {
             return identityType(Output.of(identityType));
         }
 
+        /**
+         * @param sessionPolicyArn The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPolicyArn(Output<String> sessionPolicyArn) {
             $.sessionPolicyArn = sessionPolicyArn;
             return this;
         }
 
+        /**
+         * @param sessionPolicyArn The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPolicyArn(String sessionPolicyArn) {
             return sessionPolicyArn(Output.of(sessionPolicyArn));
         }
 
+        /**
+         * @param studioId The ID of the Amazon EMR Studio to which the user or group will be mapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(Output<String> studioId) {
             $.studioId = studioId;
             return this;
         }
 
+        /**
+         * @param studioId The ID of the Amazon EMR Studio to which the user or group will be mapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(String studioId) {
             return studioId(Output.of(studioId));
         }

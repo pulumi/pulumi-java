@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomResourceValidation {
     /**
-     * openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
+     * @return openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
      * 
      */
     private final @Nullable JSONSchemaProps openAPIV3Schema;
@@ -23,9 +23,9 @@ public final class CustomResourceValidation {
     }
 
     /**
-     * openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
+     * @return openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
      * 
-    */
+     */
     public Optional<JSONSchemaProps> openAPIV3Schema() {
         return Optional.ofNullable(this.openAPIV3Schema);
     }

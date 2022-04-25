@@ -19,6 +19,10 @@ public final class ShareInfoElementResponse extends com.pulumi.resources.InvokeA
     @Import(name="vmUri", required=true)
     private String vmUri;
 
+    /**
+     * @return A relative URI containing the ID of the VM that has the disk attached.
+     * 
+     */
     public String vmUri() {
         return this.vmUri;
     }
@@ -47,6 +51,12 @@ public final class ShareInfoElementResponse extends com.pulumi.resources.InvokeA
             $ = new ShareInfoElementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vmUri A relative URI containing the ID of the VM that has the disk attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmUri(String vmUri) {
             $.vmUri = vmUri;
             return this;

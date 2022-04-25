@@ -19,6 +19,10 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
     @Import(name="natRuleName", required=true)
     private String natRuleName;
 
+    /**
+     * @return The name of the nat rule.
+     * 
+     */
     public String natRuleName() {
         return this.natRuleName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the Virtual Network Gateway.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
     @Import(name="virtualNetworkGatewayName", required=true)
     private String virtualNetworkGatewayName;
 
+    /**
+     * @return The name of the gateway.
+     * 
+     */
     public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
@@ -71,16 +83,34 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
             $ = new GetVirtualNetworkGatewayNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param natRuleName The name of the nat rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natRuleName(String natRuleName) {
             $.natRuleName = natRuleName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the Virtual Network Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkGatewayName The name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;

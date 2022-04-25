@@ -26,6 +26,10 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return The public identifier for the application
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -37,6 +41,10 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="clientSecret")
     private @Nullable String clientSecret;
 
+    /**
+     * @return The secret known only to the application and the authorization server
+     * 
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -48,6 +56,10 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="issuerUri")
     private @Nullable String issuerUri;
 
+    /**
+     * @return The URI of Issuer Identifier
+     * 
+     */
     public Optional<String> issuerUri() {
         return Optional.ofNullable(this.issuerUri);
     }
@@ -59,6 +71,10 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="scope")
     private @Nullable List<String> scope;
 
+    /**
+     * @return It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+     * 
+     */
     public Optional<List<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -90,26 +106,56 @@ public final class SsoPropertiesResponse extends com.pulumi.resources.InvokeArgs
             $ = new SsoPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The public identifier for the application
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret The secret known only to the application and the authorization server
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable String clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param issuerUri The URI of Issuer Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerUri(@Nullable String issuerUri) {
             $.issuerUri = issuerUri;
             return this;
         }
 
+        /**
+         * @param scope It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable List<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String... scope) {
             return scope(List.of(scope));
         }

@@ -25,6 +25,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="autoUpgradeMinorVersion")
     private @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
+    /**
+     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     * 
+     */
     public Optional<Output<Boolean>> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -36,6 +40,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="extensionName")
     private @Nullable Output<String> extensionName;
 
+    /**
+     * @return The name of the machine extension.
+     * 
+     */
     public Optional<Output<String>> extensionName() {
         return Optional.ofNullable(this.extensionName);
     }
@@ -47,6 +55,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="forceUpdateTag")
     private @Nullable Output<String> forceUpdateTag;
 
+    /**
+     * @return How the extension handler should be forced to update even if the extension configuration has not changed.
+     * 
+     */
     public Optional<Output<String>> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
@@ -58,6 +70,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -69,6 +85,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the machine where the extension should be created or updated.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -80,6 +100,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="protectedSettings")
     private @Nullable Output<Object> protectedSettings;
 
+    /**
+     * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+     * 
+     */
     public Optional<Output<Object>> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
@@ -91,6 +115,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return The name of the extension handler publisher.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -102,6 +130,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -113,6 +145,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="settings")
     private @Nullable Output<Object> settings;
 
+    /**
+     * @return Json formatted public settings for the extension.
+     * 
+     */
     public Optional<Output<Object>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -124,6 +160,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -135,6 +175,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -146,6 +190,10 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="typeHandlerVersion")
     private @Nullable Output<String> typeHandlerVersion;
 
+    /**
+     * @return Specifies the version of the script handler.
+     * 
+     */
     public Optional<Output<String>> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -185,110 +233,254 @@ public final class MachineExtensionArgs extends com.pulumi.resources.ResourceArg
             $ = new MachineExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
             $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
+        /**
+         * @param autoUpgradeMinorVersion Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgradeMinorVersion(Boolean autoUpgradeMinorVersion) {
             return autoUpgradeMinorVersion(Output.of(autoUpgradeMinorVersion));
         }
 
+        /**
+         * @param extensionName The name of the machine extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionName(@Nullable Output<String> extensionName) {
             $.extensionName = extensionName;
             return this;
         }
 
+        /**
+         * @param extensionName The name of the machine extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionName(String extensionName) {
             return extensionName(Output.of(extensionName));
         }
 
+        /**
+         * @param forceUpdateTag How the extension handler should be forced to update even if the extension configuration has not changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             $.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
+        /**
+         * @param forceUpdateTag How the extension handler should be forced to update even if the extension configuration has not changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(String forceUpdateTag) {
             return forceUpdateTag(Output.of(forceUpdateTag));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the machine where the extension should be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the machine where the extension should be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param protectedSettings The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
             $.protectedSettings = protectedSettings;
             return this;
         }
 
+        /**
+         * @param protectedSettings The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedSettings(Object protectedSettings) {
             return protectedSettings(Output.of(protectedSettings));
         }
 
+        /**
+         * @param publisher The name of the extension handler publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The name of the extension handler publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param settings Json formatted public settings for the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<Object> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings Json formatted public settings for the extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(Object settings) {
             return settings(Output.of(settings));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             $.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             return typeHandlerVersion(Output.of(typeHandlerVersion));
         }

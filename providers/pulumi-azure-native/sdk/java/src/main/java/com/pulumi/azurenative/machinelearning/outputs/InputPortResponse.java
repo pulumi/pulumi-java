@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InputPortResponse {
     /**
-     * Port data type.
+     * @return Port data type.
      * 
      */
     private final @Nullable String type;
@@ -23,9 +23,9 @@ public final class InputPortResponse {
     }
 
     /**
-     * Port data type.
+     * @return Port data type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

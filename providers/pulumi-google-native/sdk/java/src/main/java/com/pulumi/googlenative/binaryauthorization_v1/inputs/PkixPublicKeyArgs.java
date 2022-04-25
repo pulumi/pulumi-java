@@ -27,6 +27,10 @@ public final class PkixPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyPem")
     private @Nullable Output<String> publicKeyPem;
 
+    /**
+     * @return A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
+     * 
+     */
     public Optional<Output<String>> publicKeyPem() {
         return Optional.ofNullable(this.publicKeyPem);
     }
@@ -38,6 +42,10 @@ public final class PkixPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="signatureAlgorithm")
     private @Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm;
 
+    /**
+     * @return The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
+     * 
+     */
     public Optional<Output<PkixPublicKeySignatureAlgorithm>> signatureAlgorithm() {
         return Optional.ofNullable(this.signatureAlgorithm);
     }
@@ -67,20 +75,44 @@ public final class PkixPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PkixPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeyPem A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyPem(@Nullable Output<String> publicKeyPem) {
             $.publicKeyPem = publicKeyPem;
             return this;
         }
 
+        /**
+         * @param publicKeyPem A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyPem(String publicKeyPem) {
             return publicKeyPem(Output.of(publicKeyPem));
         }
 
+        /**
+         * @param signatureAlgorithm The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(@Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm) {
             $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
+        /**
+         * @param signatureAlgorithm The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(PkixPublicKeySignatureAlgorithm signatureAlgorithm) {
             return signatureAlgorithm(Output.of(signatureAlgorithm));
         }

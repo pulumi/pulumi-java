@@ -26,6 +26,10 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
     @Import(name="ascLocation", required=true)
     private Output<String> ascLocation;
 
+    /**
+     * @return The location where ASC stores the data of the subscription. can be retrieved from Get locations
+     * 
+     */
     public Output<String> ascLocation() {
         return this.ascLocation;
     }
@@ -37,6 +41,10 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
     @Import(name="enforcementMode")
     private @Nullable Output<String> enforcementMode;
 
+    /**
+     * @return The application control policy enforcement/protection mode of the machine group
+     * 
+     */
     public Optional<Output<String>> enforcementMode() {
         return Optional.ofNullable(this.enforcementMode);
     }
@@ -48,6 +56,10 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
     @Import(name="groupName")
     private @Nullable Output<String> groupName;
 
+    /**
+     * @return Name of an application control machine group
+     * 
+     */
     public Optional<Output<String>> groupName() {
         return Optional.ofNullable(this.groupName);
     }
@@ -66,6 +78,10 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
     @Import(name="protectionMode")
     private @Nullable Output<ProtectionModeArgs> protectionMode;
 
+    /**
+     * @return The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+     * 
+     */
     public Optional<Output<ProtectionModeArgs>> protectionMode() {
         return Optional.ofNullable(this.protectionMode);
     }
@@ -106,29 +122,65 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
             $ = new AdaptiveApplicationControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ascLocation The location where ASC stores the data of the subscription. can be retrieved from Get locations
+         * 
+         * @return builder
+         * 
+         */
         public Builder ascLocation(Output<String> ascLocation) {
             $.ascLocation = ascLocation;
             return this;
         }
 
+        /**
+         * @param ascLocation The location where ASC stores the data of the subscription. can be retrieved from Get locations
+         * 
+         * @return builder
+         * 
+         */
         public Builder ascLocation(String ascLocation) {
             return ascLocation(Output.of(ascLocation));
         }
 
+        /**
+         * @param enforcementMode The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcementMode(@Nullable Output<String> enforcementMode) {
             $.enforcementMode = enforcementMode;
             return this;
         }
 
+        /**
+         * @param enforcementMode The application control policy enforcement/protection mode of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcementMode(String enforcementMode) {
             return enforcementMode(Output.of(enforcementMode));
         }
 
+        /**
+         * @param groupName Name of an application control machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(@Nullable Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName Name of an application control machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }
@@ -146,11 +198,23 @@ public final class AdaptiveApplicationControlArgs extends com.pulumi.resources.R
             return pathRecommendations(List.of(pathRecommendations));
         }
 
+        /**
+         * @param protectionMode The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionMode(@Nullable Output<ProtectionModeArgs> protectionMode) {
             $.protectionMode = protectionMode;
             return this;
         }
 
+        /**
+         * @param protectionMode The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionMode(ProtectionModeArgs protectionMode) {
             return protectionMode(Output.of(protectionMode));
         }

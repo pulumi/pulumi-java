@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class ScheduleResponse {
     /**
-     * The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
+     * @return The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
      * 
      */
     private final String cronJobDuration;
     /**
-     * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
+     * @return The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
      * 
      */
     private final String cronSpec;
     /**
-     * The end time of the event.
+     * @return The end time of the event.
      * 
      */
     private final String endTime;
     /**
-     * The start time of the event.
+     * @return The start time of the event.
      * 
      */
     private final String startTime;
@@ -43,30 +43,30 @@ public final class ScheduleResponse {
     }
 
     /**
-     * The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
+     * @return The duration for the cron job event. The duration of the event is effective after the cron job&#39;s start time.
      * 
-    */
+     */
     public String cronJobDuration() {
         return this.cronJobDuration;
     }
     /**
-     * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
+     * @return The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
      * 
-    */
+     */
     public String cronSpec() {
         return this.cronSpec;
     }
     /**
-     * The end time of the event.
+     * @return The end time of the event.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The start time of the event.
+     * @return The start time of the event.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

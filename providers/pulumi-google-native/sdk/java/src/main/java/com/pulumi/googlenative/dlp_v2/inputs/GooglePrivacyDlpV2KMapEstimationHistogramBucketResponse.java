@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="bucketSize", required=true)
     private String bucketSize;
 
+    /**
+     * @return Number of records within these anonymity bounds.
+     * 
+     */
     public String bucketSize() {
         return this.bucketSize;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="bucketValueCount", required=true)
     private String bucketValueCount;
 
+    /**
+     * @return Total number of distinct quasi-identifier tuple values in this bucket.
+     * 
+     */
     public String bucketValueCount() {
         return this.bucketValueCount;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="bucketValues", required=true)
     private List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
 
+    /**
+     * @return Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+     * 
+     */
     public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues() {
         return this.bucketValues;
     }
@@ -58,6 +70,10 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="maxAnonymity", required=true)
     private String maxAnonymity;
 
+    /**
+     * @return Always greater than or equal to min_anonymity.
+     * 
+     */
     public String maxAnonymity() {
         return this.maxAnonymity;
     }
@@ -69,6 +85,10 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     @Import(name="minAnonymity", required=true)
     private String minAnonymity;
 
+    /**
+     * @return Always positive.
+     * 
+     */
     public String minAnonymity() {
         return this.minAnonymity;
     }
@@ -101,30 +121,66 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
             $ = new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketSize Number of records within these anonymity bounds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketSize(String bucketSize) {
             $.bucketSize = bucketSize;
             return this;
         }
 
+        /**
+         * @param bucketValueCount Total number of distinct quasi-identifier tuple values in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValueCount(String bucketValueCount) {
             $.bucketValueCount = bucketValueCount;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues) {
             $.bucketValues = bucketValues;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
 
+        /**
+         * @param maxAnonymity Always greater than or equal to min_anonymity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAnonymity(String maxAnonymity) {
             $.maxAnonymity = maxAnonymity;
             return this;
         }
 
+        /**
+         * @param minAnonymity Always positive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAnonymity(String minAnonymity) {
             $.minAnonymity = minAnonymity;
             return this;

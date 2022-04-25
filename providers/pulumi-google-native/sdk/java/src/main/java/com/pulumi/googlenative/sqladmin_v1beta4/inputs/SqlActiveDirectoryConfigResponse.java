@@ -23,6 +23,10 @@ public final class SqlActiveDirectoryConfigResponse extends com.pulumi.resources
     @Import(name="domain", required=true)
     private String domain;
 
+    /**
+     * @return The name of the domain (e.g., mydomain.com).
+     * 
+     */
     public String domain() {
         return this.domain;
     }
@@ -34,6 +38,10 @@ public final class SqlActiveDirectoryConfigResponse extends com.pulumi.resources
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always sql#activeDirectoryConfig.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -63,11 +71,23 @@ public final class SqlActiveDirectoryConfigResponse extends com.pulumi.resources
             $ = new SqlActiveDirectoryConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain The name of the domain (e.g., mydomain.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param kind This is always sql#activeDirectoryConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;

@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
     @Import(name="imageDisplayOptions")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
 
+    /**
+     * @return Optional. Settings for displaying the image. Applies to every image in items.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions>> imageDisplayOptions() {
         return Optional.ofNullable(this.imageDisplayOptions);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
     @Import(name="items", required=true)
     private Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
 
+    /**
+     * @return List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
+     * 
+     */
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items() {
         return this.items;
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
             $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageDisplayOptions Optional. Settings for displaying the image. Applies to every image in items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageDisplayOptions(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions) {
             $.imageDisplayOptions = imageDisplayOptions;
             return this;
         }
 
+        /**
+         * @param imageDisplayOptions Optional. Settings for displaying the image. Applies to every image in items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageDisplayOptions(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions imageDisplayOptions) {
             return imageDisplayOptions(Output.of(imageDisplayOptions));
         }
 
+        /**
+         * @param items List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs... items) {
             return items(List.of(items));
         }

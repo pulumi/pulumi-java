@@ -25,6 +25,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
     private @Nullable Output<String> bundleId;
 
+    /**
+     * @return The ID of the bundle for the WorkSpace.
+     * 
+     */
     public Optional<Output<String>> bundleId() {
         return Optional.ofNullable(this.bundleId);
     }
@@ -36,6 +40,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="computerName")
     private @Nullable Output<String> computerName;
 
+    /**
+     * @return The name of the WorkSpace, as seen by the operating system.
+     * 
+     */
     public Optional<Output<String>> computerName() {
         return Optional.ofNullable(this.computerName);
     }
@@ -47,6 +55,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryId")
     private @Nullable Output<String> directoryId;
 
+    /**
+     * @return The ID of the directory for the WorkSpace.
+     * 
+     */
     public Optional<Output<String>> directoryId() {
         return Optional.ofNullable(this.directoryId);
     }
@@ -58,6 +70,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The IP address of the WorkSpace.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -69,6 +85,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootVolumeEncryptionEnabled")
     private @Nullable Output<Boolean> rootVolumeEncryptionEnabled;
 
+    /**
+     * @return Indicates whether the data stored on the root volume is encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> rootVolumeEncryptionEnabled() {
         return Optional.ofNullable(this.rootVolumeEncryptionEnabled);
     }
@@ -80,6 +100,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The operational state of the WorkSpace.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -91,6 +115,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags for the WorkSpace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,6 +130,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -113,6 +145,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -124,6 +160,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userVolumeEncryptionEnabled")
     private @Nullable Output<Boolean> userVolumeEncryptionEnabled;
 
+    /**
+     * @return Indicates whether the data stored on the user volume is encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> userVolumeEncryptionEnabled() {
         return Optional.ofNullable(this.userVolumeEncryptionEnabled);
     }
@@ -135,6 +175,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeEncryptionKey")
     private @Nullable Output<String> volumeEncryptionKey;
 
+    /**
+     * @return The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
+     * 
+     */
     public Optional<Output<String>> volumeEncryptionKey() {
         return Optional.ofNullable(this.volumeEncryptionKey);
     }
@@ -146,6 +190,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceProperties")
     private @Nullable Output<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties;
 
+    /**
+     * @return The WorkSpace properties.
+     * 
+     */
     public Optional<Output<WorkspaceWorkspacePropertiesGetArgs>> workspaceProperties() {
         return Optional.ofNullable(this.workspaceProperties);
     }
@@ -185,110 +233,254 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bundleId The ID of the bundle for the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(@Nullable Output<String> bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param bundleId The ID of the bundle for the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             return bundleId(Output.of(bundleId));
         }
 
+        /**
+         * @param computerName The name of the WorkSpace, as seen by the operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(@Nullable Output<String> computerName) {
             $.computerName = computerName;
             return this;
         }
 
+        /**
+         * @param computerName The name of the WorkSpace, as seen by the operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(String computerName) {
             return computerName(Output.of(computerName));
         }
 
+        /**
+         * @param directoryId The ID of the directory for the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(@Nullable Output<String> directoryId) {
             $.directoryId = directoryId;
             return this;
         }
 
+        /**
+         * @param directoryId The ID of the directory for the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(String directoryId) {
             return directoryId(Output.of(directoryId));
         }
 
+        /**
+         * @param ipAddress The IP address of the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param rootVolumeEncryptionEnabled Indicates whether the data stored on the root volume is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolumeEncryptionEnabled(@Nullable Output<Boolean> rootVolumeEncryptionEnabled) {
             $.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
             return this;
         }
 
+        /**
+         * @param rootVolumeEncryptionEnabled Indicates whether the data stored on the root volume is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolumeEncryptionEnabled(Boolean rootVolumeEncryptionEnabled) {
             return rootVolumeEncryptionEnabled(Output.of(rootVolumeEncryptionEnabled));
         }
 
+        /**
+         * @param state The operational state of the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The operational state of the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param tags The tags for the WorkSpace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the WorkSpace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param userName The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }
 
+        /**
+         * @param userVolumeEncryptionEnabled Indicates whether the data stored on the user volume is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userVolumeEncryptionEnabled(@Nullable Output<Boolean> userVolumeEncryptionEnabled) {
             $.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
             return this;
         }
 
+        /**
+         * @param userVolumeEncryptionEnabled Indicates whether the data stored on the user volume is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userVolumeEncryptionEnabled(Boolean userVolumeEncryptionEnabled) {
             return userVolumeEncryptionEnabled(Output.of(userVolumeEncryptionEnabled));
         }
 
+        /**
+         * @param volumeEncryptionKey The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeEncryptionKey(@Nullable Output<String> volumeEncryptionKey) {
             $.volumeEncryptionKey = volumeEncryptionKey;
             return this;
         }
 
+        /**
+         * @param volumeEncryptionKey The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeEncryptionKey(String volumeEncryptionKey) {
             return volumeEncryptionKey(Output.of(volumeEncryptionKey));
         }
 
+        /**
+         * @param workspaceProperties The WorkSpace properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceProperties(@Nullable Output<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties) {
             $.workspaceProperties = workspaceProperties;
             return this;
         }
 
+        /**
+         * @param workspaceProperties The WorkSpace properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceProperties(WorkspaceWorkspacePropertiesGetArgs workspaceProperties) {
             return workspaceProperties(Output.of(workspaceProperties));
         }

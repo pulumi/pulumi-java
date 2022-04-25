@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse {
     /**
-     * Whether the classification task is multi-label or not.
+     * @return Whether the classification task is multi-label or not.
      * 
      */
     private final Boolean isMultiLabel;
@@ -21,9 +21,9 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
     }
 
     /**
-     * Whether the classification task is multi-label or not.
+     * @return Whether the classification task is multi-label or not.
      * 
-    */
+     */
     public Boolean isMultiLabel() {
         return this.isMultiLabel;
     }

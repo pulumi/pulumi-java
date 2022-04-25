@@ -27,6 +27,10 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends com.pulumi.res
     @Import(name="fqdns")
     private @Nullable Output<List<String>> fqdns;
 
+    /**
+     * @return List of FQDNs for the ThreatIntel Whitelist.
+     * 
+     */
     public Optional<Output<List<String>>> fqdns() {
         return Optional.ofNullable(this.fqdns);
     }
@@ -38,6 +42,10 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends com.pulumi.res
     @Import(name="ipAddresses")
     private @Nullable Output<List<String>> ipAddresses;
 
+    /**
+     * @return List of IP addresses for the ThreatIntel Whitelist.
+     * 
+     */
     public Optional<Output<List<String>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -67,28 +75,64 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends com.pulumi.res
             $ = new FirewallPolicyThreatIntelWhitelistArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdns List of FQDNs for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(@Nullable Output<List<String>> fqdns) {
             $.fqdns = fqdns;
             return this;
         }
 
+        /**
+         * @param fqdns List of FQDNs for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(List<String> fqdns) {
             return fqdns(Output.of(fqdns));
         }
 
+        /**
+         * @param fqdns List of FQDNs for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
 
+        /**
+         * @param ipAddresses List of IP addresses for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses List of IP addresses for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses List of IP addresses for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }

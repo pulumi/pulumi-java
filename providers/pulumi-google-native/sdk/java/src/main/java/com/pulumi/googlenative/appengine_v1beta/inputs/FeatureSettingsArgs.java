@@ -26,6 +26,10 @@ public final class FeatureSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="splitHealthChecks")
     private @Nullable Output<Boolean> splitHealthChecks;
 
+    /**
+     * @return Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to &#39;readiness_check&#39; and &#39;liveness_check&#39; values instead of &#39;health_check&#39; ones. Once the legacy &#39;health_check&#39; behavior is deprecated, and this value is always true, this setting can be removed.
+     * 
+     */
     public Optional<Output<Boolean>> splitHealthChecks() {
         return Optional.ofNullable(this.splitHealthChecks);
     }
@@ -37,6 +41,10 @@ public final class FeatureSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="useContainerOptimizedOs")
     private @Nullable Output<Boolean> useContainerOptimizedOs;
 
+    /**
+     * @return If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
+     * 
+     */
     public Optional<Output<Boolean>> useContainerOptimizedOs() {
         return Optional.ofNullable(this.useContainerOptimizedOs);
     }
@@ -66,20 +74,44 @@ public final class FeatureSettingsArgs extends com.pulumi.resources.ResourceArgs
             $ = new FeatureSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param splitHealthChecks Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to &#39;readiness_check&#39; and &#39;liveness_check&#39; values instead of &#39;health_check&#39; ones. Once the legacy &#39;health_check&#39; behavior is deprecated, and this value is always true, this setting can be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitHealthChecks(@Nullable Output<Boolean> splitHealthChecks) {
             $.splitHealthChecks = splitHealthChecks;
             return this;
         }
 
+        /**
+         * @param splitHealthChecks Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to &#39;readiness_check&#39; and &#39;liveness_check&#39; values instead of &#39;health_check&#39; ones. Once the legacy &#39;health_check&#39; behavior is deprecated, and this value is always true, this setting can be removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder splitHealthChecks(Boolean splitHealthChecks) {
             return splitHealthChecks(Output.of(splitHealthChecks));
         }
 
+        /**
+         * @param useContainerOptimizedOs If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useContainerOptimizedOs(@Nullable Output<Boolean> useContainerOptimizedOs) {
             $.useContainerOptimizedOs = useContainerOptimizedOs;
             return this;
         }
 
+        /**
+         * @param useContainerOptimizedOs If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useContainerOptimizedOs(Boolean useContainerOptimizedOs) {
             return useContainerOptimizedOs(Output.of(useContainerOptimizedOs));
         }

@@ -26,6 +26,10 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="customMetadata", required=true)
     private Map<String,String> customMetadata;
 
+    /**
+     * @return Optional. Additional metadata for describing this parameter.
+     * 
+     */
     public Map<String,String> customMetadata() {
         return this.customMetadata;
     }
@@ -37,6 +41,10 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="helpText", required=true)
     private String helpText;
 
+    /**
+     * @return The help text to display for the parameter.
+     * 
+     */
     public String helpText() {
         return this.helpText;
     }
@@ -48,6 +56,10 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="isOptional", required=true)
     private Boolean isOptional;
 
+    /**
+     * @return Optional. Whether the parameter is optional. Defaults to false.
+     * 
+     */
     public Boolean isOptional() {
         return this.isOptional;
     }
@@ -59,6 +71,10 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return The label to display for the parameter.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -70,6 +86,10 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the parameter.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -81,6 +101,10 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="paramType", required=true)
     private String paramType;
 
+    /**
+     * @return Optional. The type of the parameter. Used for selecting input picker.
+     * 
+     */
     public String paramType() {
         return this.paramType;
     }
@@ -92,6 +116,10 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="regexes", required=true)
     private List<String> regexes;
 
+    /**
+     * @return Optional. Regexes that the parameter must match.
+     * 
+     */
     public List<String> regexes() {
         return this.regexes;
     }
@@ -126,41 +154,89 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
             $ = new ParameterMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customMetadata Optional. Additional metadata for describing this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customMetadata(Map<String,String> customMetadata) {
             $.customMetadata = customMetadata;
             return this;
         }
 
+        /**
+         * @param helpText The help text to display for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder helpText(String helpText) {
             $.helpText = helpText;
             return this;
         }
 
+        /**
+         * @param isOptional Optional. Whether the parameter is optional. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOptional(Boolean isOptional) {
             $.isOptional = isOptional;
             return this;
         }
 
+        /**
+         * @param label The label to display for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param name The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param paramType Optional. The type of the parameter. Used for selecting input picker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramType(String paramType) {
             $.paramType = paramType;
             return this;
         }
 
+        /**
+         * @param regexes Optional. Regexes that the parameter must match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexes(List<String> regexes) {
             $.regexes = regexes;
             return this;
         }
 
+        /**
+         * @param regexes Optional. Regexes that the parameter must match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexes(String... regexes) {
             return regexes(List.of(regexes));
         }

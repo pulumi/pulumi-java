@@ -28,6 +28,10 @@ public final class AutoscaleScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="days")
     private @Nullable Output<List<DaysOfWeek>> days;
 
+    /**
+     * @return Days of the week for a schedule-based autoscale rule
+     * 
+     */
     public Optional<Output<List<DaysOfWeek>>> days() {
         return Optional.ofNullable(this.days);
     }
@@ -39,6 +43,10 @@ public final class AutoscaleScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="timeAndCapacity")
     private @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
 
+    /**
+     * @return Time and capacity for a schedule-based autoscale rule
+     * 
+     */
     public Optional<Output<AutoscaleTimeAndCapacityArgs>> timeAndCapacity() {
         return Optional.ofNullable(this.timeAndCapacity);
     }
@@ -68,24 +76,54 @@ public final class AutoscaleScheduleArgs extends com.pulumi.resources.ResourceAr
             $ = new AutoscaleScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days Days of the week for a schedule-based autoscale rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Output<List<DaysOfWeek>> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days Days of the week for a schedule-based autoscale rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(List<DaysOfWeek> days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param days Days of the week for a schedule-based autoscale rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(DaysOfWeek... days) {
             return days(List.of(days));
         }
 
+        /**
+         * @param timeAndCapacity Time and capacity for a schedule-based autoscale rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAndCapacity(@Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
             $.timeAndCapacity = timeAndCapacity;
             return this;
         }
 
+        /**
+         * @param timeAndCapacity Time and capacity for a schedule-based autoscale rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAndCapacity(AutoscaleTimeAndCapacityArgs timeAndCapacity) {
             return timeAndCapacity(Output.of(timeAndCapacity));
         }

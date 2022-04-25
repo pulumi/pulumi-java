@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SecretManagerSecretResponse {
     /**
-     * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
+     * @return Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
      * 
      */
     private final String env;
     /**
-     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * @return Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
      * 
      */
     private final String versionName;
@@ -29,16 +29,16 @@ public final class SecretManagerSecretResponse {
     }
 
     /**
-     * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
+     * @return Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build&#39;s secrets, and must be used by at least one build step.
      * 
-    */
+     */
     public String env() {
         return this.env;
     }
     /**
-     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
+     * @return Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
      * 
-    */
+     */
     public String versionName() {
         return this.versionName;
     }

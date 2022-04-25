@@ -25,6 +25,10 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return Describes the override action to be applied when rule matches.
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -36,6 +40,10 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="enabledState")
     private @Nullable String enabledState;
 
+    /**
+     * @return Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+     * 
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -47,6 +55,10 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="ruleId", required=true)
     private String ruleId;
 
+    /**
+     * @return Identifier for the managed rule.
+     * 
+     */
     public String ruleId() {
         return this.ruleId;
     }
@@ -77,16 +89,34 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
             $ = new ManagedRuleOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Describes the override action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param enabledState Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable String enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param ruleId Identifier for the managed rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             $.ruleId = ruleId;
             return this;

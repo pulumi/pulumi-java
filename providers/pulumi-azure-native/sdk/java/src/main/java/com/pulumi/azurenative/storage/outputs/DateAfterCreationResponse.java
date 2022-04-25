@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DateAfterCreationResponse {
     /**
-     * Value indicating the age in days after creation
+     * @return Value indicating the age in days after creation
      * 
      */
     private final Double daysAfterCreationGreaterThan;
@@ -21,9 +21,9 @@ public final class DateAfterCreationResponse {
     }
 
     /**
-     * Value indicating the age in days after creation
+     * @return Value indicating the age in days after creation
      * 
-    */
+     */
     public Double daysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }

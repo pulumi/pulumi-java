@@ -22,6 +22,10 @@ public final class DatabaseInstanceCloneArgs extends com.pulumi.resources.Resour
     @Import(name="pointInTime")
     private @Nullable Output<String> pointInTime;
 
+    /**
+     * @return The timestamp of the point in time that should be restored.
+     * 
+     */
     public Optional<Output<String>> pointInTime() {
         return Optional.ofNullable(this.pointInTime);
     }
@@ -33,6 +37,10 @@ public final class DatabaseInstanceCloneArgs extends com.pulumi.resources.Resour
     @Import(name="sourceInstanceName", required=true)
     private Output<String> sourceInstanceName;
 
+    /**
+     * @return Name of the source instance which will be cloned.
+     * 
+     */
     public Output<String> sourceInstanceName() {
         return this.sourceInstanceName;
     }
@@ -62,20 +70,44 @@ public final class DatabaseInstanceCloneArgs extends com.pulumi.resources.Resour
             $ = new DatabaseInstanceCloneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pointInTime The timestamp of the point in time that should be restored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTime(@Nullable Output<String> pointInTime) {
             $.pointInTime = pointInTime;
             return this;
         }
 
+        /**
+         * @param pointInTime The timestamp of the point in time that should be restored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTime(String pointInTime) {
             return pointInTime(Output.of(pointInTime));
         }
 
+        /**
+         * @param sourceInstanceName Name of the source instance which will be cloned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstanceName(Output<String> sourceInstanceName) {
             $.sourceInstanceName = sourceInstanceName;
             return this;
         }
 
+        /**
+         * @param sourceInstanceName Name of the source instance which will be cloned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceInstanceName(String sourceInstanceName) {
             return sourceInstanceName(Output.of(sourceInstanceName));
         }

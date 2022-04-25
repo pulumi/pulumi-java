@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMediaGraphResult {
     /**
-     * Date the Media Graph was created.
+     * @return Date the Media Graph was created.
      * 
      */
     private final String created;
     /**
-     * Media Graph description.
+     * @return Media Graph description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Fully qualified resource ID for the resource.
+     * @return Fully qualified resource ID for the resource.
      * 
      */
     private final String id;
     /**
-     * Date the Media Graph was last modified.
+     * @return Date the Media Graph was last modified.
      * 
      */
     private final String lastModified;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * Media Graph sinks.
+     * @return Media Graph sinks.
      * 
      */
     private final List<MediaGraphAssetSinkResponse> sinks;
     /**
-     * Media Graph sources.
+     * @return Media Graph sources.
      * 
      */
     private final List<MediaGraphRtspSourceResponse> sources;
     /**
-     * Media Graph state which indicates the resource allocation status for running the media graph pipeline.
+     * @return Media Graph state which indicates the resource allocation status for running the media graph pipeline.
      * 
      */
     private final String state;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -83,65 +83,65 @@ public final class GetMediaGraphResult {
     }
 
     /**
-     * Date the Media Graph was created.
+     * @return Date the Media Graph was created.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Media Graph description.
+     * @return Media Graph description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Fully qualified resource ID for the resource.
+     * @return Fully qualified resource ID for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Date the Media Graph was last modified.
+     * @return Date the Media Graph was last modified.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Media Graph sinks.
+     * @return Media Graph sinks.
      * 
-    */
+     */
     public List<MediaGraphAssetSinkResponse> sinks() {
         return this.sinks;
     }
     /**
-     * Media Graph sources.
+     * @return Media Graph sources.
      * 
-    */
+     */
     public List<MediaGraphRtspSourceResponse> sources() {
         return this.sources;
     }
     /**
-     * Media Graph state which indicates the resource allocation status for running the media graph pipeline.
+     * @return Media Graph state which indicates the resource allocation status for running the media graph pipeline.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

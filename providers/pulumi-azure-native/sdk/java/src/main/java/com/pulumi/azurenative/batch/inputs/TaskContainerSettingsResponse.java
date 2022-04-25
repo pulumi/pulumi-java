@@ -22,6 +22,10 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
     @Import(name="containerRunOptions")
     private @Nullable String containerRunOptions;
 
+    /**
+     * @return These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
+     * 
+     */
     public Optional<String> containerRunOptions() {
         return Optional.ofNullable(this.containerRunOptions);
     }
@@ -33,6 +37,10 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
     @Import(name="imageName", required=true)
     private String imageName;
 
+    /**
+     * @return This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
+     * 
+     */
     public String imageName() {
         return this.imageName;
     }
@@ -44,6 +52,10 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
     @Import(name="registry")
     private @Nullable ContainerRegistryResponse registry;
 
+    /**
+     * @return This setting can be omitted if was already provided at pool creation.
+     * 
+     */
     public Optional<ContainerRegistryResponse> registry() {
         return Optional.ofNullable(this.registry);
     }
@@ -82,16 +94,34 @@ public final class TaskContainerSettingsResponse extends com.pulumi.resources.In
             $ = new TaskContainerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerRunOptions These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRunOptions(@Nullable String containerRunOptions) {
             $.containerRunOptions = containerRunOptions;
             return this;
         }
 
+        /**
+         * @param imageName This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param registry This setting can be omitted if was already provided at pool creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registry(@Nullable ContainerRegistryResponse registry) {
             $.registry = registry;
             return this;

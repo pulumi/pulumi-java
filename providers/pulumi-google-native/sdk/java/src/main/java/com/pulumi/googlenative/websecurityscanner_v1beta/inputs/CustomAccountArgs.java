@@ -24,6 +24,10 @@ public final class CustomAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loginUrl", required=true)
     private Output<String> loginUrl;
 
+    /**
+     * @return The login form URL of the website.
+     * 
+     */
     public Output<String> loginUrl() {
         return this.loginUrl;
     }
@@ -35,6 +39,10 @@ public final class CustomAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -46,6 +54,10 @@ public final class CustomAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return The user name of the custom account.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -76,29 +88,65 @@ public final class CustomAccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginUrl The login form URL of the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginUrl(Output<String> loginUrl) {
             $.loginUrl = loginUrl;
             return this;
         }
 
+        /**
+         * @param loginUrl The login form URL of the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginUrl(String loginUrl) {
             return loginUrl(Output.of(loginUrl));
         }
 
+        /**
+         * @param password Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username The user name of the custom account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The user name of the custom account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

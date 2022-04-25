@@ -14,42 +14,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetJobAgentResult {
     /**
-     * Resource ID of the database to store job metadata in.
+     * @return Resource ID of the database to store job metadata in.
      * 
      */
     private final String databaseId;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The name and tier of the SKU.
+     * @return The name and tier of the SKU.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * The state of the job agent.
+     * @return The state of the job agent.
      * 
      */
     private final String state;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -75,58 +75,58 @@ public final class GetJobAgentResult {
     }
 
     /**
-     * Resource ID of the database to store job metadata in.
+     * @return Resource ID of the database to store job metadata in.
      * 
-    */
+     */
     public String databaseId() {
         return this.databaseId;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name and tier of the SKU.
+     * @return The name and tier of the SKU.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The state of the job agent.
+     * @return The state of the job agent.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

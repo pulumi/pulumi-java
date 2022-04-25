@@ -20,6 +20,10 @@ public final class StandardAppVersionEntrypointGetArgs extends com.pulumi.resour
     @Import(name="shell", required=true)
     private Output<String> shell;
 
+    /**
+     * @return The format should be a shell command that can be fed to bash -c.
+     * 
+     */
     public Output<String> shell() {
         return this.shell;
     }
@@ -48,11 +52,23 @@ public final class StandardAppVersionEntrypointGetArgs extends com.pulumi.resour
             $ = new StandardAppVersionEntrypointGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param shell The format should be a shell command that can be fed to bash -c.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shell(Output<String> shell) {
             $.shell = shell;
             return this;
         }
 
+        /**
+         * @param shell The format should be a shell command that can be fed to bash -c.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shell(String shell) {
             return shell(Output.of(shell));
         }

@@ -26,6 +26,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -48,6 +56,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return URL of the network to which this VPN gateway is attached. Provided by the client when the VPN gateway is created.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -91,6 +107,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackType")
     private @Nullable Output<VpnGatewayStackType> stackType;
 
+    /**
+     * @return The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.
+     * 
+     */
     public Optional<Output<VpnGatewayStackType>> stackType() {
         return Optional.ofNullable(this.stackType);
     }
@@ -102,6 +122,10 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpnInterfaces")
     private @Nullable Output<List<VpnGatewayVpnGatewayInterfaceArgs>> vpnInterfaces;
 
+    /**
+     * @return The list of VPN interfaces associated with this VPN gateway.
+     * 
+     */
     public Optional<Output<List<VpnGatewayVpnGatewayInterfaceArgs>>> vpnInterfaces() {
         return Optional.ofNullable(this.vpnInterfaces);
     }
@@ -138,38 +162,86 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network URL of the network to which this VPN gateway is attached. Provided by the client when the VPN gateway is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network URL of the network to which this VPN gateway is attached. Provided by the client when the VPN gateway is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
@@ -201,24 +273,54 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param stackType The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackType(@Nullable Output<VpnGatewayStackType> stackType) {
             $.stackType = stackType;
             return this;
         }
 
+        /**
+         * @param stackType The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackType(VpnGatewayStackType stackType) {
             return stackType(Output.of(stackType));
         }
 
+        /**
+         * @param vpnInterfaces The list of VPN interfaces associated with this VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnInterfaces(@Nullable Output<List<VpnGatewayVpnGatewayInterfaceArgs>> vpnInterfaces) {
             $.vpnInterfaces = vpnInterfaces;
             return this;
         }
 
+        /**
+         * @param vpnInterfaces The list of VPN interfaces associated with this VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnInterfaces(List<VpnGatewayVpnGatewayInterfaceArgs> vpnInterfaces) {
             return vpnInterfaces(Output.of(vpnInterfaces));
         }
 
+        /**
+         * @param vpnInterfaces The list of VPN interfaces associated with this VPN gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnInterfaces(VpnGatewayVpnGatewayInterfaceArgs... vpnInterfaces) {
             return vpnInterfaces(List.of(vpnInterfaces));
         }

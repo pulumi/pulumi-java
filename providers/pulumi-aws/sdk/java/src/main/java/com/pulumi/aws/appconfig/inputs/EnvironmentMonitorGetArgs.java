@@ -22,6 +22,10 @@ public final class EnvironmentMonitorGetArgs extends com.pulumi.resources.Resour
     @Import(name="alarmArn", required=true)
     private Output<String> alarmArn;
 
+    /**
+     * @return ARN of the Amazon CloudWatch alarm.
+     * 
+     */
     public Output<String> alarmArn() {
         return this.alarmArn;
     }
@@ -33,6 +37,10 @@ public final class EnvironmentMonitorGetArgs extends com.pulumi.resources.Resour
     @Import(name="alarmRoleArn")
     private @Nullable Output<String> alarmRoleArn;
 
+    /**
+     * @return ARN of an IAM role for AWS AppConfig to monitor `alarm_arn`.
+     * 
+     */
     public Optional<Output<String>> alarmRoleArn() {
         return Optional.ofNullable(this.alarmRoleArn);
     }
@@ -62,20 +70,44 @@ public final class EnvironmentMonitorGetArgs extends com.pulumi.resources.Resour
             $ = new EnvironmentMonitorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmArn ARN of the Amazon CloudWatch alarm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmArn(Output<String> alarmArn) {
             $.alarmArn = alarmArn;
             return this;
         }
 
+        /**
+         * @param alarmArn ARN of the Amazon CloudWatch alarm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmArn(String alarmArn) {
             return alarmArn(Output.of(alarmArn));
         }
 
+        /**
+         * @param alarmRoleArn ARN of an IAM role for AWS AppConfig to monitor `alarm_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmRoleArn(@Nullable Output<String> alarmRoleArn) {
             $.alarmRoleArn = alarmRoleArn;
             return this;
         }
 
+        /**
+         * @param alarmRoleArn ARN of an IAM role for AWS AppConfig to monitor `alarm_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmRoleArn(String alarmRoleArn) {
             return alarmRoleArn(Output.of(alarmRoleArn));
         }

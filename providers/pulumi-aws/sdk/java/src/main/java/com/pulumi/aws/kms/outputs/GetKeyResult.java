@@ -23,7 +23,7 @@ public final class GetKeyResult {
     private final String expirationModel;
     private final @Nullable List<String> grantTokens;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -104,9 +104,9 @@ public final class GetKeyResult {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -17,47 +17,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiPortalPropertiesResponse {
     /**
-     * The array of resource Ids of gateway to integrate with API portal.
+     * @return The array of resource Ids of gateway to integrate with API portal.
      * 
      */
     private final @Nullable List<String> gatewayIds;
     /**
-     * Indicate if only https is allowed.
+     * @return Indicate if only https is allowed.
      * 
      */
     private final @Nullable Boolean httpsOnly;
     /**
-     * Collection of instances belong to API portal.
+     * @return Collection of instances belong to API portal.
      * 
      */
     private final List<ApiPortalInstanceResponse> instances;
     /**
-     * State of the API portal.
+     * @return State of the API portal.
      * 
      */
     private final String provisioningState;
     /**
-     * Indicates whether the API portal exposes endpoint.
+     * @return Indicates whether the API portal exposes endpoint.
      * 
      */
     private final @Nullable Boolean public_;
     /**
-     * The requested resource quantity for required CPU and Memory.
+     * @return The requested resource quantity for required CPU and Memory.
      * 
      */
     private final ApiPortalResourceRequestsResponse resourceRequests;
     /**
-     * Collection of OpenAPI source URL locations.
+     * @return Collection of OpenAPI source URL locations.
      * 
      */
     private final @Nullable List<String> sourceUrls;
     /**
-     * Single sign-on related configuration
+     * @return Single sign-on related configuration
      * 
      */
     private final @Nullable SsoPropertiesResponse ssoProperties;
     /**
-     * URL of the API portal, exposed when &#39;public&#39; is true.
+     * @return URL of the API portal, exposed when &#39;public&#39; is true.
      * 
      */
     private final String url;
@@ -85,65 +85,65 @@ public final class ApiPortalPropertiesResponse {
     }
 
     /**
-     * The array of resource Ids of gateway to integrate with API portal.
+     * @return The array of resource Ids of gateway to integrate with API portal.
      * 
-    */
+     */
     public List<String> gatewayIds() {
         return this.gatewayIds == null ? List.of() : this.gatewayIds;
     }
     /**
-     * Indicate if only https is allowed.
+     * @return Indicate if only https is allowed.
      * 
-    */
+     */
     public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
-     * Collection of instances belong to API portal.
+     * @return Collection of instances belong to API portal.
      * 
-    */
+     */
     public List<ApiPortalInstanceResponse> instances() {
         return this.instances;
     }
     /**
-     * State of the API portal.
+     * @return State of the API portal.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Indicates whether the API portal exposes endpoint.
+     * @return Indicates whether the API portal exposes endpoint.
      * 
-    */
+     */
     public Optional<Boolean> public_() {
         return Optional.ofNullable(this.public_);
     }
     /**
-     * The requested resource quantity for required CPU and Memory.
+     * @return The requested resource quantity for required CPU and Memory.
      * 
-    */
+     */
     public ApiPortalResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
     /**
-     * Collection of OpenAPI source URL locations.
+     * @return Collection of OpenAPI source URL locations.
      * 
-    */
+     */
     public List<String> sourceUrls() {
         return this.sourceUrls == null ? List.of() : this.sourceUrls;
     }
     /**
-     * Single sign-on related configuration
+     * @return Single sign-on related configuration
      * 
-    */
+     */
     public Optional<SsoPropertiesResponse> ssoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
     /**
-     * URL of the API portal, exposed when &#39;public&#39; is true.
+     * @return URL of the API portal, exposed when &#39;public&#39; is true.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

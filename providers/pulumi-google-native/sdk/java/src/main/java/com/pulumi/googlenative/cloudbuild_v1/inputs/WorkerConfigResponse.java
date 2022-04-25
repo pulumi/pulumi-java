@@ -23,6 +23,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="diskSizeGb", required=true)
     private String diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+     * 
+     */
     public String diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -34,6 +38,10 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return Machine type of a worker, such as `e2-medium`. See [Worker pool config file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). If left blank, Cloud Build will use a sensible default.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -63,11 +71,23 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new WorkerConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param machineType Machine type of a worker, such as `e2-medium`. See [Worker pool config file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). If left blank, Cloud Build will use a sensible default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;

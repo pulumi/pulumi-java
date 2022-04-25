@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class VmwareSourceDetailsResponse {
     /**
-     * Input only. The credentials password. This is write only and can not be read in a GET operation.
+     * @return Input only. The credentials password. This is write only and can not be read in a GET operation.
      * 
      */
     private final String password;
     /**
-     * The thumbprint representing the certificate for the vcenter.
+     * @return The thumbprint representing the certificate for the vcenter.
      * 
      */
     private final String thumbprint;
     /**
-     * The credentials username.
+     * @return The credentials username.
      * 
      */
     private final String username;
     /**
-     * The ip address of the vcenter this Source represents.
+     * @return The ip address of the vcenter this Source represents.
      * 
      */
     private final String vcenterIp;
@@ -43,30 +43,30 @@ public final class VmwareSourceDetailsResponse {
     }
 
     /**
-     * Input only. The credentials password. This is write only and can not be read in a GET operation.
+     * @return Input only. The credentials password. This is write only and can not be read in a GET operation.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The thumbprint representing the certificate for the vcenter.
+     * @return The thumbprint representing the certificate for the vcenter.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * The credentials username.
+     * @return The credentials username.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }
     /**
-     * The ip address of the vcenter this Source represents.
+     * @return The ip address of the vcenter this Source represents.
      * 
-    */
+     */
     public String vcenterIp() {
         return this.vcenterIp;
     }

@@ -27,6 +27,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="accountName")
     private @Nullable String accountName;
 
+    /**
+     * @return Azure Internal monitoring pipeline account.
+     * 
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -38,6 +42,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="autoKeyConfigUrl")
     private @Nullable String autoKeyConfigUrl;
 
+    /**
+     * @return Azure Internal monitoring pipeline autokey associated with the certificate.
+     * 
+     */
     public Optional<String> autoKeyConfigUrl() {
         return Optional.ofNullable(this.autoKeyConfigUrl);
     }
@@ -49,6 +57,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A description of the sink.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +72,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="fluentdConfigUrl")
     private @Nullable Object fluentdConfigUrl;
 
+    /**
+     * @return Azure Internal monitoring agent fluentd configuration.
+     * 
+     */
     public Optional<Object> fluentdConfigUrl() {
         return Optional.ofNullable(this.fluentdConfigUrl);
     }
@@ -72,6 +88,11 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The kind of DiagnosticsSink.
+     * Expected value is &#39;AzureInternalMonitoringPipeline&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -83,6 +104,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="maConfigUrl")
     private @Nullable String maConfigUrl;
 
+    /**
+     * @return Azure Internal monitoring agent configuration.
+     * 
+     */
     public Optional<String> maConfigUrl() {
         return Optional.ofNullable(this.maConfigUrl);
     }
@@ -94,6 +119,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the sink. This value is referenced by DiagnosticsReferenceDescription
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -105,6 +134,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="namespace")
     private @Nullable String namespace;
 
+    /**
+     * @return Azure Internal monitoring pipeline account namespace.
+     * 
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -140,41 +173,90 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
             $ = new AzureInternalMonitoringPipelineSinkDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Azure Internal monitoring pipeline account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param autoKeyConfigUrl Azure Internal monitoring pipeline autokey associated with the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
             $.autoKeyConfigUrl = autoKeyConfigUrl;
             return this;
         }
 
+        /**
+         * @param description A description of the sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param fluentdConfigUrl Azure Internal monitoring agent fluentd configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
             $.fluentdConfigUrl = fluentdConfigUrl;
             return this;
         }
 
+        /**
+         * @param kind The kind of DiagnosticsSink.
+         * Expected value is &#39;AzureInternalMonitoringPipeline&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param maConfigUrl Azure Internal monitoring agent configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maConfigUrl(@Nullable String maConfigUrl) {
             $.maConfigUrl = maConfigUrl;
             return this;
         }
 
+        /**
+         * @param name Name of the sink. This value is referenced by DiagnosticsReferenceDescription
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param namespace Azure Internal monitoring pipeline account namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable String namespace) {
             $.namespace = namespace;
             return this;

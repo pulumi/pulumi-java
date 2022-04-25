@@ -26,6 +26,10 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="repository", required=true)
     private Output<String> repository;
 
+    /**
+     * @return The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
+     * 
+     */
     public Output<String> repository() {
         return this.repository;
     }
@@ -37,6 +41,10 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return The tag of the container image. If not specified, this defaults to the latest tag.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -66,20 +74,44 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContainerImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param repository The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(Output<String> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             return repository(Output.of(repository));
         }
 
+        /**
+         * @param tag The tag of the container image. If not specified, this defaults to the latest tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag The tag of the container image. If not specified, this defaults to the latest tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }

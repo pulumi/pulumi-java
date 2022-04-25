@@ -33,6 +33,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -44,6 +48,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +63,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="privateIPAddress")
     private @Nullable Output<String> privateIPAddress;
 
+    /**
+     * @return The private IP address of the IP configuration.
+     * 
+     */
     public Optional<Output<String>> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -66,6 +78,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="privateIPAddressVersion")
     private @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
+    /**
+     * @return Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+     * 
+     */
     public Optional<Output<Either<String,IPVersion>>> privateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
@@ -77,6 +93,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="privateIPAllocationMethod")
     private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
+    /**
+     * @return The Private IP allocation method.
+     * 
+     */
     public Optional<Output<Either<String,IPAllocationMethod>>> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -88,6 +108,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="publicIPAddress")
     private @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
+    /**
+     * @return The reference to the Public IP resource.
+     * 
+     */
     public Optional<Output<PublicIPAddressArgs>> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -99,6 +123,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="publicIPPrefix")
     private @Nullable Output<SubResourceArgs> publicIPPrefix;
 
+    /**
+     * @return The reference to the Public IP Prefix resource.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> publicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
@@ -110,6 +138,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="subnet")
     private @Nullable Output<SubnetArgs> subnet;
 
+    /**
+     * @return The reference to the subnet resource.
+     * 
+     */
     public Optional<Output<SubnetArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -121,6 +153,10 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -157,103 +193,241 @@ public final class FrontendIPConfigurationArgs extends com.pulumi.resources.Reso
             $ = new FrontendIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateIPAddress The private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAddress The private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(String privateIPAddress) {
             return privateIPAddress(Output.of(privateIPAddress));
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
             $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(Either<String,IPVersion> privateIPAddressVersion) {
             return privateIPAddressVersion(Output.of(privateIPAddressVersion));
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(String privateIPAddressVersion) {
             return privateIPAddressVersion(Either.ofLeft(privateIPAddressVersion));
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(IPVersion privateIPAddressVersion) {
             return privateIPAddressVersion(Either.ofRight(privateIPAddressVersion));
         }
 
+        /**
+         * @param privateIPAllocationMethod The Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod The Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateIPAllocationMethod The Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(String privateIPAllocationMethod) {
             return privateIPAllocationMethod(Either.ofLeft(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateIPAllocationMethod The Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(IPAllocationMethod privateIPAllocationMethod) {
             return privateIPAllocationMethod(Either.ofRight(privateIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPAddress The reference to the Public IP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param publicIPAddress The reference to the Public IP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(PublicIPAddressArgs publicIPAddress) {
             return publicIPAddress(Output.of(publicIPAddress));
         }
 
+        /**
+         * @param publicIPPrefix The reference to the Public IP Prefix resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
             $.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
+        /**
+         * @param publicIPPrefix The reference to the Public IP Prefix resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(SubResourceArgs publicIPPrefix) {
             return publicIPPrefix(Output.of(publicIPPrefix));
         }
 
+        /**
+         * @param subnet The reference to the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet The reference to the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubnetArgs subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

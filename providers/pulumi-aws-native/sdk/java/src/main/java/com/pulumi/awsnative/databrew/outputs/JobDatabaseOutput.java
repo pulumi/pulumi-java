@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class JobDatabaseOutput {
     private final JobDatabaseTableOutputOptions databaseOptions;
     /**
-     * Database table name
+     * @return Database table name
      * 
      */
     private final @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode;
     /**
-     * Glue connection name
+     * @return Glue connection name
      * 
      */
     private final String glueConnectionName;
@@ -39,16 +39,16 @@ public final class JobDatabaseOutput {
         return this.databaseOptions;
     }
     /**
-     * Database table name
+     * @return Database table name
      * 
-    */
+     */
     public Optional<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode() {
         return Optional.ofNullable(this.databaseOutputMode);
     }
     /**
-     * Glue connection name
+     * @return Glue connection name
      * 
-    */
+     */
     public String glueConnectionName() {
         return this.glueConnectionName;
     }

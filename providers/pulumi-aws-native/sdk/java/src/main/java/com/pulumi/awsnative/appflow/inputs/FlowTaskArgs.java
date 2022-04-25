@@ -26,6 +26,10 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorOperator")
     private @Nullable Output<FlowConnectorOperatorArgs> connectorOperator;
 
+    /**
+     * @return Operation to be performed on provided source fields
+     * 
+     */
     public Optional<Output<FlowConnectorOperatorArgs>> connectorOperator() {
         return Optional.ofNullable(this.connectorOperator);
     }
@@ -37,6 +41,10 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationField")
     private @Nullable Output<String> destinationField;
 
+    /**
+     * @return A field value on which source field should be validated
+     * 
+     */
     public Optional<Output<String>> destinationField() {
         return Optional.ofNullable(this.destinationField);
     }
@@ -48,6 +56,10 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceFields", required=true)
     private Output<List<String>> sourceFields;
 
+    /**
+     * @return Source fields on which particular task will be applied
+     * 
+     */
     public Output<List<String>> sourceFields() {
         return this.sourceFields;
     }
@@ -59,6 +71,10 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskProperties")
     private @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties;
 
+    /**
+     * @return A Map used to store task related info
+     * 
+     */
     public Optional<Output<List<FlowTaskPropertiesObjectArgs>>> taskProperties() {
         return Optional.ofNullable(this.taskProperties);
     }
@@ -70,6 +86,10 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskType", required=true)
     private Output<FlowTaskType> taskType;
 
+    /**
+     * @return Type of task
+     * 
+     */
     public Output<FlowTaskType> taskType() {
         return this.taskType;
     }
@@ -102,55 +122,127 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FlowTaskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorOperator Operation to be performed on provided source fields
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOperator(@Nullable Output<FlowConnectorOperatorArgs> connectorOperator) {
             $.connectorOperator = connectorOperator;
             return this;
         }
 
+        /**
+         * @param connectorOperator Operation to be performed on provided source fields
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorOperator(FlowConnectorOperatorArgs connectorOperator) {
             return connectorOperator(Output.of(connectorOperator));
         }
 
+        /**
+         * @param destinationField A field value on which source field should be validated
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationField(@Nullable Output<String> destinationField) {
             $.destinationField = destinationField;
             return this;
         }
 
+        /**
+         * @param destinationField A field value on which source field should be validated
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationField(String destinationField) {
             return destinationField(Output.of(destinationField));
         }
 
+        /**
+         * @param sourceFields Source fields on which particular task will be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFields(Output<List<String>> sourceFields) {
             $.sourceFields = sourceFields;
             return this;
         }
 
+        /**
+         * @param sourceFields Source fields on which particular task will be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFields(List<String> sourceFields) {
             return sourceFields(Output.of(sourceFields));
         }
 
+        /**
+         * @param sourceFields Source fields on which particular task will be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFields(String... sourceFields) {
             return sourceFields(List.of(sourceFields));
         }
 
+        /**
+         * @param taskProperties A Map used to store task related info
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskProperties(@Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties) {
             $.taskProperties = taskProperties;
             return this;
         }
 
+        /**
+         * @param taskProperties A Map used to store task related info
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskProperties(List<FlowTaskPropertiesObjectArgs> taskProperties) {
             return taskProperties(Output.of(taskProperties));
         }
 
+        /**
+         * @param taskProperties A Map used to store task related info
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskProperties(FlowTaskPropertiesObjectArgs... taskProperties) {
             return taskProperties(List.of(taskProperties));
         }
 
+        /**
+         * @param taskType Type of task
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(Output<FlowTaskType> taskType) {
             $.taskType = taskType;
             return this;
         }
 
+        /**
+         * @param taskType Type of task
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(FlowTaskType taskType) {
             return taskType(Output.of(taskType));
         }

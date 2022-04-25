@@ -28,6 +28,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="autoDelete", required=true)
     private Boolean autoDelete;
 
+    /**
+     * @return Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+     * 
+     */
     public Boolean autoDelete() {
         return this.autoDelete;
     }
@@ -39,6 +43,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="boot", required=true)
     private Boolean boot;
 
+    /**
+     * @return Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+     * 
+     */
     public Boolean boot() {
         return this.boot;
     }
@@ -50,6 +58,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return Optional. Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -61,6 +73,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="guestOsFeatures", required=true)
     private List<RuntimeGuestOsFeatureResponse> guestOsFeatures;
 
+    /**
+     * @return Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+     * 
+     */
     public List<RuntimeGuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
     }
@@ -72,6 +88,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="index", required=true)
     private Integer index;
 
+    /**
+     * @return A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.
+     * 
+     */
     public Integer index() {
         return this.index;
     }
@@ -83,6 +103,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="initializeParams", required=true)
     private LocalDiskInitializeParamsResponse initializeParams;
 
+    /**
+     * @return Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
+     * 
+     */
     public LocalDiskInitializeParamsResponse initializeParams() {
         return this.initializeParams;
     }
@@ -94,6 +118,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="interface", required=true)
     private String interface_;
 
+    /**
+     * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
+     * 
+     */
     public String interface_() {
         return this.interface_;
     }
@@ -105,6 +133,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Type of the resource. Always compute#attachedDisk for attached disks.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -116,6 +148,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="licenses", required=true)
     private List<String> licenses;
 
+    /**
+     * @return Any valid publicly visible licenses.
+     * 
+     */
     public List<String> licenses() {
         return this.licenses;
     }
@@ -127,6 +163,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -138,6 +178,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return Specifies a valid partial or full URL to an existing Persistent Disk resource.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -149,6 +193,10 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: * PERSISTENT * SCRATCH
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -188,69 +236,153 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LocalDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDelete Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDelete(Boolean autoDelete) {
             $.autoDelete = autoDelete;
             return this;
         }
 
+        /**
+         * @param boot Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder boot(Boolean boot) {
             $.boot = boot;
             return this;
         }
 
+        /**
+         * @param deviceName Optional. Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param guestOsFeatures Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(List<RuntimeGuestOsFeatureResponse> guestOsFeatures) {
             $.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
+        /**
+         * @param guestOsFeatures Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(RuntimeGuestOsFeatureResponse... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
 
+        /**
+         * @param index A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder index(Integer index) {
             $.index = index;
             return this;
         }
 
+        /**
+         * @param initializeParams Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializeParams(LocalDiskInitializeParamsResponse initializeParams) {
             $.initializeParams = initializeParams;
             return this;
         }
 
+        /**
+         * @param interface_ Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
+         * 
+         * @return builder
+         * 
+         */
         public Builder interface_(String interface_) {
             $.interface_ = interface_;
             return this;
         }
 
+        /**
+         * @param kind Type of the resource. Always compute#attachedDisk for attached disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param licenses Any valid publicly visible licenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(List<String> licenses) {
             $.licenses = licenses;
             return this;
         }
 
+        /**
+         * @param licenses Any valid publicly visible licenses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
 
+        /**
+         * @param mode The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param source Specifies a valid partial or full URL to an existing Persistent Disk resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: * PERSISTENT * SCRATCH
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

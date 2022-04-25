@@ -26,6 +26,10 @@ public final class OnlineRequestSettingsResponse extends com.pulumi.resources.In
     @Import(name="maxConcurrentRequestsPerInstance")
     private @Nullable Integer maxConcurrentRequestsPerInstance;
 
+    /**
+     * @return The number of requests allowed to queue at once for this deployment.
+     * 
+     */
     public Optional<Integer> maxConcurrentRequestsPerInstance() {
         return Optional.ofNullable(this.maxConcurrentRequestsPerInstance);
     }
@@ -37,6 +41,10 @@ public final class OnlineRequestSettingsResponse extends com.pulumi.resources.In
     @Import(name="maxQueueWait")
     private @Nullable String maxQueueWait;
 
+    /**
+     * @return The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
+     * 
+     */
     public Optional<String> maxQueueWait() {
         return Optional.ofNullable(this.maxQueueWait);
     }
@@ -48,6 +56,10 @@ public final class OnlineRequestSettingsResponse extends com.pulumi.resources.In
     @Import(name="requestTimeout")
     private @Nullable String requestTimeout;
 
+    /**
+     * @return The request timeout in ISO 8601 format. Supports millisecond precision.
+     * 
+     */
     public Optional<String> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }
@@ -78,16 +90,34 @@ public final class OnlineRequestSettingsResponse extends com.pulumi.resources.In
             $ = new OnlineRequestSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxConcurrentRequestsPerInstance The number of requests allowed to queue at once for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequestsPerInstance(@Nullable Integer maxConcurrentRequestsPerInstance) {
             $.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
             return this;
         }
 
+        /**
+         * @param maxQueueWait The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxQueueWait(@Nullable String maxQueueWait) {
             $.maxQueueWait = maxQueueWait;
             return this;
         }
 
+        /**
+         * @param requestTimeout The request timeout in ISO 8601 format. Supports millisecond precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTimeout(@Nullable String requestTimeout) {
             $.requestTimeout = requestTimeout;
             return this;

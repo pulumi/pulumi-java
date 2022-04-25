@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SaasPropertiesResponseTerm {
     /**
-     * The end date of the current term
+     * @return The end date of the current term
      * 
      */
     private final @Nullable String endDate;
     /**
-     * The start date of the current term
+     * @return The start date of the current term
      * 
      */
     private final @Nullable String startDate;
     /**
-     * The unit indicating Monthly / Yearly
+     * @return The unit indicating Monthly / Yearly
      * 
      */
     private final @Nullable String termUnit;
@@ -38,23 +38,23 @@ public final class SaasPropertiesResponseTerm {
     }
 
     /**
-     * The end date of the current term
+     * @return The end date of the current term
      * 
-    */
+     */
     public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
-     * The start date of the current term
+     * @return The start date of the current term
      * 
-    */
+     */
     public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
-     * The unit indicating Monthly / Yearly
+     * @return The unit indicating Monthly / Yearly
      * 
-    */
+     */
     public Optional<String> termUnit() {
         return Optional.ofNullable(this.termUnit);
     }

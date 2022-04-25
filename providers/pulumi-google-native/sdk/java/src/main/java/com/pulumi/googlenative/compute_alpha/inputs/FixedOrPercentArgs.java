@@ -26,6 +26,10 @@ public final class FixedOrPercentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fixed")
     private @Nullable Output<Integer> fixed;
 
+    /**
+     * @return Specifies a fixed number of VM instances. This must be a positive integer.
+     * 
+     */
     public Optional<Output<Integer>> fixed() {
         return Optional.ofNullable(this.fixed);
     }
@@ -37,6 +41,10 @@ public final class FixedOrPercentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="percent")
     private @Nullable Output<Integer> percent;
 
+    /**
+     * @return Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
+     * 
+     */
     public Optional<Output<Integer>> percent() {
         return Optional.ofNullable(this.percent);
     }
@@ -66,20 +74,44 @@ public final class FixedOrPercentArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FixedOrPercentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fixed Specifies a fixed number of VM instances. This must be a positive integer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixed(@Nullable Output<Integer> fixed) {
             $.fixed = fixed;
             return this;
         }
 
+        /**
+         * @param fixed Specifies a fixed number of VM instances. This must be a positive integer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixed(Integer fixed) {
             return fixed(Output.of(fixed));
         }
 
+        /**
+         * @param percent Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(@Nullable Output<Integer> percent) {
             $.percent = percent;
             return this;
         }
 
+        /**
+         * @param percent Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             return percent(Output.of(percent));
         }

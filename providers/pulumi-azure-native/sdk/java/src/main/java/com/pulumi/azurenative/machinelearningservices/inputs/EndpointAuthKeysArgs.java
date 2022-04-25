@@ -26,6 +26,10 @@ public final class EndpointAuthKeysArgs extends com.pulumi.resources.ResourceArg
     @Import(name="primaryKey")
     private @Nullable Output<String> primaryKey;
 
+    /**
+     * @return The primary key.
+     * 
+     */
     public Optional<Output<String>> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
@@ -37,6 +41,10 @@ public final class EndpointAuthKeysArgs extends com.pulumi.resources.ResourceArg
     @Import(name="secondaryKey")
     private @Nullable Output<String> secondaryKey;
 
+    /**
+     * @return The secondary key.
+     * 
+     */
     public Optional<Output<String>> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -66,20 +74,44 @@ public final class EndpointAuthKeysArgs extends com.pulumi.resources.ResourceArg
             $ = new EndpointAuthKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primaryKey The primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param primaryKey The primary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(String primaryKey) {
             return primaryKey(Output.of(primaryKey));
         }
 
+        /**
+         * @param secondaryKey The secondary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;
         }
 
+        /**
+         * @param secondaryKey The secondary key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(String secondaryKey) {
             return secondaryKey(Output.of(secondaryKey));
         }

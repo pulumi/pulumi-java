@@ -23,6 +23,10 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fullName", required=true)
     private String fullName;
 
+    /**
+     * @return Hierarchical resource pool name
+     * 
+     */
     public String fullName() {
         return this.fullName;
     }
@@ -34,6 +38,10 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return resource pool id (privateCloudId:vsphereId)
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -45,6 +53,10 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Azure region
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -56,6 +68,10 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return {ResourcePoolName}
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -67,6 +83,10 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="privateCloudId", required=true)
     private String privateCloudId;
 
+    /**
+     * @return The Private Cloud Id
+     * 
+     */
     public String privateCloudId() {
         return this.privateCloudId;
     }
@@ -78,6 +98,10 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return {resourceProviderNamespace}/{resourceType}
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -111,31 +135,67 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ResourcePoolResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fullName Hierarchical resource pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullName(String fullName) {
             $.fullName = fullName;
             return this;
         }
 
+        /**
+         * @param id resource pool id (privateCloudId:vsphereId)
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name {ResourcePoolName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateCloudId The Private Cloud Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudId(String privateCloudId) {
             $.privateCloudId = privateCloudId;
             return this;
         }
 
+        /**
+         * @param type {resourceProviderNamespace}/{resourceType}
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

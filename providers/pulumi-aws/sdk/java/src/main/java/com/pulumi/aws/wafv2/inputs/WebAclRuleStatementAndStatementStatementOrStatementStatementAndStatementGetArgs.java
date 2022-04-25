@@ -21,6 +21,10 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementA
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementGetArgs>> statements;
 
+    /**
+     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementGetArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementA
             $ = new WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementGetArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementGetArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
         }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SpokeLinkedRouterApplianceInstancesInstance {
     /**
-     * The IP address on the VM to use for peering.
+     * @return The IP address on the VM to use for peering.
      * 
      */
     private final @Nullable String ipAddress;
     /**
-     * The URI of the virtual machine resource
+     * @return The URI of the virtual machine resource
      * 
      */
     private final @Nullable String virtualMachine;
@@ -31,16 +31,16 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
     }
 
     /**
-     * The IP address on the VM to use for peering.
+     * @return The IP address on the VM to use for peering.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * The URI of the virtual machine resource
+     * @return The URI of the virtual machine resource
      * 
-    */
+     */
     public Optional<String> virtualMachine() {
         return Optional.ofNullable(this.virtualMachine);
     }

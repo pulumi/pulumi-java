@@ -32,6 +32,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="disksDefault")
     private @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault;
 
+    /**
+     * @return The default disk input.
+     * 
+     */
     public Optional<Output<InMageRcmDisksDefaultInputArgs>> disksDefault() {
         return Optional.ofNullable(this.disksDefault);
     }
@@ -43,6 +47,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="disksToInclude")
     private @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude;
 
+    /**
+     * @return The disks to include list.
+     * 
+     */
     public Optional<Output<List<InMageRcmDiskInputArgs>>> disksToInclude() {
         return Optional.ofNullable(this.disksToInclude);
     }
@@ -54,6 +62,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="fabricDiscoveryMachineId")
     private @Nullable Output<String> fabricDiscoveryMachineId;
 
+    /**
+     * @return The ARM Id of discovered machine.
+     * 
+     */
     public Optional<Output<String>> fabricDiscoveryMachineId() {
         return Optional.ofNullable(this.fabricDiscoveryMachineId);
     }
@@ -66,6 +78,11 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;InMageRcm&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -77,6 +94,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="licenseType")
     private @Nullable Output<Either<String,LicenseType>> licenseType;
 
+    /**
+     * @return The license type.
+     * 
+     */
     public Optional<Output<Either<String,LicenseType>>> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -88,6 +109,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="multiVmGroupName")
     private @Nullable Output<String> multiVmGroupName;
 
+    /**
+     * @return The multi VM group name.
+     * 
+     */
     public Optional<Output<String>> multiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
@@ -99,6 +124,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="processServerId")
     private @Nullable Output<String> processServerId;
 
+    /**
+     * @return The process server Id.
+     * 
+     */
     public Optional<Output<String>> processServerId() {
         return Optional.ofNullable(this.processServerId);
     }
@@ -110,6 +139,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="runAsAccountId")
     private @Nullable Output<String> runAsAccountId;
 
+    /**
+     * @return The run-as account Id.
+     * 
+     */
     public Optional<Output<String>> runAsAccountId() {
         return Optional.ofNullable(this.runAsAccountId);
     }
@@ -121,6 +154,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetAvailabilitySetId")
     private @Nullable Output<String> targetAvailabilitySetId;
 
+    /**
+     * @return The target availability set ARM Id.
+     * 
+     */
     public Optional<Output<String>> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
@@ -132,6 +169,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetAvailabilityZone")
     private @Nullable Output<String> targetAvailabilityZone;
 
+    /**
+     * @return The target availability zone.
+     * 
+     */
     public Optional<Output<String>> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
@@ -143,6 +184,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetBootDiagnosticsStorageAccountId")
     private @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
 
+    /**
+     * @return The target boot diagnostics storage account ARM Id.
+     * 
+     */
     public Optional<Output<String>> targetBootDiagnosticsStorageAccountId() {
         return Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
@@ -154,6 +199,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetNetworkId")
     private @Nullable Output<String> targetNetworkId;
 
+    /**
+     * @return The selected target network ARM Id.
+     * 
+     */
     public Optional<Output<String>> targetNetworkId() {
         return Optional.ofNullable(this.targetNetworkId);
     }
@@ -165,6 +214,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetProximityPlacementGroupId")
     private @Nullable Output<String> targetProximityPlacementGroupId;
 
+    /**
+     * @return The target proximity placement group Id.
+     * 
+     */
     public Optional<Output<String>> targetProximityPlacementGroupId() {
         return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
@@ -176,6 +229,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetResourceGroupId")
     private @Nullable Output<String> targetResourceGroupId;
 
+    /**
+     * @return The target resource group ARM Id.
+     * 
+     */
     public Optional<Output<String>> targetResourceGroupId() {
         return Optional.ofNullable(this.targetResourceGroupId);
     }
@@ -187,6 +244,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetSubnetName")
     private @Nullable Output<String> targetSubnetName;
 
+    /**
+     * @return The selected target subnet name.
+     * 
+     */
     public Optional<Output<String>> targetSubnetName() {
         return Optional.ofNullable(this.targetSubnetName);
     }
@@ -198,6 +259,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetVmName")
     private @Nullable Output<String> targetVmName;
 
+    /**
+     * @return The target VM name.
+     * 
+     */
     public Optional<Output<String>> targetVmName() {
         return Optional.ofNullable(this.targetVmName);
     }
@@ -209,6 +274,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetVmSize")
     private @Nullable Output<String> targetVmSize;
 
+    /**
+     * @return The target VM size.
+     * 
+     */
     public Optional<Output<String>> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
@@ -220,6 +289,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="testNetworkId")
     private @Nullable Output<String> testNetworkId;
 
+    /**
+     * @return The selected test network ARM Id.
+     * 
+     */
     public Optional<Output<String>> testNetworkId() {
         return Optional.ofNullable(this.testNetworkId);
     }
@@ -231,6 +304,10 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="testSubnetName")
     private @Nullable Output<String> testSubnetName;
 
+    /**
+     * @return The selected test subnet name.
+     * 
+     */
     public Optional<Output<String>> testSubnetName() {
         return Optional.ofNullable(this.testSubnetName);
     }
@@ -277,185 +354,433 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
             $ = new InMageRcmEnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disksDefault The default disk input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksDefault(@Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault) {
             $.disksDefault = disksDefault;
             return this;
         }
 
+        /**
+         * @param disksDefault The default disk input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksDefault(InMageRcmDisksDefaultInputArgs disksDefault) {
             return disksDefault(Output.of(disksDefault));
         }
 
+        /**
+         * @param disksToInclude The disks to include list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksToInclude(@Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude) {
             $.disksToInclude = disksToInclude;
             return this;
         }
 
+        /**
+         * @param disksToInclude The disks to include list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksToInclude(List<InMageRcmDiskInputArgs> disksToInclude) {
             return disksToInclude(Output.of(disksToInclude));
         }
 
+        /**
+         * @param disksToInclude The disks to include list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksToInclude(InMageRcmDiskInputArgs... disksToInclude) {
             return disksToInclude(List.of(disksToInclude));
         }
 
+        /**
+         * @param fabricDiscoveryMachineId The ARM Id of discovered machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricDiscoveryMachineId(@Nullable Output<String> fabricDiscoveryMachineId) {
             $.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
             return this;
         }
 
+        /**
+         * @param fabricDiscoveryMachineId The ARM Id of discovered machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricDiscoveryMachineId(String fabricDiscoveryMachineId) {
             return fabricDiscoveryMachineId(Output.of(fabricDiscoveryMachineId));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;InMageRcm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;InMageRcm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(Either<String,LicenseType> licenseType) {
             return licenseType(Output.of(licenseType));
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(String licenseType) {
             return licenseType(Either.ofLeft(licenseType));
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(LicenseType licenseType) {
             return licenseType(Either.ofRight(licenseType));
         }
 
+        /**
+         * @param multiVmGroupName The multi VM group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
             $.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
+        /**
+         * @param multiVmGroupName The multi VM group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(String multiVmGroupName) {
             return multiVmGroupName(Output.of(multiVmGroupName));
         }
 
+        /**
+         * @param processServerId The process server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(@Nullable Output<String> processServerId) {
             $.processServerId = processServerId;
             return this;
         }
 
+        /**
+         * @param processServerId The process server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(String processServerId) {
             return processServerId(Output.of(processServerId));
         }
 
+        /**
+         * @param runAsAccountId The run-as account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
             $.runAsAccountId = runAsAccountId;
             return this;
         }
 
+        /**
+         * @param runAsAccountId The run-as account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccountId(String runAsAccountId) {
             return runAsAccountId(Output.of(runAsAccountId));
         }
 
+        /**
+         * @param targetAvailabilitySetId The target availability set ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param targetAvailabilitySetId The target availability set ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
             return targetAvailabilitySetId(Output.of(targetAvailabilitySetId));
         }
 
+        /**
+         * @param targetAvailabilityZone The target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(@Nullable Output<String> targetAvailabilityZone) {
             $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param targetAvailabilityZone The target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(String targetAvailabilityZone) {
             return targetAvailabilityZone(Output.of(targetAvailabilityZone));
         }
 
+        /**
+         * @param targetBootDiagnosticsStorageAccountId The target boot diagnostics storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable Output<String> targetBootDiagnosticsStorageAccountId) {
             $.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
 
+        /**
+         * @param targetBootDiagnosticsStorageAccountId The target boot diagnostics storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetBootDiagnosticsStorageAccountId(String targetBootDiagnosticsStorageAccountId) {
             return targetBootDiagnosticsStorageAccountId(Output.of(targetBootDiagnosticsStorageAccountId));
         }
 
+        /**
+         * @param targetNetworkId The selected target network ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNetworkId(@Nullable Output<String> targetNetworkId) {
             $.targetNetworkId = targetNetworkId;
             return this;
         }
 
+        /**
+         * @param targetNetworkId The selected target network ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNetworkId(String targetNetworkId) {
             return targetNetworkId(Output.of(targetNetworkId));
         }
 
+        /**
+         * @param targetProximityPlacementGroupId The target proximity placement group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProximityPlacementGroupId(@Nullable Output<String> targetProximityPlacementGroupId) {
             $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
+        /**
+         * @param targetProximityPlacementGroupId The target proximity placement group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
             return targetProximityPlacementGroupId(Output.of(targetProximityPlacementGroupId));
         }
 
+        /**
+         * @param targetResourceGroupId The target resource group ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGroupId(@Nullable Output<String> targetResourceGroupId) {
             $.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
 
+        /**
+         * @param targetResourceGroupId The target resource group ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGroupId(String targetResourceGroupId) {
             return targetResourceGroupId(Output.of(targetResourceGroupId));
         }
 
+        /**
+         * @param targetSubnetName The selected target subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSubnetName(@Nullable Output<String> targetSubnetName) {
             $.targetSubnetName = targetSubnetName;
             return this;
         }
 
+        /**
+         * @param targetSubnetName The selected target subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSubnetName(String targetSubnetName) {
             return targetSubnetName(Output.of(targetSubnetName));
         }
 
+        /**
+         * @param targetVmName The target VM name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmName(@Nullable Output<String> targetVmName) {
             $.targetVmName = targetVmName;
             return this;
         }
 
+        /**
+         * @param targetVmName The target VM name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmName(String targetVmName) {
             return targetVmName(Output.of(targetVmName));
         }
 
+        /**
+         * @param targetVmSize The target VM size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             $.targetVmSize = targetVmSize;
             return this;
         }
 
+        /**
+         * @param targetVmSize The target VM size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(String targetVmSize) {
             return targetVmSize(Output.of(targetVmSize));
         }
 
+        /**
+         * @param testNetworkId The selected test network ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testNetworkId(@Nullable Output<String> testNetworkId) {
             $.testNetworkId = testNetworkId;
             return this;
         }
 
+        /**
+         * @param testNetworkId The selected test network ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testNetworkId(String testNetworkId) {
             return testNetworkId(Output.of(testNetworkId));
         }
 
+        /**
+         * @param testSubnetName The selected test subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSubnetName(@Nullable Output<String> testSubnetName) {
             $.testSubnetName = testSubnetName;
             return this;
         }
 
+        /**
+         * @param testSubnetName The selected test subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSubnetName(String testSubnetName) {
             return testSubnetName(Output.of(testSubnetName));
         }

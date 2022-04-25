@@ -19,6 +19,10 @@ public final class GetPortalArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="portalId", required=true)
     private String portalId;
 
+    /**
+     * @return The ID of the portal.
+     * 
+     */
     public String portalId() {
         return this.portalId;
     }
@@ -47,6 +51,12 @@ public final class GetPortalArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPortalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param portalId The ID of the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portalId(String portalId) {
             $.portalId = portalId;
             return this;

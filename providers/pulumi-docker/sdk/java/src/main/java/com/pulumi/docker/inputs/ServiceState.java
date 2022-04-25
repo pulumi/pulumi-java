@@ -31,6 +31,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="auth")
     private @Nullable Output<ServiceAuthGetArgs> auth;
 
+    /**
+     * @return Configuration for the authentication for pulling the images of the service
+     * 
+     */
     public Optional<Output<ServiceAuthGetArgs>> auth() {
         return Optional.ofNullable(this.auth);
     }
@@ -42,6 +46,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="convergeConfig")
     private @Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig;
 
+    /**
+     * @return A configuration to ensure that a service converges aka reaches the desired that of all task up and running
+     * 
+     */
     public Optional<Output<ServiceConvergeConfigGetArgs>> convergeConfig() {
         return Optional.ofNullable(this.convergeConfig);
     }
@@ -53,6 +61,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointSpec")
     private @Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec;
 
+    /**
+     * @return Properties that can be configured to access and load balance a service
+     * 
+     */
     public Optional<Output<ServiceEndpointSpecGetArgs>> endpointSpec() {
         return Optional.ofNullable(this.endpointSpec);
     }
@@ -64,6 +76,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<ServiceLabelGetArgs>> labels;
 
+    /**
+     * @return User-defined key/value metadata
+     * 
+     */
     public Optional<Output<List<ServiceLabelGetArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -75,6 +91,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mode")
     private @Nullable Output<ServiceModeGetArgs> mode;
 
+    /**
+     * @return Scheduling mode for the service
+     * 
+     */
     public Optional<Output<ServiceModeGetArgs>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -86,6 +106,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the service
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -97,6 +121,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rollbackConfig")
     private @Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig;
 
+    /**
+     * @return Specification for the rollback strategy of the service
+     * 
+     */
     public Optional<Output<ServiceRollbackConfigGetArgs>> rollbackConfig() {
         return Optional.ofNullable(this.rollbackConfig);
     }
@@ -108,6 +136,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskSpec")
     private @Nullable Output<ServiceTaskSpecGetArgs> taskSpec;
 
+    /**
+     * @return User modifiable task configuration
+     * 
+     */
     public Optional<Output<ServiceTaskSpecGetArgs>> taskSpec() {
         return Optional.ofNullable(this.taskSpec);
     }
@@ -119,6 +151,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateConfig")
     private @Nullable Output<ServiceUpdateConfigGetArgs> updateConfig;
 
+    /**
+     * @return Specification for the update strategy of the service
+     * 
+     */
     public Optional<Output<ServiceUpdateConfigGetArgs>> updateConfig() {
         return Optional.ofNullable(this.updateConfig);
     }
@@ -155,87 +191,201 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth Configuration for the authentication for pulling the images of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(@Nullable Output<ServiceAuthGetArgs> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth Configuration for the authentication for pulling the images of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(ServiceAuthGetArgs auth) {
             return auth(Output.of(auth));
         }
 
+        /**
+         * @param convergeConfig A configuration to ensure that a service converges aka reaches the desired that of all task up and running
+         * 
+         * @return builder
+         * 
+         */
         public Builder convergeConfig(@Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig) {
             $.convergeConfig = convergeConfig;
             return this;
         }
 
+        /**
+         * @param convergeConfig A configuration to ensure that a service converges aka reaches the desired that of all task up and running
+         * 
+         * @return builder
+         * 
+         */
         public Builder convergeConfig(ServiceConvergeConfigGetArgs convergeConfig) {
             return convergeConfig(Output.of(convergeConfig));
         }
 
+        /**
+         * @param endpointSpec Properties that can be configured to access and load balance a service
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointSpec(@Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec) {
             $.endpointSpec = endpointSpec;
             return this;
         }
 
+        /**
+         * @param endpointSpec Properties that can be configured to access and load balance a service
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointSpec(ServiceEndpointSpecGetArgs endpointSpec) {
             return endpointSpec(Output.of(endpointSpec));
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<ServiceLabelGetArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<ServiceLabelGetArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels User-defined key/value metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(ServiceLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param mode Scheduling mode for the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<ServiceModeGetArgs> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Scheduling mode for the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(ServiceModeGetArgs mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param name Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rollbackConfig Specification for the rollback strategy of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollbackConfig(@Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig) {
             $.rollbackConfig = rollbackConfig;
             return this;
         }
 
+        /**
+         * @param rollbackConfig Specification for the rollback strategy of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollbackConfig(ServiceRollbackConfigGetArgs rollbackConfig) {
             return rollbackConfig(Output.of(rollbackConfig));
         }
 
+        /**
+         * @param taskSpec User modifiable task configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSpec(@Nullable Output<ServiceTaskSpecGetArgs> taskSpec) {
             $.taskSpec = taskSpec;
             return this;
         }
 
+        /**
+         * @param taskSpec User modifiable task configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskSpec(ServiceTaskSpecGetArgs taskSpec) {
             return taskSpec(Output.of(taskSpec));
         }
 
+        /**
+         * @param updateConfig Specification for the update strategy of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateConfig(@Nullable Output<ServiceUpdateConfigGetArgs> updateConfig) {
             $.updateConfig = updateConfig;
             return this;
         }
 
+        /**
+         * @param updateConfig Specification for the update strategy of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateConfig(ServiceUpdateConfigGetArgs updateConfig) {
             return updateConfig(Output.of(updateConfig));
         }

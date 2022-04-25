@@ -26,6 +26,10 @@ public final class AuthorizationLoggingOptionsArgs extends com.pulumi.resources.
     @Import(name="permissionType")
     private @Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType;
 
+    /**
+     * @return This is deprecated and has no effect. Do not use.
+     * 
+     */
     public Optional<Output<AuthorizationLoggingOptionsPermissionType>> permissionType() {
         return Optional.ofNullable(this.permissionType);
     }
@@ -54,11 +58,23 @@ public final class AuthorizationLoggingOptionsArgs extends com.pulumi.resources.
             $ = new AuthorizationLoggingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param permissionType This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionType(@Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType) {
             $.permissionType = permissionType;
             return this;
         }
 
+        /**
+         * @param permissionType This is deprecated and has no effect. Do not use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionType(AuthorizationLoggingOptionsPermissionType permissionType) {
             return permissionType(Output.of(permissionType));
         }

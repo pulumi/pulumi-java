@@ -12,42 +12,42 @@ import java.util.Objects;
 @CustomType
 public final class RepoSourceResponse {
     /**
-     * Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * @return Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
      */
     private final String branchName;
     /**
-     * Explicit commit SHA to build.
+     * @return Explicit commit SHA to build.
      * 
      */
     private final String commitSha;
     /**
-     * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
+     * @return Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
      * 
      */
     private final String dir;
     /**
-     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
      * 
      */
     private final Boolean invertRegex;
     /**
-     * ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.
+     * @return ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.
      * 
      */
     private final String project;
     /**
-     * Name of the Cloud Source Repository.
+     * @return Name of the Cloud Source Repository.
      * 
      */
     private final String repoName;
     /**
-     * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+     * @return Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
      * 
      */
     private final Map<String,String> substitutions;
     /**
-     * Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * @return Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
      */
     private final String tagName;
@@ -73,58 +73,58 @@ public final class RepoSourceResponse {
     }
 
     /**
-     * Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * @return Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
-    */
+     */
     public String branchName() {
         return this.branchName;
     }
     /**
-     * Explicit commit SHA to build.
+     * @return Explicit commit SHA to build.
      * 
-    */
+     */
     public String commitSha() {
         return this.commitSha;
     }
     /**
-     * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
+     * @return Directory, relative to the source root, in which to run the build. This must be a relative path. If a step&#39;s `dir` is specified and is an absolute path, this value is ignored for that step&#39;s execution.
      * 
-    */
+     */
     public String dir() {
         return this.dir;
     }
     /**
-     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
      * 
-    */
+     */
     public Boolean invertRegex() {
         return this.invertRegex;
     }
     /**
-     * ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.
+     * @return ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * Name of the Cloud Source Repository.
+     * @return Name of the Cloud Source Repository.
      * 
-    */
+     */
     public String repoName() {
         return this.repoName;
     }
     /**
-     * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+     * @return Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
      * 
-    */
+     */
     public Map<String,String> substitutions() {
         return this.substitutions;
     }
     /**
-     * Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     * @return Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
-    */
+     */
     public String tagName() {
         return this.tagName;
     }

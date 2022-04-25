@@ -27,6 +27,10 @@ public final class V2IosKeyRestrictionsArgs extends com.pulumi.resources.Resourc
     @Import(name="allowedBundleIds")
     private @Nullable Output<List<String>> allowedBundleIds;
 
+    /**
+     * @return A list of bundle IDs that are allowed when making API calls with this key.
+     * 
+     */
     public Optional<Output<List<String>>> allowedBundleIds() {
         return Optional.ofNullable(this.allowedBundleIds);
     }
@@ -55,15 +59,33 @@ public final class V2IosKeyRestrictionsArgs extends com.pulumi.resources.Resourc
             $ = new V2IosKeyRestrictionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedBundleIds A list of bundle IDs that are allowed when making API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
             $.allowedBundleIds = allowedBundleIds;
             return this;
         }
 
+        /**
+         * @param allowedBundleIds A list of bundle IDs that are allowed when making API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(List<String> allowedBundleIds) {
             return allowedBundleIds(Output.of(allowedBundleIds));
         }
 
+        /**
+         * @param allowedBundleIds A list of bundle IDs that are allowed when making API calls with this key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
         }

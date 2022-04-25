@@ -27,6 +27,10 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
     @Import(name="componentSource", required=true)
     private List<ComponentSourceResponse> componentSource;
 
+    /**
+     * @return Collections produced and consumed by component transforms of this stage.
+     * 
+     */
     public List<ComponentSourceResponse> componentSource() {
         return this.componentSource;
     }
@@ -38,6 +42,10 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
     @Import(name="componentTransform", required=true)
     private List<ComponentTransformResponse> componentTransform;
 
+    /**
+     * @return Transforms that comprise this execution stage.
+     * 
+     */
     public List<ComponentTransformResponse> componentTransform() {
         return this.componentTransform;
     }
@@ -49,6 +57,10 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
     @Import(name="inputSource", required=true)
     private List<StageSourceResponse> inputSource;
 
+    /**
+     * @return Input sources for this stage.
+     * 
+     */
     public List<StageSourceResponse> inputSource() {
         return this.inputSource;
     }
@@ -60,6 +72,10 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Type of transform this stage is executing.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -71,6 +87,10 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Dataflow service generated name for this stage.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -82,6 +102,10 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
     @Import(name="outputSource", required=true)
     private List<StageSourceResponse> outputSource;
 
+    /**
+     * @return Output sources for this stage.
+     * 
+     */
     public List<StageSourceResponse> outputSource() {
         return this.outputSource;
     }
@@ -93,6 +117,10 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
     @Import(name="prerequisiteStage", required=true)
     private List<String> prerequisiteStage;
 
+    /**
+     * @return Other stages that must complete before this stage can run.
+     * 
+     */
     public List<String> prerequisiteStage() {
         return this.prerequisiteStage;
     }
@@ -127,57 +155,129 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
             $ = new ExecutionStageSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentSource Collections produced and consumed by component transforms of this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSource(List<ComponentSourceResponse> componentSource) {
             $.componentSource = componentSource;
             return this;
         }
 
+        /**
+         * @param componentSource Collections produced and consumed by component transforms of this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSource(ComponentSourceResponse... componentSource) {
             return componentSource(List.of(componentSource));
         }
 
+        /**
+         * @param componentTransform Transforms that comprise this execution stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentTransform(List<ComponentTransformResponse> componentTransform) {
             $.componentTransform = componentTransform;
             return this;
         }
 
+        /**
+         * @param componentTransform Transforms that comprise this execution stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentTransform(ComponentTransformResponse... componentTransform) {
             return componentTransform(List.of(componentTransform));
         }
 
+        /**
+         * @param inputSource Input sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSource(List<StageSourceResponse> inputSource) {
             $.inputSource = inputSource;
             return this;
         }
 
+        /**
+         * @param inputSource Input sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSource(StageSourceResponse... inputSource) {
             return inputSource(List.of(inputSource));
         }
 
+        /**
+         * @param kind Type of transform this stage is executing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Dataflow service generated name for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param outputSource Output sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSource(List<StageSourceResponse> outputSource) {
             $.outputSource = outputSource;
             return this;
         }
 
+        /**
+         * @param outputSource Output sources for this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSource(StageSourceResponse... outputSource) {
             return outputSource(List.of(outputSource));
         }
 
+        /**
+         * @param prerequisiteStage Other stages that must complete before this stage can run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prerequisiteStage(List<String> prerequisiteStage) {
             $.prerequisiteStage = prerequisiteStage;
             return this;
         }
 
+        /**
+         * @param prerequisiteStage Other stages that must complete before this stage can run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prerequisiteStage(String... prerequisiteStage) {
             return prerequisiteStage(List.of(prerequisiteStage));
         }

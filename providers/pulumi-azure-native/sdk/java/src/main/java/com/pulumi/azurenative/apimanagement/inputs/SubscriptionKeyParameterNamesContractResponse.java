@@ -25,6 +25,10 @@ public final class SubscriptionKeyParameterNamesContractResponse extends com.pul
     @Import(name="header")
     private @Nullable String header;
 
+    /**
+     * @return Subscription key header name.
+     * 
+     */
     public Optional<String> header() {
         return Optional.ofNullable(this.header);
     }
@@ -36,6 +40,10 @@ public final class SubscriptionKeyParameterNamesContractResponse extends com.pul
     @Import(name="query")
     private @Nullable String query;
 
+    /**
+     * @return Subscription key query string parameter name.
+     * 
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
@@ -65,11 +73,23 @@ public final class SubscriptionKeyParameterNamesContractResponse extends com.pul
             $ = new SubscriptionKeyParameterNamesContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header Subscription key header name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(@Nullable String header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param query Subscription key query string parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable String query) {
             $.query = query;
             return this;

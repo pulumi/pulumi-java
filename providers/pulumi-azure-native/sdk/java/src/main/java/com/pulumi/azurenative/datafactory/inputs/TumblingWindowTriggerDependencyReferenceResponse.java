@@ -27,6 +27,10 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
     @Import(name="offset")
     private @Nullable String offset;
 
+    /**
+     * @return Timespan applied to the start time of a tumbling window when evaluating dependency.
+     * 
+     */
     public Optional<String> offset() {
         return Optional.ofNullable(this.offset);
     }
@@ -38,6 +42,10 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
     @Import(name="referenceTrigger", required=true)
     private TriggerReferenceResponse referenceTrigger;
 
+    /**
+     * @return Referenced trigger.
+     * 
+     */
     public TriggerReferenceResponse referenceTrigger() {
         return this.referenceTrigger;
     }
@@ -49,6 +57,10 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -61,6 +73,11 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of dependency reference.
+     * Expected value is &#39;TumblingWindowTriggerDependencyReference&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -92,21 +109,46 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
             $ = new TumblingWindowTriggerDependencyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offset Timespan applied to the start time of a tumbling window when evaluating dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(@Nullable String offset) {
             $.offset = offset;
             return this;
         }
 
+        /**
+         * @param referenceTrigger Referenced trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceTrigger(TriggerReferenceResponse referenceTrigger) {
             $.referenceTrigger = referenceTrigger;
             return this;
         }
 
+        /**
+         * @param size The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param type The type of dependency reference.
+         * Expected value is &#39;TumblingWindowTriggerDependencyReference&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

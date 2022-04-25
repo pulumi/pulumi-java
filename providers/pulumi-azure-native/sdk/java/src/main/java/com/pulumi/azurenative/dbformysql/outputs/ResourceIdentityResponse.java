@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceIdentityResponse {
     /**
-     * The Azure Active Directory principal id.
+     * @return The Azure Active Directory principal id.
      * 
      */
     private final String principalId;
     /**
-     * The Azure Active Directory tenant id.
+     * @return The Azure Active Directory tenant id.
      * 
      */
     private final String tenantId;
     /**
-     * The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
+     * @return The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class ResourceIdentityResponse {
     }
 
     /**
-     * The Azure Active Directory principal id.
+     * @return The Azure Active Directory principal id.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The Azure Active Directory tenant id.
+     * @return The Azure Active Directory tenant id.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
+     * @return The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -21,6 +21,11 @@ public final class ManagedZoneServiceDirectoryConfigGetArgs extends com.pulumi.r
     @Import(name="namespace", required=true)
     private Output<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace;
 
+    /**
+     * @return The namespace associated with the zone.
+     * Structure is documented below.
+     * 
+     */
     public Output<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace() {
         return this.namespace;
     }
@@ -49,11 +54,25 @@ public final class ManagedZoneServiceDirectoryConfigGetArgs extends com.pulumi.r
             $ = new ManagedZoneServiceDirectoryConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespace The namespace associated with the zone.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace The namespace associated with the zone.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceGetArgs namespace) {
             return namespace(Output.of(namespace));
         }

@@ -27,6 +27,10 @@ public final class LogToMetricActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="criteria", required=true)
     private Output<List<CriteriaArgs>> criteria;
 
+    /**
+     * @return Criteria of Metric
+     * 
+     */
     public Output<List<CriteriaArgs>> criteria() {
         return this.criteria;
     }
@@ -39,6 +43,11 @@ public final class LogToMetricActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return Specifies the action. Supported values - AlertingAction, LogToMetricAction
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -68,24 +77,56 @@ public final class LogToMetricActionArgs extends com.pulumi.resources.ResourceAr
             $ = new LogToMetricActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param criteria Criteria of Metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(Output<List<CriteriaArgs>> criteria) {
             $.criteria = criteria;
             return this;
         }
 
+        /**
+         * @param criteria Criteria of Metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(List<CriteriaArgs> criteria) {
             return criteria(Output.of(criteria));
         }
 
+        /**
+         * @param criteria Criteria of Metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(CriteriaArgs... criteria) {
             return criteria(List.of(criteria));
         }
 
+        /**
+         * @param odataType Specifies the action. Supported values - AlertingAction, LogToMetricAction
+         * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType Specifies the action. Supported values - AlertingAction, LogToMetricAction
+         * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

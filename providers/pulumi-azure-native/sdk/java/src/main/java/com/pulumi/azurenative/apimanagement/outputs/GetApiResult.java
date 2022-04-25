@@ -17,107 +17,107 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApiResult {
     /**
-     * Describes the Revision of the Api. If no value is provided, default revision 1 is created
+     * @return Describes the Revision of the Api. If no value is provided, default revision 1 is created
      * 
      */
     private final @Nullable String apiRevision;
     /**
-     * Description of the Api Revision.
+     * @return Description of the Api Revision.
      * 
      */
     private final @Nullable String apiRevisionDescription;
     /**
-     * Type of API.
+     * @return Type of API.
      * 
      */
     private final @Nullable String apiType;
     /**
-     * Indicates the Version identifier of the API if the API is versioned
+     * @return Indicates the Version identifier of the API if the API is versioned
      * 
      */
     private final @Nullable String apiVersion;
     /**
-     * Description of the Api Version.
+     * @return Description of the Api Version.
      * 
      */
     private final @Nullable String apiVersionDescription;
     /**
-     * Version set details
+     * @return Version set details
      * 
      */
     private final @Nullable ApiVersionSetContractDetailsResponse apiVersionSet;
     /**
-     * A resource identifier for the related ApiVersionSet.
+     * @return A resource identifier for the related ApiVersionSet.
      * 
      */
     private final @Nullable String apiVersionSetId;
     /**
-     * Collection of authentication settings included into this API.
+     * @return Collection of authentication settings included into this API.
      * 
      */
     private final @Nullable AuthenticationSettingsContractResponse authenticationSettings;
     /**
-     * Description of the API. May include HTML formatting tags.
+     * @return Description of the API. May include HTML formatting tags.
      * 
      */
     private final @Nullable String description;
     /**
-     * API name. Must be 1 to 300 characters long.
+     * @return API name. Must be 1 to 300 characters long.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Indicates if API revision is current api revision.
+     * @return Indicates if API revision is current api revision.
      * 
      */
     private final @Nullable Boolean isCurrent;
     /**
-     * Indicates if API revision is accessible via the gateway.
+     * @return Indicates if API revision is accessible via the gateway.
      * 
      */
     private final Boolean isOnline;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+     * @return Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
      * 
      */
     private final String path;
     /**
-     * Describes on which protocols the operations in this API can be invoked.
+     * @return Describes on which protocols the operations in this API can be invoked.
      * 
      */
     private final @Nullable List<String> protocols;
     /**
-     * Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+     * @return Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
      * 
      */
     private final @Nullable String serviceUrl;
     /**
-     * API identifier of the source API.
+     * @return API identifier of the source API.
      * 
      */
     private final @Nullable String sourceApiId;
     /**
-     * Protocols over which API is made available.
+     * @return Protocols over which API is made available.
      * 
      */
     private final @Nullable SubscriptionKeyParameterNamesContractResponse subscriptionKeyParameterNames;
     /**
-     * Specifies whether an API or Product subscription is required for accessing the API.
+     * @return Specifies whether an API or Product subscription is required for accessing the API.
      * 
      */
     private final @Nullable Boolean subscriptionRequired;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
@@ -169,149 +169,149 @@ public final class GetApiResult {
     }
 
     /**
-     * Describes the Revision of the Api. If no value is provided, default revision 1 is created
+     * @return Describes the Revision of the Api. If no value is provided, default revision 1 is created
      * 
-    */
+     */
     public Optional<String> apiRevision() {
         return Optional.ofNullable(this.apiRevision);
     }
     /**
-     * Description of the Api Revision.
+     * @return Description of the Api Revision.
      * 
-    */
+     */
     public Optional<String> apiRevisionDescription() {
         return Optional.ofNullable(this.apiRevisionDescription);
     }
     /**
-     * Type of API.
+     * @return Type of API.
      * 
-    */
+     */
     public Optional<String> apiType() {
         return Optional.ofNullable(this.apiType);
     }
     /**
-     * Indicates the Version identifier of the API if the API is versioned
+     * @return Indicates the Version identifier of the API if the API is versioned
      * 
-    */
+     */
     public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * Description of the Api Version.
+     * @return Description of the Api Version.
      * 
-    */
+     */
     public Optional<String> apiVersionDescription() {
         return Optional.ofNullable(this.apiVersionDescription);
     }
     /**
-     * Version set details
+     * @return Version set details
      * 
-    */
+     */
     public Optional<ApiVersionSetContractDetailsResponse> apiVersionSet() {
         return Optional.ofNullable(this.apiVersionSet);
     }
     /**
-     * A resource identifier for the related ApiVersionSet.
+     * @return A resource identifier for the related ApiVersionSet.
      * 
-    */
+     */
     public Optional<String> apiVersionSetId() {
         return Optional.ofNullable(this.apiVersionSetId);
     }
     /**
-     * Collection of authentication settings included into this API.
+     * @return Collection of authentication settings included into this API.
      * 
-    */
+     */
     public Optional<AuthenticationSettingsContractResponse> authenticationSettings() {
         return Optional.ofNullable(this.authenticationSettings);
     }
     /**
-     * Description of the API. May include HTML formatting tags.
+     * @return Description of the API. May include HTML formatting tags.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * API name. Must be 1 to 300 characters long.
+     * @return API name. Must be 1 to 300 characters long.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Indicates if API revision is current api revision.
+     * @return Indicates if API revision is current api revision.
      * 
-    */
+     */
     public Optional<Boolean> isCurrent() {
         return Optional.ofNullable(this.isCurrent);
     }
     /**
-     * Indicates if API revision is accessible via the gateway.
+     * @return Indicates if API revision is accessible via the gateway.
      * 
-    */
+     */
     public Boolean isOnline() {
         return this.isOnline;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+     * @return Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Describes on which protocols the operations in this API can be invoked.
+     * @return Describes on which protocols the operations in this API can be invoked.
      * 
-    */
+     */
     public List<String> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
-     * Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+     * @return Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
      * 
-    */
+     */
     public Optional<String> serviceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
     /**
-     * API identifier of the source API.
+     * @return API identifier of the source API.
      * 
-    */
+     */
     public Optional<String> sourceApiId() {
         return Optional.ofNullable(this.sourceApiId);
     }
     /**
-     * Protocols over which API is made available.
+     * @return Protocols over which API is made available.
      * 
-    */
+     */
     public Optional<SubscriptionKeyParameterNamesContractResponse> subscriptionKeyParameterNames() {
         return Optional.ofNullable(this.subscriptionKeyParameterNames);
     }
     /**
-     * Specifies whether an API or Product subscription is required for accessing the API.
+     * @return Specifies whether an API or Product subscription is required for accessing the API.
      * 
-    */
+     */
     public Optional<Boolean> subscriptionRequired() {
         return Optional.ofNullable(this.subscriptionRequired);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

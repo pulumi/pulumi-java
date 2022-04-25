@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class SqlAclEntryResponse {
     /**
-     * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
+     * @return The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
      * 
      */
     private final String expireTime;
     /**
-     * A label to identify this entry.
+     * @return A label to identify this entry.
      * 
      */
     private final String label;
     /**
-     * Input only. The time-to-leave of this access control entry.
+     * @return Input only. The time-to-leave of this access control entry.
      * 
      */
     private final String ttl;
     /**
-     * The allowlisted value for the access control list.
+     * @return The allowlisted value for the access control list.
      * 
      */
     private final String value;
@@ -43,30 +43,30 @@ public final class SqlAclEntryResponse {
     }
 
     /**
-     * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
+     * @return The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
      * 
-    */
+     */
     public String expireTime() {
         return this.expireTime;
     }
     /**
-     * A label to identify this entry.
+     * @return A label to identify this entry.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * Input only. The time-to-leave of this access control entry.
+     * @return Input only. The time-to-leave of this access control entry.
      * 
-    */
+     */
     public String ttl() {
         return this.ttl;
     }
     /**
-     * The allowlisted value for the access control list.
+     * @return The allowlisted value for the access control list.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

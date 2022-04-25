@@ -26,6 +26,10 @@ public final class CommitmentQuotaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="quantity")
     private @Nullable Double quantity;
 
+    /**
+     * @return Commitment quota quantity.
+     * 
+     */
     public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
@@ -37,6 +41,10 @@ public final class CommitmentQuotaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="unit")
     private @Nullable String unit;
 
+    /**
+     * @return Commitment quota unit.
+     * 
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -66,11 +74,23 @@ public final class CommitmentQuotaResponse extends com.pulumi.resources.InvokeAr
             $ = new CommitmentQuotaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quantity Commitment quota quantity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quantity(@Nullable Double quantity) {
             $.quantity = quantity;
             return this;
         }
 
+        /**
+         * @param unit Commitment quota unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable String unit) {
             $.unit = unit;
             return this;

@@ -27,6 +27,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -38,6 +42,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoscaling")
     private @Nullable Output<AzureNodePoolAutoscalingGetArgs> autoscaling;
 
+    /**
+     * @return Required. Autoscaler configuration for this node pool.
+     * 
+     */
     public Optional<Output<AzureNodePoolAutoscalingGetArgs>> autoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
@@ -49,6 +57,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="azureAvailabilityZone")
     private @Nullable Output<String> azureAvailabilityZone;
 
+    /**
+     * @return Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`.
+     * 
+     */
     public Optional<Output<String>> azureAvailabilityZone() {
         return Optional.ofNullable(this.azureAvailabilityZone);
     }
@@ -60,6 +72,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="cluster")
     private @Nullable Output<String> cluster;
 
+    /**
+     * @return The azureCluster for the resource
+     * 
+     */
     public Optional<Output<String>> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -71,6 +87,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="config")
     private @Nullable Output<AzureNodePoolConfigGetArgs> config;
 
+    /**
+     * @return Required. The node configuration of the node pool.
+     * 
+     */
     public Optional<Output<AzureNodePoolConfigGetArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -82,6 +102,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Output only. The time at which this node pool was created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -94,6 +118,11 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Allows clients to perform consistent read-modify-writes through optimistic concurrency control. May be sent on update
+     * and delete requests to ensure the client has an up-to-date value before proceeding.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -105,6 +134,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -116,6 +149,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxPodsConstraint")
     private @Nullable Output<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
 
+    /**
+     * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * 
+     */
     public Optional<Output<AzureNodePoolMaxPodsConstraintGetArgs>> maxPodsConstraint() {
         return Optional.ofNullable(this.maxPodsConstraint);
     }
@@ -127,6 +164,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of this resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -138,6 +179,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -149,6 +194,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="reconciling")
     private @Nullable Output<Boolean> reconciling;
 
+    /**
+     * @return Output only. If set, there are currently pending changes to the node pool.
+     * 
+     */
     public Optional<Output<Boolean>> reconciling() {
         return Optional.ofNullable(this.reconciling);
     }
@@ -161,6 +210,11 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return Output only. The current state of the node pool. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING,
+     * STOPPING, ERROR, DEGRADED
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -172,6 +226,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -183,6 +241,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return Output only. A globally unique identifier for the node pool.
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -194,6 +256,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return Output only. The time at which this node pool was last updated.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -205,6 +271,10 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -249,155 +319,363 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
             $ = new AzureNodePoolState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param autoscaling Required. Autoscaler configuration for this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(@Nullable Output<AzureNodePoolAutoscalingGetArgs> autoscaling) {
             $.autoscaling = autoscaling;
             return this;
         }
 
+        /**
+         * @param autoscaling Required. Autoscaler configuration for this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(AzureNodePoolAutoscalingGetArgs autoscaling) {
             return autoscaling(Output.of(autoscaling));
         }
 
+        /**
+         * @param azureAvailabilityZone Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureAvailabilityZone(@Nullable Output<String> azureAvailabilityZone) {
             $.azureAvailabilityZone = azureAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param azureAvailabilityZone Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureAvailabilityZone(String azureAvailabilityZone) {
             return azureAvailabilityZone(Output.of(azureAvailabilityZone));
         }
 
+        /**
+         * @param cluster The azureCluster for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The azureCluster for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param config Required. The node configuration of the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<AzureNodePoolConfigGetArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Required. The node configuration of the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(AzureNodePoolConfigGetArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param createTime Output only. The time at which this node pool was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Output only. The time at which this node pool was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param etag Allows clients to perform consistent read-modify-writes through optimistic concurrency control. May be sent on update
+         * and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Allows clients to perform consistent read-modify-writes through optimistic concurrency control. May be sent on update
+         * and delete requests to ensure the client has an up-to-date value before proceeding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maxPodsConstraint Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsConstraint(@Nullable Output<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
             $.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
 
+        /**
+         * @param maxPodsConstraint Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsConstraint(AzureNodePoolMaxPodsConstraintGetArgs maxPodsConstraint) {
             return maxPodsConstraint(Output.of(maxPodsConstraint));
         }
 
+        /**
+         * @param name The name of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reconciling Output only. If set, there are currently pending changes to the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
             $.reconciling = reconciling;
             return this;
         }
 
+        /**
+         * @param reconciling Output only. If set, there are currently pending changes to the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reconciling(Boolean reconciling) {
             return reconciling(Output.of(reconciling));
         }
 
+        /**
+         * @param state Output only. The current state of the node pool. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING,
+         * STOPPING, ERROR, DEGRADED
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Output only. The current state of the node pool. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING,
+         * STOPPING, ERROR, DEGRADED
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param subnetId Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param uid Output only. A globally unique identifier for the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid Output only. A globally unique identifier for the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }
 
+        /**
+         * @param updateTime Output only. The time at which this node pool was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime Output only. The time at which this node pool was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }
 
+        /**
+         * @param version Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

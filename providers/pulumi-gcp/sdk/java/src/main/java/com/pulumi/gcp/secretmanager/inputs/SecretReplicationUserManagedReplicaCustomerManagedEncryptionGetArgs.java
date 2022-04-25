@@ -20,6 +20,10 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionG
     @Import(name="kmsKeyName", required=true)
     private Output<String> kmsKeyName;
 
+    /**
+     * @return Describes the Cloud KMS encryption key that will be used to protect destination secret.
+     * 
+     */
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -48,11 +52,23 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionG
             $ = new SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect destination secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect destination secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }

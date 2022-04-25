@@ -23,6 +23,10 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
     @Import(name="approvedTime", required=true)
     private String approvedTime;
 
+    /**
+     * @return The approved time
+     * 
+     */
     public String approvedTime() {
         return this.approvedTime;
     }
@@ -34,6 +38,10 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
     @Import(name="approver", required=true)
     private String approver;
 
+    /**
+     * @return The approver
+     * 
+     */
     public String approver() {
         return this.approver;
     }
@@ -45,6 +53,10 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
     @Import(name="requestedTime", required=true)
     private String requestedTime;
 
+    /**
+     * @return The requested time
+     * 
+     */
     public String requestedTime() {
         return this.requestedTime;
     }
@@ -56,6 +68,10 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
     @Import(name="requester", required=true)
     private String requester;
 
+    /**
+     * @return The requester
+     * 
+     */
     public String requester() {
         return this.requester;
     }
@@ -67,6 +83,10 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
     @Import(name="requesterObjectId", required=true)
     private String requesterObjectId;
 
+    /**
+     * @return The requester object id
+     * 
+     */
     public String requesterObjectId() {
         return this.requesterObjectId;
     }
@@ -99,26 +119,56 @@ public final class AuthorizationProfileResponse extends com.pulumi.resources.Inv
             $ = new AuthorizationProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approvedTime The approved time
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvedTime(String approvedTime) {
             $.approvedTime = approvedTime;
             return this;
         }
 
+        /**
+         * @param approver The approver
+         * 
+         * @return builder
+         * 
+         */
         public Builder approver(String approver) {
             $.approver = approver;
             return this;
         }
 
+        /**
+         * @param requestedTime The requested time
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedTime(String requestedTime) {
             $.requestedTime = requestedTime;
             return this;
         }
 
+        /**
+         * @param requester The requester
+         * 
+         * @return builder
+         * 
+         */
         public Builder requester(String requester) {
             $.requester = requester;
             return this;
         }
 
+        /**
+         * @param requesterObjectId The requester object id
+         * 
+         * @return builder
+         * 
+         */
         public Builder requesterObjectId(String requesterObjectId) {
             $.requesterObjectId = requesterObjectId;
             return this;

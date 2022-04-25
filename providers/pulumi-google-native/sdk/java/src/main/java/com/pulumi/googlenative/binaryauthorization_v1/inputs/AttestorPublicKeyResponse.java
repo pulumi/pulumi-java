@@ -24,6 +24,10 @@ public final class AttestorPublicKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="asciiArmoredPgpPublicKey", required=true)
     private String asciiArmoredPgpPublicKey;
 
+    /**
+     * @return ASCII-armored representation of a PGP public key, as the entire output by the command `gpg --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id` should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If `id` is provided by the caller, it will be overwritten by the API-calculated ID.
+     * 
+     */
     public String asciiArmoredPgpPublicKey() {
         return this.asciiArmoredPgpPublicKey;
     }
@@ -35,6 +39,10 @@ public final class AttestorPublicKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="comment", required=true)
     private String comment;
 
+    /**
+     * @return Optional. A descriptive comment. This field may be updated.
+     * 
+     */
     public String comment() {
         return this.comment;
     }
@@ -46,6 +54,10 @@ public final class AttestorPublicKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="pkixPublicKey", required=true)
     private PkixPublicKeyResponse pkixPublicKey;
 
+    /**
+     * @return A raw PKIX SubjectPublicKeyInfo format public key. NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the digest of the DER encoding of the public key.
+     * 
+     */
     public PkixPublicKeyResponse pkixPublicKey() {
         return this.pkixPublicKey;
     }
@@ -76,16 +88,34 @@ public final class AttestorPublicKeyResponse extends com.pulumi.resources.Invoke
             $ = new AttestorPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asciiArmoredPgpPublicKey ASCII-armored representation of a PGP public key, as the entire output by the command `gpg --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id` should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If `id` is provided by the caller, it will be overwritten by the API-calculated ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asciiArmoredPgpPublicKey(String asciiArmoredPgpPublicKey) {
             $.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
             return this;
         }
 
+        /**
+         * @param comment Optional. A descriptive comment. This field may be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param pkixPublicKey A raw PKIX SubjectPublicKeyInfo format public key. NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the digest of the DER encoding of the public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pkixPublicKey(PkixPublicKeyResponse pkixPublicKey) {
             $.pkixPublicKey = pkixPublicKey;
             return this;

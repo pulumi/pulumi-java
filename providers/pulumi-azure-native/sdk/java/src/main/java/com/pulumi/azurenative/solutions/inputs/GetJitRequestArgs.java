@@ -19,6 +19,10 @@ public final class GetJitRequestArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="jitRequestName", required=true)
     private String jitRequestName;
 
+    /**
+     * @return The name of the JIT request.
+     * 
+     */
     public String jitRequestName() {
         return this.jitRequestName;
     }
@@ -30,6 +34,10 @@ public final class GetJitRequestArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetJitRequestArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetJitRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jitRequestName The name of the JIT request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitRequestName(String jitRequestName) {
             $.jitRequestName = jitRequestName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

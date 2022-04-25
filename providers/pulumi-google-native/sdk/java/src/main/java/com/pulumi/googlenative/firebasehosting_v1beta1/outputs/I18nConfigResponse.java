@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class I18nConfigResponse {
     /**
-     * The user-supplied path where country and language specific content will be looked for within the public directory.
+     * @return The user-supplied path where country and language specific content will be looked for within the public directory.
      * 
      */
     private final String root;
@@ -21,9 +21,9 @@ public final class I18nConfigResponse {
     }
 
     /**
-     * The user-supplied path where country and language specific content will be looked for within the public directory.
+     * @return The user-supplied path where country and language specific content will be looked for within the public directory.
      * 
-    */
+     */
     public String root() {
         return this.root;
     }

@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse {
     /**
-     * Unique identifier for database
+     * @return Unique identifier for database
      * 
      */
     private final @Nullable String id;
     /**
-     * Migration settings which tune the migration behavior
+     * @return Migration settings which tune the migration behavior
      * 
      */
     private final @Nullable Map<String,String> migrationSetting;
     /**
-     * Name of database
+     * @return Name of database
      * 
      */
     private final @Nullable String name;
     /**
-     * Schema name to be migrated
+     * @return Schema name to be migrated
      * 
      */
     private final @Nullable String schemaName;
     /**
-     * Source settings to tune source endpoint migration behavior
+     * @return Source settings to tune source endpoint migration behavior
      * 
      */
     private final @Nullable Map<String,String> sourceSetting;
     /**
-     * Mapping of source to target tables
+     * @return Mapping of source to target tables
      * 
      */
     private final @Nullable Map<String,String> tableMap;
     /**
-     * Target database name
+     * @return Target database name
      * 
      */
     private final @Nullable String targetDatabaseName;
     /**
-     * Target settings to tune target endpoint migration behavior
+     * @return Target settings to tune target endpoint migration behavior
      * 
      */
     private final @Nullable Map<String,String> targetSetting;
@@ -74,58 +74,58 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse {
     }
 
     /**
-     * Unique identifier for database
+     * @return Unique identifier for database
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Migration settings which tune the migration behavior
+     * @return Migration settings which tune the migration behavior
      * 
-    */
+     */
     public Map<String,String> migrationSetting() {
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
     /**
-     * Name of database
+     * @return Name of database
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Schema name to be migrated
+     * @return Schema name to be migrated
      * 
-    */
+     */
     public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
     /**
-     * Source settings to tune source endpoint migration behavior
+     * @return Source settings to tune source endpoint migration behavior
      * 
-    */
+     */
     public Map<String,String> sourceSetting() {
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
     /**
-     * Mapping of source to target tables
+     * @return Mapping of source to target tables
      * 
-    */
+     */
     public Map<String,String> tableMap() {
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
     /**
-     * Target database name
+     * @return Target database name
      * 
-    */
+     */
     public Optional<String> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
     /**
-     * Target settings to tune target endpoint migration behavior
+     * @return Target settings to tune target endpoint migration behavior
      * 
-    */
+     */
     public Map<String,String> targetSetting() {
         return this.targetSetting == null ? Map.of() : this.targetSetting;
     }

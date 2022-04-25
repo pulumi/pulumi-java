@@ -30,6 +30,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="autoRenew")
     private @Nullable Output<Boolean> autoRenew;
 
+    /**
+     * @return AutoRenew commitment plan.
+     * 
+     */
     public Optional<Output<Boolean>> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
@@ -41,6 +45,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="current")
     private @Nullable Output<CommitmentPeriodArgs> current;
 
+    /**
+     * @return Cognitive Services account commitment period.
+     * 
+     */
     public Optional<Output<CommitmentPeriodArgs>> current() {
         return Optional.ofNullable(this.current);
     }
@@ -52,6 +60,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="hostingModel")
     private @Nullable Output<Either<String,HostingModel>> hostingModel;
 
+    /**
+     * @return Account hosting model.
+     * 
+     */
     public Optional<Output<Either<String,HostingModel>>> hostingModel() {
         return Optional.ofNullable(this.hostingModel);
     }
@@ -63,6 +75,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="next")
     private @Nullable Output<CommitmentPeriodArgs> next;
 
+    /**
+     * @return Cognitive Services account commitment period.
+     * 
+     */
     public Optional<Output<CommitmentPeriodArgs>> next() {
         return Optional.ofNullable(this.next);
     }
@@ -74,6 +90,10 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="planType")
     private @Nullable Output<String> planType;
 
+    /**
+     * @return Commitment plan type.
+     * 
+     */
     public Optional<Output<String>> planType() {
         return Optional.ofNullable(this.planType);
     }
@@ -106,55 +126,127 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
             $ = new CommitmentPlanPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRenew AutoRenew commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
             $.autoRenew = autoRenew;
             return this;
         }
 
+        /**
+         * @param autoRenew AutoRenew commitment plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRenew(Boolean autoRenew) {
             return autoRenew(Output.of(autoRenew));
         }
 
+        /**
+         * @param current Cognitive Services account commitment period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(@Nullable Output<CommitmentPeriodArgs> current) {
             $.current = current;
             return this;
         }
 
+        /**
+         * @param current Cognitive Services account commitment period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(CommitmentPeriodArgs current) {
             return current(Output.of(current));
         }
 
+        /**
+         * @param hostingModel Account hosting model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostingModel(@Nullable Output<Either<String,HostingModel>> hostingModel) {
             $.hostingModel = hostingModel;
             return this;
         }
 
+        /**
+         * @param hostingModel Account hosting model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostingModel(Either<String,HostingModel> hostingModel) {
             return hostingModel(Output.of(hostingModel));
         }
 
+        /**
+         * @param hostingModel Account hosting model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostingModel(String hostingModel) {
             return hostingModel(Either.ofLeft(hostingModel));
         }
 
+        /**
+         * @param hostingModel Account hosting model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostingModel(HostingModel hostingModel) {
             return hostingModel(Either.ofRight(hostingModel));
         }
 
+        /**
+         * @param next Cognitive Services account commitment period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder next(@Nullable Output<CommitmentPeriodArgs> next) {
             $.next = next;
             return this;
         }
 
+        /**
+         * @param next Cognitive Services account commitment period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder next(CommitmentPeriodArgs next) {
             return next(Output.of(next));
         }
 
+        /**
+         * @param planType Commitment plan type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planType(@Nullable Output<String> planType) {
             $.planType = planType;
             return this;
         }
 
+        /**
+         * @param planType Commitment plan type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planType(String planType) {
             return planType(Output.of(planType));
         }

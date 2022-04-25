@@ -24,6 +24,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
     private @Nullable Output<String> jobName;
 
+    /**
+     * @return The name of the import/export job.
+     * 
+     */
     public Optional<Output<String>> jobName() {
         return Optional.ofNullable(this.jobName);
     }
@@ -35,6 +39,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Specifies the supported Azure location where the job should be created
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<JobDetailsArgs> properties;
 
+    /**
+     * @return Specifies the job properties
+     * 
+     */
     public Optional<Output<JobDetailsArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -57,6 +69,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name uniquely identifies the resource group within the user subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Object> tags;
 
+    /**
+     * @return Specifies the tags that will be assigned to the job.
+     * 
+     */
     public Optional<Output<Object>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobName The name of the import/export job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(@Nullable Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The name of the import/export job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param location Specifies the supported Azure location where the job should be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Specifies the supported Azure location where the job should be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Specifies the job properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<JobDetailsArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Specifies the job properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(JobDetailsArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name uniquely identifies the resource group within the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name uniquely identifies the resource group within the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Specifies the tags that will be assigned to the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Object> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Specifies the tags that will be assigned to the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Object tags) {
             return tags(Output.of(tags));
         }

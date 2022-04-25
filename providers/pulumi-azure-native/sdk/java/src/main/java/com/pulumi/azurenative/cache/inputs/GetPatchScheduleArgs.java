@@ -19,6 +19,10 @@ public final class GetPatchScheduleArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="default", required=true)
     private String default_;
 
+    /**
+     * @return Default string modeled as parameter for auto generation to work correctly.
+     * 
+     */
     public String default_() {
         return this.default_;
     }
@@ -30,6 +34,10 @@ public final class GetPatchScheduleArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the redis cache.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetPatchScheduleArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPatchScheduleArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetPatchScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ Default string modeled as parameter for auto generation to work correctly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(String default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param name The name of the redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

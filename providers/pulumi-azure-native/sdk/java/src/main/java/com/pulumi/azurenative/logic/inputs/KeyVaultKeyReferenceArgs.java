@@ -27,6 +27,10 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="keyName", required=true)
     private Output<String> keyName;
 
+    /**
+     * @return The private key name in key vault.
+     * 
+     */
     public Output<String> keyName() {
         return this.keyName;
     }
@@ -38,6 +42,10 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVault", required=true)
     private Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
 
+    /**
+     * @return The key vault reference.
+     * 
+     */
     public Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault() {
         return this.keyVault;
     }
@@ -49,6 +57,10 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVersion")
     private @Nullable Output<String> keyVersion;
 
+    /**
+     * @return The private key version in key vault.
+     * 
+     */
     public Optional<Output<String>> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -79,29 +91,65 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
             $ = new KeyVaultKeyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The private key name in key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The private key name in key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyVault The key vault reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param keyVault The key vault reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(KeyVaultKeyReferenceKeyVaultArgs keyVault) {
             return keyVault(Output.of(keyVault));
         }
 
+        /**
+         * @param keyVersion The private key version in key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param keyVersion The private key version in key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             return keyVersion(Output.of(keyVersion));
         }

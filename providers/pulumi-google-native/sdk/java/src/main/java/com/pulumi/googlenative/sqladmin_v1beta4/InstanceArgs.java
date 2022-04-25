@@ -39,6 +39,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backendType")
     private @Nullable Output<InstanceBackendType> backendType;
 
+    /**
+     * @return The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
+     * 
+     */
     public Optional<Output<InstanceBackendType>> backendType() {
         return Optional.ofNullable(this.backendType);
     }
@@ -50,6 +54,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionName")
     private @Nullable Output<String> connectionName;
 
+    /**
+     * @return Connection name of the Cloud SQL instance used in connection strings.
+     * 
+     */
     public Optional<Output<String>> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
@@ -61,6 +69,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="currentDiskSize")
     private @Nullable Output<String> currentDiskSize;
 
+    /**
+     * @return The current disk usage of the instance in bytes. This property has been deprecated. Use the &#34;cloudsql.googleapis.com/database/disk/bytes_used&#34; metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
+     * 
+     */
     public Optional<Output<String>> currentDiskSize() {
         return Optional.ofNullable(this.currentDiskSize);
     }
@@ -72,6 +84,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseVersion")
     private @Nullable Output<InstanceDatabaseVersion> databaseVersion;
 
+    /**
+     * @return The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
+     * 
+     */
     public Optional<Output<InstanceDatabaseVersion>> databaseVersion() {
         return Optional.ofNullable(this.databaseVersion);
     }
@@ -83,6 +99,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionConfiguration")
     private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
+    /**
+     * @return Disk encryption configuration specific to an instance.
+     * 
+     */
     public Optional<Output<DiskEncryptionConfigurationArgs>> diskEncryptionConfiguration() {
         return Optional.ofNullable(this.diskEncryptionConfiguration);
     }
@@ -94,6 +114,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionStatus")
     private @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
+    /**
+     * @return Disk encryption status specific to an instance.
+     * 
+     */
     public Optional<Output<DiskEncryptionStatusArgs>> diskEncryptionStatus() {
         return Optional.ofNullable(this.diskEncryptionStatus);
     }
@@ -105,6 +129,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failoverReplica")
     private @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica;
 
+    /**
+     * @return The name and status of the failover replica.
+     * 
+     */
     public Optional<Output<InstanceFailoverReplicaArgs>> failoverReplica() {
         return Optional.ofNullable(this.failoverReplica);
     }
@@ -116,6 +144,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gceZone")
     private @Nullable Output<String> gceZone;
 
+    /**
+     * @return The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
+     * 
+     */
     public Optional<Output<String>> gceZone() {
         return Optional.ofNullable(this.gceZone);
     }
@@ -127,6 +159,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
     private @Nullable Output<InstanceInstanceType> instanceType;
 
+    /**
+     * @return The instance type.
+     * 
+     */
     public Optional<Output<InstanceInstanceType>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -138,6 +174,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddresses")
     private @Nullable Output<List<IpMappingArgs>> ipAddresses;
 
+    /**
+     * @return The assigned IP addresses for the instance.
+     * 
+     */
     public Optional<Output<List<IpMappingArgs>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -149,6 +189,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return This is always `sql#instance`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -160,6 +204,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterInstanceName")
     private @Nullable Output<String> masterInstanceName;
 
+    /**
+     * @return The name of the instance which will act as primary in the replication setup.
+     * 
+     */
     public Optional<Output<String>> masterInstanceName() {
         return Optional.ofNullable(this.masterInstanceName);
     }
@@ -171,6 +219,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDiskSize")
     private @Nullable Output<String> maxDiskSize;
 
+    /**
+     * @return The maximum disk size of the instance in bytes.
+     * 
+     */
     public Optional<Output<String>> maxDiskSize() {
         return Optional.ofNullable(this.maxDiskSize);
     }
@@ -182,6 +234,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Cloud SQL instance. This does not include the project ID.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -193,6 +249,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="onPremisesConfiguration")
     private @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration;
 
+    /**
+     * @return Configuration specific to on-premises instances.
+     * 
+     */
     public Optional<Output<OnPremisesConfigurationArgs>> onPremisesConfiguration() {
         return Optional.ofNullable(this.onPremisesConfiguration);
     }
@@ -204,6 +264,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outOfDiskReport")
     private @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport;
 
+    /**
+     * @return This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
+     * 
+     */
     public Optional<Output<SqlOutOfDiskReportArgs>> outOfDiskReport() {
         return Optional.ofNullable(this.outOfDiskReport);
     }
@@ -215,6 +279,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -226,6 +294,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -237,6 +309,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicaConfiguration")
     private @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration;
 
+    /**
+     * @return Configuration specific to failover replicas and read replicas.
+     * 
+     */
     public Optional<Output<ReplicaConfigurationArgs>> replicaConfiguration() {
         return Optional.ofNullable(this.replicaConfiguration);
     }
@@ -248,6 +324,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicaNames")
     private @Nullable Output<List<String>> replicaNames;
 
+    /**
+     * @return The replicas of the instance.
+     * 
+     */
     public Optional<Output<List<String>>> replicaNames() {
         return Optional.ofNullable(this.replicaNames);
     }
@@ -259,6 +339,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootPassword")
     private @Nullable Output<String> rootPassword;
 
+    /**
+     * @return Initial root password. Use only on creation.
+     * 
+     */
     public Optional<Output<String>> rootPassword() {
         return Optional.ofNullable(this.rootPassword);
     }
@@ -270,6 +354,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="satisfiesPzs")
     private @Nullable Output<Boolean> satisfiesPzs;
 
+    /**
+     * @return The status indicating if instance satisfiesPzs. Reserved for future use.
+     * 
+     */
     public Optional<Output<Boolean>> satisfiesPzs() {
         return Optional.ofNullable(this.satisfiesPzs);
     }
@@ -281,6 +369,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduledMaintenance")
     private @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance;
 
+    /**
+     * @return The start time of any upcoming scheduled maintenance for this instance.
+     * 
+     */
     public Optional<Output<SqlScheduledMaintenanceArgs>> scheduledMaintenance() {
         return Optional.ofNullable(this.scheduledMaintenance);
     }
@@ -292,6 +384,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondaryGceZone")
     private @Nullable Output<String> secondaryGceZone;
 
+    /**
+     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * 
+     */
     public Optional<Output<String>> secondaryGceZone() {
         return Optional.ofNullable(this.secondaryGceZone);
     }
@@ -303,6 +399,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of this resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -314,6 +414,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverCaCert")
     private @Nullable Output<SslCertArgs> serverCaCert;
 
+    /**
+     * @return SSL configuration.
+     * 
+     */
     public Optional<Output<SslCertArgs>> serverCaCert() {
         return Optional.ofNullable(this.serverCaCert);
     }
@@ -325,6 +429,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmailAddress")
     private @Nullable Output<String> serviceAccountEmailAddress;
 
+    /**
+     * @return The service account email address assigned to the instance. \This property is read-only.
+     * 
+     */
     public Optional<Output<String>> serviceAccountEmailAddress() {
         return Optional.ofNullable(this.serviceAccountEmailAddress);
     }
@@ -336,6 +444,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="settings")
     private @Nullable Output<SettingsArgs> settings;
 
+    /**
+     * @return The user settings.
+     * 
+     */
     public Optional<Output<SettingsArgs>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -347,6 +459,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<InstanceState> state;
 
+    /**
+     * @return The current serving state of the Cloud SQL instance.
+     * 
+     */
     public Optional<Output<InstanceState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -358,6 +474,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suspensionReason")
     private @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason;
 
+    /**
+     * @return If the instance state is SUSPENDED, the reason for the suspension.
+     * 
+     */
     public Optional<Output<List<InstanceSuspensionReasonItem>>> suspensionReason() {
         return Optional.ofNullable(this.suspensionReason);
     }
@@ -415,284 +535,662 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendType The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendType(@Nullable Output<InstanceBackendType> backendType) {
             $.backendType = backendType;
             return this;
         }
 
+        /**
+         * @param backendType The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendType(InstanceBackendType backendType) {
             return backendType(Output.of(backendType));
         }
 
+        /**
+         * @param connectionName Connection name of the Cloud SQL instance used in connection strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(@Nullable Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName Connection name of the Cloud SQL instance used in connection strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param currentDiskSize The current disk usage of the instance in bytes. This property has been deprecated. Use the &#34;cloudsql.googleapis.com/database/disk/bytes_used&#34; metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentDiskSize(@Nullable Output<String> currentDiskSize) {
             $.currentDiskSize = currentDiskSize;
             return this;
         }
 
+        /**
+         * @param currentDiskSize The current disk usage of the instance in bytes. This property has been deprecated. Use the &#34;cloudsql.googleapis.com/database/disk/bytes_used&#34; metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentDiskSize(String currentDiskSize) {
             return currentDiskSize(Output.of(currentDiskSize));
         }
 
+        /**
+         * @param databaseVersion The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseVersion(@Nullable Output<InstanceDatabaseVersion> databaseVersion) {
             $.databaseVersion = databaseVersion;
             return this;
         }
 
+        /**
+         * @param databaseVersion The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseVersion(InstanceDatabaseVersion databaseVersion) {
             return databaseVersion(Output.of(databaseVersion));
         }
 
+        /**
+         * @param diskEncryptionConfiguration Disk encryption configuration specific to an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             $.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param diskEncryptionConfiguration Disk encryption configuration specific to an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionConfiguration(DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
             return diskEncryptionConfiguration(Output.of(diskEncryptionConfiguration));
         }
 
+        /**
+         * @param diskEncryptionStatus Disk encryption status specific to an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionStatus(@Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus) {
             $.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
 
+        /**
+         * @param diskEncryptionStatus Disk encryption status specific to an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionStatus(DiskEncryptionStatusArgs diskEncryptionStatus) {
             return diskEncryptionStatus(Output.of(diskEncryptionStatus));
         }
 
+        /**
+         * @param failoverReplica The name and status of the failover replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverReplica(@Nullable Output<InstanceFailoverReplicaArgs> failoverReplica) {
             $.failoverReplica = failoverReplica;
             return this;
         }
 
+        /**
+         * @param failoverReplica The name and status of the failover replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverReplica(InstanceFailoverReplicaArgs failoverReplica) {
             return failoverReplica(Output.of(failoverReplica));
         }
 
+        /**
+         * @param gceZone The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gceZone(@Nullable Output<String> gceZone) {
             $.gceZone = gceZone;
             return this;
         }
 
+        /**
+         * @param gceZone The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gceZone(String gceZone) {
             return gceZone(Output.of(gceZone));
         }
 
+        /**
+         * @param instanceType The instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<InstanceInstanceType> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(InstanceInstanceType instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param ipAddresses The assigned IP addresses for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<IpMappingArgs>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses The assigned IP addresses for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<IpMappingArgs> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses The assigned IP addresses for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(IpMappingArgs... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param kind This is always `sql#instance`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind This is always `sql#instance`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param masterInstanceName The name of the instance which will act as primary in the replication setup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
             $.masterInstanceName = masterInstanceName;
             return this;
         }
 
+        /**
+         * @param masterInstanceName The name of the instance which will act as primary in the replication setup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterInstanceName(String masterInstanceName) {
             return masterInstanceName(Output.of(masterInstanceName));
         }
 
+        /**
+         * @param maxDiskSize The maximum disk size of the instance in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDiskSize(@Nullable Output<String> maxDiskSize) {
             $.maxDiskSize = maxDiskSize;
             return this;
         }
 
+        /**
+         * @param maxDiskSize The maximum disk size of the instance in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDiskSize(String maxDiskSize) {
             return maxDiskSize(Output.of(maxDiskSize));
         }
 
+        /**
+         * @param name Name of the Cloud SQL instance. This does not include the project ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Cloud SQL instance. This does not include the project ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param onPremisesConfiguration Configuration specific to on-premises instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremisesConfiguration(@Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration) {
             $.onPremisesConfiguration = onPremisesConfiguration;
             return this;
         }
 
+        /**
+         * @param onPremisesConfiguration Configuration specific to on-premises instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremisesConfiguration(OnPremisesConfigurationArgs onPremisesConfiguration) {
             return onPremisesConfiguration(Output.of(onPremisesConfiguration));
         }
 
+        /**
+         * @param outOfDiskReport This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
+         * 
+         * @return builder
+         * 
+         */
         public Builder outOfDiskReport(@Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport) {
             $.outOfDiskReport = outOfDiskReport;
             return this;
         }
 
+        /**
+         * @param outOfDiskReport This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
+         * 
+         * @return builder
+         * 
+         */
         public Builder outOfDiskReport(SqlOutOfDiskReportArgs outOfDiskReport) {
             return outOfDiskReport(Output.of(outOfDiskReport));
         }
 
+        /**
+         * @param project The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param replicaConfiguration Configuration specific to failover replicas and read replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaConfiguration(@Nullable Output<ReplicaConfigurationArgs> replicaConfiguration) {
             $.replicaConfiguration = replicaConfiguration;
             return this;
         }
 
+        /**
+         * @param replicaConfiguration Configuration specific to failover replicas and read replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaConfiguration(ReplicaConfigurationArgs replicaConfiguration) {
             return replicaConfiguration(Output.of(replicaConfiguration));
         }
 
+        /**
+         * @param replicaNames The replicas of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaNames(@Nullable Output<List<String>> replicaNames) {
             $.replicaNames = replicaNames;
             return this;
         }
 
+        /**
+         * @param replicaNames The replicas of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaNames(List<String> replicaNames) {
             return replicaNames(Output.of(replicaNames));
         }
 
+        /**
+         * @param replicaNames The replicas of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaNames(String... replicaNames) {
             return replicaNames(List.of(replicaNames));
         }
 
+        /**
+         * @param rootPassword Initial root password. Use only on creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
             $.rootPassword = rootPassword;
             return this;
         }
 
+        /**
+         * @param rootPassword Initial root password. Use only on creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPassword(String rootPassword) {
             return rootPassword(Output.of(rootPassword));
         }
 
+        /**
+         * @param satisfiesPzs The status indicating if instance satisfiesPzs. Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             $.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
+        /**
+         * @param satisfiesPzs The status indicating if instance satisfiesPzs. Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             return satisfiesPzs(Output.of(satisfiesPzs));
         }
 
+        /**
+         * @param scheduledMaintenance The start time of any upcoming scheduled maintenance for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledMaintenance(@Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance) {
             $.scheduledMaintenance = scheduledMaintenance;
             return this;
         }
 
+        /**
+         * @param scheduledMaintenance The start time of any upcoming scheduled maintenance for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledMaintenance(SqlScheduledMaintenanceArgs scheduledMaintenance) {
             return scheduledMaintenance(Output.of(scheduledMaintenance));
         }
 
+        /**
+         * @param secondaryGceZone The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryGceZone(@Nullable Output<String> secondaryGceZone) {
             $.secondaryGceZone = secondaryGceZone;
             return this;
         }
 
+        /**
+         * @param secondaryGceZone The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryGceZone(String secondaryGceZone) {
             return secondaryGceZone(Output.of(secondaryGceZone));
         }
 
+        /**
+         * @param selfLink The URI of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param serverCaCert SSL configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCaCert(@Nullable Output<SslCertArgs> serverCaCert) {
             $.serverCaCert = serverCaCert;
             return this;
         }
 
+        /**
+         * @param serverCaCert SSL configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCaCert(SslCertArgs serverCaCert) {
             return serverCaCert(Output.of(serverCaCert));
         }
 
+        /**
+         * @param serviceAccountEmailAddress The service account email address assigned to the instance. \This property is read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmailAddress(@Nullable Output<String> serviceAccountEmailAddress) {
             $.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmailAddress The service account email address assigned to the instance. \This property is read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmailAddress(String serviceAccountEmailAddress) {
             return serviceAccountEmailAddress(Output.of(serviceAccountEmailAddress));
         }
 
+        /**
+         * @param settings The user settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<SettingsArgs> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings The user settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(SettingsArgs settings) {
             return settings(Output.of(settings));
         }
 
+        /**
+         * @param state The current serving state of the Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<InstanceState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current serving state of the Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(InstanceState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param suspensionReason If the instance state is SUSPENDED, the reason for the suspension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspensionReason(@Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason) {
             $.suspensionReason = suspensionReason;
             return this;
         }
 
+        /**
+         * @param suspensionReason If the instance state is SUSPENDED, the reason for the suspension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspensionReason(List<InstanceSuspensionReasonItem> suspensionReason) {
             return suspensionReason(Output.of(suspensionReason));
         }
 
+        /**
+         * @param suspensionReason If the instance state is SUSPENDED, the reason for the suspension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspensionReason(InstanceSuspensionReasonItem... suspensionReason) {
             return suspensionReason(List.of(suspensionReason));
         }

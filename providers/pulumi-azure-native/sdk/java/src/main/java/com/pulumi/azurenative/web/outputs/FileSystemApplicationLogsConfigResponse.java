@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FileSystemApplicationLogsConfigResponse {
     /**
-     * Log level.
+     * @return Log level.
      * 
      */
     private final @Nullable String level;
@@ -23,9 +23,9 @@ public final class FileSystemApplicationLogsConfigResponse {
     }
 
     /**
-     * Log level.
+     * @return Log level.
      * 
-    */
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }

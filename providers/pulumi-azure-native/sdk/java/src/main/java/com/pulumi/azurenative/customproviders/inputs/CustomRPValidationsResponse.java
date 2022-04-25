@@ -25,6 +25,10 @@ public final class CustomRPValidationsResponse extends com.pulumi.resources.Invo
     @Import(name="specification", required=true)
     private String specification;
 
+    /**
+     * @return A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
+     * 
+     */
     public String specification() {
         return this.specification;
     }
@@ -36,6 +40,10 @@ public final class CustomRPValidationsResponse extends com.pulumi.resources.Invo
     @Import(name="validationType")
     private @Nullable String validationType;
 
+    /**
+     * @return The type of validation to run against a matching request.
+     * 
+     */
     public Optional<String> validationType() {
         return Optional.ofNullable(this.validationType);
     }
@@ -65,11 +73,23 @@ public final class CustomRPValidationsResponse extends com.pulumi.resources.Invo
             $ = new CustomRPValidationsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param specification A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specification(String specification) {
             $.specification = specification;
             return this;
         }
 
+        /**
+         * @param validationType The type of validation to run against a matching request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationType(@Nullable String validationType) {
             $.validationType = validationType;
             return this;

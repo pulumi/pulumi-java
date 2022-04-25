@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
     /**
-     * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * @return Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
      * 
      */
     private final @Nullable Boolean pullDeps;
     /**
-     * Required. An rpm package.
+     * @return Required. An rpm package.
      * 
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source;
@@ -32,16 +32,16 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
     }
 
     /**
-     * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * @return Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
      * 
-    */
+     */
     public Optional<Boolean> pullDeps() {
         return Optional.ofNullable(this.pullDeps);
     }
     /**
-     * Required. An rpm package.
+     * @return Required. An rpm package.
      * 
-    */
+     */
     public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source() {
         return this.source;
     }

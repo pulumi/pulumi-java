@@ -19,32 +19,32 @@ import javax.annotation.Nullable;
 public final class BucketInventoryConfiguration {
     private final BucketDestination destination;
     /**
-     * Specifies whether the inventory is enabled or disabled.
+     * @return Specifies whether the inventory is enabled or disabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * The ID used to identify the inventory configuration.
+     * @return The ID used to identify the inventory configuration.
      * 
      */
     private final String id;
     /**
-     * Object versions to include in the inventory list.
+     * @return Object versions to include in the inventory list.
      * 
      */
     private final BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
     /**
-     * Contains the optional fields that are included in the inventory results.
+     * @return Contains the optional fields that are included in the inventory results.
      * 
      */
     private final @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
     /**
-     * The prefix that is prepended to all inventory results.
+     * @return The prefix that is prepended to all inventory results.
      * 
      */
     private final @Nullable String prefix;
     /**
-     * Specifies the schedule for generating inventory results.
+     * @return Specifies the schedule for generating inventory results.
      * 
      */
     private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
@@ -71,44 +71,44 @@ public final class BucketInventoryConfiguration {
         return this.destination;
     }
     /**
-     * Specifies whether the inventory is enabled or disabled.
+     * @return Specifies whether the inventory is enabled or disabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The ID used to identify the inventory configuration.
+     * @return The ID used to identify the inventory configuration.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Object versions to include in the inventory list.
+     * @return Object versions to include in the inventory list.
      * 
-    */
+     */
     public BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions() {
         return this.includedObjectVersions;
     }
     /**
-     * Contains the optional fields that are included in the inventory results.
+     * @return Contains the optional fields that are included in the inventory results.
      * 
-    */
+     */
     public List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields() {
         return this.optionalFields == null ? List.of() : this.optionalFields;
     }
     /**
-     * The prefix that is prepended to all inventory results.
+     * @return The prefix that is prepended to all inventory results.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * Specifies the schedule for generating inventory results.
+     * @return Specifies the schedule for generating inventory results.
      * 
-    */
+     */
     public BucketInventoryConfigurationScheduleFrequency scheduleFrequency() {
         return this.scheduleFrequency;
     }

@@ -26,6 +26,10 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalInfo")
     private @Nullable Map<String,String> additionalInfo;
 
+    /**
+     * @return Any Key value pairs that can be provided to the client for additional  verbose information.
+     * 
+     */
     public Optional<Map<String,String>> additionalInfo() {
         return Optional.ofNullable(this.additionalInfo);
     }
@@ -37,6 +41,10 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Unique code for this error
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -48,6 +56,10 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="embeddedInnerError")
     private @Nullable InnerErrorResponse embeddedInnerError;
 
+    /**
+     * @return Child Inner Error, to allow Nesting.
+     * 
+     */
     public Optional<InnerErrorResponse> embeddedInnerError() {
         return Optional.ofNullable(this.embeddedInnerError);
     }
@@ -78,16 +90,34 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new InnerErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalInfo Any Key value pairs that can be provided to the client for additional  verbose information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInfo(@Nullable Map<String,String> additionalInfo) {
             $.additionalInfo = additionalInfo;
             return this;
         }
 
+        /**
+         * @param code Unique code for this error
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param embeddedInnerError Child Inner Error, to allow Nesting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder embeddedInnerError(@Nullable InnerErrorResponse embeddedInnerError) {
             $.embeddedInnerError = embeddedInnerError;
             return this;

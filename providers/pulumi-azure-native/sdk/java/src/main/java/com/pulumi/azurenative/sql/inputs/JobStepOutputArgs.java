@@ -29,6 +29,10 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credential", required=true)
     private Output<String> credential;
 
+    /**
+     * @return The resource ID of the credential to use to connect to the output destination.
+     * 
+     */
     public Output<String> credential() {
         return this.credential;
     }
@@ -40,6 +44,10 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The output destination database.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -51,6 +59,10 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName")
     private @Nullable Output<String> resourceGroupName;
 
+    /**
+     * @return The output destination resource group.
+     * 
+     */
     public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
@@ -62,6 +74,10 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaName")
     private @Nullable Output<String> schemaName;
 
+    /**
+     * @return The output destination schema.
+     * 
+     */
     public Optional<Output<String>> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
@@ -73,6 +89,10 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The output destination server name.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -84,6 +104,10 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return The output destination subscription id.
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -95,6 +119,10 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName", required=true)
     private Output<String> tableName;
 
+    /**
+     * @return The output destination table.
+     * 
+     */
     public Output<String> tableName() {
         return this.tableName;
     }
@@ -106,6 +134,10 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,JobStepOutputType>> type;
 
+    /**
+     * @return The output destination type.
+     * 
+     */
     public Optional<Output<Either<String,JobStepOutputType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -141,82 +173,190 @@ public final class JobStepOutputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobStepOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credential The resource ID of the credential to use to connect to the output destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(Output<String> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential The resource ID of the credential to use to connect to the output destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(String credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param databaseName The output destination database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The output destination database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param resourceGroupName The output destination resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The output destination resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schemaName The output destination schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(@Nullable Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName The output destination schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }
 
+        /**
+         * @param serverName The output destination server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The output destination server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param subscriptionId The output destination subscription id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId The output destination subscription id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param tableName The output destination table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName The output destination table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }
 
+        /**
+         * @param type The output destination type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,JobStepOutputType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The output destination type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,JobStepOutputType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The output destination type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The output destination type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(JobStepOutputType type) {
             return type(Either.ofRight(type));
         }

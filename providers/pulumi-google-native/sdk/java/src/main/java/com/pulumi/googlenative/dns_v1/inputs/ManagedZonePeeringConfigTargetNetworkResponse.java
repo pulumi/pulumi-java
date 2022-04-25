@@ -19,6 +19,10 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends com.pul
     @Import(name="deactivateTime", required=true)
     private String deactivateTime;
 
+    /**
+     * @return The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.
+     * 
+     */
     public String deactivateTime() {
         return this.deactivateTime;
     }
@@ -37,6 +41,10 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends com.pul
     @Import(name="networkUrl", required=true)
     private String networkUrl;
 
+    /**
+     * @return The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+     * 
+     */
     public String networkUrl() {
         return this.networkUrl;
     }
@@ -67,6 +75,12 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends com.pul
             $ = new ManagedZonePeeringConfigTargetNetworkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deactivateTime The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deactivateTime(String deactivateTime) {
             $.deactivateTime = deactivateTime;
             return this;
@@ -77,6 +91,12 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse extends com.pul
             return this;
         }
 
+        /**
+         * @param networkUrl The fully qualified URL of the VPC network to forward queries to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUrl(String networkUrl) {
             $.networkUrl = networkUrl;
             return this;

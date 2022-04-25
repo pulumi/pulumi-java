@@ -20,6 +20,10 @@ public final class AllowedConfigListResponse extends com.pulumi.resources.Invoke
     @Import(name="allowedConfigValues", required=true)
     private List<ReusableConfigWrapperResponse> allowedConfigValues;
 
+    /**
+     * @return All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
+     * 
+     */
     public List<ReusableConfigWrapperResponse> allowedConfigValues() {
         return this.allowedConfigValues;
     }
@@ -48,11 +52,23 @@ public final class AllowedConfigListResponse extends com.pulumi.resources.Invoke
             $ = new AllowedConfigListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedConfigValues All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedConfigValues(List<ReusableConfigWrapperResponse> allowedConfigValues) {
             $.allowedConfigValues = allowedConfigValues;
             return this;
         }
 
+        /**
+         * @param allowedConfigValues All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedConfigValues(ReusableConfigWrapperResponse... allowedConfigValues) {
             return allowedConfigValues(List.of(allowedConfigValues));
         }

@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLocationS3Result {
     /**
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
+     * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
      * 
      */
     private final @Nullable String locationArn;
     /**
-     * The URL of the S3 location that was described.
+     * @return The URL of the S3 location that was described.
      * 
      */
     private final @Nullable String locationUri;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<LocationS3Tag> tags;
@@ -40,23 +40,23 @@ public final class GetLocationS3Result {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
+     * @return The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
      * 
-    */
+     */
     public Optional<String> locationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
-     * The URL of the S3 location that was described.
+     * @return The URL of the S3 location that was described.
      * 
-    */
+     */
     public Optional<String> locationUri() {
         return Optional.ofNullable(this.locationUri);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<LocationS3Tag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

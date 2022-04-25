@@ -21,6 +21,10 @@ public final class CrawlerCatalogTargetArgs extends com.pulumi.resources.Resourc
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the Glue database to be synchronized.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -32,6 +36,10 @@ public final class CrawlerCatalogTargetArgs extends com.pulumi.resources.Resourc
     @Import(name="tables", required=true)
     private Output<List<String>> tables;
 
+    /**
+     * @return A list of catalog tables to be synchronized.
+     * 
+     */
     public Output<List<String>> tables() {
         return this.tables;
     }
@@ -61,24 +69,54 @@ public final class CrawlerCatalogTargetArgs extends com.pulumi.resources.Resourc
             $ = new CrawlerCatalogTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The name of the Glue database to be synchronized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the Glue database to be synchronized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param tables A list of catalog tables to be synchronized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(Output<List<String>> tables) {
             $.tables = tables;
             return this;
         }
 
+        /**
+         * @param tables A list of catalog tables to be synchronized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(List<String> tables) {
             return tables(Output.of(tables));
         }
 
+        /**
+         * @param tables A list of catalog tables to be synchronized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(String... tables) {
             return tables(List.of(tables));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BotInputContext {
     /**
-     * The name of the context.
+     * @return The name of the context.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class BotInputContext {
     }
 
     /**
-     * The name of the context.
+     * @return The name of the context.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

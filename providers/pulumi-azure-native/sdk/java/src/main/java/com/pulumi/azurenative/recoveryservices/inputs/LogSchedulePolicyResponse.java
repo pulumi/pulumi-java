@@ -27,6 +27,10 @@ public final class LogSchedulePolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="scheduleFrequencyInMins")
     private @Nullable Integer scheduleFrequencyInMins;
 
+    /**
+     * @return Frequency of the log schedule operation of this policy in minutes.
+     * 
+     */
     public Optional<Integer> scheduleFrequencyInMins() {
         return Optional.ofNullable(this.scheduleFrequencyInMins);
     }
@@ -39,6 +43,11 @@ public final class LogSchedulePolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="schedulePolicyType", required=true)
     private String schedulePolicyType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;LogSchedulePolicy&#39;.
+     * 
+     */
     public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
@@ -68,11 +77,24 @@ public final class LogSchedulePolicyResponse extends com.pulumi.resources.Invoke
             $ = new LogSchedulePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduleFrequencyInMins Frequency of the log schedule operation of this policy in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleFrequencyInMins(@Nullable Integer scheduleFrequencyInMins) {
             $.scheduleFrequencyInMins = scheduleFrequencyInMins;
             return this;
         }
 
+        /**
+         * @param schedulePolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LogSchedulePolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicyType(String schedulePolicyType) {
             $.schedulePolicyType = schedulePolicyType;
             return this;

@@ -27,6 +27,10 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends com.pulumi
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return If set, access is controlled only by bucket-level or above IAM policies.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends com.pulumi
     @Import(name="lockedTime")
     private @Nullable Output<String> lockedTime;
 
+    /**
+     * @return The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.
+     * 
+     */
     public Optional<Output<String>> lockedTime() {
         return Optional.ofNullable(this.lockedTime);
     }
@@ -67,20 +75,44 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends com.pulumi
             $ = new BucketIamConfigurationBucketPolicyOnlyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled If set, access is controlled only by bucket-level or above IAM policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled If set, access is controlled only by bucket-level or above IAM policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param lockedTime The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockedTime(@Nullable Output<String> lockedTime) {
             $.lockedTime = lockedTime;
             return this;
         }
 
+        /**
+         * @param lockedTime The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockedTime(String lockedTime) {
             return lockedTime(Output.of(lockedTime));
         }

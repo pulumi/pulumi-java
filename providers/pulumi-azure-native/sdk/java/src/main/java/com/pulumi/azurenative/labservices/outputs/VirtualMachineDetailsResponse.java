@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class VirtualMachineDetailsResponse {
     /**
-     * Last known compute power state captured in DTL
+     * @return Last known compute power state captured in DTL
      * 
      */
     private final String lastKnownPowerState;
     /**
-     * PrivateIp address of the compute VM
+     * @return PrivateIp address of the compute VM
      * 
      */
     private final String privateIpAddress;
     /**
-     * Provisioning state of the Dtl VM
+     * @return Provisioning state of the Dtl VM
      * 
      */
     private final String provisioningState;
     /**
-     * Connection information for Windows
+     * @return Connection information for Windows
      * 
      */
     private final String rdpAuthority;
     /**
-     * Connection information for Linux
+     * @return Connection information for Linux
      * 
      */
     private final String sshAuthority;
     /**
-     * Compute VM login user name
+     * @return Compute VM login user name
      * 
      */
     private final String userName;
@@ -57,44 +57,44 @@ public final class VirtualMachineDetailsResponse {
     }
 
     /**
-     * Last known compute power state captured in DTL
+     * @return Last known compute power state captured in DTL
      * 
-    */
+     */
     public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
-     * PrivateIp address of the compute VM
+     * @return PrivateIp address of the compute VM
      * 
-    */
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
-     * Provisioning state of the Dtl VM
+     * @return Provisioning state of the Dtl VM
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Connection information for Windows
+     * @return Connection information for Windows
      * 
-    */
+     */
     public String rdpAuthority() {
         return this.rdpAuthority;
     }
     /**
-     * Connection information for Linux
+     * @return Connection information for Linux
      * 
-    */
+     */
     public String sshAuthority() {
         return this.sshAuthority;
     }
     /**
-     * Compute VM login user name
+     * @return Compute VM login user name
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

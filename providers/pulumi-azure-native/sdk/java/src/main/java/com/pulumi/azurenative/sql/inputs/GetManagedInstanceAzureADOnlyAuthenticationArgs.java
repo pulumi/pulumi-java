@@ -19,6 +19,10 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends com.p
     @Import(name="authenticationName", required=true)
     private String authenticationName;
 
+    /**
+     * @return The name of server azure active directory only authentication.
+     * 
+     */
     public String authenticationName() {
         return this.authenticationName;
     }
@@ -30,6 +34,10 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends com.p
     @Import(name="managedInstanceName", required=true)
     private String managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public String managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -41,6 +49,10 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends com.p
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends com.p
             $ = new GetManagedInstanceAzureADOnlyAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationName The name of server azure active directory only authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationName(String authenticationName) {
             $.authenticationName = authenticationName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

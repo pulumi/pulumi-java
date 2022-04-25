@@ -26,6 +26,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -37,6 +41,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionThreshold", required=true)
     private Output<BudgetActionActionThresholdArgs> actionThreshold;
 
+    /**
+     * @return The trigger threshold of the action. See Action Threshold.
+     * 
+     */
     public Output<BudgetActionActionThresholdArgs> actionThreshold() {
         return this.actionThreshold;
     }
@@ -48,6 +56,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionType", required=true)
     private Output<String> actionType;
 
+    /**
+     * @return The type of action. This defines the type of tasks that can be carried out by this action. This field also determines the format for definition. Valid values are `APPLY_IAM_POLICY`, `APPLY_SCP_POLICY`, and `RUN_SSM_DOCUMENTS`.
+     * 
+     */
     public Output<String> actionType() {
         return this.actionType;
     }
@@ -59,6 +71,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="approvalModel", required=true)
     private Output<String> approvalModel;
 
+    /**
+     * @return This specifies if the action needs manual or automatic approval. Valid values are `AUTOMATIC` and `MANUAL`.
+     * 
+     */
     public Output<String> approvalModel() {
         return this.approvalModel;
     }
@@ -70,6 +86,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="budgetName", required=true)
     private Output<String> budgetName;
 
+    /**
+     * @return The name of a budget.
+     * 
+     */
     public Output<String> budgetName() {
         return this.budgetName;
     }
@@ -81,6 +101,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
     private Output<BudgetActionDefinitionArgs> definition;
 
+    /**
+     * @return Specifies all of the type-specific parameters. See Definition.
+     * 
+     */
     public Output<BudgetActionDefinitionArgs> definition() {
         return this.definition;
     }
@@ -92,6 +116,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn", required=true)
     private Output<String> executionRoleArn;
 
+    /**
+     * @return The role passed for action execution and reversion. Roles and actions must be in the same account.
+     * 
+     */
     public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
@@ -103,6 +131,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationType", required=true)
     private Output<String> notificationType;
 
+    /**
+     * @return The type of a notification. Valid values are `ACTUAL` or `FORECASTED`.
+     * 
+     */
     public Output<String> notificationType() {
         return this.notificationType;
     }
@@ -114,6 +146,10 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscribers", required=true)
     private Output<List<BudgetActionSubscriberArgs>> subscribers;
 
+    /**
+     * @return A list of subscribers. See Subscriber.
+     * 
+     */
     public Output<List<BudgetActionSubscriberArgs>> subscribers() {
         return this.subscribers;
     }
@@ -150,87 +186,201 @@ public final class BudgetActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BudgetActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param actionThreshold The trigger threshold of the action. See Action Threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionThreshold(Output<BudgetActionActionThresholdArgs> actionThreshold) {
             $.actionThreshold = actionThreshold;
             return this;
         }
 
+        /**
+         * @param actionThreshold The trigger threshold of the action. See Action Threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionThreshold(BudgetActionActionThresholdArgs actionThreshold) {
             return actionThreshold(Output.of(actionThreshold));
         }
 
+        /**
+         * @param actionType The type of action. This defines the type of tasks that can be carried out by this action. This field also determines the format for definition. Valid values are `APPLY_IAM_POLICY`, `APPLY_SCP_POLICY`, and `RUN_SSM_DOCUMENTS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(Output<String> actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param actionType The type of action. This defines the type of tasks that can be carried out by this action. This field also determines the format for definition. Valid values are `APPLY_IAM_POLICY`, `APPLY_SCP_POLICY`, and `RUN_SSM_DOCUMENTS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             return actionType(Output.of(actionType));
         }
 
+        /**
+         * @param approvalModel This specifies if the action needs manual or automatic approval. Valid values are `AUTOMATIC` and `MANUAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalModel(Output<String> approvalModel) {
             $.approvalModel = approvalModel;
             return this;
         }
 
+        /**
+         * @param approvalModel This specifies if the action needs manual or automatic approval. Valid values are `AUTOMATIC` and `MANUAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalModel(String approvalModel) {
             return approvalModel(Output.of(approvalModel));
         }
 
+        /**
+         * @param budgetName The name of a budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetName(Output<String> budgetName) {
             $.budgetName = budgetName;
             return this;
         }
 
+        /**
+         * @param budgetName The name of a budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetName(String budgetName) {
             return budgetName(Output.of(budgetName));
         }
 
+        /**
+         * @param definition Specifies all of the type-specific parameters. See Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(Output<BudgetActionDefinitionArgs> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition Specifies all of the type-specific parameters. See Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(BudgetActionDefinitionArgs definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param executionRoleArn The role passed for action execution and reversion. Roles and actions must be in the same account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(Output<String> executionRoleArn) {
             $.executionRoleArn = executionRoleArn;
             return this;
         }
 
+        /**
+         * @param executionRoleArn The role passed for action execution and reversion. Roles and actions must be in the same account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(String executionRoleArn) {
             return executionRoleArn(Output.of(executionRoleArn));
         }
 
+        /**
+         * @param notificationType The type of a notification. Valid values are `ACTUAL` or `FORECASTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationType(Output<String> notificationType) {
             $.notificationType = notificationType;
             return this;
         }
 
+        /**
+         * @param notificationType The type of a notification. Valid values are `ACTUAL` or `FORECASTED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationType(String notificationType) {
             return notificationType(Output.of(notificationType));
         }
 
+        /**
+         * @param subscribers A list of subscribers. See Subscriber.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribers(Output<List<BudgetActionSubscriberArgs>> subscribers) {
             $.subscribers = subscribers;
             return this;
         }
 
+        /**
+         * @param subscribers A list of subscribers. See Subscriber.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribers(List<BudgetActionSubscriberArgs> subscribers) {
             return subscribers(Output.of(subscribers));
         }
 
+        /**
+         * @param subscribers A list of subscribers. See Subscriber.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribers(BudgetActionSubscriberArgs... subscribers) {
             return subscribers(List.of(subscribers));
         }

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification {
     /**
-     * The ID of the launch template. Conflicts with `name`.
+     * @return The ID of the launch template. Conflicts with `name`.
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the launch template. Conflicts with `id`.
+     * @return The name of the launch template. Conflicts with `id`.
      * 
      */
     private final @Nullable String name;
     /**
-     * Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource&#39;s attribute, e.g., `&#34;${aws_launch_template.foo.latest_version}&#34;`. It will use the default version if omitted.
+     * @return Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource&#39;s attribute, e.g., `&#34;${aws_launch_template.foo.latest_version}&#34;`. It will use the default version if omitted.
      * 
      */
     private final @Nullable String version;
@@ -38,23 +38,23 @@ public final class SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificati
     }
 
     /**
-     * The ID of the launch template. Conflicts with `name`.
+     * @return The ID of the launch template. Conflicts with `name`.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the launch template. Conflicts with `id`.
+     * @return The name of the launch template. Conflicts with `id`.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource&#39;s attribute, e.g., `&#34;${aws_launch_template.foo.latest_version}&#34;`. It will use the default version if omitted.
+     * @return Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource&#39;s attribute, e.g., `&#34;${aws_launch_template.foo.latest_version}&#34;`. It will use the default version if omitted.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

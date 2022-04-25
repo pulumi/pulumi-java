@@ -37,6 +37,10 @@ public final class FutureReservationTimeWindowArgs extends com.pulumi.resources.
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Start time of the Future Reservation. The start_time is an RFC3339 string.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -85,11 +89,23 @@ public final class FutureReservationTimeWindowArgs extends com.pulumi.resources.
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param startTime Start time of the Future Reservation. The start_time is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the Future Reservation. The start_time is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

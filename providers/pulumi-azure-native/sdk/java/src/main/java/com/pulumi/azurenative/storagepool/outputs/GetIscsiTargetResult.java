@@ -12,37 +12,37 @@ import java.util.Objects;
 @CustomType
 public final class GetIscsiTargetResult {
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * State of the operation on the resource.
+     * @return State of the operation on the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Operational status of the iSCSI target.
+     * @return Operational status of the iSCSI target.
      * 
      */
     private final String status;
     /**
-     * iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
+     * @return iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
      * 
      */
     private final String targetIqn;
     /**
-     * List of iSCSI target portal groups. Can have 1 portal group at most.
+     * @return List of iSCSI target portal groups. Can have 1 portal group at most.
      * 
      */
     private final List<TargetPortalGroupResponse> tpgs;
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
     private final String type;
@@ -66,51 +66,51 @@ public final class GetIscsiTargetResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of the operation on the resource.
+     * @return State of the operation on the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Operational status of the iSCSI target.
+     * @return Operational status of the iSCSI target.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
+     * @return iSCSI target IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:server&#34;.
      * 
-    */
+     */
     public String targetIqn() {
         return this.targetIqn;
     }
     /**
-     * List of iSCSI target portal groups. Can have 1 portal group at most.
+     * @return List of iSCSI target portal groups. Can have 1 portal group at most.
      * 
-    */
+     */
     public List<TargetPortalGroupResponse> tpgs() {
         return this.tpgs;
     }
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

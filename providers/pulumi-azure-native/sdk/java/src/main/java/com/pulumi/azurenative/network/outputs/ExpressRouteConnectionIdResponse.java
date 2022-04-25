@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ExpressRouteConnectionIdResponse {
     /**
-     * The ID of the ExpressRouteConnection.
+     * @return The ID of the ExpressRouteConnection.
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class ExpressRouteConnectionIdResponse {
     }
 
     /**
-     * The ID of the ExpressRouteConnection.
+     * @return The ID of the ExpressRouteConnection.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

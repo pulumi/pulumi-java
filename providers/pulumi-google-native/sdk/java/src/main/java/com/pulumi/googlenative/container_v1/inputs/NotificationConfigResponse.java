@@ -23,6 +23,10 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
     @Import(name="pubsub", required=true)
     private PubSubResponse pubsub;
 
+    /**
+     * @return Notification config for Pub/Sub.
+     * 
+     */
     public PubSubResponse pubsub() {
         return this.pubsub;
     }
@@ -51,6 +55,12 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
             $ = new NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsub Notification config for Pub/Sub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsub(PubSubResponse pubsub) {
             $.pubsub = pubsub;
             return this;

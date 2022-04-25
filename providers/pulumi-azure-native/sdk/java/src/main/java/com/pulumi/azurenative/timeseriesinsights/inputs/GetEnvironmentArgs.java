@@ -21,6 +21,10 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentName", required=true)
     private String environmentName;
 
+    /**
+     * @return The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     public String environmentName() {
         return this.environmentName;
     }
@@ -32,6 +36,10 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -43,6 +51,10 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param expand Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

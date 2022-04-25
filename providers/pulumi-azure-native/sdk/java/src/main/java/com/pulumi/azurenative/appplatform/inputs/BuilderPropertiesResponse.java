@@ -28,6 +28,10 @@ public final class BuilderPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="buildpackGroups")
     private @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
 
+    /**
+     * @return Builder buildpack groups.
+     * 
+     */
     public Optional<List<BuildpacksGroupPropertiesResponse>> buildpackGroups() {
         return Optional.ofNullable(this.buildpackGroups);
     }
@@ -39,6 +43,10 @@ public final class BuilderPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Builder provision status.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -50,6 +58,10 @@ public final class BuilderPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="stack")
     private @Nullable StackPropertiesResponse stack;
 
+    /**
+     * @return Builder cluster stack property.
+     * 
+     */
     public Optional<StackPropertiesResponse> stack() {
         return Optional.ofNullable(this.stack);
     }
@@ -80,20 +92,44 @@ public final class BuilderPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new BuilderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildpackGroups Builder buildpack groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpackGroups(@Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups) {
             $.buildpackGroups = buildpackGroups;
             return this;
         }
 
+        /**
+         * @param buildpackGroups Builder buildpack groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpackGroups(BuildpacksGroupPropertiesResponse... buildpackGroups) {
             return buildpackGroups(List.of(buildpackGroups));
         }
 
+        /**
+         * @param provisioningState Builder provision status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param stack Builder cluster stack property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stack(@Nullable StackPropertiesResponse stack) {
             $.stack = stack;
             return this;

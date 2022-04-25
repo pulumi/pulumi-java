@@ -19,6 +19,10 @@ public final class GetIotSecuritySolutionArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetIotSecuritySolutionArgs extends com.pulumi.resources.Invok
     @Import(name="solutionName", required=true)
     private String solutionName;
 
+    /**
+     * @return The name of the IoT Security solution.
+     * 
+     */
     public String solutionName() {
         return this.solutionName;
     }
@@ -59,11 +67,23 @@ public final class GetIotSecuritySolutionArgs extends com.pulumi.resources.Invok
             $ = new GetIotSecuritySolutionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param solutionName The name of the IoT Security solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionName(String solutionName) {
             $.solutionName = solutionName;
             return this;

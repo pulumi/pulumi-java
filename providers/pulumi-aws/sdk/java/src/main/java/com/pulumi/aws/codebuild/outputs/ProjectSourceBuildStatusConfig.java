@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProjectSourceBuildStatusConfig {
     /**
-     * Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+     * @return Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
      * 
      */
     private final @Nullable String context;
     /**
-     * Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+     * @return Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
      * 
      */
     private final @Nullable String targetUrl;
@@ -31,16 +31,16 @@ public final class ProjectSourceBuildStatusConfig {
     }
 
     /**
-     * Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+     * @return Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
      * 
-    */
+     */
     public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
-     * Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
+     * @return Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
      * 
-    */
+     */
     public Optional<String> targetUrl() {
         return Optional.ofNullable(this.targetUrl);
     }

@@ -26,6 +26,10 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="attribute", required=true)
     private String attribute;
 
+    /**
+     * @return The TrackAttribute to filter the tracks by.
+     * 
+     */
     public String attribute() {
         return this.attribute;
     }
@@ -37,6 +41,10 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="channelMapping")
     private @Nullable String channelMapping;
 
+    /**
+     * @return Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     public Optional<String> channelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
@@ -48,6 +56,10 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -59,6 +71,10 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="filterValue")
     private @Nullable String filterValue;
 
+    /**
+     * @return The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+     * 
+     */
     public Optional<String> filterValue() {
         return Optional.ofNullable(this.filterValue);
     }
@@ -71,6 +87,11 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -103,26 +124,57 @@ public final class SelectAudioTrackByAttributeResponse extends com.pulumi.resour
             $ = new SelectAudioTrackByAttributeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attribute The TrackAttribute to filter the tracks by.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(String attribute) {
             $.attribute = attribute;
             return this;
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(@Nullable String channelMapping) {
             $.channelMapping = channelMapping;
             return this;
         }
 
+        /**
+         * @param filter The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filterValue The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterValue(@Nullable String filterValue) {
             $.filterValue = filterValue;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

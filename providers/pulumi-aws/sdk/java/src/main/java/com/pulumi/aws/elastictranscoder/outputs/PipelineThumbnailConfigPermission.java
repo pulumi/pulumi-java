@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PipelineThumbnailConfigPermission {
     /**
-     * The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
+     * @return The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
      * 
      */
     private final @Nullable List<String> accesses;
     /**
-     * The AWS user or group that you want to have access to thumbnail files.
+     * @return The AWS user or group that you want to have access to thumbnail files.
      * 
      */
     private final @Nullable String grantee;
     /**
-     * Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
+     * @return Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
      * 
      */
     private final @Nullable String granteeType;
@@ -39,23 +39,23 @@ public final class PipelineThumbnailConfigPermission {
     }
 
     /**
-     * The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
+     * @return The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
      * 
-    */
+     */
     public List<String> accesses() {
         return this.accesses == null ? List.of() : this.accesses;
     }
     /**
-     * The AWS user or group that you want to have access to thumbnail files.
+     * @return The AWS user or group that you want to have access to thumbnail files.
      * 
-    */
+     */
     public Optional<String> grantee() {
         return Optional.ofNullable(this.grantee);
     }
     /**
-     * Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
+     * @return Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
      * 
-    */
+     */
     public Optional<String> granteeType() {
         return Optional.ofNullable(this.granteeType);
     }

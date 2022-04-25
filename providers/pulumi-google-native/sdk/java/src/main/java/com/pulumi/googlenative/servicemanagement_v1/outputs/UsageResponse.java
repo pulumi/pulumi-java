@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class UsageResponse {
     /**
-     * The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
+     * @return The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
      * 
      */
     private final String producerNotificationChannel;
     /**
-     * Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+     * @return Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
      * 
      */
     private final List<String> requirements;
     /**
-     * A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * @return A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
      */
     private final List<UsageRuleResponse> rules;
@@ -38,23 +38,23 @@ public final class UsageResponse {
     }
 
     /**
-     * The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
+     * @return The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
      * 
-    */
+     */
     public String producerNotificationChannel() {
         return this.producerNotificationChannel;
     }
     /**
-     * Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
+     * @return Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example &#39;serviceusage.googleapis.com/billing-enabled&#39;. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include &#34;serviceusage.googleapis.com/tos/cloud&#34;. Other Google APIs should include &#34;serviceusage.googleapis.com/tos/universal&#34;. Additional ToS can be included based on the business needs.
      * 
-    */
+     */
     public List<String> requirements() {
         return this.requirements;
     }
     /**
-     * A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * @return A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
      * 
-    */
+     */
     public List<UsageRuleResponse> rules() {
         return this.rules;
     }

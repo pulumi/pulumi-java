@@ -16,67 +16,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRedisEnterpriseResult {
     /**
-     * DNS name of the cluster endpoint
+     * @return DNS name of the cluster endpoint
      * 
      */
     private final String hostName;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
+     * @return The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
      * 
      */
     private final @Nullable String minimumTlsVersion;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * List of private endpoint connections associated with the specified RedisEnterprise cluster
+     * @return List of private endpoint connections associated with the specified RedisEnterprise cluster
      * 
      */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * Current provisioning status of the cluster
+     * @return Current provisioning status of the cluster
      * 
      */
     private final String provisioningState;
     /**
-     * Version of redis the cluster supports, e.g. &#39;6&#39;
+     * @return Version of redis the cluster supports, e.g. &#39;6&#39;
      * 
      */
     private final String redisVersion;
     /**
-     * Current resource status of the cluster
+     * @return Current resource status of the cluster
      * 
      */
     private final String resourceState;
     /**
-     * The SKU to create, which affects price, performance, and features.
+     * @return The SKU to create, which affects price, performance, and features.
      * 
      */
     private final EnterpriseSkuResponse sku;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * The Availability Zones where this cluster will be deployed.
+     * @return The Availability Zones where this cluster will be deployed.
      * 
      */
     private final @Nullable List<String> zones;
@@ -112,93 +112,93 @@ public final class GetRedisEnterpriseResult {
     }
 
     /**
-     * DNS name of the cluster endpoint
+     * @return DNS name of the cluster endpoint
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
+     * @return The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
      * 
-    */
+     */
     public Optional<String> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of private endpoint connections associated with the specified RedisEnterprise cluster
+     * @return List of private endpoint connections associated with the specified RedisEnterprise cluster
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Current provisioning status of the cluster
+     * @return Current provisioning status of the cluster
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Version of redis the cluster supports, e.g. &#39;6&#39;
+     * @return Version of redis the cluster supports, e.g. &#39;6&#39;
      * 
-    */
+     */
     public String redisVersion() {
         return this.redisVersion;
     }
     /**
-     * Current resource status of the cluster
+     * @return Current resource status of the cluster
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The SKU to create, which affects price, performance, and features.
+     * @return The SKU to create, which affects price, performance, and features.
      * 
-    */
+     */
     public EnterpriseSkuResponse sku() {
         return this.sku;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The Availability Zones where this cluster will be deployed.
+     * @return The Availability Zones where this cluster will be deployed.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

@@ -22,6 +22,10 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends com.pulumi.re
     @Import(name="destIpRanges", required=true)
     private List<String> destIpRanges;
 
+    /**
+     * @return CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+     * 
+     */
     public List<String> destIpRanges() {
         return this.destIpRanges;
     }
@@ -33,6 +37,10 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends com.pulumi.re
     @Import(name="destPorts", required=true)
     private List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts;
 
+    /**
+     * @return Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+     * 
+     */
     public List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts() {
         return this.destPorts;
     }
@@ -44,6 +52,10 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends com.pulumi.re
     @Import(name="layer4Configs", required=true)
     private List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs;
 
+    /**
+     * @return Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+     * 
+     */
     public List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
     }
@@ -55,6 +67,10 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends com.pulumi.re
     @Import(name="srcIpRanges", required=true)
     private List<String> srcIpRanges;
 
+    /**
+     * @return CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+     * 
+     */
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
@@ -86,38 +102,86 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends com.pulumi.re
             $ = new SecurityPolicyRuleMatcherConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(List<String> destIpRanges) {
             $.destIpRanges = destIpRanges;
             return this;
         }
 
+        /**
+         * @param destIpRanges CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
 
+        /**
+         * @param destPorts Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destPorts(List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts) {
             $.destPorts = destPorts;
             return this;
         }
 
+        /**
+         * @param destPorts Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destPorts(SecurityPolicyRuleMatcherConfigDestinationPortResponse... destPorts) {
             return destPorts(List.of(destPorts));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs) {
             $.layer4Configs = layer4Configs;
             return this;
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(SecurityPolicyRuleMatcherConfigLayer4ConfigResponse... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(List<String> srcIpRanges) {
             $.srcIpRanges = srcIpRanges;
             return this;
         }
 
+        /**
+         * @param srcIpRanges CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }

@@ -24,6 +24,10 @@ public final class GetLocalGatewayRouteTablesArgs extends com.pulumi.resources.I
     @Import(name="filters")
     private @Nullable List<GetLocalGatewayRouteTablesFilter> filters;
 
+    /**
+     * @return Custom filter block as described below.
+     * 
+     */
     public Optional<List<GetLocalGatewayRouteTablesFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -36,6 +40,11 @@ public final class GetLocalGatewayRouteTablesArgs extends com.pulumi.resources.I
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A mapping of tags, each pair of which must exactly match
+     * a pair on the desired local gateway route table.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -65,15 +74,34 @@ public final class GetLocalGatewayRouteTablesArgs extends com.pulumi.resources.I
             $ = new GetLocalGatewayRouteTablesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetLocalGatewayRouteTablesFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetLocalGatewayRouteTablesFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param tags A mapping of tags, each pair of which must exactly match
+         * a pair on the desired local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

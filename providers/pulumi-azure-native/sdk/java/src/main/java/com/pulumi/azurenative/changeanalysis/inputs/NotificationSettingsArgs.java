@@ -29,6 +29,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="activationState")
     private @Nullable Output<Either<String,NotificationsState>> activationState;
 
+    /**
+     * @return The state of notifications feature.
+     * 
+     */
     public Optional<Output<Either<String,NotificationsState>>> activationState() {
         return Optional.ofNullable(this.activationState);
     }
@@ -40,6 +44,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="azureMonitorWorkspaceProperties")
     private @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
 
+    /**
+     * @return Configuration properties of an Azure Monitor workspace that receives change notifications.
+     * 
+     */
     public Optional<Output<AzureMonitorWorkspacePropertiesArgs>> azureMonitorWorkspaceProperties() {
         return Optional.ofNullable(this.azureMonitorWorkspaceProperties);
     }
@@ -69,28 +77,64 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
             $ = new NotificationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activationState The state of notifications feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationState(@Nullable Output<Either<String,NotificationsState>> activationState) {
             $.activationState = activationState;
             return this;
         }
 
+        /**
+         * @param activationState The state of notifications feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationState(Either<String,NotificationsState> activationState) {
             return activationState(Output.of(activationState));
         }
 
+        /**
+         * @param activationState The state of notifications feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationState(String activationState) {
             return activationState(Either.ofLeft(activationState));
         }
 
+        /**
+         * @param activationState The state of notifications feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationState(NotificationsState activationState) {
             return activationState(Either.ofRight(activationState));
         }
 
+        /**
+         * @param azureMonitorWorkspaceProperties Configuration properties of an Azure Monitor workspace that receives change notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureMonitorWorkspaceProperties(@Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
             $.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
         }
 
+        /**
+         * @param azureMonitorWorkspaceProperties Configuration properties of an Azure Monitor workspace that receives change notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureMonitorWorkspaceProperties(AzureMonitorWorkspacePropertiesArgs azureMonitorWorkspaceProperties) {
             return azureMonitorWorkspaceProperties(Output.of(azureMonitorWorkspaceProperties));
         }

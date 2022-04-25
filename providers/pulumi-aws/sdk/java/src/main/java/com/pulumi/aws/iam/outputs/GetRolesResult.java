@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRolesResult {
     /**
-     * Set of ARNs of the matched IAM roles.
+     * @return Set of ARNs of the matched IAM roles.
      * 
      */
     private final List<String> arns;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final @Nullable String nameRegex;
     /**
-     * Set of Names of the matched IAM roles.
+     * @return Set of Names of the matched IAM roles.
      * 
      */
     private final List<String> names;
@@ -45,16 +45,16 @@ public final class GetRolesResult {
     }
 
     /**
-     * Set of ARNs of the matched IAM roles.
+     * @return Set of ARNs of the matched IAM roles.
      * 
-    */
+     */
     public List<String> arns() {
         return this.arns;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -62,9 +62,9 @@ public final class GetRolesResult {
         return Optional.ofNullable(this.nameRegex);
     }
     /**
-     * Set of Names of the matched IAM roles.
+     * @return Set of Names of the matched IAM roles.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig {
     /**
-     * - The match status to assign to the web request if the request doesn&#39;t have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+     * @return - The match status to assign to the web request if the request doesn&#39;t have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
      * 
      */
     private final String fallbackBehavior;
     /**
-     * - The name of the HTTP header to use for the IP address.
+     * @return - The name of the HTTP header to use for the IP address.
      * 
      */
     private final String headerName;
@@ -29,16 +29,16 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatementStateme
     }
 
     /**
-     * - The match status to assign to the web request if the request doesn&#39;t have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+     * @return - The match status to assign to the web request if the request doesn&#39;t have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
      * 
-    */
+     */
     public String fallbackBehavior() {
         return this.fallbackBehavior;
     }
     /**
-     * - The name of the HTTP header to use for the IP address.
+     * @return - The name of the HTTP header to use for the IP address.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }

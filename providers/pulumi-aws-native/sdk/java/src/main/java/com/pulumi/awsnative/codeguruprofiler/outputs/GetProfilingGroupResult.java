@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProfilingGroupResult {
     /**
-     * The agent permissions attached to this profiling group.
+     * @return The agent permissions attached to this profiling group.
      * 
      */
     private final @Nullable AgentPermissionsProperties agentPermissions;
     /**
-     * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
+     * @return Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
      * 
      */
     private final @Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration;
     /**
-     * The Amazon Resource Name (ARN) of the specified profiling group.
+     * @return The Amazon Resource Name (ARN) of the specified profiling group.
      * 
      */
     private final @Nullable String arn;
     /**
-     * The tags associated with a profiling group.
+     * @return The tags associated with a profiling group.
      * 
      */
     private final @Nullable List<ProfilingGroupTag> tags;
@@ -49,30 +49,30 @@ public final class GetProfilingGroupResult {
     }
 
     /**
-     * The agent permissions attached to this profiling group.
+     * @return The agent permissions attached to this profiling group.
      * 
-    */
+     */
     public Optional<AgentPermissionsProperties> agentPermissions() {
         return Optional.ofNullable(this.agentPermissions);
     }
     /**
-     * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
+     * @return Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
      * 
-    */
+     */
     public List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration() {
         return this.anomalyDetectionNotificationConfiguration == null ? List.of() : this.anomalyDetectionNotificationConfiguration;
     }
     /**
-     * The Amazon Resource Name (ARN) of the specified profiling group.
+     * @return The Amazon Resource Name (ARN) of the specified profiling group.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The tags associated with a profiling group.
+     * @return The tags associated with a profiling group.
      * 
-    */
+     */
     public List<ProfilingGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

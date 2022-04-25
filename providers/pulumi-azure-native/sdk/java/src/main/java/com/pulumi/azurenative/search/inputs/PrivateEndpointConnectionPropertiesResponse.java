@@ -26,6 +26,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="privateEndpoint")
     private @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint;
 
+    /**
+     * @return The private endpoint resource from Microsoft.Network provider.
+     * 
+     */
     public Optional<PrivateEndpointConnectionPropertiesResponsePrivateEndpoint> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -37,6 +41,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
 
+    /**
+     * @return Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
+     * 
+     */
     public Optional<PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -66,11 +74,23 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
             $ = new PrivateEndpointConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint The private endpoint resource from Microsoft.Network provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;

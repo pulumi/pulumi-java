@@ -27,6 +27,10 @@ public final class WebACLJsonMatchPattern extends com.pulumi.resources.InvokeArg
     @Import(name="all")
     private @Nullable Object all;
 
+    /**
+     * @return Inspect all parts of the web request&#39;s JSON body.
+     * 
+     */
     public Optional<Object> all() {
         return Optional.ofNullable(this.all);
     }
@@ -63,6 +67,12 @@ public final class WebACLJsonMatchPattern extends com.pulumi.resources.InvokeArg
             $ = new WebACLJsonMatchPattern(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param all Inspect all parts of the web request&#39;s JSON body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(@Nullable Object all) {
             $.all = all;
             return this;

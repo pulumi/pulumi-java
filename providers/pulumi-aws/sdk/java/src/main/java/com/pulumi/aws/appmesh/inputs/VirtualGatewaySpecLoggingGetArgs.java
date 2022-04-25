@@ -22,6 +22,10 @@ public final class VirtualGatewaySpecLoggingGetArgs extends com.pulumi.resources
     @Import(name="accessLog")
     private @Nullable Output<VirtualGatewaySpecLoggingAccessLogGetArgs> accessLog;
 
+    /**
+     * @return The access log configuration for a virtual gateway.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecLoggingAccessLogGetArgs>> accessLog() {
         return Optional.ofNullable(this.accessLog);
     }
@@ -50,11 +54,23 @@ public final class VirtualGatewaySpecLoggingGetArgs extends com.pulumi.resources
             $ = new VirtualGatewaySpecLoggingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLog The access log configuration for a virtual gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLog(@Nullable Output<VirtualGatewaySpecLoggingAccessLogGetArgs> accessLog) {
             $.accessLog = accessLog;
             return this;
         }
 
+        /**
+         * @param accessLog The access log configuration for a virtual gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLog(VirtualGatewaySpecLoggingAccessLogGetArgs accessLog) {
             return accessLog(Output.of(accessLog));
         }

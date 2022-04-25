@@ -26,6 +26,10 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="password", required=true)
     private SecureStringResponse password;
 
+    /**
+     * @return The password of data source access.
+     * 
+     */
     public SecureStringResponse password() {
         return this.password;
     }
@@ -37,6 +41,10 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetName", required=true)
     private Object targetName;
 
+    /**
+     * @return The server name of data source access.
+     * 
+     */
     public Object targetName() {
         return this.targetName;
     }
@@ -49,6 +57,11 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of custom setup.
+     * Expected value is &#39;CmdkeySetup&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -60,6 +73,10 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
     private Object userName;
 
+    /**
+     * @return The user name of data source access.
+     * 
+     */
     public Object userName() {
         return this.userName;
     }
@@ -91,21 +108,46 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CmdkeySetupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param targetName The server name of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetName(Object targetName) {
             $.targetName = targetName;
             return this;
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;CmdkeySetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName The user name of data source access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Object userName) {
             $.userName = userName;
             return this;

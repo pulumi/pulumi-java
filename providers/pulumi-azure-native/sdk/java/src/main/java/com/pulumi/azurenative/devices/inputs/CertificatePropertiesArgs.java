@@ -26,6 +26,10 @@ public final class CertificatePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
+    /**
+     * @return The certificate content
+     * 
+     */
     public Optional<Output<String>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -54,11 +58,23 @@ public final class CertificatePropertiesArgs extends com.pulumi.resources.Resour
             $ = new CertificatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate The certificate content
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate The certificate content
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }

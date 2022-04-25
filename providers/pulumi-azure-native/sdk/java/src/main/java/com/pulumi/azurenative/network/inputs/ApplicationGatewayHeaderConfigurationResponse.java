@@ -25,6 +25,10 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends com.pul
     @Import(name="headerName")
     private @Nullable String headerName;
 
+    /**
+     * @return Header name of the header configuration.
+     * 
+     */
     public Optional<String> headerName() {
         return Optional.ofNullable(this.headerName);
     }
@@ -36,6 +40,10 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends com.pul
     @Import(name="headerValue")
     private @Nullable String headerValue;
 
+    /**
+     * @return Header value of the header configuration.
+     * 
+     */
     public Optional<String> headerValue() {
         return Optional.ofNullable(this.headerValue);
     }
@@ -65,11 +73,23 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends com.pul
             $ = new ApplicationGatewayHeaderConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName Header name of the header configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(@Nullable String headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerValue Header value of the header configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerValue(@Nullable String headerValue) {
             $.headerValue = headerValue;
             return this;

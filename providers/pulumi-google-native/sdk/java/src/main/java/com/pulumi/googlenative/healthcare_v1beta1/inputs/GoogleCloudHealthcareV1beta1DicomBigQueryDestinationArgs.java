@@ -28,6 +28,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     @Import(name="force")
     private @Nullable Output<Boolean> force;
 
+    /**
+     * @return Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+     * 
+     */
     public Optional<Output<Boolean>> force() {
         return Optional.ofNullable(this.force);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     @Import(name="tableUri")
     private @Nullable Output<String> tableUri;
 
+    /**
+     * @return BigQuery URI to a table, up to 2000 characters long, in the format `bq://projectId.bqDatasetId.tableId`
+     * 
+     */
     public Optional<Output<String>> tableUri() {
         return Optional.ofNullable(this.tableUri);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     @Import(name="writeDisposition")
     private @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
 
+    /**
+     * @return Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.
+     * 
+     */
     public Optional<Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition>> writeDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
             $ = new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param force Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(@Nullable Output<Boolean> force) {
             $.force = force;
             return this;
         }
 
+        /**
+         * @param force Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(Boolean force) {
             return force(Output.of(force));
         }
 
+        /**
+         * @param tableUri BigQuery URI to a table, up to 2000 characters long, in the format `bq://projectId.bqDatasetId.tableId`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableUri(@Nullable Output<String> tableUri) {
             $.tableUri = tableUri;
             return this;
         }
 
+        /**
+         * @param tableUri BigQuery URI to a table, up to 2000 characters long, in the format `bq://projectId.bqDatasetId.tableId`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableUri(String tableUri) {
             return tableUri(Output.of(tableUri));
         }
 
+        /**
+         * @param writeDisposition Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
             $.writeDisposition = writeDisposition;
             return this;
         }
 
+        /**
+         * @param writeDisposition Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeDisposition(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition writeDisposition) {
             return writeDisposition(Output.of(writeDisposition));
         }

@@ -25,6 +25,10 @@ public final class OSDiskImageEncryptionResponse extends com.pulumi.resources.In
     @Import(name="diskEncryptionSetId")
     private @Nullable String diskEncryptionSetId;
 
+    /**
+     * @return A relative URI containing the resource ID of the disk encryption set.
+     * 
+     */
     public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
@@ -53,6 +57,12 @@ public final class OSDiskImageEncryptionResponse extends com.pulumi.resources.In
             $ = new OSDiskImageEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSetId A relative URI containing the resource ID of the disk encryption set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             $.diskEncryptionSetId = diskEncryptionSetId;
             return this;

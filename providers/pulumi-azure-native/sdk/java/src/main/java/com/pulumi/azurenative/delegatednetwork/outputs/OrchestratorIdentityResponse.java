@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrchestratorIdentityResponse {
     /**
-     * The principal id of the system assigned identity which is used by orchestrator.
+     * @return The principal id of the system assigned identity which is used by orchestrator.
      * 
      */
     private final String principalId;
     /**
-     * The tenant id of the system assigned identity which is used by orchestrator.
+     * @return The tenant id of the system assigned identity which is used by orchestrator.
      * 
      */
     private final String tenantId;
     /**
-     * The type of identity used for orchestrator cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity orchestrator clusters
+     * @return The type of identity used for orchestrator cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity orchestrator clusters
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class OrchestratorIdentityResponse {
     }
 
     /**
-     * The principal id of the system assigned identity which is used by orchestrator.
+     * @return The principal id of the system assigned identity which is used by orchestrator.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id of the system assigned identity which is used by orchestrator.
+     * @return The tenant id of the system assigned identity which is used by orchestrator.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for orchestrator cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity orchestrator clusters
+     * @return The type of identity used for orchestrator cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity orchestrator clusters
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

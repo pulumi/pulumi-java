@@ -19,6 +19,10 @@ public final class GetCapacityDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="dedicatedCapacityName", required=true)
     private String dedicatedCapacityName;
 
+    /**
+     * @return The name of the dedicated capacity. It must be a minimum of 3 characters, and a maximum of 63.
+     * 
+     */
     public String dedicatedCapacityName() {
         return this.dedicatedCapacityName;
     }
@@ -30,6 +34,10 @@ public final class GetCapacityDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetCapacityDetailsArgs extends com.pulumi.resources.InvokeArg
             $ = new GetCapacityDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dedicatedCapacityName The name of the dedicated capacity. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedCapacityName(String dedicatedCapacityName) {
             $.dedicatedCapacityName = dedicatedCapacityName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

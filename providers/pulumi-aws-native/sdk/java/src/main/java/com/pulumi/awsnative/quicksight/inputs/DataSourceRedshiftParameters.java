@@ -29,6 +29,11 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
     @Import(name="clusterId")
     private @Nullable String clusterId;
 
+    /**
+     * @return &lt;p&gt;Cluster ID. This field can be blank if the &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are
+     *             provided.&lt;/p&gt;
+     * 
+     */
     public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -40,6 +45,10 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
     @Import(name="database", required=true)
     private String database;
 
+    /**
+     * @return &lt;p&gt;Database.&lt;/p&gt;
+     * 
+     */
     public String database() {
         return this.database;
     }
@@ -51,6 +60,10 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
     @Import(name="host")
     private @Nullable String host;
 
+    /**
+     * @return &lt;p&gt;Host. This field can be blank if &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+     * 
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
@@ -62,6 +75,10 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
     @Import(name="port")
     private @Nullable Double port;
 
+    /**
+     * @return &lt;p&gt;Port. This field can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+     * 
+     */
     public Optional<Double> port() {
         return Optional.ofNullable(this.port);
     }
@@ -93,21 +110,46 @@ public final class DataSourceRedshiftParameters extends com.pulumi.resources.Inv
             $ = new DataSourceRedshiftParameters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId &lt;p&gt;Cluster ID. This field can be blank if the &lt;code&gt;Host&lt;/code&gt; and &lt;code&gt;Port&lt;/code&gt; are
+         *             provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable String clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param host &lt;p&gt;Host. This field can be blank if &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param port &lt;p&gt;Port. This field can be blank if the &lt;code&gt;ClusterId&lt;/code&gt; is provided.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Double port) {
             $.port = port;
             return this;

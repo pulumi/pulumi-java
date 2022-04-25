@@ -22,6 +22,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="amiTags", required=true)
     private Map<String,String> amiTags;
 
+    /**
+     * @return Key-value map of tags to apply to distributed AMI.
+     * 
+     */
     public Map<String,String> amiTags() {
         return this.amiTags;
     }
@@ -33,6 +37,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description to apply to distributed AMI.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -44,6 +52,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="kmsKeyId", required=true)
     private String kmsKeyId;
 
+    /**
+     * @return Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
+     * 
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
@@ -55,6 +67,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="launchPermissions", required=true)
     private List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions;
 
+    /**
+     * @return Nested list of EC2 launch permissions.
+     * 
+     */
     public List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions() {
         return this.launchPermissions;
     }
@@ -66,6 +82,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the distribution configuration.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -77,6 +97,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="targetAccountIds", required=true)
     private List<String> targetAccountIds;
 
+    /**
+     * @return Set of target AWS Account identifiers.
+     * 
+     */
     public List<String> targetAccountIds() {
         return this.targetAccountIds;
     }
@@ -110,40 +134,88 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
             $ = new GetDistributionConfigurationDistributionAmiDistributionConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amiTags Key-value map of tags to apply to distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiTags(Map<String,String> amiTags) {
             $.amiTags = amiTags;
             return this;
         }
 
+        /**
+         * @param description Description to apply to distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param kmsKeyId Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param launchPermissions Nested list of EC2 launch permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchPermissions(List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions) {
             $.launchPermissions = launchPermissions;
             return this;
         }
 
+        /**
+         * @param launchPermissions Nested list of EC2 launch permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchPermissions(GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission... launchPermissions) {
             return launchPermissions(List.of(launchPermissions));
         }
 
+        /**
+         * @param name Name of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param targetAccountIds Set of target AWS Account identifiers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccountIds(List<String> targetAccountIds) {
             $.targetAccountIds = targetAccountIds;
             return this;
         }
 
+        /**
+         * @param targetAccountIds Set of target AWS Account identifiers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccountIds(String... targetAccountIds) {
             return targetAccountIds(List.of(targetAccountIds));
         }

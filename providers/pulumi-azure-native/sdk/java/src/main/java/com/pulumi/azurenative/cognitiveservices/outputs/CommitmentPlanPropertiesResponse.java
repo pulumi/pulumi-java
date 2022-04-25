@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CommitmentPlanPropertiesResponse {
     /**
-     * AutoRenew commitment plan.
+     * @return AutoRenew commitment plan.
      * 
      */
     private final @Nullable Boolean autoRenew;
     /**
-     * Cognitive Services account commitment period.
+     * @return Cognitive Services account commitment period.
      * 
      */
     private final @Nullable CommitmentPeriodResponse current;
     /**
-     * Account hosting model.
+     * @return Account hosting model.
      * 
      */
     private final @Nullable String hostingModel;
     /**
-     * Cognitive Services account commitment period.
+     * @return Cognitive Services account commitment period.
      * 
      */
     private final CommitmentPeriodResponse last;
     /**
-     * Cognitive Services account commitment period.
+     * @return Cognitive Services account commitment period.
      * 
      */
     private final @Nullable CommitmentPeriodResponse next;
     /**
-     * Commitment plan type.
+     * @return Commitment plan type.
      * 
      */
     private final @Nullable String planType;
@@ -61,44 +61,44 @@ public final class CommitmentPlanPropertiesResponse {
     }
 
     /**
-     * AutoRenew commitment plan.
+     * @return AutoRenew commitment plan.
      * 
-    */
+     */
     public Optional<Boolean> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
-     * Cognitive Services account commitment period.
+     * @return Cognitive Services account commitment period.
      * 
-    */
+     */
     public Optional<CommitmentPeriodResponse> current() {
         return Optional.ofNullable(this.current);
     }
     /**
-     * Account hosting model.
+     * @return Account hosting model.
      * 
-    */
+     */
     public Optional<String> hostingModel() {
         return Optional.ofNullable(this.hostingModel);
     }
     /**
-     * Cognitive Services account commitment period.
+     * @return Cognitive Services account commitment period.
      * 
-    */
+     */
     public CommitmentPeriodResponse last() {
         return this.last;
     }
     /**
-     * Cognitive Services account commitment period.
+     * @return Cognitive Services account commitment period.
      * 
-    */
+     */
     public Optional<CommitmentPeriodResponse> next() {
         return Optional.ofNullable(this.next);
     }
     /**
-     * Commitment plan type.
+     * @return Commitment plan type.
      * 
-    */
+     */
     public Optional<String> planType() {
         return Optional.ofNullable(this.planType);
     }

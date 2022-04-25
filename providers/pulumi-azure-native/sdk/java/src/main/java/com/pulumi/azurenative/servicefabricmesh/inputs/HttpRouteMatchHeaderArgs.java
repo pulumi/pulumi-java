@@ -28,6 +28,10 @@ public final class HttpRouteMatchHeaderArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of header to match in request.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -39,6 +43,10 @@ public final class HttpRouteMatchHeaderArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<Either<String,HeaderMatchType>> type;
 
+    /**
+     * @return how to match header value
+     * 
+     */
     public Optional<Output<Either<String,HeaderMatchType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -50,6 +58,10 @@ public final class HttpRouteMatchHeaderArgs extends com.pulumi.resources.Resourc
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Value of header to match in request.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -80,37 +92,85 @@ public final class HttpRouteMatchHeaderArgs extends com.pulumi.resources.Resourc
             $ = new HttpRouteMatchHeaderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of header to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of header to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type how to match header value
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,HeaderMatchType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type how to match header value
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,HeaderMatchType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type how to match header value
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type how to match header value
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(HeaderMatchType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param value Value of header to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of header to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

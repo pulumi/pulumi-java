@@ -22,6 +22,10 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="controlStatus", required=true)
     private Output<String> controlStatus;
 
+    /**
+     * @return The control status could be `ENABLED` or `DISABLED`. You have to specify `disabled_reason` argument for `DISABLED` control status.
+     * 
+     */
     public Output<String> controlStatus() {
         return this.controlStatus;
     }
@@ -33,6 +37,10 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disabledReason")
     private @Nullable Output<String> disabledReason;
 
+    /**
+     * @return A description of the reason why you are disabling a security standard control. If you specify this attribute, `control_status` will be set to `DISABLED` automatically.
+     * 
+     */
     public Optional<Output<String>> disabledReason() {
         return Optional.ofNullable(this.disabledReason);
     }
@@ -44,6 +52,10 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="standardsControlArn", required=true)
     private Output<String> standardsControlArn;
 
+    /**
+     * @return The standards control ARN.
+     * 
+     */
     public Output<String> standardsControlArn() {
         return this.standardsControlArn;
     }
@@ -74,29 +86,65 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
             $ = new StandardsControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controlStatus The control status could be `ENABLED` or `DISABLED`. You have to specify `disabled_reason` argument for `DISABLED` control status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlStatus(Output<String> controlStatus) {
             $.controlStatus = controlStatus;
             return this;
         }
 
+        /**
+         * @param controlStatus The control status could be `ENABLED` or `DISABLED`. You have to specify `disabled_reason` argument for `DISABLED` control status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlStatus(String controlStatus) {
             return controlStatus(Output.of(controlStatus));
         }
 
+        /**
+         * @param disabledReason A description of the reason why you are disabling a security standard control. If you specify this attribute, `control_status` will be set to `DISABLED` automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
             $.disabledReason = disabledReason;
             return this;
         }
 
+        /**
+         * @param disabledReason A description of the reason why you are disabling a security standard control. If you specify this attribute, `control_status` will be set to `DISABLED` automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledReason(String disabledReason) {
             return disabledReason(Output.of(disabledReason));
         }
 
+        /**
+         * @param standardsControlArn The standards control ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardsControlArn(Output<String> standardsControlArn) {
             $.standardsControlArn = standardsControlArn;
             return this;
         }
 
+        /**
+         * @param standardsControlArn The standards control ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardsControlArn(String standardsControlArn) {
             return standardsControlArn(Output.of(standardsControlArn));
         }

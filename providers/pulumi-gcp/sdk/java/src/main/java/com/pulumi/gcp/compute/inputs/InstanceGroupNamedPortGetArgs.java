@@ -21,6 +21,10 @@ public final class InstanceGroupNamedPortGetArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name which the port will be mapped to.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class InstanceGroupNamedPortGetArgs extends com.pulumi.resources.Re
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port number to map the name to.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -61,20 +69,44 @@ public final class InstanceGroupNamedPortGetArgs extends com.pulumi.resources.Re
             $ = new InstanceGroupNamedPortGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name which the port will be mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name which the port will be mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port The port number to map the name to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number to map the name to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

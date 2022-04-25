@@ -24,6 +24,10 @@ public final class PySparkBatchResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="archiveUris", required=true)
     private List<String> archiveUris;
 
+    /**
+     * @return Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     * 
+     */
     public List<String> archiveUris() {
         return this.archiveUris;
     }
@@ -35,6 +39,10 @@ public final class PySparkBatchResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="args", required=true)
     private List<String> args;
 
+    /**
+     * @return Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
+     * 
+     */
     public List<String> args() {
         return this.args;
     }
@@ -46,6 +54,10 @@ public final class PySparkBatchResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fileUris", required=true)
     private List<String> fileUris;
 
+    /**
+     * @return Optional. HCFS URIs of files to be placed in the working directory of each executor.
+     * 
+     */
     public List<String> fileUris() {
         return this.fileUris;
     }
@@ -57,6 +69,10 @@ public final class PySparkBatchResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="jarFileUris", required=true)
     private List<String> jarFileUris;
 
+    /**
+     * @return Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
+     * 
+     */
     public List<String> jarFileUris() {
         return this.jarFileUris;
     }
@@ -68,6 +84,10 @@ public final class PySparkBatchResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="mainPythonFileUri", required=true)
     private String mainPythonFileUri;
 
+    /**
+     * @return The HCFS URI of the main Python file to use as the Spark driver. Must be a .py file.
+     * 
+     */
     public String mainPythonFileUri() {
         return this.mainPythonFileUri;
     }
@@ -79,6 +99,10 @@ public final class PySparkBatchResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="pythonFileUris", required=true)
     private List<String> pythonFileUris;
 
+    /**
+     * @return Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+     * 
+     */
     public List<String> pythonFileUris() {
         return this.pythonFileUris;
     }
@@ -112,52 +136,118 @@ public final class PySparkBatchResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PySparkBatchResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(List<String> archiveUris) {
             $.archiveUris = archiveUris;
             return this;
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(List<String> fileUris) {
             $.fileUris = fileUris;
             return this;
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(List<String> jarFileUris) {
             $.jarFileUris = jarFileUris;
             return this;
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
 
+        /**
+         * @param mainPythonFileUri The HCFS URI of the main Python file to use as the Spark driver. Must be a .py file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPythonFileUri(String mainPythonFileUri) {
             $.mainPythonFileUri = mainPythonFileUri;
             return this;
         }
 
+        /**
+         * @param pythonFileUris Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFileUris(List<String> pythonFileUris) {
             $.pythonFileUris = pythonFileUris;
             return this;
         }
 
+        /**
+         * @param pythonFileUris Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFileUris(String... pythonFileUris) {
             return pythonFileUris(List.of(pythonFileUris));
         }

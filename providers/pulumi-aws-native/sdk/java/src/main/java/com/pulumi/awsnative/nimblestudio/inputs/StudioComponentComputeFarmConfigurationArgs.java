@@ -26,6 +26,10 @@ public final class StudioComponentComputeFarmConfigurationArgs extends com.pulum
     @Import(name="activeDirectoryUser")
     private @Nullable Output<String> activeDirectoryUser;
 
+    /**
+     * @return &lt;p&gt;The name of an Active Directory user that is used on ComputeFarm worker instances.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> activeDirectoryUser() {
         return Optional.ofNullable(this.activeDirectoryUser);
     }
@@ -37,6 +41,10 @@ public final class StudioComponentComputeFarmConfigurationArgs extends com.pulum
     @Import(name="endpoint")
     private @Nullable Output<String> endpoint;
 
+    /**
+     * @return &lt;p&gt;The endpoint of the ComputeFarm that is accessed by the studio component resource.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -66,20 +74,44 @@ public final class StudioComponentComputeFarmConfigurationArgs extends com.pulum
             $ = new StudioComponentComputeFarmConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDirectoryUser &lt;p&gt;The name of an Active Directory user that is used on ComputeFarm worker instances.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectoryUser(@Nullable Output<String> activeDirectoryUser) {
             $.activeDirectoryUser = activeDirectoryUser;
             return this;
         }
 
+        /**
+         * @param activeDirectoryUser &lt;p&gt;The name of an Active Directory user that is used on ComputeFarm worker instances.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectoryUser(String activeDirectoryUser) {
             return activeDirectoryUser(Output.of(activeDirectoryUser));
         }
 
+        /**
+         * @param endpoint &lt;p&gt;The endpoint of the ComputeFarm that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint &lt;p&gt;The endpoint of the ComputeFarm that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }

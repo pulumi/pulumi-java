@@ -25,6 +25,10 @@ public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osUpdateType", required=true)
     private Output<String> osUpdateType;
 
+    /**
+     * @return Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
+     * 
+     */
     public Output<String> osUpdateType() {
         return this.osUpdateType;
     }
@@ -36,6 +40,10 @@ public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetOSs", required=true)
     private Output<List<String>> targetOSs;
 
+    /**
+     * @return Specifies the target OSs to be tested.
+     * 
+     */
     public Output<List<String>> targetOSs() {
         return this.targetOSs;
     }
@@ -65,24 +73,54 @@ public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TargetOSInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osUpdateType Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osUpdateType(Output<String> osUpdateType) {
             $.osUpdateType = osUpdateType;
             return this;
         }
 
+        /**
+         * @param osUpdateType Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osUpdateType(String osUpdateType) {
             return osUpdateType(Output.of(osUpdateType));
         }
 
+        /**
+         * @param targetOSs Specifies the target OSs to be tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOSs(Output<List<String>> targetOSs) {
             $.targetOSs = targetOSs;
             return this;
         }
 
+        /**
+         * @param targetOSs Specifies the target OSs to be tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOSs(List<String> targetOSs) {
             return targetOSs(Output.of(targetOSs));
         }
 
+        /**
+         * @param targetOSs Specifies the target OSs to be tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetOSs(String... targetOSs) {
             return targetOSs(List.of(targetOSs));
         }

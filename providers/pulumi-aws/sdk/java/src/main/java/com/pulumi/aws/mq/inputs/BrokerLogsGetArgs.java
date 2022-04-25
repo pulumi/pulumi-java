@@ -22,6 +22,10 @@ public final class BrokerLogsGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="audit")
     private @Nullable Output<Boolean> audit;
 
+    /**
+     * @return Enables audit logging. Auditing is only possible for `engine_type` of `ActiveMQ`. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> audit() {
         return Optional.ofNullable(this.audit);
     }
@@ -33,6 +37,10 @@ public final class BrokerLogsGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="general")
     private @Nullable Output<Boolean> general;
 
+    /**
+     * @return Enables general logging via CloudWatch. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> general() {
         return Optional.ofNullable(this.general);
     }
@@ -62,20 +70,44 @@ public final class BrokerLogsGetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BrokerLogsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audit Enables audit logging. Auditing is only possible for `engine_type` of `ActiveMQ`. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audit(@Nullable Output<Boolean> audit) {
             $.audit = audit;
             return this;
         }
 
+        /**
+         * @param audit Enables audit logging. Auditing is only possible for `engine_type` of `ActiveMQ`. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audit(Boolean audit) {
             return audit(Output.of(audit));
         }
 
+        /**
+         * @param general Enables general logging via CloudWatch. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder general(@Nullable Output<Boolean> general) {
             $.general = general;
             return this;
         }
 
+        /**
+         * @param general Enables general logging via CloudWatch. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder general(Boolean general) {
             return general(Output.of(general));
         }

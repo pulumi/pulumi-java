@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerBuildSourceRepoSource {
     /**
-     * Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * @return Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
      * described at https://github.com/google/re2/wiki/Syntax
      * 
      */
     private final @Nullable String branchName;
     /**
-     * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * @return Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * 
      */
     private final @Nullable String commitSha;
     /**
-     * Working directory to use when running this step&#39;s container.
+     * @return Working directory to use when running this step&#39;s container.
      * If this value is a relative path, it is relative to the build&#39;s working
      * directory. If this value is absolute, it may be outside the build&#39;s working
      * directory, in which case the contents of the path may not be persisted
@@ -39,28 +39,28 @@ public final class TriggerBuildSourceRepoSource {
      */
     private final @Nullable String dir;
     /**
-     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
      * 
      */
     private final @Nullable Boolean invertRegex;
     /**
-     * ID of the project that owns the Cloud Source Repository.
+     * @return ID of the project that owns the Cloud Source Repository.
      * If omitted, the project ID requesting the build is assumed.
      * 
      */
     private final @Nullable String projectId;
     /**
-     * Name of the Cloud Source Repository.
+     * @return Name of the Cloud Source Repository.
      * 
      */
     private final String repoName;
     /**
-     * Substitutions to use in a triggered build. Should only be used with triggers.run
+     * @return Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
      */
     private final @Nullable Map<String,String> substitutions;
     /**
-     * Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * @return Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
      * described at https://github.com/google/re2/wiki/Syntax
      * 
@@ -88,23 +88,23 @@ public final class TriggerBuildSourceRepoSource {
     }
 
     /**
-     * Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * @return Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
      * described at https://github.com/google/re2/wiki/Syntax
      * 
-    */
+     */
     public Optional<String> branchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
-     * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * @return Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * 
-    */
+     */
     public Optional<String> commitSha() {
         return Optional.ofNullable(this.commitSha);
     }
     /**
-     * Working directory to use when running this step&#39;s container.
+     * @return Working directory to use when running this step&#39;s container.
      * If this value is a relative path, it is relative to the build&#39;s working
      * directory. If this value is absolute, it may be outside the build&#39;s working
      * directory, in which case the contents of the path may not be persisted
@@ -114,45 +114,45 @@ public final class TriggerBuildSourceRepoSource {
      * which specifies an absolute path, the `RepoSource` `dir` is ignored
      * for the step&#39;s execution.
      * 
-    */
+     */
     public Optional<String> dir() {
         return Optional.ofNullable(this.dir);
     }
     /**
-     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
      * 
-    */
+     */
     public Optional<Boolean> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
     /**
-     * ID of the project that owns the Cloud Source Repository.
+     * @return ID of the project that owns the Cloud Source Repository.
      * If omitted, the project ID requesting the build is assumed.
      * 
-    */
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
-     * Name of the Cloud Source Repository.
+     * @return Name of the Cloud Source Repository.
      * 
-    */
+     */
     public String repoName() {
         return this.repoName;
     }
     /**
-     * Substitutions to use in a triggered build. Should only be used with triggers.run
+     * @return Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
-    */
+     */
     public Map<String,String> substitutions() {
         return this.substitutions == null ? Map.of() : this.substitutions;
     }
     /**
-     * Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+     * @return Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * The syntax of the regular expressions accepted is the syntax accepted by RE2 and
      * described at https://github.com/google/re2/wiki/Syntax
      * 
-    */
+     */
     public Optional<String> tagName() {
         return Optional.ofNullable(this.tagName);
     }

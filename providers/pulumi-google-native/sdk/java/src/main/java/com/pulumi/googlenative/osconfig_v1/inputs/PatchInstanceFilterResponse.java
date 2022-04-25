@@ -26,6 +26,10 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
     @Import(name="all", required=true)
     private Boolean all;
 
+    /**
+     * @return Target all VM instances in the project. If true, no other criteria is permitted.
+     * 
+     */
     public Boolean all() {
         return this.all;
     }
@@ -37,6 +41,10 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
     @Import(name="groupLabels", required=true)
     private List<PatchInstanceFilterGroupLabelResponse> groupLabels;
 
+    /**
+     * @return Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
+     * 
+     */
     public List<PatchInstanceFilterGroupLabelResponse> groupLabels() {
         return this.groupLabels;
     }
@@ -48,6 +56,10 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
     @Import(name="instanceNamePrefixes", required=true)
     private List<String> instanceNamePrefixes;
 
+    /**
+     * @return Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
+     * 
+     */
     public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes;
     }
@@ -59,6 +71,10 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
     @Import(name="instances", required=true)
     private List<String> instances;
 
+    /**
+     * @return Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
+     * 
+     */
     public List<String> instances() {
         return this.instances;
     }
@@ -70,6 +86,10 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
     @Import(name="zones", required=true)
     private List<String> zones;
 
+    /**
+     * @return Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
+     * 
+     */
     public List<String> zones() {
         return this.zones;
     }
@@ -102,43 +122,97 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
             $ = new PatchInstanceFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param all Target all VM instances in the project. If true, no other criteria is permitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(Boolean all) {
             $.all = all;
             return this;
         }
 
+        /**
+         * @param groupLabels Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupLabels(List<PatchInstanceFilterGroupLabelResponse> groupLabels) {
             $.groupLabels = groupLabels;
             return this;
         }
 
+        /**
+         * @param groupLabels Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupLabels(PatchInstanceFilterGroupLabelResponse... groupLabels) {
             return groupLabels(List.of(groupLabels));
         }
 
+        /**
+         * @param instanceNamePrefixes Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
             $.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
 
+        /**
+         * @param instanceNamePrefixes Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=&#34;prod-&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
             return instanceNamePrefixes(List.of(instanceNamePrefixes));
         }
 
+        /**
+         * @param instances Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<String> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param zones Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

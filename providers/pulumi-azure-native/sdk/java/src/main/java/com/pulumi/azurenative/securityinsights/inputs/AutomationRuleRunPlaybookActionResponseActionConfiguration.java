@@ -25,6 +25,10 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
     @Import(name="logicAppResourceId")
     private @Nullable String logicAppResourceId;
 
+    /**
+     * @return The resource id of the playbook resource
+     * 
+     */
     public Optional<String> logicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
@@ -36,6 +40,10 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return The tenant id of the playbook resource
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -65,11 +73,23 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
             $ = new AutomationRuleRunPlaybookActionResponseActionConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logicAppResourceId The resource id of the playbook resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
             $.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id of the playbook resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

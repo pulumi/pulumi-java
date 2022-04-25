@@ -29,6 +29,11 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="customizedLoadMetricSpecification")
     private @Nullable Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification;
 
+    /**
+     * @return The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
+     * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
+     * 
+     */
     public Optional<Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs>> customizedLoadMetricSpecification() {
         return Optional.ofNullable(this.customizedLoadMetricSpecification);
     }
@@ -40,6 +45,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="disableDynamicScaling")
     private @Nullable Output<Boolean> disableDynamicScaling;
 
+    /**
+     * @return Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> disableDynamicScaling() {
         return Optional.ofNullable(this.disableDynamicScaling);
     }
@@ -51,6 +60,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="maxCapacity", required=true)
     private Output<Integer> maxCapacity;
 
+    /**
+     * @return The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
+     * 
+     */
     public Output<Integer> maxCapacity() {
         return this.maxCapacity;
     }
@@ -62,6 +75,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="minCapacity", required=true)
     private Output<Integer> minCapacity;
 
+    /**
+     * @return The minimum capacity of the resource.
+     * 
+     */
     public Output<Integer> minCapacity() {
         return this.minCapacity;
     }
@@ -74,6 +91,11 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="predefinedLoadMetricSpecification")
     private @Nullable Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
 
+    /**
+     * @return The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
+     * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
+     * 
+     */
     public Optional<Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs>> predefinedLoadMetricSpecification() {
         return Optional.ofNullable(this.predefinedLoadMetricSpecification);
     }
@@ -86,6 +108,11 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="predictiveScalingMaxCapacityBehavior")
     private @Nullable Output<String> predictiveScalingMaxCapacityBehavior;
 
+    /**
+     * @return Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
+     * Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
+     * 
+     */
     public Optional<Output<String>> predictiveScalingMaxCapacityBehavior() {
         return Optional.ofNullable(this.predictiveScalingMaxCapacityBehavior);
     }
@@ -97,6 +124,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="predictiveScalingMaxCapacityBuffer")
     private @Nullable Output<Integer> predictiveScalingMaxCapacityBuffer;
 
+    /**
+     * @return The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
+     * 
+     */
     public Optional<Output<Integer>> predictiveScalingMaxCapacityBuffer() {
         return Optional.ofNullable(this.predictiveScalingMaxCapacityBuffer);
     }
@@ -108,6 +139,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="predictiveScalingMode")
     private @Nullable Output<String> predictiveScalingMode;
 
+    /**
+     * @return The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
+     * 
+     */
     public Optional<Output<String>> predictiveScalingMode() {
         return Optional.ofNullable(this.predictiveScalingMode);
     }
@@ -119,6 +154,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The ID of the resource. This string consists of the resource type and unique identifier.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -130,6 +169,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="scalableDimension", required=true)
     private Output<String> scalableDimension;
 
+    /**
+     * @return The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
+     * 
+     */
     public Output<String> scalableDimension() {
         return this.scalableDimension;
     }
@@ -141,6 +184,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="scalingPolicyUpdateBehavior")
     private @Nullable Output<String> scalingPolicyUpdateBehavior;
 
+    /**
+     * @return Controls whether a resource&#39;s externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
+     * 
+     */
     public Optional<Output<String>> scalingPolicyUpdateBehavior() {
         return Optional.ofNullable(this.scalingPolicyUpdateBehavior);
     }
@@ -152,6 +199,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="scheduledActionBufferTime")
     private @Nullable Output<Integer> scheduledActionBufferTime;
 
+    /**
+     * @return The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
+     * 
+     */
     public Optional<Output<Integer>> scheduledActionBufferTime() {
         return Optional.ofNullable(this.scheduledActionBufferTime);
     }
@@ -163,6 +214,10 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="serviceNamespace", required=true)
     private Output<String> serviceNamespace;
 
+    /**
+     * @return The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
+     * 
+     */
     public Output<String> serviceNamespace() {
         return this.serviceNamespace;
     }
@@ -175,6 +230,11 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="targetTrackingConfigurations", required=true)
     private Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations;
 
+    /**
+     * @return The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
+     * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
+     * 
+     */
     public Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations() {
         return this.targetTrackingConfigurations;
     }
@@ -216,132 +276,315 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
             $ = new ScalingPlanScalingInstructionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customizedLoadMetricSpecification The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
+         * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customizedLoadMetricSpecification(@Nullable Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification) {
             $.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
             return this;
         }
 
+        /**
+         * @param customizedLoadMetricSpecification The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
+         * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customizedLoadMetricSpecification(ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs customizedLoadMetricSpecification) {
             return customizedLoadMetricSpecification(Output.of(customizedLoadMetricSpecification));
         }
 
+        /**
+         * @param disableDynamicScaling Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableDynamicScaling(@Nullable Output<Boolean> disableDynamicScaling) {
             $.disableDynamicScaling = disableDynamicScaling;
             return this;
         }
 
+        /**
+         * @param disableDynamicScaling Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableDynamicScaling(Boolean disableDynamicScaling) {
             return disableDynamicScaling(Output.of(disableDynamicScaling));
         }
 
+        /**
+         * @param maxCapacity The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacity(Output<Integer> maxCapacity) {
             $.maxCapacity = maxCapacity;
             return this;
         }
 
+        /**
+         * @param maxCapacity The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacity(Integer maxCapacity) {
             return maxCapacity(Output.of(maxCapacity));
         }
 
+        /**
+         * @param minCapacity The minimum capacity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(Output<Integer> minCapacity) {
             $.minCapacity = minCapacity;
             return this;
         }
 
+        /**
+         * @param minCapacity The minimum capacity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(Integer minCapacity) {
             return minCapacity(Output.of(minCapacity));
         }
 
+        /**
+         * @param predefinedLoadMetricSpecification The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
+         * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedLoadMetricSpecification(@Nullable Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification) {
             $.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
 
+        /**
+         * @param predefinedLoadMetricSpecification The predefined load metric to use for predictive scaling. You must specify either `predefined_load_metric_specification` or `customized_load_metric_specification` when configuring predictive scaling.
+         * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedLoadMetricSpecification(ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs predefinedLoadMetricSpecification) {
             return predefinedLoadMetricSpecification(Output.of(predefinedLoadMetricSpecification));
         }
 
+        /**
+         * @param predictiveScalingMaxCapacityBehavior Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
+         * Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveScalingMaxCapacityBehavior(@Nullable Output<String> predictiveScalingMaxCapacityBehavior) {
             $.predictiveScalingMaxCapacityBehavior = predictiveScalingMaxCapacityBehavior;
             return this;
         }
 
+        /**
+         * @param predictiveScalingMaxCapacityBehavior Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity specified for the resource.
+         * Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveScalingMaxCapacityBehavior(String predictiveScalingMaxCapacityBehavior) {
             return predictiveScalingMaxCapacityBehavior(Output.of(predictiveScalingMaxCapacityBehavior));
         }
 
+        /**
+         * @param predictiveScalingMaxCapacityBuffer The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveScalingMaxCapacityBuffer(@Nullable Output<Integer> predictiveScalingMaxCapacityBuffer) {
             $.predictiveScalingMaxCapacityBuffer = predictiveScalingMaxCapacityBuffer;
             return this;
         }
 
+        /**
+         * @param predictiveScalingMaxCapacityBuffer The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveScalingMaxCapacityBuffer(Integer predictiveScalingMaxCapacityBuffer) {
             return predictiveScalingMaxCapacityBuffer(Output.of(predictiveScalingMaxCapacityBuffer));
         }
 
+        /**
+         * @param predictiveScalingMode The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveScalingMode(@Nullable Output<String> predictiveScalingMode) {
             $.predictiveScalingMode = predictiveScalingMode;
             return this;
         }
 
+        /**
+         * @param predictiveScalingMode The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveScalingMode(String predictiveScalingMode) {
             return predictiveScalingMode(Output.of(predictiveScalingMode));
         }
 
+        /**
+         * @param resourceId The ID of the resource. This string consists of the resource type and unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The ID of the resource. This string consists of the resource type and unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param scalableDimension The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalableDimension(Output<String> scalableDimension) {
             $.scalableDimension = scalableDimension;
             return this;
         }
 
+        /**
+         * @param scalableDimension The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalableDimension(String scalableDimension) {
             return scalableDimension(Output.of(scalableDimension));
         }
 
+        /**
+         * @param scalingPolicyUpdateBehavior Controls whether a resource&#39;s externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingPolicyUpdateBehavior(@Nullable Output<String> scalingPolicyUpdateBehavior) {
             $.scalingPolicyUpdateBehavior = scalingPolicyUpdateBehavior;
             return this;
         }
 
+        /**
+         * @param scalingPolicyUpdateBehavior Controls whether a resource&#39;s externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingPolicyUpdateBehavior(String scalingPolicyUpdateBehavior) {
             return scalingPolicyUpdateBehavior(Output.of(scalingPolicyUpdateBehavior));
         }
 
+        /**
+         * @param scheduledActionBufferTime The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledActionBufferTime(@Nullable Output<Integer> scheduledActionBufferTime) {
             $.scheduledActionBufferTime = scheduledActionBufferTime;
             return this;
         }
 
+        /**
+         * @param scheduledActionBufferTime The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledActionBufferTime(Integer scheduledActionBufferTime) {
             return scheduledActionBufferTime(Output.of(scheduledActionBufferTime));
         }
 
+        /**
+         * @param serviceNamespace The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(Output<String> serviceNamespace) {
             $.serviceNamespace = serviceNamespace;
             return this;
         }
 
+        /**
+         * @param serviceNamespace The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceNamespace(String serviceNamespace) {
             return serviceNamespace(Output.of(serviceNamespace));
         }
 
+        /**
+         * @param targetTrackingConfigurations The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
+         * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTrackingConfigurations(Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations) {
             $.targetTrackingConfigurations = targetTrackingConfigurations;
             return this;
         }
 
+        /**
+         * @param targetTrackingConfigurations The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
+         * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs> targetTrackingConfigurations) {
             return targetTrackingConfigurations(Output.of(targetTrackingConfigurations));
         }
 
+        /**
+         * @param targetTrackingConfigurations The structure that defines new target tracking configurations. Each of these structures includes a specific scaling metric and a target value for the metric, along with various parameters to use with dynamic scaling.
+         * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTrackingConfigurations(ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs... targetTrackingConfigurations) {
             return targetTrackingConfigurations(List.of(targetTrackingConfigurations));
         }

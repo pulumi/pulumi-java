@@ -30,6 +30,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowCopyCommand")
     private @Nullable Object allowCopyCommand;
 
+    /**
+     * @return Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> allowCopyCommand() {
         return Optional.ofNullable(this.allowCopyCommand);
     }
@@ -41,6 +45,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowPolyBase")
     private @Nullable Object allowPolyBase;
 
+    /**
+     * @return Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> allowPolyBase() {
         return Optional.ofNullable(this.allowPolyBase);
     }
@@ -52,6 +60,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="copyCommandSettings")
     private @Nullable DWCopyCommandSettingsResponse copyCommandSettings;
 
+    /**
+     * @return Specifies Copy Command related settings when allowCopyCommand is true.
+     * 
+     */
     public Optional<DWCopyCommandSettingsResponse> copyCommandSettings() {
         return Optional.ofNullable(this.copyCommandSettings);
     }
@@ -63,6 +75,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -74,6 +90,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -85,6 +105,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="polyBaseSettings")
     private @Nullable PolybaseSettingsResponse polyBaseSettings;
 
+    /**
+     * @return Specifies PolyBase-related settings when allowPolyBase is true.
+     * 
+     */
     public Optional<PolybaseSettingsResponse> polyBaseSettings() {
         return Optional.ofNullable(this.polyBaseSettings);
     }
@@ -96,6 +120,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preCopyScript")
     private @Nullable Object preCopyScript;
 
+    /**
+     * @return SQL pre-copy script. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> preCopyScript() {
         return Optional.ofNullable(this.preCopyScript);
     }
@@ -107,6 +135,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryCount")
     private @Nullable Object sinkRetryCount;
 
+    /**
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
@@ -118,6 +150,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryWait")
     private @Nullable Object sinkRetryWait;
 
+    /**
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -129,6 +165,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sqlWriterUseTableLock")
     private @Nullable Object sqlWriterUseTableLock;
 
+    /**
+     * @return Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> sqlWriterUseTableLock() {
         return Optional.ofNullable(this.sqlWriterUseTableLock);
     }
@@ -140,6 +180,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tableOption")
     private @Nullable Object tableOption;
 
+    /**
+     * @return The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> tableOption() {
         return Optional.ofNullable(this.tableOption);
     }
@@ -152,6 +196,11 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy sink type.
+     * Expected value is &#39;SqlDWSink&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -163,6 +212,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="upsertSettings")
     private @Nullable SqlDWUpsertSettingsResponse upsertSettings;
 
+    /**
+     * @return SQL DW upsert settings.
+     * 
+     */
     public Optional<SqlDWUpsertSettingsResponse> upsertSettings() {
         return Optional.ofNullable(this.upsertSettings);
     }
@@ -174,6 +227,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchSize")
     private @Nullable Object writeBatchSize;
 
+    /**
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
@@ -185,6 +242,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchTimeout")
     private @Nullable Object writeBatchTimeout;
 
+    /**
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
@@ -196,6 +257,10 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBehavior")
     private @Nullable Object writeBehavior;
 
+    /**
+     * @return Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
+     * 
+     */
     public Optional<Object> writeBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }
@@ -239,81 +304,178 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SqlDWSinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCopyCommand Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCopyCommand(@Nullable Object allowCopyCommand) {
             $.allowCopyCommand = allowCopyCommand;
             return this;
         }
 
+        /**
+         * @param allowPolyBase Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPolyBase(@Nullable Object allowPolyBase) {
             $.allowPolyBase = allowPolyBase;
             return this;
         }
 
+        /**
+         * @param copyCommandSettings Specifies Copy Command related settings when allowCopyCommand is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyCommandSettings(@Nullable DWCopyCommandSettingsResponse copyCommandSettings) {
             $.copyCommandSettings = copyCommandSettings;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param polyBaseSettings Specifies PolyBase-related settings when allowPolyBase is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder polyBaseSettings(@Nullable PolybaseSettingsResponse polyBaseSettings) {
             $.polyBaseSettings = polyBaseSettings;
             return this;
         }
 
+        /**
+         * @param preCopyScript SQL pre-copy script. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preCopyScript(@Nullable Object preCopyScript) {
             $.preCopyScript = preCopyScript;
             return this;
         }
 
+        /**
+         * @param sinkRetryCount Sink retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             $.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
+        /**
+         * @param sinkRetryWait Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             $.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
+        /**
+         * @param sqlWriterUseTableLock Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             $.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
 
+        /**
+         * @param tableOption The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableOption(@Nullable Object tableOption) {
             $.tableOption = tableOption;
             return this;
         }
 
+        /**
+         * @param type Copy sink type.
+         * Expected value is &#39;SqlDWSink&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param upsertSettings SQL DW upsert settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upsertSettings(@Nullable SqlDWUpsertSettingsResponse upsertSettings) {
             $.upsertSettings = upsertSettings;
             return this;
         }
 
+        /**
+         * @param writeBatchSize Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             $.writeBatchSize = writeBatchSize;
             return this;
         }
 
+        /**
+         * @param writeBatchTimeout Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             $.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
+        /**
+         * @param writeBehavior Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBehavior(@Nullable Object writeBehavior) {
             $.writeBehavior = writeBehavior;
             return this;

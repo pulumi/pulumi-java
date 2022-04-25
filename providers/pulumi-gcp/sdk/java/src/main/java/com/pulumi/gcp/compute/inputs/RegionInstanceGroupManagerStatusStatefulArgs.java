@@ -24,6 +24,10 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends com.pulu
     @Import(name="hasStatefulConfig")
     private @Nullable Output<Boolean> hasStatefulConfig;
 
+    /**
+     * @return A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+     * 
+     */
     public Optional<Output<Boolean>> hasStatefulConfig() {
         return Optional.ofNullable(this.hasStatefulConfig);
     }
@@ -35,6 +39,10 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends com.pulu
     @Import(name="perInstanceConfigs")
     private @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs;
 
+    /**
+     * @return Status of per-instance configs on the instance.
+     * 
+     */
     public Optional<Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>>> perInstanceConfigs() {
         return Optional.ofNullable(this.perInstanceConfigs);
     }
@@ -64,24 +72,54 @@ public final class RegionInstanceGroupManagerStatusStatefulArgs extends com.pulu
             $ = new RegionInstanceGroupManagerStatusStatefulArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hasStatefulConfig A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasStatefulConfig(@Nullable Output<Boolean> hasStatefulConfig) {
             $.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
 
+        /**
+         * @param hasStatefulConfig A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasStatefulConfig(Boolean hasStatefulConfig) {
             return hasStatefulConfig(Output.of(hasStatefulConfig));
         }
 
+        /**
+         * @param perInstanceConfigs Status of per-instance configs on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perInstanceConfigs(@Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs>> perInstanceConfigs) {
             $.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
 
+        /**
+         * @param perInstanceConfigs Status of per-instance configs on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perInstanceConfigs(List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs> perInstanceConfigs) {
             return perInstanceConfigs(Output.of(perInstanceConfigs));
         }
 
+        /**
+         * @param perInstanceConfigs Status of per-instance configs on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perInstanceConfigs(RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs... perInstanceConfigs) {
             return perInstanceConfigs(List.of(perInstanceConfigs));
         }

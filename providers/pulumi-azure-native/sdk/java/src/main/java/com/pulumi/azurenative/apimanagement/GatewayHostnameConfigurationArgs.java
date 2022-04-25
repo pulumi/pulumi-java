@@ -23,6 +23,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="certificateId")
     private @Nullable Output<String> certificateId;
 
+    /**
+     * @return Identifier of Certificate entity that will be used for TLS connection establishment
+     * 
+     */
     public Optional<Output<String>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -34,6 +38,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="gatewayId", required=true)
     private Output<String> gatewayId;
 
+    /**
+     * @return Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+     * 
+     */
     public Output<String> gatewayId() {
         return this.gatewayId;
     }
@@ -45,6 +53,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="hcId")
     private @Nullable Output<String> hcId;
 
+    /**
+     * @return Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.
+     * 
+     */
     public Optional<Output<String>> hcId() {
         return Optional.ofNullable(this.hcId);
     }
@@ -56,6 +68,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return Hostname value. Supports valid domain name, partial or full wildcard
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -67,6 +83,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="http2Enabled")
     private @Nullable Output<Boolean> http2Enabled;
 
+    /**
+     * @return Specifies if HTTP/2.0 is supported
+     * 
+     */
     public Optional<Output<Boolean>> http2Enabled() {
         return Optional.ofNullable(this.http2Enabled);
     }
@@ -78,6 +98,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="negotiateClientCertificate")
     private @Nullable Output<Boolean> negotiateClientCertificate;
 
+    /**
+     * @return Determines whether gateway requests client certificate
+     * 
+     */
     public Optional<Output<Boolean>> negotiateClientCertificate() {
         return Optional.ofNullable(this.negotiateClientCertificate);
     }
@@ -89,6 +113,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -100,6 +128,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -111,6 +143,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="tls10Enabled")
     private @Nullable Output<Boolean> tls10Enabled;
 
+    /**
+     * @return Specifies if TLS 1.0 is supported
+     * 
+     */
     public Optional<Output<Boolean>> tls10Enabled() {
         return Optional.ofNullable(this.tls10Enabled);
     }
@@ -122,6 +158,10 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="tls11Enabled")
     private @Nullable Output<Boolean> tls11Enabled;
 
+    /**
+     * @return Specifies if TLS 1.1 is supported
+     * 
+     */
     public Optional<Output<Boolean>> tls11Enabled() {
         return Optional.ofNullable(this.tls11Enabled);
     }
@@ -159,92 +199,212 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
             $ = new GatewayHostnameConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId Identifier of Certificate entity that will be used for TLS connection establishment
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<String> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId Identifier of Certificate entity that will be used for TLS connection establishment
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             return certificateId(Output.of(certificateId));
         }
 
+        /**
+         * @param gatewayId Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
+        /**
+         * @param gatewayId Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }
 
+        /**
+         * @param hcId Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcId(@Nullable Output<String> hcId) {
             $.hcId = hcId;
             return this;
         }
 
+        /**
+         * @param hcId Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcId(String hcId) {
             return hcId(Output.of(hcId));
         }
 
+        /**
+         * @param hostname Hostname value. Supports valid domain name, partial or full wildcard
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Hostname value. Supports valid domain name, partial or full wildcard
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param http2Enabled Specifies if HTTP/2.0 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder http2Enabled(@Nullable Output<Boolean> http2Enabled) {
             $.http2Enabled = http2Enabled;
             return this;
         }
 
+        /**
+         * @param http2Enabled Specifies if HTTP/2.0 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder http2Enabled(Boolean http2Enabled) {
             return http2Enabled(Output.of(http2Enabled));
         }
 
+        /**
+         * @param negotiateClientCertificate Determines whether gateway requests client certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder negotiateClientCertificate(@Nullable Output<Boolean> negotiateClientCertificate) {
             $.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
 
+        /**
+         * @param negotiateClientCertificate Determines whether gateway requests client certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder negotiateClientCertificate(Boolean negotiateClientCertificate) {
             return negotiateClientCertificate(Output.of(negotiateClientCertificate));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param tls10Enabled Specifies if TLS 1.0 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls10Enabled(@Nullable Output<Boolean> tls10Enabled) {
             $.tls10Enabled = tls10Enabled;
             return this;
         }
 
+        /**
+         * @param tls10Enabled Specifies if TLS 1.0 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls10Enabled(Boolean tls10Enabled) {
             return tls10Enabled(Output.of(tls10Enabled));
         }
 
+        /**
+         * @param tls11Enabled Specifies if TLS 1.1 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls11Enabled(@Nullable Output<Boolean> tls11Enabled) {
             $.tls11Enabled = tls11Enabled;
             return this;
         }
 
+        /**
+         * @param tls11Enabled Specifies if TLS 1.1 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls11Enabled(Boolean tls11Enabled) {
             return tls11Enabled(Output.of(tls11Enabled));
         }

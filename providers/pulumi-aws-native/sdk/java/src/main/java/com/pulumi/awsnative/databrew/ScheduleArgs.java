@@ -24,6 +24,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cronExpression", required=true)
     private Output<String> cronExpression;
 
+    /**
+     * @return Schedule cron
+     * 
+     */
     public Output<String> cronExpression() {
         return this.cronExpression;
     }
@@ -42,6 +46,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Schedule Name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,11 +88,23 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cronExpression Schedule cron
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronExpression(Output<String> cronExpression) {
             $.cronExpression = cronExpression;
             return this;
         }
 
+        /**
+         * @param cronExpression Schedule cron
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronExpression(String cronExpression) {
             return cronExpression(Output.of(cronExpression));
         }
@@ -102,11 +122,23 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             return jobNames(List.of(jobNames));
         }
 
+        /**
+         * @param name Schedule Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Schedule Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

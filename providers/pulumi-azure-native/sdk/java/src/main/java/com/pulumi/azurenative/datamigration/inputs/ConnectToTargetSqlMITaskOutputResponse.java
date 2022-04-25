@@ -25,6 +25,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
     @Import(name="agentJobs", required=true)
     private List<String> agentJobs;
 
+    /**
+     * @return List of agent jobs on the target server.
+     * 
+     */
     public List<String> agentJobs() {
         return this.agentJobs;
     }
@@ -36,6 +40,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +55,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
     @Import(name="logins", required=true)
     private List<String> logins;
 
+    /**
+     * @return List of logins on the target server.
+     * 
+     */
     public List<String> logins() {
         return this.logins;
     }
@@ -58,6 +70,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
     @Import(name="targetServerBrandVersion", required=true)
     private String targetServerBrandVersion;
 
+    /**
+     * @return Target server brand version
+     * 
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
@@ -69,6 +85,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
     @Import(name="targetServerVersion", required=true)
     private String targetServerVersion;
 
+    /**
+     * @return Target server version
+     * 
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
@@ -80,6 +100,10 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Validation errors
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -113,44 +137,98 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends com.pulumi.res
             $ = new ConnectToTargetSqlMITaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentJobs List of agent jobs on the target server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentJobs(List<String> agentJobs) {
             $.agentJobs = agentJobs;
             return this;
         }
 
+        /**
+         * @param agentJobs List of agent jobs on the target server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentJobs(String... agentJobs) {
             return agentJobs(List.of(agentJobs));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param logins List of logins on the target server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logins(List<String> logins) {
             $.logins = logins;
             return this;
         }
 
+        /**
+         * @param logins List of logins on the target server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logins(String... logins) {
             return logins(List.of(logins));
         }
 
+        /**
+         * @param targetServerBrandVersion Target server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param targetServerVersion Target server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerVersion(String targetServerVersion) {
             $.targetServerVersion = targetServerVersion;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

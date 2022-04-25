@@ -24,6 +24,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     @Import(name="aliasContext", required=true)
     private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
 
+    /**
+     * @return An alias, which may be a branch or tag.
+     * 
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
@@ -35,6 +39,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     @Import(name="gerritProject", required=true)
     private String gerritProject;
 
+    /**
+     * @return The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
+     * 
+     */
     public String gerritProject() {
         return this.gerritProject;
     }
@@ -46,6 +54,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     @Import(name="hostUri", required=true)
     private String hostUri;
 
+    /**
+     * @return The URI of a running Gerrit instance.
+     * 
+     */
     public String hostUri() {
         return this.hostUri;
     }
@@ -57,6 +69,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     @Import(name="revisionId", required=true)
     private String revisionId;
 
+    /**
+     * @return A revision (commit) ID.
+     * 
+     */
     public String revisionId() {
         return this.revisionId;
     }
@@ -88,21 +104,45 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
             $ = new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasContext An alias, which may be a branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext) {
             $.aliasContext = aliasContext;
             return this;
         }
 
+        /**
+         * @param gerritProject The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gerritProject(String gerritProject) {
             $.gerritProject = gerritProject;
             return this;
         }
 
+        /**
+         * @param hostUri The URI of a running Gerrit instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostUri(String hostUri) {
             $.hostUri = hostUri;
             return this;
         }
 
+        /**
+         * @param revisionId A revision (commit) ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(String revisionId) {
             $.revisionId = revisionId;
             return this;

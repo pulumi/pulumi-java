@@ -28,6 +28,10 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends com.pulumi.
     @Import(name="level")
     private @Nullable Output<LogLevel> level;
 
+    /**
+     * @return Log level.
+     * 
+     */
     public Optional<Output<LogLevel>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -41,6 +45,12 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends com.pulumi.
     @Import(name="retentionInDays")
     private @Nullable Output<Integer> retentionInDays;
 
+    /**
+     * @return Retention in days.
+     * Remove blobs older than X days.
+     * 0 or lower means no retention.
+     * 
+     */
     public Optional<Output<Integer>> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -52,6 +62,10 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends com.pulumi.
     @Import(name="sasUrl")
     private @Nullable Output<String> sasUrl;
 
+    /**
+     * @return SAS url to a azure blob container with read/write/list/delete permissions.
+     * 
+     */
     public Optional<Output<String>> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
@@ -82,29 +96,69 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends com.pulumi.
             $ = new AzureBlobStorageApplicationLogsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<LogLevel> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(LogLevel level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param retentionInDays Retention in days.
+         * Remove blobs older than X days.
+         * 0 or lower means no retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param retentionInDays Retention in days.
+         * Remove blobs older than X days.
+         * 0 or lower means no retention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(Integer retentionInDays) {
             return retentionInDays(Output.of(retentionInDays));
         }
 
+        /**
+         * @param sasUrl SAS url to a azure blob container with read/write/list/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(@Nullable Output<String> sasUrl) {
             $.sasUrl = sasUrl;
             return this;
         }
 
+        /**
+         * @param sasUrl SAS url to a azure blob container with read/write/list/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(String sasUrl) {
             return sasUrl(Output.of(sasUrl));
         }

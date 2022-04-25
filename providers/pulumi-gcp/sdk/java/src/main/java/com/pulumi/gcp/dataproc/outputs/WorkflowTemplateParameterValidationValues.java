@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class WorkflowTemplateParameterValidationValues {
     /**
-     * Optional. Corresponds to the label values of reservation resource.
+     * @return Optional. Corresponds to the label values of reservation resource.
      * 
      */
     private final List<String> values;
@@ -22,9 +22,9 @@ public final class WorkflowTemplateParameterValidationValues {
     }
 
     /**
-     * Optional. Corresponds to the label values of reservation resource.
+     * @return Optional. Corresponds to the label values of reservation resource.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

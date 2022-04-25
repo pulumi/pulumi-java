@@ -34,6 +34,10 @@ public final class CreatePolicyInputPropertiesArgs extends com.pulumi.resources.
     @Import(name="providerSpecificInput")
     private @Nullable Output<Object> providerSpecificInput;
 
+    /**
+     * @return The ReplicationProviderSettings.
+     * 
+     */
     public Optional<Output<Object>> providerSpecificInput() {
         return Optional.ofNullable(this.providerSpecificInput);
     }
@@ -62,11 +66,23 @@ public final class CreatePolicyInputPropertiesArgs extends com.pulumi.resources.
             $ = new CreatePolicyInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providerSpecificInput The ReplicationProviderSettings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificInput(@Nullable Output<Object> providerSpecificInput) {
             $.providerSpecificInput = providerSpecificInput;
             return this;
         }
 
+        /**
+         * @param providerSpecificInput The ReplicationProviderSettings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificInput(Object providerSpecificInput) {
             return providerSpecificInput(Output.of(providerSpecificInput));
         }

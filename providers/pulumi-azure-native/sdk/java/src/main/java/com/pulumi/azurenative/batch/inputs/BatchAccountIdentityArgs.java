@@ -29,6 +29,10 @@ public final class BatchAccountIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<ResourceIdentityType> type;
 
+    /**
+     * @return The type of identity used for the Batch account.
+     * 
+     */
     public Output<ResourceIdentityType> type() {
         return this.type;
     }
@@ -40,6 +44,10 @@ public final class BatchAccountIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
+    /**
+     * @return The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -69,20 +77,44 @@ public final class BatchAccountIdentityArgs extends com.pulumi.resources.Resourc
             $ = new BatchAccountIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of identity used for the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

@@ -24,6 +24,10 @@ public final class PartitionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="capacity", required=true)
     private CapacityResponse capacity;
 
+    /**
+     * @return The capacity configuration.
+     * 
+     */
     public CapacityResponse capacity() {
         return this.capacity;
     }
@@ -35,6 +39,10 @@ public final class PartitionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="count", required=true)
     private String count;
 
+    /**
+     * @return The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
+     * 
+     */
     public String count() {
         return this.count;
     }
@@ -64,11 +72,23 @@ public final class PartitionConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new PartitionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(CapacityResponse capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param count The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(String count) {
             $.count = count;
             return this;

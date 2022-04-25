@@ -19,6 +19,10 @@ public final class GetProtectionPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="policyName", required=true)
     private String policyName;
 
+    /**
+     * @return Backup policy information to be fetched.
+     * 
+     */
     public String policyName() {
         return this.policyName;
     }
@@ -30,6 +34,10 @@ public final class GetProtectionPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetProtectionPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -71,16 +83,34 @@ public final class GetProtectionPolicyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyName Backup policy information to be fetched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

@@ -24,6 +24,10 @@ public final class KpiAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliasName", required=true)
     private Output<String> aliasName;
 
+    /**
+     * @return KPI alias name.
+     * 
+     */
     public Output<String> aliasName() {
         return this.aliasName;
     }
@@ -35,6 +39,10 @@ public final class KpiAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
     private Output<String> expression;
 
+    /**
+     * @return The expression.
+     * 
+     */
     public Output<String> expression() {
         return this.expression;
     }
@@ -64,20 +72,44 @@ public final class KpiAliasArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KpiAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasName KPI alias name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasName(Output<String> aliasName) {
             $.aliasName = aliasName;
             return this;
         }
 
+        /**
+         * @param aliasName KPI alias name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasName(String aliasName) {
             return aliasName(Output.of(aliasName));
         }
 
+        /**
+         * @param expression The expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression The expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }

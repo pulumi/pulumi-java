@@ -27,6 +27,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the private endpoint connection
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -38,6 +42,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="properties")
     private @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
+    /**
+     * @return Resource properties.
+     * 
+     */
     public Optional<Output<PrivateEndpointConnectionPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -67,20 +75,44 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location of the private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }

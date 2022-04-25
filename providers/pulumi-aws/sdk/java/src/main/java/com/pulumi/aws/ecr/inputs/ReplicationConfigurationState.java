@@ -23,6 +23,10 @@ public final class ReplicationConfigurationState extends com.pulumi.resources.Re
     @Import(name="registryId")
     private @Nullable Output<String> registryId;
 
+    /**
+     * @return The account ID of the destination registry to replicate to.
+     * 
+     */
     public Optional<Output<String>> registryId() {
         return Optional.ofNullable(this.registryId);
     }
@@ -34,6 +38,10 @@ public final class ReplicationConfigurationState extends com.pulumi.resources.Re
     @Import(name="replicationConfiguration")
     private @Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
 
+    /**
+     * @return Replication configuration for a registry. See Replication Configuration.
+     * 
+     */
     public Optional<Output<ReplicationConfigurationReplicationConfigurationGetArgs>> replicationConfiguration() {
         return Optional.ofNullable(this.replicationConfiguration);
     }
@@ -63,20 +71,44 @@ public final class ReplicationConfigurationState extends com.pulumi.resources.Re
             $ = new ReplicationConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param registryId The account ID of the destination registry to replicate to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
 
+        /**
+         * @param registryId The account ID of the destination registry to replicate to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }
 
+        /**
+         * @param replicationConfiguration Replication configuration for a registry. See Replication Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationConfiguration(@Nullable Output<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration) {
             $.replicationConfiguration = replicationConfiguration;
             return this;
         }
 
+        /**
+         * @param replicationConfiguration Replication configuration for a registry. See Replication Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationConfiguration(ReplicationConfigurationReplicationConfigurationGetArgs replicationConfiguration) {
             return replicationConfiguration(Output.of(replicationConfiguration));
         }

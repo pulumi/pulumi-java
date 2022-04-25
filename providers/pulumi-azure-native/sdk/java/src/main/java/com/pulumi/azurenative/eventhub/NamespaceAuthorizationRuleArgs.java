@@ -25,6 +25,10 @@ public final class NamespaceAuthorizationRuleArgs extends com.pulumi.resources.R
     @Import(name="authorizationRuleName")
     private @Nullable Output<String> authorizationRuleName;
 
+    /**
+     * @return The authorization rule name.
+     * 
+     */
     public Optional<Output<String>> authorizationRuleName() {
         return Optional.ofNullable(this.authorizationRuleName);
     }
@@ -36,6 +40,10 @@ public final class NamespaceAuthorizationRuleArgs extends com.pulumi.resources.R
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -47,6 +55,10 @@ public final class NamespaceAuthorizationRuleArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class NamespaceAuthorizationRuleArgs extends com.pulumi.resources.R
     @Import(name="rights", required=true)
     private Output<List<Either<String,AccessRights>>> rights;
 
+    /**
+     * @return The rights associated with the rule.
+     * 
+     */
     public Output<List<Either<String,AccessRights>>> rights() {
         return this.rights;
     }
@@ -89,42 +105,96 @@ public final class NamespaceAuthorizationRuleArgs extends com.pulumi.resources.R
             $ = new NamespaceAuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationRuleName The authorization rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(@Nullable Output<String> authorizationRuleName) {
             $.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
+        /**
+         * @param authorizationRuleName The authorization rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(String authorizationRuleName) {
             return authorizationRuleName(Output.of(authorizationRuleName));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(Output<List<Either<String,AccessRights>>> rights) {
             $.rights = rights;
             return this;
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(List<Either<String,AccessRights>> rights) {
             return rights(Output.of(rights));
         }
 
+        /**
+         * @param rights The rights associated with the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(Either<String,AccessRights>... rights) {
             return rights(List.of(rights));
         }

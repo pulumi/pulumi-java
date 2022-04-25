@@ -24,6 +24,10 @@ public final class ApigatewayGatewayConfigArgs extends com.pulumi.resources.Reso
     @Import(name="backendConfig", required=true)
     private Output<ApigatewayBackendConfigArgs> backendConfig;
 
+    /**
+     * @return Backend settings that are applied to all backends of the Gateway.
+     * 
+     */
     public Output<ApigatewayBackendConfigArgs> backendConfig() {
         return this.backendConfig;
     }
@@ -52,11 +56,23 @@ public final class ApigatewayGatewayConfigArgs extends com.pulumi.resources.Reso
             $ = new ApigatewayGatewayConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendConfig Backend settings that are applied to all backends of the Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendConfig(Output<ApigatewayBackendConfigArgs> backendConfig) {
             $.backendConfig = backendConfig;
             return this;
         }
 
+        /**
+         * @param backendConfig Backend settings that are applied to all backends of the Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendConfig(ApigatewayBackendConfigArgs backendConfig) {
             return backendConfig(Output.of(backendConfig));
         }

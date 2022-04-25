@@ -28,6 +28,10 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="blueprint")
     private @Nullable Output<String> blueprint;
 
+    /**
+     * @return The link to the blueprint.
+     * 
+     */
     public Optional<Output<String>> blueprint() {
         return Optional.ofNullable(this.blueprint);
     }
@@ -39,6 +43,10 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="componentVersion")
     private @Nullable Output<Map<String,String>> componentVersion;
 
+    /**
+     * @return The versions of different services in the cluster.
+     * 
+     */
     public Optional<Output<Map<String,String>>> componentVersion() {
         return Optional.ofNullable(this.componentVersion);
     }
@@ -50,6 +58,10 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="configurations")
     private @Nullable Output<Object> configurations;
 
+    /**
+     * @return The cluster configurations.
+     * 
+     */
     public Optional<Output<Object>> configurations() {
         return Optional.ofNullable(this.configurations);
     }
@@ -61,6 +73,10 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The type of cluster.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -92,38 +108,86 @@ public final class ClusterDefinitionArgs extends com.pulumi.resources.ResourceAr
             $ = new ClusterDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blueprint The link to the blueprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprint(@Nullable Output<String> blueprint) {
             $.blueprint = blueprint;
             return this;
         }
 
+        /**
+         * @param blueprint The link to the blueprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprint(String blueprint) {
             return blueprint(Output.of(blueprint));
         }
 
+        /**
+         * @param componentVersion The versions of different services in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentVersion(@Nullable Output<Map<String,String>> componentVersion) {
             $.componentVersion = componentVersion;
             return this;
         }
 
+        /**
+         * @param componentVersion The versions of different services in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentVersion(Map<String,String> componentVersion) {
             return componentVersion(Output.of(componentVersion));
         }
 
+        /**
+         * @param configurations The cluster configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurations(@Nullable Output<Object> configurations) {
             $.configurations = configurations;
             return this;
         }
 
+        /**
+         * @param configurations The cluster configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurations(Object configurations) {
             return configurations(Output.of(configurations));
         }
 
+        /**
+         * @param kind The type of cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The type of cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

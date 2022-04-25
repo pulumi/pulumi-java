@@ -23,6 +23,10 @@ public final class StorageSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return Google Cloud Storage bucket containing source (see [Bucket Name Requirements] (https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -34,6 +38,10 @@ public final class StorageSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="generation", required=true)
     private String generation;
 
+    /**
+     * @return Google Cloud Storage generation for the object.
+     * 
+     */
     public String generation() {
         return this.generation;
     }
@@ -45,6 +53,10 @@ public final class StorageSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="object", required=true)
     private String object;
 
+    /**
+     * @return Google Cloud Storage object containing source.
+     * 
+     */
     public String object() {
         return this.object;
     }
@@ -75,16 +87,34 @@ public final class StorageSourceResponse extends com.pulumi.resources.InvokeArgs
             $ = new StorageSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Google Cloud Storage bucket containing source (see [Bucket Name Requirements] (https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param generation Google Cloud Storage generation for the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder generation(String generation) {
             $.generation = generation;
             return this;
         }
 
+        /**
+         * @param object Google Cloud Storage object containing source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder object(String object) {
             $.object = object;
             return this;

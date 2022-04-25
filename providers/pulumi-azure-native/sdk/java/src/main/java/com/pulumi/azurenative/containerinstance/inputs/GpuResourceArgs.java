@@ -27,6 +27,10 @@ public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return The count of the GPU resource.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -38,6 +42,10 @@ public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<Either<String,GpuSku>> sku;
 
+    /**
+     * @return The SKU of the GPU resource.
+     * 
+     */
     public Output<Either<String,GpuSku>> sku() {
         return this.sku;
     }
@@ -67,28 +75,64 @@ public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GpuResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The count of the GPU resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The count of the GPU resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param sku The SKU of the GPU resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<Either<String,GpuSku>> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the GPU resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Either<String,GpuSku> sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param sku The SKU of the GPU resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Either.ofLeft(sku));
         }
 
+        /**
+         * @param sku The SKU of the GPU resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(GpuSku sku) {
             return sku(Either.ofRight(sku));
         }

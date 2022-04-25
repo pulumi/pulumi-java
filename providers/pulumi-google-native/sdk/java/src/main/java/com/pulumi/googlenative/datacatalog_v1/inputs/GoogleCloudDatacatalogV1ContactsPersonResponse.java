@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends com.pu
     @Import(name="designation", required=true)
     private String designation;
 
+    /**
+     * @return Designation of the person, for example, Data Steward.
+     * 
+     */
     public String designation() {
         return this.designation;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends com.pu
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends com.pu
             $ = new GoogleCloudDatacatalogV1ContactsPersonResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param designation Designation of the person, for example, Data Steward.
+         * 
+         * @return builder
+         * 
+         */
         public Builder designation(String designation) {
             $.designation = designation;
             return this;
         }
 
+        /**
+         * @param email Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;

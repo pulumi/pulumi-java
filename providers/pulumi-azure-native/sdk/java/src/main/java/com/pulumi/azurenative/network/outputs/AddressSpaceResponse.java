@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AddressSpaceResponse {
     /**
-     * A list of address blocks reserved for this virtual network in CIDR notation.
+     * @return A list of address blocks reserved for this virtual network in CIDR notation.
      * 
      */
     private final @Nullable List<String> addressPrefixes;
@@ -23,9 +23,9 @@ public final class AddressSpaceResponse {
     }
 
     /**
-     * A list of address blocks reserved for this virtual network in CIDR notation.
+     * @return A list of address blocks reserved for this virtual network in CIDR notation.
      * 
-    */
+     */
     public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }

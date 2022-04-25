@@ -24,7 +24,7 @@ public final class GetBucketResult {
     private final List<GetBucketEncryption> encryptions;
     private final Boolean forceDestroy;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -101,9 +101,9 @@ public final class GetBucketResult {
         return this.forceDestroy;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

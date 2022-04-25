@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedRuleGroupOverrideResponse {
     /**
-     * The managed rule group to override.
+     * @return The managed rule group to override.
      * 
      */
     private final String ruleGroupName;
     /**
-     * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+     * @return List of rules that will be disabled. If none specified, all rules in the group will be disabled.
      * 
      */
     private final @Nullable List<ManagedRuleOverrideResponse> rules;
@@ -32,16 +32,16 @@ public final class ManagedRuleGroupOverrideResponse {
     }
 
     /**
-     * The managed rule group to override.
+     * @return The managed rule group to override.
      * 
-    */
+     */
     public String ruleGroupName() {
         return this.ruleGroupName;
     }
     /**
-     * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+     * @return List of rules that will be disabled. If none specified, all rules in the group will be disabled.
      * 
-    */
+     */
     public List<ManagedRuleOverrideResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }

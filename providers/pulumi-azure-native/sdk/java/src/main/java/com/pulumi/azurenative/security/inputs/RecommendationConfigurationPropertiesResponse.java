@@ -31,6 +31,10 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
     @Import(name="recommendationType", required=true)
     private String recommendationType;
 
+    /**
+     * @return The type of IoT Security recommendation.
+     * 
+     */
     public String recommendationType() {
         return this.recommendationType;
     }
@@ -42,6 +46,10 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Recommendation status. When the recommendation status is disabled recommendations are not generated.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -77,11 +85,23 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
             return this;
         }
 
+        /**
+         * @param recommendationType The type of IoT Security recommendation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationType(String recommendationType) {
             $.recommendationType = recommendationType;
             return this;
         }
 
+        /**
+         * @param status Recommendation status. When the recommendation status is disabled recommendations are not generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

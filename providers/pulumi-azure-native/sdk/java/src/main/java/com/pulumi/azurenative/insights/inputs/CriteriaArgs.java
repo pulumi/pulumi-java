@@ -28,6 +28,10 @@ public final class CriteriaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
     private @Nullable Output<List<DimensionArgs>> dimensions;
 
+    /**
+     * @return List of Dimensions for creating metric
+     * 
+     */
     public Optional<Output<List<DimensionArgs>>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -39,6 +43,10 @@ public final class CriteriaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return Name of the metric
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -68,24 +76,54 @@ public final class CriteriaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensions List of Dimensions for creating metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable Output<List<DimensionArgs>> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions List of Dimensions for creating metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(List<DimensionArgs> dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param dimensions List of Dimensions for creating metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(DimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param metricName Name of the metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName Name of the metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }

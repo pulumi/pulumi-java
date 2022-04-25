@@ -28,6 +28,10 @@ public final class MultiStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="multistepNumber")
     private @Nullable Output<Integer> multistepNumber;
 
+    /**
+     * @return Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+     * 
+     */
     public Optional<Output<Integer>> multistepNumber() {
         return Optional.ofNullable(this.multistepNumber);
     }
@@ -39,6 +43,10 @@ public final class MultiStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryStep")
     private @Nullable Output<PrimaryStepArgs> primaryStep;
 
+    /**
+     * @return Present if it is a primary (original) step.
+     * 
+     */
     public Optional<Output<PrimaryStepArgs>> primaryStep() {
         return Optional.ofNullable(this.primaryStep);
     }
@@ -50,6 +58,10 @@ public final class MultiStepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryStepId")
     private @Nullable Output<String> primaryStepId;
 
+    /**
+     * @return Step Id of the primary (original) step, which might be this step.
+     * 
+     */
     public Optional<Output<String>> primaryStepId() {
         return Optional.ofNullable(this.primaryStepId);
     }
@@ -80,29 +92,65 @@ public final class MultiStepArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MultiStepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param multistepNumber Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multistepNumber(@Nullable Output<Integer> multistepNumber) {
             $.multistepNumber = multistepNumber;
             return this;
         }
 
+        /**
+         * @param multistepNumber Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multistepNumber(Integer multistepNumber) {
             return multistepNumber(Output.of(multistepNumber));
         }
 
+        /**
+         * @param primaryStep Present if it is a primary (original) step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStep(@Nullable Output<PrimaryStepArgs> primaryStep) {
             $.primaryStep = primaryStep;
             return this;
         }
 
+        /**
+         * @param primaryStep Present if it is a primary (original) step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStep(PrimaryStepArgs primaryStep) {
             return primaryStep(Output.of(primaryStep));
         }
 
+        /**
+         * @param primaryStepId Step Id of the primary (original) step, which might be this step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStepId(@Nullable Output<String> primaryStepId) {
             $.primaryStepId = primaryStepId;
             return this;
         }
 
+        /**
+         * @param primaryStepId Step Id of the primary (original) step, which might be this step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStepId(String primaryStepId) {
             return primaryStepId(Output.of(primaryStepId));
         }

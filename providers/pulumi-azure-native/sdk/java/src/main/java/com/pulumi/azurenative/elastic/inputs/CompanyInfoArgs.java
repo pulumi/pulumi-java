@@ -26,6 +26,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="business")
     private @Nullable Output<String> business;
 
+    /**
+     * @return Business of the company
+     * 
+     */
     public Optional<Output<String>> business() {
         return Optional.ofNullable(this.business);
     }
@@ -37,6 +41,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="country")
     private @Nullable Output<String> country;
 
+    /**
+     * @return Country of the company location.
+     * 
+     */
     public Optional<Output<String>> country() {
         return Optional.ofNullable(this.country);
     }
@@ -48,6 +56,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return Domain of the company
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -59,6 +71,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="employeesNumber")
     private @Nullable Output<String> employeesNumber;
 
+    /**
+     * @return Number of employees in the company
+     * 
+     */
     public Optional<Output<String>> employeesNumber() {
         return Optional.ofNullable(this.employeesNumber);
     }
@@ -70,6 +86,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return State of the company location.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -102,47 +122,107 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CompanyInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param business Business of the company
+         * 
+         * @return builder
+         * 
+         */
         public Builder business(@Nullable Output<String> business) {
             $.business = business;
             return this;
         }
 
+        /**
+         * @param business Business of the company
+         * 
+         * @return builder
+         * 
+         */
         public Builder business(String business) {
             return business(Output.of(business));
         }
 
+        /**
+         * @param country Country of the company location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(@Nullable Output<String> country) {
             $.country = country;
             return this;
         }
 
+        /**
+         * @param country Country of the company location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(String country) {
             return country(Output.of(country));
         }
 
+        /**
+         * @param domain Domain of the company
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain Domain of the company
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param employeesNumber Number of employees in the company
+         * 
+         * @return builder
+         * 
+         */
         public Builder employeesNumber(@Nullable Output<String> employeesNumber) {
             $.employeesNumber = employeesNumber;
             return this;
         }
 
+        /**
+         * @param employeesNumber Number of employees in the company
+         * 
+         * @return builder
+         * 
+         */
         public Builder employeesNumber(String employeesNumber) {
             return employeesNumber(Output.of(employeesNumber));
         }
 
+        /**
+         * @param state State of the company location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state State of the company location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

@@ -27,6 +27,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="level", required=true)
     private Output<String> level;
 
+    /**
+     * @return The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
+     * 
+     */
     public Output<String> level() {
         return this.level;
     }
@@ -38,6 +42,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stages")
     private @Nullable Output<List<String>> stages;
 
+    /**
+     * @return Stages is a list of stages for which events are created.
+     * 
+     */
     public Optional<Output<List<String>>> stages() {
         return Optional.ofNullable(this.stages);
     }
@@ -67,24 +75,54 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Output<String> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param stages Stages is a list of stages for which events are created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(@Nullable Output<List<String>> stages) {
             $.stages = stages;
             return this;
         }
 
+        /**
+         * @param stages Stages is a list of stages for which events are created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(List<String> stages) {
             return stages(Output.of(stages));
         }
 
+        /**
+         * @param stages Stages is a list of stages for which events are created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stages(String... stages) {
             return stages(List.of(stages));
         }

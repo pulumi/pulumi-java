@@ -28,6 +28,10 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -39,6 +43,10 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hostPlatform", required=true)
     private Output<Either<String,PlatformType>> hostPlatform;
 
+    /**
+     * @return Host OS supported by the Kubernetes role.
+     * 
+     */
     public Output<Either<String,PlatformType>> hostPlatform() {
         return this.hostPlatform;
     }
@@ -51,6 +59,11 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Role type.
+     * Expected value is &#39;Kubernetes&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -62,6 +75,10 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubernetesClusterInfo", required=true)
     private Output<KubernetesClusterInfoArgs> kubernetesClusterInfo;
 
+    /**
+     * @return Kubernetes cluster configuration
+     * 
+     */
     public Output<KubernetesClusterInfoArgs> kubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
     }
@@ -73,6 +90,10 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubernetesRoleResources", required=true)
     private Output<KubernetesRoleResourcesArgs> kubernetesRoleResources;
 
+    /**
+     * @return Kubernetes role resources
+     * 
+     */
     public Output<KubernetesRoleResourcesArgs> kubernetesRoleResources() {
         return this.kubernetesRoleResources;
     }
@@ -84,6 +105,10 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +120,10 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -106,6 +135,10 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleStatus", required=true)
     private Output<Either<String,RoleStatus>> roleStatus;
 
+    /**
+     * @return Role status.
+     * 
+     */
     public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
@@ -141,90 +174,212 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new KubernetesRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param hostPlatform Host OS supported by the Kubernetes role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPlatform(Output<Either<String,PlatformType>> hostPlatform) {
             $.hostPlatform = hostPlatform;
             return this;
         }
 
+        /**
+         * @param hostPlatform Host OS supported by the Kubernetes role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
             return hostPlatform(Output.of(hostPlatform));
         }
 
+        /**
+         * @param hostPlatform Host OS supported by the Kubernetes role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPlatform(String hostPlatform) {
             return hostPlatform(Either.ofLeft(hostPlatform));
         }
 
+        /**
+         * @param hostPlatform Host OS supported by the Kubernetes role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPlatform(PlatformType hostPlatform) {
             return hostPlatform(Either.ofRight(hostPlatform));
         }
 
+        /**
+         * @param kind Role type.
+         * Expected value is &#39;Kubernetes&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Role type.
+         * Expected value is &#39;Kubernetes&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kubernetesClusterInfo Kubernetes cluster configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesClusterInfo(Output<KubernetesClusterInfoArgs> kubernetesClusterInfo) {
             $.kubernetesClusterInfo = kubernetesClusterInfo;
             return this;
         }
 
+        /**
+         * @param kubernetesClusterInfo Kubernetes cluster configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesClusterInfo(KubernetesClusterInfoArgs kubernetesClusterInfo) {
             return kubernetesClusterInfo(Output.of(kubernetesClusterInfo));
         }
 
+        /**
+         * @param kubernetesRoleResources Kubernetes role resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesRoleResources(Output<KubernetesRoleResourcesArgs> kubernetesRoleResources) {
             $.kubernetesRoleResources = kubernetesRoleResources;
             return this;
         }
 
+        /**
+         * @param kubernetesRoleResources Kubernetes role resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesRoleResources(KubernetesRoleResourcesArgs kubernetesRoleResources) {
             return kubernetesRoleResources(Output.of(kubernetesRoleResources));
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             $.roleStatus = roleStatus;
             return this;
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             return roleStatus(Output.of(roleStatus));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(String roleStatus) {
             return roleStatus(Either.ofLeft(roleStatus));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(RoleStatus roleStatus) {
             return roleStatus(Either.ofRight(roleStatus));
         }

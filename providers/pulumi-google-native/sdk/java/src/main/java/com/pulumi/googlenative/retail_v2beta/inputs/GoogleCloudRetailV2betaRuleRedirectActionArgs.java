@@ -26,6 +26,10 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends com.pul
     @Import(name="redirectUri")
     private @Nullable Output<String> redirectUri;
 
+    /**
+     * @return URL must have length equal or less than 2000 characters.
+     * 
+     */
     public Optional<Output<String>> redirectUri() {
         return Optional.ofNullable(this.redirectUri);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends com.pul
             $ = new GoogleCloudRetailV2betaRuleRedirectActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param redirectUri URL must have length equal or less than 2000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUri(@Nullable Output<String> redirectUri) {
             $.redirectUri = redirectUri;
             return this;
         }
 
+        /**
+         * @param redirectUri URL must have length equal or less than 2000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUri(String redirectUri) {
             return redirectUri(Output.of(redirectUri));
         }

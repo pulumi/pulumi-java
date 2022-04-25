@@ -19,6 +19,10 @@ public final class GetAccessPointPolicyArgs extends com.pulumi.resources.InvokeA
     @Import(name="objectLambdaAccessPoint", required=true)
     private String objectLambdaAccessPoint;
 
+    /**
+     * @return The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+     * 
+     */
     public String objectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
@@ -47,6 +51,12 @@ public final class GetAccessPointPolicyArgs extends com.pulumi.resources.InvokeA
             $ = new GetAccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectLambdaAccessPoint The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectLambdaAccessPoint(String objectLambdaAccessPoint) {
             $.objectLambdaAccessPoint = objectLambdaAccessPoint;
             return this;

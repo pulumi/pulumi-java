@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ArtifactInstallPropertiesResponse {
     /**
-     * The artifact&#39;s identifier.
+     * @return The artifact&#39;s identifier.
      * 
      */
     private final @Nullable String artifactId;
     /**
-     * The artifact&#39;s title.
+     * @return The artifact&#39;s title.
      * 
      */
     private final @Nullable String artifactTitle;
     /**
-     * The status message from the deployment.
+     * @return The status message from the deployment.
      * 
      */
     private final @Nullable String deploymentStatusMessage;
     /**
-     * The time that the artifact starts to install on the virtual machine.
+     * @return The time that the artifact starts to install on the virtual machine.
      * 
      */
     private final @Nullable String installTime;
     /**
-     * The parameters of the artifact.
+     * @return The parameters of the artifact.
      * 
      */
     private final @Nullable List<ArtifactParameterPropertiesResponse> parameters;
     /**
-     * The status of the artifact.
+     * @return The status of the artifact.
      * 
      */
     private final @Nullable String status;
     /**
-     * The status message from the virtual machine extension.
+     * @return The status message from the virtual machine extension.
      * 
      */
     private final @Nullable String vmExtensionStatusMessage;
@@ -68,51 +68,51 @@ public final class ArtifactInstallPropertiesResponse {
     }
 
     /**
-     * The artifact&#39;s identifier.
+     * @return The artifact&#39;s identifier.
      * 
-    */
+     */
     public Optional<String> artifactId() {
         return Optional.ofNullable(this.artifactId);
     }
     /**
-     * The artifact&#39;s title.
+     * @return The artifact&#39;s title.
      * 
-    */
+     */
     public Optional<String> artifactTitle() {
         return Optional.ofNullable(this.artifactTitle);
     }
     /**
-     * The status message from the deployment.
+     * @return The status message from the deployment.
      * 
-    */
+     */
     public Optional<String> deploymentStatusMessage() {
         return Optional.ofNullable(this.deploymentStatusMessage);
     }
     /**
-     * The time that the artifact starts to install on the virtual machine.
+     * @return The time that the artifact starts to install on the virtual machine.
      * 
-    */
+     */
     public Optional<String> installTime() {
         return Optional.ofNullable(this.installTime);
     }
     /**
-     * The parameters of the artifact.
+     * @return The parameters of the artifact.
      * 
-    */
+     */
     public List<ArtifactParameterPropertiesResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * The status of the artifact.
+     * @return The status of the artifact.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The status message from the virtual machine extension.
+     * @return The status message from the virtual machine extension.
      * 
-    */
+     */
     public Optional<String> vmExtensionStatusMessage() {
         return Optional.ofNullable(this.vmExtensionStatusMessage);
     }

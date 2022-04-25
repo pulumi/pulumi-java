@@ -31,6 +31,10 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the organization&#39;s IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -42,6 +46,10 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="members")
     private @Nullable Output<List<String>> members;
 
+    /**
+     * @return A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+     * 
+     */
     public Optional<Output<List<String>>> members() {
         return Optional.ofNullable(this.members);
     }
@@ -53,6 +61,10 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="orgId")
     private @Nullable Output<String> orgId;
 
+    /**
+     * @return The numeric ID of the organization in which you want to create a custom role.
+     * 
+     */
     public Optional<Output<String>> orgId() {
         return Optional.ofNullable(this.orgId);
     }
@@ -66,6 +78,12 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -107,42 +125,100 @@ public final class IAMBindingState extends com.pulumi.resources.ResourceArgs {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param etag (Computed) The etag of the organization&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the organization&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param members A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(@Nullable Output<List<String>> members) {
             $.members = members;
             return this;
         }
 
+        /**
+         * @param members A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(List<String> members) {
             return members(Output.of(members));
         }
 
+        /**
+         * @param members A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(String... members) {
             return members(List.of(members));
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to create a custom role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(@Nullable Output<String> orgId) {
             $.orgId = orgId;
             return this;
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to create a custom role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(String orgId) {
             return orgId(Output.of(orgId));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

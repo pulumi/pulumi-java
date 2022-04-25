@@ -30,6 +30,10 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
     @Import(name="algorithm")
     private @Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
 
+    /**
+     * @return The search algorithm specified for the study.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__StudyConfigAlgorithm>> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -41,6 +45,10 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
     @Import(name="automatedStoppingConfig")
     private @Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
 
+    /**
+     * @return Configuration for automated stopping of unpromising Trials.
+     * 
+     */
     public Optional<Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs>> automatedStoppingConfig() {
         return Optional.ofNullable(this.automatedStoppingConfig);
     }
@@ -52,6 +60,10 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
     @Import(name="metrics")
     private @Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
 
+    /**
+     * @return Metric specs for the study.
+     * 
+     */
     public Optional<Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>>> metrics() {
         return Optional.ofNullable(this.metrics);
     }
@@ -63,6 +75,10 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
     @Import(name="parameters", required=true)
     private Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters;
 
+    /**
+     * @return The set of parameters to tune.
+     * 
+     */
     public Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters() {
         return this.parameters;
     }
@@ -94,46 +110,106 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
             $ = new GoogleCloudMlV1__StudyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The search algorithm specified for the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(@Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm The search algorithm specified for the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(GoogleCloudMlV1__StudyConfigAlgorithm algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param automatedStoppingConfig Configuration for automated stopping of unpromising Trials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatedStoppingConfig(@Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig) {
             $.automatedStoppingConfig = automatedStoppingConfig;
             return this;
         }
 
+        /**
+         * @param automatedStoppingConfig Configuration for automated stopping of unpromising Trials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatedStoppingConfig(GoogleCloudMlV1__AutomatedStoppingConfigArgs automatedStoppingConfig) {
             return automatedStoppingConfig(Output.of(automatedStoppingConfig));
         }
 
+        /**
+         * @param metrics Metric specs for the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(@Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics) {
             $.metrics = metrics;
             return this;
         }
 
+        /**
+         * @param metrics Metric specs for the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs> metrics) {
             return metrics(Output.of(metrics));
         }
 
+        /**
+         * @param metrics Metric specs for the study.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metrics(GoogleCloudMlV1_StudyConfig_MetricSpecArgs... metrics) {
             return metrics(List.of(metrics));
         }
 
+        /**
+         * @param parameters The set of parameters to tune.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The set of parameters to tune.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The set of parameters to tune.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(GoogleCloudMlV1_StudyConfig_ParameterSpecArgs... parameters) {
             return parameters(List.of(parameters));
         }

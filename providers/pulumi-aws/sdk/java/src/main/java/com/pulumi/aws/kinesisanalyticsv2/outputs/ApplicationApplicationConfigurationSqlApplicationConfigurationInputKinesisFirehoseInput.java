@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput {
     /**
-     * The ARN of the delivery stream.
+     * @return The ARN of the delivery stream.
      * 
      */
     private final String resourceArn;
@@ -21,9 +21,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * The ARN of the delivery stream.
+     * @return The ARN of the delivery stream.
      * 
-    */
+     */
     public String resourceArn() {
         return this.resourceArn;
     }

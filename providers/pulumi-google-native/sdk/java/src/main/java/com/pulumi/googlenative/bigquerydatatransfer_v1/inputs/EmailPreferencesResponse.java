@@ -23,6 +23,10 @@ public final class EmailPreferencesResponse extends com.pulumi.resources.InvokeA
     @Import(name="enableFailureEmail", required=true)
     private Boolean enableFailureEmail;
 
+    /**
+     * @return If true, email notifications will be sent on transfer run failures.
+     * 
+     */
     public Boolean enableFailureEmail() {
         return this.enableFailureEmail;
     }
@@ -51,6 +55,12 @@ public final class EmailPreferencesResponse extends com.pulumi.resources.InvokeA
             $ = new EmailPreferencesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableFailureEmail If true, email notifications will be sent on transfer run failures.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFailureEmail(Boolean enableFailureEmail) {
             $.enableFailureEmail = enableFailureEmail;
             return this;

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterMasterInstanceFleetInstanceTypeConfigConfiguration {
     /**
-     * Classification within a configuration.
+     * @return Classification within a configuration.
      * 
      */
     private final @Nullable String classification;
     /**
-     * Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+     * @return Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
      * 
      */
     private final @Nullable Map<String,Object> properties;
@@ -33,16 +33,16 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigConfiguration {
     }
 
     /**
-     * Classification within a configuration.
+     * @return Classification within a configuration.
      * 
-    */
+     */
     public Optional<String> classification() {
         return Optional.ofNullable(this.classification);
     }
     /**
-     * Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+     * @return Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
      * 
-    */
+     */
     public Map<String,Object> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }

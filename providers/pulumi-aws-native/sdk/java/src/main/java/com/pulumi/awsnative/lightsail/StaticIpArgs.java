@@ -22,6 +22,10 @@ public final class StaticIpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachedTo")
     private @Nullable Output<String> attachedTo;
 
+    /**
+     * @return The instance where the static IP is attached.
+     * 
+     */
     public Optional<Output<String>> attachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
@@ -33,6 +37,10 @@ public final class StaticIpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="staticIpName")
     private @Nullable Output<String> staticIpName;
 
+    /**
+     * @return The name of the static IP address.
+     * 
+     */
     public Optional<Output<String>> staticIpName() {
         return Optional.ofNullable(this.staticIpName);
     }
@@ -62,20 +70,44 @@ public final class StaticIpArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StaticIpArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedTo The instance where the static IP is attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedTo(@Nullable Output<String> attachedTo) {
             $.attachedTo = attachedTo;
             return this;
         }
 
+        /**
+         * @param attachedTo The instance where the static IP is attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedTo(String attachedTo) {
             return attachedTo(Output.of(attachedTo));
         }
 
+        /**
+         * @param staticIpName The name of the static IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticIpName(@Nullable Output<String> staticIpName) {
             $.staticIpName = staticIpName;
             return this;
         }
 
+        /**
+         * @param staticIpName The name of the static IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticIpName(String staticIpName) {
             return staticIpName(Output.of(staticIpName));
         }

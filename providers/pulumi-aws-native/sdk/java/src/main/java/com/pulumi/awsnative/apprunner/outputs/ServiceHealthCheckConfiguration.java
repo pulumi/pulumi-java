@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceHealthCheckConfiguration {
     /**
-     * Health check Healthy Threshold
+     * @return Health check Healthy Threshold
      * 
      */
     private final @Nullable Integer healthyThreshold;
     /**
-     * Health check Interval
+     * @return Health check Interval
      * 
      */
     private final @Nullable Integer interval;
     /**
-     * Health check Path
+     * @return Health check Path
      * 
      */
     private final @Nullable String path;
     /**
-     * Health Check Protocol
+     * @return Health Check Protocol
      * 
      */
     private final @Nullable ServiceHealthCheckConfigurationProtocol protocol;
     /**
-     * Health check Timeout
+     * @return Health check Timeout
      * 
      */
     private final @Nullable Integer timeout;
     /**
-     * Health check Unhealthy Threshold
+     * @return Health check Unhealthy Threshold
      * 
      */
     private final @Nullable Integer unhealthyThreshold;
@@ -61,44 +61,44 @@ public final class ServiceHealthCheckConfiguration {
     }
 
     /**
-     * Health check Healthy Threshold
+     * @return Health check Healthy Threshold
      * 
-    */
+     */
     public Optional<Integer> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
     /**
-     * Health check Interval
+     * @return Health check Interval
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * Health check Path
+     * @return Health check Path
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Health Check Protocol
+     * @return Health Check Protocol
      * 
-    */
+     */
     public Optional<ServiceHealthCheckConfigurationProtocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * Health check Timeout
+     * @return Health check Timeout
      * 
-    */
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * Health check Unhealthy Threshold
+     * @return Health check Unhealthy Threshold
      * 
-    */
+     */
     public Optional<Integer> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }

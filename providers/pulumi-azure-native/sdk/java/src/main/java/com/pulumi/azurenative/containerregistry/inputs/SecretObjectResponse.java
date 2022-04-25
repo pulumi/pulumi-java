@@ -26,6 +26,11 @@ public final class SecretObjectResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the secret object which determines how the value of the secret object has to be
+     * interpreted.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -39,6 +44,12 @@ public final class SecretObjectResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value of the secret. The format of this value will be determined
+     * based on the type of the secret object. If the type is Opaque, the value will be
+     * used as is without any modification.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -68,11 +79,26 @@ public final class SecretObjectResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SecretObjectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of the secret object which determines how the value of the secret object has to be
+         * interpreted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The value of the secret. The format of this value will be determined
+         * based on the type of the secret object. If the type is Opaque, the value will be
+         * used as is without any modification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -20,6 +20,10 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends com.pulumi.res
     @Import(name="hostname", required=true)
     private Output<String> hostname;
 
+    /**
+     * @return The DNS host name for your virtual node.
+     * 
+     */
     public Output<String> hostname() {
         return this.hostname;
     }
@@ -48,11 +52,23 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends com.pulumi.res
             $ = new VirtualNodeSpecServiceDiscoveryDnsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname The DNS host name for your virtual node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname The DNS host name for your virtual node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }

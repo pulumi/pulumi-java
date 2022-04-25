@@ -27,6 +27,10 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return Name of the bucket for notification configuration.
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -38,6 +42,10 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="eventbridge")
     private @Nullable Output<Boolean> eventbridge;
 
+    /**
+     * @return Whether to enable Amazon EventBridge notifications.
+     * 
+     */
     public Optional<Output<Boolean>> eventbridge() {
         return Optional.ofNullable(this.eventbridge);
     }
@@ -49,6 +57,10 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="lambdaFunctions")
     private @Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
 
+    /**
+     * @return Used to configure notifications to a Lambda Function. See below.
+     * 
+     */
     public Optional<Output<List<BucketNotificationLambdaFunctionGetArgs>>> lambdaFunctions() {
         return Optional.ofNullable(this.lambdaFunctions);
     }
@@ -60,6 +72,10 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="queues")
     private @Nullable Output<List<BucketNotificationQueueGetArgs>> queues;
 
+    /**
+     * @return Notification configuration to SQS Queue. See below.
+     * 
+     */
     public Optional<Output<List<BucketNotificationQueueGetArgs>>> queues() {
         return Optional.ofNullable(this.queues);
     }
@@ -71,6 +87,10 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
     @Import(name="topics")
     private @Nullable Output<List<BucketNotificationTopicGetArgs>> topics;
 
+    /**
+     * @return Notification configuration to SNS Topic. See below.
+     * 
+     */
     public Optional<Output<List<BucketNotificationTopicGetArgs>>> topics() {
         return Optional.ofNullable(this.topics);
     }
@@ -103,59 +123,137 @@ public final class BucketNotificationState extends com.pulumi.resources.Resource
             $ = new BucketNotificationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket Name of the bucket for notification configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Name of the bucket for notification configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param eventbridge Whether to enable Amazon EventBridge notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventbridge(@Nullable Output<Boolean> eventbridge) {
             $.eventbridge = eventbridge;
             return this;
         }
 
+        /**
+         * @param eventbridge Whether to enable Amazon EventBridge notifications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventbridge(Boolean eventbridge) {
             return eventbridge(Output.of(eventbridge));
         }
 
+        /**
+         * @param lambdaFunctions Used to configure notifications to a Lambda Function. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaFunctions(@Nullable Output<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions) {
             $.lambdaFunctions = lambdaFunctions;
             return this;
         }
 
+        /**
+         * @param lambdaFunctions Used to configure notifications to a Lambda Function. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaFunctions(List<BucketNotificationLambdaFunctionGetArgs> lambdaFunctions) {
             return lambdaFunctions(Output.of(lambdaFunctions));
         }
 
+        /**
+         * @param lambdaFunctions Used to configure notifications to a Lambda Function. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaFunctions(BucketNotificationLambdaFunctionGetArgs... lambdaFunctions) {
             return lambdaFunctions(List.of(lambdaFunctions));
         }
 
+        /**
+         * @param queues Notification configuration to SQS Queue. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queues(@Nullable Output<List<BucketNotificationQueueGetArgs>> queues) {
             $.queues = queues;
             return this;
         }
 
+        /**
+         * @param queues Notification configuration to SQS Queue. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queues(List<BucketNotificationQueueGetArgs> queues) {
             return queues(Output.of(queues));
         }
 
+        /**
+         * @param queues Notification configuration to SQS Queue. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queues(BucketNotificationQueueGetArgs... queues) {
             return queues(List.of(queues));
         }
 
+        /**
+         * @param topics Notification configuration to SNS Topic. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topics(@Nullable Output<List<BucketNotificationTopicGetArgs>> topics) {
             $.topics = topics;
             return this;
         }
 
+        /**
+         * @param topics Notification configuration to SNS Topic. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topics(List<BucketNotificationTopicGetArgs> topics) {
             return topics(Output.of(topics));
         }
 
+        /**
+         * @param topics Notification configuration to SNS Topic. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topics(BucketNotificationTopicGetArgs... topics) {
             return topics(List.of(topics));
         }

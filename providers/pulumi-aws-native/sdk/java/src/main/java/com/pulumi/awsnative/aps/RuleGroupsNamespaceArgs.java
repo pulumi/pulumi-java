@@ -24,6 +24,10 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
     @Import(name="data", required=true)
     private Output<String> data;
 
+    /**
+     * @return The RuleGroupsNamespace data.
+     * 
+     */
     public Output<String> data() {
         return this.data;
     }
@@ -35,6 +39,10 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The RuleGroupsNamespace name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<RuleGroupsNamespaceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -57,6 +69,10 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
     @Import(name="workspace", required=true)
     private Output<String> workspace;
 
+    /**
+     * @return Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
+     * 
+     */
     public Output<String> workspace() {
         return this.workspace;
     }
@@ -88,42 +104,96 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
             $ = new RuleGroupsNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data The RuleGroupsNamespace data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data The RuleGroupsNamespace data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param name The RuleGroupsNamespace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The RuleGroupsNamespace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<RuleGroupsNamespaceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(RuleGroupsNamespaceTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param workspace Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspace(Output<String> workspace) {
             $.workspace = workspace;
             return this;
         }
 
+        /**
+         * @param workspace Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspace(String workspace) {
             return workspace(Output.of(workspace));
         }

@@ -23,6 +23,10 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the Public IP Block.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -34,6 +38,10 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="numberOfPublicIPs")
     private @Nullable Output<Double> numberOfPublicIPs;
 
+    /**
+     * @return Number of Public IPs requested.
+     * 
+     */
     public Optional<Output<Double>> numberOfPublicIPs() {
         return Optional.ofNullable(this.numberOfPublicIPs);
     }
@@ -45,6 +53,10 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -56,6 +68,10 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="publicIPId")
     private @Nullable Output<String> publicIPId;
 
+    /**
+     * @return NSX Public IP Block identifier. Generally the same as the Public IP Block&#39;s display name
+     * 
+     */
     public Optional<Output<String>> publicIPId() {
         return Optional.ofNullable(this.publicIPId);
     }
@@ -67,6 +83,10 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class WorkloadNetworkPublicIPArgs extends com.pulumi.resources.Reso
             $ = new WorkloadNetworkPublicIPArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the Public IP Block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the Public IP Block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param numberOfPublicIPs Number of Public IPs requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfPublicIPs(@Nullable Output<Double> numberOfPublicIPs) {
             $.numberOfPublicIPs = numberOfPublicIPs;
             return this;
         }
 
+        /**
+         * @param numberOfPublicIPs Number of Public IPs requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfPublicIPs(Double numberOfPublicIPs) {
             return numberOfPublicIPs(Output.of(numberOfPublicIPs));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param publicIPId NSX Public IP Block identifier. Generally the same as the Public IP Block&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPId(@Nullable Output<String> publicIPId) {
             $.publicIPId = publicIPId;
             return this;
         }
 
+        /**
+         * @param publicIPId NSX Public IP Block identifier. Generally the same as the Public IP Block&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPId(String publicIPId) {
             return publicIPId(Output.of(publicIPId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

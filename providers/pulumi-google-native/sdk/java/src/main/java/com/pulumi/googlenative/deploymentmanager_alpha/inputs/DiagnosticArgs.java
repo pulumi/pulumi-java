@@ -23,6 +23,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="field")
     private @Nullable Output<String> field;
 
+    /**
+     * @return JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
+     * 
+     */
     public Optional<Output<String>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -34,6 +38,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="level")
     private @Nullable Output<DiagnosticLevel> level;
 
+    /**
+     * @return Level to record this diagnostic.
+     * 
+     */
     public Optional<Output<DiagnosticLevel>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -63,20 +71,44 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiagnosticArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param level Level to record this diagnostic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<DiagnosticLevel> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level Level to record this diagnostic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(DiagnosticLevel level) {
             return level(Output.of(level));
         }

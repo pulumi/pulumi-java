@@ -16,23 +16,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
     /**
-     * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
+     * @return For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
      * 
      */
     private final @Nullable String fullPathMatch;
     /**
-     * Specifies a list of header match criteria, all of which must match corresponding headers in the request.
+     * @return Specifies a list of header match criteria, all of which must match corresponding headers in the request.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches;
     /**
-     * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+     * @return Specifies that prefixMatch and fullPathMatch matches are case sensitive.
      * 
      */
     private final @Nullable Boolean ignoreCase;
     /**
-     * For satisfying the matchRule condition, the path of the request
+     * @return For satisfying the matchRule condition, the path of the request
      * must match the wildcard pattern specified in pathTemplateMatch
      * after removing any query parameters and anchor that may be part
      * of the original URL.
@@ -44,12 +44,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      */
     private final @Nullable String pathTemplateMatch;
     /**
-     * The value of the header must start with the contents of prefixMatch.
+     * @return The value of the header must start with the contents of prefixMatch.
      * 
      */
     private final @Nullable String prefixMatch;
     /**
-     * Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
+     * @return Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
      * Structure is documented below.
      * 
      */
@@ -72,29 +72,29 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
     }
 
     /**
-     * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
+     * @return For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
      * 
-    */
+     */
     public Optional<String> fullPathMatch() {
         return Optional.ofNullable(this.fullPathMatch);
     }
     /**
-     * Specifies a list of header match criteria, all of which must match corresponding headers in the request.
+     * @return Specifies a list of header match criteria, all of which must match corresponding headers in the request.
      * Structure is documented below.
      * 
-    */
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches() {
         return this.headerMatches == null ? List.of() : this.headerMatches;
     }
     /**
-     * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+     * @return Specifies that prefixMatch and fullPathMatch matches are case sensitive.
      * 
-    */
+     */
     public Optional<Boolean> ignoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
     /**
-     * For satisfying the matchRule condition, the path of the request
+     * @return For satisfying the matchRule condition, the path of the request
      * must match the wildcard pattern specified in pathTemplateMatch
      * after removing any query parameters and anchor that may be part
      * of the original URL.
@@ -103,22 +103,22 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      * have at most 5 wildcard operators and at most 5 variable
      * captures in total.
      * 
-    */
+     */
     public Optional<String> pathTemplateMatch() {
         return Optional.ofNullable(this.pathTemplateMatch);
     }
     /**
-     * The value of the header must start with the contents of prefixMatch.
+     * @return The value of the header must start with the contents of prefixMatch.
      * 
-    */
+     */
     public Optional<String> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
     /**
-     * Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
+     * @return Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
      * Structure is documented below.
      * 
-    */
+     */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches() {
         return this.queryParameterMatches == null ? List.of() : this.queryParameterMatches;
     }

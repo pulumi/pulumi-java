@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PosixFilesystemResponse {
     /**
-     * Root directory path to the filesystem.
+     * @return Root directory path to the filesystem.
      * 
      */
     private final String rootDirectory;
@@ -21,9 +21,9 @@ public final class PosixFilesystemResponse {
     }
 
     /**
-     * Root directory path to the filesystem.
+     * @return Root directory path to the filesystem.
      * 
-    */
+     */
     public String rootDirectory() {
         return this.rootDirectory;
     }

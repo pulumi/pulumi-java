@@ -25,6 +25,10 @@ public final class MCASDataConnectorDataTypesResponse extends com.pulumi.resourc
     @Import(name="alerts")
     private @Nullable DataConnectorDataTypeCommonResponse alerts;
 
+    /**
+     * @return Alerts data type connection.
+     * 
+     */
     public Optional<DataConnectorDataTypeCommonResponse> alerts() {
         return Optional.ofNullable(this.alerts);
     }
@@ -36,6 +40,10 @@ public final class MCASDataConnectorDataTypesResponse extends com.pulumi.resourc
     @Import(name="discoveryLogs")
     private @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
 
+    /**
+     * @return Discovery log data type connection.
+     * 
+     */
     public Optional<DataConnectorDataTypeCommonResponse> discoveryLogs() {
         return Optional.ofNullable(this.discoveryLogs);
     }
@@ -65,11 +73,23 @@ public final class MCASDataConnectorDataTypesResponse extends com.pulumi.resourc
             $ = new MCASDataConnectorDataTypesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alerts Alerts data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
             $.alerts = alerts;
             return this;
         }
 
+        /**
+         * @param discoveryLogs Discovery log data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryLogs(@Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
             $.discoveryLogs = discoveryLogs;
             return this;

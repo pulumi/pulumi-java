@@ -24,6 +24,10 @@ public final class GlobalNetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the global network.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class GlobalNetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<GlobalNetworkTagArgs>> tags;
 
+    /**
+     * @return The tags for the global network.
+     * 
+     */
     public Optional<Output<List<GlobalNetworkTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -64,24 +72,54 @@ public final class GlobalNetworkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GlobalNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param tags The tags for the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<GlobalNetworkTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<GlobalNetworkTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(GlobalNetworkTagArgs... tags) {
             return tags(List.of(tags));
         }

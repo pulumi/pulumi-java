@@ -28,6 +28,10 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends com.pulumi.re
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return The address of the filter item.
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -39,6 +43,10 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends com.pulumi.re
     @Import(name="type")
     private @Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
 
+    /**
+     * @return The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+     * 
+     */
     public Optional<Output<Either<String,ConnectionMonitorEndpointFilterItemType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -68,28 +76,64 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends com.pulumi.re
             $ = new ConnectionMonitorEndpointFilterItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The address of the filter item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address The address of the filter item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param type The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ConnectionMonitorEndpointFilterItemType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ConnectionMonitorEndpointFilterItemType type) {
             return type(Either.ofRight(type));
         }

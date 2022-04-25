@@ -26,6 +26,11 @@ public final class DeliveryRuleUrlFileNameConditionResponse extends com.pulumi.r
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the condition for the delivery rule.
+     * Expected value is &#39;UrlFileName&#39;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +42,10 @@ public final class DeliveryRuleUrlFileNameConditionResponse extends com.pulumi.r
     @Import(name="parameters", required=true)
     private UrlFileNameMatchConditionParametersResponse parameters;
 
+    /**
+     * @return Defines the parameters for the condition.
+     * 
+     */
     public UrlFileNameMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
@@ -66,11 +75,24 @@ public final class DeliveryRuleUrlFileNameConditionResponse extends com.pulumi.r
             $ = new DeliveryRuleUrlFileNameConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the condition for the delivery rule.
+         * Expected value is &#39;UrlFileName&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(UrlFileNameMatchConditionParametersResponse parameters) {
             $.parameters = parameters;
             return this;

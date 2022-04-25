@@ -31,6 +31,10 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="applicationHealthPolicy")
     private @Nullable Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
 
+    /**
+     * @return Defines a health policy used to evaluate the health of an application or one of its children entities.
+     * 
+     */
     public Optional<Output<ArmApplicationHealthPolicyArgs>> applicationHealthPolicy() {
         return Optional.ofNullable(this.applicationHealthPolicy);
     }
@@ -42,6 +46,10 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="forceRestart")
     private @Nullable Output<Boolean> forceRestart;
 
+    /**
+     * @return If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+     * 
+     */
     public Optional<Output<Boolean>> forceRestart() {
         return Optional.ofNullable(this.forceRestart);
     }
@@ -53,6 +61,10 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="recreateApplication")
     private @Nullable Output<Boolean> recreateApplication;
 
+    /**
+     * @return Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.
+     * 
+     */
     public Optional<Output<Boolean>> recreateApplication() {
         return Optional.ofNullable(this.recreateApplication);
     }
@@ -64,6 +76,10 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="rollingUpgradeMonitoringPolicy")
     private @Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
 
+    /**
+     * @return The policy used for monitoring the application upgrade
+     * 
+     */
     public Optional<Output<ArmRollingUpgradeMonitoringPolicyArgs>> rollingUpgradeMonitoringPolicy() {
         return Optional.ofNullable(this.rollingUpgradeMonitoringPolicy);
     }
@@ -75,6 +91,10 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="upgradeMode")
     private @Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode;
 
+    /**
+     * @return The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
+     * 
+     */
     public Optional<Output<Either<String,RollingUpgradeMode>>> upgradeMode() {
         return Optional.ofNullable(this.upgradeMode);
     }
@@ -86,6 +106,10 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
     @Import(name="upgradeReplicaSetCheckTimeout")
     private @Nullable Output<String> upgradeReplicaSetCheckTimeout;
 
+    /**
+     * @return The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
+     * 
+     */
     public Optional<Output<String>> upgradeReplicaSetCheckTimeout() {
         return Optional.ofNullable(this.upgradeReplicaSetCheckTimeout);
     }
@@ -119,64 +143,148 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
             $ = new ApplicationUpgradePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationHealthPolicy Defines a health policy used to evaluate the health of an application or one of its children entities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationHealthPolicy(@Nullable Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy) {
             $.applicationHealthPolicy = applicationHealthPolicy;
             return this;
         }
 
+        /**
+         * @param applicationHealthPolicy Defines a health policy used to evaluate the health of an application or one of its children entities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationHealthPolicy(ArmApplicationHealthPolicyArgs applicationHealthPolicy) {
             return applicationHealthPolicy(Output.of(applicationHealthPolicy));
         }
 
+        /**
+         * @param forceRestart If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceRestart(@Nullable Output<Boolean> forceRestart) {
             $.forceRestart = forceRestart;
             return this;
         }
 
+        /**
+         * @param forceRestart If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceRestart(Boolean forceRestart) {
             return forceRestart(Output.of(forceRestart));
         }
 
+        /**
+         * @param recreateApplication Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recreateApplication(@Nullable Output<Boolean> recreateApplication) {
             $.recreateApplication = recreateApplication;
             return this;
         }
 
+        /**
+         * @param recreateApplication Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recreateApplication(Boolean recreateApplication) {
             return recreateApplication(Output.of(recreateApplication));
         }
 
+        /**
+         * @param rollingUpgradeMonitoringPolicy The policy used for monitoring the application upgrade
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpgradeMonitoringPolicy(@Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy) {
             $.rollingUpgradeMonitoringPolicy = rollingUpgradeMonitoringPolicy;
             return this;
         }
 
+        /**
+         * @param rollingUpgradeMonitoringPolicy The policy used for monitoring the application upgrade
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpgradeMonitoringPolicy(ArmRollingUpgradeMonitoringPolicyArgs rollingUpgradeMonitoringPolicy) {
             return rollingUpgradeMonitoringPolicy(Output.of(rollingUpgradeMonitoringPolicy));
         }
 
+        /**
+         * @param upgradeMode The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeMode(@Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode) {
             $.upgradeMode = upgradeMode;
             return this;
         }
 
+        /**
+         * @param upgradeMode The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeMode(Either<String,RollingUpgradeMode> upgradeMode) {
             return upgradeMode(Output.of(upgradeMode));
         }
 
+        /**
+         * @param upgradeMode The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeMode(String upgradeMode) {
             return upgradeMode(Either.ofLeft(upgradeMode));
         }
 
+        /**
+         * @param upgradeMode The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeMode(RollingUpgradeMode upgradeMode) {
             return upgradeMode(Either.ofRight(upgradeMode));
         }
 
+        /**
+         * @param upgradeReplicaSetCheckTimeout The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeReplicaSetCheckTimeout(@Nullable Output<String> upgradeReplicaSetCheckTimeout) {
             $.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
 
+        /**
+         * @param upgradeReplicaSetCheckTimeout The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeReplicaSetCheckTimeout(String upgradeReplicaSetCheckTimeout) {
             return upgradeReplicaSetCheckTimeout(Output.of(upgradeReplicaSetCheckTimeout));
         }

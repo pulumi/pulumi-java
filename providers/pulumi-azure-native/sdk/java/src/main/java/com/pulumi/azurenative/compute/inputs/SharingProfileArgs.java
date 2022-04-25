@@ -28,6 +28,10 @@ public final class SharingProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="permissions")
     private @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
 
+    /**
+     * @return This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+     * 
+     */
     public Optional<Output<Either<String,GallerySharingPermissionTypes>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -56,19 +60,43 @@ public final class SharingProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SharingProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param permissions This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(Either<String,GallerySharingPermissionTypes> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             return permissions(Either.ofLeft(permissions));
         }
 
+        /**
+         * @param permissions This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(GallerySharingPermissionTypes permissions) {
             return permissions(Either.ofRight(permissions));
         }

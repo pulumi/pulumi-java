@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends com.pulumi.resourc
     @Import(name="outputConfig")
     private @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
+    /**
+     * @return Location to store findings outside of DLP.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2OutputStorageConfigArgs>> outputConfig() {
         return Optional.ofNullable(this.outputConfig);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends com.pulumi.resourc
             $ = new GooglePrivacyDlpV2SaveFindingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param outputConfig Location to store findings outside of DLP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(@Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig) {
             $.outputConfig = outputConfig;
             return this;
         }
 
+        /**
+         * @param outputConfig Location to store findings outside of DLP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(GooglePrivacyDlpV2OutputStorageConfigArgs outputConfig) {
             return outputConfig(Output.of(outputConfig));
         }

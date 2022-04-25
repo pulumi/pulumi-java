@@ -25,6 +25,12 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
     @Import(name="filters")
     private @Nullable List<GetResolverEndpointFilter> filters;
 
+    /**
+     * @return One or more name/value pairs to use as filters. There are
+     * several valid keys, for a full reference, check out
+     * [Route53resolver Filter value in the AWS API reference][1].
+     * 
+     */
     public Optional<List<GetResolverEndpointFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -36,6 +42,10 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resolverEndpointId")
     private @Nullable String resolverEndpointId;
 
+    /**
+     * @return The ID of the Route53 Resolver Endpoint.
+     * 
+     */
     public Optional<String> resolverEndpointId() {
         return Optional.ofNullable(this.resolverEndpointId);
     }
@@ -65,15 +75,37 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
             $ = new GetResolverEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters One or more name/value pairs to use as filters. There are
+         * several valid keys, for a full reference, check out
+         * [Route53resolver Filter value in the AWS API reference][1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetResolverEndpointFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more name/value pairs to use as filters. There are
+         * several valid keys, for a full reference, check out
+         * [Route53resolver Filter value in the AWS API reference][1].
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetResolverEndpointFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param resolverEndpointId The ID of the Route53 Resolver Endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             $.resolverEndpointId = resolverEndpointId;
             return this;

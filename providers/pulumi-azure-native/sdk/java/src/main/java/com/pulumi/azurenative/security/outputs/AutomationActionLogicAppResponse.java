@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutomationActionLogicAppResponse {
     /**
-     * The type of the action that will be triggered by the Automation
+     * @return The type of the action that will be triggered by the Automation
      * Expected value is &#39;LogicApp&#39;.
      * 
      */
     private final String actionType;
     /**
-     * The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+     * @return The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
      * 
      */
     private final @Nullable String logicAppResourceId;
     /**
-     * The Logic App trigger URI endpoint (it will not be included in any response).
+     * @return The Logic App trigger URI endpoint (it will not be included in any response).
      * 
      */
     private final @Nullable String uri;
@@ -39,24 +39,24 @@ public final class AutomationActionLogicAppResponse {
     }
 
     /**
-     * The type of the action that will be triggered by the Automation
+     * @return The type of the action that will be triggered by the Automation
      * Expected value is &#39;LogicApp&#39;.
      * 
-    */
+     */
     public String actionType() {
         return this.actionType;
     }
     /**
-     * The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+     * @return The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
      * 
-    */
+     */
     public Optional<String> logicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
     /**
-     * The Logic App trigger URI endpoint (it will not be included in any response).
+     * @return The Logic App trigger URI endpoint (it will not be included in any response).
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

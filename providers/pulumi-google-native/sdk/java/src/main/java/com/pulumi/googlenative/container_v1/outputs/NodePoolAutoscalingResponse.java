@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class NodePoolAutoscalingResponse {
     /**
-     * Can this node pool be deleted automatically.
+     * @return Can this node pool be deleted automatically.
      * 
      */
     private final Boolean autoprovisioned;
     /**
-     * Is autoscaling enabled for this node pool.
+     * @return Is autoscaling enabled for this node pool.
      * 
      */
     private final Boolean enabled;
     /**
-     * Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
+     * @return Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
      * 
      */
     private final Integer maxNodeCount;
     /**
-     * Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
+     * @return Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
      */
     private final Integer minNodeCount;
@@ -44,30 +44,30 @@ public final class NodePoolAutoscalingResponse {
     }
 
     /**
-     * Can this node pool be deleted automatically.
+     * @return Can this node pool be deleted automatically.
      * 
-    */
+     */
     public Boolean autoprovisioned() {
         return this.autoprovisioned;
     }
     /**
-     * Is autoscaling enabled for this node pool.
+     * @return Is autoscaling enabled for this node pool.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
+     * @return Maximum number of nodes for one location in the NodePool. Must be &gt;= min_node_count. There has to be enough quota to scale up the cluster.
      * 
-    */
+     */
     public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
     /**
-     * Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
+     * @return Minimum number of nodes for one location in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
-    */
+     */
     public Integer minNodeCount() {
         return this.minNodeCount;
     }

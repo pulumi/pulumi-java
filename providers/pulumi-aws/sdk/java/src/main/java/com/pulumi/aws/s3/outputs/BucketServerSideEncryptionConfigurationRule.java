@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BucketServerSideEncryptionConfigurationRule {
     /**
-     * A single object for setting server-side encryption by default. (documented below)
+     * @return A single object for setting server-side encryption by default. (documented below)
      * 
      */
     private final BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault;
     /**
-     * Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+     * @return Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
      * 
      */
     private final @Nullable Boolean bucketKeyEnabled;
@@ -32,16 +32,16 @@ public final class BucketServerSideEncryptionConfigurationRule {
     }
 
     /**
-     * A single object for setting server-side encryption by default. (documented below)
+     * @return A single object for setting server-side encryption by default. (documented below)
      * 
-    */
+     */
     public BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault() {
         return this.applyServerSideEncryptionByDefault;
     }
     /**
-     * Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+     * @return Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
      * 
-    */
+     */
     public Optional<Boolean> bucketKeyEnabled() {
         return Optional.ofNullable(this.bucketKeyEnabled);
     }

@@ -21,6 +21,10 @@ public final class UserArtifactManageResponse extends com.pulumi.resources.Invok
     @Import(name="install", required=true)
     private String install;
 
+    /**
+     * @return Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
+     * 
+     */
     public String install() {
         return this.install;
     }
@@ -32,6 +36,10 @@ public final class UserArtifactManageResponse extends com.pulumi.resources.Invok
     @Import(name="remove", required=true)
     private String remove;
 
+    /**
+     * @return Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
+     * 
+     */
     public String remove() {
         return this.remove;
     }
@@ -43,6 +51,10 @@ public final class UserArtifactManageResponse extends com.pulumi.resources.Invok
     @Import(name="update")
     private @Nullable String update;
 
+    /**
+     * @return Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+     * 
+     */
     public Optional<String> update() {
         return Optional.ofNullable(this.update);
     }
@@ -73,16 +85,34 @@ public final class UserArtifactManageResponse extends com.pulumi.resources.Invok
             $ = new UserArtifactManageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param install Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder install(String install) {
             $.install = install;
             return this;
         }
 
+        /**
+         * @param remove Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remove(String remove) {
             $.remove = remove;
             return this;
         }
 
+        /**
+         * @param update Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(@Nullable String update) {
             $.update = update;
             return this;

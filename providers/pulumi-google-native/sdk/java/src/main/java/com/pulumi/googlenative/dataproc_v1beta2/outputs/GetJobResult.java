@@ -26,102 +26,102 @@ import java.util.Objects;
 @CustomType
 public final class GetJobResult {
     /**
-     * Indicates whether the job is completed. If the value is false, the job is still in progress. If true, the job is completed, and status.state field will indicate if it was successful, failed, or cancelled.
+     * @return Indicates whether the job is completed. If the value is false, the job is still in progress. If true, the job is completed, and status.state field will indicate if it was successful, failed, or cancelled.
      * 
      */
     private final Boolean done;
     /**
-     * If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
+     * @return If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
      * 
      */
     private final String driverControlFilesUri;
     /**
-     * A URI pointing to the location of the stdout of the job&#39;s driver program.
+     * @return A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
      */
     private final String driverOutputResourceUri;
     /**
-     * Optional. Job is a Hadoop job.
+     * @return Optional. Job is a Hadoop job.
      * 
      */
     private final HadoopJobResponse hadoopJob;
     /**
-     * Optional. Job is a Hive job.
+     * @return Optional. Job is a Hive job.
      * 
      */
     private final HiveJobResponse hiveJob;
     /**
-     * A UUID that uniquely identifies a job within the project over time. This is in contrast to a user-settable reference.job_id that may be reused over time.
+     * @return A UUID that uniquely identifies a job within the project over time. This is in contrast to a user-settable reference.job_id that may be reused over time.
      * 
      */
     private final String jobUuid;
     /**
-     * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
+     * @return Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * Optional. Job is a Pig job.
+     * @return Optional. Job is a Pig job.
      * 
      */
     private final PigJobResponse pigJob;
     /**
-     * Job information, including how, when, and where to run the job.
+     * @return Job information, including how, when, and where to run the job.
      * 
      */
     private final JobPlacementResponse placement;
     /**
-     * Optional. Job is a Presto job.
+     * @return Optional. Job is a Presto job.
      * 
      */
     private final PrestoJobResponse prestoJob;
     /**
-     * Optional. Job is a PySpark job.
+     * @return Optional. Job is a PySpark job.
      * 
      */
     private final PySparkJobResponse pysparkJob;
     /**
-     * Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
+     * @return Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
      * 
      */
     private final JobReferenceResponse reference;
     /**
-     * Optional. Job scheduling configuration.
+     * @return Optional. Job scheduling configuration.
      * 
      */
     private final JobSchedulingResponse scheduling;
     /**
-     * Optional. Job is a Spark job.
+     * @return Optional. Job is a Spark job.
      * 
      */
     private final SparkJobResponse sparkJob;
     /**
-     * Optional. Job is a SparkR job.
+     * @return Optional. Job is a SparkR job.
      * 
      */
     private final SparkRJobResponse sparkRJob;
     /**
-     * Optional. Job is a SparkSql job.
+     * @return Optional. Job is a SparkSql job.
      * 
      */
     private final SparkSqlJobResponse sparkSqlJob;
     /**
-     * The job status. Additional application-specific status information may be contained in the type_job and yarn_applications fields.
+     * @return The job status. Additional application-specific status information may be contained in the type_job and yarn_applications fields.
      * 
      */
     private final JobStatusResponse status;
     /**
-     * The previous job status.
+     * @return The previous job status.
      * 
      */
     private final List<JobStatusResponse> statusHistory;
     /**
-     * The email address of the user submitting the job. For jobs submitted on the cluster, the address is username@hostname.
+     * @return The email address of the user submitting the job. For jobs submitted on the cluster, the address is username@hostname.
      * 
      */
     private final String submittedBy;
     /**
-     * The collection of YARN applications spun up by this job.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
+     * @return The collection of YARN applications spun up by this job.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
      * 
      */
     private final List<YarnApplicationResponse> yarnApplications;
@@ -171,142 +171,142 @@ public final class GetJobResult {
     }
 
     /**
-     * Indicates whether the job is completed. If the value is false, the job is still in progress. If true, the job is completed, and status.state field will indicate if it was successful, failed, or cancelled.
+     * @return Indicates whether the job is completed. If the value is false, the job is still in progress. If true, the job is completed, and status.state field will indicate if it was successful, failed, or cancelled.
      * 
-    */
+     */
     public Boolean done() {
         return this.done;
     }
     /**
-     * If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
+     * @return If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
      * 
-    */
+     */
     public String driverControlFilesUri() {
         return this.driverControlFilesUri;
     }
     /**
-     * A URI pointing to the location of the stdout of the job&#39;s driver program.
+     * @return A URI pointing to the location of the stdout of the job&#39;s driver program.
      * 
-    */
+     */
     public String driverOutputResourceUri() {
         return this.driverOutputResourceUri;
     }
     /**
-     * Optional. Job is a Hadoop job.
+     * @return Optional. Job is a Hadoop job.
      * 
-    */
+     */
     public HadoopJobResponse hadoopJob() {
         return this.hadoopJob;
     }
     /**
-     * Optional. Job is a Hive job.
+     * @return Optional. Job is a Hive job.
      * 
-    */
+     */
     public HiveJobResponse hiveJob() {
         return this.hiveJob;
     }
     /**
-     * A UUID that uniquely identifies a job within the project over time. This is in contrast to a user-settable reference.job_id that may be reused over time.
+     * @return A UUID that uniquely identifies a job within the project over time. This is in contrast to a user-settable reference.job_id that may be reused over time.
      * 
-    */
+     */
     public String jobUuid() {
         return this.jobUuid;
     }
     /**
-     * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
+     * @return Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Optional. Job is a Pig job.
+     * @return Optional. Job is a Pig job.
      * 
-    */
+     */
     public PigJobResponse pigJob() {
         return this.pigJob;
     }
     /**
-     * Job information, including how, when, and where to run the job.
+     * @return Job information, including how, when, and where to run the job.
      * 
-    */
+     */
     public JobPlacementResponse placement() {
         return this.placement;
     }
     /**
-     * Optional. Job is a Presto job.
+     * @return Optional. Job is a Presto job.
      * 
-    */
+     */
     public PrestoJobResponse prestoJob() {
         return this.prestoJob;
     }
     /**
-     * Optional. Job is a PySpark job.
+     * @return Optional. Job is a PySpark job.
      * 
-    */
+     */
     public PySparkJobResponse pysparkJob() {
         return this.pysparkJob;
     }
     /**
-     * Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
+     * @return Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
      * 
-    */
+     */
     public JobReferenceResponse reference() {
         return this.reference;
     }
     /**
-     * Optional. Job scheduling configuration.
+     * @return Optional. Job scheduling configuration.
      * 
-    */
+     */
     public JobSchedulingResponse scheduling() {
         return this.scheduling;
     }
     /**
-     * Optional. Job is a Spark job.
+     * @return Optional. Job is a Spark job.
      * 
-    */
+     */
     public SparkJobResponse sparkJob() {
         return this.sparkJob;
     }
     /**
-     * Optional. Job is a SparkR job.
+     * @return Optional. Job is a SparkR job.
      * 
-    */
+     */
     public SparkRJobResponse sparkRJob() {
         return this.sparkRJob;
     }
     /**
-     * Optional. Job is a SparkSql job.
+     * @return Optional. Job is a SparkSql job.
      * 
-    */
+     */
     public SparkSqlJobResponse sparkSqlJob() {
         return this.sparkSqlJob;
     }
     /**
-     * The job status. Additional application-specific status information may be contained in the type_job and yarn_applications fields.
+     * @return The job status. Additional application-specific status information may be contained in the type_job and yarn_applications fields.
      * 
-    */
+     */
     public JobStatusResponse status() {
         return this.status;
     }
     /**
-     * The previous job status.
+     * @return The previous job status.
      * 
-    */
+     */
     public List<JobStatusResponse> statusHistory() {
         return this.statusHistory;
     }
     /**
-     * The email address of the user submitting the job. For jobs submitted on the cluster, the address is username@hostname.
+     * @return The email address of the user submitting the job. For jobs submitted on the cluster, the address is username@hostname.
      * 
-    */
+     */
     public String submittedBy() {
         return this.submittedBy;
     }
     /**
-     * The collection of YARN applications spun up by this job.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
+     * @return The collection of YARN applications spun up by this job.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
      * 
-    */
+     */
     public List<YarnApplicationResponse> yarnApplications() {
         return this.yarnApplications;
     }

@@ -26,6 +26,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return Request Count.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -37,6 +41,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return Request Path
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -48,6 +56,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
     @Import(name="status")
     private @Nullable Integer status;
 
+    /**
+     * @return HTTP status code.
+     * 
+     */
     public Optional<Integer> status() {
         return Optional.ofNullable(this.status);
     }
@@ -59,6 +71,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
     @Import(name="subStatus")
     private @Nullable Integer subStatus;
 
+    /**
+     * @return Request Sub Status.
+     * 
+     */
     public Optional<Integer> subStatus() {
         return Optional.ofNullable(this.subStatus);
     }
@@ -70,6 +86,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
     @Import(name="timeInterval")
     private @Nullable String timeInterval;
 
+    /**
+     * @return Time interval.
+     * 
+     */
     public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -81,6 +101,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
     @Import(name="win32Status")
     private @Nullable Integer win32Status;
 
+    /**
+     * @return Win32 error code.
+     * 
+     */
     public Optional<Integer> win32Status() {
         return Optional.ofNullable(this.win32Status);
     }
@@ -114,31 +138,67 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
             $ = new StatusCodesBasedTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param path Request Path
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param status HTTP status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Integer status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param subStatus Request Sub Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subStatus(@Nullable Integer subStatus) {
             $.subStatus = subStatus;
             return this;
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(@Nullable String timeInterval) {
             $.timeInterval = timeInterval;
             return this;
         }
 
+        /**
+         * @param win32Status Win32 error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder win32Status(@Nullable Integer win32Status) {
             $.win32Status = win32Status;
             return this;

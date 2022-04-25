@@ -15,62 +15,62 @@ import java.util.Objects;
 @CustomType
 public final class GetRegistrationResult {
     /**
-     * Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
+     * @return Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
      * 
      */
     private final ContactSettingsResponse contactSettings;
     /**
-     * The creation timestamp of the `Registration` resource.
+     * @return The creation timestamp of the `Registration` resource.
      * 
      */
     private final String createTime;
     /**
-     * Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
+     * @return Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
      * 
      */
     private final DnsSettingsResponse dnsSettings;
     /**
-     * Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
+     * @return Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
      * 
      */
     private final String domainName;
     /**
-     * The expiration timestamp of the `Registration`.
+     * @return The expiration timestamp of the `Registration`.
      * 
      */
     private final String expireTime;
     /**
-     * The set of issues with the `Registration` that require attention.
+     * @return The set of issues with the `Registration` that require attention.
      * 
      */
     private final List<String> issues;
     /**
-     * Set of labels associated with the `Registration`.
+     * @return Set of labels associated with the `Registration`.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
+     * @return Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
      * 
      */
     private final ManagementSettingsResponse managementSettings;
     /**
-     * Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
+     * @return Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
      * 
      */
     private final String name;
     /**
-     * Pending contact settings for the `Registration`. Updates to the `contact_settings` field that change its `registrant_contact` or `privacy` fields require email confirmation by the `registrant_contact` before taking effect. This field is set only if there are pending updates to the `contact_settings` that have not been confirmed. To confirm the changes, the `registrant_contact` must follow the instructions in the email they receive.
+     * @return Pending contact settings for the `Registration`. Updates to the `contact_settings` field that change its `registrant_contact` or `privacy` fields require email confirmation by the `registrant_contact` before taking effect. This field is set only if there are pending updates to the `contact_settings` that have not been confirmed. To confirm the changes, the `registrant_contact` must follow the instructions in the email they receive.
      * 
      */
     private final ContactSettingsResponse pendingContactSettings;
     /**
-     * The state of the `Registration`
+     * @return The state of the `Registration`
      * 
      */
     private final String state;
     /**
-     * Set of options for the `contact_settings.privacy` field that this `Registration` supports.
+     * @return Set of options for the `contact_settings.privacy` field that this `Registration` supports.
      * 
      */
     private final List<String> supportedPrivacy;
@@ -104,86 +104,86 @@ public final class GetRegistrationResult {
     }
 
     /**
-     * Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
+     * @return Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
      * 
-    */
+     */
     public ContactSettingsResponse contactSettings() {
         return this.contactSettings;
     }
     /**
-     * The creation timestamp of the `Registration` resource.
+     * @return The creation timestamp of the `Registration` resource.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
+     * @return Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
      * 
-    */
+     */
     public DnsSettingsResponse dnsSettings() {
         return this.dnsSettings;
     }
     /**
-     * Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
+     * @return Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * The expiration timestamp of the `Registration`.
+     * @return The expiration timestamp of the `Registration`.
      * 
-    */
+     */
     public String expireTime() {
         return this.expireTime;
     }
     /**
-     * The set of issues with the `Registration` that require attention.
+     * @return The set of issues with the `Registration` that require attention.
      * 
-    */
+     */
     public List<String> issues() {
         return this.issues;
     }
     /**
-     * Set of labels associated with the `Registration`.
+     * @return Set of labels associated with the `Registration`.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
+     * @return Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
      * 
-    */
+     */
     public ManagementSettingsResponse managementSettings() {
         return this.managementSettings;
     }
     /**
-     * Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
+     * @return Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Pending contact settings for the `Registration`. Updates to the `contact_settings` field that change its `registrant_contact` or `privacy` fields require email confirmation by the `registrant_contact` before taking effect. This field is set only if there are pending updates to the `contact_settings` that have not been confirmed. To confirm the changes, the `registrant_contact` must follow the instructions in the email they receive.
+     * @return Pending contact settings for the `Registration`. Updates to the `contact_settings` field that change its `registrant_contact` or `privacy` fields require email confirmation by the `registrant_contact` before taking effect. This field is set only if there are pending updates to the `contact_settings` that have not been confirmed. To confirm the changes, the `registrant_contact` must follow the instructions in the email they receive.
      * 
-    */
+     */
     public ContactSettingsResponse pendingContactSettings() {
         return this.pendingContactSettings;
     }
     /**
-     * The state of the `Registration`
+     * @return The state of the `Registration`
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Set of options for the `contact_settings.privacy` field that this `Registration` supports.
+     * @return Set of options for the `contact_settings.privacy` field that this `Registration` supports.
      * 
-    */
+     */
     public List<String> supportedPrivacy() {
         return this.supportedPrivacy;
     }

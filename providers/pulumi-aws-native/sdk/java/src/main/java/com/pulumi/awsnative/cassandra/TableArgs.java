@@ -37,6 +37,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusteringKeyColumns")
     private @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
 
+    /**
+     * @return Clustering key columns of the table
+     * 
+     */
     public Optional<Output<List<TableClusteringKeyColumnArgs>>> clusteringKeyColumns() {
         return Optional.ofNullable(this.clusteringKeyColumns);
     }
@@ -48,6 +52,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultTimeToLive")
     private @Nullable Output<Integer> defaultTimeToLive;
 
+    /**
+     * @return Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
+     * 
+     */
     public Optional<Output<Integer>> defaultTimeToLive() {
         return Optional.ofNullable(this.defaultTimeToLive);
     }
@@ -66,6 +74,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyspaceName", required=true)
     private Output<String> keyspaceName;
 
+    /**
+     * @return Name for Cassandra keyspace
+     * 
+     */
     public Output<String> keyspaceName() {
         return this.keyspaceName;
     }
@@ -77,6 +89,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionKeyColumns", required=true)
     private Output<List<TableColumnArgs>> partitionKeyColumns;
 
+    /**
+     * @return Partition key columns of the table
+     * 
+     */
     public Output<List<TableColumnArgs>> partitionKeyColumns() {
         return this.partitionKeyColumns;
     }
@@ -88,6 +104,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pointInTimeRecoveryEnabled")
     private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
+    /**
+     * @return Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
+     * 
+     */
     public Optional<Output<Boolean>> pointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
@@ -99,6 +119,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regularColumns")
     private @Nullable Output<List<TableColumnArgs>> regularColumns;
 
+    /**
+     * @return Non-key columns of the table
+     * 
+     */
     public Optional<Output<List<TableColumnArgs>>> regularColumns() {
         return Optional.ofNullable(this.regularColumns);
     }
@@ -110,6 +134,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
     private @Nullable Output<String> tableName;
 
+    /**
+     * @return Name for Cassandra table
+     * 
+     */
     public Optional<Output<String>> tableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -121,6 +149,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<TableTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource
+     * 
+     */
     public Optional<Output<List<TableTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -167,24 +199,54 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
             return billingMode(Output.of(billingMode));
         }
 
+        /**
+         * @param clusteringKeyColumns Clustering key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusteringKeyColumns(@Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns) {
             $.clusteringKeyColumns = clusteringKeyColumns;
             return this;
         }
 
+        /**
+         * @param clusteringKeyColumns Clustering key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusteringKeyColumns(List<TableClusteringKeyColumnArgs> clusteringKeyColumns) {
             return clusteringKeyColumns(Output.of(clusteringKeyColumns));
         }
 
+        /**
+         * @param clusteringKeyColumns Clustering key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusteringKeyColumns(TableClusteringKeyColumnArgs... clusteringKeyColumns) {
             return clusteringKeyColumns(List.of(clusteringKeyColumns));
         }
 
+        /**
+         * @param defaultTimeToLive Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTimeToLive(@Nullable Output<Integer> defaultTimeToLive) {
             $.defaultTimeToLive = defaultTimeToLive;
             return this;
         }
 
+        /**
+         * @param defaultTimeToLive Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTimeToLive(Integer defaultTimeToLive) {
             return defaultTimeToLive(Output.of(defaultTimeToLive));
         }
@@ -198,68 +260,158 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
             return encryptionSpecification(Output.of(encryptionSpecification));
         }
 
+        /**
+         * @param keyspaceName Name for Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(Output<String> keyspaceName) {
             $.keyspaceName = keyspaceName;
             return this;
         }
 
+        /**
+         * @param keyspaceName Name for Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyspaceName(String keyspaceName) {
             return keyspaceName(Output.of(keyspaceName));
         }
 
+        /**
+         * @param partitionKeyColumns Partition key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeyColumns(Output<List<TableColumnArgs>> partitionKeyColumns) {
             $.partitionKeyColumns = partitionKeyColumns;
             return this;
         }
 
+        /**
+         * @param partitionKeyColumns Partition key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeyColumns(List<TableColumnArgs> partitionKeyColumns) {
             return partitionKeyColumns(Output.of(partitionKeyColumns));
         }
 
+        /**
+         * @param partitionKeyColumns Partition key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeyColumns(TableColumnArgs... partitionKeyColumns) {
             return partitionKeyColumns(List.of(partitionKeyColumns));
         }
 
+        /**
+         * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
+        /**
+         * @param pointInTimeRecoveryEnabled Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
             return pointInTimeRecoveryEnabled(Output.of(pointInTimeRecoveryEnabled));
         }
 
+        /**
+         * @param regularColumns Non-key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularColumns(@Nullable Output<List<TableColumnArgs>> regularColumns) {
             $.regularColumns = regularColumns;
             return this;
         }
 
+        /**
+         * @param regularColumns Non-key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularColumns(List<TableColumnArgs> regularColumns) {
             return regularColumns(Output.of(regularColumns));
         }
 
+        /**
+         * @param regularColumns Non-key columns of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularColumns(TableColumnArgs... regularColumns) {
             return regularColumns(List.of(regularColumns));
         }
 
+        /**
+         * @param tableName Name for Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(@Nullable Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName Name for Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<TableTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<TableTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TableTagArgs... tags) {
             return tags(List.of(tags));
         }

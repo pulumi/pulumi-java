@@ -31,6 +31,10 @@ public final class AuthConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalVariables")
     private @Nullable Output<List<ConfigVariableArgs>> additionalVariables;
 
+    /**
+     * @return List containing additional auth configs.
+     * 
+     */
     public Optional<Output<List<ConfigVariableArgs>>> additionalVariables() {
         return Optional.ofNullable(this.additionalVariables);
     }
@@ -42,6 +46,10 @@ public final class AuthConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authType")
     private @Nullable Output<AuthConfigAuthType> authType;
 
+    /**
+     * @return The type of authentication configured.
+     * 
+     */
     public Optional<Output<AuthConfigAuthType>> authType() {
         return Optional.ofNullable(this.authType);
     }
@@ -53,6 +61,10 @@ public final class AuthConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oauth2ClientCredentials")
     private @Nullable Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials;
 
+    /**
+     * @return Oauth2ClientCredentials.
+     * 
+     */
     public Optional<Output<Oauth2ClientCredentialsArgs>> oauth2ClientCredentials() {
         return Optional.ofNullable(this.oauth2ClientCredentials);
     }
@@ -64,6 +76,10 @@ public final class AuthConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oauth2JwtBearer")
     private @Nullable Output<Oauth2JwtBearerArgs> oauth2JwtBearer;
 
+    /**
+     * @return Oauth2JwtBearer.
+     * 
+     */
     public Optional<Output<Oauth2JwtBearerArgs>> oauth2JwtBearer() {
         return Optional.ofNullable(this.oauth2JwtBearer);
     }
@@ -75,6 +91,10 @@ public final class AuthConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userPassword")
     private @Nullable Output<UserPasswordArgs> userPassword;
 
+    /**
+     * @return UserPassword.
+     * 
+     */
     public Optional<Output<UserPasswordArgs>> userPassword() {
         return Optional.ofNullable(this.userPassword);
     }
@@ -107,51 +127,117 @@ public final class AuthConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalVariables List containing additional auth configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalVariables(@Nullable Output<List<ConfigVariableArgs>> additionalVariables) {
             $.additionalVariables = additionalVariables;
             return this;
         }
 
+        /**
+         * @param additionalVariables List containing additional auth configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalVariables(List<ConfigVariableArgs> additionalVariables) {
             return additionalVariables(Output.of(additionalVariables));
         }
 
+        /**
+         * @param additionalVariables List containing additional auth configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalVariables(ConfigVariableArgs... additionalVariables) {
             return additionalVariables(List.of(additionalVariables));
         }
 
+        /**
+         * @param authType The type of authentication configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(@Nullable Output<AuthConfigAuthType> authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param authType The type of authentication configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(AuthConfigAuthType authType) {
             return authType(Output.of(authType));
         }
 
+        /**
+         * @param oauth2ClientCredentials Oauth2ClientCredentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientCredentials(@Nullable Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials) {
             $.oauth2ClientCredentials = oauth2ClientCredentials;
             return this;
         }
 
+        /**
+         * @param oauth2ClientCredentials Oauth2ClientCredentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientCredentials(Oauth2ClientCredentialsArgs oauth2ClientCredentials) {
             return oauth2ClientCredentials(Output.of(oauth2ClientCredentials));
         }
 
+        /**
+         * @param oauth2JwtBearer Oauth2JwtBearer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2JwtBearer(@Nullable Output<Oauth2JwtBearerArgs> oauth2JwtBearer) {
             $.oauth2JwtBearer = oauth2JwtBearer;
             return this;
         }
 
+        /**
+         * @param oauth2JwtBearer Oauth2JwtBearer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2JwtBearer(Oauth2JwtBearerArgs oauth2JwtBearer) {
             return oauth2JwtBearer(Output.of(oauth2JwtBearer));
         }
 
+        /**
+         * @param userPassword UserPassword.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPassword(@Nullable Output<UserPasswordArgs> userPassword) {
             $.userPassword = userPassword;
             return this;
         }
 
+        /**
+         * @param userPassword UserPassword.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPassword(UserPasswordArgs userPassword) {
             return userPassword(Output.of(userPassword));
         }

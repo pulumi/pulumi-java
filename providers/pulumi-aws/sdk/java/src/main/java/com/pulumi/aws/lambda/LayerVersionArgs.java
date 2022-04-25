@@ -25,6 +25,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="code")
     private @Nullable Output<Archive> code;
 
+    /**
+     * @return Path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+     * 
+     */
     public Optional<Output<Archive>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -36,6 +40,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compatibleArchitectures")
     private @Nullable Output<List<String>> compatibleArchitectures;
 
+    /**
+     * @return List of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
+     * 
+     */
     public Optional<Output<List<String>>> compatibleArchitectures() {
         return Optional.ofNullable(this.compatibleArchitectures);
     }
@@ -47,6 +55,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compatibleRuntimes")
     private @Nullable Output<List<String>> compatibleRuntimes;
 
+    /**
+     * @return List of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
+     * 
+     */
     public Optional<Output<List<String>>> compatibleRuntimes() {
         return Optional.ofNullable(this.compatibleRuntimes);
     }
@@ -58,6 +70,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of what your Lambda Layer does.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -69,6 +85,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="layerName", required=true)
     private Output<String> layerName;
 
+    /**
+     * @return Unique name for your Lambda Layer
+     * 
+     */
     public Output<String> layerName() {
         return this.layerName;
     }
@@ -80,6 +100,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseInfo")
     private @Nullable Output<String> licenseInfo;
 
+    /**
+     * @return License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
+     * 
+     */
     public Optional<Output<String>> licenseInfo() {
         return Optional.ofNullable(this.licenseInfo);
     }
@@ -91,6 +115,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket")
     private @Nullable Output<String> s3Bucket;
 
+    /**
+     * @return S3 bucket location containing the function&#39;s deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+     * 
+     */
     public Optional<Output<String>> s3Bucket() {
         return Optional.ofNullable(this.s3Bucket);
     }
@@ -102,6 +130,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Key")
     private @Nullable Output<String> s3Key;
 
+    /**
+     * @return S3 key of an object containing the function&#39;s deployment package. Conflicts with `filename`.
+     * 
+     */
     public Optional<Output<String>> s3Key() {
         return Optional.ofNullable(this.s3Key);
     }
@@ -113,6 +145,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectVersion")
     private @Nullable Output<String> s3ObjectVersion;
 
+    /**
+     * @return Object version containing the function&#39;s deployment package. Conflicts with `filename`.
+     * 
+     */
     public Optional<Output<String>> s3ObjectVersion() {
         return Optional.ofNullable(this.s3ObjectVersion);
     }
@@ -124,6 +160,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipDestroy")
     private @Nullable Output<Boolean> skipDestroy;
 
+    /**
+     * @return Whether to retain the old version of a previously deployed Lambda Layer. Default is `false`. When this is not set to `true`, changing any of `compatible_architectures`, `compatible_runtimes`, `description`, `filename`, `layer_name`, `license_info`, `s3_bucket`, `s3_key`, `s3_object_version`, or `source_code_hash` forces deletion of the existing layer version and creation of a new layer version.
+     * 
+     */
     public Optional<Output<Boolean>> skipDestroy() {
         return Optional.ofNullable(this.skipDestroy);
     }
@@ -169,100 +209,232 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LayerVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<Archive> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Path to the function&#39;s deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Archive code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param compatibleArchitectures List of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibleArchitectures(@Nullable Output<List<String>> compatibleArchitectures) {
             $.compatibleArchitectures = compatibleArchitectures;
             return this;
         }
 
+        /**
+         * @param compatibleArchitectures List of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibleArchitectures(List<String> compatibleArchitectures) {
             return compatibleArchitectures(Output.of(compatibleArchitectures));
         }
 
+        /**
+         * @param compatibleArchitectures List of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibleArchitectures(String... compatibleArchitectures) {
             return compatibleArchitectures(List.of(compatibleArchitectures));
         }
 
+        /**
+         * @param compatibleRuntimes List of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibleRuntimes(@Nullable Output<List<String>> compatibleRuntimes) {
             $.compatibleRuntimes = compatibleRuntimes;
             return this;
         }
 
+        /**
+         * @param compatibleRuntimes List of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibleRuntimes(List<String> compatibleRuntimes) {
             return compatibleRuntimes(Output.of(compatibleRuntimes));
         }
 
+        /**
+         * @param compatibleRuntimes List of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibleRuntimes(String... compatibleRuntimes) {
             return compatibleRuntimes(List.of(compatibleRuntimes));
         }
 
+        /**
+         * @param description Description of what your Lambda Layer does.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of what your Lambda Layer does.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param layerName Unique name for your Lambda Layer
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerName(Output<String> layerName) {
             $.layerName = layerName;
             return this;
         }
 
+        /**
+         * @param layerName Unique name for your Lambda Layer
+         * 
+         * @return builder
+         * 
+         */
         public Builder layerName(String layerName) {
             return layerName(Output.of(layerName));
         }
 
+        /**
+         * @param licenseInfo License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseInfo(@Nullable Output<String> licenseInfo) {
             $.licenseInfo = licenseInfo;
             return this;
         }
 
+        /**
+         * @param licenseInfo License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseInfo(String licenseInfo) {
             return licenseInfo(Output.of(licenseInfo));
         }
 
+        /**
+         * @param s3Bucket S3 bucket location containing the function&#39;s deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             $.s3Bucket = s3Bucket;
             return this;
         }
 
+        /**
+         * @param s3Bucket S3 bucket location containing the function&#39;s deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Bucket(String s3Bucket) {
             return s3Bucket(Output.of(s3Bucket));
         }
 
+        /**
+         * @param s3Key S3 key of an object containing the function&#39;s deployment package. Conflicts with `filename`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Key(@Nullable Output<String> s3Key) {
             $.s3Key = s3Key;
             return this;
         }
 
+        /**
+         * @param s3Key S3 key of an object containing the function&#39;s deployment package. Conflicts with `filename`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Key(String s3Key) {
             return s3Key(Output.of(s3Key));
         }
 
+        /**
+         * @param s3ObjectVersion Object version containing the function&#39;s deployment package. Conflicts with `filename`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             $.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
 
+        /**
+         * @param s3ObjectVersion Object version containing the function&#39;s deployment package. Conflicts with `filename`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3ObjectVersion(String s3ObjectVersion) {
             return s3ObjectVersion(Output.of(s3ObjectVersion));
         }
 
+        /**
+         * @param skipDestroy Whether to retain the old version of a previously deployed Lambda Layer. Default is `false`. When this is not set to `true`, changing any of `compatible_architectures`, `compatible_runtimes`, `description`, `filename`, `layer_name`, `license_info`, `s3_bucket`, `s3_key`, `s3_object_version`, or `source_code_hash` forces deletion of the existing layer version and creation of a new layer version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
             $.skipDestroy = skipDestroy;
             return this;
         }
 
+        /**
+         * @param skipDestroy Whether to retain the old version of a previously deployed Lambda Layer. Default is `false`. When this is not set to `true`, changing any of `compatible_architectures`, `compatible_runtimes`, `description`, `filename`, `layer_name`, `license_info`, `s3_bucket`, `s3_key`, `s3_object_version`, or `source_code_hash` forces deletion of the existing layer version and creation of a new layer version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipDestroy(Boolean skipDestroy) {
             return skipDestroy(Output.of(skipDestroy));
         }

@@ -25,6 +25,10 @@ public final class EventIntegrationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The event integration description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class EventIntegrationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="eventBridgeBus", required=true)
     private Output<String> eventBridgeBus;
 
+    /**
+     * @return The Amazon Eventbridge bus for the event integration.
+     * 
+     */
     public Output<String> eventBridgeBus() {
         return this.eventBridgeBus;
     }
@@ -47,6 +55,10 @@ public final class EventIntegrationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="eventFilter", required=true)
     private Output<EventIntegrationEventFilterArgs> eventFilter;
 
+    /**
+     * @return The EventFilter (source) associated with the event integration.
+     * 
+     */
     public Output<EventIntegrationEventFilterArgs> eventFilter() {
         return this.eventFilter;
     }
@@ -58,6 +70,10 @@ public final class EventIntegrationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the event integration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class EventIntegrationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<List<EventIntegrationTagArgs>> tags;
 
+    /**
+     * @return The tags (keys and values) associated with the event integration.
+     * 
+     */
     public Optional<Output<List<EventIntegrationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,51 +121,117 @@ public final class EventIntegrationArgs extends com.pulumi.resources.ResourceArg
             $ = new EventIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The event integration description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The event integration description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param eventBridgeBus The Amazon Eventbridge bus for the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBridgeBus(Output<String> eventBridgeBus) {
             $.eventBridgeBus = eventBridgeBus;
             return this;
         }
 
+        /**
+         * @param eventBridgeBus The Amazon Eventbridge bus for the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBridgeBus(String eventBridgeBus) {
             return eventBridgeBus(Output.of(eventBridgeBus));
         }
 
+        /**
+         * @param eventFilter The EventFilter (source) associated with the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventFilter(Output<EventIntegrationEventFilterArgs> eventFilter) {
             $.eventFilter = eventFilter;
             return this;
         }
 
+        /**
+         * @param eventFilter The EventFilter (source) associated with the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventFilter(EventIntegrationEventFilterArgs eventFilter) {
             return eventFilter(Output.of(eventFilter));
         }
 
+        /**
+         * @param name The name of the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<EventIntegrationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<EventIntegrationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the event integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(EventIntegrationTagArgs... tags) {
             return tags(List.of(tags));
         }

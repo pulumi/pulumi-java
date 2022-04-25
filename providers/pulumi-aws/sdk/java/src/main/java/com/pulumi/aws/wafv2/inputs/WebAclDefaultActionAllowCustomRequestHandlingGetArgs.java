@@ -21,6 +21,10 @@ public final class WebAclDefaultActionAllowCustomRequestHandlingGetArgs extends 
     @Import(name="insertHeaders", required=true)
     private Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
+    /**
+     * @return The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+     * 
+     */
     public Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders() {
         return this.insertHeaders;
     }
@@ -49,15 +53,33 @@ public final class WebAclDefaultActionAllowCustomRequestHandlingGetArgs extends 
             $ = new WebAclDefaultActionAllowCustomRequestHandlingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insertHeaders The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(Output<List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
             $.insertHeaders = insertHeaders;
             return this;
         }
 
+        /**
+         * @param insertHeaders The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
             return insertHeaders(Output.of(insertHeaders));
         }
 
+        /**
+         * @param insertHeaders The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(WebAclDefaultActionAllowCustomRequestHandlingInsertHeaderGetArgs... insertHeaders) {
             return insertHeaders(List.of(insertHeaders));
         }

@@ -27,6 +27,10 @@ public final class ResourcePolicyHourlyCycleArgs extends com.pulumi.resources.Re
     @Import(name="hoursInCycle")
     private @Nullable Output<Integer> hoursInCycle;
 
+    /**
+     * @return Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
+     * 
+     */
     public Optional<Output<Integer>> hoursInCycle() {
         return Optional.ofNullable(this.hoursInCycle);
     }
@@ -38,6 +42,10 @@ public final class ResourcePolicyHourlyCycleArgs extends com.pulumi.resources.Re
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -67,20 +75,44 @@ public final class ResourcePolicyHourlyCycleArgs extends com.pulumi.resources.Re
             $ = new ResourcePolicyHourlyCycleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hoursInCycle Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursInCycle(@Nullable Output<Integer> hoursInCycle) {
             $.hoursInCycle = hoursInCycle;
             return this;
         }
 
+        /**
+         * @param hoursInCycle Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursInCycle(Integer hoursInCycle) {
             return hoursInCycle(Output.of(hoursInCycle));
         }
 
+        /**
+         * @param startTime Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

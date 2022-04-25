@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ServiceRegistryInstanceResponse {
     /**
-     * Name of the Service Registry instance
+     * @return Name of the Service Registry instance
      * 
      */
     private final String name;
     /**
-     * Status of the Service Registry instance
+     * @return Status of the Service Registry instance
      * 
      */
     private final String status;
@@ -29,16 +29,16 @@ public final class ServiceRegistryInstanceResponse {
     }
 
     /**
-     * Name of the Service Registry instance
+     * @return Name of the Service Registry instance
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Status of the Service Registry instance
+     * @return Status of the Service Registry instance
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

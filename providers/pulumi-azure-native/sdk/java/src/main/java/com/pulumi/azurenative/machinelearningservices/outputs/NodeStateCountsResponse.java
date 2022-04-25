@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class NodeStateCountsResponse {
     /**
-     * Number of compute nodes in idle state.
+     * @return Number of compute nodes in idle state.
      * 
      */
     private final Integer idleNodeCount;
     /**
-     * Number of compute nodes which are leaving the amlCompute.
+     * @return Number of compute nodes which are leaving the amlCompute.
      * 
      */
     private final Integer leavingNodeCount;
     /**
-     * Number of compute nodes which are in preempted state.
+     * @return Number of compute nodes which are in preempted state.
      * 
      */
     private final Integer preemptedNodeCount;
     /**
-     * Number of compute nodes which are being prepared.
+     * @return Number of compute nodes which are being prepared.
      * 
      */
     private final Integer preparingNodeCount;
     /**
-     * Number of compute nodes which are running jobs.
+     * @return Number of compute nodes which are running jobs.
      * 
      */
     private final Integer runningNodeCount;
     /**
-     * Number of compute nodes which are in unusable state.
+     * @return Number of compute nodes which are in unusable state.
      * 
      */
     private final Integer unusableNodeCount;
@@ -57,44 +57,44 @@ public final class NodeStateCountsResponse {
     }
 
     /**
-     * Number of compute nodes in idle state.
+     * @return Number of compute nodes in idle state.
      * 
-    */
+     */
     public Integer idleNodeCount() {
         return this.idleNodeCount;
     }
     /**
-     * Number of compute nodes which are leaving the amlCompute.
+     * @return Number of compute nodes which are leaving the amlCompute.
      * 
-    */
+     */
     public Integer leavingNodeCount() {
         return this.leavingNodeCount;
     }
     /**
-     * Number of compute nodes which are in preempted state.
+     * @return Number of compute nodes which are in preempted state.
      * 
-    */
+     */
     public Integer preemptedNodeCount() {
         return this.preemptedNodeCount;
     }
     /**
-     * Number of compute nodes which are being prepared.
+     * @return Number of compute nodes which are being prepared.
      * 
-    */
+     */
     public Integer preparingNodeCount() {
         return this.preparingNodeCount;
     }
     /**
-     * Number of compute nodes which are running jobs.
+     * @return Number of compute nodes which are running jobs.
      * 
-    */
+     */
     public Integer runningNodeCount() {
         return this.runningNodeCount;
     }
     /**
-     * Number of compute nodes which are in unusable state.
+     * @return Number of compute nodes which are in unusable state.
      * 
-    */
+     */
     public Integer unusableNodeCount() {
         return this.unusableNodeCount;
     }

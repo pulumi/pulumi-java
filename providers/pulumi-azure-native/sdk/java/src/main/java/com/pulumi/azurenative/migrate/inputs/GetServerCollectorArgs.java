@@ -19,6 +19,10 @@ public final class GetServerCollectorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="projectName", required=true)
     private String projectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public String projectName() {
         return this.projectName;
     }
@@ -30,6 +34,10 @@ public final class GetServerCollectorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that project is part of.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetServerCollectorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="serverCollectorName", required=true)
     private String serverCollectorName;
 
+    /**
+     * @return Unique name of a Server collector within a project.
+     * 
+     */
     public String serverCollectorName() {
         return this.serverCollectorName;
     }
@@ -71,16 +83,34 @@ public final class GetServerCollectorArgs extends com.pulumi.resources.InvokeArg
             $ = new GetServerCollectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverCollectorName Unique name of a Server collector within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCollectorName(String serverCollectorName) {
             $.serverCollectorName = serverCollectorName;
             return this;

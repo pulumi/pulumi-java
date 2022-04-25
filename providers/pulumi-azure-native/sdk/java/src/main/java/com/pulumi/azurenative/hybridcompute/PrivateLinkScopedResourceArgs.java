@@ -22,6 +22,10 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
     @Import(name="linkedResourceId")
     private @Nullable Output<String> linkedResourceId;
 
+    /**
+     * @return The resource id of the scoped Azure monitor resource.
+     * 
+     */
     public Optional<Output<String>> linkedResourceId() {
         return Optional.ofNullable(this.linkedResourceId);
     }
@@ -33,6 +37,10 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the scoped resource object.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
     @Import(name="scopeName", required=true)
     private Output<String> scopeName;
 
+    /**
+     * @return The name of the Azure Arc PrivateLinkScope resource.
+     * 
+     */
     public Output<String> scopeName() {
         return this.scopeName;
     }
@@ -86,38 +102,86 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
             $ = new PrivateLinkScopedResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedResourceId The resource id of the scoped Azure monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedResourceId(@Nullable Output<String> linkedResourceId) {
             $.linkedResourceId = linkedResourceId;
             return this;
         }
 
+        /**
+         * @param linkedResourceId The resource id of the scoped Azure monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedResourceId(String linkedResourceId) {
             return linkedResourceId(Output.of(linkedResourceId));
         }
 
+        /**
+         * @param name The name of the scoped resource object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the scoped resource object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scopeName The name of the Azure Arc PrivateLinkScope resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeName(Output<String> scopeName) {
             $.scopeName = scopeName;
             return this;
         }
 
+        /**
+         * @param scopeName The name of the Azure Arc PrivateLinkScope resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeName(String scopeName) {
             return scopeName(Output.of(scopeName));
         }

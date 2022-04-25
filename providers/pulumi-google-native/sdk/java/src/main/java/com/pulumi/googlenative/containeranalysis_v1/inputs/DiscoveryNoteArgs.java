@@ -24,6 +24,10 @@ public final class DiscoveryNoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="analysisKind", required=true)
     private Output<DiscoveryNoteAnalysisKind> analysisKind;
 
+    /**
+     * @return Immutable. The kind of analysis that is handled by this discovery.
+     * 
+     */
     public Output<DiscoveryNoteAnalysisKind> analysisKind() {
         return this.analysisKind;
     }
@@ -52,11 +56,23 @@ public final class DiscoveryNoteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiscoveryNoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisKind Immutable. The kind of analysis that is handled by this discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisKind(Output<DiscoveryNoteAnalysisKind> analysisKind) {
             $.analysisKind = analysisKind;
             return this;
         }
 
+        /**
+         * @param analysisKind Immutable. The kind of analysis that is handled by this discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisKind(DiscoveryNoteAnalysisKind analysisKind) {
             return analysisKind(Output.of(analysisKind));
         }

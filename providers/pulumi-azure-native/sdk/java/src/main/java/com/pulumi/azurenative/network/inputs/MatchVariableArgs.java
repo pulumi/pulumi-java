@@ -28,6 +28,10 @@ public final class MatchVariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return The selector of match variable.
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -39,6 +43,10 @@ public final class MatchVariableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variableName", required=true)
     private Output<Either<String,WebApplicationFirewallMatchVariable>> variableName;
 
+    /**
+     * @return Match Variable.
+     * 
+     */
     public Output<Either<String,WebApplicationFirewallMatchVariable>> variableName() {
         return this.variableName;
     }
@@ -68,28 +76,64 @@ public final class MatchVariableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MatchVariableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selector The selector of match variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector The selector of match variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param variableName Match Variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(Output<Either<String,WebApplicationFirewallMatchVariable>> variableName) {
             $.variableName = variableName;
             return this;
         }
 
+        /**
+         * @param variableName Match Variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(Either<String,WebApplicationFirewallMatchVariable> variableName) {
             return variableName(Output.of(variableName));
         }
 
+        /**
+         * @param variableName Match Variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(String variableName) {
             return variableName(Either.ofLeft(variableName));
         }
 
+        /**
+         * @param variableName Match Variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(WebApplicationFirewallMatchVariable variableName) {
             return variableName(Either.ofRight(variableName));
         }

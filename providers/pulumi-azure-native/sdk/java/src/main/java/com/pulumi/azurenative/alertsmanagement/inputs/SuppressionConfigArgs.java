@@ -29,6 +29,10 @@ public final class SuppressionConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="recurrenceType", required=true)
     private Output<Either<String,SuppressionType>> recurrenceType;
 
+    /**
+     * @return Specifies when the suppression should be applied
+     * 
+     */
     public Output<Either<String,SuppressionType>> recurrenceType() {
         return this.recurrenceType;
     }
@@ -40,6 +44,10 @@ public final class SuppressionConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="schedule")
     private @Nullable Output<SuppressionScheduleArgs> schedule;
 
+    /**
+     * @return suppression schedule configuration
+     * 
+     */
     public Optional<Output<SuppressionScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -69,28 +77,64 @@ public final class SuppressionConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new SuppressionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recurrenceType Specifies when the suppression should be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceType(Output<Either<String,SuppressionType>> recurrenceType) {
             $.recurrenceType = recurrenceType;
             return this;
         }
 
+        /**
+         * @param recurrenceType Specifies when the suppression should be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceType(Either<String,SuppressionType> recurrenceType) {
             return recurrenceType(Output.of(recurrenceType));
         }
 
+        /**
+         * @param recurrenceType Specifies when the suppression should be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceType(String recurrenceType) {
             return recurrenceType(Either.ofLeft(recurrenceType));
         }
 
+        /**
+         * @param recurrenceType Specifies when the suppression should be applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceType(SuppressionType recurrenceType) {
             return recurrenceType(Either.ofRight(recurrenceType));
         }
 
+        /**
+         * @param schedule suppression schedule configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<SuppressionScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule suppression schedule configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(SuppressionScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }

@@ -19,6 +19,10 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
     @Import(name="labAccountName", required=true)
     private String labAccountName;
 
+    /**
+     * @return The name of the lab Account.
+     * 
+     */
     public String labAccountName() {
         return this.labAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetLabAccountRegionalAvailabilityArgs extends com.pulumi.reso
             $ = new GetLabAccountRegionalAvailabilityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labAccountName(String labAccountName) {
             $.labAccountName = labAccountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

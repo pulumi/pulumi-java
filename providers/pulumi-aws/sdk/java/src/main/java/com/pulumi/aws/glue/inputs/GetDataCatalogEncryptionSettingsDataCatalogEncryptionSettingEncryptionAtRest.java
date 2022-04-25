@@ -19,6 +19,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
     @Import(name="catalogEncryptionMode", required=true)
     private String catalogEncryptionMode;
 
+    /**
+     * @return The encryption-at-rest mode for encrypting Data Catalog data.
+     * 
+     */
     public String catalogEncryptionMode() {
         return this.catalogEncryptionMode;
     }
@@ -30,6 +34,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
     @Import(name="sseAwsKmsKeyId", required=true)
     private String sseAwsKmsKeyId;
 
+    /**
+     * @return The ARN of the AWS KMS key to use for encryption at rest.
+     * 
+     */
     public String sseAwsKmsKeyId() {
         return this.sseAwsKmsKeyId;
     }
@@ -59,11 +67,23 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
             $ = new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogEncryptionMode The encryption-at-rest mode for encrypting Data Catalog data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogEncryptionMode(String catalogEncryptionMode) {
             $.catalogEncryptionMode = catalogEncryptionMode;
             return this;
         }
 
+        /**
+         * @param sseAwsKmsKeyId The ARN of the AWS KMS key to use for encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sseAwsKmsKeyId(String sseAwsKmsKeyId) {
             $.sseAwsKmsKeyId = sseAwsKmsKeyId;
             return this;

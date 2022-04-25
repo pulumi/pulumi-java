@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
     @Import(name="displayText", required=true)
     private String displayText;
 
+    /**
+     * @return Optional. The text to display.
+     * 
+     */
     public String displayText() {
         return this.displayText;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
     @Import(name="ssml", required=true)
     private String ssml;
 
+    /**
+     * @return One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
+     * 
+     */
     public String ssml() {
         return this.ssml;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
     @Import(name="textToSpeech", required=true)
     private String textToSpeech;
 
+    /**
+     * @return One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
+     * 
+     */
     public String textToSpeech() {
         return this.textToSpeech;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
             $ = new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayText Optional. The text to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayText(String displayText) {
             $.displayText = displayText;
             return this;
         }
 
+        /**
+         * @param ssml One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(String ssml) {
             $.ssml = ssml;
             return this;
         }
 
+        /**
+         * @param textToSpeech One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textToSpeech(String textToSpeech) {
             $.textToSpeech = textToSpeech;
             return this;

@@ -23,6 +23,10 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return Optional. Customer-managed Encryption Key available through Google&#39;s Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -51,6 +55,12 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
             $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName Optional. Customer-managed Encryption Key available through Google&#39;s Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;

@@ -27,6 +27,10 @@ public final class UsageRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowUnregisteredCalls")
     private @Nullable Output<Boolean> allowUnregisteredCalls;
 
+    /**
+     * @return If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
+     * 
+     */
     public Optional<Output<Boolean>> allowUnregisteredCalls() {
         return Optional.ofNullable(this.allowUnregisteredCalls);
     }
@@ -38,6 +42,10 @@ public final class UsageRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -49,6 +57,10 @@ public final class UsageRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipServiceControl")
     private @Nullable Output<Boolean> skipServiceControl;
 
+    /**
+     * @return If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
+     * 
+     */
     public Optional<Output<Boolean>> skipServiceControl() {
         return Optional.ofNullable(this.skipServiceControl);
     }
@@ -79,29 +91,65 @@ public final class UsageRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UsageRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowUnregisteredCalls If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUnregisteredCalls(@Nullable Output<Boolean> allowUnregisteredCalls) {
             $.allowUnregisteredCalls = allowUnregisteredCalls;
             return this;
         }
 
+        /**
+         * @param allowUnregisteredCalls If true, the selected method allows unregistered calls, e.g. calls that don&#39;t identify any user or application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowUnregisteredCalls(Boolean allowUnregisteredCalls) {
             return allowUnregisteredCalls(Output.of(allowUnregisteredCalls));
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Use &#39;*&#39; to indicate all methods in all APIs. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param skipServiceControl If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipServiceControl(@Nullable Output<Boolean> skipServiceControl) {
             $.skipServiceControl = skipServiceControl;
             return this;
         }
 
+        /**
+         * @param skipServiceControl If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipServiceControl(Boolean skipServiceControl) {
             return skipServiceControl(Output.of(skipServiceControl));
         }

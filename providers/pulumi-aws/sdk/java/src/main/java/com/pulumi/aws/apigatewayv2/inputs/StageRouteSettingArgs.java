@@ -26,6 +26,11 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataTraceEnabled")
     private @Nullable Output<Boolean> dataTraceEnabled;
 
+    /**
+     * @return Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+     * Defaults to `false`. Supported only for WebSocket APIs.
+     * 
+     */
     public Optional<Output<Boolean>> dataTraceEnabled() {
         return Optional.ofNullable(this.dataTraceEnabled);
     }
@@ -37,6 +42,10 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="detailedMetricsEnabled")
     private @Nullable Output<Boolean> detailedMetricsEnabled;
 
+    /**
+     * @return Whether detailed metrics are enabled for the route. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> detailedMetricsEnabled() {
         return Optional.ofNullable(this.detailedMetricsEnabled);
     }
@@ -49,6 +58,11 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="loggingLevel")
     private @Nullable Output<String> loggingLevel;
 
+    /**
+     * @return The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+     * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
+     * 
+     */
     public Optional<Output<String>> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
@@ -60,6 +74,10 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routeKey", required=true)
     private Output<String> routeKey;
 
+    /**
+     * @return Route key.
+     * 
+     */
     public Output<String> routeKey() {
         return this.routeKey;
     }
@@ -71,6 +89,10 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="throttlingBurstLimit")
     private @Nullable Output<Integer> throttlingBurstLimit;
 
+    /**
+     * @return The throttling burst limit for the route.
+     * 
+     */
     public Optional<Output<Integer>> throttlingBurstLimit() {
         return Optional.ofNullable(this.throttlingBurstLimit);
     }
@@ -82,6 +104,10 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="throttlingRateLimit")
     private @Nullable Output<Double> throttlingRateLimit;
 
+    /**
+     * @return The throttling rate limit for the route.
+     * 
+     */
     public Optional<Output<Double>> throttlingRateLimit() {
         return Optional.ofNullable(this.throttlingRateLimit);
     }
@@ -115,56 +141,132 @@ public final class StageRouteSettingArgs extends com.pulumi.resources.ResourceAr
             $ = new StageRouteSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataTraceEnabled Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+         * Defaults to `false`. Supported only for WebSocket APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
             $.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
+        /**
+         * @param dataTraceEnabled Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+         * Defaults to `false`. Supported only for WebSocket APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTraceEnabled(Boolean dataTraceEnabled) {
             return dataTraceEnabled(Output.of(dataTraceEnabled));
         }
 
+        /**
+         * @param detailedMetricsEnabled Whether detailed metrics are enabled for the route. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedMetricsEnabled(@Nullable Output<Boolean> detailedMetricsEnabled) {
             $.detailedMetricsEnabled = detailedMetricsEnabled;
             return this;
         }
 
+        /**
+         * @param detailedMetricsEnabled Whether detailed metrics are enabled for the route. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedMetricsEnabled(Boolean detailedMetricsEnabled) {
             return detailedMetricsEnabled(Output.of(detailedMetricsEnabled));
         }
 
+        /**
+         * @param loggingLevel The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+         * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
             $.loggingLevel = loggingLevel;
             return this;
         }
 
+        /**
+         * @param loggingLevel The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+         * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingLevel(String loggingLevel) {
             return loggingLevel(Output.of(loggingLevel));
         }
 
+        /**
+         * @param routeKey Route key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeKey(Output<String> routeKey) {
             $.routeKey = routeKey;
             return this;
         }
 
+        /**
+         * @param routeKey Route key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeKey(String routeKey) {
             return routeKey(Output.of(routeKey));
         }
 
+        /**
+         * @param throttlingBurstLimit The throttling burst limit for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
             $.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
+        /**
+         * @param throttlingBurstLimit The throttling burst limit for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingBurstLimit(Integer throttlingBurstLimit) {
             return throttlingBurstLimit(Output.of(throttlingBurstLimit));
         }
 
+        /**
+         * @param throttlingRateLimit The throttling rate limit for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
             $.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
+        /**
+         * @param throttlingRateLimit The throttling rate limit for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingRateLimit(Double throttlingRateLimit) {
             return throttlingRateLimit(Output.of(throttlingRateLimit));
         }

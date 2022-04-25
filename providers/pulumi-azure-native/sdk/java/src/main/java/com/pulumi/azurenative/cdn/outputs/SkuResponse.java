@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuResponse {
     /**
-     * Name of the pricing tier.
+     * @return Name of the pricing tier.
      * 
      */
     private final @Nullable String name;
@@ -23,9 +23,9 @@ public final class SkuResponse {
     }
 
     /**
-     * Name of the pricing tier.
+     * @return Name of the pricing tier.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

@@ -24,6 +24,10 @@ public final class ContainerServiceLinuxProfileResponse extends com.pulumi.resou
     @Import(name="adminUsername", required=true)
     private String adminUsername;
 
+    /**
+     * @return The administrator username to use for Linux VMs.
+     * 
+     */
     public String adminUsername() {
         return this.adminUsername;
     }
@@ -35,6 +39,10 @@ public final class ContainerServiceLinuxProfileResponse extends com.pulumi.resou
     @Import(name="ssh", required=true)
     private ContainerServiceSshConfigurationResponse ssh;
 
+    /**
+     * @return SSH configuration for Linux-based VMs running on Azure.
+     * 
+     */
     public ContainerServiceSshConfigurationResponse ssh() {
         return this.ssh;
     }
@@ -64,11 +72,23 @@ public final class ContainerServiceLinuxProfileResponse extends com.pulumi.resou
             $ = new ContainerServiceLinuxProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminUsername The administrator username to use for Linux VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUsername(String adminUsername) {
             $.adminUsername = adminUsername;
             return this;
         }
 
+        /**
+         * @param ssh SSH configuration for Linux-based VMs running on Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssh(ContainerServiceSshConfigurationResponse ssh) {
             $.ssh = ssh;
             return this;

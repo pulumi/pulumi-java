@@ -28,6 +28,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="actionRequired")
     private @Nullable Output<String> actionRequired;
 
+    /**
+     * @return Actions required for a private endpoint connection
+     * 
+     */
     public Optional<Output<String>> actionRequired() {
         return Optional.ofNullable(this.actionRequired);
     }
@@ -39,6 +43,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description for the current state of a private endpoint connection
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="status", required=true)
     private Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
+    /**
+     * @return The status of a private endpoint connection
+     * 
+     */
     public Output<Either<String,PrivateLinkServiceConnectionStatus>> status() {
         return this.status;
     }
@@ -80,37 +92,85 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
             $ = new PrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionRequired Actions required for a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionRequired(@Nullable Output<String> actionRequired) {
             $.actionRequired = actionRequired;
             return this;
         }
 
+        /**
+         * @param actionRequired Actions required for a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionRequired(String actionRequired) {
             return actionRequired(Output.of(actionRequired));
         }
 
+        /**
+         * @param description The description for the current state of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for the current state of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status The status of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,PrivateLinkServiceConnectionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PrivateLinkServiceConnectionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PrivateLinkServiceConnectionStatus status) {
             return status(Either.ofRight(status));
         }

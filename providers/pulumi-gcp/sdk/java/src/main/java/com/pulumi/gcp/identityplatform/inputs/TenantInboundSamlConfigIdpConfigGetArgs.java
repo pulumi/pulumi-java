@@ -26,6 +26,11 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
     @Import(name="idpCertificates", required=true)
     private Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
 
+    /**
+     * @return The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates() {
         return this.idpCertificates;
     }
@@ -37,6 +42,10 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
     @Import(name="idpEntityId", required=true)
     private Output<String> idpEntityId;
 
+    /**
+     * @return Unique identifier for all SAML entities
+     * 
+     */
     public Output<String> idpEntityId() {
         return this.idpEntityId;
     }
@@ -48,6 +57,10 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
     @Import(name="signRequest")
     private @Nullable Output<Boolean> signRequest;
 
+    /**
+     * @return Indicates if outbounding SAMLRequest should be signed.
+     * 
+     */
     public Optional<Output<Boolean>> signRequest() {
         return Optional.ofNullable(this.signRequest);
     }
@@ -59,6 +72,10 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
     @Import(name="ssoUrl", required=true)
     private Output<String> ssoUrl;
 
+    /**
+     * @return URL to send Authentication request to.
+     * 
+     */
     public Output<String> ssoUrl() {
         return this.ssoUrl;
     }
@@ -90,42 +107,99 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
             $ = new TenantInboundSamlConfigIdpConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idpCertificates The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpCertificates(Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates) {
             $.idpCertificates = idpCertificates;
             return this;
         }
 
+        /**
+         * @param idpCertificates The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpCertificates(List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs> idpCertificates) {
             return idpCertificates(Output.of(idpCertificates));
         }
 
+        /**
+         * @param idpCertificates The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpCertificates(TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs... idpCertificates) {
             return idpCertificates(List.of(idpCertificates));
         }
 
+        /**
+         * @param idpEntityId Unique identifier for all SAML entities
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpEntityId(Output<String> idpEntityId) {
             $.idpEntityId = idpEntityId;
             return this;
         }
 
+        /**
+         * @param idpEntityId Unique identifier for all SAML entities
+         * 
+         * @return builder
+         * 
+         */
         public Builder idpEntityId(String idpEntityId) {
             return idpEntityId(Output.of(idpEntityId));
         }
 
+        /**
+         * @param signRequest Indicates if outbounding SAMLRequest should be signed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signRequest(@Nullable Output<Boolean> signRequest) {
             $.signRequest = signRequest;
             return this;
         }
 
+        /**
+         * @param signRequest Indicates if outbounding SAMLRequest should be signed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signRequest(Boolean signRequest) {
             return signRequest(Output.of(signRequest));
         }
 
+        /**
+         * @param ssoUrl URL to send Authentication request to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoUrl(Output<String> ssoUrl) {
             $.ssoUrl = ssoUrl;
             return this;
         }
 
+        /**
+         * @param ssoUrl URL to send Authentication request to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoUrl(String ssoUrl) {
             return ssoUrl(Output.of(ssoUrl));
         }

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegistryCredentialsResponse {
     /**
-     * The name of the Secret that contains the registry login password
+     * @return The name of the Secret that contains the registry login password
      * 
      */
     private final @Nullable String passwordSecretRef;
     /**
-     * Container Registry Server
+     * @return Container Registry Server
      * 
      */
     private final @Nullable String server;
     /**
-     * Container Registry Username
+     * @return Container Registry Username
      * 
      */
     private final @Nullable String username;
@@ -38,23 +38,23 @@ public final class RegistryCredentialsResponse {
     }
 
     /**
-     * The name of the Secret that contains the registry login password
+     * @return The name of the Secret that contains the registry login password
      * 
-    */
+     */
     public Optional<String> passwordSecretRef() {
         return Optional.ofNullable(this.passwordSecretRef);
     }
     /**
-     * Container Registry Server
+     * @return Container Registry Server
      * 
-    */
+     */
     public Optional<String> server() {
         return Optional.ofNullable(this.server);
     }
     /**
-     * Container Registry Username
+     * @return Container Registry Username
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

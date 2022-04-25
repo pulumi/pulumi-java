@@ -25,6 +25,10 @@ public final class ErrorResponseWrapperResponse extends com.pulumi.resources.Inv
     @Import(name="error")
     private @Nullable ErrorResponseResponse error;
 
+    /**
+     * @return The error response.
+     * 
+     */
     public Optional<ErrorResponseResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -53,6 +57,12 @@ public final class ErrorResponseWrapperResponse extends com.pulumi.resources.Inv
             $ = new ErrorResponseWrapperResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error The error response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable ErrorResponseResponse error) {
             $.error = error;
             return this;

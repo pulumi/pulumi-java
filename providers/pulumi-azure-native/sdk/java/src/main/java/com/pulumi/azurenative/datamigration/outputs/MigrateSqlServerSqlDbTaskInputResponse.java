@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrateSqlServerSqlDbTaskInputResponse {
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
      */
     private final List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases;
     /**
-     * Information for connecting to source
+     * @return Information for connecting to source
      * 
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
     /**
-     * Information for connecting to target
+     * @return Information for connecting to target
      * 
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
     /**
-     * Options for enabling various post migration validations. Available options,
+     * @return Options for enabling various post migration validations. Available options,
      *  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data.
      *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
      * 
@@ -50,32 +50,32 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
     }
 
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
-    */
+     */
     public List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
-     * Information for connecting to source
+     * @return Information for connecting to source
      * 
-    */
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
-     * Information for connecting to target
+     * @return Information for connecting to target
      * 
-    */
+     */
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
     /**
-     * Options for enabling various post migration validations. Available options,
+     * @return Options for enabling various post migration validations. Available options,
      *  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data.
      *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
      * 
-    */
+     */
     public Optional<MigrationValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }

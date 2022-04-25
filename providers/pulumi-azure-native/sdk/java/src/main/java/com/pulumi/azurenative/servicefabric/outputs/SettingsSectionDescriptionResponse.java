@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class SettingsSectionDescriptionResponse {
     /**
-     * The section name of the fabric settings.
+     * @return The section name of the fabric settings.
      * 
      */
     private final String name;
     /**
-     * The collection of parameters in the section.
+     * @return The collection of parameters in the section.
      * 
      */
     private final List<SettingsParameterDescriptionResponse> parameters;
@@ -31,16 +31,16 @@ public final class SettingsSectionDescriptionResponse {
     }
 
     /**
-     * The section name of the fabric settings.
+     * @return The section name of the fabric settings.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The collection of parameters in the section.
+     * @return The collection of parameters in the section.
      * 
-    */
+     */
     public List<SettingsParameterDescriptionResponse> parameters() {
         return this.parameters;
     }

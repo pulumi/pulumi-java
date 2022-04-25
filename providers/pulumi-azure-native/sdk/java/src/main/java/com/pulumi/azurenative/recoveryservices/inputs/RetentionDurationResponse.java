@@ -27,6 +27,11 @@ public final class RetentionDurationResponse extends com.pulumi.resources.Invoke
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return Count of duration types. Retention duration is obtained by the counting the duration type Count times.
+     * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +43,10 @@ public final class RetentionDurationResponse extends com.pulumi.resources.Invoke
     @Import(name="durationType")
     private @Nullable String durationType;
 
+    /**
+     * @return Retention duration type of retention policy.
+     * 
+     */
     public Optional<String> durationType() {
         return Optional.ofNullable(this.durationType);
     }
@@ -67,11 +76,24 @@ public final class RetentionDurationResponse extends com.pulumi.resources.Invoke
             $ = new RetentionDurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Count of duration types. Retention duration is obtained by the counting the duration type Count times.
+         * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param durationType Retention duration type of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationType(@Nullable String durationType) {
             $.durationType = durationType;
             return this;

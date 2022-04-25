@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
     /**
-     * The environment ID associated with the metrics.
+     * @return The environment ID associated with the metrics.
      * 
      */
     private final String env;
     /**
-     * The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
+     * @return The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
      * 
      */
     private final String instanceId;
     /**
-     * The location associated with the metrics.
+     * @return The location associated with the metrics.
      * 
      */
     private final String location;
@@ -36,23 +36,23 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
     }
 
     /**
-     * The environment ID associated with the metrics.
+     * @return The environment ID associated with the metrics.
      * 
-    */
+     */
     public String env() {
         return this.env;
     }
     /**
-     * The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
+     * @return The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * The location associated with the metrics.
+     * @return The location associated with the metrics.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }

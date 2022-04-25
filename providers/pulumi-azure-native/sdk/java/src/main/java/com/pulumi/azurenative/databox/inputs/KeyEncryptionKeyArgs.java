@@ -30,6 +30,10 @@ public final class KeyEncryptionKeyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identityProperties")
     private @Nullable Output<IdentityPropertiesArgs> identityProperties;
 
+    /**
+     * @return Managed identity properties used for key encryption.
+     * 
+     */
     public Optional<Output<IdentityPropertiesArgs>> identityProperties() {
         return Optional.ofNullable(this.identityProperties);
     }
@@ -41,6 +45,10 @@ public final class KeyEncryptionKeyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kekType", required=true)
     private Output<Either<String,KekType>> kekType;
 
+    /**
+     * @return Type of encryption key used for key encryption.
+     * 
+     */
     public Output<Either<String,KekType>> kekType() {
         return this.kekType;
     }
@@ -52,6 +60,10 @@ public final class KeyEncryptionKeyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kekUrl")
     private @Nullable Output<String> kekUrl;
 
+    /**
+     * @return Key encryption key. It is required in case of Customer managed KekType.
+     * 
+     */
     public Optional<Output<String>> kekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
@@ -63,6 +75,10 @@ public final class KeyEncryptionKeyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kekVaultResourceID")
     private @Nullable Output<String> kekVaultResourceID;
 
+    /**
+     * @return Kek vault resource id. It is required in case of Customer managed KekType.
+     * 
+     */
     public Optional<Output<String>> kekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }
@@ -94,46 +110,106 @@ public final class KeyEncryptionKeyArgs extends com.pulumi.resources.ResourceArg
             $ = new KeyEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityProperties Managed identity properties used for key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProperties(@Nullable Output<IdentityPropertiesArgs> identityProperties) {
             $.identityProperties = identityProperties;
             return this;
         }
 
+        /**
+         * @param identityProperties Managed identity properties used for key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProperties(IdentityPropertiesArgs identityProperties) {
             return identityProperties(Output.of(identityProperties));
         }
 
+        /**
+         * @param kekType Type of encryption key used for key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(Output<Either<String,KekType>> kekType) {
             $.kekType = kekType;
             return this;
         }
 
+        /**
+         * @param kekType Type of encryption key used for key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(Either<String,KekType> kekType) {
             return kekType(Output.of(kekType));
         }
 
+        /**
+         * @param kekType Type of encryption key used for key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(String kekType) {
             return kekType(Either.ofLeft(kekType));
         }
 
+        /**
+         * @param kekType Type of encryption key used for key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(KekType kekType) {
             return kekType(Either.ofRight(kekType));
         }
 
+        /**
+         * @param kekUrl Key encryption key. It is required in case of Customer managed KekType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekUrl(@Nullable Output<String> kekUrl) {
             $.kekUrl = kekUrl;
             return this;
         }
 
+        /**
+         * @param kekUrl Key encryption key. It is required in case of Customer managed KekType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekUrl(String kekUrl) {
             return kekUrl(Output.of(kekUrl));
         }
 
+        /**
+         * @param kekVaultResourceID Kek vault resource id. It is required in case of Customer managed KekType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekVaultResourceID(@Nullable Output<String> kekVaultResourceID) {
             $.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
 
+        /**
+         * @param kekVaultResourceID Kek vault resource id. It is required in case of Customer managed KekType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekVaultResourceID(String kekVaultResourceID) {
             return kekVaultResourceID(Output.of(kekVaultResourceID));
         }

@@ -25,6 +25,10 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
     @Import(name="alertProductNames", required=true)
     private List<String> alertProductNames;
 
+    /**
+     * @return List of product names of alerts in the incident
+     * 
+     */
     public List<String> alertProductNames() {
         return this.alertProductNames;
     }
@@ -36,6 +40,10 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
     @Import(name="alertsCount", required=true)
     private Integer alertsCount;
 
+    /**
+     * @return The number of alerts in the incident
+     * 
+     */
     public Integer alertsCount() {
         return this.alertsCount;
     }
@@ -47,6 +55,10 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
     @Import(name="bookmarksCount", required=true)
     private Integer bookmarksCount;
 
+    /**
+     * @return The number of bookmarks in the incident
+     * 
+     */
     public Integer bookmarksCount() {
         return this.bookmarksCount;
     }
@@ -58,6 +70,10 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
     @Import(name="commentsCount", required=true)
     private Integer commentsCount;
 
+    /**
+     * @return The number of comments in the incident
+     * 
+     */
     public Integer commentsCount() {
         return this.commentsCount;
     }
@@ -69,6 +85,10 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
     @Import(name="tactics", required=true)
     private List<String> tactics;
 
+    /**
+     * @return The tactics associated with incident
+     * 
+     */
     public List<String> tactics() {
         return this.tactics;
     }
@@ -101,35 +121,77 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
             $ = new IncidentAdditionalDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertProductNames List of product names of alerts in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertProductNames(List<String> alertProductNames) {
             $.alertProductNames = alertProductNames;
             return this;
         }
 
+        /**
+         * @param alertProductNames List of product names of alerts in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertProductNames(String... alertProductNames) {
             return alertProductNames(List.of(alertProductNames));
         }
 
+        /**
+         * @param alertsCount The number of alerts in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertsCount(Integer alertsCount) {
             $.alertsCount = alertsCount;
             return this;
         }
 
+        /**
+         * @param bookmarksCount The number of bookmarks in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder bookmarksCount(Integer bookmarksCount) {
             $.bookmarksCount = bookmarksCount;
             return this;
         }
 
+        /**
+         * @param commentsCount The number of comments in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder commentsCount(Integer commentsCount) {
             $.commentsCount = commentsCount;
             return this;
         }
 
+        /**
+         * @param tactics The tactics associated with incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder tactics(List<String> tactics) {
             $.tactics = tactics;
             return this;
         }
 
+        /**
+         * @param tactics The tactics associated with incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder tactics(String... tactics) {
             return tactics(List.of(tactics));
         }

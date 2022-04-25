@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrateSqlServerSqlDbDatabaseInputResponse {
     /**
-     * Whether to set database read only before migration
+     * @return Whether to set database read only before migration
      * 
      */
     private final @Nullable Boolean makeSourceDbReadOnly;
     /**
-     * Name of the database
+     * @return Name of the database
      * 
      */
     private final @Nullable String name;
     /**
-     * Mapping of source to target tables
+     * @return Mapping of source to target tables
      * 
      */
     private final @Nullable Map<String,String> tableMap;
     /**
-     * Name of target database. Note: Target database will be truncated before starting migration.
+     * @return Name of target database. Note: Target database will be truncated before starting migration.
      * 
      */
     private final @Nullable String targetDatabaseName;
@@ -47,30 +47,30 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
     }
 
     /**
-     * Whether to set database read only before migration
+     * @return Whether to set database read only before migration
      * 
-    */
+     */
     public Optional<Boolean> makeSourceDbReadOnly() {
         return Optional.ofNullable(this.makeSourceDbReadOnly);
     }
     /**
-     * Name of the database
+     * @return Name of the database
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Mapping of source to target tables
+     * @return Mapping of source to target tables
      * 
-    */
+     */
     public Map<String,String> tableMap() {
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
     /**
-     * Name of target database. Note: Target database will be truncated before starting migration.
+     * @return Name of target database. Note: Target database will be truncated before starting migration.
      * 
-    */
+     */
     public Optional<String> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }

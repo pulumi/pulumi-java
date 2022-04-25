@@ -13,18 +13,18 @@ import java.util.Objects;
 @CustomType
 public final class PreventionJobTriggerInspectJob {
     /**
-     * A task to execute on the completion of a job.
+     * @return A task to execute on the completion of a job.
      * Structure is documented below.
      * 
      */
     private final List<PreventionJobTriggerInspectJobAction> actions;
     /**
-     * The name of the template to run when this job is triggered.
+     * @return The name of the template to run when this job is triggered.
      * 
      */
     private final String inspectTemplateName;
     /**
-     * Information on where to inspect
+     * @return Information on where to inspect
      * Structure is documented below.
      * 
      */
@@ -41,25 +41,25 @@ public final class PreventionJobTriggerInspectJob {
     }
 
     /**
-     * A task to execute on the completion of a job.
+     * @return A task to execute on the completion of a job.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PreventionJobTriggerInspectJobAction> actions() {
         return this.actions;
     }
     /**
-     * The name of the template to run when this job is triggered.
+     * @return The name of the template to run when this job is triggered.
      * 
-    */
+     */
     public String inspectTemplateName() {
         return this.inspectTemplateName;
     }
     /**
-     * Information on where to inspect
+     * @return Information on where to inspect
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionJobTriggerInspectJobStorageConfig storageConfig() {
         return this.storageConfig;
     }

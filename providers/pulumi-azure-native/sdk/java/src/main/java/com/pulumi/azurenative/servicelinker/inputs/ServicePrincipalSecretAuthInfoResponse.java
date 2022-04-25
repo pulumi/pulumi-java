@@ -25,6 +25,11 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
     @Import(name="authType", required=true)
     private String authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;servicePrincipalSecret&#39;.
+     * 
+     */
     public String authType() {
         return this.authType;
     }
@@ -36,6 +41,10 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return ServicePrincipal application clientId for servicePrincipal auth.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -47,6 +56,10 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return Principal Id for servicePrincipal auth.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -58,6 +71,10 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
     @Import(name="secret", required=true)
     private String secret;
 
+    /**
+     * @return Secret for servicePrincipal auth.
+     * 
+     */
     public String secret() {
         return this.secret;
     }
@@ -89,21 +106,46 @@ public final class ServicePrincipalSecretAuthInfoResponse extends com.pulumi.res
             $ = new ServicePrincipalSecretAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;servicePrincipalSecret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param clientId ServicePrincipal application clientId for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param principalId Principal Id for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param secret Secret for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             $.secret = secret;
             return this;

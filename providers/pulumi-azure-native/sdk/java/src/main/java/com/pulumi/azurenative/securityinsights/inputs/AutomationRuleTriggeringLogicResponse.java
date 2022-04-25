@@ -28,6 +28,10 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="conditions")
     private @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions;
 
+    /**
+     * @return The conditions to evaluate to determine if the automation rule should be triggered on a given object
+     * 
+     */
     public Optional<List<AutomationRulePropertyValuesConditionResponse>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -39,6 +43,10 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="expirationTimeUtc")
     private @Nullable String expirationTimeUtc;
 
+    /**
+     * @return Determines when the automation rule should automatically expire and be disabled.
+     * 
+     */
     public Optional<String> expirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
@@ -50,6 +58,10 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Determines whether the automation rule is enabled or disabled.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -61,6 +73,10 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="triggersOn", required=true)
     private String triggersOn;
 
+    /**
+     * @return The type of object the automation rule triggers on
+     * 
+     */
     public String triggersOn() {
         return this.triggersOn;
     }
@@ -72,6 +88,10 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
     @Import(name="triggersWhen", required=true)
     private String triggersWhen;
 
+    /**
+     * @return The type of event the automation rule triggers on
+     * 
+     */
     public String triggersWhen() {
         return this.triggersWhen;
     }
@@ -104,30 +124,66 @@ public final class AutomationRuleTriggeringLogicResponse extends com.pulumi.reso
             $ = new AutomationRuleTriggeringLogicResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions The conditions to evaluate to determine if the automation rule should be triggered on a given object
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable List<AutomationRulePropertyValuesConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions The conditions to evaluate to determine if the automation rule should be triggered on a given object
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(AutomationRulePropertyValuesConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param expirationTimeUtc Determines when the automation rule should automatically expire and be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
             $.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
+        /**
+         * @param isEnabled Determines whether the automation rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param triggersOn The type of object the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersOn(String triggersOn) {
             $.triggersOn = triggersOn;
             return this;
         }
 
+        /**
+         * @param triggersWhen The type of event the automation rule triggers on
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggersWhen(String triggersWhen) {
             $.triggersWhen = triggersWhen;
             return this;

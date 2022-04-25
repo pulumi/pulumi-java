@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ScanRunWarningTraceResponse {
     /**
-     * Indicates the warning code.
+     * @return Indicates the warning code.
      * 
      */
     private final String code;
@@ -21,9 +21,9 @@ public final class ScanRunWarningTraceResponse {
     }
 
     /**
-     * Indicates the warning code.
+     * @return Indicates the warning code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }

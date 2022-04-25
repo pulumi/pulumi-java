@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResolverPipelineConfig {
     /**
-     * The list of Function ID.
+     * @return The list of Function ID.
      * 
      */
     private final @Nullable List<String> functions;
@@ -23,9 +23,9 @@ public final class ResolverPipelineConfig {
     }
 
     /**
-     * The list of Function ID.
+     * @return The list of Function ID.
      * 
-    */
+     */
     public List<String> functions() {
         return this.functions == null ? List.of() : this.functions;
     }

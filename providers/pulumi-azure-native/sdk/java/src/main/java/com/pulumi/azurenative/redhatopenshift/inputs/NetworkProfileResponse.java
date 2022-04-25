@@ -25,6 +25,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="podCidr")
     private @Nullable String podCidr;
 
+    /**
+     * @return The CIDR used for OpenShift/Kubernetes Pods (immutable).
+     * 
+     */
     public Optional<String> podCidr() {
         return Optional.ofNullable(this.podCidr);
     }
@@ -36,6 +40,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serviceCidr")
     private @Nullable String serviceCidr;
 
+    /**
+     * @return The CIDR used for OpenShift/Kubernetes Services (immutable).
+     * 
+     */
     public Optional<String> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
@@ -65,11 +73,23 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param podCidr The CIDR used for OpenShift/Kubernetes Pods (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCidr(@Nullable String podCidr) {
             $.podCidr = podCidr;
             return this;
         }
 
+        /**
+         * @param serviceCidr The CIDR used for OpenShift/Kubernetes Services (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(@Nullable String serviceCidr) {
             $.serviceCidr = serviceCidr;
             return this;

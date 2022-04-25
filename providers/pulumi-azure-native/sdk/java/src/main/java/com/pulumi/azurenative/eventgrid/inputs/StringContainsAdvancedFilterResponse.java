@@ -27,6 +27,10 @@ public final class StringContainsAdvancedFilterResponse extends com.pulumi.resou
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The field/property in the event based on which you want to filter.
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -39,6 +43,11 @@ public final class StringContainsAdvancedFilterResponse extends com.pulumi.resou
     @Import(name="operatorType", required=true)
     private String operatorType;
 
+    /**
+     * @return The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is &#39;StringContains&#39;.
+     * 
+     */
     public String operatorType() {
         return this.operatorType;
     }
@@ -50,6 +59,10 @@ public final class StringContainsAdvancedFilterResponse extends com.pulumi.resou
     @Import(name="values")
     private @Nullable List<String> values;
 
+    /**
+     * @return The set of filter values.
+     * 
+     */
     public Optional<List<String>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -80,21 +93,46 @@ public final class StringContainsAdvancedFilterResponse extends com.pulumi.resou
             $ = new StringContainsAdvancedFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The field/property in the event based on which you want to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param operatorType The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+         * Expected value is &#39;StringContains&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(String operatorType) {
             $.operatorType = operatorType;
             return this;
         }
 
+        /**
+         * @param values The set of filter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The set of filter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

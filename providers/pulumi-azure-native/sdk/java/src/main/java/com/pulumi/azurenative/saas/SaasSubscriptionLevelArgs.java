@@ -24,6 +24,10 @@ public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.Resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location. Only value allowed for SaaS is &#39;global&#39;
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.Resour
     @Import(name="properties")
     private @Nullable Output<SaasCreationPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the SaaS resource that are relevant for creation.
+     * 
+     */
     public Optional<Output<SaasCreationPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -57,6 +69,10 @@ public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.Resour
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -79,6 +99,10 @@ public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return the resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,56 +136,128 @@ public final class SaasSubscriptionLevelArgs extends com.pulumi.resources.Resour
             $ = new SaasSubscriptionLevelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Resource location. Only value allowed for SaaS is &#39;global&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location. Only value allowed for SaaS is &#39;global&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Properties of the SaaS resource that are relevant for creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<SaasCreationPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the SaaS resource that are relevant for creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SaasCreationPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param tags the resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags the resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

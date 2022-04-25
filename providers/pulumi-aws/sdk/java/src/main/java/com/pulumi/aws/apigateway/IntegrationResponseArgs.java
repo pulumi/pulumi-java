@@ -23,6 +23,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
     @Import(name="contentHandling")
     private @Nullable Output<String> contentHandling;
 
+    /**
+     * @return Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
+     * 
+     */
     public Optional<Output<String>> contentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
@@ -34,6 +38,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
     @Import(name="httpMethod", required=true)
     private Output<String> httpMethod;
 
+    /**
+     * @return The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
+     * 
+     */
     public Output<String> httpMethod() {
         return this.httpMethod;
     }
@@ -45,6 +53,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The API resource ID
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -57,6 +69,11 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
     @Import(name="responseParameters")
     private @Nullable Output<Map<String,String>> responseParameters;
 
+    /**
+     * @return A map of response parameters that can be read from the backend response.
+     * For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = &#34;integration.response.header.X-Some-Other-Header&#34; }`
+     * 
+     */
     public Optional<Output<Map<String,String>>> responseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
@@ -68,6 +85,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
     @Import(name="responseTemplates")
     private @Nullable Output<Map<String,String>> responseTemplates;
 
+    /**
+     * @return A map specifying the templates used to transform the integration response body
+     * 
+     */
     public Optional<Output<Map<String,String>>> responseTemplates() {
         return Optional.ofNullable(this.responseTemplates);
     }
@@ -79,6 +100,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
     @Import(name="restApi", required=true)
     private Output<String> restApi;
 
+    /**
+     * @return The ID of the associated REST API
+     * 
+     */
     public Output<String> restApi() {
         return this.restApi;
     }
@@ -93,6 +118,13 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
     @Import(name="selectionPattern")
     private @Nullable Output<String> selectionPattern;
 
+    /**
+     * @return Specifies the regular expression pattern used to choose
+     * an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
+     * If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
+     * For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
+     * 
+     */
     public Optional<Output<String>> selectionPattern() {
         return Optional.ofNullable(this.selectionPattern);
     }
@@ -104,6 +136,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
     @Import(name="statusCode", required=true)
     private Output<String> statusCode;
 
+    /**
+     * @return The HTTP status code
+     * 
+     */
     public Output<String> statusCode() {
         return this.statusCode;
     }
@@ -139,74 +175,178 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
             $ = new IntegrationResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentHandling Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHandling(@Nullable Output<String> contentHandling) {
             $.contentHandling = contentHandling;
             return this;
         }
 
+        /**
+         * @param contentHandling Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHandling(String contentHandling) {
             return contentHandling(Output.of(contentHandling));
         }
 
+        /**
+         * @param httpMethod The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(Output<String> httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param httpMethod The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(String httpMethod) {
             return httpMethod(Output.of(httpMethod));
         }
 
+        /**
+         * @param resourceId The API resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The API resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param responseParameters A map of response parameters that can be read from the backend response.
+         * For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = &#34;integration.response.header.X-Some-Other-Header&#34; }`
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseParameters(@Nullable Output<Map<String,String>> responseParameters) {
             $.responseParameters = responseParameters;
             return this;
         }
 
+        /**
+         * @param responseParameters A map of response parameters that can be read from the backend response.
+         * For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = &#34;integration.response.header.X-Some-Other-Header&#34; }`
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseParameters(Map<String,String> responseParameters) {
             return responseParameters(Output.of(responseParameters));
         }
 
+        /**
+         * @param responseTemplates A map specifying the templates used to transform the integration response body
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
             $.responseTemplates = responseTemplates;
             return this;
         }
 
+        /**
+         * @param responseTemplates A map specifying the templates used to transform the integration response body
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTemplates(Map<String,String> responseTemplates) {
             return responseTemplates(Output.of(responseTemplates));
         }
 
+        /**
+         * @param restApi The ID of the associated REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(Output<String> restApi) {
             $.restApi = restApi;
             return this;
         }
 
+        /**
+         * @param restApi The ID of the associated REST API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApi(String restApi) {
             return restApi(Output.of(restApi));
         }
 
+        /**
+         * @param selectionPattern Specifies the regular expression pattern used to choose
+         * an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
+         * If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
+         * For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectionPattern(@Nullable Output<String> selectionPattern) {
             $.selectionPattern = selectionPattern;
             return this;
         }
 
+        /**
+         * @param selectionPattern Specifies the regular expression pattern used to choose
+         * an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
+         * If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
+         * For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectionPattern(String selectionPattern) {
             return selectionPattern(Output.of(selectionPattern));
         }
 
+        /**
+         * @param statusCode The HTTP status code
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Output<String> statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusCode The HTTP status code
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             return statusCode(Output.of(statusCode));
         }

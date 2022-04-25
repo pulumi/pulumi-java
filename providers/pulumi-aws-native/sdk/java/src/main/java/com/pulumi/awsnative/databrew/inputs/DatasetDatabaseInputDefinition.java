@@ -22,6 +22,10 @@ public final class DatasetDatabaseInputDefinition extends com.pulumi.resources.I
     @Import(name="databaseTableName")
     private @Nullable String databaseTableName;
 
+    /**
+     * @return Database table name
+     * 
+     */
     public Optional<String> databaseTableName() {
         return Optional.ofNullable(this.databaseTableName);
     }
@@ -33,6 +37,10 @@ public final class DatasetDatabaseInputDefinition extends com.pulumi.resources.I
     @Import(name="glueConnectionName", required=true)
     private String glueConnectionName;
 
+    /**
+     * @return Glue connection name
+     * 
+     */
     public String glueConnectionName() {
         return this.glueConnectionName;
     }
@@ -44,6 +52,10 @@ public final class DatasetDatabaseInputDefinition extends com.pulumi.resources.I
     @Import(name="queryString")
     private @Nullable String queryString;
 
+    /**
+     * @return Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
+     * 
+     */
     public Optional<String> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -82,16 +94,34 @@ public final class DatasetDatabaseInputDefinition extends com.pulumi.resources.I
             $ = new DatasetDatabaseInputDefinition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseTableName Database table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseTableName(@Nullable String databaseTableName) {
             $.databaseTableName = databaseTableName;
             return this;
         }
 
+        /**
+         * @param glueConnectionName Glue connection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueConnectionName(String glueConnectionName) {
             $.glueConnectionName = glueConnectionName;
             return this;
         }
 
+        /**
+         * @param queryString Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable String queryString) {
             $.queryString = queryString;
             return this;

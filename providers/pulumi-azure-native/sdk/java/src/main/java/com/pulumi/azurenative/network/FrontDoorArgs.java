@@ -32,6 +32,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backendPools")
     private @Nullable Output<List<BackendPoolArgs>> backendPools;
 
+    /**
+     * @return Backend pools available to routing rules.
+     * 
+     */
     public Optional<Output<List<BackendPoolArgs>>> backendPools() {
         return Optional.ofNullable(this.backendPools);
     }
@@ -43,6 +47,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backendPoolsSettings")
     private @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
 
+    /**
+     * @return Settings for all backendPools
+     * 
+     */
     public Optional<Output<BackendPoolsSettingsArgs>> backendPoolsSettings() {
         return Optional.ofNullable(this.backendPoolsSettings);
     }
@@ -54,6 +62,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
     private @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
 
+    /**
+     * @return Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * 
+     */
     public Optional<Output<Either<String,FrontDoorEnabledState>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -65,6 +77,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return A friendly name for the frontDoor
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -76,6 +92,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frontDoorName")
     private @Nullable Output<String> frontDoorName;
 
+    /**
+     * @return Name of the Front Door which is globally unique.
+     * 
+     */
     public Optional<Output<String>> frontDoorName() {
         return Optional.ofNullable(this.frontDoorName);
     }
@@ -87,6 +107,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frontendEndpoints")
     private @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
 
+    /**
+     * @return Frontend endpoints available to routing rules.
+     * 
+     */
     public Optional<Output<List<FrontendEndpointArgs>>> frontendEndpoints() {
         return Optional.ofNullable(this.frontendEndpoints);
     }
@@ -98,6 +122,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthProbeSettings")
     private @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
 
+    /**
+     * @return Health probe settings associated with this Front Door instance.
+     * 
+     */
     public Optional<Output<List<HealthProbeSettingsModelArgs>>> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
@@ -109,6 +137,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingSettings")
     private @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
 
+    /**
+     * @return Load balancing settings associated with this Front Door instance.
+     * 
+     */
     public Optional<Output<List<LoadBalancingSettingsModelArgs>>> loadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
@@ -120,6 +152,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -131,6 +167,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -142,6 +182,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingRules")
     private @Nullable Output<List<RoutingRuleArgs>> routingRules;
 
+    /**
+     * @return Routing rules associated with this Front Door.
+     * 
+     */
     public Optional<Output<List<RoutingRuleArgs>>> routingRules() {
         return Optional.ofNullable(this.routingRules);
     }
@@ -153,6 +197,10 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -192,138 +240,324 @@ public final class FrontDoorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FrontDoorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPools Backend pools available to routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPools(@Nullable Output<List<BackendPoolArgs>> backendPools) {
             $.backendPools = backendPools;
             return this;
         }
 
+        /**
+         * @param backendPools Backend pools available to routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPools(List<BackendPoolArgs> backendPools) {
             return backendPools(Output.of(backendPools));
         }
 
+        /**
+         * @param backendPools Backend pools available to routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPools(BackendPoolArgs... backendPools) {
             return backendPools(List.of(backendPools));
         }
 
+        /**
+         * @param backendPoolsSettings Settings for all backendPools
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPoolsSettings(@Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings) {
             $.backendPoolsSettings = backendPoolsSettings;
             return this;
         }
 
+        /**
+         * @param backendPoolsSettings Settings for all backendPools
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPoolsSettings(BackendPoolsSettingsArgs backendPoolsSettings) {
             return backendPoolsSettings(Output.of(backendPoolsSettings));
         }
 
+        /**
+         * @param enabledState Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,FrontDoorEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,FrontDoorEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(FrontDoorEnabledState enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param friendlyName A friendly name for the frontDoor
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName A friendly name for the frontDoor
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param frontDoorName Name of the Front Door which is globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontDoorName(@Nullable Output<String> frontDoorName) {
             $.frontDoorName = frontDoorName;
             return this;
         }
 
+        /**
+         * @param frontDoorName Name of the Front Door which is globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontDoorName(String frontDoorName) {
             return frontDoorName(Output.of(frontDoorName));
         }
 
+        /**
+         * @param frontendEndpoints Frontend endpoints available to routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendEndpoints(@Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints) {
             $.frontendEndpoints = frontendEndpoints;
             return this;
         }
 
+        /**
+         * @param frontendEndpoints Frontend endpoints available to routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendEndpoints(List<FrontendEndpointArgs> frontendEndpoints) {
             return frontendEndpoints(Output.of(frontendEndpoints));
         }
 
+        /**
+         * @param frontendEndpoints Frontend endpoints available to routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendEndpoints(FrontendEndpointArgs... frontendEndpoints) {
             return frontendEndpoints(List.of(frontendEndpoints));
         }
 
+        /**
+         * @param healthProbeSettings Health probe settings associated with this Front Door instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(@Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings) {
             $.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
+        /**
+         * @param healthProbeSettings Health probe settings associated with this Front Door instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(List<HealthProbeSettingsModelArgs> healthProbeSettings) {
             return healthProbeSettings(Output.of(healthProbeSettings));
         }
 
+        /**
+         * @param healthProbeSettings Health probe settings associated with this Front Door instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(HealthProbeSettingsModelArgs... healthProbeSettings) {
             return healthProbeSettings(List.of(healthProbeSettings));
         }
 
+        /**
+         * @param loadBalancingSettings Load balancing settings associated with this Front Door instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingSettings(@Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings) {
             $.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
+        /**
+         * @param loadBalancingSettings Load balancing settings associated with this Front Door instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingSettings(List<LoadBalancingSettingsModelArgs> loadBalancingSettings) {
             return loadBalancingSettings(Output.of(loadBalancingSettings));
         }
 
+        /**
+         * @param loadBalancingSettings Load balancing settings associated with this Front Door instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingSettings(LoadBalancingSettingsModelArgs... loadBalancingSettings) {
             return loadBalancingSettings(List.of(loadBalancingSettings));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routingRules Routing rules associated with this Front Door.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingRules(@Nullable Output<List<RoutingRuleArgs>> routingRules) {
             $.routingRules = routingRules;
             return this;
         }
 
+        /**
+         * @param routingRules Routing rules associated with this Front Door.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingRules(List<RoutingRuleArgs> routingRules) {
             return routingRules(Output.of(routingRules));
         }
 
+        /**
+         * @param routingRules Routing rules associated with this Front Door.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingRules(RoutingRuleArgs... routingRules) {
             return routingRules(List.of(routingRules));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -25,6 +25,10 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the SKU capability.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="reason")
     private @Nullable String reason;
 
+    /**
+     * @return Reason of the SKU capability.
+     * 
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -47,6 +55,10 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value of the SKU capability.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -77,16 +89,34 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CapabilityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the SKU capability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param reason Reason of the SKU capability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable String reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param value Value of the SKU capability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

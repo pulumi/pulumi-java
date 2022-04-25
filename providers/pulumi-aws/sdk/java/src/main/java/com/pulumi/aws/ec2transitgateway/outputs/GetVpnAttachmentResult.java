@@ -16,12 +16,12 @@ import javax.annotation.Nullable;
 public final class GetVpnAttachmentResult {
     private final @Nullable List<GetVpnAttachmentFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Key-value tags for the EC2 Transit Gateway VPN Attachment
+     * @return Key-value tags for the EC2 Transit Gateway VPN Attachment
      * 
      */
     private final Map<String,String> tags;
@@ -46,16 +46,16 @@ public final class GetVpnAttachmentResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Key-value tags for the EC2 Transit Gateway VPN Attachment
+     * @return Key-value tags for the EC2 Transit Gateway VPN Attachment
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

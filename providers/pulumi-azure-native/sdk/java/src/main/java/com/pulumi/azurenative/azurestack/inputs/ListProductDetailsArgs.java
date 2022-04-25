@@ -19,6 +19,10 @@ public final class ListProductDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="productName", required=true)
     private String productName;
 
+    /**
+     * @return Name of the product.
+     * 
+     */
     public String productName() {
         return this.productName;
     }
@@ -30,6 +34,10 @@ public final class ListProductDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="registrationName", required=true)
     private String registrationName;
 
+    /**
+     * @return Name of the Azure Stack registration.
+     * 
+     */
     public String registrationName() {
         return this.registrationName;
     }
@@ -41,6 +49,10 @@ public final class ListProductDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroup", required=true)
     private String resourceGroup;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
@@ -71,16 +83,34 @@ public final class ListProductDetailsArgs extends com.pulumi.resources.InvokeArg
             $ = new ListProductDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param productName Name of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(String productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationName(String registrationName) {
             $.registrationName = registrationName;
             return this;
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

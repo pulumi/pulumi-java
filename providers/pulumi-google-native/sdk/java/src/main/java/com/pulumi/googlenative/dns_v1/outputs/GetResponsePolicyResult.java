@@ -12,18 +12,18 @@ import java.util.Objects;
 @CustomType
 public final class GetResponsePolicyResult {
     /**
-     * User-provided description for this Response Policy.
+     * @return User-provided description for this Response Policy.
      * 
      */
     private final String description;
     private final String kind;
     /**
-     * List of network names specifying networks to which this policy is applied.
+     * @return List of network names specifying networks to which this policy is applied.
      * 
      */
     private final List<ResponsePolicyNetworkResponse> networks;
     /**
-     * User assigned name for this Response Policy.
+     * @return User assigned name for this Response Policy.
      * 
      */
     private final String responsePolicyName;
@@ -41,9 +41,9 @@ public final class GetResponsePolicyResult {
     }
 
     /**
-     * User-provided description for this Response Policy.
+     * @return User-provided description for this Response Policy.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -51,16 +51,16 @@ public final class GetResponsePolicyResult {
         return this.kind;
     }
     /**
-     * List of network names specifying networks to which this policy is applied.
+     * @return List of network names specifying networks to which this policy is applied.
      * 
-    */
+     */
     public List<ResponsePolicyNetworkResponse> networks() {
         return this.networks;
     }
     /**
-     * User assigned name for this Response Policy.
+     * @return User assigned name for this Response Policy.
      * 
-    */
+     */
     public String responsePolicyName() {
         return this.responsePolicyName;
     }

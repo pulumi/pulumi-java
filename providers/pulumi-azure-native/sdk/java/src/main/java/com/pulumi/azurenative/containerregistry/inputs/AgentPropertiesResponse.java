@@ -25,6 +25,10 @@ public final class AgentPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="cpu")
     private @Nullable Integer cpu;
 
+    /**
+     * @return The CPU configuration in terms of number of cores required for the run.
+     * 
+     */
     public Optional<Integer> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -53,6 +57,12 @@ public final class AgentPropertiesResponse extends com.pulumi.resources.InvokeAr
             $ = new AgentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu The CPU configuration in terms of number of cores required for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Integer cpu) {
             $.cpu = cpu;
             return this;

@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse extends com.pulumi.
     @Import(name="topic", required=true)
     private String topic;
 
+    /**
+     * @return Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
+     * 
+     */
     public String topic() {
         return this.topic;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse extends com.pulumi.
             $ = new GooglePrivacyDlpV2PublishToPubSubResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topic Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             $.topic = topic;
             return this;

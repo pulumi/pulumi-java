@@ -36,58 +36,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMetadataActivityResponse {
     /**
-     * GetMetadata activity dataset reference.
+     * @return GetMetadata activity dataset reference.
      * 
      */
     private final DatasetReferenceResponse dataset;
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Fields of metadata to get from dataset.
+     * @return Fields of metadata to get from dataset.
      * 
      */
     private final @Nullable List<Object> fieldList;
     /**
-     * GetMetadata activity format settings.
+     * @return GetMetadata activity format settings.
      * 
      */
     private final @Nullable Object formatSettings;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * GetMetadata activity store settings.
+     * @return GetMetadata activity store settings.
      * 
      */
     private final @Nullable Object storeSettings;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;GetMetadata&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -119,80 +119,80 @@ public final class GetMetadataActivityResponse {
     }
 
     /**
-     * GetMetadata activity dataset reference.
+     * @return GetMetadata activity dataset reference.
      * 
-    */
+     */
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Fields of metadata to get from dataset.
+     * @return Fields of metadata to get from dataset.
      * 
-    */
+     */
     public List<Object> fieldList() {
         return this.fieldList == null ? List.of() : this.fieldList;
     }
     /**
-     * GetMetadata activity format settings.
+     * @return GetMetadata activity format settings.
      * 
-    */
+     */
     public Optional<Object> formatSettings() {
         return Optional.ofNullable(this.formatSettings);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * GetMetadata activity store settings.
+     * @return GetMetadata activity store settings.
      * 
-    */
+     */
     public Optional<Object> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;GetMetadata&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

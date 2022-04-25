@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KeyVaultPropertiesResponse {
     /**
-     * The object identifier of the current versioned Key Vault Key in use.
+     * @return The object identifier of the current versioned Key Vault Key in use.
      * 
      */
     private final String currentVersionedKeyIdentifier;
     /**
-     * The name of KeyVault key.
+     * @return The name of KeyVault key.
      * 
      */
     private final @Nullable String keyName;
     /**
-     * The Uri of KeyVault.
+     * @return The Uri of KeyVault.
      * 
      */
     private final @Nullable String keyVaultUri;
     /**
-     * The version of KeyVault key.
+     * @return The version of KeyVault key.
      * 
      */
     private final @Nullable String keyVersion;
     /**
-     * Timestamp of last rotation of the Key Vault Key.
+     * @return Timestamp of last rotation of the Key Vault Key.
      * 
      */
     private final String lastKeyRotationTimestamp;
@@ -52,37 +52,37 @@ public final class KeyVaultPropertiesResponse {
     }
 
     /**
-     * The object identifier of the current versioned Key Vault Key in use.
+     * @return The object identifier of the current versioned Key Vault Key in use.
      * 
-    */
+     */
     public String currentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
     }
     /**
-     * The name of KeyVault key.
+     * @return The name of KeyVault key.
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * The Uri of KeyVault.
+     * @return The Uri of KeyVault.
      * 
-    */
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
-     * The version of KeyVault key.
+     * @return The version of KeyVault key.
      * 
-    */
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
-     * Timestamp of last rotation of the Key Vault Key.
+     * @return Timestamp of last rotation of the Key Vault Key.
      * 
-    */
+     */
     public String lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }

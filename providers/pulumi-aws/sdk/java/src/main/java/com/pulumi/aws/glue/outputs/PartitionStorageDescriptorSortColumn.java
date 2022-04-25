@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class PartitionStorageDescriptorSortColumn {
     /**
-     * The name of the column.
+     * @return The name of the column.
      * 
      */
     private final String column;
     /**
-     * Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
+     * @return Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
      * 
      */
     private final Integer sortOrder;
@@ -30,16 +30,16 @@ public final class PartitionStorageDescriptorSortColumn {
     }
 
     /**
-     * The name of the column.
+     * @return The name of the column.
      * 
-    */
+     */
     public String column() {
         return this.column;
     }
     /**
-     * Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
+     * @return Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
      * 
-    */
+     */
     public Integer sortOrder() {
         return this.sortOrder;
     }

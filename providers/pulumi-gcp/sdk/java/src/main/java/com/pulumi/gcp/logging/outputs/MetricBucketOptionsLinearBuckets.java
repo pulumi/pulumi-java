@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricBucketOptionsLinearBuckets {
     /**
-     * Must be greater than 0.
+     * @return Must be greater than 0.
      * 
      */
     private final @Nullable Integer numFiniteBuckets;
     /**
-     * Lower bound of the first bucket.
+     * @return Lower bound of the first bucket.
      * 
      */
     private final @Nullable Double offset;
     /**
-     * Must be greater than 0.
+     * @return Must be greater than 0.
      * 
      */
     private final @Nullable Double width;
@@ -39,23 +39,23 @@ public final class MetricBucketOptionsLinearBuckets {
     }
 
     /**
-     * Must be greater than 0.
+     * @return Must be greater than 0.
      * 
-    */
+     */
     public Optional<Integer> numFiniteBuckets() {
         return Optional.ofNullable(this.numFiniteBuckets);
     }
     /**
-     * Lower bound of the first bucket.
+     * @return Lower bound of the first bucket.
      * 
-    */
+     */
     public Optional<Double> offset() {
         return Optional.ofNullable(this.offset);
     }
     /**
-     * Must be greater than 0.
+     * @return Must be greater than 0.
      * 
-    */
+     */
     public Optional<Double> width() {
         return Optional.ofNullable(this.width);
     }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkPropertiesResponse {
     /**
-     * Indicates whether or not private link is enabled.
+     * @return Indicates whether or not private link is enabled.
      * 
      */
     private final @Nullable String privateLink;
     /**
-     * The direction for the resource provider connection.
+     * @return The direction for the resource provider connection.
      * 
      */
     private final @Nullable String resourceProviderConnection;
@@ -31,16 +31,16 @@ public final class NetworkPropertiesResponse {
     }
 
     /**
-     * Indicates whether or not private link is enabled.
+     * @return Indicates whether or not private link is enabled.
      * 
-    */
+     */
     public Optional<String> privateLink() {
         return Optional.ofNullable(this.privateLink);
     }
     /**
-     * The direction for the resource provider connection.
+     * @return The direction for the resource provider connection.
      * 
-    */
+     */
     public Optional<String> resourceProviderConnection() {
         return Optional.ofNullable(this.resourceProviderConnection);
     }

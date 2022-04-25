@@ -28,6 +28,10 @@ public final class ContainerRecipeInstanceConfigurationArgs extends com.pulumi.r
     @Import(name="blockDeviceMappings")
     private @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
+    /**
+     * @return Defines the block devices to attach for building an instance from this Image Builder AMI.
+     * 
+     */
     public Optional<Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>>> blockDeviceMappings() {
         return Optional.ofNullable(this.blockDeviceMappings);
     }
@@ -39,6 +43,10 @@ public final class ContainerRecipeInstanceConfigurationArgs extends com.pulumi.r
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return The AMI ID to use as the base image for a container build and test instance. If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -68,24 +76,54 @@ public final class ContainerRecipeInstanceConfigurationArgs extends com.pulumi.r
             $ = new ContainerRecipeInstanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blockDeviceMappings Defines the block devices to attach for building an instance from this Image Builder AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(@Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
             $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
+        /**
+         * @param blockDeviceMappings Defines the block devices to attach for building an instance from this Image Builder AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(List<ContainerRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
             return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
 
+        /**
+         * @param blockDeviceMappings Defines the block devices to attach for building an instance from this Image Builder AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockDeviceMappings(ContainerRecipeInstanceBlockDeviceMappingArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
 
+        /**
+         * @param image The AMI ID to use as the base image for a container build and test instance. If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The AMI ID to use as the base image for a container build and test instance. If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }

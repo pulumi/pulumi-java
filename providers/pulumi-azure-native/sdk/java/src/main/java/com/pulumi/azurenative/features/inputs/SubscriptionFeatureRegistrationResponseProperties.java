@@ -25,6 +25,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="approvalType", required=true)
     private String approvalType;
 
+    /**
+     * @return The feature approval type.
+     * 
+     */
     public String approvalType() {
         return this.approvalType;
     }
@@ -36,6 +40,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="authorizationProfile")
     private @Nullable AuthorizationProfileResponse authorizationProfile;
 
+    /**
+     * @return Authorization Profile
+     * 
+     */
     public Optional<AuthorizationProfileResponse> authorizationProfile() {
         return Optional.ofNullable(this.authorizationProfile);
     }
@@ -47,6 +55,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The feature description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The featureDisplayName.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -69,6 +85,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="documentationLink", required=true)
     private String documentationLink;
 
+    /**
+     * @return The feature documentation link.
+     * 
+     */
     public String documentationLink() {
         return this.documentationLink;
     }
@@ -80,6 +100,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="featureName", required=true)
     private String featureName;
 
+    /**
+     * @return The featureName.
+     * 
+     */
     public String featureName() {
         return this.featureName;
     }
@@ -91,6 +115,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="metadata")
     private @Nullable Map<String,String> metadata;
 
+    /**
+     * @return Key-value pairs for meta data.
+     * 
+     */
     public Optional<Map<String,String>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -102,6 +130,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="providerNamespace", required=true)
     private String providerNamespace;
 
+    /**
+     * @return The providerNamespace.
+     * 
+     */
     public String providerNamespace() {
         return this.providerNamespace;
     }
@@ -113,6 +145,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="registrationDate", required=true)
     private String registrationDate;
 
+    /**
+     * @return The feature registration date.
+     * 
+     */
     public String registrationDate() {
         return this.registrationDate;
     }
@@ -124,6 +160,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="releaseDate", required=true)
     private String releaseDate;
 
+    /**
+     * @return The feature release date.
+     * 
+     */
     public String releaseDate() {
         return this.releaseDate;
     }
@@ -135,6 +175,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="shouldFeatureDisplayInPortal")
     private @Nullable Boolean shouldFeatureDisplayInPortal;
 
+    /**
+     * @return Indicates whether feature should be displayed in Portal.
+     * 
+     */
     public Optional<Boolean> shouldFeatureDisplayInPortal() {
         return Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
@@ -146,6 +190,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -157,6 +205,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="subscriptionId", required=true)
     private String subscriptionId;
 
+    /**
+     * @return The subscriptionId.
+     * 
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
@@ -168,6 +220,10 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenantId.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -209,71 +265,155 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends com
             $ = new SubscriptionFeatureRegistrationResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approvalType The feature approval type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalType(String approvalType) {
             $.approvalType = approvalType;
             return this;
         }
 
+        /**
+         * @param authorizationProfile Authorization Profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationProfile(@Nullable AuthorizationProfileResponse authorizationProfile) {
             $.authorizationProfile = authorizationProfile;
             return this;
         }
 
+        /**
+         * @param description The feature description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The featureDisplayName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param documentationLink The feature documentation link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentationLink(String documentationLink) {
             $.documentationLink = documentationLink;
             return this;
         }
 
+        /**
+         * @param featureName The featureName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureName(String featureName) {
             $.featureName = featureName;
             return this;
         }
 
+        /**
+         * @param metadata Key-value pairs for meta data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param providerNamespace The providerNamespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param registrationDate The feature registration date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDate(String registrationDate) {
             $.registrationDate = registrationDate;
             return this;
         }
 
+        /**
+         * @param releaseDate The feature release date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseDate(String releaseDate) {
             $.releaseDate = releaseDate;
             return this;
         }
 
+        /**
+         * @param shouldFeatureDisplayInPortal Indicates whether feature should be displayed in Portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
             $.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param subscriptionId The subscriptionId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenantId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;

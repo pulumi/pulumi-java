@@ -15,72 +15,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFlowSourceResult {
     /**
-     * The type of encryption that is used on the content ingested from this source.
+     * @return The type of encryption that is used on the content ingested from this source.
      * 
      */
     private final @Nullable FlowSourceEncryption decryption;
     /**
-     * A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
+     * @return A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
      * 
      */
     private final @Nullable String description;
     /**
-     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
+     * @return The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
      * 
      */
     private final @Nullable String entitlementArn;
     /**
-     * The ARN of the flow.
+     * @return The ARN of the flow.
      * 
      */
     private final @Nullable String flowArn;
     /**
-     * The IP address that the flow will be listening on for incoming content.
+     * @return The IP address that the flow will be listening on for incoming content.
      * 
      */
     private final @Nullable String ingestIp;
     /**
-     * The port that the flow will be listening on for incoming content.
+     * @return The port that the flow will be listening on for incoming content.
      * 
      */
     private final @Nullable Integer ingestPort;
     /**
-     * The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
+     * @return The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
      * 
      */
     private final @Nullable Integer maxBitrate;
     /**
-     * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
      */
     private final @Nullable Integer maxLatency;
     /**
-     * The protocol that is used by the source.
+     * @return The protocol that is used by the source.
      * 
      */
     private final @Nullable FlowSourceProtocol protocol;
     /**
-     * The ARN of the source.
+     * @return The ARN of the source.
      * 
      */
     private final @Nullable String sourceArn;
     /**
-     * The port that the flow will be listening on for incoming content.(ReadOnly)
+     * @return The port that the flow will be listening on for incoming content.(ReadOnly)
      * 
      */
     private final @Nullable String sourceIngestPort;
     /**
-     * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+     * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
      */
     private final @Nullable String streamId;
     /**
-     * The name of the VPC Interface this Source is configured with.
+     * @return The name of the VPC Interface this Source is configured with.
      * 
      */
     private final @Nullable String vpcInterfaceName;
     /**
-     * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+     * @return The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
      */
     private final @Nullable String whitelistCidr;
@@ -118,100 +118,100 @@ public final class GetFlowSourceResult {
     }
 
     /**
-     * The type of encryption that is used on the content ingested from this source.
+     * @return The type of encryption that is used on the content ingested from this source.
      * 
-    */
+     */
     public Optional<FlowSourceEncryption> decryption() {
         return Optional.ofNullable(this.decryption);
     }
     /**
-     * A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
+     * @return A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
+     * @return The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator&#39;s flow.
      * 
-    */
+     */
     public Optional<String> entitlementArn() {
         return Optional.ofNullable(this.entitlementArn);
     }
     /**
-     * The ARN of the flow.
+     * @return The ARN of the flow.
      * 
-    */
+     */
     public Optional<String> flowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
-     * The IP address that the flow will be listening on for incoming content.
+     * @return The IP address that the flow will be listening on for incoming content.
      * 
-    */
+     */
     public Optional<String> ingestIp() {
         return Optional.ofNullable(this.ingestIp);
     }
     /**
-     * The port that the flow will be listening on for incoming content.
+     * @return The port that the flow will be listening on for incoming content.
      * 
-    */
+     */
     public Optional<Integer> ingestPort() {
         return Optional.ofNullable(this.ingestPort);
     }
     /**
-     * The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
+     * @return The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
      * 
-    */
+     */
     public Optional<Integer> maxBitrate() {
         return Optional.ofNullable(this.maxBitrate);
     }
     /**
-     * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
-    */
+     */
     public Optional<Integer> maxLatency() {
         return Optional.ofNullable(this.maxLatency);
     }
     /**
-     * The protocol that is used by the source.
+     * @return The protocol that is used by the source.
      * 
-    */
+     */
     public Optional<FlowSourceProtocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * The ARN of the source.
+     * @return The ARN of the source.
      * 
-    */
+     */
     public Optional<String> sourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
     /**
-     * The port that the flow will be listening on for incoming content.(ReadOnly)
+     * @return The port that the flow will be listening on for incoming content.(ReadOnly)
      * 
-    */
+     */
     public Optional<String> sourceIngestPort() {
         return Optional.ofNullable(this.sourceIngestPort);
     }
     /**
-     * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
+     * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
-    */
+     */
     public Optional<String> streamId() {
         return Optional.ofNullable(this.streamId);
     }
     /**
-     * The name of the VPC Interface this Source is configured with.
+     * @return The name of the VPC Interface this Source is configured with.
      * 
-    */
+     */
     public Optional<String> vpcInterfaceName() {
         return Optional.ofNullable(this.vpcInterfaceName);
     }
     /**
-     * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
+     * @return The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
-    */
+     */
     public Optional<String> whitelistCidr() {
         return Optional.ofNullable(this.whitelistCidr);
     }

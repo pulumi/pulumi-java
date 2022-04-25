@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListVirtualMachineApplicableSchedulesResult {
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
+     * @return The auto-shutdown schedule, if one has been set at the lab or lab resource level.
      * 
      */
     private final @Nullable ScheduleResponse labVmsShutdown;
     /**
-     * The auto-startup schedule, if one has been set at the lab or lab resource level.
+     * @return The auto-startup schedule, if one has been set at the lab or lab resource level.
      * 
      */
     private final @Nullable ScheduleResponse labVmsStartup;
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -68,51 +68,51 @@ public final class ListVirtualMachineApplicableSchedulesResult {
     }
 
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
+     * @return The auto-shutdown schedule, if one has been set at the lab or lab resource level.
      * 
-    */
+     */
     public Optional<ScheduleResponse> labVmsShutdown() {
         return Optional.ofNullable(this.labVmsShutdown);
     }
     /**
-     * The auto-startup schedule, if one has been set at the lab or lab resource level.
+     * @return The auto-startup schedule, if one has been set at the lab or lab resource level.
      * 
-    */
+     */
     public Optional<ScheduleResponse> labVmsStartup() {
         return Optional.ofNullable(this.labVmsStartup);
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

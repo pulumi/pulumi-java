@@ -23,6 +23,10 @@ public final class UserAccountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elevationLevel")
     private @Nullable String elevationLevel;
 
+    /**
+     * @return nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
+     * 
+     */
     public Optional<String> elevationLevel() {
         return Optional.ofNullable(this.elevationLevel);
     }
@@ -34,6 +38,10 @@ public final class UserAccountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxUserConfiguration")
     private @Nullable LinuxUserConfigurationResponse linuxUserConfiguration;
 
+    /**
+     * @return This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
+     * 
+     */
     public Optional<LinuxUserConfigurationResponse> linuxUserConfiguration() {
         return Optional.ofNullable(this.linuxUserConfiguration);
     }
@@ -59,6 +67,10 @@ public final class UserAccountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="windowsUserConfiguration")
     private @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
 
+    /**
+     * @return This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
+     * 
+     */
     public Optional<WindowsUserConfigurationResponse> windowsUserConfiguration() {
         return Optional.ofNullable(this.windowsUserConfiguration);
     }
@@ -91,11 +103,23 @@ public final class UserAccountResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UserAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elevationLevel nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elevationLevel(@Nullable String elevationLevel) {
             $.elevationLevel = elevationLevel;
             return this;
         }
 
+        /**
+         * @param linuxUserConfiguration This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationResponse linuxUserConfiguration) {
             $.linuxUserConfiguration = linuxUserConfiguration;
             return this;
@@ -111,6 +135,12 @@ public final class UserAccountResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param windowsUserConfiguration This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
             $.windowsUserConfiguration = windowsUserConfiguration;
             return this;

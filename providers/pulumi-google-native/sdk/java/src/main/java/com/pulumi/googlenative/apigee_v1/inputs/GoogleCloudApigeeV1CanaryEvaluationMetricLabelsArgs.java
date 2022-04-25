@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends c
     @Import(name="env")
     private @Nullable Output<String> env;
 
+    /**
+     * @return The environment ID associated with the metrics.
+     * 
+     */
     public Optional<Output<String>> env() {
         return Optional.ofNullable(this.env);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends c
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends c
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location associated with the metrics.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -78,29 +90,65 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends c
             $ = new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param env The environment ID associated with the metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(@Nullable Output<String> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env The environment ID associated with the metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(String env) {
             return env(Output.of(env));
         }
 
+        /**
+         * @param instanceId The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param location The location associated with the metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location associated with the metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

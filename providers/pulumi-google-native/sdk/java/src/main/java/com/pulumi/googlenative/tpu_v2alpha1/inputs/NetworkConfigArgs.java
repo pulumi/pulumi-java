@@ -27,6 +27,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="canIpForward")
     private @Nullable Output<Boolean> canIpForward;
 
+    /**
+     * @return Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
+     * 
+     */
     public Optional<Output<Boolean>> canIpForward() {
         return Optional.ofNullable(this.canIpForward);
     }
@@ -38,6 +42,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableExternalIps")
     private @Nullable Output<Boolean> enableExternalIps;
 
+    /**
+     * @return Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableExternalIps() {
         return Optional.ofNullable(this.enableExternalIps);
     }
@@ -49,6 +57,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, &#34;default&#34; will be used.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -60,6 +72,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, &#34;default&#34; will be used.
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -91,38 +107,86 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canIpForward Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param canIpForward Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             return canIpForward(Output.of(canIpForward));
         }
 
+        /**
+         * @param enableExternalIps Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableExternalIps(@Nullable Output<Boolean> enableExternalIps) {
             $.enableExternalIps = enableExternalIps;
             return this;
         }
 
+        /**
+         * @param enableExternalIps Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableExternalIps(Boolean enableExternalIps) {
             return enableExternalIps(Output.of(enableExternalIps));
         }
 
+        /**
+         * @param network The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, &#34;default&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, &#34;default&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param subnetwork The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, &#34;default&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, &#34;default&#34; will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }

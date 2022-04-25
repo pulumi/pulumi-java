@@ -22,6 +22,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
     @Import(name="maxValue")
     private @Nullable Output<String> maxValue;
 
+    /**
+     * @return Must be specified if type is `INTEGER`. Maximum value of the parameter.
+     * 
+     */
     public Optional<Output<String>> maxValue() {
         return Optional.ofNullable(this.maxValue);
     }
@@ -33,6 +37,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
     @Import(name="minValue")
     private @Nullable Output<String> minValue;
 
+    /**
+     * @return Must be specified if type is `INTEGER`. Minimum value of the parameter.
+     * 
+     */
     public Optional<Output<String>> minValue() {
         return Optional.ofNullable(this.minValue);
     }
@@ -62,20 +70,44 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs
             $ = new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxValue Must be specified if type is `INTEGER`. Maximum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxValue(@Nullable Output<String> maxValue) {
             $.maxValue = maxValue;
             return this;
         }
 
+        /**
+         * @param maxValue Must be specified if type is `INTEGER`. Maximum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxValue(String maxValue) {
             return maxValue(Output.of(maxValue));
         }
 
+        /**
+         * @param minValue Must be specified if type is `INTEGER`. Minimum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minValue(@Nullable Output<String> minValue) {
             $.minValue = minValue;
             return this;
         }
 
+        /**
+         * @param minValue Must be specified if type is `INTEGER`. Minimum value of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minValue(String minValue) {
             return minValue(Output.of(minValue));
         }

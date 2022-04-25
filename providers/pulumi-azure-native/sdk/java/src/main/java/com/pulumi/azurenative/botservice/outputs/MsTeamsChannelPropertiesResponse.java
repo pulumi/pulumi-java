@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MsTeamsChannelPropertiesResponse {
     /**
-     * Whether this channel accepted terms
+     * @return Whether this channel accepted terms
      * 
      */
     private final @Nullable Boolean acceptedTerms;
     /**
-     * Webhook for Microsoft Teams channel calls
+     * @return Webhook for Microsoft Teams channel calls
      * 
      */
     private final @Nullable String callingWebHook;
     /**
-     * Deployment environment for Microsoft Teams channel calls
+     * @return Deployment environment for Microsoft Teams channel calls
      * 
      */
     private final @Nullable String deploymentEnvironment;
     /**
-     * Enable calling for Microsoft Teams channel
+     * @return Enable calling for Microsoft Teams channel
      * 
      */
     private final @Nullable Boolean enableCalling;
     /**
-     * Webhook for Microsoft Teams channel calls
+     * @return Webhook for Microsoft Teams channel calls
      * 
      */
     private final @Nullable String incomingCallRoute;
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
      */
     private final Boolean isEnabled;
@@ -60,44 +60,44 @@ public final class MsTeamsChannelPropertiesResponse {
     }
 
     /**
-     * Whether this channel accepted terms
+     * @return Whether this channel accepted terms
      * 
-    */
+     */
     public Optional<Boolean> acceptedTerms() {
         return Optional.ofNullable(this.acceptedTerms);
     }
     /**
-     * Webhook for Microsoft Teams channel calls
+     * @return Webhook for Microsoft Teams channel calls
      * 
-    */
+     */
     public Optional<String> callingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
     /**
-     * Deployment environment for Microsoft Teams channel calls
+     * @return Deployment environment for Microsoft Teams channel calls
      * 
-    */
+     */
     public Optional<String> deploymentEnvironment() {
         return Optional.ofNullable(this.deploymentEnvironment);
     }
     /**
-     * Enable calling for Microsoft Teams channel
+     * @return Enable calling for Microsoft Teams channel
      * 
-    */
+     */
     public Optional<Boolean> enableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
     /**
-     * Webhook for Microsoft Teams channel calls
+     * @return Webhook for Microsoft Teams channel calls
      * 
-    */
+     */
     public Optional<String> incomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }

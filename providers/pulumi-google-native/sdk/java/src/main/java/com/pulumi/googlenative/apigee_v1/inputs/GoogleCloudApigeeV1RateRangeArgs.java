@@ -27,6 +27,10 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends com.pulumi.resources
     @Import(name="end")
     private @Nullable Output<String> end;
 
+    /**
+     * @return Ending value of the range. Set to 0 or `null` for the last range of values.
+     * 
+     */
     public Optional<Output<String>> end() {
         return Optional.ofNullable(this.end);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends com.pulumi.resources
     @Import(name="fee")
     private @Nullable Output<GoogleTypeMoneyArgs> fee;
 
+    /**
+     * @return Fee to charge when total number of API calls falls within this range.
+     * 
+     */
     public Optional<Output<GoogleTypeMoneyArgs>> fee() {
         return Optional.ofNullable(this.fee);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends com.pulumi.resources
     @Import(name="start")
     private @Nullable Output<String> start;
 
+    /**
+     * @return Starting value of the range. Set to 0 or `null` for the initial range of values.
+     * 
+     */
     public Optional<Output<String>> start() {
         return Optional.ofNullable(this.start);
     }
@@ -79,29 +91,65 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends com.pulumi.resources
             $ = new GoogleCloudApigeeV1RateRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param end Ending value of the range. Set to 0 or `null` for the last range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable Output<String> end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param end Ending value of the range. Set to 0 or `null` for the last range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(String end) {
             return end(Output.of(end));
         }
 
+        /**
+         * @param fee Fee to charge when total number of API calls falls within this range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fee(@Nullable Output<GoogleTypeMoneyArgs> fee) {
             $.fee = fee;
             return this;
         }
 
+        /**
+         * @param fee Fee to charge when total number of API calls falls within this range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fee(GoogleTypeMoneyArgs fee) {
             return fee(Output.of(fee));
         }
 
+        /**
+         * @param start Starting value of the range. Set to 0 or `null` for the initial range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable Output<String> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start Starting value of the range. Set to 0 or `null` for the initial range of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             return start(Output.of(start));
         }

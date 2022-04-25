@@ -24,7 +24,7 @@ public final class GetExperimentResult {
     private final @Nullable String randomizationSalt;
     private final @Nullable Integer samplingRate;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<ExperimentTag> tags;
@@ -69,9 +69,9 @@ public final class GetExperimentResult {
         return Optional.ofNullable(this.samplingRate);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<ExperimentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

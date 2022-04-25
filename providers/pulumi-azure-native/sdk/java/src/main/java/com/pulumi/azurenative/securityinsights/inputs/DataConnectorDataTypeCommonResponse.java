@@ -25,6 +25,10 @@ public final class DataConnectorDataTypeCommonResponse extends com.pulumi.resour
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Describe whether this data type connection is enabled or not.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -53,6 +57,12 @@ public final class DataConnectorDataTypeCommonResponse extends com.pulumi.resour
             $ = new DataConnectorDataTypeCommonResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state Describe whether this data type connection is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

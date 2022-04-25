@@ -27,6 +27,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deploymentName")
     private @Nullable Output<String> deploymentName;
 
+    /**
+     * @return Inference Endpoint Deployment name.
+     * 
+     */
     public Optional<Output<String>> deploymentName() {
         return Optional.ofNullable(this.deploymentName);
     }
@@ -38,6 +42,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="endpointName", required=true)
     private Output<String> endpointName;
 
+    /**
+     * @return Inference endpoint name.
+     * 
+     */
     public Output<String> endpointName() {
         return this.endpointName;
     }
@@ -49,6 +57,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identity")
     private @Nullable Output<ResourceIdentityArgs> identity;
 
+    /**
+     * @return Service identity associated with a resource.
+     * 
+     */
     public Optional<Output<ResourceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -60,6 +72,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -71,6 +87,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -82,6 +102,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="properties", required=true)
     private Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties;
 
+    /**
+     * @return Additional attributes of the entity.
+     * 
+     */
     public Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties() {
         return this.properties;
     }
@@ -93,6 +117,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -104,6 +132,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,6 +147,10 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -151,91 +187,211 @@ public final class OnlineDeploymentArgs extends com.pulumi.resources.ResourceArg
             $ = new OnlineDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentName Inference Endpoint Deployment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param deploymentName Inference Endpoint Deployment name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             return deploymentName(Output.of(deploymentName));
         }
 
+        /**
+         * @param endpointName Inference endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointName Inference endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param identity Service identity associated with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Service identity associated with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ResourceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(K8sOnlineDeploymentArgs properties) {
             return properties(Either.ofLeft(properties));
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ManagedOnlineDeploymentArgs properties) {
             return properties(Either.ofRight(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

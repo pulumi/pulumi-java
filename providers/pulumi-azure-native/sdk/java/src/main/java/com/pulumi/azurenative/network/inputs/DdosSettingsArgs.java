@@ -30,6 +30,10 @@ public final class DdosSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ddosCustomPolicy")
     private @Nullable Output<SubResourceArgs> ddosCustomPolicy;
 
+    /**
+     * @return The DDoS custom policy associated with the public IP.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> ddosCustomPolicy() {
         return Optional.ofNullable(this.ddosCustomPolicy);
     }
@@ -41,6 +45,10 @@ public final class DdosSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protectedIP")
     private @Nullable Output<Boolean> protectedIP;
 
+    /**
+     * @return Enables DDoS protection on the public IP.
+     * 
+     */
     public Optional<Output<Boolean>> protectedIP() {
         return Optional.ofNullable(this.protectedIP);
     }
@@ -52,6 +60,10 @@ public final class DdosSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protectionCoverage")
     private @Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;
 
+    /**
+     * @return The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+     * 
+     */
     public Optional<Output<Either<String,DdosSettingsProtectionCoverage>>> protectionCoverage() {
         return Optional.ofNullable(this.protectionCoverage);
     }
@@ -82,37 +94,85 @@ public final class DdosSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DdosSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ddosCustomPolicy The DDoS custom policy associated with the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosCustomPolicy(@Nullable Output<SubResourceArgs> ddosCustomPolicy) {
             $.ddosCustomPolicy = ddosCustomPolicy;
             return this;
         }
 
+        /**
+         * @param ddosCustomPolicy The DDoS custom policy associated with the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosCustomPolicy(SubResourceArgs ddosCustomPolicy) {
             return ddosCustomPolicy(Output.of(ddosCustomPolicy));
         }
 
+        /**
+         * @param protectedIP Enables DDoS protection on the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedIP(@Nullable Output<Boolean> protectedIP) {
             $.protectedIP = protectedIP;
             return this;
         }
 
+        /**
+         * @param protectedIP Enables DDoS protection on the public IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedIP(Boolean protectedIP) {
             return protectedIP(Output.of(protectedIP));
         }
 
+        /**
+         * @param protectionCoverage The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionCoverage(@Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage) {
             $.protectionCoverage = protectionCoverage;
             return this;
         }
 
+        /**
+         * @param protectionCoverage The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionCoverage(Either<String,DdosSettingsProtectionCoverage> protectionCoverage) {
             return protectionCoverage(Output.of(protectionCoverage));
         }
 
+        /**
+         * @param protectionCoverage The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionCoverage(String protectionCoverage) {
             return protectionCoverage(Either.ofLeft(protectionCoverage));
         }
 
+        /**
+         * @param protectionCoverage The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionCoverage(DdosSettingsProtectionCoverage protectionCoverage) {
             return protectionCoverage(Either.ofRight(protectionCoverage));
         }

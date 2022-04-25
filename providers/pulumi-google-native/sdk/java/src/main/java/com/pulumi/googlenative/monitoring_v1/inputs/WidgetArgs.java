@@ -33,6 +33,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertChart")
     private @Nullable Output<AlertChartArgs> alertChart;
 
+    /**
+     * @return A chart of alert policy data.
+     * 
+     */
     public Optional<Output<AlertChartArgs>> alertChart() {
         return Optional.ofNullable(this.alertChart);
     }
@@ -44,6 +48,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blank")
     private @Nullable Output<EmptyArgs> blank;
 
+    /**
+     * @return A blank space.
+     * 
+     */
     public Optional<Output<EmptyArgs>> blank() {
         return Optional.ofNullable(this.blank);
     }
@@ -55,6 +63,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logsPanel")
     private @Nullable Output<LogsPanelArgs> logsPanel;
 
+    /**
+     * @return A widget that shows a stream of logs.
+     * 
+     */
     public Optional<Output<LogsPanelArgs>> logsPanel() {
         return Optional.ofNullable(this.logsPanel);
     }
@@ -66,6 +78,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scorecard")
     private @Nullable Output<ScorecardArgs> scorecard;
 
+    /**
+     * @return A scorecard summarizing time series data.
+     * 
+     */
     public Optional<Output<ScorecardArgs>> scorecard() {
         return Optional.ofNullable(this.scorecard);
     }
@@ -77,6 +93,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="text")
     private @Nullable Output<TextArgs> text;
 
+    /**
+     * @return A raw string or markdown displaying textual content.
+     * 
+     */
     public Optional<Output<TextArgs>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -88,6 +108,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeSeriesTable")
     private @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
 
+    /**
+     * @return A widget that displays time series data in a tabular format.
+     * 
+     */
     public Optional<Output<TimeSeriesTableArgs>> timeSeriesTable() {
         return Optional.ofNullable(this.timeSeriesTable);
     }
@@ -99,6 +123,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Optional. The title of the widget.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -110,6 +138,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="xyChart")
     private @Nullable Output<XyChartArgs> xyChart;
 
+    /**
+     * @return A chart of time series data.
+     * 
+     */
     public Optional<Output<XyChartArgs>> xyChart() {
         return Optional.ofNullable(this.xyChart);
     }
@@ -145,74 +177,170 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WidgetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertChart A chart of alert policy data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertChart(@Nullable Output<AlertChartArgs> alertChart) {
             $.alertChart = alertChart;
             return this;
         }
 
+        /**
+         * @param alertChart A chart of alert policy data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertChart(AlertChartArgs alertChart) {
             return alertChart(Output.of(alertChart));
         }
 
+        /**
+         * @param blank A blank space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blank(@Nullable Output<EmptyArgs> blank) {
             $.blank = blank;
             return this;
         }
 
+        /**
+         * @param blank A blank space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blank(EmptyArgs blank) {
             return blank(Output.of(blank));
         }
 
+        /**
+         * @param logsPanel A widget that shows a stream of logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsPanel(@Nullable Output<LogsPanelArgs> logsPanel) {
             $.logsPanel = logsPanel;
             return this;
         }
 
+        /**
+         * @param logsPanel A widget that shows a stream of logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logsPanel(LogsPanelArgs logsPanel) {
             return logsPanel(Output.of(logsPanel));
         }
 
+        /**
+         * @param scorecard A scorecard summarizing time series data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scorecard(@Nullable Output<ScorecardArgs> scorecard) {
             $.scorecard = scorecard;
             return this;
         }
 
+        /**
+         * @param scorecard A scorecard summarizing time series data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scorecard(ScorecardArgs scorecard) {
             return scorecard(Output.of(scorecard));
         }
 
+        /**
+         * @param text A raw string or markdown displaying textual content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<TextArgs> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text A raw string or markdown displaying textual content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(TextArgs text) {
             return text(Output.of(text));
         }
 
+        /**
+         * @param timeSeriesTable A widget that displays time series data in a tabular format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesTable(@Nullable Output<TimeSeriesTableArgs> timeSeriesTable) {
             $.timeSeriesTable = timeSeriesTable;
             return this;
         }
 
+        /**
+         * @param timeSeriesTable A widget that displays time series data in a tabular format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeriesTable(TimeSeriesTableArgs timeSeriesTable) {
             return timeSeriesTable(Output.of(timeSeriesTable));
         }
 
+        /**
+         * @param title Optional. The title of the widget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Optional. The title of the widget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }
 
+        /**
+         * @param xyChart A chart of time series data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xyChart(@Nullable Output<XyChartArgs> xyChart) {
             $.xyChart = xyChart;
             return this;
         }
 
+        /**
+         * @param xyChart A chart of time series data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xyChart(XyChartArgs xyChart) {
             return xyChart(Output.of(xyChart));
         }

@@ -29,6 +29,10 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="aznsAction")
     private @Nullable AzNsActionGroupResponse aznsAction;
 
+    /**
+     * @return Azure action group reference.
+     * 
+     */
     public Optional<AzNsActionGroupResponse> aznsAction() {
         return Optional.ofNullable(this.aznsAction);
     }
@@ -41,6 +45,11 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return Specifies the action. Supported values - AlertingAction, LogToMetricAction
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -52,6 +61,10 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="severity", required=true)
     private String severity;
 
+    /**
+     * @return Severity of the alert
+     * 
+     */
     public String severity() {
         return this.severity;
     }
@@ -63,6 +76,10 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="throttlingInMin")
     private @Nullable Integer throttlingInMin;
 
+    /**
+     * @return time (in minutes) for which Alerts should be throttled or suppressed.
+     * 
+     */
     public Optional<Integer> throttlingInMin() {
         return Optional.ofNullable(this.throttlingInMin);
     }
@@ -74,6 +91,10 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="trigger", required=true)
     private TriggerConditionResponse trigger;
 
+    /**
+     * @return The trigger condition that results in the alert rule being.
+     * 
+     */
     public TriggerConditionResponse trigger() {
         return this.trigger;
     }
@@ -106,26 +127,57 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
             $ = new AlertingActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aznsAction Azure action group reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aznsAction(@Nullable AzNsActionGroupResponse aznsAction) {
             $.aznsAction = aznsAction;
             return this;
         }
 
+        /**
+         * @param odataType Specifies the action. Supported values - AlertingAction, LogToMetricAction
+         * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param severity Severity of the alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param throttlingInMin time (in minutes) for which Alerts should be throttled or suppressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingInMin(@Nullable Integer throttlingInMin) {
             $.throttlingInMin = throttlingInMin;
             return this;
         }
 
+        /**
+         * @param trigger The trigger condition that results in the alert rule being.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trigger(TriggerConditionResponse trigger) {
             $.trigger = trigger;
             return this;

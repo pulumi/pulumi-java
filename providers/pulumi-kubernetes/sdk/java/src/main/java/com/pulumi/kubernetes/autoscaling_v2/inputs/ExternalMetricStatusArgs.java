@@ -25,6 +25,10 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="current", required=true)
     private Output<MetricValueStatusArgs> current;
 
+    /**
+     * @return current contains the current value for the given metric
+     * 
+     */
     public Output<MetricValueStatusArgs> current() {
         return this.current;
     }
@@ -36,6 +40,10 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="metric", required=true)
     private Output<MetricIdentifierArgs> metric;
 
+    /**
+     * @return metric identifies the target metric by name and selector
+     * 
+     */
     public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
@@ -65,20 +73,44 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
             $ = new ExternalMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param current current contains the current value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(Output<MetricValueStatusArgs> current) {
             $.current = current;
             return this;
         }
 
+        /**
+         * @param current current contains the current value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(MetricValueStatusArgs current) {
             return current(Output.of(current));
         }
 
+        /**
+         * @param metric metric identifies the target metric by name and selector
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(Output<MetricIdentifierArgs> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric metric identifies the target metric by name and selector
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(MetricIdentifierArgs metric) {
             return metric(Output.of(metric));
         }

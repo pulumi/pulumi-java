@@ -28,6 +28,11 @@ public final class CdnManagedHttpsParametersResponse extends com.pulumi.resource
     @Import(name="certificateSource", required=true)
     private String certificateSource;
 
+    /**
+     * @return Defines the source of the SSL certificate.
+     * Expected value is &#39;Cdn&#39;.
+     * 
+     */
     public String certificateSource() {
         return this.certificateSource;
     }
@@ -39,6 +44,10 @@ public final class CdnManagedHttpsParametersResponse extends com.pulumi.resource
     @Import(name="certificateSourceParameters", required=true)
     private CdnCertificateSourceParametersResponse certificateSourceParameters;
 
+    /**
+     * @return Defines the certificate source parameters using CDN managed certificate for enabling SSL.
+     * 
+     */
     public CdnCertificateSourceParametersResponse certificateSourceParameters() {
         return this.certificateSourceParameters;
     }
@@ -50,6 +59,10 @@ public final class CdnManagedHttpsParametersResponse extends com.pulumi.resource
     @Import(name="minimumTlsVersion")
     private @Nullable String minimumTlsVersion;
 
+    /**
+     * @return TLS protocol version that will be used for Https
+     * 
+     */
     public Optional<String> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
@@ -61,6 +74,10 @@ public final class CdnManagedHttpsParametersResponse extends com.pulumi.resource
     @Import(name="protocolType", required=true)
     private String protocolType;
 
+    /**
+     * @return Defines the TLS extension protocol that is used for secure delivery.
+     * 
+     */
     public String protocolType() {
         return this.protocolType;
     }
@@ -92,21 +109,46 @@ public final class CdnManagedHttpsParametersResponse extends com.pulumi.resource
             $ = new CdnManagedHttpsParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateSource Defines the source of the SSL certificate.
+         * Expected value is &#39;Cdn&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSource(String certificateSource) {
             $.certificateSource = certificateSource;
             return this;
         }
 
+        /**
+         * @param certificateSourceParameters Defines the certificate source parameters using CDN managed certificate for enabling SSL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSourceParameters(CdnCertificateSourceParametersResponse certificateSourceParameters) {
             $.certificateSourceParameters = certificateSourceParameters;
             return this;
         }
 
+        /**
+         * @param minimumTlsVersion TLS protocol version that will be used for Https
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
+        /**
+         * @param protocolType Defines the TLS extension protocol that is used for secure delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(String protocolType) {
             $.protocolType = protocolType;
             return this;

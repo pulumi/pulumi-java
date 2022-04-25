@@ -19,6 +19,10 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The id of a specific query defined in the Log Analytics QueryPack
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -30,6 +34,10 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryPackName", required=true)
     private String queryPackName;
 
+    /**
+     * @return The name of the Log Analytics QueryPack resource.
+     * 
+     */
     public String queryPackName() {
         return this.queryPackName;
     }
@@ -41,6 +49,10 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetQueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The id of a specific query defined in the Log Analytics QueryPack
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param queryPackName The name of the Log Analytics QueryPack resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPackName(String queryPackName) {
             $.queryPackName = queryPackName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

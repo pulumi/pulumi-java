@@ -25,6 +25,10 @@ public final class IntentConfirmationPromptGetArgs extends com.pulumi.resources.
     @Import(name="maxAttempts", required=true)
     private Output<Integer> maxAttempts;
 
+    /**
+     * @return The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
+     * 
+     */
     public Output<Integer> maxAttempts() {
         return this.maxAttempts;
     }
@@ -38,6 +42,12 @@ public final class IntentConfirmationPromptGetArgs extends com.pulumi.resources.
     @Import(name="messages", required=true)
     private Output<List<IntentConfirmationPromptMessageGetArgs>> messages;
 
+    /**
+     * @return A set of messages, each of which provides a message string and its type.
+     * You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
+     * Attributes are documented under message. Must contain between 1 and 15 messages.
+     * 
+     */
     public Output<List<IntentConfirmationPromptMessageGetArgs>> messages() {
         return this.messages;
     }
@@ -51,6 +61,12 @@ public final class IntentConfirmationPromptGetArgs extends com.pulumi.resources.
     @Import(name="responseCard")
     private @Nullable Output<String> responseCard;
 
+    /**
+     * @return The response card. Amazon Lex will substitute session attributes and
+     * slot values into the response card. For more information, see
+     * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
+     * 
+     */
     public Optional<Output<String>> responseCard() {
         return Optional.ofNullable(this.responseCard);
     }
@@ -81,33 +97,85 @@ public final class IntentConfirmationPromptGetArgs extends com.pulumi.resources.
             $ = new IntentConfirmationPromptGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxAttempts The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAttempts(Output<Integer> maxAttempts) {
             $.maxAttempts = maxAttempts;
             return this;
         }
 
+        /**
+         * @param maxAttempts The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAttempts(Integer maxAttempts) {
             return maxAttempts(Output.of(maxAttempts));
         }
 
+        /**
+         * @param messages A set of messages, each of which provides a message string and its type.
+         * You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
+         * Attributes are documented under message. Must contain between 1 and 15 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(Output<List<IntentConfirmationPromptMessageGetArgs>> messages) {
             $.messages = messages;
             return this;
         }
 
+        /**
+         * @param messages A set of messages, each of which provides a message string and its type.
+         * You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
+         * Attributes are documented under message. Must contain between 1 and 15 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(List<IntentConfirmationPromptMessageGetArgs> messages) {
             return messages(Output.of(messages));
         }
 
+        /**
+         * @param messages A set of messages, each of which provides a message string and its type.
+         * You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
+         * Attributes are documented under message. Must contain between 1 and 15 messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(IntentConfirmationPromptMessageGetArgs... messages) {
             return messages(List.of(messages));
         }
 
+        /**
+         * @param responseCard The response card. Amazon Lex will substitute session attributes and
+         * slot values into the response card. For more information, see
+         * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseCard(@Nullable Output<String> responseCard) {
             $.responseCard = responseCard;
             return this;
         }
 
+        /**
+         * @param responseCard The response card. Amazon Lex will substitute session attributes and
+         * slot values into the response card. For more information, see
+         * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseCard(String responseCard) {
             return responseCard(Output.of(responseCard));
         }

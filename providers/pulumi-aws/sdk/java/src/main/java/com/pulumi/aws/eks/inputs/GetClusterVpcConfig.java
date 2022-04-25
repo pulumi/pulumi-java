@@ -21,6 +21,10 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterSecurityGroupId", required=true)
     private String clusterSecurityGroupId;
 
+    /**
+     * @return The cluster security group that was created by Amazon EKS for the cluster.
+     * 
+     */
     public String clusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
     }
@@ -32,6 +36,10 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointPrivateAccess", required=true)
     private Boolean endpointPrivateAccess;
 
+    /**
+     * @return Indicates whether or not the Amazon EKS private API server endpoint is enabled.
+     * 
+     */
     public Boolean endpointPrivateAccess() {
         return this.endpointPrivateAccess;
     }
@@ -43,6 +51,10 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointPublicAccess", required=true)
     private Boolean endpointPublicAccess;
 
+    /**
+     * @return Indicates whether or not the Amazon EKS public API server endpoint is enabled.
+     * 
+     */
     public Boolean endpointPublicAccess() {
         return this.endpointPublicAccess;
     }
@@ -54,6 +66,10 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicAccessCidrs", required=true)
     private List<String> publicAccessCidrs;
 
+    /**
+     * @return List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+     * 
+     */
     public List<String> publicAccessCidrs() {
         return this.publicAccessCidrs;
     }
@@ -65,6 +81,10 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="securityGroupIds", required=true)
     private List<String> securityGroupIds;
 
+    /**
+     * @return List of security group IDs
+     * 
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
@@ -76,6 +96,10 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetIds", required=true)
     private List<String> subnetIds;
 
+    /**
+     * @return List of subnet IDs
+     * 
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
@@ -87,6 +111,10 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcId", required=true)
     private String vpcId;
 
+    /**
+     * @return The VPC associated with your cluster.
+     * 
+     */
     public String vpcId() {
         return this.vpcId;
     }
@@ -121,48 +149,108 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterVpcConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterSecurityGroupId The cluster security group that was created by Amazon EKS for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroupId(String clusterSecurityGroupId) {
             $.clusterSecurityGroupId = clusterSecurityGroupId;
             return this;
         }
 
+        /**
+         * @param endpointPrivateAccess Indicates whether or not the Amazon EKS private API server endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointPrivateAccess(Boolean endpointPrivateAccess) {
             $.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
 
+        /**
+         * @param endpointPublicAccess Indicates whether or not the Amazon EKS public API server endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
             $.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
 
+        /**
+         * @param publicAccessCidrs List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessCidrs(List<String> publicAccessCidrs) {
             $.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
 
+        /**
+         * @param publicAccessCidrs List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessCidrs(String... publicAccessCidrs) {
             return publicAccessCidrs(List.of(publicAccessCidrs));
         }
 
+        /**
+         * @param securityGroupIds List of security group IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds List of security group IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnetIds List of subnet IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds List of subnet IDs
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param vpcId The VPC associated with your cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             $.vpcId = vpcId;
             return this;

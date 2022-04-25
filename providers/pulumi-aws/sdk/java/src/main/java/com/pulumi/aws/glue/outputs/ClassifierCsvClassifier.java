@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClassifierCsvClassifier {
     /**
-     * Enables the processing of files that contain only one column.
+     * @return Enables the processing of files that contain only one column.
      * 
      */
     private final @Nullable Boolean allowSingleColumn;
     /**
-     * Indicates whether the CSV file contains a header. This can be one of &#34;ABSENT&#34;, &#34;PRESENT&#34;, or &#34;UNKNOWN&#34;.
+     * @return Indicates whether the CSV file contains a header. This can be one of &#34;ABSENT&#34;, &#34;PRESENT&#34;, or &#34;UNKNOWN&#34;.
      * 
      */
     private final @Nullable String containsHeader;
     /**
-     * The delimiter used in the Csv to separate columns.
+     * @return The delimiter used in the Csv to separate columns.
      * 
      */
     private final @Nullable String delimiter;
     /**
-     * Specifies whether to trim column values.
+     * @return Specifies whether to trim column values.
      * 
      */
     private final @Nullable Boolean disableValueTrimming;
     /**
-     * A list of strings representing column names.
+     * @return A list of strings representing column names.
      * 
      */
     private final @Nullable List<String> headers;
     /**
-     * A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
+     * @return A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
      * 
      */
     private final @Nullable String quoteSymbol;
@@ -61,44 +61,44 @@ public final class ClassifierCsvClassifier {
     }
 
     /**
-     * Enables the processing of files that contain only one column.
+     * @return Enables the processing of files that contain only one column.
      * 
-    */
+     */
     public Optional<Boolean> allowSingleColumn() {
         return Optional.ofNullable(this.allowSingleColumn);
     }
     /**
-     * Indicates whether the CSV file contains a header. This can be one of &#34;ABSENT&#34;, &#34;PRESENT&#34;, or &#34;UNKNOWN&#34;.
+     * @return Indicates whether the CSV file contains a header. This can be one of &#34;ABSENT&#34;, &#34;PRESENT&#34;, or &#34;UNKNOWN&#34;.
      * 
-    */
+     */
     public Optional<String> containsHeader() {
         return Optional.ofNullable(this.containsHeader);
     }
     /**
-     * The delimiter used in the Csv to separate columns.
+     * @return The delimiter used in the Csv to separate columns.
      * 
-    */
+     */
     public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
     /**
-     * Specifies whether to trim column values.
+     * @return Specifies whether to trim column values.
      * 
-    */
+     */
     public Optional<Boolean> disableValueTrimming() {
         return Optional.ofNullable(this.disableValueTrimming);
     }
     /**
-     * A list of strings representing column names.
+     * @return A list of strings representing column names.
      * 
-    */
+     */
     public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
-     * A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
+     * @return A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
      * 
-    */
+     */
     public Optional<String> quoteSymbol() {
         return Optional.ofNullable(this.quoteSymbol);
     }

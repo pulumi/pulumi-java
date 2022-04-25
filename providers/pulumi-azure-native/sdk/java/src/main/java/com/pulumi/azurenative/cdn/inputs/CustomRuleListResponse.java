@@ -26,6 +26,10 @@ public final class CustomRuleListResponse extends com.pulumi.resources.InvokeArg
     @Import(name="rules")
     private @Nullable List<CustomRuleResponse> rules;
 
+    /**
+     * @return List of rules
+     * 
+     */
     public Optional<List<CustomRuleResponse>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -54,11 +58,23 @@ public final class CustomRuleListResponse extends com.pulumi.resources.InvokeArg
             $ = new CustomRuleListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules List of rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<CustomRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(CustomRuleResponse... rules) {
             return rules(List.of(rules));
         }

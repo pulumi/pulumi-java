@@ -32,6 +32,10 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
     @Import(name="instanceAccessControlAttributeConfiguration")
     private @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
 
+    /**
+     * @return The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
+     * 
+     */
     public Optional<Output<InstanceAccessControlAttributeConfigurationPropertiesArgs>> instanceAccessControlAttributeConfiguration() {
         return Optional.ofNullable(this.instanceAccessControlAttributeConfiguration);
     }
@@ -43,6 +47,10 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
     @Import(name="instanceArn", required=true)
     private Output<String> instanceArn;
 
+    /**
+     * @return The ARN of the AWS SSO instance under which the operation will be executed.
+     * 
+     */
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
@@ -86,20 +94,44 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
             return accessControlAttributes(List.of(accessControlAttributes));
         }
 
+        /**
+         * @param instanceAccessControlAttributeConfiguration The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceAccessControlAttributeConfiguration(@Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration) {
             $.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
             return this;
         }
 
+        /**
+         * @param instanceAccessControlAttributeConfiguration The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceAccessControlAttributeConfiguration(InstanceAccessControlAttributeConfigurationPropertiesArgs instanceAccessControlAttributeConfiguration) {
             return instanceAccessControlAttributeConfiguration(Output.of(instanceAccessControlAttributeConfiguration));
         }
 
+        /**
+         * @param instanceArn The ARN of the AWS SSO instance under which the operation will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param instanceArn The ARN of the AWS SSO instance under which the operation will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             return instanceArn(Output.of(instanceArn));
         }

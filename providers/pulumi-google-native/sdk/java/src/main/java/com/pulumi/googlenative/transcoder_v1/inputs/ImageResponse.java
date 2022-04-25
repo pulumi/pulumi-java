@@ -25,6 +25,10 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="alpha", required=true)
     private Double alpha;
 
+    /**
+     * @return Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
+     * 
+     */
     public Double alpha() {
         return this.alpha;
     }
@@ -36,6 +40,10 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resolution", required=true)
     private NormalizedCoordinateResponse resolution;
 
+    /**
+     * @return Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.
+     * 
+     */
     public NormalizedCoordinateResponse resolution() {
         return this.resolution;
     }
@@ -47,6 +55,10 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -77,16 +89,34 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alpha Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alpha(Double alpha) {
             $.alpha = alpha;
             return this;
         }
 
+        /**
+         * @param resolution Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolution(NormalizedCoordinateResponse resolution) {
             $.resolution = resolution;
             return this;
         }
 
+        /**
+         * @param uri URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

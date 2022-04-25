@@ -28,6 +28,10 @@ public final class VirtualMachinePatchStatusResponse extends com.pulumi.resource
     @Import(name="availablePatchSummary")
     private @Nullable AvailablePatchSummaryResponse availablePatchSummary;
 
+    /**
+     * @return The available patch summary of the latest assessment operation for the virtual machine.
+     * 
+     */
     public Optional<AvailablePatchSummaryResponse> availablePatchSummary() {
         return Optional.ofNullable(this.availablePatchSummary);
     }
@@ -39,6 +43,10 @@ public final class VirtualMachinePatchStatusResponse extends com.pulumi.resource
     @Import(name="configurationStatuses", required=true)
     private List<InstanceViewStatusResponse> configurationStatuses;
 
+    /**
+     * @return The enablement status of the specified patchMode
+     * 
+     */
     public List<InstanceViewStatusResponse> configurationStatuses() {
         return this.configurationStatuses;
     }
@@ -50,6 +58,10 @@ public final class VirtualMachinePatchStatusResponse extends com.pulumi.resource
     @Import(name="lastPatchInstallationSummary")
     private @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
+    /**
+     * @return The installation summary of the latest installation operation for the virtual machine.
+     * 
+     */
     public Optional<LastPatchInstallationSummaryResponse> lastPatchInstallationSummary() {
         return Optional.ofNullable(this.lastPatchInstallationSummary);
     }
@@ -80,20 +92,44 @@ public final class VirtualMachinePatchStatusResponse extends com.pulumi.resource
             $ = new VirtualMachinePatchStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availablePatchSummary The available patch summary of the latest assessment operation for the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availablePatchSummary(@Nullable AvailablePatchSummaryResponse availablePatchSummary) {
             $.availablePatchSummary = availablePatchSummary;
             return this;
         }
 
+        /**
+         * @param configurationStatuses The enablement status of the specified patchMode
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationStatuses(List<InstanceViewStatusResponse> configurationStatuses) {
             $.configurationStatuses = configurationStatuses;
             return this;
         }
 
+        /**
+         * @param configurationStatuses The enablement status of the specified patchMode
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationStatuses(InstanceViewStatusResponse... configurationStatuses) {
             return configurationStatuses(List.of(configurationStatuses));
         }
 
+        /**
+         * @param lastPatchInstallationSummary The installation summary of the latest installation operation for the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastPatchInstallationSummary(@Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
             $.lastPatchInstallationSummary = lastPatchInstallationSummary;
             return this;

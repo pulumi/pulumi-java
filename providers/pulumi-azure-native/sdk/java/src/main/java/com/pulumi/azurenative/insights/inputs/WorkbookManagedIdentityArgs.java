@@ -26,6 +26,10 @@ public final class WorkbookManagedIdentityArgs extends com.pulumi.resources.Reso
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class WorkbookManagedIdentityArgs extends com.pulumi.resources.Reso
             $ = new WorkbookManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

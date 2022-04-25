@@ -23,6 +23,10 @@ public final class EntityKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source}`.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -51,6 +55,12 @@ public final class EntityKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EntityKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespace The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;

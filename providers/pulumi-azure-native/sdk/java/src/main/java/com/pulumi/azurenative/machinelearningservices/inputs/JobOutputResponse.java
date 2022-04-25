@@ -23,6 +23,10 @@ public final class JobOutputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="datastoreId", required=true)
     private String datastoreId;
 
+    /**
+     * @return ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
+     * 
+     */
     public String datastoreId() {
         return this.datastoreId;
     }
@@ -34,6 +38,10 @@ public final class JobOutputResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Path within the datastore to the job logs and artifacts.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -63,11 +71,23 @@ public final class JobOutputResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreId ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(String datastoreId) {
             $.datastoreId = datastoreId;
             return this;
         }
 
+        /**
+         * @param path Path within the datastore to the job logs and artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

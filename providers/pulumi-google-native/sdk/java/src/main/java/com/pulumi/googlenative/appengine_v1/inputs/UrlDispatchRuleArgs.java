@@ -26,6 +26,10 @@ public final class UrlDispatchRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -37,6 +41,10 @@ public final class UrlDispatchRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -48,6 +56,10 @@ public final class UrlDispatchRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -78,29 +90,65 @@ public final class UrlDispatchRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new UrlDispatchRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param path Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param service Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

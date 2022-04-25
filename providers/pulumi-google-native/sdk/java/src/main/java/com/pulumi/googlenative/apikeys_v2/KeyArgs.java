@@ -23,6 +23,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Human-readable display name of this key that you can modify. The maximum length is 63 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -55,6 +59,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restrictions")
     private @Nullable Output<V2RestrictionsArgs> restrictions;
 
+    /**
+     * @return Key restrictions.
+     * 
+     */
     public Optional<Output<V2RestrictionsArgs>> restrictions() {
         return Optional.ofNullable(this.restrictions);
     }
@@ -87,11 +95,23 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Human-readable display name of this key that you can modify. The maximum length is 63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Human-readable display name of this key that you can modify. The maximum length is 63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -123,11 +143,23 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param restrictions Key restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictions(@Nullable Output<V2RestrictionsArgs> restrictions) {
             $.restrictions = restrictions;
             return this;
         }
 
+        /**
+         * @param restrictions Key restrictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restrictions(V2RestrictionsArgs restrictions) {
             return restrictions(Output.of(restrictions));
         }

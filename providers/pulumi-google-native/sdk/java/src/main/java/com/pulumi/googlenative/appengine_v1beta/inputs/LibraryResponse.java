@@ -23,6 +23,10 @@ public final class LibraryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the library. Example: &#34;django&#34;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class LibraryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Version of the library to select, or &#34;latest&#34;.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -63,11 +71,23 @@ public final class LibraryResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LibraryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the library. Example: &#34;django&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version Version of the library to select, or &#34;latest&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

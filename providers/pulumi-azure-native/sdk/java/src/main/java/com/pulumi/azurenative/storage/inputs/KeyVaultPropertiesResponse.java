@@ -25,6 +25,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="currentVersionedKeyIdentifier", required=true)
     private String currentVersionedKeyIdentifier;
 
+    /**
+     * @return The object identifier of the current versioned Key Vault Key in use.
+     * 
+     */
     public String currentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
     }
@@ -36,6 +40,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyName")
     private @Nullable String keyName;
 
+    /**
+     * @return The name of KeyVault key.
+     * 
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -47,6 +55,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultUri")
     private @Nullable String keyVaultUri;
 
+    /**
+     * @return The Uri of KeyVault.
+     * 
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
@@ -58,6 +70,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return The version of KeyVault key.
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -69,6 +85,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="lastKeyRotationTimestamp", required=true)
     private String lastKeyRotationTimestamp;
 
+    /**
+     * @return Timestamp of last rotation of the Key Vault Key.
+     * 
+     */
     public String lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
@@ -101,26 +121,56 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentVersionedKeyIdentifier The object identifier of the current versioned Key Vault Key in use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
             $.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyName The name of KeyVault key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVaultUri The Uri of KeyVault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param keyVersion The version of KeyVault key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param lastKeyRotationTimestamp Timestamp of last rotation of the Key Vault Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             $.lastKeyRotationTimestamp = lastKeyRotationTimestamp;
             return this;

@@ -19,6 +19,10 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the cluster resource.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="nodeTypeName", required=true)
     private String nodeTypeName;
 
+    /**
+     * @return The name of the node type.
+     * 
+     */
     public String nodeTypeName() {
         return this.nodeTypeName;
     }
@@ -41,6 +49,10 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNodeTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param nodeTypeName The name of the node type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTypeName(String nodeTypeName) {
             $.nodeTypeName = nodeTypeName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

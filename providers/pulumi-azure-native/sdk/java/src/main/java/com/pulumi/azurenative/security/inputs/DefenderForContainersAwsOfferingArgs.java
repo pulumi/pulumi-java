@@ -31,6 +31,10 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
     @Import(name="cloudWatchToKinesis")
     private @Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
 
+    /**
+     * @return The cloudwatch to kinesis connection configuration
+     * 
+     */
     public Optional<Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs>> cloudWatchToKinesis() {
         return Optional.ofNullable(this.cloudWatchToKinesis);
     }
@@ -42,6 +46,10 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
     @Import(name="kinesisToS3")
     private @Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
 
+    /**
+     * @return The kinesis to s3 connection configuration
+     * 
+     */
     public Optional<Output<DefenderForContainersAwsOfferingKinesisToS3Args>> kinesisToS3() {
         return Optional.ofNullable(this.kinesisToS3);
     }
@@ -53,6 +61,10 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
     @Import(name="kubernetesScubaReader")
     private @Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
 
+    /**
+     * @return The kubernetes to scuba connection configuration
+     * 
+     */
     public Optional<Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs>> kubernetesScubaReader() {
         return Optional.ofNullable(this.kubernetesScubaReader);
     }
@@ -64,6 +76,10 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
     @Import(name="kubernetesService")
     private @Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
 
+    /**
+     * @return The kubernetes service connection configuration
+     * 
+     */
     public Optional<Output<DefenderForContainersAwsOfferingKubernetesServiceArgs>> kubernetesService() {
         return Optional.ofNullable(this.kubernetesService);
     }
@@ -76,6 +92,11 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
     @Import(name="offeringType", required=true)
     private Output<String> offeringType;
 
+    /**
+     * @return The type of the security offering.
+     * Expected value is &#39;DefenderForContainersAws&#39;.
+     * 
+     */
     public Output<String> offeringType() {
         return this.offeringType;
     }
@@ -108,47 +129,109 @@ public final class DefenderForContainersAwsOfferingArgs extends com.pulumi.resou
             $ = new DefenderForContainersAwsOfferingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudWatchToKinesis The cloudwatch to kinesis connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchToKinesis(@Nullable Output<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis) {
             $.cloudWatchToKinesis = cloudWatchToKinesis;
             return this;
         }
 
+        /**
+         * @param cloudWatchToKinesis The cloudwatch to kinesis connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchToKinesis(DefenderForContainersAwsOfferingCloudWatchToKinesisArgs cloudWatchToKinesis) {
             return cloudWatchToKinesis(Output.of(cloudWatchToKinesis));
         }
 
+        /**
+         * @param kinesisToS3 The kinesis to s3 connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisToS3(@Nullable Output<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3) {
             $.kinesisToS3 = kinesisToS3;
             return this;
         }
 
+        /**
+         * @param kinesisToS3 The kinesis to s3 connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisToS3(DefenderForContainersAwsOfferingKinesisToS3Args kinesisToS3) {
             return kinesisToS3(Output.of(kinesisToS3));
         }
 
+        /**
+         * @param kubernetesScubaReader The kubernetes to scuba connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesScubaReader(@Nullable Output<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader) {
             $.kubernetesScubaReader = kubernetesScubaReader;
             return this;
         }
 
+        /**
+         * @param kubernetesScubaReader The kubernetes to scuba connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesScubaReader(DefenderForContainersAwsOfferingKubernetesScubaReaderArgs kubernetesScubaReader) {
             return kubernetesScubaReader(Output.of(kubernetesScubaReader));
         }
 
+        /**
+         * @param kubernetesService The kubernetes service connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesService(@Nullable Output<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService) {
             $.kubernetesService = kubernetesService;
             return this;
         }
 
+        /**
+         * @param kubernetesService The kubernetes service connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesService(DefenderForContainersAwsOfferingKubernetesServiceArgs kubernetesService) {
             return kubernetesService(Output.of(kubernetesService));
         }
 
+        /**
+         * @param offeringType The type of the security offering.
+         * Expected value is &#39;DefenderForContainersAws&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offeringType(Output<String> offeringType) {
             $.offeringType = offeringType;
             return this;
         }
 
+        /**
+         * @param offeringType The type of the security offering.
+         * Expected value is &#39;DefenderForContainersAws&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offeringType(String offeringType) {
             return offeringType(Output.of(offeringType));
         }

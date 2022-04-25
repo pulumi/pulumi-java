@@ -24,6 +24,10 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionId", required=true)
     private Output<String> connectionId;
 
+    /**
+     * @return Unique identification of ITSM connection among multiple defined in above workspace.
+     * 
+     */
     public Output<String> connectionId() {
         return this.connectionId;
     }
@@ -35,6 +39,10 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the Itsm receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region", required=true)
     private Output<String> region;
 
+    /**
+     * @return Region in which workspace resides. Supported values:&#39;centralindia&#39;,&#39;japaneast&#39;,&#39;southeastasia&#39;,&#39;australiasoutheast&#39;,&#39;uksouth&#39;,&#39;westcentralus&#39;,&#39;canadacentral&#39;,&#39;eastus&#39;,&#39;westeurope&#39;
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
@@ -57,6 +69,10 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ticketConfiguration", required=true)
     private Output<String> ticketConfiguration;
 
+    /**
+     * @return JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
+     * 
+     */
     public Output<String> ticketConfiguration() {
         return this.ticketConfiguration;
     }
@@ -68,6 +84,10 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceId", required=true)
     private Output<String> workspaceId;
 
+    /**
+     * @return OMS LA instance identifier.
+     * 
+     */
     public Output<String> workspaceId() {
         return this.workspaceId;
     }
@@ -100,47 +120,107 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ItsmReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionId Unique identification of ITSM connection among multiple defined in above workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionId Unique identification of ITSM connection among multiple defined in above workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             return connectionId(Output.of(connectionId));
         }
 
+        /**
+         * @param name The name of the Itsm receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Itsm receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param region Region in which workspace resides. Supported values:&#39;centralindia&#39;,&#39;japaneast&#39;,&#39;southeastasia&#39;,&#39;australiasoutheast&#39;,&#39;uksouth&#39;,&#39;westcentralus&#39;,&#39;canadacentral&#39;,&#39;eastus&#39;,&#39;westeurope&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region in which workspace resides. Supported values:&#39;centralindia&#39;,&#39;japaneast&#39;,&#39;southeastasia&#39;,&#39;australiasoutheast&#39;,&#39;uksouth&#39;,&#39;westcentralus&#39;,&#39;canadacentral&#39;,&#39;eastus&#39;,&#39;westeurope&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param ticketConfiguration JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ticketConfiguration(Output<String> ticketConfiguration) {
             $.ticketConfiguration = ticketConfiguration;
             return this;
         }
 
+        /**
+         * @param ticketConfiguration JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ticketConfiguration(String ticketConfiguration) {
             return ticketConfiguration(Output.of(ticketConfiguration));
         }
 
+        /**
+         * @param workspaceId OMS LA instance identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId OMS LA instance identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }

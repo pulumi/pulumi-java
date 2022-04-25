@@ -34,6 +34,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="androidInstrumentationTest")
     private @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
+    /**
+     * @return An Android instrumentation test.
+     * 
+     */
     public Optional<Output<AndroidInstrumentationTestArgs>> androidInstrumentationTest() {
         return Optional.ofNullable(this.androidInstrumentationTest);
     }
@@ -45,6 +49,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="androidRoboTest")
     private @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
 
+    /**
+     * @return An Android robo test.
+     * 
+     */
     public Optional<Output<AndroidRoboTestArgs>> androidRoboTest() {
         return Optional.ofNullable(this.androidRoboTest);
     }
@@ -56,6 +64,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="androidTestLoop")
     private @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
 
+    /**
+     * @return An Android Application with a Test Loop.
+     * 
+     */
     public Optional<Output<AndroidTestLoopArgs>> androidTestLoop() {
         return Optional.ofNullable(this.androidTestLoop);
     }
@@ -67,6 +79,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="disablePerformanceMetrics")
     private @Nullable Output<Boolean> disablePerformanceMetrics;
 
+    /**
+     * @return Disables performance metrics recording. May reduce test latency.
+     * 
+     */
     public Optional<Output<Boolean>> disablePerformanceMetrics() {
         return Optional.ofNullable(this.disablePerformanceMetrics);
     }
@@ -78,6 +94,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="disableVideoRecording")
     private @Nullable Output<Boolean> disableVideoRecording;
 
+    /**
+     * @return Disables video recording. May reduce test latency.
+     * 
+     */
     public Optional<Output<Boolean>> disableVideoRecording() {
         return Optional.ofNullable(this.disableVideoRecording);
     }
@@ -89,6 +109,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="iosTestLoop")
     private @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
+    /**
+     * @return An iOS application with a test loop.
+     * 
+     */
     public Optional<Output<IosTestLoopArgs>> iosTestLoop() {
         return Optional.ofNullable(this.iosTestLoop);
     }
@@ -100,6 +124,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="iosTestSetup")
     private @Nullable Output<IosTestSetupArgs> iosTestSetup;
 
+    /**
+     * @return Test setup requirements for iOS.
+     * 
+     */
     public Optional<Output<IosTestSetupArgs>> iosTestSetup() {
         return Optional.ofNullable(this.iosTestSetup);
     }
@@ -111,6 +139,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="iosXcTest")
     private @Nullable Output<IosXcTestArgs> iosXcTest;
 
+    /**
+     * @return An iOS XCTest, via an .xctestrun file.
+     * 
+     */
     public Optional<Output<IosXcTestArgs>> iosXcTest() {
         return Optional.ofNullable(this.iosXcTest);
     }
@@ -122,6 +154,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="testSetup")
     private @Nullable Output<TestSetupArgs> testSetup;
 
+    /**
+     * @return Test setup requirements for Android e.g. files to install, bootstrap scripts.
+     * 
+     */
     public Optional<Output<TestSetupArgs>> testSetup() {
         return Optional.ofNullable(this.testSetup);
     }
@@ -133,6 +169,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="testTimeout")
     private @Nullable Output<String> testTimeout;
 
+    /**
+     * @return Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
+     * 
+     */
     public Optional<Output<String>> testTimeout() {
         return Optional.ofNullable(this.testTimeout);
     }
@@ -170,92 +210,212 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
             $ = new TestSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param androidInstrumentationTest An Android instrumentation test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidInstrumentationTest(@Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
             $.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
 
+        /**
+         * @param androidInstrumentationTest An Android instrumentation test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidInstrumentationTest(AndroidInstrumentationTestArgs androidInstrumentationTest) {
             return androidInstrumentationTest(Output.of(androidInstrumentationTest));
         }
 
+        /**
+         * @param androidRoboTest An Android robo test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidRoboTest(@Nullable Output<AndroidRoboTestArgs> androidRoboTest) {
             $.androidRoboTest = androidRoboTest;
             return this;
         }
 
+        /**
+         * @param androidRoboTest An Android robo test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidRoboTest(AndroidRoboTestArgs androidRoboTest) {
             return androidRoboTest(Output.of(androidRoboTest));
         }
 
+        /**
+         * @param androidTestLoop An Android Application with a Test Loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidTestLoop(@Nullable Output<AndroidTestLoopArgs> androidTestLoop) {
             $.androidTestLoop = androidTestLoop;
             return this;
         }
 
+        /**
+         * @param androidTestLoop An Android Application with a Test Loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder androidTestLoop(AndroidTestLoopArgs androidTestLoop) {
             return androidTestLoop(Output.of(androidTestLoop));
         }
 
+        /**
+         * @param disablePerformanceMetrics Disables performance metrics recording. May reduce test latency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePerformanceMetrics(@Nullable Output<Boolean> disablePerformanceMetrics) {
             $.disablePerformanceMetrics = disablePerformanceMetrics;
             return this;
         }
 
+        /**
+         * @param disablePerformanceMetrics Disables performance metrics recording. May reduce test latency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePerformanceMetrics(Boolean disablePerformanceMetrics) {
             return disablePerformanceMetrics(Output.of(disablePerformanceMetrics));
         }
 
+        /**
+         * @param disableVideoRecording Disables video recording. May reduce test latency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableVideoRecording(@Nullable Output<Boolean> disableVideoRecording) {
             $.disableVideoRecording = disableVideoRecording;
             return this;
         }
 
+        /**
+         * @param disableVideoRecording Disables video recording. May reduce test latency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableVideoRecording(Boolean disableVideoRecording) {
             return disableVideoRecording(Output.of(disableVideoRecording));
         }
 
+        /**
+         * @param iosTestLoop An iOS application with a test loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestLoop(@Nullable Output<IosTestLoopArgs> iosTestLoop) {
             $.iosTestLoop = iosTestLoop;
             return this;
         }
 
+        /**
+         * @param iosTestLoop An iOS application with a test loop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestLoop(IosTestLoopArgs iosTestLoop) {
             return iosTestLoop(Output.of(iosTestLoop));
         }
 
+        /**
+         * @param iosTestSetup Test setup requirements for iOS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestSetup(@Nullable Output<IosTestSetupArgs> iosTestSetup) {
             $.iosTestSetup = iosTestSetup;
             return this;
         }
 
+        /**
+         * @param iosTestSetup Test setup requirements for iOS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosTestSetup(IosTestSetupArgs iosTestSetup) {
             return iosTestSetup(Output.of(iosTestSetup));
         }
 
+        /**
+         * @param iosXcTest An iOS XCTest, via an .xctestrun file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosXcTest(@Nullable Output<IosXcTestArgs> iosXcTest) {
             $.iosXcTest = iosXcTest;
             return this;
         }
 
+        /**
+         * @param iosXcTest An iOS XCTest, via an .xctestrun file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iosXcTest(IosXcTestArgs iosXcTest) {
             return iosXcTest(Output.of(iosXcTest));
         }
 
+        /**
+         * @param testSetup Test setup requirements for Android e.g. files to install, bootstrap scripts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSetup(@Nullable Output<TestSetupArgs> testSetup) {
             $.testSetup = testSetup;
             return this;
         }
 
+        /**
+         * @param testSetup Test setup requirements for Android e.g. files to install, bootstrap scripts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSetup(TestSetupArgs testSetup) {
             return testSetup(Output.of(testSetup));
         }
 
+        /**
+         * @param testTimeout Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTimeout(@Nullable Output<String> testTimeout) {
             $.testTimeout = testTimeout;
             return this;
         }
 
+        /**
+         * @param testTimeout Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testTimeout(String testTimeout) {
             return testTimeout(Output.of(testTimeout));
         }

@@ -23,6 +23,10 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="endIpAddress", required=true)
     private String endIpAddress;
 
+    /**
+     * @return The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+     * 
+     */
     public String endIpAddress() {
         return this.endIpAddress;
     }
@@ -34,6 +38,10 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -45,6 +53,10 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -56,6 +68,10 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="startIpAddress", required=true)
     private String startIpAddress;
 
+    /**
+     * @return The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+     * 
+     */
     public String startIpAddress() {
         return this.startIpAddress;
     }
@@ -67,6 +83,10 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -99,26 +119,56 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
             $ = new FirewallRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endIpAddress The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIpAddress(String endIpAddress) {
             $.endIpAddress = endIpAddress;
             return this;
         }
 
+        /**
+         * @param id The resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param startIpAddress The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIpAddress(String startIpAddress) {
             $.startIpAddress = startIpAddress;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -29,6 +29,10 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="appId")
     private @Nullable String appId;
 
+    /**
+     * @return Dapr application identifier
+     * 
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -40,6 +44,10 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="appPort")
     private @Nullable Integer appPort;
 
+    /**
+     * @return Port on which the Dapr side car
+     * 
+     */
     public Optional<Integer> appPort() {
         return Optional.ofNullable(this.appPort);
     }
@@ -51,6 +59,10 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="components")
     private @Nullable List<DaprComponentResponse> components;
 
+    /**
+     * @return Collection of Dapr components
+     * 
+     */
     public Optional<List<DaprComponentResponse>> components() {
         return Optional.ofNullable(this.components);
     }
@@ -62,6 +74,10 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Boolean indicating if the Dapr side car is enabled
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -93,25 +109,55 @@ public final class DaprResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DaprResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId Dapr application identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable String appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appPort Port on which the Dapr side car
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPort(@Nullable Integer appPort) {
             $.appPort = appPort;
             return this;
         }
 
+        /**
+         * @param components Collection of Dapr components
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(@Nullable List<DaprComponentResponse> components) {
             $.components = components;
             return this;
         }
 
+        /**
+         * @param components Collection of Dapr components
+         * 
+         * @return builder
+         * 
+         */
         public Builder components(DaprComponentResponse... components) {
             return components(List.of(components));
         }
 
+        /**
+         * @param enabled Boolean indicating if the Dapr side car is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;

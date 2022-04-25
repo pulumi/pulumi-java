@@ -27,6 +27,10 @@ public final class MongoIndexOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="expireAfterSeconds")
     private @Nullable Output<Integer> expireAfterSeconds;
 
+    /**
+     * @return Expire after seconds
+     * 
+     */
     public Optional<Output<Integer>> expireAfterSeconds() {
         return Optional.ofNullable(this.expireAfterSeconds);
     }
@@ -38,6 +42,10 @@ public final class MongoIndexOptionsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="unique")
     private @Nullable Output<Boolean> unique;
 
+    /**
+     * @return Is unique or not
+     * 
+     */
     public Optional<Output<Boolean>> unique() {
         return Optional.ofNullable(this.unique);
     }
@@ -67,20 +75,44 @@ public final class MongoIndexOptionsArgs extends com.pulumi.resources.ResourceAr
             $ = new MongoIndexOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expireAfterSeconds Expire after seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireAfterSeconds(@Nullable Output<Integer> expireAfterSeconds) {
             $.expireAfterSeconds = expireAfterSeconds;
             return this;
         }
 
+        /**
+         * @param expireAfterSeconds Expire after seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireAfterSeconds(Integer expireAfterSeconds) {
             return expireAfterSeconds(Output.of(expireAfterSeconds));
         }
 
+        /**
+         * @param unique Is unique or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder unique(@Nullable Output<Boolean> unique) {
             $.unique = unique;
             return this;
         }
 
+        /**
+         * @param unique Is unique or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder unique(Boolean unique) {
             return unique(Output.of(unique));
         }

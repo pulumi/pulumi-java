@@ -19,6 +19,10 @@ public final class StackSetParameter extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameterKey", required=true)
     private String parameterKey;
 
+    /**
+     * @return The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+     * 
+     */
     public String parameterKey() {
         return this.parameterKey;
     }
@@ -30,6 +34,10 @@ public final class StackSetParameter extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameterValue", required=true)
     private String parameterValue;
 
+    /**
+     * @return The input value associated with the parameter.
+     * 
+     */
     public String parameterValue() {
         return this.parameterValue;
     }
@@ -59,11 +67,23 @@ public final class StackSetParameter extends com.pulumi.resources.InvokeArgs {
             $ = new StackSetParameter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameterKey The key associated with the parameter. If you don&#39;t specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterKey(String parameterKey) {
             $.parameterKey = parameterKey;
             return this;
         }
 
+        /**
+         * @param parameterValue The input value associated with the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterValue(String parameterValue) {
             $.parameterValue = parameterValue;
             return this;

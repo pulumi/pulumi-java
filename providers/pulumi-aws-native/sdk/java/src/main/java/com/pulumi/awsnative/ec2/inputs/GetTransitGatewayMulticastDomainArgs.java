@@ -19,6 +19,10 @@ public final class GetTransitGatewayMulticastDomainArgs extends com.pulumi.resou
     @Import(name="transitGatewayMulticastDomainId", required=true)
     private String transitGatewayMulticastDomainId;
 
+    /**
+     * @return The ID of the transit gateway multicast domain.
+     * 
+     */
     public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
@@ -47,6 +51,12 @@ public final class GetTransitGatewayMulticastDomainArgs extends com.pulumi.resou
             $ = new GetTransitGatewayMulticastDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;

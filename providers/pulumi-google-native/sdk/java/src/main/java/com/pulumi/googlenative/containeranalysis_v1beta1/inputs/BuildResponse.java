@@ -24,6 +24,10 @@ public final class BuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="builderVersion", required=true)
     private String builderVersion;
 
+    /**
+     * @return Immutable. Version of the builder which produced this build.
+     * 
+     */
     public String builderVersion() {
         return this.builderVersion;
     }
@@ -35,6 +39,10 @@ public final class BuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="signature", required=true)
     private BuildSignatureResponse signature;
 
+    /**
+     * @return Signature of the build in occurrences pointing to this build note containing build details.
+     * 
+     */
     public BuildSignatureResponse signature() {
         return this.signature;
     }
@@ -64,11 +72,23 @@ public final class BuildResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BuildResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builderVersion Immutable. Version of the builder which produced this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderVersion(String builderVersion) {
             $.builderVersion = builderVersion;
             return this;
         }
 
+        /**
+         * @param signature Signature of the build in occurrences pointing to this build note containing build details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(BuildSignatureResponse signature) {
             $.signature = signature;
             return this;

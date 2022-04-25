@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceFleetInstanceTypeConfigConfiguration {
     /**
-     * The classification within a configuration.
+     * @return The classification within a configuration.
      * 
      */
     private final @Nullable String classification;
     /**
-     * A map of properties specified within a configuration classification
+     * @return A map of properties specified within a configuration classification
      * 
      */
     private final @Nullable Map<String,Object> properties;
@@ -33,16 +33,16 @@ public final class InstanceFleetInstanceTypeConfigConfiguration {
     }
 
     /**
-     * The classification within a configuration.
+     * @return The classification within a configuration.
      * 
-    */
+     */
     public Optional<String> classification() {
         return Optional.ofNullable(this.classification);
     }
     /**
-     * A map of properties specified within a configuration classification
+     * @return A map of properties specified within a configuration classification
      * 
-    */
+     */
     public Map<String,Object> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }

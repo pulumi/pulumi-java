@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ParameterValuesValueResponse {
     /**
-     * The value of the parameter.
+     * @return The value of the parameter.
      * 
      */
     private final @Nullable Object value;
@@ -23,9 +23,9 @@ public final class ParameterValuesValueResponse {
     }
 
     /**
-     * The value of the parameter.
+     * @return The value of the parameter.
      * 
-    */
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }

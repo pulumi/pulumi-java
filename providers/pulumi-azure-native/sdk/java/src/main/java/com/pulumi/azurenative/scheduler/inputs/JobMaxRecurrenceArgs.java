@@ -23,6 +23,10 @@ public final class JobMaxRecurrenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="frequency")
     private @Nullable Output<RecurrenceFrequency> frequency;
 
+    /**
+     * @return Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+     * 
+     */
     public Optional<Output<RecurrenceFrequency>> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -34,6 +38,10 @@ public final class JobMaxRecurrenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
+    /**
+     * @return Gets or sets the interval between retries.
+     * 
+     */
     public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -63,20 +71,44 @@ public final class JobMaxRecurrenceArgs extends com.pulumi.resources.ResourceArg
             $ = new JobMaxRecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(@Nullable Output<RecurrenceFrequency> frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(RecurrenceFrequency frequency) {
             return frequency(Output.of(frequency));
         }
 
+        /**
+         * @param interval Gets or sets the interval between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval Gets or sets the interval between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }

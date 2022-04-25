@@ -19,6 +19,10 @@ public final class GetImageRecipeComponent extends com.pulumi.resources.InvokeAr
     @Import(name="componentArn", required=true)
     private String componentArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Image Builder Component.
+     * 
+     */
     public String componentArn() {
         return this.componentArn;
     }
@@ -47,6 +51,12 @@ public final class GetImageRecipeComponent extends com.pulumi.resources.InvokeAr
             $ = new GetImageRecipeComponent(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentArn Amazon Resource Name (ARN) of the Image Builder Component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentArn(String componentArn) {
             $.componentArn = componentArn;
             return this;

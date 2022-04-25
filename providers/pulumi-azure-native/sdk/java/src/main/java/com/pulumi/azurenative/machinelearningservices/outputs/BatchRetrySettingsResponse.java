@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BatchRetrySettingsResponse {
     /**
-     * Maximum retry count for a mini-batch
+     * @return Maximum retry count for a mini-batch
      * 
      */
     private final @Nullable Integer maxRetries;
     /**
-     * Invocation timeout for a mini-batch, in ISO 8601 format.
+     * @return Invocation timeout for a mini-batch, in ISO 8601 format.
      * 
      */
     private final @Nullable String timeout;
@@ -32,16 +32,16 @@ public final class BatchRetrySettingsResponse {
     }
 
     /**
-     * Maximum retry count for a mini-batch
+     * @return Maximum retry count for a mini-batch
      * 
-    */
+     */
     public Optional<Integer> maxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
     /**
-     * Invocation timeout for a mini-batch, in ISO 8601 format.
+     * @return Invocation timeout for a mini-batch, in ISO 8601 format.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }

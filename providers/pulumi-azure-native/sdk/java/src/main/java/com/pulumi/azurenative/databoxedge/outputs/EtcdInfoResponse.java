@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class EtcdInfoResponse {
     /**
-     * Etcd type
+     * @return Etcd type
      * 
      */
     private final String type;
     /**
-     * Etcd version
+     * @return Etcd version
      * 
      */
     private final String version;
@@ -29,16 +29,16 @@ public final class EtcdInfoResponse {
     }
 
     /**
-     * Etcd type
+     * @return Etcd type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Etcd version
+     * @return Etcd version
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

@@ -40,6 +40,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="algorithm", required=true)
     private Output<Either<String,SamplingAlgorithm>> algorithm;
 
+    /**
+     * @return Type of the hyperparameter sampling algorithms
+     * 
+     */
     public Output<Either<String,SamplingAlgorithm>> algorithm() {
         return this.algorithm;
     }
@@ -51,6 +55,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compute", required=true)
     private Output<ComputeConfigurationArgs> compute;
 
+    /**
+     * @return Compute binding for the job.
+     * 
+     */
     public Output<ComputeConfigurationArgs> compute() {
         return this.compute;
     }
@@ -62,6 +70,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The asset description text.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -73,6 +85,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="earlyTermination")
     private @Nullable Output<Object> earlyTermination;
 
+    /**
+     * @return Early termination policies enable canceling poor-performing runs before they complete.
+     * 
+     */
     public Optional<Output<Object>> earlyTermination() {
         return Optional.ofNullable(this.earlyTermination);
     }
@@ -84,6 +100,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
     private @Nullable Output<String> experimentName;
 
+    /**
+     * @return The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+     * 
+     */
     public Optional<Output<String>> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
@@ -96,6 +116,11 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
+    /**
+     * @return Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+     * Defaults to AmlToken if null.
+     * 
+     */
     public Optional<Output<Either<AmlTokenArgs,ManagedIdentityArgs>>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -108,6 +133,11 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobType", required=true)
     private Output<String> jobType;
 
+    /**
+     * @return Enum to determine the type of job.
+     * Expected value is &#39;Sweep&#39;.
+     * 
+     */
     public Output<String> jobType() {
         return this.jobType;
     }
@@ -119,6 +149,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentTrials")
     private @Nullable Output<Integer> maxConcurrentTrials;
 
+    /**
+     * @return An upper bound on the number of trials performed in parallel.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentTrials() {
         return Optional.ofNullable(this.maxConcurrentTrials);
     }
@@ -130,6 +164,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxTotalTrials")
     private @Nullable Output<Integer> maxTotalTrials;
 
+    /**
+     * @return An upper bound on the number of trials to perform.
+     * 
+     */
     public Optional<Output<Integer>> maxTotalTrials() {
         return Optional.ofNullable(this.maxTotalTrials);
     }
@@ -141,6 +179,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objective", required=true)
     private Output<ObjectiveArgs> objective;
 
+    /**
+     * @return Optimization objective.
+     * 
+     */
     public Output<ObjectiveArgs> objective() {
         return this.objective;
     }
@@ -153,6 +195,11 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Job priority for scheduling policy. Only applies to AMLCompute.
+     * Private preview feature and only available to users on the allow list.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -164,6 +211,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return The asset property dictionary.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -175,6 +226,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="searchSpace", required=true)
     private Output<Map<String,Object>> searchSpace;
 
+    /**
+     * @return A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * 
+     */
     public Output<Map<String,Object>> searchSpace() {
         return this.searchSpace;
     }
@@ -186,6 +241,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -197,6 +256,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -208,6 +271,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trial")
     private @Nullable Output<TrialComponentArgs> trial;
 
+    /**
+     * @return Trial component definition.
+     * 
+     */
     public Optional<Output<TrialComponentArgs>> trial() {
         return Optional.ofNullable(this.trial);
     }
@@ -251,162 +318,386 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SweepJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm Type of the hyperparameter sampling algorithms
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Output<Either<String,SamplingAlgorithm>> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm Type of the hyperparameter sampling algorithms
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Either<String,SamplingAlgorithm> algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param algorithm Type of the hyperparameter sampling algorithms
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             return algorithm(Either.ofLeft(algorithm));
         }
 
+        /**
+         * @param algorithm Type of the hyperparameter sampling algorithms
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(SamplingAlgorithm algorithm) {
             return algorithm(Either.ofRight(algorithm));
         }
 
+        /**
+         * @param compute Compute binding for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(Output<ComputeConfigurationArgs> compute) {
             $.compute = compute;
             return this;
         }
 
+        /**
+         * @param compute Compute binding for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(ComputeConfigurationArgs compute) {
             return compute(Output.of(compute));
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param earlyTermination Early termination policies enable canceling poor-performing runs before they complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder earlyTermination(@Nullable Output<Object> earlyTermination) {
             $.earlyTermination = earlyTermination;
             return this;
         }
 
+        /**
+         * @param earlyTermination Early termination policies enable canceling poor-performing runs before they complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder earlyTermination(Object earlyTermination) {
             return earlyTermination(Output.of(earlyTermination));
         }
 
+        /**
+         * @param experimentName The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(@Nullable Output<String> experimentName) {
             $.experimentName = experimentName;
             return this;
         }
 
+        /**
+         * @param experimentName The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(String experimentName) {
             return experimentName(Output.of(experimentName));
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(AmlTokenArgs identity) {
             return identity(Either.ofLeft(identity));
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedIdentityArgs identity) {
             return identity(Either.ofRight(identity));
         }
 
+        /**
+         * @param jobType Enum to determine the type of job.
+         * Expected value is &#39;Sweep&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(Output<String> jobType) {
             $.jobType = jobType;
             return this;
         }
 
+        /**
+         * @param jobType Enum to determine the type of job.
+         * Expected value is &#39;Sweep&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(String jobType) {
             return jobType(Output.of(jobType));
         }
 
+        /**
+         * @param maxConcurrentTrials An upper bound on the number of trials performed in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentTrials(@Nullable Output<Integer> maxConcurrentTrials) {
             $.maxConcurrentTrials = maxConcurrentTrials;
             return this;
         }
 
+        /**
+         * @param maxConcurrentTrials An upper bound on the number of trials performed in parallel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentTrials(Integer maxConcurrentTrials) {
             return maxConcurrentTrials(Output.of(maxConcurrentTrials));
         }
 
+        /**
+         * @param maxTotalTrials An upper bound on the number of trials to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTotalTrials(@Nullable Output<Integer> maxTotalTrials) {
             $.maxTotalTrials = maxTotalTrials;
             return this;
         }
 
+        /**
+         * @param maxTotalTrials An upper bound on the number of trials to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxTotalTrials(Integer maxTotalTrials) {
             return maxTotalTrials(Output.of(maxTotalTrials));
         }
 
+        /**
+         * @param objective Optimization objective.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objective(Output<ObjectiveArgs> objective) {
             $.objective = objective;
             return this;
         }
 
+        /**
+         * @param objective Optimization objective.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objective(ObjectiveArgs objective) {
             return objective(Output.of(objective));
         }
 
+        /**
+         * @param priority Job priority for scheduling policy. Only applies to AMLCompute.
+         * Private preview feature and only available to users on the allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Job priority for scheduling policy. Only applies to AMLCompute.
+         * Private preview feature and only available to users on the allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param searchSpace A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchSpace(Output<Map<String,Object>> searchSpace) {
             $.searchSpace = searchSpace;
             return this;
         }
 
+        /**
+         * @param searchSpace A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchSpace(Map<String,Object> searchSpace) {
             return searchSpace(Output.of(searchSpace));
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param timeout The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param trial Trial component definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trial(@Nullable Output<TrialComponentArgs> trial) {
             $.trial = trial;
             return this;
         }
 
+        /**
+         * @param trial Trial component definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trial(TrialComponentArgs trial) {
             return trial(Output.of(trial));
         }

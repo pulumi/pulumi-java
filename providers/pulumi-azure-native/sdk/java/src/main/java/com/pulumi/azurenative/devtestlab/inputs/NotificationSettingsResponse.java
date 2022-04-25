@@ -27,6 +27,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="emailRecipient")
     private @Nullable String emailRecipient;
 
+    /**
+     * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     * 
+     */
     public Optional<String> emailRecipient() {
         return Optional.ofNullable(this.emailRecipient);
     }
@@ -38,6 +42,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="notificationLocale")
     private @Nullable String notificationLocale;
 
+    /**
+     * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
+     * 
+     */
     public Optional<String> notificationLocale() {
         return Optional.ofNullable(this.notificationLocale);
     }
@@ -49,6 +57,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return If notifications are enabled for this schedule (i.e. Enabled, Disabled).
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -60,6 +72,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="timeInMinutes")
     private @Nullable Integer timeInMinutes;
 
+    /**
+     * @return Time in minutes before event at which notification will be sent.
+     * 
+     */
     public Optional<Integer> timeInMinutes() {
         return Optional.ofNullable(this.timeInMinutes);
     }
@@ -71,6 +87,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="webhookUrl")
     private @Nullable String webhookUrl;
 
+    /**
+     * @return The webhook URL to which the notification will be sent.
+     * 
+     */
     public Optional<String> webhookUrl() {
         return Optional.ofNullable(this.webhookUrl);
     }
@@ -103,26 +123,56 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
             $ = new NotificationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailRecipient The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailRecipient(@Nullable String emailRecipient) {
             $.emailRecipient = emailRecipient;
             return this;
         }
 
+        /**
+         * @param notificationLocale The locale to use when sending a notification (fallback for unsupported languages is EN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationLocale(@Nullable String notificationLocale) {
             $.notificationLocale = notificationLocale;
             return this;
         }
 
+        /**
+         * @param status If notifications are enabled for this schedule (i.e. Enabled, Disabled).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param timeInMinutes Time in minutes before event at which notification will be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
             $.timeInMinutes = timeInMinutes;
             return this;
         }
 
+        /**
+         * @param webhookUrl The webhook URL to which the notification will be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookUrl(@Nullable String webhookUrl) {
             $.webhookUrl = webhookUrl;
             return this;

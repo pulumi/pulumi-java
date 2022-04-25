@@ -26,6 +26,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -37,6 +41,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="configuration", required=true)
     private Output<DscConfigurationAssociationPropertyArgs> configuration;
 
+    /**
+     * @return Gets or sets the configuration of the node.
+     * 
+     */
     public Output<DscConfigurationAssociationPropertyArgs> configuration() {
         return this.configuration;
     }
@@ -48,6 +56,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="incrementNodeConfigurationBuild")
     private @Nullable Output<Boolean> incrementNodeConfigurationBuild;
 
+    /**
+     * @return If a new build version of NodeConfiguration is required.
+     * 
+     */
     public Optional<Output<Boolean>> incrementNodeConfigurationBuild() {
         return Optional.ofNullable(this.incrementNodeConfigurationBuild);
     }
@@ -59,6 +71,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the node configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="nodeConfigurationName")
     private @Nullable Output<String> nodeConfigurationName;
 
+    /**
+     * @return The Dsc node configuration name.
+     * 
+     */
     public Optional<Output<String>> nodeConfigurationName() {
         return Optional.ofNullable(this.nodeConfigurationName);
     }
@@ -81,6 +101,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="source", required=true)
     private Output<ContentSourceArgs> source;
 
+    /**
+     * @return Gets or sets the source.
+     * 
+     */
     public Output<ContentSourceArgs> source() {
         return this.source;
     }
@@ -103,6 +131,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the tags attached to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -138,74 +170,170 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
             $ = new DscNodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param configuration Gets or sets the configuration of the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(Output<DscConfigurationAssociationPropertyArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration Gets or sets the configuration of the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(DscConfigurationAssociationPropertyArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param incrementNodeConfigurationBuild If a new build version of NodeConfiguration is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incrementNodeConfigurationBuild(@Nullable Output<Boolean> incrementNodeConfigurationBuild) {
             $.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
             return this;
         }
 
+        /**
+         * @param incrementNodeConfigurationBuild If a new build version of NodeConfiguration is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incrementNodeConfigurationBuild(Boolean incrementNodeConfigurationBuild) {
             return incrementNodeConfigurationBuild(Output.of(incrementNodeConfigurationBuild));
         }
 
+        /**
+         * @param name Name of the node configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the node configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodeConfigurationName The Dsc node configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfigurationName(@Nullable Output<String> nodeConfigurationName) {
             $.nodeConfigurationName = nodeConfigurationName;
             return this;
         }
 
+        /**
+         * @param nodeConfigurationName The Dsc node configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfigurationName(String nodeConfigurationName) {
             return nodeConfigurationName(Output.of(nodeConfigurationName));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source Gets or sets the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<ContentSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Gets or sets the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(ContentSourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param tags Gets or sets the tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets the tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

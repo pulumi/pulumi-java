@@ -23,6 +23,10 @@ public final class WrappingPublicKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="pem", required=true)
     private String pem;
 
+    /**
+     * @return The public key, encoded in PEM format. For more information, see the [RFC 7468](https://tools.ietf.org/html/rfc7468) sections for [General Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13).
+     * 
+     */
     public String pem() {
         return this.pem;
     }
@@ -51,6 +55,12 @@ public final class WrappingPublicKeyResponse extends com.pulumi.resources.Invoke
             $ = new WrappingPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pem The public key, encoded in PEM format. For more information, see the [RFC 7468](https://tools.ietf.org/html/rfc7468) sections for [General Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pem(String pem) {
             $.pem = pem;
             return this;

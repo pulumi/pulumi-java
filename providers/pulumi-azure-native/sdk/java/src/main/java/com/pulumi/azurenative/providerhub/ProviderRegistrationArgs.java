@@ -30,6 +30,10 @@ public final class ProviderRegistrationArgs extends com.pulumi.resources.Resourc
     @Import(name="providerNamespace")
     private @Nullable Output<String> providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public Optional<Output<String>> providerNamespace() {
         return Optional.ofNullable(this.providerNamespace);
     }
@@ -68,11 +72,23 @@ public final class ProviderRegistrationArgs extends com.pulumi.resources.Resourc
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(@Nullable Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             return providerNamespace(Output.of(providerNamespace));
         }

@@ -20,6 +20,10 @@ public final class VirtualNodeSpecListenerTlsCertificateAcmGetArgs extends com.p
     @Import(name="certificateArn", required=true)
     private Output<String> certificateArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the certificate.
+     * 
+     */
     public Output<String> certificateArn() {
         return this.certificateArn;
     }
@@ -48,11 +52,23 @@ public final class VirtualNodeSpecListenerTlsCertificateAcmGetArgs extends com.p
             $ = new VirtualNodeSpecListenerTlsCertificateAcmGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateArn The Amazon Resource Name (ARN) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(Output<String> certificateArn) {
             $.certificateArn = certificateArn;
             return this;
         }
 
+        /**
+         * @param certificateArn The Amazon Resource Name (ARN) for the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(String certificateArn) {
             return certificateArn(Output.of(certificateArn));
         }

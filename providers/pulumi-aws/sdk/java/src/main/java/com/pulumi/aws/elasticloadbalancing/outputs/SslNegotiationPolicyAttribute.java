@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SslNegotiationPolicyAttribute {
     /**
-     * The name of the attribute
+     * @return The name of the attribute
      * 
      */
     private final String name;
     /**
-     * The value of the attribute
+     * @return The value of the attribute
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class SslNegotiationPolicyAttribute {
     }
 
     /**
-     * The name of the attribute
+     * @return The name of the attribute
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the attribute
+     * @return The value of the attribute
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

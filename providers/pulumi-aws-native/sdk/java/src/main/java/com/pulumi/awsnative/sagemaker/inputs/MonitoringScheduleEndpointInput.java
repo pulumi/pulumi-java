@@ -34,6 +34,10 @@ public final class MonitoringScheduleEndpointInput extends com.pulumi.resources.
     @Import(name="localPath", required=true)
     private String localPath;
 
+    /**
+     * @return Path to the filesystem where the endpoint data is available to the container.
+     * 
+     */
     public String localPath() {
         return this.localPath;
     }
@@ -45,6 +49,10 @@ public final class MonitoringScheduleEndpointInput extends com.pulumi.resources.
     @Import(name="s3DataDistributionType")
     private @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType;
 
+    /**
+     * @return Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+     * 
+     */
     public Optional<MonitoringScheduleEndpointInputS3DataDistributionType> s3DataDistributionType() {
         return Optional.ofNullable(this.s3DataDistributionType);
     }
@@ -56,6 +64,10 @@ public final class MonitoringScheduleEndpointInput extends com.pulumi.resources.
     @Import(name="s3InputMode")
     private @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
 
+    /**
+     * @return Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+     * 
+     */
     public Optional<MonitoringScheduleEndpointInputS3InputMode> s3InputMode() {
         return Optional.ofNullable(this.s3InputMode);
     }
@@ -92,16 +104,34 @@ public final class MonitoringScheduleEndpointInput extends com.pulumi.resources.
             return this;
         }
 
+        /**
+         * @param localPath Path to the filesystem where the endpoint data is available to the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             $.localPath = localPath;
             return this;
         }
 
+        /**
+         * @param s3DataDistributionType Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3DataDistributionType(@Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType) {
             $.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
+        /**
+         * @param s3InputMode Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3InputMode(@Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
             $.s3InputMode = s3InputMode;
             return this;

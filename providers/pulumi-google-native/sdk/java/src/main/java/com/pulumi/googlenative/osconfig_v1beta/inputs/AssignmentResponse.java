@@ -26,6 +26,10 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupLabels", required=true)
     private List<AssignmentGroupLabelResponse> groupLabels;
 
+    /**
+     * @return Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example &#34;env=prod or env=staging&#34;.
+     * 
+     */
     public List<AssignmentGroupLabelResponse> groupLabels() {
         return this.groupLabels;
     }
@@ -37,6 +41,10 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceNamePrefixes", required=true)
     private List<String> instanceNamePrefixes;
 
+    /**
+     * @return Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix=&#34;prod-&#34;. Only supported for project-level policies.
+     * 
+     */
     public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes;
     }
@@ -48,6 +56,10 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instances", required=true)
     private List<String> instances;
 
+    /**
+     * @return Targets any of the instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to facilitate the management of changes by the instance or to target specific VM instances for development and testing. Only supported for project-level policies and must reference instances within this project.
+     * 
+     */
     public List<String> instances() {
         return this.instances;
     }
@@ -59,6 +71,10 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osTypes", required=true)
     private List<AssignmentOsTypeResponse> osTypes;
 
+    /**
+     * @return Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.
+     * 
+     */
     public List<AssignmentOsTypeResponse> osTypes() {
         return this.osTypes;
     }
@@ -70,6 +86,10 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="zones", required=true)
     private List<String> zones;
 
+    /**
+     * @return Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+     * 
+     */
     public List<String> zones() {
         return this.zones;
     }
@@ -102,47 +122,107 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AssignmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupLabels Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example &#34;env=prod or env=staging&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupLabels(List<AssignmentGroupLabelResponse> groupLabels) {
             $.groupLabels = groupLabels;
             return this;
         }
 
+        /**
+         * @param groupLabels Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example &#34;env=prod or env=staging&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupLabels(AssignmentGroupLabelResponse... groupLabels) {
             return groupLabels(List.of(groupLabels));
         }
 
+        /**
+         * @param instanceNamePrefixes Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix=&#34;prod-&#34;. Only supported for project-level policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
             $.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
 
+        /**
+         * @param instanceNamePrefixes Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix=&#34;prod-&#34;. Only supported for project-level policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
             return instanceNamePrefixes(List.of(instanceNamePrefixes));
         }
 
+        /**
+         * @param instances Targets any of the instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to facilitate the management of changes by the instance or to target specific VM instances for development and testing. Only supported for project-level policies and must reference instances within this project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<String> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Targets any of the instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to facilitate the management of changes by the instance or to target specific VM instances for development and testing. Only supported for project-level policies and must reference instances within this project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param osTypes Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osTypes(List<AssignmentOsTypeResponse> osTypes) {
             $.osTypes = osTypes;
             return this;
         }
 
+        /**
+         * @param osTypes Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osTypes(AssignmentOsTypeResponse... osTypes) {
             return osTypes(List.of(osTypes));
         }
 
+        /**
+         * @param zones Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

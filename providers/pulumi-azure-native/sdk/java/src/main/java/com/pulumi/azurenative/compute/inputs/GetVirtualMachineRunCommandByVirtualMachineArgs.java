@@ -21,6 +21,10 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
     @Import(name="runCommandName", required=true)
     private String runCommandName;
 
+    /**
+     * @return The name of the virtual machine run command.
+     * 
+     */
     public String runCommandName() {
         return this.runCommandName;
     }
@@ -54,6 +66,10 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
     @Import(name="vmName", required=true)
     private String vmName;
 
+    /**
+     * @return The name of the virtual machine containing the run command.
+     * 
+     */
     public String vmName() {
         return this.vmName;
     }
@@ -85,21 +101,45 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
             $ = new GetVirtualMachineRunCommandByVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param runCommandName The name of the virtual machine run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runCommandName(String runCommandName) {
             $.runCommandName = runCommandName;
             return this;
         }
 
+        /**
+         * @param vmName The name of the virtual machine containing the run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmName(String vmName) {
             $.vmName = vmName;
             return this;

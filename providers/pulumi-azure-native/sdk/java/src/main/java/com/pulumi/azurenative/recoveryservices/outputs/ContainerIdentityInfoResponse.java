@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerIdentityInfoResponse {
     /**
-     * Protection container identity - AAD Tenant
+     * @return Protection container identity - AAD Tenant
      * 
      */
     private final @Nullable String aadTenantId;
     /**
-     * Protection container identity - Audience
+     * @return Protection container identity - Audience
      * 
      */
     private final @Nullable String audience;
     /**
-     * Protection container identity - AAD Service Principal
+     * @return Protection container identity - AAD Service Principal
      * 
      */
     private final @Nullable String servicePrincipalClientId;
     /**
-     * Unique name of the container
+     * @return Unique name of the container
      * 
      */
     private final @Nullable String uniqueName;
@@ -45,30 +45,30 @@ public final class ContainerIdentityInfoResponse {
     }
 
     /**
-     * Protection container identity - AAD Tenant
+     * @return Protection container identity - AAD Tenant
      * 
-    */
+     */
     public Optional<String> aadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
     /**
-     * Protection container identity - Audience
+     * @return Protection container identity - Audience
      * 
-    */
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
-     * Protection container identity - AAD Service Principal
+     * @return Protection container identity - AAD Service Principal
      * 
-    */
+     */
     public Optional<String> servicePrincipalClientId() {
         return Optional.ofNullable(this.servicePrincipalClientId);
     }
     /**
-     * Unique name of the container
+     * @return Unique name of the container
      * 
-    */
+     */
     public Optional<String> uniqueName() {
         return Optional.ofNullable(this.uniqueName);
     }

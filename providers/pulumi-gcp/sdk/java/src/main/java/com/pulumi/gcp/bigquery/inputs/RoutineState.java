@@ -26,6 +26,11 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
     private @Nullable Output<List<RoutineArgumentGetArgs>> arguments;
 
+    /**
+     * @return Input/output argument of a function or a stored procedure.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RoutineArgumentGetArgs>>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -37,6 +42,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
     private @Nullable Output<Integer> creationTime;
 
+    /**
+     * @return The time when this routine was created, in milliseconds since the epoch.
+     * 
+     */
     public Optional<Output<Integer>> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -48,6 +57,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetId")
     private @Nullable Output<String> datasetId;
 
+    /**
+     * @return The ID of the dataset containing this routine
+     * 
+     */
     public Optional<Output<String>> datasetId() {
         return Optional.ofNullable(this.datasetId);
     }
@@ -60,6 +73,11 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="definitionBody")
     private @Nullable Output<String> definitionBody;
 
+    /**
+     * @return The body of the routine. For functions, this is the expression in the AS clause.
+     * If language=SQL, it is the substring inside (but excluding) the parentheses.
+     * 
+     */
     public Optional<Output<String>> definitionBody() {
         return Optional.ofNullable(this.definitionBody);
     }
@@ -71,6 +89,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the routine if defined.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -83,6 +105,11 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="determinismLevel")
     private @Nullable Output<String> determinismLevel;
 
+    /**
+     * @return The determinism level of the JavaScript UDF if defined.
+     * Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
+     * 
+     */
     public Optional<Output<String>> determinismLevel() {
         return Optional.ofNullable(this.determinismLevel);
     }
@@ -95,6 +122,11 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="importedLibraries")
     private @Nullable Output<List<String>> importedLibraries;
 
+    /**
+     * @return Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
+     * imported JAVASCRIPT libraries.
+     * 
+     */
     public Optional<Output<List<String>>> importedLibraries() {
         return Optional.ofNullable(this.importedLibraries);
     }
@@ -107,6 +139,11 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="language")
     private @Nullable Output<String> language;
 
+    /**
+     * @return The language of the routine.
+     * Possible values are `SQL` and `JAVASCRIPT`.
+     * 
+     */
     public Optional<Output<String>> language() {
         return Optional.ofNullable(this.language);
     }
@@ -118,6 +155,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedTime")
     private @Nullable Output<Integer> lastModifiedTime;
 
+    /**
+     * @return The time when this routine was modified, in milliseconds since the epoch.
+     * 
+     */
     public Optional<Output<Integer>> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
@@ -130,6 +171,11 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -144,6 +190,13 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="returnTableType")
     private @Nullable Output<String> returnTableType;
 
+    /**
+     * @return Optional. Can be set only if routineType = &#34;TABLE_VALUED_FUNCTION&#34;.
+     * If absent, the return table type is inferred from definitionBody at query time in each query
+     * that references this routine. If present, then the columns in the evaluated table result will
+     * be cast to match the column types specificed in return table type, at query time.
+     * 
+     */
     public Optional<Output<String>> returnTableType() {
         return Optional.ofNullable(this.returnTableType);
     }
@@ -163,6 +216,18 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="returnType")
     private @Nullable Output<String> returnType;
 
+    /**
+     * @return A JSON schema for the return type. Optional if language = &#34;SQL&#34;; required otherwise.
+     * If absent, the return type is inferred from definitionBody at query time in each query
+     * that references this routine. If present, then the evaluated result will be cast to
+     * the specified returned type at query time. ~&gt;**NOTE**: Because this field expects a JSON
+     * string, any changes to the string will create a diff, even if the JSON itself hasn&#39;t
+     * changed. If the API returns a different value for the same schema, e.g. it switche
+     * d the order of values or replaced STRUCT field type with RECORD field type, we currently
+     * cannot suppress the recurring diff this causes. As a workaround, we recommend using
+     * the schema as returned by the API.
+     * 
+     */
     public Optional<Output<String>> returnType() {
         return Optional.ofNullable(this.returnType);
     }
@@ -174,6 +239,10 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="routineId")
     private @Nullable Output<String> routineId;
 
+    /**
+     * @return The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+     * 
+     */
     public Optional<Output<String>> routineId() {
         return Optional.ofNullable(this.routineId);
     }
@@ -186,6 +255,11 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
     @Import(name="routineType")
     private @Nullable Output<String> routineType;
 
+    /**
+     * @return The type of routine.
+     * Possible values are `SCALAR_FUNCTION`, `PROCEDURE`, and `TABLE_VALUED_FUNCTION`.
+     * 
+     */
     public Optional<Output<String>> routineType() {
         return Optional.ofNullable(this.routineType);
     }
@@ -227,136 +301,354 @@ public final class RoutineState extends com.pulumi.resources.ResourceArgs {
             $ = new RoutineState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments Input/output argument of a function or a stored procedure.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<List<RoutineArgumentGetArgs>> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments Input/output argument of a function or a stored procedure.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(List<RoutineArgumentGetArgs> arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param arguments Input/output argument of a function or a stored procedure.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(RoutineArgumentGetArgs... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param creationTime The time when this routine was created, in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(@Nullable Output<Integer> creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param creationTime The time when this routine was created, in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(Integer creationTime) {
             return creationTime(Output.of(creationTime));
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this routine
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(@Nullable Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The ID of the dataset containing this routine
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
 
+        /**
+         * @param definitionBody The body of the routine. For functions, this is the expression in the AS clause.
+         * If language=SQL, it is the substring inside (but excluding) the parentheses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitionBody(@Nullable Output<String> definitionBody) {
             $.definitionBody = definitionBody;
             return this;
         }
 
+        /**
+         * @param definitionBody The body of the routine. For functions, this is the expression in the AS clause.
+         * If language=SQL, it is the substring inside (but excluding) the parentheses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitionBody(String definitionBody) {
             return definitionBody(Output.of(definitionBody));
         }
 
+        /**
+         * @param description The description of the routine if defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the routine if defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param determinismLevel The determinism level of the JavaScript UDF if defined.
+         * Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder determinismLevel(@Nullable Output<String> determinismLevel) {
             $.determinismLevel = determinismLevel;
             return this;
         }
 
+        /**
+         * @param determinismLevel The determinism level of the JavaScript UDF if defined.
+         * Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder determinismLevel(String determinismLevel) {
             return determinismLevel(Output.of(determinismLevel));
         }
 
+        /**
+         * @param importedLibraries Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
+         * imported JAVASCRIPT libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
             $.importedLibraries = importedLibraries;
             return this;
         }
 
+        /**
+         * @param importedLibraries Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
+         * imported JAVASCRIPT libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(List<String> importedLibraries) {
             return importedLibraries(Output.of(importedLibraries));
         }
 
+        /**
+         * @param importedLibraries Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
+         * imported JAVASCRIPT libraries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importedLibraries(String... importedLibraries) {
             return importedLibraries(List.of(importedLibraries));
         }
 
+        /**
+         * @param language The language of the routine.
+         * Possible values are `SQL` and `JAVASCRIPT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(@Nullable Output<String> language) {
             $.language = language;
             return this;
         }
 
+        /**
+         * @param language The language of the routine.
+         * Possible values are `SQL` and `JAVASCRIPT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder language(String language) {
             return language(Output.of(language));
         }
 
+        /**
+         * @param lastModifiedTime The time when this routine was modified, in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime The time when this routine was modified, in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(Integer lastModifiedTime) {
             return lastModifiedTime(Output.of(lastModifiedTime));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param returnTableType Optional. Can be set only if routineType = &#34;TABLE_VALUED_FUNCTION&#34;.
+         * If absent, the return table type is inferred from definitionBody at query time in each query
+         * that references this routine. If present, then the columns in the evaluated table result will
+         * be cast to match the column types specificed in return table type, at query time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnTableType(@Nullable Output<String> returnTableType) {
             $.returnTableType = returnTableType;
             return this;
         }
 
+        /**
+         * @param returnTableType Optional. Can be set only if routineType = &#34;TABLE_VALUED_FUNCTION&#34;.
+         * If absent, the return table type is inferred from definitionBody at query time in each query
+         * that references this routine. If present, then the columns in the evaluated table result will
+         * be cast to match the column types specificed in return table type, at query time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnTableType(String returnTableType) {
             return returnTableType(Output.of(returnTableType));
         }
 
+        /**
+         * @param returnType A JSON schema for the return type. Optional if language = &#34;SQL&#34;; required otherwise.
+         * If absent, the return type is inferred from definitionBody at query time in each query
+         * that references this routine. If present, then the evaluated result will be cast to
+         * the specified returned type at query time. ~&gt;**NOTE**: Because this field expects a JSON
+         * string, any changes to the string will create a diff, even if the JSON itself hasn&#39;t
+         * changed. If the API returns a different value for the same schema, e.g. it switche
+         * d the order of values or replaced STRUCT field type with RECORD field type, we currently
+         * cannot suppress the recurring diff this causes. As a workaround, we recommend using
+         * the schema as returned by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnType(@Nullable Output<String> returnType) {
             $.returnType = returnType;
             return this;
         }
 
+        /**
+         * @param returnType A JSON schema for the return type. Optional if language = &#34;SQL&#34;; required otherwise.
+         * If absent, the return type is inferred from definitionBody at query time in each query
+         * that references this routine. If present, then the evaluated result will be cast to
+         * the specified returned type at query time. ~&gt;**NOTE**: Because this field expects a JSON
+         * string, any changes to the string will create a diff, even if the JSON itself hasn&#39;t
+         * changed. If the API returns a different value for the same schema, e.g. it switche
+         * d the order of values or replaced STRUCT field type with RECORD field type, we currently
+         * cannot suppress the recurring diff this causes. As a workaround, we recommend using
+         * the schema as returned by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnType(String returnType) {
             return returnType(Output.of(returnType));
         }
 
+        /**
+         * @param routineId The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineId(@Nullable Output<String> routineId) {
             $.routineId = routineId;
             return this;
         }
 
+        /**
+         * @param routineId The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineId(String routineId) {
             return routineId(Output.of(routineId));
         }
 
+        /**
+         * @param routineType The type of routine.
+         * Possible values are `SCALAR_FUNCTION`, `PROCEDURE`, and `TABLE_VALUED_FUNCTION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineType(@Nullable Output<String> routineType) {
             $.routineType = routineType;
             return this;
         }
 
+        /**
+         * @param routineType The type of routine.
+         * Possible values are `SCALAR_FUNCTION`, `PROCEDURE`, and `TABLE_VALUED_FUNCTION`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routineType(String routineType) {
             return routineType(Output.of(routineType));
         }

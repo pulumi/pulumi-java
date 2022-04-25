@@ -24,6 +24,10 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ledgerName")
     private @Nullable Output<String> ledgerName;
 
+    /**
+     * @return Name of the Confidential Ledger
+     * 
+     */
     public Optional<Output<String>> ledgerName() {
         return Optional.ofNullable(this.ledgerName);
     }
@@ -35,6 +39,10 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The Azure location where the Confidential Ledger is running.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<LedgerPropertiesArgs> properties;
 
+    /**
+     * @return Properties of Confidential Ledger Resource.
+     * 
+     */
     public Optional<Output<LedgerPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -57,6 +69,10 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Additional tags for Confidential Ledger
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LedgerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ledgerName Name of the Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerName(@Nullable Output<String> ledgerName) {
             $.ledgerName = ledgerName;
             return this;
         }
 
+        /**
+         * @param ledgerName Name of the Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerName(String ledgerName) {
             return ledgerName(Output.of(ledgerName));
         }
 
+        /**
+         * @param location The Azure location where the Confidential Ledger is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The Azure location where the Confidential Ledger is running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Properties of Confidential Ledger Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<LedgerPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of Confidential Ledger Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(LedgerPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Additional tags for Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Additional tags for Confidential Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -27,6 +27,10 @@ public final class WorkerResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="cpu")
     private @Nullable Output<Double> cpu;
 
+    /**
+     * @return Optional. CPU request and limit for a single Airflow worker replica.
+     * 
+     */
     public Optional<Output<Double>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -38,6 +42,10 @@ public final class WorkerResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxCount")
     private @Nullable Output<Integer> maxCount;
 
+    /**
+     * @return Optional. Maximum number of workers for autoscaling.
+     * 
+     */
     public Optional<Output<Integer>> maxCount() {
         return Optional.ofNullable(this.maxCount);
     }
@@ -49,6 +57,10 @@ public final class WorkerResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="memoryGb")
     private @Nullable Output<Double> memoryGb;
 
+    /**
+     * @return Optional. Memory (GB) request and limit for a single Airflow worker replica.
+     * 
+     */
     public Optional<Output<Double>> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
@@ -60,6 +72,10 @@ public final class WorkerResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minCount")
     private @Nullable Output<Integer> minCount;
 
+    /**
+     * @return Optional. Minimum number of workers for autoscaling.
+     * 
+     */
     public Optional<Output<Integer>> minCount() {
         return Optional.ofNullable(this.minCount);
     }
@@ -71,6 +87,10 @@ public final class WorkerResourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageGb")
     private @Nullable Output<Double> storageGb;
 
+    /**
+     * @return Optional. Storage (GB) request and limit for a single Airflow worker replica.
+     * 
+     */
     public Optional<Output<Double>> storageGb() {
         return Optional.ofNullable(this.storageGb);
     }
@@ -103,47 +123,107 @@ public final class WorkerResourceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new WorkerResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Optional. CPU request and limit for a single Airflow worker replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Optional. CPU request and limit for a single Airflow worker replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param maxCount Optional. Maximum number of workers for autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
             $.maxCount = maxCount;
             return this;
         }
 
+        /**
+         * @param maxCount Optional. Maximum number of workers for autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCount(Integer maxCount) {
             return maxCount(Output.of(maxCount));
         }
 
+        /**
+         * @param memoryGb Optional. Memory (GB) request and limit for a single Airflow worker replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
             $.memoryGb = memoryGb;
             return this;
         }
 
+        /**
+         * @param memoryGb Optional. Memory (GB) request and limit for a single Airflow worker replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(Double memoryGb) {
             return memoryGb(Output.of(memoryGb));
         }
 
+        /**
+         * @param minCount Optional. Minimum number of workers for autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCount(@Nullable Output<Integer> minCount) {
             $.minCount = minCount;
             return this;
         }
 
+        /**
+         * @param minCount Optional. Minimum number of workers for autoscaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCount(Integer minCount) {
             return minCount(Output.of(minCount));
         }
 
+        /**
+         * @param storageGb Optional. Storage (GB) request and limit for a single Airflow worker replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageGb(@Nullable Output<Double> storageGb) {
             $.storageGb = storageGb;
             return this;
         }
 
+        /**
+         * @param storageGb Optional. Storage (GB) request and limit for a single Airflow worker replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageGb(Double storageGb) {
             return storageGb(Output.of(storageGb));
         }

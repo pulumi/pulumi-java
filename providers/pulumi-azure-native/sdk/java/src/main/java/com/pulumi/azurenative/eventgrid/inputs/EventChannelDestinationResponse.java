@@ -26,6 +26,11 @@ public final class EventChannelDestinationResponse extends com.pulumi.resources.
     @Import(name="azureSubscriptionId")
     private @Nullable String azureSubscriptionId;
 
+    /**
+     * @return Azure subscription ID of the customer creating the event channel. The partner topic
+     * associated with the event channel will be created under this Azure subscription.
+     * 
+     */
     public Optional<String> azureSubscriptionId() {
         return Optional.ofNullable(this.azureSubscriptionId);
     }
@@ -37,6 +42,10 @@ public final class EventChannelDestinationResponse extends com.pulumi.resources.
     @Import(name="partnerTopicName")
     private @Nullable String partnerTopicName;
 
+    /**
+     * @return Name of the partner topic associated with the event channel.
+     * 
+     */
     public Optional<String> partnerTopicName() {
         return Optional.ofNullable(this.partnerTopicName);
     }
@@ -49,6 +58,11 @@ public final class EventChannelDestinationResponse extends com.pulumi.resources.
     @Import(name="resourceGroup")
     private @Nullable String resourceGroup;
 
+    /**
+     * @return Azure Resource Group of the customer creating the event channel. The partner topic
+     * associated with the event channel will be created under this resource group.
+     * 
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -79,16 +93,36 @@ public final class EventChannelDestinationResponse extends com.pulumi.resources.
             $ = new EventChannelDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureSubscriptionId Azure subscription ID of the customer creating the event channel. The partner topic
+         * associated with the event channel will be created under this Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureSubscriptionId(@Nullable String azureSubscriptionId) {
             $.azureSubscriptionId = azureSubscriptionId;
             return this;
         }
 
+        /**
+         * @param partnerTopicName Name of the partner topic associated with the event channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerTopicName(@Nullable String partnerTopicName) {
             $.partnerTopicName = partnerTopicName;
             return this;
         }
 
+        /**
+         * @param resourceGroup Azure Resource Group of the customer creating the event channel. The partner topic
+         * associated with the event channel will be created under this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

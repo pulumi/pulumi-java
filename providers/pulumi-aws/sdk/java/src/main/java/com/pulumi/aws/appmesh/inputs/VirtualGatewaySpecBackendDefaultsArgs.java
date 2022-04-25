@@ -22,6 +22,10 @@ public final class VirtualGatewaySpecBackendDefaultsArgs extends com.pulumi.reso
     @Import(name="clientPolicy")
     private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy;
 
+    /**
+     * @return The default client policy for virtual gateway backends.
+     * 
+     */
     public Optional<Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs>> clientPolicy() {
         return Optional.ofNullable(this.clientPolicy);
     }
@@ -50,11 +54,23 @@ public final class VirtualGatewaySpecBackendDefaultsArgs extends com.pulumi.reso
             $ = new VirtualGatewaySpecBackendDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientPolicy The default client policy for virtual gateway backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientPolicy(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
             $.clientPolicy = clientPolicy;
             return this;
         }
 
+        /**
+         * @param clientPolicy The default client policy for virtual gateway backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientPolicy(VirtualGatewaySpecBackendDefaultsClientPolicyArgs clientPolicy) {
             return clientPolicy(Output.of(clientPolicy));
         }

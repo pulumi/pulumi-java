@@ -24,6 +24,10 @@ public final class InstancePropertiesPatchResponse extends com.pulumi.resources.
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return The label key-value pairs that you want to patch onto the instance.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -35,6 +39,10 @@ public final class InstancePropertiesPatchResponse extends com.pulumi.resources.
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -64,11 +72,23 @@ public final class InstancePropertiesPatchResponse extends com.pulumi.resources.
             $ = new InstancePropertiesPatchResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels The label key-value pairs that you want to patch onto the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;

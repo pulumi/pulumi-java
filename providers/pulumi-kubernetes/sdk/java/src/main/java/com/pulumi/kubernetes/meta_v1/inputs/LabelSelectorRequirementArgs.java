@@ -27,6 +27,10 @@ public final class LabelSelectorRequirementArgs extends com.pulumi.resources.Res
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return key is the label key that the selector applies to.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -38,6 +42,10 @@ public final class LabelSelectorRequirementArgs extends com.pulumi.resources.Res
     @Import(name="operator", required=true)
     private Output<String> operator;
 
+    /**
+     * @return operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+     * 
+     */
     public Output<String> operator() {
         return this.operator;
     }
@@ -49,6 +57,10 @@ public final class LabelSelectorRequirementArgs extends com.pulumi.resources.Res
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -79,33 +91,75 @@ public final class LabelSelectorRequirementArgs extends com.pulumi.resources.Res
             $ = new LabelSelectorRequirementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key key is the label key that the selector applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key key is the label key that the selector applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param operator operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<String> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param values values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

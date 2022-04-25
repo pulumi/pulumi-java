@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2ConditionResponse {
     /**
-     * Field within the record this condition is evaluated against.
+     * @return Field within the record this condition is evaluated against.
      * 
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
     /**
-     * Operator used to compare the field or infoType to the value.
+     * @return Operator used to compare the field or infoType to the value.
      * 
      */
     private final String operator;
     /**
-     * Value to compare against. [Mandatory, except for `EXISTS` tests.]
+     * @return Value to compare against. [Mandatory, except for `EXISTS` tests.]
      * 
      */
     private final GooglePrivacyDlpV2ValueResponse value;
@@ -38,23 +38,23 @@ public final class GooglePrivacyDlpV2ConditionResponse {
     }
 
     /**
-     * Field within the record this condition is evaluated against.
+     * @return Field within the record this condition is evaluated against.
      * 
-    */
+     */
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
     /**
-     * Operator used to compare the field or infoType to the value.
+     * @return Operator used to compare the field or infoType to the value.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * Value to compare against. [Mandatory, except for `EXISTS` tests.]
+     * @return Value to compare against. [Mandatory, except for `EXISTS` tests.]
      * 
-    */
+     */
     public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }
